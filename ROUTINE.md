@@ -21,8 +21,16 @@ Se ejecuta en la nube (auto-ritmo: despertar cuando deberían haber terminado pa
 
 4. **Si NO hubo ningún resultado nuevo confirmado → terminar sin commitear** (no hacer deploys vacíos).
 
-5. **Si hubo cambios:** correr `python3 engine.py` (regenera `index.html`), luego
+5. **Si hubo cambios:** correr `python3 engine.py`. Una sola corrida **recalcula TODO el sistema**:
+   la fuerza Elo de cada selección, las probabilidades de campeón y de avance por ronda, los premios
+   (goleador/arquero/joven), la proyección del cuadro de eliminatorias Y el **puntaje de la polla del
+   modelo** (suma los puntos del/los partido(s) nuevo(s); cada partido se puntúa con el pronóstico PREVIO
+   al partido, sin mirar el resultado). Un solo partido puede mover todo. Luego
    `git add -A && git commit -m "auto: actualizar Mundial" && git push`. GitHub Pages republica solo.
+
+6. **Reporte final en palabras simples** (para Alejandro, no técnico): qué partido(s) cargaste con su
+   marcador; cómo se movieron las probabilidades (quién subió/bajó, si cambió el favorito); cómo quedó el
+   puntaje (ganado y en juego); y que publicaste. Si no hubo nada nuevo, decir "sin novedades".
 
 6. **Auto-ritmo:** programar el próximo despertar para después del próximo bloque de partidos del
    calendario (no chequear en horas sin partidos). En días sin partidos, dormir hasta el siguiente día con fixture.
