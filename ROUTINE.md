@@ -29,5 +29,8 @@ Se ejecuta en la nube (auto-ritmo: despertar cuando deberían haber terminado pa
 
 ## Notas
 - Los premios y la proyección de bracket se recalculan solos al correr el motor.
+- **NO toques `data/picks.json`** (picks de torneo congelados para el puntaje) — solo se edita results.json.
+- En eliminatorias que se definan por penales, agregá el campo `"ganador":"Equipo"` al partido en el ledger.
+- **Al cerrar el torneo:** creá `data/awards_actual.json` con `{"goleador":"Nombre","arquero":"Nombre","joven":"Nombre"}` (los ganadores oficiales reales) para que el puntaje resuelva esos 3 premios.
 - Las eliminatorias empiezan ~28-jun; ahí los partidos del ledger usan `fase` (no `grupo`).
 - Panel en vivo: https://alesarmiento.github.io/mundial-2026/

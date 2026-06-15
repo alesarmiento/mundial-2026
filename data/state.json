@@ -3730,6 +3730,362 @@
     ],
     "campeon_proyectado": "Spain"
   },
+  "puntaje": {
+    "corte": "2026-06-15",
+    "por_partido": [
+      {
+        "fecha": "2026-06-11",
+        "grupo": "A",
+        "home": "Mexico",
+        "away": "South Africa",
+        "pred": [
+          2,
+          0
+        ],
+        "real": [
+          2,
+          0
+        ],
+        "pts": 11,
+        "parts": {
+          "ganador": 3,
+          "gol_local": 2,
+          "gol_visita": 2,
+          "exacto": 4
+        }
+      },
+      {
+        "fecha": "2026-06-11",
+        "grupo": "A",
+        "home": "South Korea",
+        "away": "Czechia",
+        "pred": [
+          1,
+          1
+        ],
+        "real": [
+          1,
+          0
+        ],
+        "pts": 2,
+        "parts": {
+          "gol_local": 2
+        }
+      },
+      {
+        "fecha": "2026-06-12",
+        "grupo": "B",
+        "home": "Canada",
+        "away": "Bosnia and Herzegovina",
+        "pred": [
+          1,
+          0
+        ],
+        "real": [
+          1,
+          1
+        ],
+        "pts": 2,
+        "parts": {
+          "gol_local": 2
+        }
+      },
+      {
+        "fecha": "2026-06-12",
+        "grupo": "D",
+        "home": "United States",
+        "away": "Paraguay",
+        "pred": [
+          1,
+          1
+        ],
+        "real": [
+          3,
+          0
+        ],
+        "pts": 0,
+        "parts": {}
+      },
+      {
+        "fecha": "2026-06-13",
+        "grupo": "B",
+        "home": "Qatar",
+        "away": "Switzerland",
+        "pred": [
+          0,
+          2
+        ],
+        "real": [
+          1,
+          1
+        ],
+        "pts": 0,
+        "parts": {}
+      },
+      {
+        "fecha": "2026-06-13",
+        "grupo": "C",
+        "home": "Brazil",
+        "away": "Morocco",
+        "pred": [
+          1,
+          0
+        ],
+        "real": [
+          1,
+          1
+        ],
+        "pts": 2,
+        "parts": {
+          "gol_local": 2
+        }
+      },
+      {
+        "fecha": "2026-06-13",
+        "grupo": "C",
+        "home": "Haiti",
+        "away": "Scotland",
+        "pred": [
+          0,
+          2
+        ],
+        "real": [
+          0,
+          1
+        ],
+        "pts": 5,
+        "parts": {
+          "ganador": 3,
+          "gol_local": 2
+        }
+      },
+      {
+        "fecha": "2026-06-13",
+        "grupo": "D",
+        "home": "Australia",
+        "away": "Turkiye",
+        "pred": [
+          1,
+          1
+        ],
+        "real": [
+          2,
+          0
+        ],
+        "pts": 0,
+        "parts": {}
+      },
+      {
+        "fecha": "2026-06-14",
+        "grupo": "E",
+        "home": "Germany",
+        "away": "Curacao",
+        "pred": [
+          3,
+          0
+        ],
+        "real": [
+          7,
+          1
+        ],
+        "pts": 3,
+        "parts": {
+          "ganador": 3
+        }
+      },
+      {
+        "fecha": "2026-06-14",
+        "grupo": "F",
+        "home": "Netherlands",
+        "away": "Japan",
+        "pred": [
+          1,
+          1
+        ],
+        "real": [
+          2,
+          2
+        ],
+        "pts": 3,
+        "parts": {
+          "ganador": 3
+        }
+      },
+      {
+        "fecha": "2026-06-14",
+        "grupo": "E",
+        "home": "Ivory Coast",
+        "away": "Ecuador",
+        "pred": [
+          0,
+          1
+        ],
+        "real": [
+          1,
+          0
+        ],
+        "pts": 0,
+        "parts": {}
+      },
+      {
+        "fecha": "2026-06-14",
+        "grupo": "F",
+        "home": "Sweden",
+        "away": "Tunisia",
+        "pred": [
+          1,
+          0
+        ],
+        "real": [
+          5,
+          1
+        ],
+        "pts": 3,
+        "parts": {
+          "ganador": 3
+        }
+      },
+      {
+        "fecha": "2026-06-15",
+        "grupo": "H",
+        "home": "Spain",
+        "away": "Cape Verde",
+        "pred": [
+          3,
+          0
+        ],
+        "real": [
+          0,
+          0
+        ],
+        "pts": 2,
+        "parts": {
+          "gol_visita": 2
+        }
+      },
+      {
+        "fecha": "2026-06-15",
+        "grupo": "G",
+        "home": "Belgium",
+        "away": "Egypt",
+        "pred": [
+          2,
+          0
+        ],
+        "real": [
+          1,
+          1
+        ],
+        "pts": 0,
+        "parts": {}
+      }
+    ],
+    "total_partidos": 33,
+    "torneo": [
+      {
+        "label": "Campeon",
+        "pts": 18,
+        "pick": "Spain",
+        "actual": null,
+        "estado": "pendiente",
+        "ganado": 0
+      },
+      {
+        "label": "Subcampeon",
+        "pts": 15,
+        "pick": "Argentina",
+        "actual": null,
+        "estado": "pendiente",
+        "ganado": 0
+      },
+      {
+        "label": "Tercer puesto",
+        "pts": 12,
+        "pick": "France",
+        "actual": null,
+        "estado": "pendiente",
+        "ganado": 0
+      },
+      {
+        "label": "Goleador",
+        "pts": 10,
+        "pick": "Kylian Mbappe",
+        "actual": null,
+        "estado": "pendiente",
+        "ganado": 0
+      },
+      {
+        "label": "Mejor arquero",
+        "pts": 10,
+        "pick": "Emiliano Martinez",
+        "actual": null,
+        "estado": "pendiente",
+        "ganado": 0
+      },
+      {
+        "label": "Mejor joven",
+        "pts": 5,
+        "pick": "Lamine Yamal",
+        "actual": null,
+        "estado": "pendiente",
+        "ganado": 0
+      }
+    ],
+    "clasificados": {
+      "label": "Clasificados 2da ronda",
+      "pick_n": 32,
+      "aciertos": null,
+      "estado": "pendiente",
+      "ganado": 0,
+      "potencial": 224
+    },
+    "ganado": 33,
+    "en_juego": 294,
+    "n_partidos": 14
+  },
+  "picks": {
+    "corte": "2026-06-15",
+    "campeon": "Spain",
+    "subcampeon": "Argentina",
+    "tercero": "France",
+    "goleador": "Kylian Mbappe",
+    "arquero": "Emiliano Martinez",
+    "joven": "Lamine Yamal",
+    "clasificados": [
+      "Germany",
+      "Sweden",
+      "France",
+      "Scotland",
+      "South Korea",
+      "Canada",
+      "Netherlands",
+      "Morocco",
+      "Colombia",
+      "Croatia",
+      "Spain",
+      "Austria",
+      "Australia",
+      "Ecuador",
+      "Belgium",
+      "Czechia",
+      "Brazil",
+      "Japan",
+      "Ivory Coast",
+      "Norway",
+      "Mexico",
+      "Cape Verde",
+      "England",
+      "Senegal",
+      "Argentina",
+      "Uruguay",
+      "United States",
+      "Egypt",
+      "Switzerland",
+      "Algeria",
+      "Portugal",
+      "Panama"
+    ]
+  },
   "metodologia": {
     "sims": 12000,
     "equipos": 48,

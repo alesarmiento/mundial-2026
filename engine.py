@@ -376,6 +376,90 @@ def upsert_evolution(fecha, probs, topn=8):
     save("evolution.json", ev)
     return ev
 
+# ---------- puntaje del modelo (scoring tipo polla) ----------
+def actual_qualifiers(grupos, base):
+    """Los 32 reales: 2 primeros de cada grupo + 8 mejores terceros. Solo valido si la fase de grupos termino."""
+    quals = set(); thirds = []
+    for g, teams in grupos.items():
+        order = sorted(teams, key=lambda t: rank_key(base[t]), reverse=True)
+        quals.add(order[0]); quals.add(order[1]); thirds.append((order[2], rank_key(base[order[2]])))
+    thirds.sort(key=lambda x: x[1], reverse=True)
+    for t, _ in thirds[:8]:
+        quals.add(t)
+    return quals
+
+def compute_scoring(teams, results, fixtures, base, picks):
+    """Puntaje acumulativo. Partidos: pronostico PREVIO a cada partido vs real. Torneo: picks congelados."""
+    seed = teams["elo_seed"]; grupos = teams["grupos"]
+    fx_by_pair = {frozenset((f["home"], f["away"])): f for f in fixtures}
+    by_date = defaultdict(list)
+    for m in results:
+        by_date[m["fecha"]].append(m)
+    rows = []; total_match = 0
+    for d in sorted(by_date):
+        elo_prev = elo_after([r for r in results if r["fecha"] < d], seed)
+        for m in by_date[d]:
+            fx = fx_by_pair.get(frozenset((m["local"], m["visita"])))
+            home, away = (fx["home"], fx["away"]) if fx else (m["local"], m["visita"])
+            pred = match_pred(home, away, elo_prev)
+            if not pred:
+                continue
+            ph, pa = pred["score"]
+            ah, aa = (m["gl"], m["gv"]) if m["local"] == home else (m["gv"], m["gl"])
+            parts = {}; pts = 0
+            if ((ph > pa) - (ph < pa)) == ((ah > aa) - (ah < aa)):
+                pts += 3; parts["ganador"] = 3
+            if ph == ah:
+                pts += 2; parts["gol_local"] = 2
+            if pa == aa:
+                pts += 2; parts["gol_visita"] = 2
+            if ph == ah and pa == aa:
+                pts += 4; parts["exacto"] = 4
+            total_match += pts
+            rows.append({"fecha": d, "grupo": m.get("grupo"), "home": home, "away": away,
+                         "pred": [ph, pa], "real": [ah, aa], "pts": pts, "parts": parts})
+    # resolucion de predicciones de torneo (solo cuando ocurren)
+    group_done = sum(1 for r in results if r.get("fase", "grupos") == "grupos") >= 72
+    quals = actual_qualifiers(grupos, base) if group_done else None
+    def ko_w(r):
+        if r["gl"] > r["gv"]: return r["local"]
+        if r["gv"] > r["gl"]: return r["visita"]
+        return r.get("ganador")
+    fin = [r for r in results if r.get("fase") == "final"]
+    tp = [r for r in results if r.get("fase") == "tercer_puesto"]
+    champ = ko_w(fin[-1]) if fin else None
+    sub = (fin[-1]["visita"] if champ == fin[-1]["local"] else fin[-1]["local"]) if (fin and champ) else None
+    ter = ko_w(tp[-1]) if tp else None
+    aw_path = os.path.join(DATA, "awards_actual.json")
+    aw = load("awards_actual.json") if os.path.exists(aw_path) else {}
+
+    def item(label, pts, pick, actual, resolved):
+        ok = bool(resolved and pick is not None and actual is not None and pick == actual)
+        return {"label": label, "pts": pts, "pick": pick, "actual": actual,
+                "estado": "pendiente" if not resolved else ("acertado" if ok else "fallado"),
+                "ganado": pts if ok else 0}
+    tour = [
+        item("Campeon", 18, picks.get("campeon"), champ, champ is not None),
+        item("Subcampeon", 15, picks.get("subcampeon"), sub, sub is not None),
+        item("Tercer puesto", 12, picks.get("tercero"), ter, ter is not None),
+        item("Goleador", 10, picks.get("goleador"), aw.get("goleador"), bool(aw.get("goleador"))),
+        item("Mejor arquero", 10, picks.get("arquero"), aw.get("arquero"), bool(aw.get("arquero"))),
+        item("Mejor joven", 5, picks.get("joven"), aw.get("joven"), bool(aw.get("joven"))),
+    ]
+    pick_q = picks.get("clasificados", [])
+    if group_done and quals is not None:
+        ac = len([t for t in pick_q if t in quals])
+        clas = {"label": "Clasificados 2da ronda", "pick_n": len(pick_q), "aciertos": ac,
+                "estado": "resuelto", "ganado": 7 * ac, "potencial": 7 * len(pick_q)}
+    else:
+        clas = {"label": "Clasificados 2da ronda", "pick_n": len(pick_q), "aciertos": None,
+                "estado": "pendiente", "ganado": 0, "potencial": 7 * len(pick_q)}
+    ganado = total_match + sum(t["ganado"] for t in tour) + clas["ganado"]
+    en_juego = sum(t["pts"] for t in tour if t["estado"] == "pendiente") + (clas["potencial"] if clas["estado"] == "pendiente" else 0)
+    return {"corte": picks.get("corte"), "por_partido": rows, "total_partidos": total_match,
+            "torneo": tour, "clasificados": clas, "ganado": ganado, "en_juego": en_juego,
+            "n_partidos": len(rows)}
+
 # ---------- orquestacion ----------
 def compute(results_subset, teams, n):
     grupos = teams["grupos"]; seed = teams["elo_seed"]; skeleton = teams["r32_skeleton"]
@@ -444,6 +528,27 @@ def main():
           "p3": probs[t]["tercero"], "top3": round(probs[t]["campeon"] + probs[t]["sub"] + probs[t]["tercero"], 1)}
          for t in probs], key=lambda x: x["top3"], reverse=True)[:10]
 
+    # picks de torneo CONGELADOS (se fijan una vez y no cambian; viven en data/picks.json)
+    pick_path = os.path.join(DATA, "picks.json")
+    if os.path.exists(pick_path) and "--relock-picks" not in sys.argv:
+        picks = load("picks.json")
+    else:
+        clasif = [t for mt in proyeccion["rondas"][0]["partidos"] for t in (mt["home"], mt["away"]) if t != "?"]
+        def top(lst):
+            return (lst[0]["jugador"] if lst else None)
+        picks = {
+            "corte": ultima,
+            "campeon": max(probs, key=lambda t: probs[t]["campeon"]),
+            "subcampeon": max(probs, key=lambda t: probs[t]["sub"]),
+            "tercero": max(probs, key=lambda t: probs[t]["tercero"]),
+            "goleador": top(premios.get("goleador", [])),
+            "arquero": top(premios.get("arquero", [])),
+            "joven": top(premios.get("joven", [])),
+            "clasificados": clasif,
+        }
+        save("picks.json", picks)
+    puntaje = compute_scoring(teams, results, fixtures, base, picks)
+
     # estado para el panel
     state = {
         "generado": ultima,
@@ -464,6 +569,8 @@ def main():
         "podio": podio,
         "premios": premios,
         "proyeccion": proyeccion,
+        "puntaje": puntaje,
+        "picks": picks,
         "metodologia": metodologia,
         "resultados": sorted(results, key=lambda m: m["fecha"]),
         "nota_bracket": teams.get("_nota_bracket", ""),
@@ -580,6 +687,7 @@ document.getElementById('simn').textContent = S.sims.toLocaleString();
 const PANES = [
   ['porfecha','📅 Por fecha', paneFecha],
   ['campeon','🏆 Campeon', paneCampeon],
+  ['puntaje','🎯 Puntaje', paneScore],
   ['premios','🏅 Premios', panePremios],
   ['bracket','🔀 Avance', paneBracket],
   ['grupos','📊 Grupos', paneGrupos],
@@ -800,6 +908,57 @@ function paneEvol(p){
 function $svg(t,a={},...c){const e=document.createElementNS('http://www.w3.org/2000/svg',t);
   for(const k in a)e.setAttribute(k,a[k]);c.forEach(x=>e.append(x));return e}
 
+function bigStat(v,label,color){const d=$('div',{});const n=$('div',{},String(v));
+  n.style.cssText='font-size:30px;font-weight:800;color:'+color;const l=$('div',{class:'muted'},label);
+  l.style.fontSize='12px';d.append(n,l);return d}
+function estadoChip(s){const c={pendiente:'#8b949e',acertado:'#3fb950',fallado:'#f85149',resuelto:'#3fb950'}[s]||'#8b949e';
+  return '<span style="color:'+c+';font-weight:700;text-transform:uppercase;font-size:11px">'+s+'</span>'}
+function paneScore(p){
+  const Q=S.puntaje;
+  if(!Q){p.append($('div',{class:'muted'},'Sin datos de puntaje.'));return}
+  const c0=$('div',{class:'card'});
+  c0.append($('div',{class:'gtitle'},'🎯 Puntaje del modelo'));
+  const row=$('div',{});row.style.cssText='display:flex;gap:32px;flex-wrap:wrap;align-items:baseline;margin:6px 0';
+  row.append(bigStat(Q.ganado,'puntos ganados','var(--ac)'));
+  row.append(bigStat(Q.en_juego,'en juego (pendiente)','var(--ac2)'));
+  c0.append(row);
+  c0.append($('div',{class:'warn',html:'<b>Sin trampa:</b> el pronóstico de cada partido se reconstruye con el estado del modelo PREVIO al partido (solo resultados de fechas anteriores) y el marcador real no influye en la predicción — se usa únicamente para puntuar.'}));
+  c0.append($('div',{class:'muted',html:'<small>Picks de torneo congelados al '+(Q.corte||'—')+'. Acumulativo por partido: ganador 3 · goles local 2 · goles visita 2 · marcador exacto 4 (máx 11).</small>'}));
+  p.append(c0);
+  // Torneo
+  const c1=$('div',{class:'card'});
+  c1.append($('div',{class:'gtitle'},'🏆 Predicciones de torneo (se resuelven al final)'));
+  const tb=$('table');tb.append($('tr',{},$('th',{},'Premio'),$('th',{},'Pick del modelo'),$('th',{},'Estado'),$('th',{class:'n'},'Puntos')));
+  Q.torneo.forEach(t=>{
+    const tr=$('tr',{});
+    tr.append($('td',{},t.label),$('td',{html:'<b>'+(t.pick||'—')+'</b>'}),
+      $('td',{html:estadoChip(t.estado)}),
+      $('td',{class:'n'+(t.ganado>0?' q':' muted')}, t.estado==='pendiente'?('en juego: '+t.pts):String(t.ganado)));
+    tb.append(tr)});
+  const cl=Q.clasificados,tr=$('tr',{});
+  tr.append($('td',{},cl.label+' (7 c/u)'),
+    $('td',{class:'muted'}, cl.pick_n+' equipos elegidos'),
+    $('td',{html: cl.estado==='pendiente'?estadoChip('pendiente'):('<span class="q">'+cl.aciertos+'/'+cl.pick_n+' aciertos</span>')}),
+    $('td',{class:'n'+(cl.ganado>0?' q':' muted')}, cl.estado==='pendiente'?('en juego: '+cl.potencial):String(cl.ganado)));
+  tb.append(tr);c1.append(tb);p.append(c1);
+  // Por partido
+  const c2=$('div',{class:'card'});
+  c2.append($('div',{class:'gtitle'},'⚽ Puntos por partido — '+Q.n_partidos+' jugados · '+Q.total_partidos+' pts'));
+  c2.append($('div',{class:'muted',html:'<small>Aciertos: <b>G</b> ganador · <b>L</b> goles local · <b>V</b> goles visita · <b>E</b> marcador exacto.</small>'}));
+  const mt=$('table');mt.append($('tr',{},$('th',{},'Fecha'),$('th',{},'Partido'),
+    $('th',{class:'n'},'Pronóstico'),$('th',{class:'n'},'Real'),$('th',{},'Aciertos'),$('th',{class:'n'},'Pts')));
+  Q.por_partido.forEach(m=>{
+    const tr=$('tr',{});
+    const ac=['ganador','gol_local','gol_visita','exacto'].filter(k=>m.parts[k])
+      .map(k=>({ganador:'G',gol_local:'L',gol_visita:'V',exacto:'E'}[k])).join(' ');
+    tr.append($('td',{class:'muted'},m.fecha.slice(5)),$('td',{},m.home+' vs '+m.away),
+      $('td',{class:'n muted'},m.pred[0]+'–'+m.pred[1]),
+      $('td',{class:'n'},m.real[0]+'–'+m.real[1]),
+      $('td',{class:'q'},ac||'—'),
+      $('td',{class:'n'+(m.pts>0?' q':' muted')},String(m.pts)));
+    mt.append(tr)});
+  c2.append(mt);p.append(c2);
+}
 function paneMetodo(p){
   const M=S.metodologia||{fuentes:[]};
   // Que es
