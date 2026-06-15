@@ -111,7 +111,7 @@ def build_por_fecha(teams, results, elo, fixtures, anchor):
     for fx in fixtures:
         h, a = fx["home"], fx["away"]
         key = frozenset((h, a)); seen.add(key)
-        e = {"home": h, "away": a, "grupo": fx.get("grupo"), "fase": fx.get("fase", "grupos")}
+        e = {"home": h, "away": a, "grupo": fx.get("grupo"), "fase": fx.get("fase", "grupos"), "utc": fx.get("utc")}
         r = played.get(key)
         if r:
             e["jugado"] = True
@@ -642,6 +642,7 @@ a{color:var(--ac2);text-decoration:none}
 .acc.open .acc-b{display:block}
 .mrow{display:flex;align-items:center;gap:12px;padding:9px 4px;border-bottom:1px solid var(--bd);font-size:13px;flex-wrap:wrap}
 .mrow:last-child{border-bottom:none}
+.mrow .hora{font-size:11px;color:var(--ac2);font-variant-numeric:tabular-nums;width:52px;flex:none;font-weight:600}
 .mrow .gc{font-size:10px;color:var(--mut);width:30px;flex:none}
 .mrow .tm{flex:1;display:flex;justify-content:space-between;gap:8px;min-width:200px;max-width:330px}
 .sc{font-variant-numeric:tabular-nums;font-weight:700;min-width:42px;text-align:center}
@@ -712,8 +713,13 @@ function barCell(v,max=100){const c=$('td',{class:'n'});const b=$('div',{class:'
   wrap.style.cssText='display:flex;align-items:center;gap:8px';wrap.prepend(b);c.append(wrap);return c}
 
 function fmtDate(d){const p=d.split('-');const ms=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];return p[2]+' '+ms[+p[1]-1]}
+function horaCL(utc){if(!utc)return '';try{
+  return new Date(utc).toLocaleTimeString('es-CL',{timeZone:'America/Santiago',hour:'2-digit',minute:'2-digit',hour12:false});
+}catch(e){return ''}}
 function matchRow(m){
   const r=$('div',{class:'mrow'});
+  const h=horaCL(m.utc);
+  r.append($('span',{class:'hora'}, h?(h+' hs'):''));
   r.append($('span',{class:'gc'}, m.grupo?('Gr '+m.grupo):(m.fase||'')));
   r.append($('span',{class:'tm'},$('b',{},m.home),$('span',{class:'muted'},'vs'),$('b',{},m.away)));
   if(m.jugado){
@@ -731,7 +737,7 @@ function matchRow(m){
   return r;
 }
 function paneFecha(p){
-  const intro=$('div',{class:'muted',html:'<small>Dia en curso abierto por defecto · toca cualquier dia para expandir. Jugados con resultado real (fuente); por jugar con prediccion del modelo: <b style="color:#58a6ff">L</b> gana local · <b style="color:#8b949e">E</b> empate · <b style="color:#bc8cff">V</b> gana visita · “pron” = marcador mas probable.</small>'});
+  const intro=$('div',{class:'muted',html:'<small>Horarios en <b>hora de Chile</b> · dia en curso abierto por defecto · toca cualquier dia para expandir. Jugados con resultado real (fuente); por jugar con prediccion del modelo: <b style="color:#58a6ff">L</b> gana local · <b style="color:#8b949e">E</b> empate · <b style="color:#bc8cff">V</b> gana visita · “pron” = marcador mas probable.</small>'});
   intro.style.marginBottom='12px';p.append(intro);
   S.por_fecha.forEach(day=>{
     const open=day.fecha===S.fecha_activa;
