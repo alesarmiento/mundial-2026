@@ -967,6 +967,18 @@ function paneMetodo(p){
   c0.append($('div',{class:'gtitle'},'¿Que es esto?'));
   c0.append($('div',{html:'Un predictor del Mundial 2026 que combina un <b>motor estadistico</b> (calcula las probabilidades) con <b>resultados reales</b> que se cargan fecha a fecha. Cada vez que entra un resultado, todo el pronostico se recalcula. <b>Son probabilidades, no certezas.</b>'}));
   p.append(c0);
+  // En que se basa el modelo
+  const cm=$('div',{class:'card'});
+  cm.append($('div',{class:'gtitle'},'🧠 En que se basa el modelo'));
+  cm.append($('div',{class:'muted',html:'<small>No es un modelo de marca unica: combina tres metodos estandar y bien probados de la industria de prediccion deportiva (la misma familia que usan FiveThirtyEight y Opta). Etiqueta corta: <b>modelo Elo + Poisson con simulacion de Monte Carlo</b>.</small>'}));
+  [['Sistema Elo — fuerza de cada seleccion','Creado por Arpad Elo (originalmente para el ajedrez). Uso la variante World Football Elo Ratings (eloratings.net): factor K=60 para mundiales y ajuste por diferencia de goles. El Elo evoluciona con cada resultado real.'],
+   ['Modelo de Poisson — marcadores','Modela los goles de cada equipo con una distribucion de Poisson, derivando los goles esperados de la diferencia de Elo. Linaje academico: Maher (1982) y el modelo Dixon-Coles (1997), el enfoque clasico para pronosticar resultados de futbol.'],
+   ['Simulacion de Monte Carlo — proyeccion del torneo','Simular el torneo completo miles de veces (12.000) y contar frecuencias para estimar probabilidades. Se llama asi por el casino de Monaco; es el estandar cuando hay mucha incertidumbre.']].forEach(([t,d])=>{
+    cm.append($('div',{class:'rname'},t));
+    cm.append($('div',{class:'muted',html:'<small>'+d+'</small>'}));
+  });
+  cm.append($('div',{class:'muted',html:'<small style="opacity:.85">Lo propio de este sistema es la <b>implementacion</b> (el Elo que evoluciona con cada resultado, el arbol oficial de FIFA, el puntaje de la polla), no la matematica de base, que es publica y probada.</small>'}));
+  p.append(cm);
   // Algoritmo
   const c1=$('div',{class:'card'});
   c1.append($('div',{class:'gtitle'},'⚙️ El algoritmo en 5 pasos'));
