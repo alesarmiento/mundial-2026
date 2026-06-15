@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "descripcion": "Ledger de resultados REALES. Cada partido entra con su fuente. NUNCA se inventa un marcador. Si no se puede verificar, no se agrega.",
+    "fase_valores": "grupos | dieciseisavos | octavos | cuartos | semis | tercer_puesto | final",
+    "ultima_fecha_cargada": "2026-06-15"
+  },
+  "partidos": [
+    {"fecha": "2026-06-11", "fase": "grupos", "grupo": "A", "local": "Mexico", "visita": "South Africa", "gl": 2, "gv": 0, "fuente": "https://www.nbcsports.com/soccer/news/2026-world-cup-group-stage-table-full-standings-for-all-12-groups"},
+    {"fecha": "2026-06-11", "fase": "grupos", "grupo": "A", "local": "South Korea", "visita": "Czechia", "gl": 1, "gv": 0, "fuente": "https://www.nbcsports.com/soccer/news/2026-world-cup-group-stage-table-full-standings-for-all-12-groups"},
+    {"fecha": "2026-06-12", "fase": "grupos", "grupo": "B", "local": "Canada", "visita": "Bosnia and Herzegovina", "gl": 1, "gv": 1, "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_B"},
+    {"fecha": "2026-06-12", "fase": "grupos", "grupo": "D", "local": "United States", "visita": "Paraguay", "gl": 3, "gv": 0, "fuente": "https://www.nbcsports.com/soccer/news/2026-world-cup-group-stage-table-full-standings-for-all-12-groups"},
+    {"fecha": "2026-06-13", "fase": "grupos", "grupo": "B", "local": "Qatar", "visita": "Switzerland", "gl": 1, "gv": 1, "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_B"},
+    {"fecha": "2026-06-13", "fase": "grupos", "grupo": "C", "local": "Brazil", "visita": "Morocco", "gl": 1, "gv": 1, "fuente": "https://www.espn.com/soccer/match/_/gameId/760419/morocco-brazil"},
+    {"fecha": "2026-06-13", "fase": "grupos", "grupo": "C", "local": "Scotland", "visita": "Haiti", "gl": 1, "gv": 0, "fuente": "https://www.nbcsports.com/soccer/news/2026-world-cup-group-stage-table-full-standings-for-all-12-groups"},
+    {"fecha": "2026-06-13", "fase": "grupos", "grupo": "D", "local": "Australia", "visita": "Turkiye", "gl": 2, "gv": 0, "fuente": "https://sports.yahoo.com/soccer/live/2026-world-cup-scores-results-usmnt-throttles-paraguay-canada-earns-draw-with-bosnia-and-herzegovina-145258177.html"},
+    {"fecha": "2026-06-14", "fase": "grupos", "grupo": "E", "local": "Germany", "visita": "Curacao", "gl": 7, "gv": 1, "fuente": "https://www.olympics.com/en/news/fifa-world-cup-2026-every-match-result-sunday-14-june-live-scores"},
+    {"fecha": "2026-06-14", "fase": "grupos", "grupo": "F", "local": "Netherlands", "visita": "Japan", "gl": 2, "gv": 2, "fuente": "https://www.olympics.com/en/news/fifa-world-cup-2026-every-match-result-sunday-14-june-live-scores"},
+    {"fecha": "2026-06-14", "fase": "grupos", "grupo": "E", "local": "Ivory Coast", "visita": "Ecuador", "gl": 1, "gv": 0, "fuente": "https://www.olympics.com/en/news/fifa-world-cup-2026-every-match-result-sunday-14-june-live-scores"},
+    {"fecha": "2026-06-14", "fase": "grupos", "grupo": "F", "local": "Sweden", "visita": "Tunisia", "gl": 5, "gv": 1, "fuente": "https://www.sbs.com.au/news/article/fifa-world-cup-2026-results-june-15/ocls1mcso"},
+    {"fecha": "2026-06-15", "fase": "grupos", "grupo": "H", "local": "Spain", "visita": "Cape Verde", "gl": 0, "gv": 0, "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021482"},
+    {"fecha": "2026-06-15", "fase": "grupos", "grupo": "G", "local": "Belgium", "visita": "Egypt", "gl": 1, "gv": 1, "fuente": "https://www.espn.com/soccer/match/_/gameId/760426"}
+  ]
+}

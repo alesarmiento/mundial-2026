@@ -1,0 +1,56 @@
+{
+  "_meta": {
+    "torneo": "FIFA World Cup 2026",
+    "formato": "48 equipos, 12 grupos de 4. Clasifican: 2 primeros de cada grupo + 8 mejores terceros = 32 a dieciseisavos (Round of 32).",
+    "grupos_fuente": "Sorteo oficial FIFA (Washington DC, 5-dic-2025), corroborado NBC Sports + Yahoo Sports",
+    "elo_fuente": "World Football Elo Ratings (eloratings.net via Wikipedia module), snapshot ~11-jun-2026",
+    "nota_elo": "El Elo aqui es la SEMILLA inicial. El motor lo hace evolucionar aplicando cada resultado real del ledger."
+  },
+  "grupos": {
+    "A": ["Mexico", "South Africa", "South Korea", "Czechia"],
+    "B": ["Canada", "Bosnia and Herzegovina", "Qatar", "Switzerland"],
+    "C": ["Brazil", "Morocco", "Haiti", "Scotland"],
+    "D": ["United States", "Paraguay", "Australia", "Turkiye"],
+    "E": ["Germany", "Curacao", "Ivory Coast", "Ecuador"],
+    "F": ["Netherlands", "Japan", "Sweden", "Tunisia"],
+    "G": ["Belgium", "Egypt", "Iran", "New Zealand"],
+    "H": ["Spain", "Cape Verde", "Saudi Arabia", "Uruguay"],
+    "I": ["France", "Senegal", "Iraq", "Norway"],
+    "J": ["Argentina", "Algeria", "Austria", "Jordan"],
+    "K": ["Portugal", "DR Congo", "Uzbekistan", "Colombia"],
+    "L": ["England", "Croatia", "Ghana", "Panama"]
+  },
+  "elo_seed": {
+    "Mexico": 1881, "South Africa": 1511, "South Korea": 1786, "Czechia": 1712,
+    "Canada": 1767, "Bosnia and Herzegovina": 1616, "Qatar": 1447, "Switzerland": 1865,
+    "Brazil": 1978, "Morocco": 1840, "Haiti": 1536, "Scotland": 1794,
+    "United States": 1780, "Paraguay": 1780, "Australia": 1839, "Turkiye": 1849,
+    "Germany": 1939, "Curacao": 1427, "Ivory Coast": 1743, "Ecuador": 1890,
+    "Netherlands": 1944, "Japan": 1910, "Sweden": 1755, "Tunisia": 1585,
+    "Belgium": 1894, "Egypt": 1696, "Iran": 1772, "New Zealand": 1562,
+    "Spain": 2157, "Cape Verde": 1578, "Saudi Arabia": 1576, "Uruguay": 1892,
+    "France": 2063, "Senegal": 1860, "Iraq": 1607, "Norway": 1914,
+    "Argentina": 2115, "Algeria": 1772, "Austria": 1830, "Jordan": 1680,
+    "Portugal": 1989, "DR Congo": 1652, "Uzbekistan": 1714, "Colombia": 1982,
+    "England": 2024, "Croatia": 1912, "Ghana": 1510, "Panama": 1730
+  },
+  "r32_skeleton": [
+    {"slot": 1,  "home": "1E", "away": "3:A,B,C,D,F"},
+    {"slot": 2,  "home": "1I", "away": "3:C,D,F,G,H"},
+    {"slot": 3,  "home": "2A", "away": "2B"},
+    {"slot": 4,  "home": "1F", "away": "2C"},
+    {"slot": 5,  "home": "2K", "away": "2L"},
+    {"slot": 6,  "home": "1H", "away": "2J"},
+    {"slot": 7,  "home": "1D", "away": "3:B,E,F,I,J"},
+    {"slot": 8,  "home": "1G", "away": "3:A,E,H,I,J"},
+    {"slot": 9,  "home": "1C", "away": "2F"},
+    {"slot": 10, "home": "2E", "away": "2I"},
+    {"slot": 11, "home": "1A", "away": "3:C,E,F,H,I"},
+    {"slot": 12, "home": "1L", "away": "3:E,H,I,J,K"},
+    {"slot": 13, "home": "1J", "away": "2H"},
+    {"slot": 14, "home": "2D", "away": "2G"},
+    {"slot": 15, "home": "1B", "away": "3:E,F,G,I,J"},
+    {"slot": 16, "home": "1K", "away": "3:D,E,I,J,L"}
+  ],
+  "_nota_bracket": "Esqueleto R32 en ORDEN DE ARBOL OFICIAL (Wikipedia '2026 FIFA World Cup knockout stage'): emparejando secuencialmente (1-2, 3-4, ...) se reproducen los cruces reales de octavos, cuartos, semis y final. Posiciones 1-8 = mitad de la final M101; 9-16 = mitad M102, por eso 1° y 2° del mismo grupo solo pueden reencontrarse en la FINAL. La asignacion fina de cada tercero a su slot la resuelve el motor por matching respetando los grupos permitidos de cada slot (la tabla FIFA es deterministica recien al cerrar la fase de grupos)."
+}

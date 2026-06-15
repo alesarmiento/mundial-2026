@@ -1,0 +1,49 @@
+{
+  "_meta": {
+    "descripcion": "Candidatos de consenso a premios individuales (Bota de Oro, Guante de Oro, Mejor Joven). El rating 1-10 deriva de las cuotas de mercado de varias casas (mayo-jun 2026). Alimenta la estimacion = consenso x recorrido simulado del equipo. NO es certeza.",
+    "fuentes": [
+      "RotoWire / SI.com (Golden Boot)",
+      "WSN-DraftKings / TheLines / bet365 / Oddspedia (Golden Glove)",
+      "Goal.com / FOX Sports / ESPN U21 / bet365 (Young Player)"
+    ],
+    "caveat": "Cuotas previas/tempranas al torneo; el consenso vivo puede moverse con los resultados."
+  },
+  "goleador": [
+    {"jugador":"Kylian Mbappe","equipo":"France","odds":"6/1","rating":9.5},
+    {"jugador":"Harry Kane","equipo":"England","odds":"7/1","rating":9.2},
+    {"jugador":"Erling Haaland","equipo":"Norway","odds":"14/1","rating":8.5},
+    {"jugador":"Mikel Oyarzabal","equipo":"Spain","odds":"14/1","rating":8.0},
+    {"jugador":"Lionel Messi","equipo":"Argentina","odds":"16/1","rating":7.8},
+    {"jugador":"Lamine Yamal","equipo":"Spain","odds":"22/1","rating":7.5},
+    {"jugador":"Cristiano Ronaldo","equipo":"Portugal","odds":"20/1","rating":7.2},
+    {"jugador":"Ousmane Dembele","equipo":"France","odds":"25/1","rating":7.2},
+    {"jugador":"Raphinha","equipo":"Brazil","odds":"28/1","rating":7.0},
+    {"jugador":"Julian Alvarez","equipo":"Argentina","odds":"30/1","rating":6.8},
+    {"jugador":"Vinicius Junior","equipo":"Brazil","odds":"30/1","rating":6.8},
+    {"jugador":"Kai Havertz","equipo":"Germany","odds":"30/1","rating":6.5},
+    {"jugador":"Lautaro Martinez","equipo":"Argentina","odds":"35/1","rating":6.5},
+    {"jugador":"Cody Gakpo","equipo":"Netherlands","odds":"40/1","rating":6.2}
+  ],
+  "arquero": [
+    {"jugador":"Emiliano Martinez","equipo":"Argentina","odds":"4/1","rating":9.0},
+    {"jugador":"Unai Simon","equipo":"Spain","odds":"9/2","rating":8.8},
+    {"jugador":"Alisson Becker","equipo":"Brazil","odds":"5/1","rating":8.0},
+    {"jugador":"Mike Maignan","equipo":"France","odds":"6/1","rating":7.8},
+    {"jugador":"David Raya","equipo":"Spain","odds":"7/1","rating":7.2},
+    {"jugador":"Jordan Pickford","equipo":"England","odds":"7/1","rating":7.0},
+    {"jugador":"Ederson","equipo":"Brazil","odds":"6/1","rating":7.0},
+    {"jugador":"Diogo Costa","equipo":"Portugal","odds":"10/1","rating":6.5}
+  ],
+  "joven": [
+    {"jugador":"Lamine Yamal","equipo":"Spain","edad":18,"odds":"3/2","rating":9.7},
+    {"jugador":"Desire Doue","equipo":"France","edad":20,"odds":"9/4","rating":8.5},
+    {"jugador":"Warren Zaire-Emery","equipo":"France","edad":20,"odds":"5/1","rating":7.5},
+    {"jugador":"Arda Guler","equipo":"Turkiye","edad":21,"odds":"16/1","rating":7.2},
+    {"jugador":"Nico O'Reilly","equipo":"England","edad":21,"odds":"12/1","rating":6.8},
+    {"jugador":"Pau Cubarsi","equipo":"Spain","edad":19,"rating":6.5},
+    {"jugador":"Endrick","equipo":"Brazil","edad":19,"odds":"18/1","rating":6.5},
+    {"jugador":"Kenan Yildiz","equipo":"Turkiye","edad":21,"rating":6.3},
+    {"jugador":"Yan Diomande","equipo":"Ivory Coast","edad":19,"odds":"25/1","rating":6.0},
+    {"jugador":"Rayan","equipo":"Brazil","edad":19,"rating":5.8}
+  ]
+}
