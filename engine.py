@@ -719,7 +719,7 @@ function fmtDate(d){const p=d.split('-');const ms=['ene','feb','mar','abr','may'
 function horaCL(utc){if(!utc)return '';try{
   return new Date(utc).toLocaleTimeString('es-CL',{timeZone:'America/Santiago',hour:'2-digit',minute:'2-digit',hour12:false});
 }catch(e){return ''}}
-let _scoreMap=null;
+var _scoreMap=null;
 function scoreFor(h,a){if(!_scoreMap){_scoreMap={};((S.puntaje&&S.puntaje.por_partido)||[]).forEach(x=>{_scoreMap[x.home+'|'+x.away]=x})}return _scoreMap[h+'|'+a]}
 function matchRow(m){
   const r=$('div',{class:'mrow'});
