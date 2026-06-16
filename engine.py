@@ -111,9 +111,9 @@ def match_pred(home, away, elo, ad=None, w=0.0, host_adv=0.0, hosts=()):
             else: pA += p
             if p > bestp: bestp, best = p, (i, j)
     s = pH + pD + pA
-    # marcador para mostrar: REDONDEO del xG (goles esperados) de cada equipo, ajustado para NO
-    # contradecir el 1X2 mas probable. Asi el marcador sigue al xG (ej. 2.67 -> 3) y respeta quien gana.
-    # El puntaje de la polla usa la moda aparte (campo "score").
+    # marcador para mostrar Y puntuar: REDONDEO del xG (goles esperados) de cada equipo, ajustado para
+    # NO contradecir el 1X2 mas probable. Sigue al xG (ej. 2.67 -> 3) y respeta quien gana. Lo que se
+    # muestra es lo que se puntua (campo "score_med"). "score" (moda) queda informativo, no se usa.
     disp = [int(la + 0.5), int(lb + 0.5)]
     if pH >= pD and pH >= pA:           # gana local
         if disp[0] <= disp[1]: disp[0] = disp[1] + 1
@@ -444,7 +444,7 @@ def compute_scoring(teams, results, fixtures, base, picks, cfg=None):
                               cfg.get("host_adv", 0.0), cfg.get("hosts", set()))
             if not pred:
                 continue
-            ph, pa = pred["score"]
+            ph, pa = pred["score_med"]  # se puntua con el MISMO marcador que se muestra (redondeo del xG)
             ah, aa = (m["gl"], m["gv"]) if m["local"] == home else (m["gv"], m["gl"])
             parts = {}; pts = 0
             if ((ph > pa) - (ph < pa)) == ((ah > aa) - (ah < aa)):
@@ -583,7 +583,7 @@ def compute_evaluation(teams, results, fixtures, cfg):
             brier = sum((p - y[k]) ** 2 for k, p in (("H", pH), ("D", pD), ("A", pA)))
             brier_base = sum((prior[k] - y[k]) ** 2 for k in y)
             pout = {"H": pH, "D": pD, "A": pA}[out]
-            sh, sa = pred["score"]
+            sh, sa = pred["score_med"]
             rows.append({"fecha": d, "home": home, "away": away, "real": [ah, aa],
                          "pred_score": [sh, sa], "out": out, "pick": pick, "hit": pick == out,
                          "pH": round(pH, 3), "pD": round(pD, 3), "pA": round(pA, 3),
@@ -1455,7 +1455,7 @@ function paneMetodo(p){
   const c4=$('div',{class:'card'});
   c4.append($('div',{class:'gtitle'},'⚠️ Limitaciones (honestas)'));
   const lis=['Es un modelo probabilistico: dice que es MAS probable, no que va a pasar. Un torneo tiene mucha varianza.',
-    'El marcador mostrado redondea el xG (goles esperados) de cada equipo, ajustado para no contradecir al ganador mas probable; el puntaje de la polla usa la moda (optima para acertar el exacto). El xG es un promedio, no una probabilidad: un equipo con xG 2,7 puede hacer 2, 3 o 4. La lectura completa (xG + probabilidades 1X2) esta en el popup de cada partido.',
+    'El marcador mostrado redondea el xG (goles esperados) de cada equipo, ajustado para no contradecir al ganador mas probable; el puntaje de la polla usa ESE MISMO marcador (lo que se ve es lo que se puntua). El xG es un promedio, no una probabilidad: un equipo con xG 2,7 puede hacer 2, 3 o 4. La lectura completa (xG + probabilidades 1X2) esta en el popup de cada partido.',
     'Los ratings de ataque/defensa se anclan sobre todo con partidos dentro de cada confederacion; el nivel relativo entre confederaciones (ej. Africa vs Europa) esta debilmente calibrado y se corrige a medida que el Mundial cruza selecciones de distintas confederaciones.',
     'La capa ataque/defensa mejora el marcador pero, sobre los 16 partidos jugados, todavia no supera de forma concluyente al baseline (ver pestana Evaluacion). Es la mejor estimacion disponible, no una certeza.',
     'Los premios individuales son una heuristica (consenso de mercado × recorrido del equipo), no una prediccion fina por jugador.',

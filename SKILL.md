@@ -29,8 +29,8 @@ Disenado para acompanar TODO el torneo: cada fecha que se carga, las prediccione
 `ad_weight=0.5`) es el analista principal — las predicciones por fecha, grupos y campeon lo usan. La pestana
 **Comparativa** deja ver el modelo Elo puro (OLD) vs el mejorado (NEW) lado a lado. El **juego de puntos**
 (Puntaje) usa el modelo mejorado en **TODOS los partidos** (decision 17-jun, hacia atras y en adelante;
-`scoring_modelo_desde=2026-06-11`). El marcador se puntua con la **moda** (optima para acertar el exacto);
-el marcador que se MUESTRA en Por fecha redondea el xG (goles esperados).
+`scoring_modelo_desde=2026-06-11`). El marcador se puntua con el **mismo marcador que se muestra**
+(redondeo del xG): lo que se ve en Por fecha es lo que se puntua.
 Cada partido en **Por fecha** abre un **popup** (clic en la fila) que explica el pronostico: Elo, ratings
 ataque/defensa y ultimos partidos de ambos equipos. Para volver al Elo puro en todo: `ad_weight=0`.
 
