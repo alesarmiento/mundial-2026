@@ -120,9 +120,18 @@ def match_pred(home, away, elo, ad=None, w=0.0, host_adv=0.0, hosts=()):
             else: pA += p
             if p > bestp: bestp, best = p, (i, j)
     s = pH + pD + pA
+    # marcador para mostrar: mediana por equipo, pero CONSISTENTE con el 1X2 mas probable
+    # (no mostrar un empate si el modelo favorece a un equipo, ni un ganador distinto al favorito)
+    med = [_pmedian(la), _pmedian(lb)]
+    if pH >= pD and pH >= pA:           # gana local
+        if med[0] <= med[1]: med[0] = med[1] + 1
+    elif pA >= pD and pA >= pH:         # gana visita
+        if med[1] <= med[0]: med[1] = med[0] + 1
+    elif med[0] != med[1]:              # empate mas probable -> mostrar empate
+        mm = max(med); med = [mm, mm]
     return {"pH": round(100 * pH / s, 1), "pD": round(100 * pD / s, 1),
             "pA": round(100 * pA / s, 1), "score": [best[0], best[1]],
-            "score_med": [_pmedian(la), _pmedian(lb)],
+            "score_med": med,
             "xgH": round(la, 2), "xgA": round(lb, 2)}
 
 def build_por_fecha(teams, results, elo, fixtures, anchor, cfg=None):
