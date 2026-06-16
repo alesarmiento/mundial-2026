@@ -643,6 +643,9 @@ a{color:var(--ac2);text-decoration:none}
 .mrow{display:flex;align-items:center;gap:12px;padding:9px 4px;border-bottom:1px solid var(--bd);font-size:13px;flex-wrap:wrap}
 .mrow:last-child{border-bottom:none}
 .mrow .hora{font-size:11px;color:var(--ac2);font-variant-numeric:tabular-nums;width:52px;flex:none;font-weight:600}
+.mrow .pronv{font-size:11px;color:var(--mut);font-variant-numeric:tabular-nums;flex:none}
+.ptschip{font-size:11px;font-weight:700;padding:1px 7px;border-radius:5px;background:#21262d;color:var(--mut);flex:none}
+.ptschip.on{background:#11301c;color:var(--ac)}
 .mrow .gc{font-size:10px;color:var(--mut);width:30px;flex:none}
 .mrow .tm{flex:1;display:flex;justify-content:space-between;gap:8px;min-width:200px;max-width:330px}
 .sc{font-variant-numeric:tabular-nums;font-weight:700;min-width:42px;text-align:center}
@@ -716,6 +719,8 @@ function fmtDate(d){const p=d.split('-');const ms=['ene','feb','mar','abr','may'
 function horaCL(utc){if(!utc)return '';try{
   return new Date(utc).toLocaleTimeString('es-CL',{timeZone:'America/Santiago',hour:'2-digit',minute:'2-digit',hour12:false});
 }catch(e){return ''}}
+let _scoreMap=null;
+function scoreFor(h,a){if(!_scoreMap){_scoreMap={};((S.puntaje&&S.puntaje.por_partido)||[]).forEach(x=>{_scoreMap[x.home+'|'+x.away]=x})}return _scoreMap[h+'|'+a]}
 function matchRow(m){
   const r=$('div',{class:'mrow'});
   const h=horaCL(m.utc);
@@ -724,7 +729,12 @@ function matchRow(m){
   r.append($('span',{class:'tm'},$('b',{},m.home),$('span',{class:'muted'},'vs'),$('b',{},m.away)));
   if(m.jugado){
     r.append($('span',{class:'sc'}, m.gl+'–'+m.gv));
-    r.append($('span',{class:'done'},'✓ final'));
+    const sc=scoreFor(m.home,m.away);
+    if(sc){
+      r.append($('span',{class:'pronv'},'pron '+sc.pred[0]+'–'+sc.pred[1]));
+      r.append($('span',{class:'ptschip'+(sc.pts>0?' on':'')}, '+'+sc.pts+' pts'));
+    }
+    r.append($('span',{class:'done'},'✓'));
     if(m.fuente)r.append($('a',{href:m.fuente,target:'_blank'},'fuente'));
   } else if(m.pred){
     const seg=$('div',{class:'seg'});
