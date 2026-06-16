@@ -79,15 +79,6 @@ def _poisson(lam):
         if p <= L:
             return k - 1
 
-def _pmedian(lam):
-    """Mediana de una Poisson: menor k con prob acumulada >= 0.5. Para mostrar un marcador
-    que refleje 'mas probable que marquen que que no' (a diferencia de la moda, siempre 0 si lam<1)."""
-    c = 0.0
-    for k in range(20):
-        c += math.exp(-lam) * lam ** k / math.factorial(k)
-        if c >= 0.5:
-            return k
-    return 19
 
 def ko_winner(a, ra, b, rb):
     """Eliminatoria: ganador via expectativa Elo (empate -> penales, leve sesgo Elo)."""
@@ -120,18 +111,19 @@ def match_pred(home, away, elo, ad=None, w=0.0, host_adv=0.0, hosts=()):
             else: pA += p
             if p > bestp: bestp, best = p, (i, j)
     s = pH + pD + pA
-    # marcador para mostrar: mediana por equipo, pero CONSISTENTE con el 1X2 mas probable
-    # (no mostrar un empate si el modelo favorece a un equipo, ni un ganador distinto al favorito)
-    med = [_pmedian(la), _pmedian(lb)]
+    # marcador para mostrar: REDONDEO del xG (goles esperados) de cada equipo, ajustado para NO
+    # contradecir el 1X2 mas probable. Asi el marcador sigue al xG (ej. 2.67 -> 3) y respeta quien gana.
+    # El puntaje de la polla usa la moda aparte (campo "score").
+    disp = [int(la + 0.5), int(lb + 0.5)]
     if pH >= pD and pH >= pA:           # gana local
-        if med[0] <= med[1]: med[0] = med[1] + 1
+        if disp[0] <= disp[1]: disp[0] = disp[1] + 1
     elif pA >= pD and pA >= pH:         # gana visita
-        if med[1] <= med[0]: med[1] = med[0] + 1
-    elif med[0] != med[1]:              # empate mas probable -> mostrar empate
-        mm = max(med); med = [mm, mm]
+        if disp[1] <= disp[0]: disp[1] = disp[0] + 1
+    elif disp[0] != disp[1]:            # empate mas probable -> mostrar empate
+        mm = max(disp); disp = [mm, mm]
     return {"pH": round(100 * pH / s, 1), "pD": round(100 * pD / s, 1),
             "pA": round(100 * pA / s, 1), "score": [best[0], best[1]],
-            "score_med": med,
+            "score_med": disp,
             "xgH": round(la, 2), "xgA": round(lb, 2)}
 
 def build_por_fecha(teams, results, elo, fixtures, anchor, cfg=None):
@@ -1053,8 +1045,8 @@ function lectura(home,away,dh,da,pred){
   if(da.atk>=1.2)ps.push(`${away} también genera (ataque ${da.atk})`);
   if(dh.dfn>=1.2)ps.push(`${home} viene recibiendo goles`);
   if(!ps.length)ps.push('equipos parejos en ataque y defensa para este cruce');
-  const xg=(pred&&pred.xgH!=null)?`xG ${home} ${pred.xgH} · ${away} ${pred.xgA}. `:'';
-  return `<div class="lect">📊 ${xg}El marcador es el <b>más probable</b>, no lo esperado: ${ps.join('; ')}.</div>`;
+  const xg=(pred&&pred.xgH!=null)?`xG = goles esperados (promedio): ${home} ${pred.xgH} · ${away} ${pred.xgA}. `:'';
+  return `<div class="lect">📊 ${xg}El marcador mostrado redondea ese xG (no es probabilidad): ${ps.join('; ')}.</div>`;
 }
 function openModal(m){
   const D=S.equipo_detalle||{}, dh=D[m.home], da=D[m.away];
@@ -1064,7 +1056,7 @@ function openModal(m){
   const psc=pred?(pred.score_med||pred.score):null;
   if(psc)scoreTxt=`Pronóstico: <b>${psc[0]}–${psc[1]}</b>`;
   if(!m.jugado&&m.pred)probTxt=` · L ${Math.round(m.pred.pH)}% / E ${Math.round(m.pred.pD)}% / V ${Math.round(m.pred.pA)}%`;
-  const xgHtml=(pred&&pred.xgH!=null)?`<div class="xgbar"><div class="xgbox"><div class="v">${pred.xgH}</div><div class="l">xG ${m.home}</div></div><div class="xgbox"><div class="v">${pred.xgA}</div><div class="l">xG ${m.away}</div></div></div>`:'';
+  const xgHtml=(pred&&pred.xgH!=null)?`<div class="xgbar"><div class="xgbox"><div class="v">${pred.xgH}</div><div class="l">goles esperados ${m.home}</div></div><div class="xgbox"><div class="v">${pred.xgA}</div><div class="l">goles esperados ${m.away}</div></div></div>`:'';
   document.getElementById('modalbody').innerHTML=
     `<div class="mh">${m.home} vs ${m.away}</div>
      <div class="msub">${m.grupo?('Grupo '+m.grupo+' · '):''}${scoreTxt}${probTxt}${realTxt}</div>
@@ -1458,7 +1450,7 @@ function paneMetodo(p){
   const c4=$('div',{class:'card'});
   c4.append($('div',{class:'gtitle'},'⚠️ Limitaciones (honestas)'));
   const lis=['Es un modelo probabilistico: dice que es MAS probable, no que va a pasar. Un torneo tiene mucha varianza.',
-    'El marcador mostrado es la MEDIANA de goles de cada equipo (refleja si es mas probable que marquen que que no); el puntaje de la polla usa la moda (optima para acertar el exacto). Aun asi es un resumen: un favorito con xG 2,7 puede hacer 3+. La lectura honesta son las probabilidades y el xG (en el popup de cada partido), no el marcador puntual.',
+    'El marcador mostrado redondea el xG (goles esperados) de cada equipo, ajustado para no contradecir al ganador mas probable; el puntaje de la polla usa la moda (optima para acertar el exacto). El xG es un promedio, no una probabilidad: un equipo con xG 2,7 puede hacer 2, 3 o 4. La lectura completa (xG + probabilidades 1X2) esta en el popup de cada partido.',
     'Los ratings de ataque/defensa se anclan sobre todo con partidos dentro de cada confederacion; el nivel relativo entre confederaciones (ej. Africa vs Europa) esta debilmente calibrado y se corrige a medida que el Mundial cruza selecciones de distintas confederaciones.',
     'La capa ataque/defensa mejora el marcador pero, sobre los 16 partidos jugados, todavia no supera de forma concluyente al baseline (ver pestana Evaluacion). Es la mejor estimacion disponible, no una certeza.',
     'Los premios individuales son una heuristica (consenso de mercado × recorrido del equipo), no una prediccion fina por jugador.',
