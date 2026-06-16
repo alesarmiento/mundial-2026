@@ -79,6 +79,16 @@ def _poisson(lam):
         if p <= L:
             return k - 1
 
+def _pmedian(lam):
+    """Mediana de una Poisson: menor k con prob acumulada >= 0.5. Para mostrar un marcador
+    que refleje 'mas probable que marquen que que no' (a diferencia de la moda, siempre 0 si lam<1)."""
+    c = 0.0
+    for k in range(20):
+        c += math.exp(-lam) * lam ** k / math.factorial(k)
+        if c >= 0.5:
+            return k
+    return 19
+
 def ko_winner(a, ra, b, rb):
     """Eliminatoria: ganador via expectativa Elo (empate -> penales, leve sesgo Elo)."""
     return a if random.random() < expected(ra, rb) else b
@@ -112,6 +122,7 @@ def match_pred(home, away, elo, ad=None, w=0.0, host_adv=0.0, hosts=()):
     s = pH + pD + pA
     return {"pH": round(100 * pH / s, 1), "pD": round(100 * pD / s, 1),
             "pA": round(100 * pA / s, 1), "score": [best[0], best[1]],
+            "score_med": [_pmedian(la), _pmedian(lb)],
             "xgH": round(la, 2), "xgA": round(lb, 2)}
 
 def build_por_fecha(teams, results, elo, fixtures, anchor, cfg=None):
@@ -622,10 +633,11 @@ def compute_comparison(teams, results, fixtures, ghist, w_new):
             ob += sum((po[k] / 100 - y[s]) ** 2 for k, s in (("pH", "L"), ("pD", "E"), ("pA", "V")))
             nb += sum((pn[k] / 100 - y[s]) ** 2 for k, s in (("pH", "L"), ("pD", "E"), ("pA", "V")))
             oh += so == out; nh += sn == out
+            som, snm = po.get("score_med", po["score"]), pn.get("score_med", pn["score"])
             jug.append({"fecha": d, "home": home, "away": away, "real": [ah, aa],
-                        "old": {"score": po["score"], "signo": so, "hit": so == out},
-                        "new": {"score": pn["score"], "signo": sn, "hit": sn == out},
-                        "diff": po["score"] != pn["score"] or so != sn})
+                        "old": {"score": som, "signo": so, "hit": so == out},
+                        "new": {"score": snm, "signo": sn, "hit": sn == out},
+                        "diff": som != snm or so != sn})
     njug = len(jug) or 1
     elo = elo_after(results, seed); ad = compute_ad(results, ghist, grupos)
     played = {frozenset((m["local"], m["visita"])) for m in results}
@@ -637,10 +649,11 @@ def compute_comparison(teams, results, fixtures, ghist, w_new):
         if not po or not pn:
             continue
         so, sn = signo(po), signo(pn)
+        som, snm = po.get("score_med", po["score"]), pn.get("score_med", pn["score"])
         fut.append({"fecha": f.get("date"), "home": f["home"], "away": f["away"],
-                    "old": {"score": po["score"], "signo": so, "fav": max(po["pH"], po["pD"], po["pA"])},
-                    "new": {"score": pn["score"], "signo": sn, "fav": max(pn["pH"], pn["pD"], pn["pA"])},
-                    "diff": po["score"] != pn["score"] or so != sn})
+                    "old": {"score": som, "signo": so, "fav": max(po["pH"], po["pD"], po["pA"])},
+                    "new": {"score": snm, "signo": sn, "fav": max(pn["pH"], pn["pD"], pn["pA"])},
+                    "diff": som != snm or so != sn})
     return {"w_new": w_new, "jugados": jug, "porjugar": fut,
             "agg": {"n": len(jug), "old_hit": oh, "new_hit": nh,
                     "old_brier": round(ob / njug, 3), "new_brier": round(nb / njug, 3)}}
@@ -1002,7 +1015,8 @@ function matchRow(m){
       const v=m.pred[k];const d=$('div',{}, v>=12?(lab+' '+Math.round(v)+'%'):'');
       d.style.background=c;d.style.width=v+'%';seg.append(d)});
     r.append(seg);
-    r.append($('span',{class:'pron'},'pron '+m.pred.score[0]+'–'+m.pred.score[1]));
+    const ps=m.pred.score_med||m.pred.score;
+    r.append($('span',{class:'pron'},'pron '+ps[0]+'–'+ps[1]));
   } else { r.append($('span',{class:'muted'},'—')) }
   r.append($('span',{class:'info'},'ⓘ por qué'));
   return r;
@@ -1038,7 +1052,8 @@ function openModal(m){
   let pred=null, realTxt='', probTxt='', scoreTxt='';
   if(m.jugado){const sc=scoreFor(m.home,m.away);pred=sc?{score:sc.pred,xgH:null,xgA:null}:null;realTxt=` · Resultado real: <b>${m.gl}–${m.gv}</b>`;}
   else pred=m.pred;
-  if(pred)scoreTxt=`Pronóstico: <b>${pred.score[0]}–${pred.score[1]}</b>`;
+  const psc=pred?(pred.score_med||pred.score):null;
+  if(psc)scoreTxt=`Pronóstico: <b>${psc[0]}–${psc[1]}</b>`;
   if(!m.jugado&&m.pred)probTxt=` · L ${Math.round(m.pred.pH)}% / E ${Math.round(m.pred.pD)}% / V ${Math.round(m.pred.pA)}%`;
   const xgHtml=(pred&&pred.xgH!=null)?`<div class="xgbar"><div class="xgbox"><div class="v">${pred.xgH}</div><div class="l">xG ${m.home}</div></div><div class="xgbox"><div class="v">${pred.xgA}</div><div class="l">xG ${m.away}</div></div></div>`:'';
   document.getElementById('modalbody').innerHTML=
@@ -1434,7 +1449,7 @@ function paneMetodo(p){
   const c4=$('div',{class:'card'});
   c4.append($('div',{class:'gtitle'},'⚠️ Limitaciones (honestas)'));
   const lis=['Es un modelo probabilistico: dice que es MAS probable, no que va a pasar. Un torneo tiene mucha varianza.',
-    'El marcador que se muestra es el MAS PROBABLE, no lo esperado: un "1-0" puede convivir con ~50% de chance de que el favorito haga 2+. La lectura honesta son las probabilidades, no el marcador puntual.',
+    'El marcador mostrado es la MEDIANA de goles de cada equipo (refleja si es mas probable que marquen que que no); el puntaje de la polla usa la moda (optima para acertar el exacto). Aun asi es un resumen: un favorito con xG 2,7 puede hacer 3+. La lectura honesta son las probabilidades y el xG (en el popup de cada partido), no el marcador puntual.',
     'Los ratings de ataque/defensa se anclan sobre todo con partidos dentro de cada confederacion; el nivel relativo entre confederaciones (ej. Africa vs Europa) esta debilmente calibrado y se corrige a medida que el Mundial cruza selecciones de distintas confederaciones.',
     'La capa ataque/defensa mejora el marcador pero, sobre los 16 partidos jugados, todavia no supera de forma concluyente al baseline (ver pestana Evaluacion). Es la mejor estimacion disponible, no una certeza.',
     'Los premios individuales son una heuristica (consenso de mercado × recorrido del equipo), no una prediccion fina por jugador.',
