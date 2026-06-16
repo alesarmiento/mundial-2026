@@ -2,7 +2,7 @@
   "_meta": {
     "descripcion": "Ledger de resultados REALES. Cada partido entra con su fuente. NUNCA se inventa un marcador. Si no se puede verificar, no se agrega.",
     "fase_valores": "grupos | dieciseisavos | octavos | cuartos | semis | tercer_puesto | final",
-    "ultima_fecha_cargada": "2026-06-15"
+    "ultima_fecha_cargada": "2026-06-16"
   },
   "partidos": [
     {"fecha": "2026-06-11", "fase": "grupos", "grupo": "A", "local": "Mexico", "visita": "South Africa", "gl": 2, "gv": 0, "fuente": "https://www.nbcsports.com/soccer/news/2026-world-cup-group-stage-table-full-standings-for-all-12-groups"},
@@ -20,6 +20,7 @@
     {"fecha": "2026-06-15", "fase": "grupos", "grupo": "H", "local": "Spain", "visita": "Cape Verde", "gl": 0, "gv": 0, "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021482"},
     {"fecha": "2026-06-15", "fase": "grupos", "grupo": "G", "local": "Belgium", "visita": "Egypt", "gl": 1, "gv": 1, "fuente": "https://www.espn.com/soccer/match/_/gameId/760426"},
     {"fecha": "2026-06-15", "fase": "grupos", "grupo": "H", "local": "Saudi Arabia", "visita": "Uruguay", "gl": 1, "gv": 1, "fuente": "https://www.espn.com/soccer/match/_/gameId/760429/uruguay-saudi-arabia"},
-    {"fecha": "2026-06-15", "fase": "grupos", "grupo": "G", "local": "Iran", "visita": "New Zealand", "gl": 2, "gv": 2, "fuente": "https://www.espn.com/soccer/match/_/gameId/760427/new-zealand-iran"}
+    {"fecha": "2026-06-15", "fase": "grupos", "grupo": "G", "local": "Iran", "visita": "New Zealand", "gl": 2, "gv": 2, "fuente": "https://www.espn.com/soccer/match/_/gameId/760427/new-zealand-iran"},
+    {"fecha": "2026-06-16", "fase": "grupos", "grupo": "I", "local": "France", "visita": "Senegal", "gl": 3, "gv": 1, "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021490"}
   ]
 }
