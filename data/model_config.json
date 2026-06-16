@@ -5,11 +5,12 @@
     "ad_weight": "Peso 0..1 de la capa ataque/defensa sobre los goles esperados. 0 = solo Elo. Requiere datos en goals_history.json para tener efecto real (sin datos, los ratings quedan ~1.0).",
     "host_advantage_elo": "Bonus de Elo (en puntos) aplicado SOLO a las selecciones anfitrionas al predecir/simular sus partidos. Validado en backtest: +60..90 baja levemente el Brier. 0 = sin localia.",
     "hosts": "Anfitriones 2026 (nombres EXACTOS de teams.json). Solo ellos reciben la ventaja de localia.",
-    "scoring_ad_weight": "Peso de la capa ataque/defensa SOLO para el juego de puntos (pestana Puntaje). Independiente de ad_weight: el panel principal (campeon/grupos/por fecha) sigue con ad_weight, pero el puntaje usa este. Decision del usuario 16-jun: usar el modelo mejorado (0.5) para los puntos."
+    "scoring_ad_weight": "Peso de la capa ataque/defensa para el juego de puntos (pestana Puntaje). Decision 17-jun: el puntaje usa el modelo mejorado (0.5) en TODOS los partidos, hacia atras y en adelante.",
+    "scoring_modelo_desde": "Fecha desde la cual el puntaje usa el modelo mejorado. Puesta en la fecha del primer partido (2026-06-11) para cubrir todo el torneo."
   },
   "ad_weight": 0.5,
   "host_advantage_elo": 0,
   "scoring_ad_weight": 0.5,
-  "scoring_modelo_desde": "2026-06-16",
+  "scoring_modelo_desde": "2026-06-11",
   "hosts": ["United States", "Mexico", "Canada"]
 }

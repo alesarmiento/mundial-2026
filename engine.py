@@ -497,8 +497,13 @@ def compute_scoring(teams, results, fixtures, base, picks, cfg=None):
                 "estado": "pendiente", "ganado": 0, "potencial": 7 * len(pick_q)}
     ganado = total_match + sum(t["ganado"] for t in tour) + clas["ganado"]
     en_juego = sum(t["pts"] for t in tour if t["estado"] == "pendiente") + (clas["potencial"] if clas["estado"] == "pendiente" else 0)
-    modelo_nota = (f"Hasta {sdesde}: modelo Elo puro. Desde {sdesde}: modelo mejorado (capa ataque/defensa). "
-                   "Decision 16-jun: el juego de puntos usa el modelo mejorado de aca en adelante.") if (sw > 0 and sdesde) else ""
+    uso_old = any(r.get("modelo") == "OLD" for r in rows)
+    if sw > 0 and not uso_old:
+        modelo_nota = "El juego de puntos usa el modelo mejorado (Elo + ataque/defensa) en TODOS los partidos, hacia atras y en adelante."
+    elif sw > 0 and sdesde:
+        modelo_nota = f"Elo puro hasta {sdesde}; modelo mejorado (ataque/defensa) desde {sdesde}."
+    else:
+        modelo_nota = ""
     return {"corte": picks.get("corte"), "por_partido": rows, "total_partidos": total_match,
             "torneo": tour, "clasificados": clas, "ganado": ganado, "en_juego": en_juego,
             "n_partidos": len(rows), "modelo_nota": modelo_nota, "scoring_desde": sdesde}
