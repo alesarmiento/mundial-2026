@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "descripcion": "Knobs del motor. Por defecto TODO esta dormido: con ad_weight=0 y host_advantage_elo=0 el modelo es IDENTICO al Elo+Poisson original (verificado por diff de state.json).",
+    "como_validar": "1) Subir un knob. 2) Correr: python3 engine.py. 3) Mirar la pestana 'Evaluacion': el Brier debe BAJAR vs baseline y vs la corrida previa. 4) Si no baja, volver el knob a 0. Nunca se elige a ojo: se valida por backtest.",
+    "ad_weight": "Peso 0..1 de la capa ataque/defensa sobre los goles esperados. 0 = solo Elo. Requiere datos en goals_history.json para tener efecto real (sin datos, los ratings quedan ~1.0).",
+    "host_advantage_elo": "Bonus de Elo (en puntos) aplicado SOLO a las selecciones anfitrionas al predecir/simular sus partidos. Validado en backtest: +60..90 baja levemente el Brier. 0 = sin localia.",
+    "hosts": "Anfitriones 2026 (nombres EXACTOS de teams.json). Solo ellos reciben la ventaja de localia.",
+    "scoring_ad_weight": "Peso de la capa ataque/defensa SOLO para el juego de puntos (pestana Puntaje). Independiente de ad_weight: el panel principal (campeon/grupos/por fecha) sigue con ad_weight, pero el puntaje usa este. Decision del usuario 16-jun: usar el modelo mejorado (0.5) para los puntos."
+  },
+  "ad_weight": 0.5,
+  "host_advantage_elo": 0,
+  "scoring_ad_weight": 0.5,
+  "scoring_modelo_desde": "2026-06-16",
+  "hosts": ["United States", "Mexico", "Canada"]
+}

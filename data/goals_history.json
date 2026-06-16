@@ -1,0 +1,6020 @@
+{
+ "_meta": {
+  "descripcion": "Historial de marcadores REALES pre-torneo por seleccion, para sembrar los ratings de ataque/defensa (cuanto marca y cuanto recibe cada equipo, ajustado por rival).",
+  "regla_de_oro": "Cada partido entra con su fuente. NUNCA se inventa un marcador. Si no esta confirmado con fuente, no entra. Mismo estandar anti-alucinacion que results.json.",
+  "vacio_es_seguro": "Con la lista vacia, los ratings se calculan solo desde los resultados del torneo (results.json) y, con ad_weight=0, no afectan ninguna prediccion. Poblar es opcional y se valida por backtest (pestana Evaluacion).",
+  "schema": {
+   "fecha": "YYYY-MM-DD",
+   "local": "<nombre EXACTO de teams.json>",
+   "visita": "<nombre EXACTO de teams.json>",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://..."
+  },
+  "n_partidos": 750,
+  "rango": "2024-01-01 a 2026-06-10",
+  "cargado": "8 investigadores web + dedup + verificacion muestral 3/3 contra fuente"
+ },
+ "partidos": [
+  {
+   "fecha": "2024-03-21",
+   "local": "Panama",
+   "visita": "Mexico",
+   "gl": 0,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2024_CONCACAF_Nations_League_Finals"
+  },
+  {
+   "fecha": "2024-03-24",
+   "local": "Mexico",
+   "visita": "United States",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2024_CONCACAF_Nations_League_Finals"
+  },
+  {
+   "fecha": "2024-05-31",
+   "local": "Mexico",
+   "visita": "Bolivia",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://www.national-football-teams.com/country/121/2024/Mexico.html"
+  },
+  {
+   "fecha": "2024-06-05",
+   "local": "Mexico",
+   "visita": "Uruguay",
+   "gl": 0,
+   "gv": 4,
+   "fuente": "https://www.national-football-teams.com/country/121/2024/Mexico.html"
+  },
+  {
+   "fecha": "2024-06-08",
+   "local": "Mexico",
+   "visita": "Brazil",
+   "gl": 2,
+   "gv": 3,
+   "fuente": "https://www.national-football-teams.com/country/121/2024/Mexico.html"
+  },
+  {
+   "fecha": "2024-06-22",
+   "local": "Mexico",
+   "visita": "Jamaica",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Copa_Am%C3%A9rica_Group_B"
+  },
+  {
+   "fecha": "2024-06-26",
+   "local": "Venezuela",
+   "visita": "Mexico",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Copa_Am%C3%A9rica_Group_B"
+  },
+  {
+   "fecha": "2024-06-30",
+   "local": "Mexico",
+   "visita": "Ecuador",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Copa_Am%C3%A9rica_Group_B"
+  },
+  {
+   "fecha": "2024-09-07",
+   "local": "Mexico",
+   "visita": "New Zealand",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://www.national-football-teams.com/country/121/2024/Mexico.html"
+  },
+  {
+   "fecha": "2024-09-10",
+   "local": "Mexico",
+   "visita": "Canada",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://www.national-football-teams.com/country/121/2024/Mexico.html"
+  },
+  {
+   "fecha": "2024-10-15",
+   "local": "Mexico",
+   "visita": "United States",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://www.national-football-teams.com/country/121/2024/Mexico.html"
+  },
+  {
+   "fecha": "2024-11-15",
+   "local": "Honduras",
+   "visita": "Mexico",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://www.national-football-teams.com/country/121/2024/Mexico.html"
+  },
+  {
+   "fecha": "2024-11-19",
+   "local": "Mexico",
+   "visita": "Honduras",
+   "gl": 4,
+   "gv": 0,
+   "fuente": "https://www.national-football-teams.com/country/121/2024/Mexico.html"
+  },
+  {
+   "fecha": "2025-03-20",
+   "local": "Canada",
+   "visita": "Mexico",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2025_CONCACAF_Nations_League_Finals"
+  },
+  {
+   "fecha": "2025-03-23",
+   "local": "Mexico",
+   "visita": "Panama",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://www.national-football-teams.com/country/121/2025/Mexico.html"
+  },
+  {
+   "fecha": "2025-06-07",
+   "local": "Mexico",
+   "visita": "Switzerland",
+   "gl": 2,
+   "gv": 4,
+   "fuente": "https://www.national-football-teams.com/country/121/2025/Mexico.html"
+  },
+  {
+   "fecha": "2025-06-10",
+   "local": "Mexico",
+   "visita": "Turkey",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://www.national-football-teams.com/country/121/2025/Mexico.html"
+  },
+  {
+   "fecha": "2024-01-16",
+   "local": "Mali",
+   "visita": "South Africa",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/South_Africa_national_soccer_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-21",
+   "local": "South Africa",
+   "visita": "Namibia",
+   "gl": 4,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/South_Africa_national_soccer_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-24",
+   "local": "South Africa",
+   "visita": "Tunisia",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/South_Africa_national_soccer_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-30",
+   "local": "South Africa",
+   "visita": "Morocco",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/South_Africa_national_soccer_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-02-03",
+   "local": "South Africa",
+   "visita": "Cape Verde",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/South_Africa_national_soccer_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-02-07",
+   "local": "South Africa",
+   "visita": "Nigeria",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/South_Africa_national_soccer_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-02-10",
+   "local": "South Africa",
+   "visita": "DR Congo",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/South_Africa_national_soccer_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-07",
+   "local": "Nigeria",
+   "visita": "South Africa",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_C"
+  },
+  {
+   "fecha": "2024-06-11",
+   "local": "South Africa",
+   "visita": "Zimbabwe",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_C"
+  },
+  {
+   "fecha": "2025-03-21",
+   "local": "South Africa",
+   "visita": "Lesotho",
+   "gl": 0,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_C"
+  },
+  {
+   "fecha": "2025-03-25",
+   "local": "Benin",
+   "visita": "South Africa",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_C"
+  },
+  {
+   "fecha": "2025-09-05",
+   "local": "Lesotho",
+   "visita": "South Africa",
+   "gl": 0,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_C"
+  },
+  {
+   "fecha": "2025-09-09",
+   "local": "South Africa",
+   "visita": "Nigeria",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_C"
+  },
+  {
+   "fecha": "2025-10-10",
+   "local": "Zimbabwe",
+   "visita": "South Africa",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_C"
+  },
+  {
+   "fecha": "2025-10-14",
+   "local": "South Africa",
+   "visita": "Rwanda",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_C"
+  },
+  {
+   "fecha": "2025-12-22",
+   "local": "South Africa",
+   "visita": "Angola",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_Group_B"
+  },
+  {
+   "fecha": "2025-12-26",
+   "local": "Egypt",
+   "visita": "South Africa",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_Group_B"
+  },
+  {
+   "fecha": "2025-12-29",
+   "local": "Zimbabwe",
+   "visita": "South Africa",
+   "gl": 2,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_Group_B"
+  },
+  {
+   "fecha": "2026-01-05",
+   "local": "South Africa",
+   "visita": "Cameroon",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/732172/cameroon-south-africa"
+  },
+  {
+   "fecha": "2024-01-15",
+   "local": "South Korea",
+   "visita": "Bahrain",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024_in_South_Korean_football"
+  },
+  {
+   "fecha": "2024-01-20",
+   "local": "South Korea",
+   "visita": "Jordan",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2024_in_South_Korean_football"
+  },
+  {
+   "fecha": "2024-01-25",
+   "local": "South Korea",
+   "visita": "Malaysia",
+   "gl": 3,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2024_in_South_Korean_football"
+  },
+  {
+   "fecha": "2024-01-30",
+   "local": "South Korea",
+   "visita": "Saudi Arabia",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024_in_South_Korean_football"
+  },
+  {
+   "fecha": "2024-02-02",
+   "local": "South Korea",
+   "visita": "Australia",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2024_in_South_Korean_football"
+  },
+  {
+   "fecha": "2024-02-06",
+   "local": "Jordan",
+   "visita": "South Korea",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_in_South_Korean_football"
+  },
+  {
+   "fecha": "2024-03-21",
+   "local": "Thailand",
+   "visita": "South Korea",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024_in_South_Korean_football"
+  },
+  {
+   "fecha": "2024-03-26",
+   "local": "South Korea",
+   "visita": "Thailand",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_in_South_Korean_football"
+  },
+  {
+   "fecha": "2024-06-06",
+   "local": "South Korea",
+   "visita": "Singapore",
+   "gl": 7,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_in_South_Korean_football"
+  },
+  {
+   "fecha": "2024-06-11",
+   "local": "South Korea",
+   "visita": "China",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_in_South_Korean_football"
+  },
+  {
+   "fecha": "2024-09-05",
+   "local": "Palestine",
+   "visita": "South Korea",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_in_South_Korean_football"
+  },
+  {
+   "fecha": "2024-09-10",
+   "local": "South Korea",
+   "visita": "Oman",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024_in_South_Korean_football"
+  },
+  {
+   "fecha": "2024-10-10",
+   "local": "South Korea",
+   "visita": "Jordan",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_in_South_Korean_football"
+  },
+  {
+   "fecha": "2024-10-15",
+   "local": "South Korea",
+   "visita": "Iraq",
+   "gl": 3,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2024_in_South_Korean_football"
+  },
+  {
+   "fecha": "2024-11-14",
+   "local": "South Korea",
+   "visita": "Kuwait",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024_in_South_Korean_football"
+  },
+  {
+   "fecha": "2024-11-19",
+   "local": "Palestine",
+   "visita": "South Korea",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024_in_South_Korean_football"
+  },
+  {
+   "fecha": "2025-03-20",
+   "local": "South Korea",
+   "visita": "Oman",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2025_in_South_Korean_football"
+  },
+  {
+   "fecha": "2025-03-25",
+   "local": "South Korea",
+   "visita": "Jordan",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2025_in_South_Korean_football"
+  },
+  {
+   "fecha": "2025-06-05",
+   "local": "Iraq",
+   "visita": "South Korea",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2025_in_South_Korean_football"
+  },
+  {
+   "fecha": "2025-06-10",
+   "local": "South Korea",
+   "visita": "Kuwait",
+   "gl": 4,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_in_South_Korean_football"
+  },
+  {
+   "fecha": "2025-09-06",
+   "local": "United States",
+   "visita": "South Korea",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2025_in_South_Korean_football"
+  },
+  {
+   "fecha": "2025-09-09",
+   "local": "Mexico",
+   "visita": "South Korea",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2025_in_South_Korean_football"
+  },
+  {
+   "fecha": "2025-10-10",
+   "local": "South Korea",
+   "visita": "Brazil",
+   "gl": 0,
+   "gv": 5,
+   "fuente": "https://en.wikipedia.org/wiki/2025_in_South_Korean_football"
+  },
+  {
+   "fecha": "2025-10-14",
+   "local": "South Korea",
+   "visita": "Paraguay",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_in_South_Korean_football"
+  },
+  {
+   "fecha": "2025-11-14",
+   "local": "South Korea",
+   "visita": "Bolivia",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_in_South_Korean_football"
+  },
+  {
+   "fecha": "2025-11-18",
+   "local": "South Korea",
+   "visita": "Ghana",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_in_South_Korean_football"
+  },
+  {
+   "fecha": "2024-03-22",
+   "local": "Norway",
+   "visita": "Czechia",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Czech_Republic_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-03-26",
+   "local": "Czechia",
+   "visita": "Armenia",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Czech_Republic_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-07",
+   "local": "Czechia",
+   "visita": "Malta",
+   "gl": 7,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Czech_Republic_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-10",
+   "local": "Czechia",
+   "visita": "North Macedonia",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Czech_Republic_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-18",
+   "local": "Portugal",
+   "visita": "Czechia",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Czech_Republic_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-22",
+   "local": "Georgia",
+   "visita": "Czechia",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Czech_Republic_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-26",
+   "local": "Czechia",
+   "visita": "Turkey",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Czech_Republic_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-09-07",
+   "local": "Georgia",
+   "visita": "Czechia",
+   "gl": 4,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_B"
+  },
+  {
+   "fecha": "2024-09-10",
+   "local": "Czechia",
+   "visita": "Ukraine",
+   "gl": 3,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_B"
+  },
+  {
+   "fecha": "2024-10-11",
+   "local": "Czechia",
+   "visita": "Albania",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_B"
+  },
+  {
+   "fecha": "2024-10-14",
+   "local": "Ukraine",
+   "visita": "Czechia",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_B"
+  },
+  {
+   "fecha": "2024-11-16",
+   "local": "Albania",
+   "visita": "Czechia",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_B"
+  },
+  {
+   "fecha": "2024-11-19",
+   "local": "Czechia",
+   "visita": "Georgia",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_B"
+  },
+  {
+   "fecha": "2025-03-22",
+   "local": "Czechia",
+   "visita": "Faroe Islands",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_L"
+  },
+  {
+   "fecha": "2025-03-25",
+   "local": "Gibraltar",
+   "visita": "Czechia",
+   "gl": 0,
+   "gv": 4,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_L"
+  },
+  {
+   "fecha": "2025-06-06",
+   "local": "Czechia",
+   "visita": "Montenegro",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_L"
+  },
+  {
+   "fecha": "2025-06-09",
+   "local": "Croatia",
+   "visita": "Czechia",
+   "gl": 5,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_L"
+  },
+  {
+   "fecha": "2025-09-05",
+   "local": "Montenegro",
+   "visita": "Czechia",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_L"
+  },
+  {
+   "fecha": "2025-10-09",
+   "local": "Czechia",
+   "visita": "Croatia",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_L"
+  },
+  {
+   "fecha": "2025-10-12",
+   "local": "Faroe Islands",
+   "visita": "Czechia",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_L"
+  },
+  {
+   "fecha": "2025-11-17",
+   "local": "Czechia",
+   "visita": "Gibraltar",
+   "gl": 6,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_L"
+  },
+  {
+   "fecha": "2026-03-26",
+   "local": "Czechia",
+   "visita": "Republic of Ireland",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_second_round"
+  },
+  {
+   "fecha": "2026-03-31",
+   "local": "Czechia",
+   "visita": "Denmark",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_second_round"
+  },
+  {
+   "fecha": "2024-03-23",
+   "local": "Canada",
+   "visita": "Trinidad and Tobago",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Copa_Am%C3%A9rica_qualifying_play-offs"
+  },
+  {
+   "fecha": "2024-06-06",
+   "local": "Netherlands",
+   "visita": "Canada",
+   "gl": 4,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_in_Canadian_soccer"
+  },
+  {
+   "fecha": "2024-06-09",
+   "local": "France",
+   "visita": "Canada",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_in_Canadian_soccer"
+  },
+  {
+   "fecha": "2024-06-20",
+   "local": "Argentina",
+   "visita": "Canada",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_in_Canadian_soccer"
+  },
+  {
+   "fecha": "2024-06-25",
+   "local": "Peru",
+   "visita": "Canada",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024_in_Canadian_soccer"
+  },
+  {
+   "fecha": "2024-06-29",
+   "local": "Canada",
+   "visita": "Chile",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_in_Canadian_soccer"
+  },
+  {
+   "fecha": "2024-07-05",
+   "local": "Venezuela",
+   "visita": "Canada",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024_in_Canadian_soccer"
+  },
+  {
+   "fecha": "2024-07-09",
+   "local": "Argentina",
+   "visita": "Canada",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_in_Canadian_soccer"
+  },
+  {
+   "fecha": "2024-07-13",
+   "local": "Canada",
+   "visita": "Uruguay",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2024_in_Canadian_soccer"
+  },
+  {
+   "fecha": "2024-09-07",
+   "local": "United States",
+   "visita": "Canada",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2024_in_Canadian_soccer"
+  },
+  {
+   "fecha": "2024-10-15",
+   "local": "Canada",
+   "visita": "Panama",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024_in_Canadian_soccer"
+  },
+  {
+   "fecha": "2024-11-15",
+   "local": "Suriname",
+   "visita": "Canada",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_CONCACAF_Nations_League_A"
+  },
+  {
+   "fecha": "2024-11-19",
+   "local": "Canada",
+   "visita": "Suriname",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_CONCACAF_Nations_League_A"
+  },
+  {
+   "fecha": "2025-03-23",
+   "local": "Canada",
+   "visita": "United States",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2025_CONCACAF_Nations_League_Finals"
+  },
+  {
+   "fecha": "2025-06-07",
+   "local": "Canada",
+   "visita": "Ukraine",
+   "gl": 4,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Canadian_Shield"
+  },
+  {
+   "fecha": "2025-06-10",
+   "local": "Canada",
+   "visita": "Ivory Coast",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Canadian_Shield"
+  },
+  {
+   "fecha": "2025-06-17",
+   "local": "Canada",
+   "visita": "Honduras",
+   "gl": 6,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_CONCACAF_Gold_Cup"
+  },
+  {
+   "fecha": "2025-06-21",
+   "local": "Curacao",
+   "visita": "Canada",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2025_CONCACAF_Gold_Cup"
+  },
+  {
+   "fecha": "2025-06-24",
+   "local": "Canada",
+   "visita": "El Salvador",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_CONCACAF_Gold_Cup"
+  },
+  {
+   "fecha": "2025-06-29",
+   "local": "Canada",
+   "visita": "Guatemala",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2025_CONCACAF_Gold_Cup_knockout_stage"
+  },
+  {
+   "fecha": "2025-09-05",
+   "local": "Canada",
+   "visita": "Romania",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://www.espn.com/soccer/match?gameId=733151"
+  },
+  {
+   "fecha": "2025-09-09",
+   "local": "Wales",
+   "visita": "Canada",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/733167/canada-wales"
+  },
+  {
+   "fecha": "2024-03-21",
+   "local": "Bosnia and Herzegovina",
+   "visita": "Ukraine",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/690329/ukraine-bosnia-herzegovina"
+  },
+  {
+   "fecha": "2024-06-03",
+   "local": "England",
+   "visita": "Bosnia and Herzegovina",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Bosnia_and_Herzegovina_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-09",
+   "local": "Italy",
+   "visita": "Bosnia and Herzegovina",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Bosnia_and_Herzegovina_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-09-07",
+   "local": "Netherlands",
+   "visita": "Bosnia and Herzegovina",
+   "gl": 5,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Bosnia_and_Herzegovina_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-09-10",
+   "local": "Hungary",
+   "visita": "Bosnia and Herzegovina",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Bosnia_and_Herzegovina_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-10-11",
+   "local": "Bosnia and Herzegovina",
+   "visita": "Germany",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Bosnia_and_Herzegovina_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-10-14",
+   "local": "Bosnia and Herzegovina",
+   "visita": "Hungary",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Bosnia_and_Herzegovina_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-11-16",
+   "local": "Germany",
+   "visita": "Bosnia and Herzegovina",
+   "gl": 7,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Bosnia_and_Herzegovina_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-11-19",
+   "local": "Bosnia and Herzegovina",
+   "visita": "Netherlands",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Bosnia_and_Herzegovina_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2025-03-21",
+   "local": "Romania",
+   "visita": "Bosnia and Herzegovina",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_H"
+  },
+  {
+   "fecha": "2025-03-24",
+   "local": "Bosnia and Herzegovina",
+   "visita": "Cyprus",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_H"
+  },
+  {
+   "fecha": "2025-06-07",
+   "local": "Bosnia and Herzegovina",
+   "visita": "San Marino",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_H"
+  },
+  {
+   "fecha": "2025-06-10",
+   "local": "Slovenia",
+   "visita": "Bosnia and Herzegovina",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Bosnia_and_Herzegovina_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2025-09-06",
+   "local": "San Marino",
+   "visita": "Bosnia and Herzegovina",
+   "gl": 0,
+   "gv": 6,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_H"
+  },
+  {
+   "fecha": "2025-09-09",
+   "local": "Bosnia and Herzegovina",
+   "visita": "Austria",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_H"
+  },
+  {
+   "fecha": "2025-10-09",
+   "local": "Cyprus",
+   "visita": "Bosnia and Herzegovina",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_H"
+  },
+  {
+   "fecha": "2025-11-15",
+   "local": "Bosnia and Herzegovina",
+   "visita": "Romania",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_H"
+  },
+  {
+   "fecha": "2025-11-18",
+   "local": "Austria",
+   "visita": "Bosnia and Herzegovina",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_H"
+  },
+  {
+   "fecha": "2026-03-26",
+   "local": "Wales",
+   "visita": "Bosnia and Herzegovina",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_second_round"
+  },
+  {
+   "fecha": "2026-03-31",
+   "local": "Bosnia and Herzegovina",
+   "visita": "Italy",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_second_round"
+  },
+  {
+   "fecha": "2024-01-12",
+   "local": "Qatar",
+   "visita": "Lebanon",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2023_AFC_Asian_Cup"
+  },
+  {
+   "fecha": "2024-01-17",
+   "local": "Tajikistan",
+   "visita": "Qatar",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2023_AFC_Asian_Cup"
+  },
+  {
+   "fecha": "2024-01-22",
+   "local": "Qatar",
+   "visita": "China",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2023_AFC_Asian_Cup"
+  },
+  {
+   "fecha": "2024-01-29",
+   "local": "Qatar",
+   "visita": "Palestine",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2023_AFC_Asian_Cup_knockout_stage"
+  },
+  {
+   "fecha": "2024-02-03",
+   "local": "Qatar",
+   "visita": "Uzbekistan",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://www.cbssports.com/soccer/news/qatar-eliminate-uzbekistan-on-penalties-in-afc-asian-cup-2024-quarterfinals-live-stream-bracket-tv-channel-schedule/"
+  },
+  {
+   "fecha": "2024-02-07",
+   "local": "Iran",
+   "visita": "Qatar",
+   "gl": 2,
+   "gv": 3,
+   "fuente": "https://www.aljazeera.com/sports/2024/2/7/qatar-edge-iran-3-2-in-dramatic-asian-cup-2023-semifinal"
+  },
+  {
+   "fecha": "2024-02-10",
+   "local": "Jordan",
+   "visita": "Qatar",
+   "gl": 1,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2023_AFC_Asian_Cup_final"
+  },
+  {
+   "fecha": "2024-09-05",
+   "local": "Qatar",
+   "visita": "United Arab Emirates",
+   "gl": 1,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_third_round"
+  },
+  {
+   "fecha": "2024-09-10",
+   "local": "North Korea",
+   "visita": "Qatar",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_third_round"
+  },
+  {
+   "fecha": "2024-10-10",
+   "local": "Qatar",
+   "visita": "Kyrgyzstan",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_third_round"
+  },
+  {
+   "fecha": "2024-10-15",
+   "local": "Iran",
+   "visita": "Qatar",
+   "gl": 4,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_third_round"
+  },
+  {
+   "fecha": "2024-11-14",
+   "local": "Qatar",
+   "visita": "Uzbekistan",
+   "gl": 3,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_third_round"
+  },
+  {
+   "fecha": "2024-11-19",
+   "local": "United Arab Emirates",
+   "visita": "Qatar",
+   "gl": 5,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_third_round"
+  },
+  {
+   "fecha": "2025-03-20",
+   "local": "Qatar",
+   "visita": "North Korea",
+   "gl": 5,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_third_round"
+  },
+  {
+   "fecha": "2025-03-25",
+   "local": "Kyrgyzstan",
+   "visita": "Qatar",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_third_round"
+  },
+  {
+   "fecha": "2025-06-05",
+   "local": "Qatar",
+   "visita": "Iran",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_third_round"
+  },
+  {
+   "fecha": "2025-06-10",
+   "local": "Uzbekistan",
+   "visita": "Qatar",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_third_round"
+  },
+  {
+   "fecha": "2025-10-08",
+   "local": "Qatar",
+   "visita": "Oman",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_fourth_round"
+  },
+  {
+   "fecha": "2025-10-14",
+   "local": "Qatar",
+   "visita": "United Arab Emirates",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_fourth_round"
+  },
+  {
+   "fecha": "2024-03-23",
+   "local": "Denmark",
+   "visita": "Switzerland",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://www.foxsports.com/soccer/friendlies-men-denmark-vs-switzerland-mar-23-2024-game-boxscore-139507"
+  },
+  {
+   "fecha": "2024-03-26",
+   "local": "Republic of Ireland",
+   "visita": "Switzerland",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/693342/switzerland-republic-of-ireland"
+  },
+  {
+   "fecha": "2024-06-15",
+   "local": "Hungary",
+   "visita": "Switzerland",
+   "gl": 1,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_Group_A"
+  },
+  {
+   "fecha": "2024-06-19",
+   "local": "Scotland",
+   "visita": "Switzerland",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_Group_A"
+  },
+  {
+   "fecha": "2024-06-23",
+   "local": "Switzerland",
+   "visita": "Germany",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_Group_A"
+  },
+  {
+   "fecha": "2024-06-29",
+   "local": "Switzerland",
+   "visita": "Italy",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/703931/italy-switzerland"
+  },
+  {
+   "fecha": "2024-07-06",
+   "local": "England",
+   "visita": "Switzerland",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/703941/switzerland-england"
+  },
+  {
+   "fecha": "2024-09-05",
+   "local": "Denmark",
+   "visita": "Switzerland",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2024-09-08",
+   "local": "Switzerland",
+   "visita": "Spain",
+   "gl": 1,
+   "gv": 4,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2024-10-12",
+   "local": "Serbia",
+   "visita": "Switzerland",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2024-10-15",
+   "local": "Switzerland",
+   "visita": "Denmark",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2024-11-15",
+   "local": "Spain",
+   "visita": "Switzerland",
+   "gl": 3,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2024-11-19",
+   "local": "Switzerland",
+   "visita": "Serbia",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2025-09-05",
+   "local": "Switzerland",
+   "visita": "Kosovo",
+   "gl": 4,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_B"
+  },
+  {
+   "fecha": "2025-09-08",
+   "local": "Switzerland",
+   "visita": "Slovenia",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_B"
+  },
+  {
+   "fecha": "2025-10-10",
+   "local": "Sweden",
+   "visita": "Switzerland",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_B"
+  },
+  {
+   "fecha": "2025-10-13",
+   "local": "Slovenia",
+   "visita": "Switzerland",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_B"
+  },
+  {
+   "fecha": "2025-11-15",
+   "local": "Switzerland",
+   "visita": "Sweden",
+   "gl": 4,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_B"
+  },
+  {
+   "fecha": "2025-11-18",
+   "local": "Kosovo",
+   "visita": "Switzerland",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_B"
+  },
+  {
+   "fecha": "2024-06-24",
+   "local": "Brazil",
+   "visita": "Costa Rica",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Copa_Am%C3%A9rica"
+  },
+  {
+   "fecha": "2024-06-28",
+   "local": "Paraguay",
+   "visita": "Brazil",
+   "gl": 1,
+   "gv": 4,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/690719/brazil-paraguay"
+  },
+  {
+   "fecha": "2024-07-02",
+   "local": "Brazil",
+   "visita": "Colombia",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/690728/colombia-brazil"
+  },
+  {
+   "fecha": "2024-07-06",
+   "local": "Uruguay",
+   "visita": "Brazil",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/703949/brazil-uruguay"
+  },
+  {
+   "fecha": "2024-09-06",
+   "local": "Brazil",
+   "visita": "Ecuador",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/684610/ecuador-brazil"
+  },
+  {
+   "fecha": "2024-09-10",
+   "local": "Paraguay",
+   "visita": "Brazil",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(CONMEBOL)"
+  },
+  {
+   "fecha": "2024-10-10",
+   "local": "Chile",
+   "visita": "Brazil",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(CONMEBOL)"
+  },
+  {
+   "fecha": "2024-11-14",
+   "local": "Venezuela",
+   "visita": "Brazil",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://www.nbcsports.com/soccer/news/conmebol-qualifying-schedule-fixtures-results-for-2026-world-cup-qualifying"
+  },
+  {
+   "fecha": "2024-11-19",
+   "local": "Brazil",
+   "visita": "Uruguay",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://www.nbcsports.com/soccer/news/conmebol-qualifying-schedule-fixtures-results-for-2026-world-cup-qualifying"
+  },
+  {
+   "fecha": "2025-03-20",
+   "local": "Brazil",
+   "visita": "Colombia",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://www.nbcsports.com/soccer/news/conmebol-qualifying-schedule-fixtures-results-for-2026-world-cup-qualifying"
+  },
+  {
+   "fecha": "2025-03-25",
+   "local": "Argentina",
+   "visita": "Brazil",
+   "gl": 4,
+   "gv": 1,
+   "fuente": "https://www.nbcsports.com/soccer/news/conmebol-qualifying-schedule-fixtures-results-for-2026-world-cup-qualifying"
+  },
+  {
+   "fecha": "2025-06-05",
+   "local": "Ecuador",
+   "visita": "Brazil",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://www.nbcsports.com/soccer/news/conmebol-qualifying-schedule-fixtures-results-for-2026-world-cup-qualifying"
+  },
+  {
+   "fecha": "2025-06-10",
+   "local": "Brazil",
+   "visita": "Paraguay",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://www.nbcsports.com/soccer/news/conmebol-qualifying-schedule-fixtures-results-for-2026-world-cup-qualifying"
+  },
+  {
+   "fecha": "2024-06-05",
+   "local": "Morocco",
+   "visita": "Tanzania",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_first_round"
+  },
+  {
+   "fecha": "2024-06-09",
+   "local": "Tanzania",
+   "visita": "Morocco",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_first_round"
+  },
+  {
+   "fecha": "2025-03-19",
+   "local": "Morocco",
+   "visita": "Zambia",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_first_round"
+  },
+  {
+   "fecha": "2025-03-23",
+   "local": "Zambia",
+   "visita": "Morocco",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_first_round"
+  },
+  {
+   "fecha": "2025-09-03",
+   "local": "Morocco",
+   "visita": "Congo",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_first_round"
+  },
+  {
+   "fecha": "2025-09-07",
+   "local": "Congo",
+   "visita": "Morocco",
+   "gl": 0,
+   "gv": 6,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_first_round"
+  },
+  {
+   "fecha": "2025-12-21",
+   "local": "Morocco",
+   "visita": "Comoros",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_Group_A"
+  },
+  {
+   "fecha": "2025-12-26",
+   "local": "Morocco",
+   "visita": "Mali",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_Group_A"
+  },
+  {
+   "fecha": "2025-12-29",
+   "local": "Zambia",
+   "visita": "Morocco",
+   "gl": 0,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_Group_A"
+  },
+  {
+   "fecha": "2026-01-04",
+   "local": "Morocco",
+   "visita": "Tanzania",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/732171/tanzania-morocco"
+  },
+  {
+   "fecha": "2026-01-09",
+   "local": "Cameroon",
+   "visita": "Morocco",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://www.aljazeera.com/sports/liveblog/2026/1/9/live-cameroon-vs-morocco-2025-afcon-quarterfinal"
+  },
+  {
+   "fecha": "2026-01-14",
+   "local": "Nigeria",
+   "visita": "Morocco",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://www.cafonline.com/afcon2025/news/re-live-afcon-2025-rolling-updates-of-today-s-action-morocco-4-2-on-pen-nigeria-and-senegal-1-0-egypt/"
+  },
+  {
+   "fecha": "2026-01-18",
+   "local": "Senegal",
+   "visita": "Morocco",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_final"
+  },
+  {
+   "fecha": "2024-06-06",
+   "local": "Haiti",
+   "visita": "Saint Lucia",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CONCACAF_second_round"
+  },
+  {
+   "fecha": "2024-06-09",
+   "local": "Barbados",
+   "visita": "Haiti",
+   "gl": 1,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CONCACAF_second_round"
+  },
+  {
+   "fecha": "2024-09-07",
+   "local": "Puerto Rico",
+   "visita": "Haiti",
+   "gl": 1,
+   "gv": 4,
+   "fuente": "https://www.soccerpunter.com/team/all/23542/18804/Haiti-in-North-Central-America-CONCACAF-Nations-League-2024-2025"
+  },
+  {
+   "fecha": "2024-09-09",
+   "local": "Haiti",
+   "visita": "Sint Maarten",
+   "gl": 6,
+   "gv": 0,
+   "fuente": "https://www.soccerpunter.com/team/all/23542/18804/Haiti-in-North-Central-America-CONCACAF-Nations-League-2024-2025"
+  },
+  {
+   "fecha": "2024-10-12",
+   "local": "Aruba",
+   "visita": "Haiti",
+   "gl": 1,
+   "gv": 3,
+   "fuente": "https://www.soccerpunter.com/team/all/23542/18804/Haiti-in-North-Central-America-CONCACAF-Nations-League-2024-2025"
+  },
+  {
+   "fecha": "2024-10-15",
+   "local": "Haiti",
+   "visita": "Aruba",
+   "gl": 5,
+   "gv": 3,
+   "fuente": "https://www.soccerpunter.com/team/all/23542/18804/Haiti-in-North-Central-America-CONCACAF-Nations-League-2024-2025"
+  },
+  {
+   "fecha": "2024-11-15",
+   "local": "Sint Maarten",
+   "visita": "Haiti",
+   "gl": 0,
+   "gv": 8,
+   "fuente": "https://www.soccerpunter.com/team/all/23542/18804/Haiti-in-North-Central-America-CONCACAF-Nations-League-2024-2025"
+  },
+  {
+   "fecha": "2024-11-19",
+   "local": "Haiti",
+   "visita": "Puerto Rico",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://www.soccerpunter.com/team/all/23542/18804/Haiti-in-North-Central-America-CONCACAF-Nations-League-2024-2025"
+  },
+  {
+   "fecha": "2025-06-07",
+   "local": "Aruba",
+   "visita": "Haiti",
+   "gl": 0,
+   "gv": 5,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CONCACAF_second_round"
+  },
+  {
+   "fecha": "2025-06-10",
+   "local": "Haiti",
+   "visita": "Curacao",
+   "gl": 1,
+   "gv": 5,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CONCACAF_second_round"
+  },
+  {
+   "fecha": "2025-09-05",
+   "local": "Haiti",
+   "visita": "Honduras",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CONCACAF_third_round"
+  },
+  {
+   "fecha": "2025-09-09",
+   "local": "Costa Rica",
+   "visita": "Haiti",
+   "gl": 3,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CONCACAF_third_round"
+  },
+  {
+   "fecha": "2025-10-09",
+   "local": "Nicaragua",
+   "visita": "Haiti",
+   "gl": 0,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CONCACAF_third_round"
+  },
+  {
+   "fecha": "2025-10-13",
+   "local": "Honduras",
+   "visita": "Haiti",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CONCACAF_third_round"
+  },
+  {
+   "fecha": "2025-11-13",
+   "local": "Haiti",
+   "visita": "Costa Rica",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CONCACAF_third_round"
+  },
+  {
+   "fecha": "2025-11-18",
+   "local": "Haiti",
+   "visita": "Nicaragua",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CONCACAF_third_round"
+  },
+  {
+   "fecha": "2024-03-22",
+   "local": "Scotland",
+   "visita": "Netherlands",
+   "gl": 0,
+   "gv": 4,
+   "fuente": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-03-26",
+   "local": "Scotland",
+   "visita": "Northern Ireland",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-03",
+   "local": "Scotland",
+   "visita": "Gibraltar",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-07",
+   "local": "Scotland",
+   "visita": "Finland",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-14",
+   "local": "Germany",
+   "visita": "Scotland",
+   "gl": 5,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-23",
+   "local": "Scotland",
+   "visita": "Hungary",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-09-05",
+   "local": "Scotland",
+   "visita": "Poland",
+   "gl": 2,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-09-08",
+   "local": "Portugal",
+   "visita": "Scotland",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-10-12",
+   "local": "Croatia",
+   "visita": "Scotland",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-10-15",
+   "local": "Scotland",
+   "visita": "Portugal",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-11-15",
+   "local": "Scotland",
+   "visita": "Croatia",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-11-18",
+   "local": "Poland",
+   "visita": "Scotland",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2025-03-20",
+   "local": "Greece",
+   "visita": "Scotland",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2025-03-23",
+   "local": "Scotland",
+   "visita": "Greece",
+   "gl": 0,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2025-06-06",
+   "local": "Scotland",
+   "visita": "Iceland",
+   "gl": 1,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2025-06-09",
+   "local": "Scotland",
+   "visita": "Liechtenstein",
+   "gl": 4,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2025-09-05",
+   "local": "Denmark",
+   "visita": "Scotland",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2025-09-08",
+   "local": "Scotland",
+   "visita": "Belarus",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2025-10-09",
+   "local": "Scotland",
+   "visita": "Greece",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2025-10-12",
+   "local": "Scotland",
+   "visita": "Belarus",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2025-11-15",
+   "local": "Greece",
+   "visita": "Scotland",
+   "gl": 3,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2025-11-18",
+   "local": "Scotland",
+   "visita": "Denmark",
+   "gl": 4,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2026-03-28",
+   "local": "Scotland",
+   "visita": "Japan",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2026-03-31",
+   "local": "Scotland",
+   "visita": "Ivory Coast",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2026-05-30",
+   "local": "Scotland",
+   "visita": "Curacao",
+   "gl": 4,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2026-06-06",
+   "local": "Scotland",
+   "visita": "Bolivia",
+   "gl": 4,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Scotland_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-03-21",
+   "local": "United States",
+   "visita": "Jamaica",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024_CONCACAF_Nations_League_Finals"
+  },
+  {
+   "fecha": "2024-06-08",
+   "local": "Colombia",
+   "visita": "United States",
+   "gl": 5,
+   "gv": 1,
+   "fuente": "https://www.ussoccer.com/competitions/usmnt-friendlies-2024/matches/united-states-vs-colombia-tickets-live-score-match-hub-lineups-highlights-6-8-24"
+  },
+  {
+   "fecha": "2024-06-23",
+   "local": "United States",
+   "visita": "Bolivia",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Copa_Am%C3%A9rica"
+  },
+  {
+   "fecha": "2024-06-27",
+   "local": "Panama",
+   "visita": "United States",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Copa_Am%C3%A9rica"
+  },
+  {
+   "fecha": "2024-07-01",
+   "local": "United States",
+   "visita": "Uruguay",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Copa_Am%C3%A9rica"
+  },
+  {
+   "fecha": "2024-09-10",
+   "local": "United States",
+   "visita": "New Zealand",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://www.ussoccer.com/competitions/usmnt-friendlies-2024/matches/united-states-vs-new-zealand-tickets-live-score-match-hub-lineups-highlights-cincinnati-sept-10"
+  },
+  {
+   "fecha": "2024-11-14",
+   "local": "Jamaica",
+   "visita": "United States",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://ussoccerplayers.com/2024/11/usmnt-4-jamaica-2-concacaf-nations-league-quarterfinal.html"
+  },
+  {
+   "fecha": "2024-11-18",
+   "local": "United States",
+   "visita": "Jamaica",
+   "gl": 4,
+   "gv": 2,
+   "fuente": "https://ussoccerplayers.com/2024/11/usmnt-4-jamaica-2-concacaf-nations-league-quarterfinal.html"
+  },
+  {
+   "fecha": "2025-01-18",
+   "local": "United States",
+   "visita": "Venezuela",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://www.ussoccerhistory.org/usnt-results/usmnt-results/usmnt-results-2025-2029/"
+  },
+  {
+   "fecha": "2025-01-22",
+   "local": "United States",
+   "visita": "Costa Rica",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://www.ussoccerhistory.org/usnt-results/usmnt-results/usmnt-results-2025-2029/"
+  },
+  {
+   "fecha": "2025-03-20",
+   "local": "United States",
+   "visita": "Panama",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://www.ussoccerhistory.org/usnt-results/usmnt-results/usmnt-results-2025-2029/"
+  },
+  {
+   "fecha": "2024-06-07",
+   "local": "Paraguay",
+   "visita": "Peru",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Paraguay_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-11",
+   "local": "Chile",
+   "visita": "Paraguay",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Paraguay_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-16",
+   "local": "Paraguay",
+   "visita": "Panama",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Paraguay_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-24",
+   "local": "Colombia",
+   "visita": "Paraguay",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Paraguay_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-07-02",
+   "local": "Paraguay",
+   "visita": "Costa Rica",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Paraguay_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-09-06",
+   "local": "Uruguay",
+   "visita": "Paraguay",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(CONMEBOL)"
+  },
+  {
+   "fecha": "2024-10-10",
+   "local": "Ecuador",
+   "visita": "Paraguay",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(CONMEBOL)"
+  },
+  {
+   "fecha": "2024-10-15",
+   "local": "Paraguay",
+   "visita": "Venezuela",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(CONMEBOL)"
+  },
+  {
+   "fecha": "2024-11-14",
+   "local": "Paraguay",
+   "visita": "Argentina",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Paraguay_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-11-19",
+   "local": "Bolivia",
+   "visita": "Paraguay",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Paraguay_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2025-03-20",
+   "local": "Paraguay",
+   "visita": "Chile",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Paraguay_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2025-03-25",
+   "local": "Colombia",
+   "visita": "Paraguay",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Paraguay_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2025-06-05",
+   "local": "Paraguay",
+   "visita": "Uruguay",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Paraguay_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-13",
+   "local": "Australia",
+   "visita": "India",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Australia_national_soccer_team_season"
+  },
+  {
+   "fecha": "2024-01-18",
+   "local": "Australia",
+   "visita": "Syria",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Australia_national_soccer_team_season"
+  },
+  {
+   "fecha": "2024-01-22",
+   "local": "Australia",
+   "visita": "Uzbekistan",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Australia_national_soccer_team_season"
+  },
+  {
+   "fecha": "2024-01-28",
+   "local": "Australia",
+   "visita": "Indonesia",
+   "gl": 4,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Australia_national_soccer_team_season"
+  },
+  {
+   "fecha": "2024-09-05",
+   "local": "Australia",
+   "visita": "Bahrain",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Australia_national_soccer_team_season"
+  },
+  {
+   "fecha": "2024-09-10",
+   "local": "Indonesia",
+   "visita": "Australia",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Australia_national_soccer_team_season"
+  },
+  {
+   "fecha": "2024-10-10",
+   "local": "Australia",
+   "visita": "China",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Australia_national_soccer_team_season"
+  },
+  {
+   "fecha": "2024-10-15",
+   "local": "Japan",
+   "visita": "Australia",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Australia_national_soccer_team_season"
+  },
+  {
+   "fecha": "2024-11-14",
+   "local": "Australia",
+   "visita": "Saudi Arabia",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Australia_national_soccer_team_season"
+  },
+  {
+   "fecha": "2024-11-19",
+   "local": "Bahrain",
+   "visita": "Australia",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Australia_national_soccer_team_season"
+  },
+  {
+   "fecha": "2025-03-20",
+   "local": "Australia",
+   "visita": "Indonesia",
+   "gl": 5,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Australia_national_soccer_team_season"
+  },
+  {
+   "fecha": "2025-03-25",
+   "local": "China",
+   "visita": "Australia",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Australia_national_soccer_team_season"
+  },
+  {
+   "fecha": "2025-06-05",
+   "local": "Australia",
+   "visita": "Japan",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Australia_national_soccer_team_season"
+  },
+  {
+   "fecha": "2025-06-10",
+   "local": "Saudi Arabia",
+   "visita": "Australia",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Australia_national_soccer_team_season"
+  },
+  {
+   "fecha": "2025-10-14",
+   "local": "Australia",
+   "visita": "United States",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Australia_national_soccer_team_season"
+  },
+  {
+   "fecha": "2024-03-22",
+   "local": "Hungary",
+   "visita": "Turkiye",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Turkey_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-03-26",
+   "local": "Austria",
+   "visita": "Turkiye",
+   "gl": 6,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Turkey_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-04",
+   "local": "Italy",
+   "visita": "Turkiye",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Turkey_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-18",
+   "local": "Turkiye",
+   "visita": "Georgia",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_Group_F"
+  },
+  {
+   "fecha": "2024-06-22",
+   "local": "Portugal",
+   "visita": "Turkiye",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_Group_F"
+  },
+  {
+   "fecha": "2024-06-26",
+   "local": "Czech Republic",
+   "visita": "Turkiye",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_Group_F"
+  },
+  {
+   "fecha": "2024-07-01",
+   "local": "Turkiye",
+   "visita": "Austria",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Turkey_national_football_team"
+  },
+  {
+   "fecha": "2024-07-06",
+   "local": "Netherlands",
+   "visita": "Turkiye",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Turkey_national_football_team"
+  },
+  {
+   "fecha": "2024-09-06",
+   "local": "Wales",
+   "visita": "Turkiye",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_B"
+  },
+  {
+   "fecha": "2024-09-09",
+   "local": "Turkiye",
+   "visita": "Iceland",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_B"
+  },
+  {
+   "fecha": "2024-10-11",
+   "local": "Turkiye",
+   "visita": "Montenegro",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_B"
+  },
+  {
+   "fecha": "2024-10-14",
+   "local": "Iceland",
+   "visita": "Turkiye",
+   "gl": 2,
+   "gv": 4,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_B"
+  },
+  {
+   "fecha": "2024-11-16",
+   "local": "Turkiye",
+   "visita": "Wales",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_B"
+  },
+  {
+   "fecha": "2024-11-19",
+   "local": "Montenegro",
+   "visita": "Turkiye",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_B"
+  },
+  {
+   "fecha": "2025-09-04",
+   "local": "Georgia",
+   "visita": "Turkiye",
+   "gl": 2,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/Turkey_national_football_team"
+  },
+  {
+   "fecha": "2025-09-07",
+   "local": "Turkiye",
+   "visita": "Spain",
+   "gl": 0,
+   "gv": 6,
+   "fuente": "https://en.wikipedia.org/wiki/Turkey_national_football_team"
+  },
+  {
+   "fecha": "2025-10-11",
+   "local": "Bulgaria",
+   "visita": "Turkiye",
+   "gl": 1,
+   "gv": 6,
+   "fuente": "https://en.wikipedia.org/wiki/Turkey_national_football_team"
+  },
+  {
+   "fecha": "2025-10-14",
+   "local": "Turkiye",
+   "visita": "Georgia",
+   "gl": 4,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Turkey_national_football_team"
+  },
+  {
+   "fecha": "2025-11-15",
+   "local": "Turkiye",
+   "visita": "Bulgaria",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Turkey_national_football_team"
+  },
+  {
+   "fecha": "2025-11-18",
+   "local": "Spain",
+   "visita": "Turkiye",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Turkey_national_football_team"
+  },
+  {
+   "fecha": "2026-03-26",
+   "local": "Turkiye",
+   "visita": "Romania",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/761383/romania-turkiye"
+  },
+  {
+   "fecha": "2026-03-31",
+   "local": "Kosovo",
+   "visita": "Turkiye",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/761953/turkiye-kosovo"
+  },
+  {
+   "fecha": "2026-06-01",
+   "local": "Turkiye",
+   "visita": "North Macedonia",
+   "gl": 4,
+   "gv": 0,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/401871359/north-macedonia-turkiye"
+  },
+  {
+   "fecha": "2026-06-06",
+   "local": "Venezuela",
+   "visita": "Turkiye",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/401871361/turkiye-venezuela"
+  },
+  {
+   "fecha": "2024-03-23",
+   "local": "France",
+   "visita": "Germany",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/690850/germany-france"
+  },
+  {
+   "fecha": "2024-03-26",
+   "local": "Germany",
+   "visita": "Netherlands",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/690893/netherlands-germany"
+  },
+  {
+   "fecha": "2024-06-03",
+   "local": "Germany",
+   "visita": "Ukraine",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/700917/ukraine-germany"
+  },
+  {
+   "fecha": "2024-06-07",
+   "local": "Germany",
+   "visita": "Greece",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://www.bundesliga.com/en/bundesliga/news/germany-greece-live-euro-2024-friendly-preview-blog-report-27660"
+  },
+  {
+   "fecha": "2024-06-19",
+   "local": "Germany",
+   "visita": "Hungary",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_Group_A"
+  },
+  {
+   "fecha": "2024-06-29",
+   "local": "Germany",
+   "visita": "Denmark",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://www.espn.com/soccer/report/_/gameId/703932"
+  },
+  {
+   "fecha": "2024-07-05",
+   "local": "Spain",
+   "visita": "Germany",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/703939/germany-spain"
+  },
+  {
+   "fecha": "2024-09-07",
+   "local": "Germany",
+   "visita": "Hungary",
+   "gl": 5,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2024-09-10",
+   "local": "Netherlands",
+   "visita": "Germany",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2024-10-14",
+   "local": "Germany",
+   "visita": "Netherlands",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2024-11-19",
+   "local": "Hungary",
+   "visita": "Germany",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2025-03-20",
+   "local": "Italy",
+   "visita": "Germany",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/723713/germany-italy"
+  },
+  {
+   "fecha": "2025-03-23",
+   "local": "Germany",
+   "visita": "Italy",
+   "gl": 3,
+   "gv": 3,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/723714/italy-germany"
+  },
+  {
+   "fecha": "2025-06-04",
+   "local": "Germany",
+   "visita": "Portugal",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2025_UEFA_Nations_League_Finals"
+  },
+  {
+   "fecha": "2025-06-08",
+   "local": "Germany",
+   "visita": "France",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2025_UEFA_Nations_League_Finals"
+  },
+  {
+   "fecha": "2026-05-31",
+   "local": "Germany",
+   "visita": "Finland",
+   "gl": 4,
+   "gv": 0,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/758381/finland-germany"
+  },
+  {
+   "fecha": "2026-06-06",
+   "local": "United States",
+   "visita": "Germany",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/762260/germany-united-states"
+  },
+  {
+   "fecha": "2024-06-05",
+   "local": "Curacao",
+   "visita": "Barbados",
+   "gl": 4,
+   "gv": 1,
+   "fuente": "https://www.national-football-teams.com/country/280/2024/Curacao.html"
+  },
+  {
+   "fecha": "2024-06-08",
+   "local": "Aruba",
+   "visita": "Curacao",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://www.national-football-teams.com/country/280/2024/Curacao.html"
+  },
+  {
+   "fecha": "2024-09-06",
+   "local": "Saint Lucia",
+   "visita": "Curacao",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://www.national-football-teams.com/country/280/2024/Curacao.html"
+  },
+  {
+   "fecha": "2024-09-09",
+   "local": "Saint Martin",
+   "visita": "Curacao",
+   "gl": 0,
+   "gv": 4,
+   "fuente": "https://www.national-football-teams.com/country/280/2024/Curacao.html"
+  },
+  {
+   "fecha": "2024-10-11",
+   "local": "Grenada",
+   "visita": "Curacao",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://www.national-football-teams.com/country/280/2024/Curacao.html"
+  },
+  {
+   "fecha": "2024-10-14",
+   "local": "Curacao",
+   "visita": "Grenada",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://www.national-football-teams.com/country/280/2024/Curacao.html"
+  },
+  {
+   "fecha": "2024-11-15",
+   "local": "Curacao",
+   "visita": "Saint Martin",
+   "gl": 5,
+   "gv": 0,
+   "fuente": "https://www.national-football-teams.com/country/280/2024/Curacao.html"
+  },
+  {
+   "fecha": "2024-11-18",
+   "local": "Curacao",
+   "visita": "Saint Lucia",
+   "gl": 4,
+   "gv": 1,
+   "fuente": "https://www.national-football-teams.com/country/280/2024/Curacao.html"
+  },
+  {
+   "fecha": "2025-03-19",
+   "local": "Kazakhstan",
+   "visita": "Curacao",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://www.national-football-teams.com/country/280/2025/Curacao.html"
+  },
+  {
+   "fecha": "2025-06-06",
+   "local": "Curacao",
+   "visita": "Saint Lucia",
+   "gl": 4,
+   "gv": 0,
+   "fuente": "https://www.national-football-teams.com/country/280/2025/Curacao.html"
+  },
+  {
+   "fecha": "2025-06-17",
+   "local": "El Salvador",
+   "visita": "Curacao",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://www.national-football-teams.com/country/280/2025/Curacao.html"
+  },
+  {
+   "fecha": "2025-06-24",
+   "local": "Honduras",
+   "visita": "Curacao",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://www.national-football-teams.com/country/280/2025/Curacao.html"
+  },
+  {
+   "fecha": "2025-09-05",
+   "local": "Trinidad and Tobago",
+   "visita": "Curacao",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://www.national-football-teams.com/country/280/2025/Curacao.html"
+  },
+  {
+   "fecha": "2025-09-09",
+   "local": "Curacao",
+   "visita": "Bermuda",
+   "gl": 3,
+   "gv": 2,
+   "fuente": "https://www.national-football-teams.com/country/280/2025/Curacao.html"
+  },
+  {
+   "fecha": "2025-10-10",
+   "local": "Curacao",
+   "visita": "Jamaica",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://www.national-football-teams.com/country/280/2025/Curacao.html"
+  },
+  {
+   "fecha": "2025-10-14",
+   "local": "Curacao",
+   "visita": "Trinidad and Tobago",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://www.national-football-teams.com/country/280/2025/Curacao.html"
+  },
+  {
+   "fecha": "2025-11-13",
+   "local": "Bermuda",
+   "visita": "Curacao",
+   "gl": 0,
+   "gv": 7,
+   "fuente": "https://www.national-football-teams.com/country/280/2025/Curacao.html"
+  },
+  {
+   "fecha": "2025-11-18",
+   "local": "Jamaica",
+   "visita": "Curacao",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://www.national-football-teams.com/country/280/2025/Curacao.html"
+  },
+  {
+   "fecha": "2026-03-31",
+   "local": "Australia",
+   "visita": "Curacao",
+   "gl": 5,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_Australia_national_soccer_team_season"
+  },
+  {
+   "fecha": "2024-01-13",
+   "local": "Ivory Coast",
+   "visita": "Guinea-Bissau",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Ivory_Coast_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-18",
+   "local": "Ivory Coast",
+   "visita": "Nigeria",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Ivory_Coast_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-22",
+   "local": "Equatorial Guinea",
+   "visita": "Ivory Coast",
+   "gl": 4,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Ivory_Coast_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-29",
+   "local": "Senegal",
+   "visita": "Ivory Coast",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Ivory_Coast_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-07",
+   "local": "Ivory Coast",
+   "visita": "Gabon",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_F"
+  },
+  {
+   "fecha": "2024-06-11",
+   "local": "Kenya",
+   "visita": "Ivory Coast",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_F"
+  },
+  {
+   "fecha": "2024-09-06",
+   "local": "Ivory Coast",
+   "visita": "Zambia",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Ivory_Coast_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-09-10",
+   "local": "Chad",
+   "visita": "Ivory Coast",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Ivory_Coast_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-10-11",
+   "local": "Ivory Coast",
+   "visita": "Sierra Leone",
+   "gl": 4,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Ivory_Coast_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-10-15",
+   "local": "Sierra Leone",
+   "visita": "Ivory Coast",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Ivory_Coast_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2025-03-21",
+   "local": "Burundi",
+   "visita": "Ivory Coast",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_F"
+  },
+  {
+   "fecha": "2025-03-24",
+   "local": "Ivory Coast",
+   "visita": "Gambia",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_F"
+  },
+  {
+   "fecha": "2025-09-05",
+   "local": "Ivory Coast",
+   "visita": "Burundi",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_F"
+  },
+  {
+   "fecha": "2025-09-09",
+   "local": "Gabon",
+   "visita": "Ivory Coast",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_F"
+  },
+  {
+   "fecha": "2025-10-10",
+   "local": "Seychelles",
+   "visita": "Ivory Coast",
+   "gl": 0,
+   "gv": 7,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_F"
+  },
+  {
+   "fecha": "2025-10-14",
+   "local": "Ivory Coast",
+   "visita": "Kenya",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_F"
+  },
+  {
+   "fecha": "2024-03-24",
+   "local": "Italy",
+   "visita": "Ecuador",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Ecuador_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-22",
+   "local": "Venezuela",
+   "visita": "Ecuador",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Ecuador_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-26",
+   "local": "Jamaica",
+   "visita": "Ecuador",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Ecuador_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-07-04",
+   "local": "Argentina",
+   "visita": "Ecuador",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Ecuador_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-09-10",
+   "local": "Peru",
+   "visita": "Ecuador",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Ecuador_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-10-15",
+   "local": "Uruguay",
+   "visita": "Ecuador",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Ecuador_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-11-14",
+   "local": "Bolivia",
+   "visita": "Ecuador",
+   "gl": 4,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Ecuador_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-11-19",
+   "local": "Colombia",
+   "visita": "Ecuador",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Ecuador_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2025-03-21",
+   "local": "Venezuela",
+   "visita": "Ecuador",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Ecuador_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2025-03-25",
+   "local": "Chile",
+   "visita": "Ecuador",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Ecuador_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-10",
+   "local": "Netherlands",
+   "visita": "Iceland",
+   "gl": 4,
+   "gv": 0,
+   "fuente": "https://africa.espn.com/football/match/_/gameId/700291/ijsland-nederland"
+  },
+  {
+   "fecha": "2024-06-16",
+   "local": "Poland",
+   "visita": "Netherlands",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_Group_D"
+  },
+  {
+   "fecha": "2024-06-21",
+   "local": "Netherlands",
+   "visita": "France",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_Group_D"
+  },
+  {
+   "fecha": "2024-06-25",
+   "local": "Netherlands",
+   "visita": "Austria",
+   "gl": 2,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_Group_D"
+  },
+  {
+   "fecha": "2024-07-02",
+   "local": "Romania",
+   "visita": "Netherlands",
+   "gl": 0,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_knockout_phase"
+  },
+  {
+   "fecha": "2024-07-06",
+   "local": "Netherlands",
+   "visita": "Turkey",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_knockout_phase"
+  },
+  {
+   "fecha": "2024-07-10",
+   "local": "Netherlands",
+   "visita": "England",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_knockout_phase"
+  },
+  {
+   "fecha": "2024-10-11",
+   "local": "Hungary",
+   "visita": "Netherlands",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2024-11-16",
+   "local": "Netherlands",
+   "visita": "Hungary",
+   "gl": 4,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2025-06-07",
+   "local": "Finland",
+   "visita": "Netherlands",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_G"
+  },
+  {
+   "fecha": "2025-09-04",
+   "local": "Netherlands",
+   "visita": "Poland",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_G"
+  },
+  {
+   "fecha": "2025-09-07",
+   "local": "Lithuania",
+   "visita": "Netherlands",
+   "gl": 2,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_G"
+  },
+  {
+   "fecha": "2025-10-09",
+   "local": "Malta",
+   "visita": "Netherlands",
+   "gl": 0,
+   "gv": 4,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_G"
+  },
+  {
+   "fecha": "2025-10-12",
+   "local": "Netherlands",
+   "visita": "Finland",
+   "gl": 4,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_G"
+  },
+  {
+   "fecha": "2025-11-14",
+   "local": "Poland",
+   "visita": "Netherlands",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_G"
+  },
+  {
+   "fecha": "2025-11-17",
+   "local": "Netherlands",
+   "visita": "Lithuania",
+   "gl": 4,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_G"
+  },
+  {
+   "fecha": "2024-01-14",
+   "local": "Japan",
+   "visita": "Vietnam",
+   "gl": 4,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Japan_national_football_team"
+  },
+  {
+   "fecha": "2024-01-19",
+   "local": "Iraq",
+   "visita": "Japan",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Japan_national_football_team"
+  },
+  {
+   "fecha": "2024-01-24",
+   "local": "Japan",
+   "visita": "Indonesia",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Japan_national_football_team"
+  },
+  {
+   "fecha": "2024-01-31",
+   "local": "Bahrain",
+   "visita": "Japan",
+   "gl": 1,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Japan_national_football_team"
+  },
+  {
+   "fecha": "2024-02-03",
+   "local": "Iran",
+   "visita": "Japan",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Japan_national_football_team"
+  },
+  {
+   "fecha": "2024-03-21",
+   "local": "Japan",
+   "visita": "North Korea",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Japan_national_football_team"
+  },
+  {
+   "fecha": "2024-06-06",
+   "local": "Myanmar",
+   "visita": "Japan",
+   "gl": 0,
+   "gv": 5,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Japan_national_football_team"
+  },
+  {
+   "fecha": "2024-06-11",
+   "local": "Japan",
+   "visita": "Syria",
+   "gl": 5,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Japan_national_football_team"
+  },
+  {
+   "fecha": "2024-09-05",
+   "local": "Japan",
+   "visita": "China",
+   "gl": 7,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Japan_national_football_team"
+  },
+  {
+   "fecha": "2024-09-10",
+   "local": "Bahrain",
+   "visita": "Japan",
+   "gl": 0,
+   "gv": 5,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Japan_national_football_team"
+  },
+  {
+   "fecha": "2024-10-10",
+   "local": "Saudi Arabia",
+   "visita": "Japan",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Japan_national_football_team"
+  },
+  {
+   "fecha": "2024-11-15",
+   "local": "Indonesia",
+   "visita": "Japan",
+   "gl": 0,
+   "gv": 4,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Japan_national_football_team"
+  },
+  {
+   "fecha": "2024-11-19",
+   "local": "China",
+   "visita": "Japan",
+   "gl": 1,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2024_Japan_national_football_team"
+  },
+  {
+   "fecha": "2025-03-20",
+   "local": "Japan",
+   "visita": "Bahrain",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://www.espn.com/soccer/team/results/_/id/627/japan"
+  },
+  {
+   "fecha": "2025-03-25",
+   "local": "Saudi Arabia",
+   "visita": "Japan",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://www.espn.com/soccer/team/results/_/id/627/japan"
+  },
+  {
+   "fecha": "2025-06-10",
+   "local": "Indonesia",
+   "visita": "Japan",
+   "gl": 0,
+   "gv": 6,
+   "fuente": "https://www.espn.com/soccer/team/results/_/id/627/japan"
+  },
+  {
+   "fecha": "2024-03-21",
+   "local": "Portugal",
+   "visita": "Sweden",
+   "gl": 5,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Sweden_men%27s_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-03-25",
+   "local": "Sweden",
+   "visita": "Albania",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Sweden_men%27s_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-05",
+   "local": "Denmark",
+   "visita": "Sweden",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Sweden_men%27s_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-08",
+   "local": "Sweden",
+   "visita": "Serbia",
+   "gl": 0,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/Sweden_men%27s_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-09-05",
+   "local": "Azerbaijan",
+   "visita": "Sweden",
+   "gl": 1,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_C"
+  },
+  {
+   "fecha": "2024-09-08",
+   "local": "Sweden",
+   "visita": "Estonia",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_C"
+  },
+  {
+   "fecha": "2024-10-11",
+   "local": "Slovakia",
+   "visita": "Sweden",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_C"
+  },
+  {
+   "fecha": "2024-10-14",
+   "local": "Estonia",
+   "visita": "Sweden",
+   "gl": 0,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_C"
+  },
+  {
+   "fecha": "2024-11-16",
+   "local": "Sweden",
+   "visita": "Slovakia",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_C"
+  },
+  {
+   "fecha": "2024-11-19",
+   "local": "Sweden",
+   "visita": "Azerbaijan",
+   "gl": 6,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_C"
+  },
+  {
+   "fecha": "2025-09-05",
+   "local": "Slovenia",
+   "visita": "Sweden",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_B"
+  },
+  {
+   "fecha": "2025-09-08",
+   "local": "Kosovo",
+   "visita": "Sweden",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_B"
+  },
+  {
+   "fecha": "2025-10-13",
+   "local": "Sweden",
+   "visita": "Kosovo",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_B"
+  },
+  {
+   "fecha": "2025-11-18",
+   "local": "Sweden",
+   "visita": "Slovenia",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_B"
+  },
+  {
+   "fecha": "2026-03-26",
+   "local": "Ukraine",
+   "visita": "Sweden",
+   "gl": 1,
+   "gv": 3,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/761384/sweden-ukraine"
+  },
+  {
+   "fecha": "2026-03-31",
+   "local": "Sweden",
+   "visita": "Poland",
+   "gl": 3,
+   "gv": 2,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/761954/poland-sweden"
+  },
+  {
+   "fecha": "2024-01-16",
+   "local": "Tunisia",
+   "visita": "Namibia",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Tunisia_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-20",
+   "local": "Tunisia",
+   "visita": "Mali",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Tunisia_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-05",
+   "local": "Tunisia",
+   "visita": "Equatorial Guinea",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_H"
+  },
+  {
+   "fecha": "2024-06-09",
+   "local": "Namibia",
+   "visita": "Tunisia",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_H"
+  },
+  {
+   "fecha": "2025-03-19",
+   "local": "Liberia",
+   "visita": "Tunisia",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_H"
+  },
+  {
+   "fecha": "2025-03-24",
+   "local": "Tunisia",
+   "visita": "Malawi",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_H"
+  },
+  {
+   "fecha": "2025-09-04",
+   "local": "Tunisia",
+   "visita": "Liberia",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_H"
+  },
+  {
+   "fecha": "2025-09-08",
+   "local": "Equatorial Guinea",
+   "visita": "Tunisia",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_H"
+  },
+  {
+   "fecha": "2025-10-10",
+   "local": "Sao Tome and Principe",
+   "visita": "Tunisia",
+   "gl": 0,
+   "gv": 6,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_H"
+  },
+  {
+   "fecha": "2025-10-13",
+   "local": "Tunisia",
+   "visita": "Namibia",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_H"
+  },
+  {
+   "fecha": "2026-06-06",
+   "local": "Belgium",
+   "visita": "Tunisia",
+   "gl": 5,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Tunisia_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-10",
+   "local": "Tunisia",
+   "visita": "Cape Verde",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Cape_Verde_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-14",
+   "local": "Ghana",
+   "visita": "Cape Verde",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2023_Africa_Cup_of_Nations_Group_B"
+  },
+  {
+   "fecha": "2024-01-14",
+   "local": "Egypt",
+   "visita": "Mozambique",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2023_Africa_Cup_of_Nations_Group_B"
+  },
+  {
+   "fecha": "2024-01-14",
+   "local": "Iran",
+   "visita": "Palestine",
+   "gl": 4,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Iran_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-18",
+   "local": "Egypt",
+   "visita": "Ghana",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2023_Africa_Cup_of_Nations_Group_B"
+  },
+  {
+   "fecha": "2024-01-19",
+   "local": "Cape Verde",
+   "visita": "Mozambique",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2023_Africa_Cup_of_Nations_Group_B"
+  },
+  {
+   "fecha": "2024-01-19",
+   "local": "Hong Kong",
+   "visita": "Iran",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Iran_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-22",
+   "local": "Cape Verde",
+   "visita": "Egypt",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2023_Africa_Cup_of_Nations_Group_B"
+  },
+  {
+   "fecha": "2024-01-23",
+   "local": "Iran",
+   "visita": "UAE",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Iran_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-29",
+   "local": "Cape Verde",
+   "visita": "Mauritania",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2023_Africa_Cup_of_Nations_knockout_stage"
+  },
+  {
+   "fecha": "2024-01-28",
+   "local": "Egypt",
+   "visita": "DR Congo",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2023_Africa_Cup_of_Nations_knockout_stage"
+  },
+  {
+   "fecha": "2024-01-31",
+   "local": "Iran",
+   "visita": "Syria",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Iran_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-03-21",
+   "local": "Cape Verde",
+   "visita": "Guyana",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Cape_Verde_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-03-22",
+   "local": "Egypt",
+   "visita": "New Zealand",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/New_Zealand_men%27s_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-03-22",
+   "local": "Spain",
+   "visita": "Colombia",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/698122/colombia-spain"
+  },
+  {
+   "fecha": "2024-03-23",
+   "local": "Republic of Ireland",
+   "visita": "Belgium",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Belgium_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-03-25",
+   "local": "Cape Verde",
+   "visita": "Equatorial Guinea",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Cape_Verde_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-03-26",
+   "local": "Tunisia",
+   "visita": "New Zealand",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/New_Zealand_men%27s_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-03-26",
+   "local": "England",
+   "visita": "Belgium",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/689957/belgium-england"
+  },
+  {
+   "fecha": "2024-03-26",
+   "local": "Spain",
+   "visita": "Brazil",
+   "gl": 3,
+   "gv": 3,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/696634/brazil-spain"
+  },
+  {
+   "fecha": "2024-03-21",
+   "local": "Iran",
+   "visita": "Turkmenistan",
+   "gl": 5,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Iran_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-03-26",
+   "local": "Turkmenistan",
+   "visita": "Iran",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Iran_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-05",
+   "local": "Spain",
+   "visita": "Andorra",
+   "gl": 5,
+   "gv": 0,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/699861/andorra-spain"
+  },
+  {
+   "fecha": "2024-06-06",
+   "local": "Iran",
+   "visita": "Hong Kong",
+   "gl": 4,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Iran_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-06",
+   "local": "Egypt",
+   "visita": "Burkina Faso",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_A"
+  },
+  {
+   "fecha": "2024-06-08",
+   "local": "Spain",
+   "visita": "Northern Ireland",
+   "gl": 5,
+   "gv": 1,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/701680/northern-ireland-spain"
+  },
+  {
+   "fecha": "2024-06-08",
+   "local": "Cameroon",
+   "visita": "Cape Verde",
+   "gl": 4,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_D"
+  },
+  {
+   "fecha": "2024-06-10",
+   "local": "Guinea-Bissau",
+   "visita": "Egypt",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_A"
+  },
+  {
+   "fecha": "2024-06-11",
+   "local": "Iran",
+   "visita": "Uzbekistan",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Iran_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-11",
+   "local": "Cape Verde",
+   "visita": "Libya",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_D"
+  },
+  {
+   "fecha": "2024-06-15",
+   "local": "Spain",
+   "visita": "Croatia",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_Group_B"
+  },
+  {
+   "fecha": "2024-06-17",
+   "local": "Belgium",
+   "visita": "Slovakia",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_Group_E"
+  },
+  {
+   "fecha": "2024-06-18",
+   "local": "New Zealand",
+   "visita": "Solomon Islands",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_OFC_Men%27s_Nations_Cup"
+  },
+  {
+   "fecha": "2024-06-20",
+   "local": "Spain",
+   "visita": "Italy",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_Group_B"
+  },
+  {
+   "fecha": "2024-06-21",
+   "local": "Vanuatu",
+   "visita": "New Zealand",
+   "gl": 0,
+   "gv": 4,
+   "fuente": "https://en.wikipedia.org/wiki/2024_OFC_Men%27s_Nations_Cup"
+  },
+  {
+   "fecha": "2024-06-22",
+   "local": "Belgium",
+   "visita": "Romania",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_Group_E"
+  },
+  {
+   "fecha": "2024-06-24",
+   "local": "Albania",
+   "visita": "Spain",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_Group_B"
+  },
+  {
+   "fecha": "2024-06-26",
+   "local": "Ukraine",
+   "visita": "Belgium",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_Group_E"
+  },
+  {
+   "fecha": "2024-06-27",
+   "local": "New Zealand",
+   "visita": "Tahiti",
+   "gl": 5,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_OFC_Men%27s_Nations_Cup"
+  },
+  {
+   "fecha": "2024-06-30",
+   "local": "Spain",
+   "visita": "Georgia",
+   "gl": 4,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_knockout_phase"
+  },
+  {
+   "fecha": "2024-06-30",
+   "local": "New Zealand",
+   "visita": "Vanuatu",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_OFC_Men%27s_Nations_Cup"
+  },
+  {
+   "fecha": "2024-07-01",
+   "local": "France",
+   "visita": "Belgium",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_knockout_phase"
+  },
+  {
+   "fecha": "2024-07-09",
+   "local": "Spain",
+   "visita": "France",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_knockout_phase"
+  },
+  {
+   "fecha": "2024-07-14",
+   "local": "Spain",
+   "visita": "England",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_final"
+  },
+  {
+   "fecha": "2024-09-05",
+   "local": "Serbia",
+   "visita": "Spain",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2024-09-06",
+   "local": "Belgium",
+   "visita": "Israel",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2024-09-06",
+   "local": "Egypt",
+   "visita": "Cape Verde",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_qualification_Group_C"
+  },
+  {
+   "fecha": "2024-09-09",
+   "local": "France",
+   "visita": "Belgium",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2024-09-09",
+   "local": "Iran",
+   "visita": "Kyrgyzstan",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Iran_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-09-10",
+   "local": "Botswana",
+   "visita": "Egypt",
+   "gl": 0,
+   "gv": 4,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_qualification_Group_C"
+  },
+  {
+   "fecha": "2024-09-10",
+   "local": "UAE",
+   "visita": "Iran",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Iran_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-09-10",
+   "local": "Cape Verde",
+   "visita": "Mauritania",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_qualification_Group_C"
+  },
+  {
+   "fecha": "2024-10-10",
+   "local": "Italy",
+   "visita": "Belgium",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2024-10-10",
+   "local": "Uzbekistan",
+   "visita": "Iran",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Iran_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-10-10",
+   "local": "Cape Verde",
+   "visita": "Botswana",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_qualification_Group_C"
+  },
+  {
+   "fecha": "2024-10-11",
+   "local": "Egypt",
+   "visita": "Mauritania",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_qualification_Group_C"
+  },
+  {
+   "fecha": "2024-10-11",
+   "local": "Tahiti",
+   "visita": "New Zealand",
+   "gl": 0,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(OFC)"
+  },
+  {
+   "fecha": "2024-10-12",
+   "local": "Spain",
+   "visita": "Denmark",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2024-10-14",
+   "local": "Belgium",
+   "visita": "France",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2024-10-14",
+   "local": "New Zealand",
+   "visita": "Malaysia",
+   "gl": 4,
+   "gv": 0,
+   "fuente": "https://www.friendsoffootballnz.com/2024/10/14/all-whites-romp-to-4-0-win-against-malaysia-at-north-harbour-stadium/"
+  },
+  {
+   "fecha": "2024-10-14",
+   "local": "Iran",
+   "visita": "Qatar",
+   "gl": 4,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Iran_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-10-15",
+   "local": "Spain",
+   "visita": "Serbia",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2024-10-15",
+   "local": "Mauritania",
+   "visita": "Egypt",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_qualification_Group_C"
+  },
+  {
+   "fecha": "2024-10-15",
+   "local": "Botswana",
+   "visita": "Cape Verde",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_qualification_Group_C"
+  },
+  {
+   "fecha": "2024-11-14",
+   "local": "Belgium",
+   "visita": "Italy",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2024-11-14",
+   "local": "North Korea",
+   "visita": "Iran",
+   "gl": 2,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/Iran_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-11-15",
+   "local": "Vanuatu",
+   "visita": "New Zealand",
+   "gl": 1,
+   "gv": 8,
+   "fuente": "https://en.wikipedia.org/wiki/New_Zealand_men%27s_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-11-15",
+   "local": "Denmark",
+   "visita": "Spain",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://www.foxsports.com/soccer/nations-league-denmark-vs-spain-nov-15-2024-game-boxscore-599234"
+  },
+  {
+   "fecha": "2024-11-15",
+   "local": "Cape Verde",
+   "visita": "Egypt",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_qualification_Group_C"
+  },
+  {
+   "fecha": "2024-11-17",
+   "local": "Israel",
+   "visita": "Belgium",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2024-11-18",
+   "local": "Samoa",
+   "visita": "New Zealand",
+   "gl": 0,
+   "gv": 8,
+   "fuente": "https://en.wikipedia.org/wiki/New_Zealand_men%27s_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-11-18",
+   "local": "Spain",
+   "visita": "Switzerland",
+   "gl": 3,
+   "gv": 2,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/699023/switzerland-spain"
+  },
+  {
+   "fecha": "2024-11-19",
+   "local": "Kyrgyzstan",
+   "visita": "Iran",
+   "gl": 2,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/Iran_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-11-19",
+   "local": "Egypt",
+   "visita": "Botswana",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_qualification_Group_C"
+  },
+  {
+   "fecha": "2024-11-19",
+   "local": "Mauritania",
+   "visita": "Cape Verde",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_qualification_Group_C"
+  },
+  {
+   "fecha": "2025-03-20",
+   "local": "Ukraine",
+   "visita": "Belgium",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_promotion%2Frelegation_play-offs"
+  },
+  {
+   "fecha": "2025-03-20",
+   "local": "Iran",
+   "visita": "UAE",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Iran_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2025-03-20",
+   "local": "Cape Verde",
+   "visita": "Mauritius",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_D"
+  },
+  {
+   "fecha": "2025-03-21",
+   "local": "Ethiopia",
+   "visita": "Egypt",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_A"
+  },
+  {
+   "fecha": "2025-03-21",
+   "local": "New Zealand",
+   "visita": "Fiji",
+   "gl": 7,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(OFC)"
+  },
+  {
+   "fecha": "2025-03-23",
+   "local": "Belgium",
+   "visita": "Ukraine",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_promotion%2Frelegation_play-offs"
+  },
+  {
+   "fecha": "2025-03-24",
+   "local": "New Caledonia",
+   "visita": "New Zealand",
+   "gl": 0,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_(OFC)"
+  },
+  {
+   "fecha": "2025-03-25",
+   "local": "Iran",
+   "visita": "Uzbekistan",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Iran_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2025-03-25",
+   "local": "Egypt",
+   "visita": "Sierra Leone",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_A"
+  },
+  {
+   "fecha": "2025-03-25",
+   "local": "Angola",
+   "visita": "Cape Verde",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_D"
+  },
+  {
+   "fecha": "2025-06-05",
+   "local": "Spain",
+   "visita": "France",
+   "gl": 5,
+   "gv": 4,
+   "fuente": "https://en.wikipedia.org/wiki/2025_UEFA_Nations_League_Finals"
+  },
+  {
+   "fecha": "2025-06-07",
+   "local": "Ivory Coast",
+   "visita": "New Zealand",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/New_Zealand_men%27s_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2025-06-08",
+   "local": "Portugal",
+   "visita": "Spain",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2025_UEFA_Nations_League_Finals"
+  },
+  {
+   "fecha": "2025-06-09",
+   "local": "Belgium",
+   "visita": "Wales",
+   "gl": 4,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_J"
+  },
+  {
+   "fecha": "2025-06-10",
+   "local": "Ukraine",
+   "visita": "New Zealand",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/New_Zealand_men%27s_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-16",
+   "local": "Saudi Arabia",
+   "visita": "Oman",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2023_AFC_Asian_Cup_Group_F"
+  },
+  {
+   "fecha": "2024-01-21",
+   "local": "Kyrgyzstan",
+   "visita": "Saudi Arabia",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2023_AFC_Asian_Cup_Group_F"
+  },
+  {
+   "fecha": "2024-01-25",
+   "local": "Saudi Arabia",
+   "visita": "Thailand",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2023_AFC_Asian_Cup_Group_F"
+  },
+  {
+   "fecha": "2024-03-21",
+   "local": "Saudi Arabia",
+   "visita": "Tajikistan",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Saudi_Arabia_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-03-26",
+   "local": "Tajikistan",
+   "visita": "Saudi Arabia",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Saudi_Arabia_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-06",
+   "local": "Pakistan",
+   "visita": "Saudi Arabia",
+   "gl": 0,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/Saudi_Arabia_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-11",
+   "local": "Saudi Arabia",
+   "visita": "Jordan",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Saudi_Arabia_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-09-04",
+   "local": "Saudi Arabia",
+   "visita": "Indonesia",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://www.nbcsports.com/soccer/news/asian-afc-2026-world-cup-qualifying-schedule-results-table"
+  },
+  {
+   "fecha": "2024-09-10",
+   "local": "China",
+   "visita": "Saudi Arabia",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://www.nbcsports.com/soccer/news/asian-afc-2026-world-cup-qualifying-schedule-results-table"
+  },
+  {
+   "fecha": "2025-03-20",
+   "local": "Saudi Arabia",
+   "visita": "China",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://www.nbcsports.com/soccer/news/asian-afc-2026-world-cup-qualifying-schedule-results-table"
+  },
+  {
+   "fecha": "2025-06-05",
+   "local": "Bahrain",
+   "visita": "Saudi Arabia",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://www.nbcsports.com/soccer/news/asian-afc-2026-world-cup-qualifying-schedule-results-table"
+  },
+  {
+   "fecha": "2025-10-08",
+   "local": "Indonesia",
+   "visita": "Saudi Arabia",
+   "gl": 2,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_fourth_round"
+  },
+  {
+   "fecha": "2025-10-14",
+   "local": "Saudi Arabia",
+   "visita": "Iraq",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_fourth_round"
+  },
+  {
+   "fecha": "2024-03-26",
+   "local": "Ivory Coast",
+   "visita": "Uruguay",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Uruguay_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-23",
+   "local": "Uruguay",
+   "visita": "Panama",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Uruguay_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-27",
+   "local": "Uruguay",
+   "visita": "Bolivia",
+   "gl": 5,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Uruguay_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-07-10",
+   "local": "Uruguay",
+   "visita": "Colombia",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Uruguay_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-10-11",
+   "local": "Peru",
+   "visita": "Uruguay",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Uruguay_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-11-15",
+   "local": "Uruguay",
+   "visita": "Colombia",
+   "gl": 3,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Uruguay_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2025-03-21",
+   "local": "Argentina",
+   "visita": "Uruguay",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://africa.espn.com/football/team/results/_/id/212/uru"
+  },
+  {
+   "fecha": "2025-03-25",
+   "local": "Uruguay",
+   "visita": "Bolivia",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://africa.espn.com/football/team/results/_/id/212/uru"
+  },
+  {
+   "fecha": "2025-06-06",
+   "local": "Uruguay",
+   "visita": "Paraguay",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://africa.espn.com/football/team/results/_/id/212/uru"
+  },
+  {
+   "fecha": "2025-06-11",
+   "local": "Venezuela",
+   "visita": "Uruguay",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://africa.espn.com/football/team/results/_/id/212/uru"
+  },
+  {
+   "fecha": "2024-06-17",
+   "local": "Austria",
+   "visita": "France",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_Group_D"
+  },
+  {
+   "fecha": "2024-06-25",
+   "local": "France",
+   "visita": "Poland",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_Group_D"
+  },
+  {
+   "fecha": "2024-07-05",
+   "local": "France",
+   "visita": "Portugal",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_knockout_phase"
+  },
+  {
+   "fecha": "2024-09-06",
+   "local": "France",
+   "visita": "Italy",
+   "gl": 1,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2024-10-10",
+   "local": "France",
+   "visita": "Israel",
+   "gl": 4,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2024-11-14",
+   "local": "France",
+   "visita": "Israel",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2024-11-17",
+   "local": "Italy",
+   "visita": "France",
+   "gl": 1,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2025-03-20",
+   "local": "Croatia",
+   "visita": "France",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_UEFA_Nations_League_Finals"
+  },
+  {
+   "fecha": "2025-03-23",
+   "local": "France",
+   "visita": "Croatia",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_UEFA_Nations_League_Finals"
+  },
+  {
+   "fecha": "2025-09-05",
+   "local": "Ukraine",
+   "visita": "France",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_D"
+  },
+  {
+   "fecha": "2025-09-09",
+   "local": "France",
+   "visita": "Iceland",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_D"
+  },
+  {
+   "fecha": "2025-10-10",
+   "local": "France",
+   "visita": "Azerbaijan",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_D"
+  },
+  {
+   "fecha": "2025-10-13",
+   "local": "Iceland",
+   "visita": "France",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_D"
+  },
+  {
+   "fecha": "2025-11-13",
+   "local": "France",
+   "visita": "Ukraine",
+   "gl": 4,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_D"
+  },
+  {
+   "fecha": "2025-11-16",
+   "local": "Azerbaijan",
+   "visita": "France",
+   "gl": 1,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_D"
+  },
+  {
+   "fecha": "2024-01-15",
+   "local": "Senegal",
+   "visita": "Gambia",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Senegal_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-19",
+   "local": "Senegal",
+   "visita": "Cameroon",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Senegal_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-23",
+   "local": "Guinea",
+   "visita": "Senegal",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Senegal_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-06",
+   "local": "Senegal",
+   "visita": "DR Congo",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_B"
+  },
+  {
+   "fecha": "2024-06-09",
+   "local": "Mauritania",
+   "visita": "Senegal",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_B"
+  },
+  {
+   "fecha": "2025-03-22",
+   "local": "Sudan",
+   "visita": "Senegal",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_B"
+  },
+  {
+   "fecha": "2025-03-25",
+   "local": "Senegal",
+   "visita": "Togo",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_B"
+  },
+  {
+   "fecha": "2025-09-05",
+   "local": "Senegal",
+   "visita": "Sudan",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_B"
+  },
+  {
+   "fecha": "2025-09-09",
+   "local": "DR Congo",
+   "visita": "Senegal",
+   "gl": 2,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_B"
+  },
+  {
+   "fecha": "2025-10-10",
+   "local": "South Sudan",
+   "visita": "Senegal",
+   "gl": 0,
+   "gv": 5,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_B"
+  },
+  {
+   "fecha": "2025-10-14",
+   "local": "Senegal",
+   "visita": "Mauritania",
+   "gl": 4,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_B"
+  },
+  {
+   "fecha": "2025-12-23",
+   "local": "Senegal",
+   "visita": "Botswana",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_Group_D"
+  },
+  {
+   "fecha": "2025-12-27",
+   "local": "Senegal",
+   "visita": "DR Congo",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_Group_D"
+  },
+  {
+   "fecha": "2025-12-30",
+   "local": "Benin",
+   "visita": "Senegal",
+   "gl": 0,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_Group_D"
+  },
+  {
+   "fecha": "2026-01-03",
+   "local": "Senegal",
+   "visita": "Sudan",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_knockout_stage"
+  },
+  {
+   "fecha": "2026-01-09",
+   "local": "Mali",
+   "visita": "Senegal",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_knockout_stage"
+  },
+  {
+   "fecha": "2024-01-15",
+   "local": "Indonesia",
+   "visita": "Iraq",
+   "gl": 1,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/Iraq_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-24",
+   "local": "Iraq",
+   "visita": "Vietnam",
+   "gl": 3,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Iraq_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-29",
+   "local": "Iraq",
+   "visita": "Jordan",
+   "gl": 2,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/Iraq_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-03-21",
+   "local": "Iraq",
+   "visita": "Philippines",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/687445/philippines-iraq"
+  },
+  {
+   "fecha": "2024-03-26",
+   "local": "Philippines",
+   "visita": "Iraq",
+   "gl": 0,
+   "gv": 5,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/687446/iraq-philippines"
+  },
+  {
+   "fecha": "2024-06-06",
+   "local": "Indonesia",
+   "visita": "Iraq",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://global.espn.com/football/match/_/gameId/687447/iraq-indonesia"
+  },
+  {
+   "fecha": "2024-06-11",
+   "local": "Iraq",
+   "visita": "Vietnam",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/687448/vietnam-iraq"
+  },
+  {
+   "fecha": "2024-09-05",
+   "local": "Iraq",
+   "visita": "Oman",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_third_round"
+  },
+  {
+   "fecha": "2024-09-10",
+   "local": "Kuwait",
+   "visita": "Iraq",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_third_round"
+  },
+  {
+   "fecha": "2024-10-10",
+   "local": "Iraq",
+   "visita": "Palestine",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_third_round"
+  },
+  {
+   "fecha": "2024-11-14",
+   "local": "Iraq",
+   "visita": "Jordan",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_third_round"
+  },
+  {
+   "fecha": "2024-11-19",
+   "local": "Oman",
+   "visita": "Iraq",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_third_round"
+  },
+  {
+   "fecha": "2025-03-20",
+   "local": "Iraq",
+   "visita": "Kuwait",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_third_round"
+  },
+  {
+   "fecha": "2025-10-11",
+   "local": "Iraq",
+   "visita": "Indonesia",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_fourth_round"
+  },
+  {
+   "fecha": "2025-11-13",
+   "local": "United Arab Emirates",
+   "visita": "Iraq",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_fifth_round"
+  },
+  {
+   "fecha": "2025-11-18",
+   "local": "Iraq",
+   "visita": "United Arab Emirates",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_fifth_round"
+  },
+  {
+   "fecha": "2024-03-22",
+   "local": "Norway",
+   "visita": "Czech Republic",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Norway_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-03-26",
+   "local": "Norway",
+   "visita": "Slovakia",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Norway_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-05",
+   "local": "Norway",
+   "visita": "Kosovo",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Norway_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-08",
+   "local": "Denmark",
+   "visita": "Norway",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Norway_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-09-06",
+   "local": "Kazakhstan",
+   "visita": "Norway",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Norway_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-09-09",
+   "local": "Norway",
+   "visita": "Austria",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Norway_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-10-10",
+   "local": "Norway",
+   "visita": "Slovenia",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Norway_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-10-13",
+   "local": "Austria",
+   "visita": "Norway",
+   "gl": 5,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Norway_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-11-14",
+   "local": "Slovenia",
+   "visita": "Norway",
+   "gl": 1,
+   "gv": 4,
+   "fuente": "https://en.wikipedia.org/wiki/Norway_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-11-17",
+   "local": "Norway",
+   "visita": "Kazakhstan",
+   "gl": 5,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Norway_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2025-03-22",
+   "local": "Moldova",
+   "visita": "Norway",
+   "gl": 0,
+   "gv": 5,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_I"
+  },
+  {
+   "fecha": "2025-03-25",
+   "local": "Israel",
+   "visita": "Norway",
+   "gl": 2,
+   "gv": 4,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_I"
+  },
+  {
+   "fecha": "2025-06-06",
+   "local": "Norway",
+   "visita": "Italy",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_I"
+  },
+  {
+   "fecha": "2025-06-09",
+   "local": "Estonia",
+   "visita": "Norway",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_I"
+  },
+  {
+   "fecha": "2025-09-09",
+   "local": "Norway",
+   "visita": "Moldova",
+   "gl": 11,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_I"
+  },
+  {
+   "fecha": "2025-10-11",
+   "local": "Norway",
+   "visita": "Israel",
+   "gl": 5,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_I"
+  },
+  {
+   "fecha": "2025-11-13",
+   "local": "Norway",
+   "visita": "Estonia",
+   "gl": 4,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_I"
+  },
+  {
+   "fecha": "2025-11-16",
+   "local": "Italy",
+   "visita": "Norway",
+   "gl": 1,
+   "gv": 4,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_UEFA_Group_I"
+  },
+  {
+   "fecha": "2024-03-22",
+   "local": "El Salvador",
+   "visita": "Argentina",
+   "gl": 0,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/Argentina_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-03-26",
+   "local": "Costa Rica",
+   "visita": "Argentina",
+   "gl": 1,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/Argentina_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-09",
+   "local": "Ecuador",
+   "visita": "Argentina",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Argentina_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-14",
+   "local": "Guatemala",
+   "visita": "Argentina",
+   "gl": 1,
+   "gv": 4,
+   "fuente": "https://en.wikipedia.org/wiki/Argentina_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-25",
+   "local": "Chile",
+   "visita": "Argentina",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Argentina_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-29",
+   "local": "Peru",
+   "visita": "Argentina",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Argentina_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-07-14",
+   "local": "Colombia",
+   "visita": "Argentina",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Argentina_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-09-05",
+   "local": "Chile",
+   "visita": "Argentina",
+   "gl": 0,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/Argentina_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-09-10",
+   "local": "Colombia",
+   "visita": "Argentina",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Argentina_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-10-10",
+   "local": "Venezuela",
+   "visita": "Argentina",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Argentina_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-10-15",
+   "local": "Bolivia",
+   "visita": "Argentina",
+   "gl": 6,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Argentina_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-11-19",
+   "local": "Peru",
+   "visita": "Argentina",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Argentina_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2025-06-05",
+   "local": "Chile",
+   "visita": "Argentina",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Argentina_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2025-06-10",
+   "local": "Colombia",
+   "visita": "Argentina",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Argentina_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-05",
+   "local": "Togo",
+   "visita": "Algeria",
+   "gl": 0,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/Algeria_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-09",
+   "local": "Burundi",
+   "visita": "Algeria",
+   "gl": 0,
+   "gv": 4,
+   "fuente": "https://en.wikipedia.org/wiki/Algeria_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-15",
+   "local": "Algeria",
+   "visita": "Angola",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Algeria_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-20",
+   "local": "Algeria",
+   "visita": "Burkina Faso",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Algeria_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-23",
+   "local": "Mauritania",
+   "visita": "Algeria",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Algeria_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-03-22",
+   "local": "Algeria",
+   "visita": "Bolivia",
+   "gl": 3,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Algeria_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-06",
+   "local": "Algeria",
+   "visita": "Guinea",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_G"
+  },
+  {
+   "fecha": "2024-06-10",
+   "local": "Uganda",
+   "visita": "Algeria",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_G"
+  },
+  {
+   "fecha": "2024-09-05",
+   "local": "Algeria",
+   "visita": "Equatorial Guinea",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_qualification_Group_E"
+  },
+  {
+   "fecha": "2024-09-10",
+   "local": "Liberia",
+   "visita": "Algeria",
+   "gl": 0,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_qualification_Group_E"
+  },
+  {
+   "fecha": "2024-10-10",
+   "local": "Algeria",
+   "visita": "Togo",
+   "gl": 5,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_qualification_Group_E"
+  },
+  {
+   "fecha": "2024-10-14",
+   "local": "Togo",
+   "visita": "Algeria",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_qualification_Group_E"
+  },
+  {
+   "fecha": "2024-11-14",
+   "local": "Equatorial Guinea",
+   "visita": "Algeria",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_qualification_Group_E"
+  },
+  {
+   "fecha": "2024-11-17",
+   "local": "Algeria",
+   "visita": "Liberia",
+   "gl": 5,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_qualification_Group_E"
+  },
+  {
+   "fecha": "2025-03-21",
+   "local": "Botswana",
+   "visita": "Algeria",
+   "gl": 1,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_G"
+  },
+  {
+   "fecha": "2025-03-25",
+   "local": "Algeria",
+   "visita": "Mozambique",
+   "gl": 5,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_CAF_Group_G"
+  },
+  {
+   "fecha": "2025-12-24",
+   "local": "Algeria",
+   "visita": "Sudan",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_Group_E"
+  },
+  {
+   "fecha": "2025-12-28",
+   "local": "Algeria",
+   "visita": "Burkina Faso",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_Group_E"
+  },
+  {
+   "fecha": "2025-12-31",
+   "local": "Equatorial Guinea",
+   "visita": "Algeria",
+   "gl": 1,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_Group_E"
+  },
+  {
+   "fecha": "2026-01-06",
+   "local": "Algeria",
+   "visita": "DR Congo",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_knockout_stage"
+  },
+  {
+   "fecha": "2026-01-10",
+   "local": "Algeria",
+   "visita": "Nigeria",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://www.aljazeera.com/sports/2026/1/10/impressive-nigeria-beat-algeria-2-0-to-set-up-afcon-semifinal-with-morocco"
+  },
+  {
+   "fecha": "2024-03-23",
+   "local": "Slovakia",
+   "visita": "Austria",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://www.rsssf.org/tableso/oost-intres.html"
+  },
+  {
+   "fecha": "2024-03-26",
+   "local": "Austria",
+   "visita": "Turkey",
+   "gl": 6,
+   "gv": 1,
+   "fuente": "https://www.rsssf.org/tableso/oost-intres.html"
+  },
+  {
+   "fecha": "2024-06-04",
+   "local": "Austria",
+   "visita": "Serbia",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://www.rsssf.org/tableso/oost-intres.html"
+  },
+  {
+   "fecha": "2024-06-08",
+   "local": "Switzerland",
+   "visita": "Austria",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://www.rsssf.org/tableso/oost-intres.html"
+  },
+  {
+   "fecha": "2024-06-21",
+   "local": "Poland",
+   "visita": "Austria",
+   "gl": 1,
+   "gv": 3,
+   "fuente": "https://www.rsssf.org/tableso/oost-intres.html"
+  },
+  {
+   "fecha": "2024-07-02",
+   "local": "Austria",
+   "visita": "Turkey",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://www.rsssf.org/tableso/oost-intres.html"
+  },
+  {
+   "fecha": "2024-09-06",
+   "local": "Slovenia",
+   "visita": "Austria",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://www.rsssf.org/tableso/oost-intres.html"
+  },
+  {
+   "fecha": "2024-10-10",
+   "local": "Austria",
+   "visita": "Kazakhstan",
+   "gl": 4,
+   "gv": 0,
+   "fuente": "https://www.rsssf.org/tableso/oost-intres.html"
+  },
+  {
+   "fecha": "2024-11-14",
+   "local": "Kazakhstan",
+   "visita": "Austria",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://www.rsssf.org/tableso/oost-intres.html"
+  },
+  {
+   "fecha": "2024-11-17",
+   "local": "Austria",
+   "visita": "Slovenia",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://www.rsssf.org/tableso/oost-intres.html"
+  },
+  {
+   "fecha": "2025-03-20",
+   "local": "Austria",
+   "visita": "Serbia",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://www.rsssf.org/tableso/oost-intres.html"
+  },
+  {
+   "fecha": "2025-03-23",
+   "local": "Serbia",
+   "visita": "Austria",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://www.rsssf.org/tableso/oost-intres.html"
+  },
+  {
+   "fecha": "2025-06-07",
+   "local": "Austria",
+   "visita": "Romania",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://www.rsssf.org/tableso/oost-intres.html"
+  },
+  {
+   "fecha": "2025-06-10",
+   "local": "San Marino",
+   "visita": "Austria",
+   "gl": 0,
+   "gv": 4,
+   "fuente": "https://www.rsssf.org/tableso/oost-intres.html"
+  },
+  {
+   "fecha": "2024-01-05",
+   "local": "Qatar",
+   "visita": "Jordan",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Jordan_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-09",
+   "local": "Japan",
+   "visita": "Jordan",
+   "gl": 6,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Jordan_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-15",
+   "local": "Malaysia",
+   "visita": "Jordan",
+   "gl": 0,
+   "gv": 4,
+   "fuente": "https://en.wikipedia.org/wiki/2023_AFC_Asian_Cup_Group_E"
+  },
+  {
+   "fecha": "2024-01-25",
+   "local": "Jordan",
+   "visita": "Bahrain",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2023_AFC_Asian_Cup_Group_E"
+  },
+  {
+   "fecha": "2024-02-02",
+   "local": "Jordan",
+   "visita": "Tajikistan",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2023_AFC_Asian_Cup_knockout_stage"
+  },
+  {
+   "fecha": "2024-02-09",
+   "local": "Jordan",
+   "visita": "South Korea",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2023_AFC_Asian_Cup_knockout_stage"
+  },
+  {
+   "fecha": "2024-09-05",
+   "local": "Jordan",
+   "visita": "Kuwait",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_third_round"
+  },
+  {
+   "fecha": "2024-09-10",
+   "local": "Palestine",
+   "visita": "Jordan",
+   "gl": 1,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_third_round"
+  },
+  {
+   "fecha": "2024-10-15",
+   "local": "Jordan",
+   "visita": "Oman",
+   "gl": 4,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_third_round"
+  },
+  {
+   "fecha": "2024-11-19",
+   "local": "Kuwait",
+   "visita": "Jordan",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_third_round"
+  },
+  {
+   "fecha": "2025-03-20",
+   "local": "Jordan",
+   "visita": "Palestine",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_qualification_%E2%80%93_AFC_third_round"
+  },
+  {
+   "fecha": "2025-06-05",
+   "local": "Oman",
+   "visita": "Jordan",
+   "gl": 0,
+   "gv": 3,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/710509/jordan-oman"
+  },
+  {
+   "fecha": "2025-06-10",
+   "local": "Jordan",
+   "visita": "Iraq",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/710517/iraq-jordan"
+  },
+  {
+   "fecha": "2024-06-18",
+   "local": "Portugal",
+   "visita": "Czech Republic",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_Group_F"
+  },
+  {
+   "fecha": "2024-06-22",
+   "local": "Turkey",
+   "visita": "Portugal",
+   "gl": 0,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_Group_F"
+  },
+  {
+   "fecha": "2024-06-26",
+   "local": "Georgia",
+   "visita": "Portugal",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/UEFA_Euro_2024_Group_F"
+  },
+  {
+   "fecha": "2024-07-01",
+   "local": "Portugal",
+   "visita": "Slovenia",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/703936/slovenia-portugal"
+  },
+  {
+   "fecha": "2024-09-05",
+   "local": "Portugal",
+   "visita": "Croatia",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2024-10-12",
+   "local": "Poland",
+   "visita": "Portugal",
+   "gl": 1,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2024-11-15",
+   "local": "Portugal",
+   "visita": "Poland",
+   "gl": 5,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2024-11-18",
+   "local": "Croatia",
+   "visita": "Portugal",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2025-03-20",
+   "local": "Denmark",
+   "visita": "Portugal",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/723711/portugal-denmark"
+  },
+  {
+   "fecha": "2025-03-23",
+   "local": "Portugal",
+   "visita": "Denmark",
+   "gl": 5,
+   "gv": 2,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/723712/denmark-portugal"
+  },
+  {
+   "fecha": "2024-01-06",
+   "local": "DR Congo",
+   "visita": "Angola",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/DR_Congo_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-10",
+   "local": "DR Congo",
+   "visita": "Burkina Faso",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/DR_Congo_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-17",
+   "local": "DR Congo",
+   "visita": "Zambia",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/DR_Congo_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-21",
+   "local": "Morocco",
+   "visita": "DR Congo",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/DR_Congo_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-01-24",
+   "local": "Tanzania",
+   "visita": "DR Congo",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/DR_Congo_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-02-02",
+   "local": "DR Congo",
+   "visita": "Guinea",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/DR_Congo_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-02-07",
+   "local": "Ivory Coast",
+   "visita": "DR Congo",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/DR_Congo_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-09",
+   "local": "DR Congo",
+   "visita": "Togo",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/DR_Congo_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-09-06",
+   "local": "DR Congo",
+   "visita": "Guinea",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_qualification_Group_H"
+  },
+  {
+   "fecha": "2024-09-09",
+   "local": "Ethiopia",
+   "visita": "DR Congo",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_qualification_Group_H"
+  },
+  {
+   "fecha": "2024-10-10",
+   "local": "DR Congo",
+   "visita": "Tanzania",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_qualification_Group_H"
+  },
+  {
+   "fecha": "2024-10-15",
+   "local": "Tanzania",
+   "visita": "DR Congo",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_qualification_Group_H"
+  },
+  {
+   "fecha": "2024-11-16",
+   "local": "Guinea",
+   "visita": "DR Congo",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_qualification_Group_H"
+  },
+  {
+   "fecha": "2024-11-19",
+   "local": "DR Congo",
+   "visita": "Ethiopia",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_qualification_Group_H"
+  },
+  {
+   "fecha": "2025-12-23",
+   "local": "DR Congo",
+   "visita": "Benin",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_Group_D"
+  },
+  {
+   "fecha": "2025-12-30",
+   "local": "Botswana",
+   "visita": "DR Congo",
+   "gl": 0,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2025_Africa_Cup_of_Nations_Group_D"
+  },
+  {
+   "fecha": "2024-01-13",
+   "local": "Uzbekistan",
+   "visita": "Syria",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2023_AFC_Asian_Cup"
+  },
+  {
+   "fecha": "2024-01-18",
+   "local": "India",
+   "visita": "Uzbekistan",
+   "gl": 0,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2023_AFC_Asian_Cup"
+  },
+  {
+   "fecha": "2024-01-30",
+   "local": "Uzbekistan",
+   "visita": "Thailand",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://www.espn.com/soccer/report/_/gameId/698046"
+  },
+  {
+   "fecha": "2024-09-05",
+   "local": "Uzbekistan",
+   "visita": "North Korea",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/710435"
+  },
+  {
+   "fecha": "2024-09-10",
+   "local": "Kyrgyzstan",
+   "visita": "Uzbekistan",
+   "gl": 2,
+   "gv": 3,
+   "fuente": "https://int.soccerway.com/matches/2024/09/10/asia/wc-qualifying-asia/kyrgyzstan/uzbekistan/4382603/"
+  },
+  {
+   "fecha": "2024-10-15",
+   "local": "Uzbekistan",
+   "visita": "UAE",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/710464/united-arab-emirates-uzbekistan"
+  },
+  {
+   "fecha": "2024-11-19",
+   "local": "North Korea",
+   "visita": "Uzbekistan",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/710484"
+  },
+  {
+   "fecha": "2025-03-20",
+   "local": "Uzbekistan",
+   "visita": "Kyrgyzstan",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://www.vavel.com/en-us/soccer/2025/03/20/1217596-uzbekistan-vs-kyrgyzstan-live-score-updates-stream-info-and-how-to-watch-world-cup-2026-qualifiers-match.html"
+  },
+  {
+   "fecha": "2025-06-05",
+   "local": "UAE",
+   "visita": "Uzbekistan",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/710511/uzbekistan-united-arab-emirates"
+  },
+  {
+   "fecha": "2024-03-26",
+   "local": "Colombia",
+   "visita": "Romania",
+   "gl": 3,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Colombia_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-28",
+   "local": "Colombia",
+   "visita": "Costa Rica",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Colombia_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-07-06",
+   "local": "Colombia",
+   "visita": "Panama",
+   "gl": 5,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Colombia_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-09-06",
+   "local": "Peru",
+   "visita": "Colombia",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Colombia_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-10-10",
+   "local": "Bolivia",
+   "visita": "Colombia",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Colombia_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-10-15",
+   "local": "Colombia",
+   "visita": "Chile",
+   "gl": 4,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Colombia_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-03-23",
+   "local": "England",
+   "visita": "Brazil",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://www.englandfootball.com/england/mens-senior-team/fixtures-results"
+  },
+  {
+   "fecha": "2024-06-16",
+   "local": "Serbia",
+   "visita": "England",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://bleacherreport.com/articles/10125599-euro-2024-results-live-tracking-scores-from-group-stage-and-knockout-bracket"
+  },
+  {
+   "fecha": "2024-06-20",
+   "local": "Denmark",
+   "visita": "England",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://bleacherreport.com/articles/10125599-euro-2024-results-live-tracking-scores-from-group-stage-and-knockout-bracket"
+  },
+  {
+   "fecha": "2024-06-25",
+   "local": "England",
+   "visita": "Slovenia",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://bleacherreport.com/articles/10125599-euro-2024-results-live-tracking-scores-from-group-stage-and-knockout-bracket"
+  },
+  {
+   "fecha": "2024-06-30",
+   "local": "England",
+   "visita": "Slovakia",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://bleacherreport.com/articles/10125599-euro-2024-results-live-tracking-scores-from-group-stage-and-knockout-bracket"
+  },
+  {
+   "fecha": "2024-09-07",
+   "local": "Republic of Ireland",
+   "visita": "England",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_B"
+  },
+  {
+   "fecha": "2024-09-10",
+   "local": "England",
+   "visita": "Finland",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_B"
+  },
+  {
+   "fecha": "2024-10-10",
+   "local": "England",
+   "visita": "Greece",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_B"
+  },
+  {
+   "fecha": "2024-03-23",
+   "local": "Tunisia",
+   "visita": "Croatia",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://www.national-football-teams.com/country/47/2024/Croatia.html"
+  },
+  {
+   "fecha": "2024-03-26",
+   "local": "Egypt",
+   "visita": "Croatia",
+   "gl": 2,
+   "gv": 4,
+   "fuente": "https://www.national-football-teams.com/country/47/2024/Croatia.html"
+  },
+  {
+   "fecha": "2024-06-03",
+   "local": "Croatia",
+   "visita": "North Macedonia",
+   "gl": 3,
+   "gv": 0,
+   "fuente": "https://www.national-football-teams.com/country/47/2024/Croatia.html"
+  },
+  {
+   "fecha": "2024-06-08",
+   "local": "Portugal",
+   "visita": "Croatia",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://www.national-football-teams.com/country/47/2024/Croatia.html"
+  },
+  {
+   "fecha": "2024-06-19",
+   "local": "Croatia",
+   "visita": "Albania",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://www.national-football-teams.com/country/47/2024/Croatia.html"
+  },
+  {
+   "fecha": "2024-06-24",
+   "local": "Croatia",
+   "visita": "Italy",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://www.national-football-teams.com/country/47/2024/Croatia.html"
+  },
+  {
+   "fecha": "2024-09-08",
+   "local": "Croatia",
+   "visita": "Poland",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2024-10-15",
+   "local": "Croatia",
+   "visita": "Poland",
+   "gl": 3,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/2024%E2%80%9325_UEFA_Nations_League_A"
+  },
+  {
+   "fecha": "2025-06-02",
+   "local": "Croatia",
+   "visita": "Belgium",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/401856361/belgium-croatia"
+  },
+  {
+   "fecha": "2025-06-07",
+   "local": "Croatia",
+   "visita": "Slovenia",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/401856623/slovenia-croatia"
+  },
+  {
+   "fecha": "2024-01-22",
+   "local": "Mozambique",
+   "visita": "Ghana",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Ghana_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-03-22",
+   "local": "Nigeria",
+   "visita": "Ghana",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Ghana_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-06",
+   "local": "Mali",
+   "visita": "Ghana",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Ghana_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-06-10",
+   "local": "Ghana",
+   "visita": "Central African Republic",
+   "gl": 4,
+   "gv": 3,
+   "fuente": "https://en.wikipedia.org/wiki/Ghana_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-09-05",
+   "local": "Ghana",
+   "visita": "Angola",
+   "gl": 0,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Ghana_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-09-09",
+   "local": "Niger",
+   "visita": "Ghana",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Ghana_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-10-10",
+   "local": "Ghana",
+   "visita": "Sudan",
+   "gl": 0,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/Ghana_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-10-15",
+   "local": "Sudan",
+   "visita": "Ghana",
+   "gl": 0,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Ghana_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-11-15",
+   "local": "Angola",
+   "visita": "Ghana",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://en.wikipedia.org/wiki/Ghana_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2024-11-18",
+   "local": "Ghana",
+   "visita": "Niger",
+   "gl": 1,
+   "gv": 2,
+   "fuente": "https://en.wikipedia.org/wiki/Ghana_national_football_team_results_(2020%E2%80%93present)"
+  },
+  {
+   "fecha": "2025-03-21",
+   "local": "Ghana",
+   "visita": "Chad",
+   "gl": 5,
+   "gv": 0,
+   "fuente": "https://www.national-football-teams.com/country/72/2025/Ghana.html"
+  },
+  {
+   "fecha": "2025-03-24",
+   "local": "Madagascar",
+   "visita": "Ghana",
+   "gl": 0,
+   "gv": 3,
+   "fuente": "https://www.national-football-teams.com/country/72/2025/Ghana.html"
+  },
+  {
+   "fecha": "2025-09-04",
+   "local": "Chad",
+   "visita": "Ghana",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://www.national-football-teams.com/country/72/2025/Ghana.html"
+  },
+  {
+   "fecha": "2025-09-08",
+   "local": "Ghana",
+   "visita": "Mali",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://www.national-football-teams.com/country/72/2025/Ghana.html"
+  },
+  {
+   "fecha": "2025-10-08",
+   "local": "Central African Republic",
+   "visita": "Ghana",
+   "gl": 0,
+   "gv": 5,
+   "fuente": "https://www.national-football-teams.com/country/72/2025/Ghana.html"
+  },
+  {
+   "fecha": "2025-10-12",
+   "local": "Ghana",
+   "visita": "Comoros",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://www.national-football-teams.com/country/72/2025/Ghana.html"
+  },
+  {
+   "fecha": "2025-11-14",
+   "local": "Japan",
+   "visita": "Ghana",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://www.national-football-teams.com/country/72/2025/Ghana.html"
+  },
+  {
+   "fecha": "2026-03-27",
+   "local": "Austria",
+   "visita": "Ghana",
+   "gl": 5,
+   "gv": 1,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/401856593"
+  },
+  {
+   "fecha": "2026-03-30",
+   "local": "Germany",
+   "visita": "Ghana",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/762773/ghana-germany"
+  },
+  {
+   "fecha": "2026-05-22",
+   "local": "Mexico",
+   "visita": "Ghana",
+   "gl": 2,
+   "gv": 0,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/401861774/ghana-mexico"
+  },
+  {
+   "fecha": "2026-06-02",
+   "local": "Wales",
+   "visita": "Ghana",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://www.espn.com/soccer/match/_/gameId/401863573/ghana-wales"
+  },
+  {
+   "fecha": "2024-03-24",
+   "local": "Jamaica",
+   "visita": "Panama",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://en.wikipedia.org/wiki/2024_CONCACAF_Nations_League_Finals"
+  },
+  {
+   "fecha": "2024-07-01",
+   "local": "Panama",
+   "visita": "Bolivia",
+   "gl": 3,
+   "gv": 1,
+   "fuente": "https://bleacherreport.com/articles/10125601-copa-america-2024-results-live-tracking-scores-from-group-stage-and-knockout-bracket"
+  },
+  {
+   "fecha": "2024-07-05",
+   "local": "Colombia",
+   "visita": "Panama",
+   "gl": 5,
+   "gv": 0,
+   "fuente": "https://bleacherreport.com/articles/10125601-copa-america-2024-results-live-tracking-scores-from-group-stage-and-knockout-bracket"
+  },
+  {
+   "fecha": "2024-11-14",
+   "local": "Panama",
+   "visita": "Costa Rica",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://www.espn.com/soccer/team/results/_/id/2659/panama"
+  },
+  {
+   "fecha": "2024-11-18",
+   "local": "Costa Rica",
+   "visita": "Panama",
+   "gl": 2,
+   "gv": 2,
+   "fuente": "https://www.espn.com/soccer/team/results/_/id/2659/panama"
+  },
+  {
+   "fecha": "2025-02-08",
+   "local": "Panama",
+   "visita": "Chile",
+   "gl": 6,
+   "gv": 1,
+   "fuente": "https://www.espn.com/soccer/team/results/_/id/2659/panama"
+  },
+  {
+   "fecha": "2026-01-18",
+   "local": "Panama",
+   "visita": "Bolivia",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://www.espn.com/soccer/team/results/_/id/2659/panama"
+  },
+  {
+   "fecha": "2026-01-22",
+   "local": "Mexico",
+   "visita": "Panama",
+   "gl": 1,
+   "gv": 0,
+   "fuente": "https://www.espn.com/soccer/team/results/_/id/2659/panama"
+  },
+  {
+   "fecha": "2026-03-27",
+   "local": "Panama",
+   "visita": "South Africa",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://www.espn.com/soccer/team/results/_/id/2659/panama"
+  },
+  {
+   "fecha": "2026-03-31",
+   "local": "Panama",
+   "visita": "South Africa",
+   "gl": 2,
+   "gv": 1,
+   "fuente": "https://www.espn.com/soccer/team/results/_/id/2659/panama"
+  },
+  {
+   "fecha": "2026-05-31",
+   "local": "Brazil",
+   "visita": "Panama",
+   "gl": 6,
+   "gv": 2,
+   "fuente": "https://www.espn.com/soccer/team/results/_/id/2659/panama"
+  },
+  {
+   "fecha": "2026-06-03",
+   "local": "Panama",
+   "visita": "Dominican Republic",
+   "gl": 4,
+   "gv": 2,
+   "fuente": "https://www.espn.com/soccer/team/results/_/id/2659/panama"
+  },
+  {
+   "fecha": "2026-06-06",
+   "local": "Panama",
+   "visita": "Bosnia-Herzegovina",
+   "gl": 1,
+   "gv": 1,
+   "fuente": "https://www.espn.com/soccer/team/results/_/id/2659/panama"
+  }
+ ]
+}

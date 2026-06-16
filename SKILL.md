@@ -16,10 +16,21 @@ Disenado para acompanar TODO el torneo: cada fecha que se carga, las prediccione
 - `data/results.json` — ledger de resultados REALES (crece fecha a fecha). **Lo unico que editas normalmente.**
 - `data/state.json` — estado calculado (lo escribe el motor).
 - `data/evolution.json` — snapshot de prob. de campeon por fecha (curva de evolucion).
+- `data/model_config.json` — knobs del motor (capa ataque/defensa `ad_weight`, localia `host_advantage_elo`). **Dormidos (0) por defecto**: el modelo es identico al Elo+Poisson puro. Validar por backtest antes de activar. Ver `MEJORAS-MOTOR.md`.
+- `data/goals_history.json` — historial de goles pre-torneo por equipo (vacio; poblar con fuente, **nunca inventar**) para sembrar los ratings de ataque/defensa.
 - `engine.py` — Elo evolutivo + Monte Carlo + prediccion por partido. Recalcula todo y regenera el panel.
-- `panel.html` — panel con 7 tabs: **Por fecha** (acordeon por dia, el dia activo abierto; cada partido
-  jugado con resultado real o por jugar con prediccion 1X2 + marcador), **Campeon**, **Premios**,
-  **Avance**, **Grupos**, **Evolucion**, **Resultados**.
+- `panel.html` — panel con tabs: **Por fecha** (acordeon por dia, el dia activo abierto; cada partido
+  jugado con resultado real o por jugar con prediccion 1X2 + marcador), **Campeon**, **Puntaje**,
+  **Comparativa** (OLD Elo puro vs NEW con capa ataque/defensa, todos los partidos),
+  **Evaluacion** (auto-backtest: Brier vs baseline + calibracion), **Premios**,
+  **Avance**, **Grupos**, **Evolucion**, **Resultados**, **Metodologia**.
+
+**Modelo mejorado como analista (decision 16-jun):** el **modelo mejorado** (Elo + capa ataque/defensa,
+`ad_weight=0.5`) es el analista principal — las predicciones por fecha, grupos y campeon lo usan. La pestana
+**Comparativa** deja ver el modelo Elo puro (OLD) vs el mejorado (NEW) lado a lado. El **juego de puntos**
+(Puntaje) usa el mejorado **desde `scoring_modelo_desde` en adelante** (lo jugado antes queda con Elo puro).
+Cada partido en **Por fecha** abre un **popup** (clic en la fila) que explica el pronostico: Elo, ratings
+ataque/defensa y ultimos partidos de ambos equipos. Para volver al Elo puro en todo: `ad_weight=0`.
 
 Cada partido por jugar trae P(gana local / empate / gana visita) y el marcador mas probable, calculados
 analiticamente (Poisson sobre el Elo actual). Al cargar un resultado real, ese partido pasa de prediccion

@@ -57,13 +57,19 @@ def elo_after(results, seed):
     return elo
 
 # ---------- modelo de partido ----------
-def sample_goals(ra, rb):
-    """Marcador via Poisson; goles esperados derivados de la dif de Elo."""
-    diff = ra - rb
-    sup = diff / 150.0                      # ventaja de goles esperada
-    base = 1.35
-    la = max(0.18, base + sup / 2.0)
-    lb = max(0.18, base - sup / 2.0)
+def ad_factors(a, b, ad, w):
+    """Factor multiplicativo ataque/defensa, centrado en 1.0.
+    w<=0 o sin ratings -> (1.0, 1.0): comportamiento Elo puro (identidad)."""
+    if not ad or w <= 0:
+        return 1.0, 1.0
+    atk, dfn = ad.get("atk", {}), ad.get("dfn", {})
+    fa = (1 - w) + w * atk.get(a, 1.0) * dfn.get(b, 1.0)
+    fb = (1 - w) + w * atk.get(b, 1.0) * dfn.get(a, 1.0)
+    return fa, fb
+
+def sample_goals(ra, rb, fa=1.0, fb=1.0):
+    """Marcador via Poisson; goles esperados derivados de la dif de Elo y (opcional) del factor ataque/defensa."""
+    la, lb = _lambdas(ra, rb, fa, fb)
     return _poisson(la), _poisson(lb)
 
 def _poisson(lam):
@@ -77,16 +83,21 @@ def ko_winner(a, ra, b, rb):
     """Eliminatoria: ganador via expectativa Elo (empate -> penales, leve sesgo Elo)."""
     return a if random.random() < expected(ra, rb) else b
 
-def _lambdas(ra, rb):
+def _lambdas(ra, rb, fa=1.0, fb=1.0):
     sup = (ra - rb) / 150.0
     base = 1.35
-    return max(0.18, base + sup / 2.0), max(0.18, base - sup / 2.0)
+    return max(0.18, (base + sup / 2.0) * fa), max(0.18, (base - sup / 2.0) * fb)
 
-def match_pred(home, away, elo):
-    """Prediccion analitica de un partido: P(gana local/empate/gana visita) + marcador mas probable."""
+def match_pred(home, away, elo, ad=None, w=0.0, host_adv=0.0, hosts=()):
+    """Prediccion analitica de un partido: P(gana local/empate/gana visita) + marcador mas probable.
+    Capa ataque/defensa (ad,w) y localia de anfitriones (host_adv,hosts) son opcionales:
+    con w=0 y host_adv=0 el resultado es identico al modelo Elo+Poisson puro."""
     if home not in elo or away not in elo:
         return None
-    la, lb = _lambdas(elo[home], elo[away])
+    ra = elo[home] + (host_adv if home in hosts else 0.0)
+    rb = elo[away] + (host_adv if away in hosts else 0.0)
+    fa, fb = ad_factors(home, away, ad, w)
+    la, lb = _lambdas(ra, rb, fa, fb)
     pa = [math.exp(-la) * la ** i / math.factorial(i) for i in range(9)]
     pb = [math.exp(-lb) * lb ** j / math.factorial(j) for j in range(9)]
     pH = pD = pA = 0.0
@@ -103,8 +114,10 @@ def match_pred(home, away, elo):
             "pA": round(100 * pA / s, 1), "score": [best[0], best[1]],
             "xgH": round(la, 2), "xgA": round(lb, 2)}
 
-def build_por_fecha(teams, results, elo, fixtures, anchor):
+def build_por_fecha(teams, results, elo, fixtures, anchor, cfg=None):
     """Vista por dia: cada partido con resultado real (si jugado) o prediccion (si por jugar)."""
+    cfg = cfg or {}
+    ad = compute_ad(results, cfg.get("ghist"), teams["grupos"]) if cfg.get("w", 0) > 0 else None
     played = {frozenset((m["local"], m["visita"])): m for m in results}
     by_date = defaultdict(list)
     seen = set()
@@ -120,7 +133,8 @@ def build_por_fecha(teams, results, elo, fixtures, anchor):
             e["fuente"] = r.get("fuente")
         else:
             e["jugado"] = False
-            e["pred"] = match_pred(h, a, elo)
+            e["pred"] = match_pred(h, a, elo, ad, cfg.get("w", 0.0),
+                                   cfg.get("host_adv", 0.0), cfg.get("hosts", set()))
         by_date[fx["date"]].append(e)
     # resultados sin fixture en el calendario (p.ej. eliminatorias cargadas a mano)
     for m in results:
@@ -250,13 +264,18 @@ def rank_key(s):
     return (s["pts"], s["gf"] - s["gc"], s["gf"])
 
 # ---------- una simulacion ----------
-def simulate_once(grupos, elo, base, played, fixtures, skeleton):
+def simulate_once(grupos, elo, base, played, fixtures, skeleton, rcfg):
     # copia mutable de la tabla
     tab = {tm: dict(v) for tm, v in base.items()}
+    ad, w = rcfg["ad"], rcfg["w"]
+    hadv, hosts = rcfg["host_adv"], rcfg["hosts"]
     for g, a, b in fixtures:
         if frozenset((a, b)) in played:
             continue
-        gl, gv = sample_goals(elo[a], elo[b])
+        ra = elo[a] + (hadv if a in hosts else 0.0)
+        rb = elo[b] + (hadv if b in hosts else 0.0)
+        fa, fb = ad_factors(a, b, ad, w)
+        gl, gv = sample_goals(ra, rb, fa, fb)
         for tm, gf, gc in ((a, gl, gv), (b, gv, gl)):
             tab[tm]["pts"] += 3 if gf > gc else (1 if gf == gc else 0)
             tab[tm]["gf"] += gf; tab[tm]["gc"] += gc
@@ -320,13 +339,15 @@ def simulate_once(grupos, elo, base, played, fixtures, skeleton):
     return winners, runners, third_by_group, reached
 
 # ---------- agregacion Monte Carlo ----------
-def run_mc(grupos, elo, base, played, fixtures, skeleton, n):
+def run_mc(grupos, elo, base, played, fixtures, skeleton, n, rcfg=None):
+    if rcfg is None:
+        rcfg = {"ad": None, "w": 0.0, "host_adv": 0.0, "hosts": set()}
     teams = list(base.keys())
     cnt = {t: {"grupo1": 0, "g2": 0, "top2": 0, "r32": 0, "octavos": 0, "cuartos": 0,
                "semis": 0, "final": 0, "campeon": 0, "sub": 0, "tercero": 0} for t in teams}
     for _ in range(n):
         winners, runners, thirds, reached = simulate_once(
-            grupos, elo, base, played, fixtures, skeleton)
+            grupos, elo, base, played, fixtures, skeleton, rcfg)
         for g, t in winners.items():
             cnt[t]["grupo1"] += 1; cnt[t]["top2"] += 1; cnt[t]["r32"] += 1
         for g, t in runners.items():
@@ -388,20 +409,27 @@ def actual_qualifiers(grupos, base):
         quals.add(t)
     return quals
 
-def compute_scoring(teams, results, fixtures, base, picks):
+def compute_scoring(teams, results, fixtures, base, picks, cfg=None):
     """Puntaje acumulativo. Partidos: pronostico PREVIO a cada partido vs real. Torneo: picks congelados."""
+    cfg = cfg or {}
     seed = teams["elo_seed"]; grupos = teams["grupos"]
     fx_by_pair = {frozenset((f["home"], f["away"])): f for f in fixtures}
     by_date = defaultdict(list)
     for m in results:
         by_date[m["fecha"]].append(m)
+    sw = cfg.get("scoring_w", 0.0); sdesde = cfg.get("scoring_desde")
     rows = []; total_match = 0
     for d in sorted(by_date):
-        elo_prev = elo_after([r for r in results if r["fecha"] < d], seed)
+        prev = [r for r in results if r["fecha"] < d]
+        elo_prev = elo_after(prev, seed)
+        usar_new = bool(sw > 0 and sdesde and d >= sdesde)
+        w_use = sw if usar_new else 0.0
+        ad_prev = compute_ad(prev, cfg.get("ghist"), grupos) if w_use > 0 else None
         for m in by_date[d]:
             fx = fx_by_pair.get(frozenset((m["local"], m["visita"])))
             home, away = (fx["home"], fx["away"]) if fx else (m["local"], m["visita"])
-            pred = match_pred(home, away, elo_prev)
+            pred = match_pred(home, away, elo_prev, ad_prev, w_use,
+                              cfg.get("host_adv", 0.0), cfg.get("hosts", set()))
             if not pred:
                 continue
             ph, pa = pred["score"]
@@ -417,7 +445,8 @@ def compute_scoring(teams, results, fixtures, base, picks):
                 pts += 4; parts["exacto"] = 4
             total_match += pts
             rows.append({"fecha": d, "grupo": m.get("grupo"), "home": home, "away": away,
-                         "pred": [ph, pa], "real": [ah, aa], "pts": pts, "parts": parts})
+                         "pred": [ph, pa], "real": [ah, aa], "pts": pts, "parts": parts,
+                         "modelo": "NEW" if usar_new else "OLD"})
     # resolucion de predicciones de torneo (solo cuando ocurren)
     group_done = sum(1 for r in results if r.get("fase", "grupos") == "grupos") >= 72
     quals = actual_qualifiers(grupos, base) if group_done else None
@@ -456,19 +485,202 @@ def compute_scoring(teams, results, fixtures, base, picks):
                 "estado": "pendiente", "ganado": 0, "potencial": 7 * len(pick_q)}
     ganado = total_match + sum(t["ganado"] for t in tour) + clas["ganado"]
     en_juego = sum(t["pts"] for t in tour if t["estado"] == "pendiente") + (clas["potencial"] if clas["estado"] == "pendiente" else 0)
+    modelo_nota = (f"Hasta {sdesde}: modelo Elo puro. Desde {sdesde}: modelo mejorado (capa ataque/defensa). "
+                   "Decision 16-jun: el juego de puntos usa el modelo mejorado de aca en adelante.") if (sw > 0 and sdesde) else ""
     return {"corte": picks.get("corte"), "por_partido": rows, "total_partidos": total_match,
             "torneo": tour, "clasificados": clas, "ganado": ganado, "en_juego": en_juego,
-            "n_partidos": len(rows)}
+            "n_partidos": len(rows), "modelo_nota": modelo_nota, "scoring_desde": sdesde}
+
+# ---------- ratings ataque/defensa (Maher/Dixon-Coles, opponent-adjusted) ----------
+def compute_ad(results, ghist, grupos, k0=6, iters=12):
+    """Estima ataque (goles que marca) y defensa (goles que recibe) por equipo, ajustado por rival,
+    SOLO desde marcadores reales (historial citado + ledger del torneo). Centrados en 1.0 y
+    encogidos hacia 1.0 segun tamano de muestra. Sin datos -> dicts vacios (factor 1.0 = identidad).
+    Convencion: dfn>1 = recibe mas de lo esperado (peor defensa).
+    Universo abierto: cuenta partidos contra CUALQUIER rival (no solo los 48), para poder usar
+    el historial pre-Mundial vs selecciones no clasificadas; los rivales externos se ratean igual
+    (shrunk) y simplemente no se consultan al predecir (ad_factors usa default 1.0)."""
+    qualified = set()
+    for ts in grupos.values():
+        qualified.update(ts)
+    matches = []
+    for m in list((ghist or {}).get("partidos", [])) + list(results):
+        a, b, gl, gv = m.get("local"), m.get("visita"), m.get("gl"), m.get("gv")
+        if a and b and gl is not None and gv is not None:
+            matches.append((a, b, gl, gv))
+    if not matches:
+        return {"atk": {}, "dfn": {}, "n": {}, "mu": 0.0}
+    teams = set(qualified)
+    for a, b, _, _ in matches:
+        teams.add(a); teams.add(b)
+    mu = sum(gl + gv for _, _, gl, gv in matches) / (2 * len(matches)) or 1.0
+    gf, ga, n = defaultdict(float), defaultdict(float), defaultdict(int)
+    for a, b, gl, gv in matches:
+        gf[a] += gl; ga[a] += gv; n[a] += 1
+        gf[b] += gv; ga[b] += gl; n[b] += 1
+    atk = {t: 1.0 for t in teams}; dfn = {t: 1.0 for t in teams}
+    # Actualizacion REGULARIZADA hacia 1.0 (prior fuerza k0). S[t]/T[t] = goles esperados de t si
+    # su rating fuera neutro (1.0); atk = (marcados + k0) / (esperado + k0). Estable, sin division por cero.
+    for _ in range(iters):
+        S, T = defaultdict(float), defaultdict(float)
+        for a, b, gl, gv in matches:
+            S[a] += mu * dfn[b]; T[a] += mu * atk[b]
+            S[b] += mu * dfn[a]; T[b] += mu * atk[a]
+        for t in teams:
+            atk[t] = (gf[t] + k0) / (S[t] + k0)
+            dfn[t] = (ga[t] + k0) / (T[t] + k0)
+    # normalizar la media a 1.0 sobre los 48 clasificados (interpretabilidad; el producto atk*dfn ~ 1)
+    qa = [atk[t] for t in qualified] or [1.0]; qd = [dfn[t] for t in qualified] or [1.0]
+    ma = (sum(qa) / len(qa)) or 1.0; md = (sum(qd) / len(qd)) or 1.0
+    atk = {t: round(atk[t] / ma, 4) for t in teams}; dfn = {t: round(dfn[t] / md, 4) for t in teams}
+    return {"atk": atk, "dfn": dfn, "n": dict(n), "mu": round(mu, 3)}
+
+# ---------- harness de auto-evaluacion (backtest honesto + calibracion) ----------
+def compute_evaluation(teams, results, fixtures, cfg):
+    """Para cada partido jugado reconstruye la prediccion PREVIA del modelo (solo fechas anteriores)
+    y la compara con el real. Devuelve Brier vs baseline, log-loss, acierto 1X2, exacto y calibracion.
+    Anti-trampa: el marcador real nunca entra en la prediccion, solo en la evaluacion."""
+    seed = teams["elo_seed"]; grupos = teams["grupos"]
+    fx_by_pair = {frozenset((f["home"], f["away"])): f for f in fixtures}
+    by_date = defaultdict(list)
+    for m in results:
+        by_date[m["fecha"]].append(m)
+    prior = {"H": 0.40, "D": 0.27, "A": 0.33}
+    rows = []
+    for d in sorted(by_date):
+        prev = [r for r in results if r["fecha"] < d]
+        elo_prev = elo_after(prev, seed)
+        ad_prev = compute_ad(prev, cfg.get("ghist"), grupos) if cfg.get("w", 0) > 0 else None
+        for m in by_date[d]:
+            fx = fx_by_pair.get(frozenset((m["local"], m["visita"])))
+            home, away = (fx["home"], fx["away"]) if fx else (m["local"], m["visita"])
+            pred = match_pred(home, away, elo_prev, ad_prev, cfg.get("w", 0.0),
+                              cfg.get("host_adv", 0.0), cfg.get("hosts", set()))
+            if not pred:
+                continue
+            ah, aa = (m["gl"], m["gv"]) if m["local"] == home else (m["gv"], m["gl"])
+            out = "H" if ah > aa else ("D" if ah == aa else "A")
+            pH, pD, pA = pred["pH"] / 100, pred["pD"] / 100, pred["pA"] / 100
+            pick = max([("H", pH), ("D", pD), ("A", pA)], key=lambda x: x[1])[0]
+            y = {"H": 0, "D": 0, "A": 0}; y[out] = 1
+            brier = sum((p - y[k]) ** 2 for k, p in (("H", pH), ("D", pD), ("A", pA)))
+            brier_base = sum((prior[k] - y[k]) ** 2 for k in y)
+            pout = {"H": pH, "D": pD, "A": pA}[out]
+            sh, sa = pred["score"]
+            rows.append({"fecha": d, "home": home, "away": away, "real": [ah, aa],
+                         "pred_score": [sh, sa], "out": out, "pick": pick, "hit": pick == out,
+                         "pH": round(pH, 3), "pD": round(pD, 3), "pA": round(pA, 3),
+                         "brier": round(brier, 3), "brier_base": brier_base,
+                         "ll": -math.log(max(pout, 1e-9)), "exact": sh == ah and sa == aa})
+    n = len(rows)
+    if not n:
+        return {"n": 0}
+    agg = lambda k: sum(r[k] for r in rows)
+    buckets = [{"lo": lo, "hi": lo + 0.2, "n": 0, "hit": 0, "psum": 0.0} for lo in (0.0, 0.2, 0.4, 0.6, 0.8)]
+    for r in rows:
+        pmax = max(r["pH"], r["pD"], r["pA"])
+        for bk in buckets:
+            if (bk["lo"] <= pmax < bk["hi"]) or (bk["hi"] >= 1.0 and pmax >= 1.0):
+                bk["n"] += 1; bk["hit"] += 1 if r["hit"] else 0; bk["psum"] += pmax; break
+    calib = [{"rango": f"{int(b['lo']*100)}-{int(b['hi']*100)}%", "n": b["n"],
+              "conf": round(100 * b["psum"] / b["n"], 1) if b["n"] else None,
+              "obs": round(100 * b["hit"] / b["n"], 1) if b["n"] else None} for b in buckets]
+    brier = agg("brier") / n; brier_base = agg("brier_base") / n
+    draws_real = sum(1 for r in rows if r["out"] == "D")
+    return {"n": n, "hit": agg("hit"), "hit_pct": round(100 * agg("hit") / n, 1),
+            "exact": agg("exact"), "exact_pct": round(100 * agg("exact") / n, 1),
+            "brier": round(brier, 3), "brier_base": round(brier_base, 3),
+            "mejor_que_baseline": brier < brier_base, "logloss": round(agg("ll") / n, 3),
+            "draws_real": draws_real, "draws_real_pct": round(100 * draws_real / n),
+            "draws_pick": sum(1 for r in rows if r["pick"] == "D"),
+            "calib": calib, "rows": rows, "w": cfg.get("w", 0.0), "host_adv": cfg.get("host_adv", 0.0)}
+
+# ---------- comparacion OLD (Elo puro) vs NEW (Elo + ataque/defensa) ----------
+def compute_comparison(teams, results, fixtures, ghist, w_new):
+    """Para cada partido: prediccion del modelo OLD (Elo puro) vs NEW (Elo + capa ataque/defensa w_new).
+    Jugados: prediccion previa vs real, con acierto de signo de cada modelo. Por jugar: ambos pronosticos."""
+    seed = teams["elo_seed"]; grupos = teams["grupos"]
+    fx_by_pair = {frozenset((f["home"], f["away"])): f for f in fixtures}
+    def signo(p): return "L" if p["pH"] >= max(p["pD"], p["pA"]) else ("E" if p["pD"] >= p["pA"] else "V")
+    by_date = defaultdict(list)
+    for m in results:
+        by_date[m["fecha"]].append(m)
+    jug = []; oh = nh = 0; ob = nb = 0.0
+    for d in sorted(by_date):
+        prev = [r for r in results if r["fecha"] < d]
+        elo = elo_after(prev, seed); ad = compute_ad(prev, ghist, grupos)
+        for m in by_date[d]:
+            fx = fx_by_pair.get(frozenset((m["local"], m["visita"])))
+            home, away = (fx["home"], fx["away"]) if fx else (m["local"], m["visita"])
+            po = match_pred(home, away, elo); pn = match_pred(home, away, elo, ad, w_new)
+            if not po or not pn:
+                continue
+            ah, aa = (m["gl"], m["gv"]) if m["local"] == home else (m["gv"], m["gl"])
+            out = "L" if ah > aa else ("E" if ah == aa else "V")
+            so, sn = signo(po), signo(pn)
+            y = {"L": 0, "E": 0, "V": 0}; y[out] = 1
+            ob += sum((po[k] / 100 - y[s]) ** 2 for k, s in (("pH", "L"), ("pD", "E"), ("pA", "V")))
+            nb += sum((pn[k] / 100 - y[s]) ** 2 for k, s in (("pH", "L"), ("pD", "E"), ("pA", "V")))
+            oh += so == out; nh += sn == out
+            jug.append({"fecha": d, "home": home, "away": away, "real": [ah, aa],
+                        "old": {"score": po["score"], "signo": so, "hit": so == out},
+                        "new": {"score": pn["score"], "signo": sn, "hit": sn == out},
+                        "diff": po["score"] != pn["score"] or so != sn})
+    njug = len(jug) or 1
+    elo = elo_after(results, seed); ad = compute_ad(results, ghist, grupos)
+    played = {frozenset((m["local"], m["visita"])) for m in results}
+    fut = []
+    for f in sorted(fixtures, key=lambda x: x.get("date", "")):
+        if frozenset((f["home"], f["away"])) in played:
+            continue
+        po = match_pred(f["home"], f["away"], elo); pn = match_pred(f["home"], f["away"], elo, ad, w_new)
+        if not po or not pn:
+            continue
+        so, sn = signo(po), signo(pn)
+        fut.append({"fecha": f.get("date"), "home": f["home"], "away": f["away"],
+                    "old": {"score": po["score"], "signo": so, "fav": max(po["pH"], po["pD"], po["pA"])},
+                    "new": {"score": pn["score"], "signo": sn, "fav": max(pn["pH"], pn["pD"], pn["pA"])},
+                    "diff": po["score"] != pn["score"] or so != sn})
+    return {"w_new": w_new, "jugados": jug, "porjugar": fut,
+            "agg": {"n": len(jug), "old_hit": oh, "new_hit": nh,
+                    "old_brier": round(ob / njug, 3), "new_brier": round(nb / njug, 3)}}
+
+# ---------- detalle por equipo (para el popup explicativo) ----------
+def build_equipo_detalle(teams, results, ghist, elo, ad, topn=6):
+    """Por seleccion: Elo actual, ratings ataque/defensa, y sus ultimos partidos reales
+    (con rival y marcador). Alimenta el popup que explica cada pronostico."""
+    qual = set(tm for ts in teams["grupos"].values() for tm in ts)
+    allm = list((ghist or {}).get("partidos", [])) + list(results)
+    by_team = defaultdict(list)
+    for m in allm:
+        a, b, gl, gv = m.get("local"), m.get("visita"), m.get("gl"), m.get("gv")
+        if gl is None or gv is None:
+            continue
+        if a in qual: by_team[a].append((m["fecha"], b, gl, gv))
+        if b in qual: by_team[b].append((m["fecha"], a, gv, gl))
+    atk = (ad or {}).get("atk", {}); dfn = (ad or {}).get("dfn", {}); nmap = (ad or {}).get("n", {})
+    det = {}
+    for t in qual:
+        ms = sorted(by_team[t], reverse=True)[:topn]
+        ult = [{"fecha": f, "rival": opp, "gf": gf, "gc": gc,
+                "res": "G" if gf > gc else ("E" if gf == gc else "P")} for f, opp, gf, gc in ms]
+        gf_tot = sum(x[2] for x in by_team[t]); n_tot = len(by_team[t]) or 1
+        det[t] = {"elo": round(elo[t]), "atk": round(atk.get(t, 1.0), 2), "dfn": round(dfn.get(t, 1.0), 2),
+                  "n": nmap.get(t, 0), "gf_prom": round(gf_tot / n_tot, 2),
+                  "gc_prom": round(sum(x[3] for x in by_team[t]) / n_tot, 2), "ult": ult}
+    return det
 
 # ---------- orquestacion ----------
-def compute(results_subset, teams, n):
+def compute(results_subset, teams, n, cfg):
     grupos = teams["grupos"]; seed = teams["elo_seed"]; skeleton = teams["r32_skeleton"]
     elo = elo_after(results_subset, seed)
+    ad = compute_ad(results_subset, cfg.get("ghist"), grupos) if cfg.get("w", 0) > 0 else None
     base = base_table(grupos)
     played = apply_group_results(base, results_subset)
     fixtures = all_group_fixtures(grupos)
-    probs = run_mc(grupos, elo, base, played, fixtures, skeleton, n)
-    return elo, base, probs, len(played), len(fixtures)
+    rcfg = {"ad": ad, "w": cfg.get("w", 0.0), "host_adv": cfg.get("host_adv", 0.0), "hosts": cfg.get("hosts", set())}
+    probs = run_mc(grupos, elo, base, played, fixtures, skeleton, n, rcfg)
+    return elo, base, probs, len(played), len(fixtures), ad
 
 def main():
     n = 12000
@@ -482,6 +694,16 @@ def main():
     ultima = res["_meta"].get("ultima_fecha_cargada") or (
         max((m["fecha"] for m in results), default="—"))
 
+    # config del motor (knobs dormidos por defecto: w=0 y host=0 -> identico al modelo original)
+    mcfg = load("model_config.json") if os.path.exists(os.path.join(DATA, "model_config.json")) else {}
+    ghist = load("goals_history.json") if os.path.exists(os.path.join(DATA, "goals_history.json")) else {"partidos": []}
+    cfg = {"w": float(mcfg.get("ad_weight", 0.0)),
+           "host_adv": float(mcfg.get("host_advantage_elo", 0)),
+           "hosts": set(mcfg.get("hosts", [])),
+           "ghist": ghist,
+           "scoring_w": float(mcfg.get("scoring_ad_weight", 0.0)),
+           "scoring_desde": mcfg.get("scoring_modelo_desde")}
+
     if rebuild:
         # reconstruye curva: corre el motor con cortes por cada fecha
         if os.path.exists(os.path.join(DATA, "evolution.json")):
@@ -489,11 +711,11 @@ def main():
         fechas = sorted(set(m["fecha"] for m in results))
         for f in fechas:
             subset = [m for m in results if m["fecha"] <= f]
-            _, _, probs, _, _ = compute(subset, teams, max(4000, n // 3))
+            _, _, probs, _, _, _ = compute(subset, teams, max(4000, n // 3), cfg)
             upsert_evolution(f, probs)
         print(f"Evolucion reconstruida para {len(fechas)} fechas.")
 
-    elo, base, probs, n_played, n_total = compute(results, teams, n)
+    elo, base, probs, n_played, n_total, ad = compute(results, teams, n, cfg)
     ev = upsert_evolution(ultima, probs)
 
     fixtures = []
@@ -501,7 +723,7 @@ def main():
     fx_path = os.path.join(DATA, "fixtures.json")
     if os.path.exists(fx_path):
         fxjson = load("fixtures.json"); fixtures = fxjson.get("fixtures", []); fx_meta = fxjson.get("_meta", {})
-    por_fecha, fecha_activa = build_por_fecha(teams, results, elo, fixtures, ultima)
+    por_fecha, fecha_activa = build_por_fecha(teams, results, elo, fixtures, ultima, cfg)
 
     players = {}
     pl_path = os.path.join(DATA, "players.json")
@@ -516,6 +738,7 @@ def main():
             {"que": "Elo semilla — fuerza inicial de cada seleccion", "fuente": tmeta.get("elo_fuente", "")},
             {"que": "Calendario de la fase de grupos", "fuente": fx_meta.get("fuente", "")},
             {"que": "Resultados reales", "fuente": "Cada partido cargado trae su fuente citada (ver tab Resultados). Regla de oro: nunca se inventa un marcador; si no esta confirmado, queda pendiente."},
+            {"que": "Historial ataque/defensa (750 partidos 2024-2026)", "fuente": "Marcadores internacionales reales por seleccion, cada uno con fuente (Wikipedia/ESPN/confederaciones FIFA). Muestra verificada contra la fuente. Sin invencion."},
             {"que": "Arbol de eliminatorias", "fuente": "Wikipedia '2026 FIFA World Cup knockout stage' + ESPN — validado sin discrepancias."},
             {"que": "Candidatos a premios (cuotas/consenso)", "fuente": " · ".join(pmeta.get("fuentes", [])) if pmeta else ""},
         ],
@@ -547,7 +770,12 @@ def main():
             "clasificados": clasif,
         }
         save("picks.json", picks)
-    puntaje = compute_scoring(teams, results, fixtures, base, picks)
+    puntaje = compute_scoring(teams, results, fixtures, base, picks, cfg)
+    evaluacion = compute_evaluation(teams, results, fixtures, cfg)
+    comparativa = compute_comparison(teams, results, fixtures, ghist, cfg["scoring_w"]) if cfg["scoring_w"] > 0 else None
+    ad_det = ad if ad else compute_ad(results, ghist, teams["grupos"])
+    equipo_detalle = build_equipo_detalle(teams, results, ghist, elo, ad_det)
+    mu_liga = ad_det.get("mu") if ad_det else None
 
     # estado para el panel
     state = {
@@ -570,6 +798,12 @@ def main():
         "premios": premios,
         "proyeccion": proyeccion,
         "puntaje": puntaje,
+        "evaluacion": evaluacion,
+        "comparativa": comparativa,
+        "equipo_detalle": equipo_detalle,
+        "mu_liga": mu_liga,
+        "ad_ratings": ad,
+        "model_cfg": {"w": cfg["w"], "host_adv": cfg["host_adv"], "hosts": sorted(cfg["hosts"])},
         "picks": picks,
         "metodologia": metodologia,
         "resultados": sorted(results, key=lambda m: m["fecha"]),
@@ -672,11 +906,34 @@ a{color:var(--ac2);text-decoration:none}
 .champ{margin:5px 8px;padding:10px 14px;border:1px solid var(--ac);border-radius:9px;background:#11301c;text-align:center}
 .champ .lab{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.5px}
 .champ .nm{font-size:15px;font-weight:800;color:var(--ac);margin-top:2px}
+.mrow.clk{cursor:pointer}.mrow.clk:hover{background:#1b2433;border-radius:6px}
+.info{font-size:10px;color:var(--ac2);border:1px solid var(--bd);border-radius:5px;padding:0 5px;flex:none}
+.mbg{position:fixed;inset:0;background:#000b;display:none;align-items:center;justify-content:center;z-index:100;padding:14px}
+.mbg.on{display:flex}
+.modal{background:var(--card);border:1px solid var(--bd);border-radius:14px;max-width:700px;width:100%;max-height:92vh;overflow:auto;padding:20px}
+.modal .x{float:right;cursor:pointer;color:var(--mut);font-size:22px;line-height:1;padding:0 4px}
+.mh{font-size:18px;font-weight:800}
+.msub{color:var(--mut);font-size:12px;margin:2px 0 12px}
+.xgbar{display:flex;gap:8px;margin:10px 0 4px}
+.xgbox{flex:1;text-align:center;background:#0f1520;border:1px solid var(--bd);border-radius:9px;padding:9px}
+.xgbox .v{font-size:22px;font-weight:800;color:var(--ac2)}
+.xgbox .l{font-size:11px;color:var(--mut)}
+.tcards{display:flex;gap:10px;margin:12px 0}
+.tcard{flex:1;background:#0f1520;border:1px solid var(--bd);border-radius:10px;padding:12px;min-width:0}
+.tcard h4{font-size:13px;margin-bottom:7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.stat{display:flex;justify-content:space-between;font-size:12px;padding:2px 0;color:var(--mut)}
+.stat b{color:var(--tx);font-variant-numeric:tabular-nums}
+.flbl{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.4px;margin:8px 0 4px}
+.frow{display:flex;align-items:center;gap:6px;font-size:11px;padding:2px 0;color:var(--mut)}
+.fdot{font-size:10px;font-weight:700;padding:1px 5px;border-radius:4px;flex:none;width:16px;text-align:center}
+.fG{background:#11301c;color:var(--ac)}.fE{background:#21262d;color:var(--mut)}.fP{background:#3d1418;color:#f85149}
+.lect{background:#11203a;border-left:3px solid var(--ac2);padding:9px 12px;border-radius:6px;font-size:12.5px;margin-top:6px}
 </style></head><body>
 <h1>⚽ Mundial 2026 · Predictor</h1>
 <div class="sub" id="sub"></div>
 <div class="tabs" id="tabs"></div>
 <div id="panes"></div>
+<div class="mbg" id="modalbg"><div class="modal"><span class="x" id="modalx">×</span><div id="modalbody"></div></div></div>
 <div class="foot">
   Motor Elo evolutivo + Monte Carlo · <span id="simn"></span> simulaciones · semilla Elo eloratings.net.
   Predicciones probabilisticas, no certezas. Resultados reales con fuente citada en la pestana Resultados.
@@ -693,6 +950,8 @@ const PANES = [
   ['porfecha','📅 Por fecha', paneFecha],
   ['campeon','🏆 Campeon', paneCampeon],
   ['puntaje','🎯 Puntaje', paneScore],
+  ['comp','🆚 Comparativa', paneComp],
+  ['eval','📐 Evaluacion', paneEval],
   ['premios','🏅 Premios', panePremios],
   ['bracket','🔀 Avance', paneBracket],
   ['grupos','📊 Grupos', paneGrupos],
@@ -722,7 +981,8 @@ function horaCL(utc){if(!utc)return '';try{
 var _scoreMap=null;
 function scoreFor(h,a){if(!_scoreMap){_scoreMap={};((S.puntaje&&S.puntaje.por_partido)||[]).forEach(x=>{_scoreMap[x.home+'|'+x.away]=x})}return _scoreMap[h+'|'+a]}
 function matchRow(m){
-  const r=$('div',{class:'mrow'});
+  const r=$('div',{class:'mrow clk'});
+  r.onclick=()=>openModal(m);
   const h=horaCL(m.utc);
   r.append($('span',{class:'hora'}, h?(h+' hs'):''));
   r.append($('span',{class:'gc'}, m.grupo?('Gr '+m.grupo):(m.fase||'')));
@@ -735,7 +995,7 @@ function matchRow(m){
       r.append($('span',{class:'ptschip'+(sc.pts>0?' on':'')}, '+'+sc.pts+' pts'));
     }
     r.append($('span',{class:'done'},'✓'));
-    if(m.fuente)r.append($('a',{href:m.fuente,target:'_blank'},'fuente'));
+    if(m.fuente){const a=$('a',{href:m.fuente,target:'_blank'},'fuente');a.onclick=e=>e.stopPropagation();r.append(a);}
   } else if(m.pred){
     const seg=$('div',{class:'seg'});
     [['pH','#58a6ff','L'],['pD','#6e7681','E'],['pA','#bc8cff','V']].forEach(([k,c,lab])=>{
@@ -744,10 +1004,57 @@ function matchRow(m){
     r.append(seg);
     r.append($('span',{class:'pron'},'pron '+m.pred.score[0]+'–'+m.pred.score[1]));
   } else { r.append($('span',{class:'muted'},'—')) }
+  r.append($('span',{class:'info'},'ⓘ por qué'));
   return r;
 }
+function modalForm(d){
+  if(!d||!d.ult||!d.ult.length)return '<div class="frow muted">sin datos</div>';
+  return d.ult.map(u=>`<div class="frow"><span class="fdot f${u.res}">${u.res}</span> ${u.gf}–${u.gc} vs ${u.rival} <span class="muted">(${u.fecha.slice(5)})</span></div>`).join('');
+}
+function teamCard(name,d){
+  if(!d)return `<div class="tcard"><h4>${name}</h4><div class="muted">sin datos</div></div>`;
+  const ap=Math.round((d.atk-1)*100), dp=Math.round((d.dfn-1)*100);
+  return `<div class="tcard"><h4>${name}</h4>
+    <div class="stat">Elo (fuerza) <b>${d.elo}</b></div>
+    <div class="stat">Ataque <b>${d.atk}</b><span class="muted">${ap>=0?'+':''}${ap}% vs prom</span></div>
+    <div class="stat">Defensa <b>${d.dfn}</b><span class="muted">recibe ${dp>=0?'+':''}${dp}%</span></div>
+    <div class="stat">Reales /pj <b>${d.gf_prom}</b> a favor · <b>${d.gc_prom}</b> contra<span class="muted">${d.n} pj</span></div>
+    <div class="flbl">Últimos partidos</div>${modalForm(d)}</div>`;
+}
+function lectura(home,away,dh,da,pred){
+  if(!dh||!da)return '';
+  let ps=[];
+  if(da.dfn<=0.85)ps.push(`la defensa sólida de ${away} (recibe poco) frena el ataque de ${home}`);
+  if(dh.atk>=1.2)ps.push(`${home} viene marcando (ataque ${dh.atk})`);
+  if(dh.dfn<=0.85)ps.push(`${home} defiende bien`);
+  if(da.atk>=1.2)ps.push(`${away} también genera (ataque ${da.atk})`);
+  if(dh.dfn>=1.2)ps.push(`${home} viene recibiendo goles`);
+  if(!ps.length)ps.push('equipos parejos en ataque y defensa para este cruce');
+  const xg=(pred&&pred.xgH!=null)?`xG ${home} ${pred.xgH} · ${away} ${pred.xgA}. `:'';
+  return `<div class="lect">📊 ${xg}El marcador es el <b>más probable</b>, no lo esperado: ${ps.join('; ')}.</div>`;
+}
+function openModal(m){
+  const D=S.equipo_detalle||{}, dh=D[m.home], da=D[m.away];
+  let pred=null, realTxt='', probTxt='', scoreTxt='';
+  if(m.jugado){const sc=scoreFor(m.home,m.away);pred=sc?{score:sc.pred,xgH:null,xgA:null}:null;realTxt=` · Resultado real: <b>${m.gl}–${m.gv}</b>`;}
+  else pred=m.pred;
+  if(pred)scoreTxt=`Pronóstico: <b>${pred.score[0]}–${pred.score[1]}</b>`;
+  if(!m.jugado&&m.pred)probTxt=` · L ${Math.round(m.pred.pH)}% / E ${Math.round(m.pred.pD)}% / V ${Math.round(m.pred.pA)}%`;
+  const xgHtml=(pred&&pred.xgH!=null)?`<div class="xgbar"><div class="xgbox"><div class="v">${pred.xgH}</div><div class="l">xG ${m.home}</div></div><div class="xgbox"><div class="v">${pred.xgA}</div><div class="l">xG ${m.away}</div></div></div>`:'';
+  document.getElementById('modalbody').innerHTML=
+    `<div class="mh">${m.home} vs ${m.away}</div>
+     <div class="msub">${m.grupo?('Grupo '+m.grupo+' · '):''}${scoreTxt}${probTxt}${realTxt}</div>
+     ${xgHtml}
+     <div class="tcards">${teamCard(m.home,dh)}${teamCard(m.away,da)}</div>
+     ${lectura(m.home,m.away,dh,da,pred)}
+     <div class="muted" style="font-size:11px;margin-top:10px">Ataque/defensa centrados en 1.0 (promedio mundial), ajustados por la fuerza de los rivales enfrentados y encogidos por tamaño de muestra. Elo de eloratings.net evolucionado con cada resultado.</div>`;
+  document.getElementById('modalbg').classList.add('on');
+}
+document.getElementById('modalx').onclick=()=>document.getElementById('modalbg').classList.remove('on');
+document.getElementById('modalbg').onclick=e=>{if(e.target.id==='modalbg')document.getElementById('modalbg').classList.remove('on')};
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('modalbg').classList.remove('on')});
 function paneFecha(p){
-  const intro=$('div',{class:'muted',html:'<small>Horarios en <b>hora de Chile</b> · dia en curso abierto por defecto · toca cualquier dia para expandir. Jugados con resultado real (fuente); por jugar con prediccion del modelo: <b style="color:#58a6ff">L</b> gana local · <b style="color:#8b949e">E</b> empate · <b style="color:#bc8cff">V</b> gana visita · “pron” = marcador mas probable.</small>'});
+  const intro=$('div',{class:'muted',html:'<small>Horarios en <b>hora de Chile</b> · dia en curso abierto por defecto · toca cualquier dia para expandir. <b>Toca un partido (ⓘ por qué)</b> para ver el desglose del pronostico: Elo, ataque/defensa y ultimos partidos de ambos. Por jugar: <b style="color:#58a6ff">L</b> local · <b style="color:#8b949e">E</b> empate · <b style="color:#bc8cff">V</b> visita · “pron” = marcador mas probable.</small>'});
   intro.style.marginBottom='12px';p.append(intro);
   S.por_fecha.forEach(day=>{
     const open=day.fecha===S.fecha_activa;
@@ -941,6 +1248,7 @@ function paneScore(p){
   c0.append(row);
   c0.append($('div',{class:'warn',html:'<b>Sin trampa:</b> el pronóstico de cada partido se reconstruye con el estado del modelo PREVIO al partido (solo resultados de fechas anteriores) y el marcador real no influye en la predicción — se usa únicamente para puntuar.'}));
   c0.append($('div',{class:'muted',html:'<small>Picks de torneo congelados al '+(Q.corte||'—')+'. Acumulativo por partido: ganador 3 · goles local 2 · goles visita 2 · marcador exacto 4 (máx 11).</small>'}));
+  if(Q.modelo_nota)c0.append($('div',{class:'muted',html:'<small>🔧 '+Q.modelo_nota+'</small>'}));
   p.append(c0);
   // Torneo
   const c1=$('div',{class:'card'});
@@ -976,6 +1284,89 @@ function paneScore(p){
     mt.append(tr)});
   c2.append(mt);p.append(c2);
 }
+function paneComp(p){
+  const C=S.comparativa;
+  if(!C){p.append($('div',{class:'muted'},'Comparativa no disponible (scoring_ad_weight=0).'));return}
+  const c0=$('div',{class:'card'});
+  c0.append($('div',{class:'gtitle'},'🆚 Modelo actual (Elo puro) vs Mejorado (ataque/defensa, w='+C.w_new+')'));
+  c0.append($('div',{class:'muted',html:'<small><b>OLD</b> = modelo en producción (campeón/grupos/por fecha siguen con este). <b>NEW</b> = añade cuánto marca/recibe cada selección. El signo (L/E/V) es el 1X2 más probable; puede diferir del marcador modal. Las filas con <b style="color:#d29922">Δ</b> son donde difieren.</small>'}));
+  const A=C.agg;
+  const row=$('div',{});row.style.cssText='display:flex;gap:28px;flex-wrap:wrap;align-items:baseline;margin:8px 0';
+  row.append(bigStat(A.old_hit+'/'+A.n,'acierto signo OLD','var(--mut)'));
+  row.append(bigStat(A.new_hit+'/'+A.n,'acierto signo NEW','var(--ac2)'));
+  row.append(bigStat(A.old_brier,'Brier OLD','var(--mut)'));
+  row.append(bigStat(A.new_brier,'Brier NEW', A.new_brier<A.old_brier?'var(--ac)':'var(--warn)'));
+  c0.append(row);
+  p.append(c0);
+  // Jugados
+  const c1=$('div',{class:'card'});
+  c1.append($('div',{class:'gtitle'},'Jugados — predicción previa vs real'));
+  const t1=$('table');t1.append($('tr',{},$('th',{},'Fecha'),$('th',{},'Partido'),$('th',{class:'n'},'Real'),
+    $('th',{class:'n'},'OLD'),$('th',{},''),$('th',{class:'n'},'NEW'),$('th',{},''),$('th',{},'Δ')));
+  C.jugados.forEach(r=>{
+    const tr=$('tr',{});
+    const ok=v=>v?'<span class="q">✓</span>':'<span class="muted">·</span>';
+    tr.append($('td',{class:'muted'},r.fecha.slice(5)),$('td',{},r.home+'–'+r.away),
+      $('td',{class:'n'},r.real[0]+'–'+r.real[1]),
+      $('td',{class:'n muted'},r.old.score[0]+'–'+r.old.score[1]+' '+r.old.signo),$('td',{html:ok(r.old.hit)}),
+      $('td',{class:'n'},r.new.score[0]+'–'+r.new.score[1]+' '+r.new.signo),$('td',{html:ok(r.new.hit)}),
+      $('td',{html:r.diff?'<b style="color:#d29922">Δ</b>':''}));
+    t1.append(tr)});
+  c1.append(t1);p.append(c1);
+  // Por jugar
+  const c2=$('div',{class:'card'});
+  c2.append($('div',{class:'gtitle'},'Por jugar — ambos pronósticos'));
+  const t2=$('table');t2.append($('tr',{},$('th',{},'Fecha'),$('th',{},'Partido'),
+    $('th',{class:'n'},'OLD (fav)'),$('th',{class:'n'},'NEW (fav)'),$('th',{},'Δ')));
+  C.porjugar.forEach(r=>{
+    const tr=$('tr',{});
+    tr.append($('td',{class:'muted'},(r.fecha||'').slice(5)),$('td',{},r.home+'–'+r.away),
+      $('td',{class:'n muted'},r.old.score[0]+'–'+r.old.score[1]+' '+r.old.signo+' '+r.old.fav+'%'),
+      $('td',{class:'n'},r.new.score[0]+'–'+r.new.score[1]+' '+r.new.signo+' '+r.new.fav+'%'),
+      $('td',{html:r.diff?'<b style="color:#d29922">Δ</b>':''}));
+    t2.append(tr)});
+  c2.append(t2);p.append(c2);
+}
+function paneEval(p){
+  const E=S.evaluacion;
+  if(!E||!E.n){p.append($('div',{class:'muted'},'Aun no hay partidos jugados para evaluar.'));return}
+  const c0=$('div',{class:'card'});
+  c0.append($('div',{class:'gtitle'},'📐 Auto-evaluacion del modelo (backtest honesto)'));
+  c0.append($('div',{class:'warn',html:'<b>Sin trampa:</b> cada partido se predice con el estado del modelo PREVIO a esa fecha (solo resultados anteriores). Mide que tan bien calibradas estan las probabilidades — distinto del Puntaje, que cuenta aciertos tipo polla.'}));
+  const row=$('div',{});row.style.cssText='display:flex;gap:28px;flex-wrap:wrap;align-items:baseline;margin:8px 0';
+  row.append(bigStat(E.hit_pct+'%','acierto 1X2 ('+E.hit+'/'+E.n+')','var(--ac2)'));
+  row.append(bigStat(E.exact_pct+'%','marcador exacto','var(--mut)'));
+  row.append(bigStat(E.brier,'Brier (baseline '+E.brier_base+')', E.mejor_que_baseline?'var(--ac)':'var(--warn)'));
+  row.append(bigStat(E.logloss,'log-loss','var(--mut)'));
+  c0.append(row);
+  c0.append($('div',{class:'muted',html:'<small>'+(E.mejor_que_baseline
+    ? '✅ El modelo SUPERA al baseline (prior fijo 40/27/33, sin informacion). Menor Brier = mejor.'
+    : '⚠️ El modelo NO supera al baseline (prior fijo 40/27/33). Brier mayor = peor: senal de sobre-confianza o de una muestra atipica (pocos partidos / muchos empates).')+'</small>'}));
+  c0.append($('div',{class:'muted',html:'<small>Empates reales: <b>'+E.draws_real+'/'+E.n+'</b> ('+E.draws_real_pct+'%) · empates como pick modal 1X2: <b>'+E.draws_pick+'</b>. Capa ataque/defensa <b>w='+E.w+'</b> · localia anfitriones <b>+'+E.host_adv+'</b> Elo (knobs en model_config.json).</small>'}));
+  p.append(c0);
+  const cc=$('div',{class:'card'});
+  cc.append($('div',{class:'gtitle'},'🎚️ Calibracion — confianza declarada vs aciertos observados'));
+  cc.append($('div',{class:'muted',html:'<small>De la clase mas probable de cada partido. Idealmente confianza ≈ observado. Muestra chica: leer con cautela.</small>'}));
+  const tb=$('table');tb.append($('tr',{},$('th',{},'Rango de confianza'),$('th',{class:'n'},'Partidos'),$('th',{class:'n'},'Confianza media'),$('th',{class:'n'},'Acierto observado')));
+  E.calib.forEach(b=>{if(!b.n)return;
+    tb.append($('tr',{},$('td',{},b.rango),$('td',{class:'n'},String(b.n)),
+      $('td',{class:'n muted'},b.conf+'%'),$('td',{class:'n q'},b.obs+'%')))});
+  cc.append(tb);p.append(cc);
+  const c2=$('div',{class:'card'});
+  c2.append($('div',{class:'gtitle'},'Detalle por partido'));
+  const mt=$('table');mt.append($('tr',{},$('th',{},'Fecha'),$('th',{},'Partido'),$('th',{class:'n'},'Real'),
+    $('th',{class:'n'},'Pred'),$('th',{},'1X2 (L/E/V)'),$('th',{},'Signo'),$('th',{class:'n'},'Brier')));
+  E.rows.forEach(r=>{
+    const tr=$('tr',{});
+    tr.append($('td',{class:'muted'},r.fecha.slice(5)),$('td',{},r.home+' vs '+r.away),
+      $('td',{class:'n'},r.real[0]+'–'+r.real[1]),
+      $('td',{class:'n muted'},r.pred_score[0]+'–'+r.pred_score[1]),
+      $('td',{class:'muted'},Math.round(r.pH*100)+'/'+Math.round(r.pD*100)+'/'+Math.round(r.pA*100)),
+      $('td',{html: r.hit?'<span class="q">✓</span>':'<span class="muted">·</span>'}),
+      $('td',{class:'n muted'},r.brier.toFixed(2)));
+    mt.append(tr)});
+  c2.append(mt);p.append(c2);
+}
 function paneMetodo(p){
   const M=S.metodologia||{fuentes:[]};
   // Que es
@@ -986,9 +1377,10 @@ function paneMetodo(p){
   // En que se basa el modelo
   const cm=$('div',{class:'card'});
   cm.append($('div',{class:'gtitle'},'🧠 En que se basa el modelo'));
-  cm.append($('div',{class:'muted',html:'<small>No es un modelo de marca unica: combina tres metodos estandar y bien probados de la industria de prediccion deportiva (la misma familia que usan FiveThirtyEight y Opta). Etiqueta corta: <b>modelo Elo + Poisson con simulacion de Monte Carlo</b>.</small>'}));
+  cm.append($('div',{class:'muted',html:'<small>No es un modelo de marca unica: combina cuatro metodos estandar y bien probados de la industria de prediccion deportiva (la misma familia que usan FiveThirtyEight y Opta). Etiqueta corta: <b>modelo Elo + ataque/defensa + Poisson con simulacion de Monte Carlo</b>.</small>'}));
   [['Sistema Elo — fuerza de cada seleccion','Creado por Arpad Elo (originalmente para el ajedrez). Uso la variante World Football Elo Ratings (eloratings.net): factor K=60 para mundiales y ajuste por diferencia de goles. El Elo evoluciona con cada resultado real.'],
-   ['Modelo de Poisson — marcadores','Modela los goles de cada equipo con una distribucion de Poisson, derivando los goles esperados de la diferencia de Elo. Linaje academico: Maher (1982) y el modelo Dixon-Coles (1997), el enfoque clasico para pronosticar resultados de futbol.'],
+   ['Ratings ataque/defensa — cuanto marca y recibe cada seleccion','Cada equipo tiene un rating de ataque (goles que mete) y de defensa (goles que recibe), <b>ajustados por la fuerza del rival</b> y centrados en 1.0 (promedio mundial). Se estiman desde 750 partidos internacionales reales 2024-2026 (con fuente) y evolucionan con cada resultado. Es la pieza que distingue, p.ej., una defensa solida (Senegal) de una floja a igual Elo. Mismo linaje Maher/Dixon-Coles.'],
+   ['Modelo de Poisson — marcadores','Modela los goles de cada equipo con una distribucion de Poisson. Los goles esperados salen de la diferencia de Elo, modulados por los ratings ataque/defensa. De ahi sale P(gana local / empate / gana visita) y el marcador mas probable.'],
    ['Simulacion de Monte Carlo — proyeccion del torneo','Simular el torneo completo miles de veces (12.000) y contar frecuencias para estimar probabilidades. Se llama asi por el casino de Monaco; es el estandar cuando hay mucha incertidumbre.']].forEach(([t,d])=>{
     cm.append($('div',{class:'rname'},t));
     cm.append($('div',{class:'muted',html:'<small>'+d+'</small>'}));
@@ -1000,7 +1392,7 @@ function paneMetodo(p){
   c1.append($('div',{class:'gtitle'},'⚙️ El algoritmo en 5 pasos'));
   const steps=[
     ['1. Fuerza de cada seleccion (Elo)','Cada equipo arranca con un rating Elo (mide su fuerza). Tras cada partido real, el Elo sube o baja segun el resultado y por cuanto (un 3-0 pesa mas que un 1-0). Asi la "forma" del torneo entra al modelo: quien rinde mas de lo esperado, sube.'],
-    ['2. Modelo de un partido (Poisson)','Para cualquier cruce, la diferencia de Elo define los goles esperados de cada lado; con eso se sortean marcadores con una distribucion de Poisson. De ahi sale P(gana local / empate / gana visita) y el marcador mas probable.'],
+    ['2. Modelo de un partido (Elo + ataque/defensa + Poisson)','Para cualquier cruce, la diferencia de Elo define una base de goles esperados; esa base se ajusta por cuanto marca el equipo y cuanto recibe el rival (ratings ataque/defensa). Con los goles esperados resultantes se sortean marcadores con una Poisson. De ahi sale P(gana local / empate / gana visita) y el marcador mas probable. Toca cualquier partido en "Por fecha" para ver este desglose.'],
     ['3. Simulacion del torneo (Monte Carlo)','Se simula el torneo completo '+(M.sims||0).toLocaleString()+' veces: los partidos jugados se respetan tal cual, y los que faltan se sortean con el modelo. Contando cuantas veces cada equipo gana su grupo, avanza o sale campeon, salen las probabilidades.'],
     ['4. Cuadro de eliminatorias (arbol oficial)','Las llaves siguen el arbol OFICIAL de FIFA (validado): los cruces de octavos a la final son los reales, y dos equipos del mismo grupo no pueden cruzarse antes de la final.'],
     ['5. Premios individuales','Goleador, arquero y joven se estiman combinando el consenso de las casas de apuestas (quien es favorito) con el recorrido simulado de su equipo (mas partidos y mas profundo = mas chance). Es la capa mas heuristica.'],
@@ -1014,11 +1406,16 @@ function paneMetodo(p){
   const c2=$('div',{class:'card'});
   c2.append($('div',{class:'gtitle'},'🔢 Datos y parametros'));
   const tb=$('table');
+  const cfg=S.model_cfg||{w:0,host_adv:0};
+  const adOn=cfg.w>0;
   [['Equipos / grupos',(M.equipos||48)+' equipos · '+(M.grupos||12)+' grupos de 4'],
    ['Simulaciones Monte Carlo',(M.sims||0).toLocaleString()+' por corrida'],
-   ['Resultados reales cargados',(M.n_resultados||0)+' partidos (con fuente)'],
+   ['Resultados reales cargados',(M.n_resultados||0)+' partidos del torneo (con fuente)'],
    ['Factor K del Elo','60 (estandar para mundiales)'],
-   ['Ventaja de localia','Ninguna (sedes tratadas como neutrales)'],
+   ['Capa ataque/defensa',adOn?('ACTIVA (peso '+cfg.w+') — analista principal de las fechas'):'apagada (Elo puro)'],
+   ['Historial para ataque/defensa','750 partidos internacionales 2024-2026 (con fuente, muestra verificada)'],
+   ['Modelo del juego de puntos',(S.puntaje&&S.puntaje.scoring_desde)?('Elo puro hasta '+S.puntaje.scoring_desde+', mejorado desde esa fecha'):'Elo puro'],
+   ['Ventaja de localia',cfg.host_adv>0?('+'+cfg.host_adv+' Elo a anfitriones'):'Ninguna (sedes neutrales)'],
    ['Desempate de grupos','Puntos → dif. de gol → goles a favor (simplificado)']].forEach(([k,v])=>{
     tb.append($('tr',{},$('td',{class:'muted'},k),$('td',{html:'<b>'+v+'</b>'})));
   });
@@ -1037,7 +1434,9 @@ function paneMetodo(p){
   const c4=$('div',{class:'card'});
   c4.append($('div',{class:'gtitle'},'⚠️ Limitaciones (honestas)'));
   const lis=['Es un modelo probabilistico: dice que es MAS probable, no que va a pasar. Un torneo tiene mucha varianza.',
-    'El Elo concentra la probabilidad en los favoritos; puede sobreestimar al mejor rankeado.',
+    'El marcador que se muestra es el MAS PROBABLE, no lo esperado: un "1-0" puede convivir con ~50% de chance de que el favorito haga 2+. La lectura honesta son las probabilidades, no el marcador puntual.',
+    'Los ratings de ataque/defensa se anclan sobre todo con partidos dentro de cada confederacion; el nivel relativo entre confederaciones (ej. Africa vs Europa) esta debilmente calibrado y se corrige a medida que el Mundial cruza selecciones de distintas confederaciones.',
+    'La capa ataque/defensa mejora el marcador pero, sobre los 16 partidos jugados, todavia no supera de forma concluyente al baseline (ver pestana Evaluacion). Es la mejor estimacion disponible, no una certeza.',
     'Los premios individuales son una heuristica (consenso de mercado × recorrido del equipo), no una prediccion fina por jugador.',
     'La asignacion exacta de los 8 mejores terceros a cada llave se resuelve recien al cerrar la fase de grupos; antes es una aproximacion.',
     'Sin ventaja de localia ni lesiones/suspensiones individuales en el modelo.'];
