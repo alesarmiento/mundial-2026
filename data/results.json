@@ -2,7 +2,7 @@
   "_meta": {
     "descripcion": "Ledger de resultados REALES. Cada partido entra con su fuente. NUNCA se inventa un marcador. Si no se puede verificar, no se agrega.",
     "fase_valores": "grupos | dieciseisavos | octavos | cuartos | semis | tercer_puesto | final",
-    "ultima_fecha_cargada": "2026-06-16"
+    "ultima_fecha_cargada": "2026-06-17"
   },
   "partidos": [
     {"fecha": "2026-06-11", "fase": "grupos", "grupo": "A", "local": "Mexico", "visita": "South Africa", "gl": 2, "gv": 0, "fuente": "https://www.nbcsports.com/soccer/news/2026-world-cup-group-stage-table-full-standings-for-all-12-groups"},
@@ -24,6 +24,7 @@
     {"fecha": "2026-06-16", "fase": "grupos", "grupo": "I", "local": "France", "visita": "Senegal", "gl": 3, "gv": 1, "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021490"},
     {"fecha": "2026-06-16", "fase": "grupos", "grupo": "I", "local": "Iraq", "visita": "Norway", "gl": 1, "gv": 4, "fuente": "https://www.espn.com/soccer/match/_/gameId/760430/norway-iraq"},
     {"fecha": "2026-06-16", "fase": "grupos", "grupo": "J", "local": "Argentina", "visita": "Algeria", "gl": 3, "gv": 0, "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021496"},
-    {"fecha": "2026-06-16", "fase": "grupos", "grupo": "J", "local": "Austria", "visita": "Jordan", "gl": 3, "gv": 1, "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021498"}
+    {"fecha": "2026-06-16", "fase": "grupos", "grupo": "J", "local": "Austria", "visita": "Jordan", "gl": 3, "gv": 1, "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021498"},
+    {"fecha": "2026-06-17", "fase": "grupos", "grupo": "K", "local": "Portugal", "visita": "DR Congo", "gl": 1, "gv": 1, "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021502"}
   ]
 }
