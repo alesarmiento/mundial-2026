@@ -704,6 +704,34 @@ def compute_comparison(teams, results, fixtures, ghist, w_new):
             "agg": {"n": len(jug), "old_hit": oh, "new_hit": nh,
                     "old_brier": round(ob / njug, 3), "new_brier": round(nb / njug, 3)}}
 
+# ---------- comparacion sistema vs mercado/mundo online ----------
+def build_market_view(fixtures, results, elo, ad, w, market):
+    """Por cada partido del dia con dato de mercado: prediccion del SISTEMA (1X2 + marcador + over 2.5)
+    vs el CONSENSO online. Sirve de termometro de calibracion. El % es la chance de acertar."""
+    played = {frozenset((m["local"], m["visita"])) for m in results}
+    mkt = {frozenset((x["home"], x["away"])): x for x in (market or {}).get("partidos", [])}
+    rows = []
+    for f in sorted(fixtures, key=lambda x: x.get("date", "")):
+        key = frozenset((f["home"], f["away"]))
+        if key in played or key not in mkt:
+            continue
+        p = match_pred(f["home"], f["away"], elo, ad, w)
+        if not p:
+            continue
+        la, lb = p["xgH"], p["xgA"]
+        pa = [math.exp(-la) * la ** i / math.factorial(i) for i in range(9)]
+        pb = [math.exp(-lb) * lb ** j / math.factorial(j) for j in range(9)]
+        over = sum(pa[i] * pb[j] for i in range(9) for j in range(9) if i + j >= 3)
+        sc = p["score_med"]; m = mkt[key]
+        rows.append({
+            "fecha": f.get("date"), "home": f["home"], "away": f["away"],
+            "sys": {"pH": p["pH"], "pD": p["pD"], "pA": p["pA"],
+                    "score": f"{sc[0]}-{sc[1]}", "over25": round(100 * over)},
+            "mkt": {"pH": m.get("pH"), "pD": m.get("pD"), "pA": m.get("pA"),
+                    "score": m.get("score"), "over25": m.get("over25"), "fuente": m.get("fuente", "")},
+        })
+    return rows
+
 # ---------- detalle por equipo (para el popup explicativo) ----------
 def build_equipo_detalle(teams, results, ghist, elo, ad, topn=12):
     """Por seleccion: Elo actual, ratings ataque/defensa, y sus ultimos partidos reales
@@ -789,6 +817,7 @@ def main():
     if os.path.exists(pl_path):
         players = load("players.json")
     scorers = load("scorers.json").get("jugadores", []) if os.path.exists(os.path.join(DATA, "scorers.json")) else []
+    market = load("market.json") if os.path.exists(os.path.join(DATA, "market.json")) else {"partidos": []}
 
     tmeta = teams.get("_meta", {}); pmeta = players.get("_meta", {}) if players else {}
     metodologia = {
@@ -859,6 +888,7 @@ def main():
     comparativa = compute_comparison(teams, results, fixtures, ghist, cfg["scoring_w"]) if cfg["scoring_w"] > 0 else None
     ad_det = ad if ad else compute_ad(results, ghist, teams["grupos"])
     equipo_detalle = build_equipo_detalle(teams, results, ghist, elo, ad_det)
+    mercado = build_market_view(fixtures, results, elo, ad_det, cfg["scoring_w"], market)
     mu_liga = ad_det.get("mu") if ad_det else None
 
     # estado para el panel
@@ -884,6 +914,7 @@ def main():
         "puntaje": puntaje,
         "evaluacion": evaluacion,
         "comparativa": comparativa,
+        "mercado": mercado,
         "equipo_detalle": equipo_detalle,
         "mu_liga": mu_liga,
         "ad_ratings": ad,
@@ -1035,6 +1066,7 @@ const PANES = [
   ['campeon','🏆 Campeon', paneCampeon],
   ['puntaje','🎯 Puntaje', paneScore],
   ['comp','🆚 Comparativa', paneComp],
+  ['mercado','🌐 vs Mercado', paneMercado],
   ['eval','📐 Evaluacion', paneEval],
   ['premios','🏅 Premios', panePremios],
   ['bracket','🔀 Avance', paneBracket],
@@ -1376,6 +1408,38 @@ function paneScore(p){
       $('td',{class:'n'+(m.pts>0?' q':' muted')},String(m.pts)));
     mt.append(tr)});
   c2.append(mt);p.append(c2);
+}
+function paneMercado(p){
+  const M=S.mercado||[];
+  const c0=$('div',{class:'card'});
+  c0.append($('div',{class:'gtitle'},'🌐 Sistema vs Mercado online — partidos del día'));
+  c0.append($('div',{class:'muted',html:'<small>Compara el pronóstico del <b>sistema</b> contra el <b>consenso del mundo online</b> (casas de apuestas + sitios de pronóstico). El % es la probabilidad de que ocurra (= chance de acertar). Es un termómetro de qué tan calibrado está el modelo contra el mercado real.</small>'}));
+  p.append(c0);
+  if(!M.length){p.append($('div',{class:'muted'},'Sin datos de mercado cargados para los próximos partidos (la rutina los agrega cuando hay cuotas del día).'));return}
+  M.forEach(m=>{
+    const c=$('div',{class:'card'});
+    c.append($('div',{class:'gtitle'},m.home+' vs '+m.away+'  '+(m.fecha?('<span class="chip">'+m.fecha+'</span>'):'')));
+    const tb=$('table');
+    tb.append($('tr',{},$('th',{},''),$('th',{class:'n'},'Gana '+m.home),$('th',{class:'n'},'Empate'),
+      $('th',{class:'n'},'Gana '+m.away),$('th',{class:'n'},'Marcador'),$('th',{class:'n'},'Over 2.5')));
+    const fmt=v=>v!=null?(v+'%'):'—';
+    const rowFor=(lbl,d,cls)=>$('tr',{},$('td',{html:'<b>'+lbl+'</b>'}),
+      $('td',{class:'n '+cls},fmt(d.pH)),$('td',{class:'n muted'},fmt(d.pD)),
+      $('td',{class:'n '+cls},fmt(d.pA)),$('td',{class:'n'},d.score||'—'),$('td',{class:'n muted'},fmt(d.over25)));
+    tb.append(rowFor('🤖 Sistema',m.sys,'q'));
+    tb.append(rowFor('🌐 Mercado',m.mkt,''));
+    c.append(tb);
+    // lectura de divergencia
+    const dH=(m.sys.pH!=null&&m.mkt.pH!=null)?Math.round(m.sys.pH-m.mkt.pH):null;
+    if(dH!=null){
+      const txt = Math.abs(dH)<=5
+        ? 'Sistema y mercado <b>coinciden</b> en el favorito ('+m.home+').'
+        : (dH>0 ? 'El sistema es <b>más confiado</b> en '+m.home+' (+'+dH+' pts vs el mercado).'
+                : 'El sistema es <b>más cauto</b> con '+m.home+' ('+dH+' pts vs el mercado).');
+      c.append($('div',{class:'muted',html:'<small>📊 '+txt+(m.mkt.fuente?(' · Fuente mercado: '+m.mkt.fuente):'')+'</small>'}));
+    }
+    p.append(c);
+  });
 }
 function paneComp(p){
   const C=S.comparativa;
