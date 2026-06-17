@@ -1,13 +1,22 @@
 {
   "_meta": {
-    "descripcion": "Consenso del mercado/mundo online por partido del dia (1X2 implicado, marcador mas probable, over 2.5). Para comparar contra el sistema y medir calibracion. La rutina lo actualiza con las cuotas del dia.",
-    "regla_de_oro": "Solo con fuente real (ESPN odds, oddschecker, Dimers, bet365, Kalshi). Las cuotas se convierten a probabilidad quitando el margen y se normalizan a 100. Nunca inventar.",
+    "descripcion": "Consenso del mercado/mundo online por partido del dia (1X2 implicado, marcador mas probable, over 2.5). Para comparar contra el sistema y medir calibracion. La rutina lo actualiza con las cuotas del dia para TODOS los partidos.",
+    "regla_de_oro": "Solo con fuente real (ESPN odds, oddschecker, Dimers, bet365, Kalshi, Forebet). Las cuotas se convierten a probabilidad quitando el margen y se normalizan a 100. Nunca inventar.",
     "campos": "pH/pD/pA = % implicado de gana local / empate / gana visita (orientado al home del fixture). score = marcador mas probable del mercado. over25 = % de over 2.5 goles.",
     "actualizado": "2026-06-17"
   },
   "partidos": [
     {"home": "Portugal", "away": "DR Congo", "fecha": "2026-06-17",
      "pH": 75, "pD": 17, "pA": 8, "score": "2-0", "over25": 52,
-     "fuente": "Consenso bet365 / Kalshi / Dimers / Covers (17-jun-2026)"}
+     "fuente": "Consenso bet365 / Kalshi / Dimers / Covers (17-jun-2026)"},
+    {"home": "England", "away": "Croatia", "fecha": "2026-06-17",
+     "pH": 58, "pD": 24, "pA": 18, "score": "2-1", "over25": 46,
+     "fuente": "bet365 / Dimers / Squawka (17-jun-2026)"},
+    {"home": "Uzbekistan", "away": "Colombia", "fecha": "2026-06-17",
+     "pH": 12, "pD": 21, "pA": 67, "score": "0-2", "over25": 48,
+     "fuente": "bet365 / CBS Sports / oddschecker (17-jun-2026)"},
+    {"home": "Ghana", "away": "Panama", "fecha": "2026-06-17",
+     "pH": 44, "pD": 27, "pA": 29, "score": "1-0", "over25": 45,
+     "fuente": "bet365 / Forebet / Sportytrader (17-jun-2026)"}
   ]
 }
