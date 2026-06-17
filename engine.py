@@ -175,7 +175,7 @@ def expected_matches(probs):
         em[t] = 3.0 + ko + bronce
     return em
 
-def estimate_awards(players, probs, em, elo, defstats=None):
+def estimate_awards(players, probs, em, elo, defstats=None, scorers=None):
     if not players:
         return {}
     defstats = defstats or {}
@@ -184,9 +184,35 @@ def estimate_awards(players, probs, em, elo, defstats=None):
         out = [{"jugador": c["jugador"], "equipo": c["equipo"], "odds": c.get("odds", ""),
                 "prob": round(100 * w / s, 1)} for c, w in rows]
         return sorted(out, key=lambda x: x["prob"], reverse=True)
-    # Goleador: rating x partidos esperados (mas juega, mas chances). Ojo: sin dato de quien
-    # marca cada gol (no esta en el ledger), no se puede usar goles reales por jugador todavia.
-    gole = [(c, c["rating"] * em[c["equipo"]]) for c in players.get("goleador", []) if c["equipo"] in em]
+    # Goleador (Bota de Oro): goles REALES acumulados (tabla de goleadores) + proyeccion de lo que
+    # le queda por marcar (rating x partidos esperados restantes). Mezcla "quien va metiendo" con
+    # "quien tiene mas recorrido por delante". Incluye goleadores que no estaban en el consenso.
+    cands = {}
+    for c in players.get("goleador", []):
+        if c["equipo"] not in em:
+            continue
+        cands[c["jugador"]] = {"jugador": c["jugador"], "equipo": c["equipo"],
+                               "odds": c.get("odds", ""), "rating": c["rating"], "goles": 0}
+    for s in (scorers or []):
+        t = s.get("equipo")
+        if t not in em:
+            continue
+        if s["jugador"] in cands:
+            cands[s["jugador"]]["goles"] = s.get("goles", 0)
+        else:  # goleador fuera del consenso: aparece por sus goles reales, con rating modesto
+            cands[s["jugador"]] = {"jugador": s["jugador"], "equipo": t, "odds": "",
+                                   "rating": 6.5, "goles": s.get("goles", 0)}
+    gole = []
+    for c in cands.values():
+        pj = defstats.get(c["equipo"], {}).get("pj", 0)
+        rem = max(0.5, em[c["equipo"]] - pj)        # partidos esperados que le quedan
+        proj = (c["rating"] / 10.0) * rem * 0.75    # goles proyectados en lo que resta
+        gole.append((c, c["goles"] + proj))         # goles totales estimados al final
+    def fin_gol(rows):
+        s = sum(w for _, w in rows) or 1.0
+        out = [{"jugador": c["jugador"], "equipo": c["equipo"], "odds": c.get("odds", ""),
+                "goles": c["goles"], "prob": round(100 * w / s, 1)} for c, w in rows]
+        return sorted(out, key=lambda x: (x["prob"], x["goles"]), reverse=True)
     # Arquero (Guante de Oro): rating x recorrido profundo x rendimiento defensivo REAL.
     # El rendimiento mezcla la solidez del Elo con los datos acumulados: arcos en cero (suben) y
     # goles recibidos por partido (bajan), ponderados por cuantos partidos lleva jugados el equipo.
@@ -204,7 +230,7 @@ def estimate_awards(players, probs, em, elo, defstats=None):
         arq.append((c, c["rating"] * deep * defn))
     # Joven: rating x exposicion (partidos esperados)
     jov = [(c, c["rating"] * em[c["equipo"]]) for c in players.get("joven", []) if c["equipo"] in em]
-    return {"goleador": fin(gole), "arquero": fin(arq), "joven": fin(jov)}
+    return {"goleador": fin_gol(gole), "arquero": fin(arq), "joven": fin(jov)}
 
 # ---------- proyeccion del cuadro de eliminatorias (cruce modal) ----------
 def projected_bracket(teams, probs, elo):
@@ -757,6 +783,7 @@ def main():
     pl_path = os.path.join(DATA, "players.json")
     if os.path.exists(pl_path):
         players = load("players.json")
+    scorers = load("scorers.json").get("jugadores", []) if os.path.exists(os.path.join(DATA, "scorers.json")) else []
 
     tmeta = teams.get("_meta", {}); pmeta = players.get("_meta", {}) if players else {}
     metodologia = {
@@ -777,23 +804,28 @@ def main():
     for m in results:
         for tm, against in ((m["local"], m["gv"]), (m["visita"], m["gl"])):
             defstats[tm]["pj"] += 1; defstats[tm]["gc"] += against; defstats[tm]["cs"] += (against == 0)
-    premios = estimate_awards(players, probs, em, elo, defstats)
+    premios = estimate_awards(players, probs, em, elo, defstats, scorers)
     proyeccion = projected_bracket(teams, probs, elo)
     podio = sorted(
         [{"equipo": t, "p1": probs[t]["campeon"], "p2": probs[t]["sub"],
           "p3": probs[t]["tercero"], "top3": round(probs[t]["campeon"] + probs[t]["sub"] + probs[t]["tercero"], 1)}
          for t in probs], key=lambda x: x["top3"], reverse=True)[:10]
 
-    # picks de torneo CONGELADOS (se fijan una vez y no cambian; viven en data/picks.json)
+    # picks de torneo (campeon/podio/premios/clasificados): FLOTAN (estimacion viva) mientras la fase
+    # de grupos no termine, y se CONGELAN una sola vez al cerrar la fase de grupos. Asi la prediccion
+    # oficial queda fijada justo cuando se conoce el cuadro, para comparar contra la realidad del KO.
+    grupo_cerrado = n_played >= n_total
     pick_path = os.path.join(DATA, "picks.json")
-    if os.path.exists(pick_path) and "--relock-picks" not in sys.argv:
-        picks = load("picks.json")
+    prev_picks = load("picks.json") if os.path.exists(pick_path) else {}
+    if prev_picks.get("locked") and "--relock-picks" not in sys.argv:
+        picks = prev_picks
     else:
         clasif = [t for mt in proyeccion["rondas"][0]["partidos"] for t in (mt["home"], mt["away"]) if t != "?"]
         def top(lst):
             return (lst[0]["jugador"] if lst else None)
         picks = {
-            "corte": ultima,
+            "corte": ultima if grupo_cerrado else None,
+            "locked": grupo_cerrado,
             "campeon": max(probs, key=lambda t: probs[t]["campeon"]),
             "subcampeon": max(probs, key=lambda t: probs[t]["sub"]),
             "tercero": max(probs, key=lambda t: probs[t]["tercero"]),
@@ -1198,16 +1230,19 @@ function bracketTree(pr){
   return bk;
 }
 
-function awardTable(title, rows, note){
+function awardTable(title, rows, note, goals){
   const c=$('div',{class:'card'});
   c.append($('div',{class:'gtitle'},title));
   if(note)c.append($('div',{class:'muted',html:'<small>'+note+'</small>'}));
-  const tb=$('table');tb.append($('tr',{},$('th',{},'#'),$('th',{},'Jugador'),$('th',{},'Equipo'),
-    $('th',{class:'n'},'Prob.'),$('th',{class:'n'},'Cuota')));
+  const head=[$('th',{},'#'),$('th',{},'Jugador'),$('th',{},'Equipo')];
+  if(goals)head.push($('th',{class:'n'},'Goles ya'));
+  head.push($('th',{class:'n'},'Prob.'),$('th',{class:'n'},'Cuota'));
+  const tb=$('table');tb.append($('tr',{},...head));
   rows.forEach((r,i)=>{
     const tr=$('tr',{});
     tr.append($('td',{class:'muted'},String(i+1)),$('td',{html:'<b>'+r.jugador+'</b>'}),
       $('td',{class:'muted'},r.equipo));
+    if(goals)tr.append($('td',{class:'n'+(r.goles>0?' q':' muted')}, r.goles!=null?String(r.goles):'—'));
     tr.append(barCell(r.prob));
     tr.append($('td',{class:'n muted'}, r.odds||'—'));
     tb.append(tr)});
@@ -1229,7 +1264,7 @@ function panePremios(p){
   // Premios individuales
   const pr=S.premios||{};
   const nota='Estimacion = consenso de mercado (cuota/rating) × recorrido simulado del equipo. NO es certeza.';
-  if(pr.goleador)p.append(awardTable('⚽ Bota de Oro (goleador)', pr.goleador, nota));
+  if(pr.goleador)p.append(awardTable('⚽ Bota de Oro (goleador)', pr.goleador, 'Goles reales acumulados (tabla de goleadores, con fuente) + proyeccion de lo que le queda por marcar segun cuanto avanza su equipo. '+nota, true));
   if(pr.arquero)p.append(awardTable('🧤 Guante de Oro (mejor arquero)', pr.arquero, nota));
   if(pr.joven)p.append(awardTable('🌟 Mejor jugador joven (sub-21)', pr.joven, nota));
 }
@@ -1282,7 +1317,11 @@ function paneScore(p){
   row.append(bigStat(Q.en_juego,'en juego (pendiente)','var(--ac2)'));
   c0.append(row);
   c0.append($('div',{class:'warn',html:'<b>Sin trampa:</b> el pronóstico de cada partido se reconstruye con el estado del modelo PREVIO al partido (solo resultados de fechas anteriores) y el marcador real no influye en la predicción — se usa únicamente para puntuar.'}));
-  c0.append($('div',{class:'muted',html:'<small>Picks de torneo congelados al '+(Q.corte||'—')+'. Acumulativo por partido: ganador 3 · goles local 2 · goles visita 2 · marcador exacto 4 (máx 11).</small>'}));
+  const locked=S.picks&&S.picks.locked;
+  const pickTxt=locked
+    ? 'Picks de torneo (campeón/podio/premios) CONGELADOS al '+(S.picks.corte||Q.corte||'—')+' (cierre de la fase de grupos).'
+    : 'Picks de torneo (campeón/podio/premios) <b>todavía NO congelados</b>: son estimación VIVA y se fijan automáticamente al cerrar la fase de grupos, para comparar contra la realidad del cuadro.';
+  c0.append($('div',{class:'muted',html:'<small>'+pickTxt+' Acumulativo por partido: ganador 3 · goles local 2 · goles visita 2 · marcador exacto 4 (máx 11).</small>'}));
   if(Q.modelo_nota)c0.append($('div',{class:'muted',html:'<small>🔧 '+Q.modelo_nota+'</small>'}));
   p.append(c0);
   // Torneo
