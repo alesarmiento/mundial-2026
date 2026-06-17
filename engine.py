@@ -260,13 +260,18 @@ def projected_bracket(teams, probs, elo):
         a = assign[s["slot"]] if s["away"].startswith("3:") else res(s["away"])
         pairs.append((h, a))
     bracket = []
+    # cada cruce se resuelve con la PROBABILIDAD del Monte Carlo de alcanzar la ronda siguiente
+    # (las mismas del tab Campeon/Avance) -> el campeon del arbol coincide SIEMPRE con el #1 del ranking.
+    NEXT = {"Dieciseisavos": "octavos", "Octavos": "cuartos", "Cuartos": "semis",
+            "Semifinal": "final", "Final": "campeon"}
     for nm in ["Dieciseisavos", "Octavos", "Cuartos", "Semifinal", "Final"]:
+        key = NEXT[nm]
         matches, winners = [], []
         for h, a in pairs:
             if h and a:
-                ph = round(100 * expected(elo[h], elo[a]), 1)
-                w = h if ph >= 50 else a
-                matches.append({"home": h, "away": a, "pHome": ph, "pAway": round(100 - ph, 1), "winner": w})
+                ph, pa = probs[h][key], probs[a][key]
+                w = h if ph >= pa else a
+                matches.append({"home": h, "away": a, "pHome": round(ph, 1), "pAway": round(pa, 1), "winner": w})
             else:
                 w = h or a or "?"
                 matches.append({"home": h or "?", "away": a or "?", "pHome": None, "pAway": None, "winner": w})
@@ -700,7 +705,7 @@ def compute_comparison(teams, results, fixtures, ghist, w_new):
                     "old_brier": round(ob / njug, 3), "new_brier": round(nb / njug, 3)}}
 
 # ---------- detalle por equipo (para el popup explicativo) ----------
-def build_equipo_detalle(teams, results, ghist, elo, ad, topn=6):
+def build_equipo_detalle(teams, results, ghist, elo, ad, topn=12):
     """Por seleccion: Elo actual, ratings ataque/defensa, y sus ultimos partidos reales
     (con rival y marcador). Alimenta el popup que explica cada pronostico."""
     qual = set(tm for ts in teams["grupos"].values() for tm in ts)
@@ -1075,7 +1080,7 @@ function matchRow(m){
 }
 function modalForm(d){
   if(!d||!d.ult||!d.ult.length)return '<div class="frow muted">sin datos</div>';
-  return d.ult.map(u=>`<div class="frow"><span class="fdot f${u.res}">${u.res}</span> ${u.gf}–${u.gc} vs ${u.rival} <span class="muted">(${u.fecha.slice(5)})</span></div>`).join('');
+  return d.ult.map(u=>`<div class="frow"><span class="fdot f${u.res}">${u.res}</span> ${u.gf}–${u.gc} vs ${u.rival} <span class="muted">(${fmtDate(u.fecha)} ${u.fecha.slice(0,4)})</span></div>`).join('');
 }
 function teamCard(name,d){
   if(!d)return `<div class="tcard"><h4>${name}</h4><div class="muted">sin datos</div></div>`;
@@ -1184,7 +1189,7 @@ function paneBracket(p){
   if(pr && pr.rondas){
     const pc=$('div',{class:'card'});
     pc.append($('div',{class:'gtitle'},'🔮 Proyeccion del cuadro — arbol de eliminatorias'));
-    pc.append($('div',{class:'muted',html:'<small>Cruces segun el <b>arbol oficial</b> (Wikipedia knockout stage), con los clasificados mas probables por grupo y el ganador estimado de cada llave (prob. via Elo). Proyeccion puntual: cambia con cada resultado.</small>'}));
+    pc.append($('div',{class:'muted',html:'<small>Cruces segun el <b>arbol oficial</b> (Wikipedia knockout stage), con los clasificados mas probables por grupo. El % de cada equipo es su <b>probabilidad (Monte Carlo) de llegar a la ronda siguiente</b> — avanza el mayor, por eso el campeon del arbol coincide SIEMPRE con el #1 del tab Campeon. Proyeccion puntual: cambia con cada resultado.</small>'}));
     pc.append(bracketTree(pr));
     p.append(pc);
   }
