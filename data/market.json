@@ -3,7 +3,8 @@
     "descripcion": "Consenso del mercado/mundo online por partido del dia (1X2 implicado, marcador mas probable, over 2.5). Para comparar contra el sistema y medir calibracion. La rutina lo actualiza con las cuotas del dia para TODOS los partidos.",
     "regla_de_oro": "Solo con fuente real (ESPN odds, oddschecker, Dimers, bet365, Kalshi, Forebet). Las cuotas se convierten a probabilidad quitando el margen y se normalizan a 100. Nunca inventar.",
     "campos": "pH/pD/pA = % implicado de gana local / empate / gana visita (orientado al home del fixture). score = marcador mas probable del mercado. over25 = % de over 2.5 goles.",
-    "actualizado": "2026-06-17"
+    "actualizado": "2026-06-17",
+    "ultima_actualizacion": "2026-06-17T21:10:00Z"
   },
   "partidos": [
     {"home": "Portugal", "away": "DR Congo", "fecha": "2026-06-17",
@@ -29,6 +30,18 @@
      "fuente": "bet365 / canadasportsbetting.ca / cbssports.com (18-jun-2026)"},
     {"home": "Mexico", "away": "South Korea", "fecha": "2026-06-18",
      "pH": 49, "pD": 29, "pA": 22, "score": "1-0", "over25": 40,
-     "fuente": "DraftKings / bet365 / foxsports.com (18-jun-2026)"}
+     "fuente": "DraftKings / bet365 / foxsports.com (18-jun-2026)"},
+    {"home": "United States", "away": "Australia", "fecha": "2026-06-19",
+     "pH": 59, "pD": 23, "pA": 18, "score": "2-1", "over25": 47,
+     "fuente": "compare.bet / Yahoo Sports / CBS Sports (19-jun-2026)"},
+    {"home": "Scotland", "away": "Morocco", "fecha": "2026-06-19",
+     "pH": 20, "pD": 26, "pA": 54, "score": "0-1", "over25": 39,
+     "fuente": "Yahoo Sports / bet365 / squawka.com (19-jun-2026)"},
+    {"home": "Brazil", "away": "Haiti", "fecha": "2026-06-19",
+     "pH": 89, "pD": 8, "pA": 3, "score": "3-0", "over25": 78,
+     "fuente": "squawka.com / gamblingnews.com / Yahoo Sports (19-jun-2026)"},
+    {"home": "Turkiye", "away": "Paraguay", "fecha": "2026-06-19",
+     "pH": 49, "pD": 28, "pA": 23, "score": "2-1", "over25": 50,
+     "fuente": "oddschecker / Yahoo Sports / Racing Post (19-jun-2026)"}
   ]
 }
