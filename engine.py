@@ -1066,7 +1066,6 @@ const PANES = [
   ['campeon','🏆 Campeon', paneCampeon],
   ['puntaje','🎯 Puntaje', paneScore],
   ['comp','🆚 Comparativa', paneComp],
-  ['mercado','🌐 vs Mercado', paneMercado],
   ['eval','📐 Evaluacion', paneEval],
   ['premios','🏅 Premios', panePremios],
   ['bracket','🔀 Avance', paneBracket],
@@ -1165,6 +1164,7 @@ function openModal(m){
      ${xgHtml}
      <div class="tcards">${teamCard(m.home,dh)}${teamCard(m.away,da)}</div>
      ${lectura(m.home,m.away,dh,da,pred)}
+     ${marketHtml(m.home,m.away)}
      <div class="muted" style="font-size:11px;margin-top:10px">Ataque/defensa centrados en 1.0 (promedio mundial), ajustados por la fuerza de los rivales enfrentados y encogidos por tamaño de muestra. Elo de eloratings.net evolucionado con cada resultado.</div>`;
   document.getElementById('modalbg').classList.add('on');
 }
@@ -1409,37 +1409,25 @@ function paneScore(p){
     mt.append(tr)});
   c2.append(mt);p.append(c2);
 }
-function paneMercado(p){
-  const M=S.mercado||[];
-  const c0=$('div',{class:'card'});
-  c0.append($('div',{class:'gtitle'},'🌐 Sistema vs Mercado online — partidos del día'));
-  c0.append($('div',{class:'muted',html:'<small>Compara el pronóstico del <b>sistema</b> contra el <b>consenso del mundo online</b> (casas de apuestas + sitios de pronóstico). El % es la probabilidad de que ocurra (= chance de acertar). Es un termómetro de qué tan calibrado está el modelo contra el mercado real.</small>'}));
-  p.append(c0);
-  if(!M.length){p.append($('div',{class:'muted'},'Sin datos de mercado cargados para los próximos partidos (la rutina los agrega cuando hay cuotas del día).'));return}
-  M.forEach(m=>{
-    const c=$('div',{class:'card'});
-    c.append($('div',{class:'gtitle'},m.home+' vs '+m.away+'  '+(m.fecha?('<span class="chip">'+m.fecha+'</span>'):'')));
-    const tb=$('table');
-    tb.append($('tr',{},$('th',{},''),$('th',{class:'n'},'Gana '+m.home),$('th',{class:'n'},'Empate'),
-      $('th',{class:'n'},'Gana '+m.away),$('th',{class:'n'},'Marcador'),$('th',{class:'n'},'Over 2.5')));
-    const fmt=v=>v!=null?(v+'%'):'—';
-    const rowFor=(lbl,d,cls)=>$('tr',{},$('td',{html:'<b>'+lbl+'</b>'}),
-      $('td',{class:'n '+cls},fmt(d.pH)),$('td',{class:'n muted'},fmt(d.pD)),
-      $('td',{class:'n '+cls},fmt(d.pA)),$('td',{class:'n'},d.score||'—'),$('td',{class:'n muted'},fmt(d.over25)));
-    tb.append(rowFor('🤖 Sistema',m.sys,'q'));
-    tb.append(rowFor('🌐 Mercado',m.mkt,''));
-    c.append(tb);
-    // lectura de divergencia
-    const dH=(m.sys.pH!=null&&m.mkt.pH!=null)?Math.round(m.sys.pH-m.mkt.pH):null;
-    if(dH!=null){
-      const txt = Math.abs(dH)<=5
-        ? 'Sistema y mercado <b>coinciden</b> en el favorito ('+m.home+').'
-        : (dH>0 ? 'El sistema es <b>más confiado</b> en '+m.home+' (+'+dH+' pts vs el mercado).'
-                : 'El sistema es <b>más cauto</b> con '+m.home+' ('+dH+' pts vs el mercado).');
-      c.append($('div',{class:'muted',html:'<small>📊 '+txt+(m.mkt.fuente?(' · Fuente mercado: '+m.mkt.fuente):'')+'</small>'}));
-    }
-    p.append(c);
-  });
+function marketHtml(home,away){
+  const mk=(S.mercado||[]).find(x=>x.home===home&&x.away===away);
+  if(!mk)return '';
+  const f=v=>v!=null?(v+'%'):'—';
+  const dH=(mk.sys.pH!=null&&mk.mkt.pH!=null)?Math.round(mk.sys.pH-mk.mkt.pH):null;
+  let lect='';
+  if(dH!=null){
+    lect = Math.abs(dH)<=5 ? 'Sistema y mercado <b>coinciden</b> en el favorito.'
+      : (dH>0 ? 'El sistema es <b>más confiado</b> en '+home+' (+'+dH+' pts vs el mercado).'
+              : 'El sistema es <b>más cauto</b> con '+home+' ('+dH+' pts vs el mercado).');
+  }
+  const row=(lbl,d,cls)=>`<tr><td><b>${lbl}</b></td><td class="n ${cls}">${f(d.pH)}</td><td class="n muted">${f(d.pD)}</td><td class="n ${cls}">${f(d.pA)}</td><td class="n">${d.score||'—'}</td><td class="n muted">${f(d.over25)}</td></tr>`;
+  return `<div class="flbl" style="margin-top:14px">🌐 Visión del mercado (mundo online)</div>
+    <table style="width:100%;font-size:12px">
+      <tr><th></th><th class="n">Gana ${home}</th><th class="n">Empate</th><th class="n">Gana ${away}</th><th class="n">Marcador</th><th class="n">Over 2.5</th></tr>
+      ${row('🤖 Sistema',mk.sys,'q')}${row('🌐 Mercado',mk.mkt,'')}
+    </table>
+    ${lect?('<div class="muted" style="font-size:11.5px;margin-top:5px">📊 '+lect+'</div>'):''}
+    <div class="muted" style="font-size:11px;margin-top:3px">Fuente mercado: ${mk.mkt.fuente||'—'}</div>`;
 }
 function paneComp(p){
   const C=S.comparativa;
