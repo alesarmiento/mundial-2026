@@ -828,12 +828,26 @@ def main():
         clasif = [t for mt in proyeccion["rondas"][0]["partidos"] for t in (mt["home"], mt["away"]) if t != "?"]
         def top(lst):
             return (lst[0]["jugador"] if lst else None)
+        # podio = derivado del arbol proyectado (consistente con la vista Avance) y DISTINTO por
+        # construccion: campeon = ganador de la final; subcampeon = el otro finalista; tercero = mejor
+        # perdedor de semis. Con fallback a prob. distinta si el arbol tuviera huecos.
+        rondas = proyeccion.get("rondas", [])
+        campeon = proyeccion.get("campeon_proyectado") or max(probs, key=lambda t: probs[t]["campeon"])
+        finm = rondas[-1]["partidos"][0] if rondas else {}
+        subcampeon = finm.get("away") if finm.get("winner") == finm.get("home") else finm.get("home")
+        if not subcampeon or subcampeon == "?" or subcampeon == campeon:
+            subcampeon = max((t for t in probs if t != campeon), key=lambda t: probs[t]["sub"])
+        semis = next((r["partidos"] for r in rondas if r["ronda"] == "Semifinal"), [])
+        losers = [(mt.get("away") if mt.get("winner") == mt.get("home") else mt.get("home")) for mt in semis]
+        losers = [t for t in losers if t and t != "?" and t not in (campeon, subcampeon)]
+        tercero = max(losers, key=lambda t: probs[t]["tercero"]) if losers else \
+            max((t for t in probs if t not in (campeon, subcampeon)), key=lambda t: probs[t]["tercero"])
         picks = {
             "corte": ultima if grupo_cerrado else None,
             "locked": grupo_cerrado,
-            "campeon": max(probs, key=lambda t: probs[t]["campeon"]),
-            "subcampeon": max(probs, key=lambda t: probs[t]["sub"]),
-            "tercero": max(probs, key=lambda t: probs[t]["tercero"]),
+            "campeon": campeon,
+            "subcampeon": subcampeon,
+            "tercero": tercero,
             "goleador": top(premios.get("goleador", [])),
             "arquero": top(premios.get("arquero", [])),
             "joven": top(premios.get("joven", [])),
