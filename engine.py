@@ -175,23 +175,32 @@ def expected_matches(probs):
         em[t] = 3.0 + ko + bronce
     return em
 
-def estimate_awards(players, probs, em, elo):
+def estimate_awards(players, probs, em, elo, defstats=None):
     if not players:
         return {}
+    defstats = defstats or {}
     def fin(rows):
         s = sum(w for _, w in rows) or 1.0
         out = [{"jugador": c["jugador"], "equipo": c["equipo"], "odds": c.get("odds", ""),
                 "prob": round(100 * w / s, 1)} for c, w in rows]
         return sorted(out, key=lambda x: x["prob"], reverse=True)
-    # Goleador: rating x partidos esperados (mas juega, mas chances)
+    # Goleador: rating x partidos esperados (mas juega, mas chances). Ojo: sin dato de quien
+    # marca cada gol (no esta en el ledger), no se puede usar goles reales por jugador todavia.
     gole = [(c, c["rating"] * em[c["equipo"]]) for c in players.get("goleador", []) if c["equipo"] in em]
-    # Arquero: rating x recorrido profundo x solidez defensiva (Elo)
+    # Arquero (Guante de Oro): rating x recorrido profundo x rendimiento defensivo REAL.
+    # El rendimiento mezcla la solidez del Elo con los datos acumulados: arcos en cero (suben) y
+    # goles recibidos por partido (bajan), ponderados por cuantos partidos lleva jugados el equipo.
     arq = []
     for c in players.get("arquero", []):
         t = c["equipo"]
         if t not in probs: continue
         deep = probs[t]["cuartos"] / 100.0 + 0.05
         defn = max(0.2, (elo[t] - 1500) / 700.0)
+        ds = defstats.get(t)
+        if ds and ds["pj"] > 0:
+            perf = (1.0 + ds["cs"] / ds["pj"]) / (1.0 + ds["gc"] / ds["pj"])  # >1 con arcos en cero, <1 si recibe mucho
+            w = min(1.0, ds["pj"] / 3.0)                                       # peso del dato real crece con los partidos
+            defn = defn * ((1.0 - w) + w * perf)
         arq.append((c, c["rating"] * deep * defn))
     # Joven: rating x exposicion (partidos esperados)
     jov = [(c, c["rating"] * em[c["equipo"]]) for c in players.get("joven", []) if c["equipo"] in em]
@@ -763,7 +772,12 @@ def main():
         ],
     }
     em = expected_matches(probs)
-    premios = estimate_awards(players, probs, em, elo)
+    # stats defensivas reales por equipo (Guante de Oro): partidos, goles en contra, arcos en cero
+    defstats = defaultdict(lambda: {"pj": 0, "gc": 0, "cs": 0})
+    for m in results:
+        for tm, against in ((m["local"], m["gv"]), (m["visita"], m["gl"])):
+            defstats[tm]["pj"] += 1; defstats[tm]["gc"] += against; defstats[tm]["cs"] += (against == 0)
+    premios = estimate_awards(players, probs, em, elo, defstats)
     proyeccion = projected_bracket(teams, probs, elo)
     podio = sorted(
         [{"equipo": t, "p1": probs[t]["campeon"], "p2": probs[t]["sub"],
