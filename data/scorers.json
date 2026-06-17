@@ -2,17 +2,22 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021502",
+    "fuente": "https://www.espn.com/soccer/match/_/gameId/760437/croatia-england",
     "actualizado": "2026-06-17"
   },
   "jugadores": [
     {"jugador": "Lionel Messi", "equipo": "Argentina", "goles": 3},
+    {"jugador": "Harry Kane", "equipo": "England", "goles": 2},
     {"jugador": "Folarin Balogun", "equipo": "United States", "goles": 2},
     {"jugador": "Kai Havertz", "equipo": "Germany", "goles": 2},
     {"jugador": "Yasin Ayari", "equipo": "Sweden", "goles": 2},
     {"jugador": "Kylian Mbappe", "equipo": "France", "goles": 2},
     {"jugador": "Erling Haaland", "equipo": "Norway", "goles": 2},
     {"jugador": "Elijah Just", "equipo": "New Zealand", "goles": 2},
+    {"jugador": "Jude Bellingham", "equipo": "England", "goles": 1},
+    {"jugador": "Marcus Rashford", "equipo": "England", "goles": 1},
+    {"jugador": "Martin Baturina", "equipo": "Croatia", "goles": 1},
+    {"jugador": "Petar Musa", "equipo": "Croatia", "goles": 1},
     {"jugador": "Joao Neves", "equipo": "Portugal", "goles": 1},
     {"jugador": "Yoane Wissa", "equipo": "DR Congo", "goles": 1}
   ]
