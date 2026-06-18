@@ -4,7 +4,7 @@
     "regla_de_oro": "Solo con fuente real (ESPN odds, oddschecker, Dimers, bet365, Kalshi, Forebet). Las cuotas se convierten a probabilidad quitando el margen y se normalizan a 100. Nunca inventar.",
     "campos": "pH/pD/pA = % implicado de gana local / empate / gana visita (orientado al home del fixture). score = marcador mas probable del mercado. over25 = % de over 2.5 goles.",
     "actualizado": "2026-06-18",
-    "ultima_actualizacion": "2026-06-18T21:04:00Z"
+    "ultima_actualizacion": "2026-06-18T22:13:00Z"
   },
   "partidos": [
     {"home": "Portugal", "away": "DR Congo", "fecha": "2026-06-17",
@@ -87,6 +87,27 @@
      "fuente": "CBS Sports / oddschecker / bet365 (23-jun-2026)"},
     {"home": "Panama", "away": "Croatia", "fecha": "2026-06-23",
      "pH": 16, "pD": 23, "pA": 61, "score": "0-2",
-     "fuente": "CBS Sports / oddschecker / bet365 (23-jun-2026)"}
+     "fuente": "CBS Sports / oddschecker / bet365 (23-jun-2026)"},
+    {"home": "Colombia", "away": "DR Congo", "fecha": "2026-06-23",
+     "pH": 65, "pD": 22, "pA": 13, "score": "2-0", "over25": 41,
+     "fuente": "oddschecker / BetMGM (23-jun-2026)"},
+    {"home": "Bosnia and Herzegovina", "away": "Qatar", "fecha": "2026-06-24",
+     "pH": 60, "pD": 24, "pA": 16, "score": "2-0",
+     "fuente": "bet365 / oddschecker (24-jun-2026)"},
+    {"home": "Switzerland", "away": "Canada", "fecha": "2026-06-24",
+     "pH": 45, "pD": 28, "pA": 27, "score": "1-0",
+     "fuente": "bet365 (24-jun-2026)"},
+    {"home": "Morocco", "away": "Haiti", "fecha": "2026-06-24",
+     "pH": 74, "pD": 16, "pA": 10, "score": "2-0",
+     "fuente": "bet365 (24-jun-2026)"},
+    {"home": "Scotland", "away": "Brazil", "fecha": "2026-06-24",
+     "pH": 13, "pD": 21, "pA": 66, "score": "0-1",
+     "fuente": "bet365 (24-jun-2026)"},
+    {"home": "Czechia", "away": "Mexico", "fecha": "2026-06-24",
+     "pH": 20, "pD": 27, "pA": 53, "score": "0-1",
+     "fuente": "bet365 (24-jun-2026)"},
+    {"home": "South Africa", "away": "South Korea", "fecha": "2026-06-24",
+     "pH": 16, "pD": 23, "pA": 61, "score": "0-1",
+     "fuente": "bet365 / oddschecker (24-jun-2026)"}
   ]
 }
