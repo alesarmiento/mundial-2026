@@ -4,7 +4,7 @@
     "regla_de_oro": "Solo con fuente real (ESPN odds, oddschecker, Dimers, bet365, Kalshi, Forebet). Las cuotas se convierten a probabilidad quitando el margen y se normalizan a 100. Nunca inventar.",
     "campos": "pH/pD/pA = % implicado de gana local / empate / gana visita (orientado al home del fixture). score = marcador mas probable del mercado. over25 = % de over 2.5 goles.",
     "actualizado": "2026-06-18",
-    "ultima_actualizacion": "2026-06-18T03:10:00Z"
+    "ultima_actualizacion": "2026-06-18T05:04:00Z"
   },
   "partidos": [
     {"home": "Portugal", "away": "DR Congo", "fecha": "2026-06-17",
@@ -66,6 +66,15 @@
      "fuente": "bet365 / FanDuel / Oddschecker (21-jun-2026)"},
     {"home": "New Zealand", "away": "Egypt", "fecha": "2026-06-21",
      "pH": 19, "pD": 27, "pA": 54, "score": "0-1", "over25": 44,
-     "fuente": "online-bookmakers.com / ESPN odds (21-jun-2026)"}
+     "fuente": "online-bookmakers.com / ESPN odds (21-jun-2026)"},
+    {"home": "Argentina", "away": "Austria", "fecha": "2026-06-22",
+     "pH": 58, "pD": 24, "pA": 18, "score": "1-0", "over25": 55,
+     "fuente": "FanDuel / BetMGM / KickOff (22-jun-2026)"},
+    {"home": "France", "away": "Iraq", "fecha": "2026-06-22",
+     "pH": 86, "pD": 10, "pA": 4, "score": "2-0", "over25": 51,
+     "fuente": "DraftKings opening odds / Wincomparator (22-jun-2026)"},
+    {"home": "Norway", "away": "Senegal", "fecha": "2026-06-22",
+     "pH": 45, "pD": 28, "pA": 27, "score": "1-1", "over25": 51,
+     "fuente": "bet365 / Sky Sports / KickOff (22-jun-2026)"}
   ]
 }
