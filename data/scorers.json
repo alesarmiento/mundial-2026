@@ -2,7 +2,7 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://www.nbcsports.com/soccer/news/2026-world-cup-top-goalscorers-full-list-latest-on-race-for-the-golden-boot",
+    "fuente": "https://www.espn.com/soccer/story/_/id/49108304/switzerland-bosnia-live-world-cup-2026-latest-updates-commentary-score-result",
     "actualizado": "2026-06-18"
   },
   "jugadores": [
@@ -14,12 +14,12 @@
     {"jugador": "Yasin Ayari", "equipo": "Sweden", "goles": 2},
     {"jugador": "Folarin Balogun", "equipo": "United States", "goles": 2},
     {"jugador": "Elijah Just", "equipo": "New Zealand", "goles": 2},
+    {"jugador": "Johan Manzambi", "equipo": "Switzerland", "goles": 2},
     {"jugador": "Vinicius Junior", "equipo": "Brazil", "goles": 1},
     {"jugador": "Jude Bellingham", "equipo": "England", "goles": 1},
     {"jugador": "Marcus Rashford", "equipo": "England", "goles": 1},
     {"jugador": "Viktor Gyokeres", "equipo": "Sweden", "goles": 1},
     {"jugador": "Virgil van Dijk", "equipo": "Netherlands", "goles": 1},
-    {"jugador": "Raul Jimenez", "equipo": "Mexico", "goles": 1},
-    {"jugador": "Joao Neves", "equipo": "Portugal", "goles": 1}
+    {"jugador": "Raul Jimenez", "equipo": "Mexico", "goles": 1}
   ]
 }
