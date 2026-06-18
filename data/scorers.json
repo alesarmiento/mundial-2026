@@ -2,7 +2,7 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/adidas-golden-boot-race-top-scorer",
+    "fuente": "https://sports.yahoo.com/soccer/article/world-cup-2026-teboho-mokoenas-goal-rescues-a-1-1-draw-for-south-africa-against-czechia-175953334.html",
     "actualizado": "2026-06-18"
   },
   "jugadores": [
@@ -16,14 +16,10 @@
     {"jugador": "Elijah Just", "equipo": "New Zealand", "goles": 2},
     {"jugador": "Jude Bellingham", "equipo": "England", "goles": 1},
     {"jugador": "Marcus Rashford", "equipo": "England", "goles": 1},
-    {"jugador": "Martin Baturina", "equipo": "Croatia", "goles": 1},
-    {"jugador": "Petar Musa", "equipo": "Croatia", "goles": 1},
     {"jugador": "Joao Neves", "equipo": "Portugal", "goles": 1},
-    {"jugador": "Yoane Wissa", "equipo": "DR Congo", "goles": 1},
-    {"jugador": "Caleb Yirenkyi", "equipo": "Ghana", "goles": 1},
     {"jugador": "Luis Diaz", "equipo": "Colombia", "goles": 1},
-    {"jugador": "Daniel Munoz", "equipo": "Colombia", "goles": 1},
-    {"jugador": "Jaminton Campaz", "equipo": "Colombia", "goles": 1},
+    {"jugador": "Michal Sadilek", "equipo": "Czechia", "goles": 1},
+    {"jugador": "Teboho Mokoena", "equipo": "South Africa", "goles": 1},
     {"jugador": "Abbosbek Fayzullaev", "equipo": "Uzbekistan", "goles": 1}
   ]
 }
