@@ -3,8 +3,8 @@
     "descripcion": "Consenso del mercado/mundo online por partido del dia (1X2 implicado, marcador mas probable, over 2.5). Para comparar contra el sistema y medir calibracion. La rutina lo actualiza con las cuotas del dia para TODOS los partidos.",
     "regla_de_oro": "Solo con fuente real (ESPN odds, oddschecker, Dimers, bet365, Kalshi, Forebet). Las cuotas se convierten a probabilidad quitando el margen y se normalizan a 100. Nunca inventar.",
     "campos": "pH/pD/pA = % implicado de gana local / empate / gana visita (orientado al home del fixture). score = marcador mas probable del mercado. over25 = % de over 2.5 goles.",
-    "actualizado": "2026-06-17",
-    "ultima_actualizacion": "2026-06-17T21:10:00Z"
+    "actualizado": "2026-06-18",
+    "ultima_actualizacion": "2026-06-18T03:10:00Z"
   },
   "partidos": [
     {"home": "Portugal", "away": "DR Congo", "fecha": "2026-06-17",
@@ -42,6 +42,30 @@
      "fuente": "squawka.com / gamblingnews.com / Yahoo Sports (19-jun-2026)"},
     {"home": "Turkiye", "away": "Paraguay", "fecha": "2026-06-19",
      "pH": 49, "pD": 28, "pA": 23, "score": "2-1", "over25": 50,
-     "fuente": "oddschecker / Yahoo Sports / Racing Post (19-jun-2026)"}
+     "fuente": "oddschecker / Yahoo Sports / Racing Post (19-jun-2026)"},
+    {"home": "Netherlands", "away": "Sweden", "fecha": "2026-06-20",
+     "pH": 57, "pD": 24, "pA": 19, "score": "2-1", "over25": 52,
+     "fuente": "bet365 / BetOnline / LuckyRebel (20-jun-2026)"},
+    {"home": "Germany", "away": "Ivory Coast", "fecha": "2026-06-20",
+     "pH": 62, "pD": 22, "pA": 16, "score": "2-0", "over25": 55,
+     "fuente": "bet365 / BetMGM / Oddsshark (20-jun-2026)"},
+    {"home": "Ecuador", "away": "Curacao", "fecha": "2026-06-20",
+     "pH": 79, "pD": 14, "pA": 7, "score": "3-0", "over25": 75,
+     "fuente": "bet365 / Oddschecker / totalfootballanalysis (20-jun-2026)"},
+    {"home": "Tunisia", "away": "Japan", "fecha": "2026-06-20",
+     "pH": 17, "pD": 27, "pA": 56, "score": "0-2", "over25": 52,
+     "fuente": "bet365 / Polymarket / Oddschecker (20-jun-2026)"},
+    {"home": "Spain", "away": "Saudi Arabia", "fecha": "2026-06-21",
+     "pH": 86, "pD": 9, "pA": 5, "score": "2-0", "over25": 65,
+     "fuente": "DraftKings / bet365 / covers.com (21-jun-2026)"},
+    {"home": "Belgium", "away": "Iran", "fecha": "2026-06-21",
+     "pH": 67, "pD": 20, "pA": 13, "score": "2-0", "over25": 53,
+     "fuente": "FanDuel / DraftKings / Sportytrader (21-jun-2026)"},
+    {"home": "Uruguay", "away": "Cape Verde", "fecha": "2026-06-21",
+     "pH": 65, "pD": 22, "pA": 13, "score": "2-0", "over25": 38,
+     "fuente": "bet365 / FanDuel / Oddschecker (21-jun-2026)"},
+    {"home": "New Zealand", "away": "Egypt", "fecha": "2026-06-21",
+     "pH": 19, "pD": 27, "pA": 54, "score": "0-1", "over25": 44,
+     "fuente": "online-bookmakers.com / ESPN odds (21-jun-2026)"}
   ]
 }
