@@ -4,7 +4,7 @@
     "regla_de_oro": "Solo con fuente real (ESPN odds, oddschecker, Dimers, bet365, Kalshi, Forebet). Las cuotas se convierten a probabilidad quitando el margen y se normalizan a 100. Nunca inventar.",
     "campos": "pH/pD/pA = % implicado de gana local / empate / gana visita (orientado al home del fixture). score = marcador mas probable del mercado. over25 = % de over 2.5 goles.",
     "actualizado": "2026-06-18",
-    "ultima_actualizacion": "2026-06-18T05:04:00Z"
+    "ultima_actualizacion": "2026-06-18T21:04:00Z"
   },
   "partidos": [
     {"home": "Portugal", "away": "DR Congo", "fecha": "2026-06-17",
@@ -75,6 +75,18 @@
      "fuente": "DraftKings opening odds / Wincomparator (22-jun-2026)"},
     {"home": "Norway", "away": "Senegal", "fecha": "2026-06-22",
      "pH": 45, "pD": 28, "pA": 27, "score": "1-1", "over25": 51,
-     "fuente": "bet365 / Sky Sports / KickOff (22-jun-2026)"}
+     "fuente": "bet365 / Sky Sports / KickOff (22-jun-2026)"},
+    {"home": "Jordan", "away": "Algeria", "fecha": "2026-06-22",
+     "pH": 18, "pD": 23, "pA": 59, "score": "0-1",
+     "fuente": "wincomparator.com / betfair / ESPN odds (22-jun-2026)"},
+    {"home": "Portugal", "away": "Uzbekistan", "fecha": "2026-06-23",
+     "pH": 75, "pD": 14, "pA": 11, "score": "2-0",
+     "fuente": "CBS Sports / oddschecker / bet365 (23-jun-2026)"},
+    {"home": "England", "away": "Ghana", "fecha": "2026-06-23",
+     "pH": 71, "pD": 19, "pA": 10, "score": "2-0",
+     "fuente": "CBS Sports / oddschecker / bet365 (23-jun-2026)"},
+    {"home": "Panama", "away": "Croatia", "fecha": "2026-06-23",
+     "pH": 16, "pD": 23, "pA": 61, "score": "0-2",
+     "fuente": "CBS Sports / oddschecker / bet365 (23-jun-2026)"}
   ]
 }
