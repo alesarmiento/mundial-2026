@@ -947,6 +947,8 @@ def main():
         "grupos": teams["grupos"],
         "elo_actual": {t: round(r) for t, r in sorted(elo.items(), key=lambda x: -x[1])},
         "tabla": tabla_view(base, teams["grupos"]),
+        "tabla_estim": tabla_estim_view(base, teams["grupos"], results, fixtures, elo, ad_det,
+                                        cfg["scoring_w"], cfg["host_adv"], cfg["hosts"], probs),
         "probs": probs,
         "ranking_campeon": sorted(
             [{"equipo": t, **p} for t, p in probs.items()],
@@ -985,6 +987,28 @@ def tabla_view(base, grupos):
         out[g] = [{"equipo": t, "pj": base[t]["pj"], "pts": base[t]["pts"],
                    "gf": base[t]["gf"], "gc": base[t]["gc"],
                    "dg": base[t]["gf"] - base[t]["gc"]} for t in order]
+    return out
+
+def tabla_estim_view(base, grupos, results, fixtures, elo, ad, w, host_adv, hosts, probs):
+    """Tabla ESTIMADA por grupo: puntos finales proyectados (reales + esperados de lo que falta)
+    + P(1ro) + P(clasificar). Usa el mismo modelo que las predicciones por partido."""
+    played = {frozenset((m["local"], m["visita"])) for m in results if m.get("fase") == "grupos"}
+    add = {t: 0.0 for t in base}
+    for g, a, b in all_group_fixtures(grupos):
+        if frozenset((a, b)) in played:
+            continue
+        p = match_pred(a, b, elo, ad, w, host_adv, hosts)
+        if not p:
+            continue
+        add[a] += 3 * p["pH"] / 100 + p["pD"] / 100
+        add[b] += 3 * p["pA"] / 100 + p["pD"] / 100
+    out = {}
+    for g, teams in grupos.items():
+        rows = [{"equipo": t, "pts_proy": round(base[t]["pts"] + add[t], 1),
+                 "p1": round(probs[t]["grupo1"], 1), "clasif": round(probs[t]["r32"], 1)}
+                for t in teams]
+        rows.sort(key=lambda r: (r["pts_proy"], r["p1"]), reverse=True)
+        out[g] = rows
     return out
 
 # ---------- panel HTML ----------
@@ -1264,21 +1288,48 @@ function paneCampeon(p){
   if(S.nota_bracket)p.append($('div',{class:'warn'},S.nota_bracket));
 }
 
+function grpTableReal(g){
+  const tb=$('table');tb.append($('tr',{},$('th',{},'Equipo'),$('th',{class:'n'},'PJ'),
+    $('th',{class:'n'},'Pts'),$('th',{class:'n'},'DG'),$('th',{class:'n'},'Pasa%')));
+  S.tabla[g].forEach((row,i)=>{
+    const tr=$('tr',{});const cls=i===0?'pos1':i===1?'pos2':'';
+    tr.append($('td',{html:'<span class="'+cls+'">'+row.equipo+'</span>'}),
+      $('td',{class:'n'},String(row.pj)),$('td',{class:'n'},String(row.pts)),
+      $('td',{class:'n'},(row.dg>0?'+':'')+row.dg),
+      $('td',{class:'n q'},pct(S.probs[row.equipo].top2)));
+    tb.append(tr)});
+  return tb;
+}
+function grpTableEstim(g){
+  const tb=$('table');tb.append($('tr',{},$('th',{},'#'),$('th',{},'Equipo'),
+    $('th',{class:'n'},'PtsProy'),$('th',{class:'n'},'P(1°)'),$('th',{class:'n'},'Clasif')));
+  (S.tabla_estim&&S.tabla_estim[g]||[]).forEach((row,i)=>{
+    const tr=$('tr',{});const cls=i===0?'pos1':i===1?'pos2':'';
+    tr.append($('td',{class:'muted'},(i+1)+'°'),
+      $('td',{html:'<span class="'+cls+'">'+row.equipo+'</span>'}),
+      $('td',{class:'n'},row.pts_proy.toFixed(1)),
+      $('td',{class:'n'},pct(row.p1)),
+      $('td',{class:'n q'},pct(row.clasif)));
+    tb.append(tr)});
+  return tb;
+}
 function paneGrupos(p){
   const wrap=$('div',{class:'grp'});
+  const mkBtn=(txt,active)=>{const s=$('span',{},txt);s.style.cssText='font-size:11px;font-weight:600;padding:2px 9px;border-radius:6px;cursor:pointer;border:1px solid #2d3440;'+(active?'background:#1f6feb;color:#fff;border-color:#1f6feb':'color:#8b949e');return s;};
   for(const g of Object.keys(S.tabla)){
-    const c=$('div',{class:'card'});c.append($('div',{class:'gtitle'},'Grupo '+g));
-    const tb=$('table');tb.append($('tr',{},$('th',{},'Equipo'),$('th',{class:'n'},'PJ'),
-      $('th',{class:'n'},'Pts'),$('th',{class:'n'},'DG'),$('th',{class:'n'},'Pasa%')));
-    S.tabla[g].forEach((row,i)=>{
-      const tr=$('tr',{});const cls=i===0?'pos1':i===1?'pos2':'';
-      tr.append($('td',{html:'<span class="'+cls+'">'+row.equipo+'</span>'}),
-        $('td',{class:'n'},String(row.pj)),$('td',{class:'n'},String(row.pts)),
-        $('td',{class:'n'},(row.dg>0?'+':'')+row.dg),
-        $('td',{class:'n q'},pct(S.probs[row.equipo].top2)));
-      tb.append(tr)});
-    c.append(tb);wrap.append(c)}
+    const c=$('div',{class:'card'});
+    const hd=$('div',{});hd.style.cssText='display:flex;align-items:center;justify-content:space-between;margin-bottom:8px';
+    hd.append($('div',{class:'gtitle',html:'Grupo '+g,style:'margin:0'}));
+    const sw=$('div',{});sw.style.cssText='display:flex;gap:4px';
+    const bR=mkBtn('Real',true), bE=mkBtn('Estimado',false);
+    sw.append(bR,bE);hd.append(sw);
+    const slot=$('div',{});slot.append(grpTableReal(g));
+    const setReal=on=>{bR.style.cssText=mkBtn('',on).style.cssText;bE.style.cssText=mkBtn('',!on).style.cssText;slot.innerHTML='';slot.append(on?grpTableReal(g):grpTableEstim(g));};
+    bR.onclick=()=>setReal(true);bE.onclick=()=>setReal(false);
+    c.append(hd,slot);wrap.append(c);
+  }
   p.append(wrap);
+  p.append($('div',{class:'muted',html:'<small><b>Real</b> = tabla con los resultados de hoy. <b>Estimado</b> = proyección al cierre del grupo: <b>PtsProy</b> = puntos finales esperados (reales + lo que falta), <b>P(1°)</b> = prob. de salir primero, <b>Clasif</b> = prob. de pasar a 32avos. Se recalcula con cada resultado.</small>',style:'margin-top:10px'}));
 }
 
 function paneBracket(p){
