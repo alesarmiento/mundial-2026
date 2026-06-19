@@ -17,7 +17,7 @@ Uso:
 Sin dependencias externas (solo stdlib).
 """
 
-import json, os, sys, math, random
+import json, os, sys, math, random, hashlib
 from collections import defaultdict
 from itertools import combinations
 
@@ -957,7 +957,11 @@ def tabla_view(base, grupos):
 
 # ---------- panel HTML ----------
 def render_panel(state):
-    html = PANEL_TEMPLATE.replace("__STATE__", json.dumps(state, ensure_ascii=False))
+    payload = json.dumps(state, ensure_ascii=False)
+    # build-id = hash del estado: cambia SOLO cuando cambia el contenido (sin commits ruidosos).
+    # El panel lo usa para auto-recargarse cuando GitHub Pages publica una version nueva.
+    build = hashlib.md5(payload.encode("utf-8")).hexdigest()[:8]
+    html = PANEL_TEMPLATE.replace("__STATE__", payload).replace("__BUILD__", build)
     # panel.html (vista local) + index.html (lo que sirve GitHub Pages)
     for fn in ("panel.html", "index.html"):
         with open(os.path.join(HERE, fn), "w", encoding="utf-8") as f:
@@ -965,6 +969,7 @@ def render_panel(state):
 
 PANEL_TEMPLATE = r"""<!DOCTYPE html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
 <title>Mundial 2026 · Predictor</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%BD%3C/text%3E%3C/svg%3E">
 <style>
@@ -1070,6 +1075,10 @@ a{color:var(--ac2);text-decoration:none}
 </div>
 <script>
 const S = __STATE__;
+const BUILD = "__BUILD__";
+/* Auto-actualizacion: revalida el HTML sin cache; si GitHub Pages ya tiene una build nueva,
+   recarga solo a una URL con cache-buster (no hay que hacer hard refresh nunca mas). */
+(function(){function chk(){fetch(location.pathname+'?_cb='+Date.now(),{cache:'no-store'}).then(function(r){return r.text();}).then(function(t){var m=t.match(/const BUILD = "([0-9a-f]+)"/);if(m&&m[1]!==BUILD)location.replace(location.pathname+'?v='+m[1]);}).catch(function(){});}setTimeout(chk,1500);setInterval(chk,120000);})();
 const COLORS=['#58a6ff','#3fb950','#d29922','#f85149','#bc8cff','#39c5cf','#ff7b72','#7ee787'];
 const $=(t,a={},...c)=>{const e=document.createElement(t);for(const k in a)k==='html'?e.innerHTML=a[k]:e.setAttribute(k,a[k]);c.forEach(x=>e.append(x));return e};
 document.getElementById('sub').textContent =
