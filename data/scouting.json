@@ -1,0 +1,25 @@
+{
+  "_meta": {
+    "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. La rutina la puebla EN EL MISMO PASO que el mercado, investigando por web. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
+    "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' o se omite. Las alineaciones son 'probable' hasta ~60 min antes del pitazo; al confirmarse se pasa a 'confirmada'. NUNCA inventar nombres ni bajas.",
+    "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita = once probable o confirmado. bajas_local/bajas_visita = lista de ausencias/dudas con motivo. lectura = sintesis corta. lean = direccion cualitativa (texto corto). fuentes = URLs.",
+    "actualizado": "2026-06-19"
+  },
+  "partidos": [
+    {
+      "home": "United States", "away": "Australia", "fecha": "2026-06-19",
+      "estado_alineacion": "probable",
+      "xi_local": "Freese; Freeman, Richards, Ream, Robinson; Adams; Dest, Tillman, McKennie, Pulisic; Balogun (Pulisic en duda)",
+      "xi_visita": "Beach; Burgess, Circati, Souttar; Italiano, O'Neill, Metcalfe, Bos; Irankunda, Toure (3-4-2-1)",
+      "bajas_local": ["Pulisic en duda por lesion en el gemelo; Pochettino no lo confirmo y podria ir al banco como precaucion"],
+      "bajas_visita": ["Toure tuvo un calambre vs Turquia pero esta disponible; sin bajas: Popovic confirmo plantel completo"],
+      "lectura": "Australia llega a pleno y sin bajas, con el 3-4-2-1 que volteo a Turquia (apuesta: arquero juvenil Beach sobre Mat Ryan). USA tiene a su figura, Pulisic, en duda por el gemelo. Lean cualitativo: leve a Australia / partido cerrado de pocos goles. Refuerza que el 59% del mercado a USA se ve inflado.",
+      "lean": "Leve a Australia · pocos goles",
+      "fuentes": [
+        "https://www.nbcsports.com/soccer/news/how-will-usa-line-up-against-australia-in-second-game-of-their-2026-world-cup-as-pochettinos-usmnt-seek-2-0-start",
+        "https://www.sportsmole.co.uk/football/usa/world-cup-2026/team-news/usa-vs-australia-injury-suspension-list-predicted-xis_599443.html",
+        "https://www.rotowire.com/soccer/article/usa-vs-australia-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-d-118651"
+      ]
+    }
+  ]
+}

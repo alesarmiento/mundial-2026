@@ -853,6 +853,8 @@ def main():
         players = load("players.json")
     scorers = load("scorers.json").get("jugadores", []) if os.path.exists(os.path.join(DATA, "scorers.json")) else []
     market = load("market.json") if os.path.exists(os.path.join(DATA, "market.json")) else {"partidos": []}
+    # capa de inteligencia cualitativa (IA): se MUESTRA en el modal, NO entra en ningun calculo.
+    scouting = load("scouting.json") if os.path.exists(os.path.join(DATA, "scouting.json")) else {"partidos": []}
 
     tmeta = teams.get("_meta", {}); pmeta = players.get("_meta", {}) if players else {}
     metodologia = {
@@ -950,6 +952,7 @@ def main():
         "evaluacion": evaluacion,
         "comparativa": comparativa,
         "mercado": mercado,
+        "scouting": scouting.get("partidos", []),
         "equipo_detalle": equipo_detalle,
         "mu_liga": mu_liga,
         "ad_ratings": ad,
@@ -1215,6 +1218,7 @@ function openModal(m){
      <div class="tcards">${teamCard(m.home,dh)}${teamCard(m.away,da)}</div>
      ${lectura(m.home,m.away,dh,da,pred)}
      ${marketHtml(m.home,m.away)}
+     ${scoutingHtml(m.home,m.away)}
      <div class="muted" style="font-size:11px;margin-top:10px">Ataque/defensa centrados en 1.0 (promedio mundial), ajustados por la fuerza de los rivales enfrentados y encogidos por tamaño de muestra. Elo de eloratings.net evolucionado con cada resultado.</div>`;
   document.getElementById('modalbg').classList.add('on');
 }
@@ -1458,6 +1462,25 @@ function paneScore(p){
       $('td',{class:'n'+(m.pts>0?' q':' muted')},String(m.pts)));
     mt.append(tr)});
   c2.append(mt);p.append(c2);
+}
+function scoutingHtml(home,away){
+  const sc=(S.scouting||[]).find(x=>x.home===home&&x.away===away);
+  if(!sc)return '';
+  const est=sc.estado_alineacion==='confirmada'
+    ?'<span style="color:#3fb950">XI confirmado</span>':'<span style="color:#d29922">XI probable</span>';
+  const bajas=arr=>(arr&&arr.length)?arr.map(b=>'• '+b).join('<br>'):'<span class="muted">sin bajas reportadas</span>';
+  const xi=(lbl,v)=>v?`<div style="font-size:11.5px;margin-top:4px"><b>${lbl}:</b> <span class="muted">${v}</span></div>`:'';
+  const fts=(sc.fuentes||[]).map((u,i)=>`<a href="${u}" target="_blank" rel="noopener" style="color:#58a6ff">[${i+1}]</a>`).join(' ');
+  const lean=sc.lean?`<span style="color:#58a6ff;font-weight:600">↪ ${sc.lean}</span>`:'';
+  return `<div class="flbl" style="margin-top:14px">🧠 Lectura del analista (IA) · parte de equipos · ${est}</div>
+    <div style="background:#10202e;border-left:3px solid #58a6ff;padding:9px 11px;border-radius:6px;font-size:12.5px">
+      ${sc.lectura?`<div style="margin-bottom:6px">${sc.lectura}</div>`:''}
+      ${lean?`<div style="margin-bottom:6px">${lean}</div>`:''}
+      <div style="font-size:11.5px"><b>Bajas ${home}:</b> ${bajas(sc.bajas_local)}</div>
+      <div style="font-size:11.5px;margin-top:2px"><b>Bajas ${away}:</b> ${bajas(sc.bajas_visita)}</div>
+      ${xi('XI '+home,sc.xi_local)}${xi('XI '+away,sc.xi_visita)}
+      <div class="muted" style="font-size:11px;margin-top:6px">Capa cualitativa con fuente · <b>NO modifica el pronóstico del sistema</b> · Fuentes: ${fts||'—'}</div>
+    </div>`;
 }
 function marketHtml(home,away){
   const mk=(S.mercado||[]).find(x=>x.home===home&&x.away===away);

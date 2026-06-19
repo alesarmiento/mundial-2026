@@ -35,6 +35,23 @@ Se ejecuta en la nube (auto-ritmo: despertar cuando deberían haber terminado pa
 6. **Auto-ritmo:** programar el próximo despertar para después del próximo bloque de partidos del
    calendario (no chequear en horas sin partidos). En días sin partidos, dormir hasta el siguiente día con fixture.
 
+## Análisis del día: mercado + capa de IA (scouting)
+
+En el **mismo paso** en que se analizan las cuotas del día (`data/market.json`), poblar también la
+**capa de inteligencia cualitativa** `data/scouting.json` para los partidos del día. Son hermanas:
+una es la visión del mercado, la otra la lectura del analista.
+
+- Para cada partido del día, investigar por web (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire):
+  **alineación probable/confirmada, bajas/lesiones/suspensiones, contexto** y una **lectura corta + lean**.
+- **REGLA DE ORO (igual que el mercado y los resultados): NADA sin fuente.** Si una baja o un XI no se
+  puede confirmar, marcarlo "en duda" o no incluirlo. NUNCA inventar nombres, lesiones ni alineaciones.
+  Citar las URLs en `fuentes`.
+- Alineaciones: `estado_alineacion="probable"` hasta ~60 min antes del pitazo; al confirmarse, pasar a
+  `"confirmada"` y actualizar el XI real.
+- **Esta capa SOLO se muestra en el modal — NO modifica el motor, ni las probabilidades, ni el puntaje.**
+  El engine la pasa tal cual al panel. Decisión de diseño (19-jun): mantener el motor 100% determinista.
+- Ver el contrato de campos en `data/scouting.json` (`_meta`).
+
 ## Notas
 - Los premios y la proyección de bracket se recalculan solos al correr el motor.
 - **NO toques `data/picks.json`** (picks de torneo congelados para el puntaje) — solo se edita results.json.

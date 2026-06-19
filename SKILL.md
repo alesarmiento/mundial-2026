@@ -14,6 +14,9 @@ Disenado para acompanar TODO el torneo: cada fecha que se carga, las prediccione
 - `data/fixtures.json` — calendario datado de la fase de grupos (72 partidos, fuente Wikipedia). **Estatico.**
 - `data/players.json` — candidatos de consenso (con cuota/rating) a Bota de Oro, Guante de Oro y Mejor Joven. **Estatico** (actualizable si querés refrescar cuotas).
 - `data/results.json` — ledger de resultados REALES (crece fecha a fecha). **Lo unico que editas normalmente.**
+- `data/scouting.json` — **capa de inteligencia cualitativa (IA)** por partido del dia: alineacion probable/confirmada,
+  bajas/lesiones, contexto y lectura del analista con un lean. La rutina la puebla con fuente EN EL MISMO PASO que el
+  mercado. **Solo se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje** (decision 19-jun).
 - `data/state.json` — estado calculado (lo escribe el motor).
 - `data/evolution.json` — snapshot de prob. de campeon por fecha (curva de evolucion).
 - `data/model_config.json` — knobs del motor (capa ataque/defensa `ad_weight`, localia `host_advantage_elo`). **Dormidos (0) por defecto**: el modelo es identico al Elo+Poisson puro. Validar por backtest antes de activar. Ver `MEJORAS-MOTOR.md`.
