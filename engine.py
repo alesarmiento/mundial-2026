@@ -705,7 +705,7 @@ def compute_comparison(teams, results, fixtures, ghist, w_new):
                     "old_brier": round(ob / njug, 3), "new_brier": round(nb / njug, 3)}}
 
 # ---------- comparacion sistema vs mercado/mundo online ----------
-def build_market_view(fixtures, results, elo, ad, w, market):
+def build_market_view(fixtures, results, elo, ad, w, market, host_adv=0.0, hosts=()):
     """Por cada partido del dia con dato de mercado: prediccion del SISTEMA (1X2 + marcador + over 2.5)
     vs el CONSENSO online. Sirve de termometro de calibracion. El % es la chance de acertar."""
     played = {frozenset((m["local"], m["visita"])) for m in results}
@@ -715,7 +715,7 @@ def build_market_view(fixtures, results, elo, ad, w, market):
         key = frozenset((f["home"], f["away"]))
         if key in played or key not in mkt:
             continue
-        p = match_pred(f["home"], f["away"], elo, ad, w)
+        p = match_pred(f["home"], f["away"], elo, ad, w, host_adv, hosts)
         if not p:
             continue
         la, lb = p["xgH"], p["xgA"]
@@ -907,7 +907,7 @@ def main():
     comparativa = compute_comparison(teams, results, fixtures, ghist, cfg["scoring_w"]) if cfg["scoring_w"] > 0 else None
     ad_det = ad if ad else compute_ad(results, ghist, teams["grupos"])
     equipo_detalle = build_equipo_detalle(teams, results, ghist, elo, ad_det)
-    mercado = build_market_view(fixtures, results, elo, ad_det, cfg["scoring_w"], market)
+    mercado = build_market_view(fixtures, results, elo, ad_det, cfg["scoring_w"], market, cfg["host_adv"], cfg["hosts"])
     mu_liga = ad_det.get("mu") if ad_det else None
 
     # estado para el panel

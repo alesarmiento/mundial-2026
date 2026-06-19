@@ -9,8 +9,12 @@
     "scoring_modelo_desde": "Fecha desde la cual el puntaje usa el modelo mejorado. Puesta en la fecha del primer partido (2026-06-11) para cubrir todo el torneo."
   },
   "ad_weight": 0.5,
-  "host_advantage_elo": 0,
+  "host_advantage_elo": 90,
   "scoring_ad_weight": 0.5,
   "scoring_modelo_desde": "2026-06-11",
-  "hosts": ["United States", "Mexico", "Canada"]
+  "hosts": [
+    "United States",
+    "Mexico",
+    "Canada"
+  ]
 }
