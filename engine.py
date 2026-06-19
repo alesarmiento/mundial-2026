@@ -1356,7 +1356,7 @@ function paneBracket(p){
   if(S.nota_bracket)p.append($('div',{class:'warn'},S.nota_bracket));
 }
 
-const fmtPos=c=>c?(c[0]+'°'+c.slice(1)):'';
+function fmtPos(c){return c?(c[0]+'°'+c.slice(1)):'';}
 function bmBox(m){
   const box=$('div',{class:'bm'});
   [['home','pHome','posHome'],['away','pAway','posAway']].forEach(([t,pk,pos])=>{
