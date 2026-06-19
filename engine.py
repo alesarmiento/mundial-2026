@@ -254,6 +254,13 @@ def projected_bracket(teams, probs, elo):
             assign[s["slot"]] = group_third[cand[0]]; taken.add(cand[0])
         else:
             assign[s["slot"]] = None
+    # etiqueta de posicion proyectada por equipo (1X / 2X / 3X) para mostrar en el bracket
+    third_group = {tm: g for g, tm in group_third.items()}
+    poslabel = {}
+    for g, tm in g1.items(): poslabel[tm] = "1" + g
+    for g, tm in g2.items(): poslabel[tm] = "2" + g
+    for _slot, tm in assign.items():
+        if tm: poslabel[tm] = "3" + third_group.get(tm, "")
     def res(code):
         if code.startswith("3:"): return None
         return g1[code[1]] if code[0] == "1" else g2[code[1]]
@@ -274,10 +281,12 @@ def projected_bracket(teams, probs, elo):
             if h and a:
                 ph, pa = probs[h][key], probs[a][key]
                 w = h if ph >= pa else a
-                matches.append({"home": h, "away": a, "pHome": round(ph, 1), "pAway": round(pa, 1), "winner": w})
+                matches.append({"home": h, "away": a, "pHome": round(ph, 1), "pAway": round(pa, 1), "winner": w,
+                                "posHome": poslabel.get(h), "posAway": poslabel.get(a)})
             else:
                 w = h or a or "?"
-                matches.append({"home": h or "?", "away": a or "?", "pHome": None, "pAway": None, "winner": w})
+                matches.append({"home": h or "?", "away": a or "?", "pHome": None, "pAway": None, "winner": w,
+                                "posHome": poslabel.get(h), "posAway": poslabel.get(a)})
             winners.append(w)
         bracket.append({"ronda": nm, "partidos": matches})
         if len(winners) <= 1:
@@ -1296,12 +1305,14 @@ function paneBracket(p){
   if(S.nota_bracket)p.append($('div',{class:'warn'},S.nota_bracket));
 }
 
+const fmtPos=c=>c?(c[0]+'°'+c.slice(1)):'';
 function bmBox(m){
   const box=$('div',{class:'bm'});
-  [['home','pHome'],['away','pAway']].forEach(([t,pk])=>{
+  [['home','pHome','posHome'],['away','pAway','posAway']].forEach(([t,pk,pos])=>{
     const win=m.winner===m[t];
     const r=$('div',{class:'br'+(win?' w':'')});
-    r.append($('span',{class:'tn'}, m[t]||'—'));
+    const badge=m[pos]?`<span style="font-size:9px;color:#8b949e;border:1px solid #2d3440;border-radius:4px;padding:0 3px;margin-right:4px;font-weight:600">${fmtPos(m[pos])}</span>`:'';
+    r.append($('span',{class:'tn',html:badge+(m[t]||'—')}));
     r.append($('span',{class:'pp'}, m[pk]!=null?(m[pk]+'%'):''));
     box.append(r);
   });
