@@ -89,6 +89,11 @@ def _lambdas(ra, rb, fa=1.0, fb=1.0):
     base = 1.35
     return max(0.18, (base + sup / 2.0) * fa), max(0.18, (base - sup / 2.0) * fb)
 
+def round_score(x):
+    """Regla unica de redondeo del marcador (redondeo half-up del xG). UNICA fuente de verdad:
+    el marcador mostrado/puntuado SIEMPRE es round_score(xG). No agregar ajustes encima (ver invariante en main)."""
+    return int(x + 0.5)
+
 def match_pred(home, away, elo, ad=None, w=0.0, host_adv=0.0, hosts=()):
     """Prediccion analitica de un partido: P(gana local/empate/gana visita) + marcador mas probable.
     Capa ataque/defensa (ad,w) y localia de anfitriones (host_adv,hosts) son opcionales:
@@ -116,11 +121,13 @@ def match_pred(home, away, elo, ad=None, w=0.0, host_adv=0.0, hosts=()):
     # Un empate como marcador modal puede convivir con un favorito en el 1X2 (P(gana) agrega muchos
     # marcadores distintos); no es contradiccion. Lo que se muestra es lo que se puntua ("score_med").
     # "score" (moda exacta) queda informativo, no se usa.
-    disp = [int(la + 0.5), int(lb + 0.5)]
+    # El marcador se deriva del MISMO xG redondeado que se muestra -> invariante exacto (verificado en main).
+    xgH, xgA = round(la, 2), round(lb, 2)
+    disp = [round_score(xgH), round_score(xgA)]
     return {"pH": round(100 * pH / s, 1), "pD": round(100 * pD / s, 1),
             "pA": round(100 * pA / s, 1), "score": [best[0], best[1]],
             "score_med": disp,
-            "xgH": round(la, 2), "xgA": round(lb, 2)}
+            "xgH": xgH, "xgA": xgA}
 
 def build_por_fecha(teams, results, elo, fixtures, anchor, cfg=None):
     """Vista por dia: cada partido con resultado real (si jugado) o prediccion (si por jugar)."""
@@ -826,6 +833,19 @@ def main():
     if os.path.exists(fx_path):
         fxjson = load("fixtures.json"); fixtures = fxjson.get("fixtures", []); fx_meta = fxjson.get("_meta", {})
     por_fecha, fecha_activa = build_por_fecha(teams, results, elo, fixtures, ultima, cfg)
+
+    # INVARIANTE (no romper): el marcador mostrado/puntuado SIEMPRE = redondeo del xG mostrado.
+    # Si alguien reintroduce un ajuste al 1X2 (el bug 2-1 del 19-jun), esto corta el deploy.
+    for _d in por_fecha:
+        for _p in _d.get("partidos", []):
+            _pr = _p.get("pred")
+            if not _pr:
+                continue
+            _esp = [round_score(_pr["xgH"]), round_score(_pr["xgA"])]
+            if _pr["score_med"] != _esp:
+                raise SystemExit(
+                    f"INVARIANTE ROTA: {_p['home']} vs {_p['away']} score_med={_pr['score_med']} "
+                    f"!= redondeo xG {_esp}. El marcador debe ser round_score(xG) puro, sin ajustar al 1X2.")
 
     players = {}
     pl_path = os.path.join(DATA, "players.json")
