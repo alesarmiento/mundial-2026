@@ -1,9 +1,10 @@
 {
   "_meta": {
-    "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. La rutina la puebla EN EL MISMO PASO que el mercado, investigando por web. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
-    "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' o se omite. Las alineaciones son 'probable' hasta ~60 min antes del pitazo; al confirmarse se pasa a 'confirmada'. NUNCA inventar nombres ni bajas.",
+    "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. La rutina la puebla EN EL MISMO PASO que el mercado, investigando por web, para TODOS los partidos de la jornada del dia. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
+    "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' o se omite. Las alineaciones son 'probable' hasta ~60 min antes del pitazo; al confirmarse se pasa a 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita = once probable o confirmado. bajas_local/bajas_visita = lista de ausencias/dudas con motivo. lectura = sintesis corta. lean = direccion cualitativa (texto corto). fuentes = URLs.",
-    "actualizado": "2026-06-19"
+    "actualizado": "2026-06-19",
+    "cobertura": "jornada completa del dia (todos los partidos con fixture <= hoy sin jugar)"
   },
   "partidos": [
     {
@@ -12,13 +13,58 @@
       "xi_local": "Freese; Freeman, Richards, Ream, Robinson; Adams; Dest, Tillman, McKennie, Pulisic; Balogun (Pulisic en duda)",
       "xi_visita": "Beach; Burgess, Circati, Souttar; Italiano, O'Neill, Metcalfe, Bos; Irankunda, Toure (3-4-2-1)",
       "bajas_local": ["Pulisic en duda por lesion en el gemelo; Pochettino no lo confirmo y podria ir al banco como precaucion"],
-      "bajas_visita": ["Toure tuvo un calambre vs Turquia pero esta disponible; sin bajas: Popovic confirmo plantel completo"],
+      "bajas_visita": ["Toure tuvo un calambre vs Turquia pero esta disponible; Popovic confirmo plantel completo, sin bajas"],
       "lectura": "Australia llega a pleno y sin bajas, con el 3-4-2-1 que volteo a Turquia (apuesta: arquero juvenil Beach sobre Mat Ryan). USA tiene a su figura, Pulisic, en duda por el gemelo. Lean cualitativo: leve a Australia / partido cerrado de pocos goles. Refuerza que el 59% del mercado a USA se ve inflado.",
       "lean": "Leve a Australia · pocos goles",
       "fuentes": [
         "https://www.nbcsports.com/soccer/news/how-will-usa-line-up-against-australia-in-second-game-of-their-2026-world-cup-as-pochettinos-usmnt-seek-2-0-start",
         "https://www.sportsmole.co.uk/football/usa/world-cup-2026/team-news/usa-vs-australia-injury-suspension-list-predicted-xis_599443.html",
         "https://www.rotowire.com/soccer/article/usa-vs-australia-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-d-118651"
+      ]
+    },
+    {
+      "home": "Scotland", "away": "Morocco", "fecha": "2026-06-19",
+      "estado_alineacion": "probable",
+      "xi_local": "Gunn; Hickey, Hanley, Hendry, Robertson; Ferguson, McGinn; Doak, McTominay, Christie; Adams (4-2-3-1)",
+      "xi_visita": "Bono; Mazraoui, Issa Diop, Chadi Riad, Hakimi; Bouaddi, El Aynaoui, Ounahi; El Khannouss, Saibari, Brahim Diaz (4-3-3)",
+      "bajas_local": ["Plantel completo en el ultimo entreno; McKenna se perdio una practica el miercoles pero esta disponible"],
+      "bajas_visita": ["Sin bajas nuevas tras el 1-1 con Brasil; perdio a Ezzalzouli y Aguerd por lesion ANTES del Mundial, pero llega entero"],
+      "lectura": "Morocco llega entero y en confianza tras aguantarle el 1-1 a Brasil; el modelo y el mercado lo ven favorito. Scotland sin bajas pero por debajo en nivel, y nunca paso de fase de grupos en un torneo grande: mucho en juego.",
+      "lean": "Favorito Morocco; Scotland pelea desde abajo",
+      "fuentes": [
+        "https://www.rotowire.com/soccer/article/scotland-vs-morocco-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-c-118659",
+        "https://www.sportsmole.co.uk/football/scotland/world-cup-2026/preview/scotland-vs-morocco-prediction-team-news-lineups_599454.html",
+        "https://www.espn.com/soccer/story/_/id/49107538/scotland-morocco-line-ups-world-cup-predicted-xis"
+      ]
+    },
+    {
+      "home": "Brazil", "away": "Haiti", "fecha": "2026-06-19",
+      "estado_alineacion": "probable",
+      "xi_local": "Alisson; Ibanez, Gabriel Magalhaes, Marquinhos, Douglas Santos; Bruno Guimaraes, Paqueta, Fabinho; Raphinha, Igor Thiago, Vinicius Jr (sin Neymar)",
+      "xi_visita": "Placide; bloque bajo 4-2-3-1 planteado a contener (XI completo no confirmado por las fuentes)",
+      "bajas_local": ["Neymar OUT: no se recupero de su lesion", "Casemiro en duda para el XI; Bruno Guimaraes, Paqueta y Fabinho podrian entrar"],
+      "bajas_visita": ["Sin bajas de peso reportadas"],
+      "lectura": "Brasil sin Neymar (lesion) y posiblemente sin Casemiro de arranque, pero sigue siendo favorito abrumador ante una Haiti que se planta a defender (perdio 1-0 con Scotland). El sistema proyecta goleada (4-0). Riesgo de sorpresa muy bajo.",
+      "lean": "Brasil favorito abrumador pese a la baja de Neymar",
+      "fuentes": [
+        "https://www.rotowire.com/soccer/article/brazil-vs-haiti-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-c-118660",
+        "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/brazil-s-possible-lineup-to-face-haiti-at-the-fifa-world-cup-2026-2026-06-19",
+        "https://www.espn.com/soccer/story/_/id/49097937/brazil-haiti-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups"
+      ]
+    },
+    {
+      "home": "Turkiye", "away": "Paraguay", "fecha": "2026-06-19",
+      "estado_alineacion": "probable",
+      "xi_local": "Guler, Kenan Yildiz y Calhanoglu disponibles; Yildiz vuelve al XI tras molestia en el gemelo (en la fecha 1 entro desde el banco). XI completo no detallado por las fuentes.",
+      "xi_visita": "Gill; Caceres, G. Gomez, Alderete, Maidana; Bobadilla, Cubas; D. Gomez, Enciso, Almiron; Sanabria (4-4-2)",
+      "bajas_local": ["Kenan Yildiz vuelve al XI tras sobrecarga en el gemelo; Guler y Calhanoglu disponibles pese a molestias previas al torneo"],
+      "bajas_visita": ["Sin bajas de peso reportadas"],
+      "lectura": "Partido a todo o nada: ambos perdieron la fecha 1. Turkiye tiene el plantel mas talentoso y recupera a Yildiz; Montella viene de responder cada derrota con una victoria desde la Euro 2024. Ligero favoritismo turco en un duelo de necesidad para los dos.",
+      "lean": "Turkiye ligero favorito; ambos obligados a ganar",
+      "fuentes": [
+        "https://www.rotowire.com/soccer/article/turkey-vs-paraguay-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-d-118661",
+        "https://www.sportsmole.co.uk/football/turkey/world-cup-2026/preview/turkey-vs-paraguay-prediction-team-news-lineups_599370.html",
+        "https://khelnow.com/football/world-football-paraguay-predicted-lineup-vs-turkiye-fifa-world-cup-202606"
       ]
     }
   ]
