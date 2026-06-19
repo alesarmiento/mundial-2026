@@ -111,16 +111,12 @@ def match_pred(home, away, elo, ad=None, w=0.0, host_adv=0.0, hosts=()):
             else: pA += p
             if p > bestp: bestp, best = p, (i, j)
     s = pH + pD + pA
-    # marcador para mostrar Y puntuar: REDONDEO del xG (goles esperados) de cada equipo, ajustado para
-    # NO contradecir el 1X2 mas probable. Sigue al xG (ej. 2.67 -> 3) y respeta quien gana. Lo que se
-    # muestra es lo que se puntua (campo "score_med"). "score" (moda) queda informativo, no se usa.
+    # marcador para mostrar Y puntuar: REDONDEO PURO del xG (goles esperados) de cada equipo.
+    # Decision (Alejandro, 19-jun): el marcador sigue al xG tal cual, SIN ajustarlo al 1X2.
+    # Un empate como marcador modal puede convivir con un favorito en el 1X2 (P(gana) agrega muchos
+    # marcadores distintos); no es contradiccion. Lo que se muestra es lo que se puntua ("score_med").
+    # "score" (moda exacta) queda informativo, no se usa.
     disp = [int(la + 0.5), int(lb + 0.5)]
-    if pH >= pD and pH >= pA:           # gana local
-        if disp[0] <= disp[1]: disp[0] = disp[1] + 1
-    elif pA >= pD and pA >= pH:         # gana visita
-        if disp[1] <= disp[0]: disp[1] = disp[0] + 1
-    elif disp[0] != disp[1]:            # empate mas probable -> mostrar empate
-        mm = max(disp); disp = [mm, mm]
     return {"pH": round(100 * pH / s, 1), "pD": round(100 * pD / s, 1),
             "pA": round(100 * pA / s, 1), "score": [best[0], best[1]],
             "score_med": disp,
