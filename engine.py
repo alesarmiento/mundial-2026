@@ -723,12 +723,31 @@ def build_market_view(fixtures, results, elo, ad, w, market):
         pb = [math.exp(-lb) * lb ** j / math.factorial(j) for j in range(9)]
         over = sum(pa[i] * pb[j] for i in range(9) for j in range(9) if i + j >= 3)
         sc = p["score_med"]; m = mkt[key]
+        # divergencia sistema vs mercado: distinto favorito = ALTA; misma direccion pero gap grande = MEDIA
+        def fav(pH, pD, pA):
+            return "H" if pH >= max(pD, pA) else ("D" if pD >= pA else "A")
+        sfav = fav(p["pH"], p["pD"], p["pA"])
+        mfav = fav(m.get("pH", 0), m.get("pD", 0), m.get("pA", 0)) if m.get("pH") is not None else None
+        maxdiff = max(abs(p["pH"] - (m.get("pH") or 0)), abs(p["pD"] - (m.get("pD") or 0)),
+                      abs(p["pA"] - (m.get("pA") or 0))) if m.get("pH") is not None else 0
+        nm = {"H": f["home"], "D": "empate", "A": f["away"]}
+        if mfav is None:
+            nivel, msg = "baja", ""
+        elif sfav != mfav:
+            nivel = "alta"
+            msg = f"El sistema y el mercado discrepan en quién gana: sistema → <b>{nm[sfav]}</b>, mercado → <b>{nm[mfav]}</b>."
+        elif maxdiff >= 15:
+            nivel = "media"
+            msg = f"Coinciden en el favorito ({nm[sfav]}) pero difieren {round(maxdiff)} pts en la probabilidad."
+        else:
+            nivel, msg = "baja", ""
         rows.append({
             "fecha": f.get("date"), "home": f["home"], "away": f["away"],
             "sys": {"pH": p["pH"], "pD": p["pD"], "pA": p["pA"],
                     "score": f"{sc[0]}-{sc[1]}", "over25": round(100 * over)},
             "mkt": {"pH": m.get("pH"), "pD": m.get("pD"), "pA": m.get("pA"),
                     "score": m.get("score"), "over25": m.get("over25"), "fuente": m.get("fuente", "")},
+            "divergencia": {"nivel": nivel, "maxdiff": round(maxdiff), "msg": msg},
         })
     return rows
 
@@ -1120,6 +1139,12 @@ function matchRow(m){
     const ps=m.pred.score_med||m.pred.score;
     r.append($('span',{class:'pron'},'pron '+ps[0]+'–'+ps[1]));
   } else { r.append($('span',{class:'muted'},'—')) }
+  const mkrow=(S.mercado||[]).find(x=>x.home===m.home&&x.away===m.away);
+  if(mkrow&&mkrow.divergencia&&mkrow.divergencia.nivel==='alta'){
+    const w=$('span',{html:'⚠️ vs mercado'});w.style.cssText='font-size:10px;color:#f85149;border:1px solid #f85149;border-radius:5px;padding:0 5px;flex:none';r.append(w);
+  } else if(mkrow&&mkrow.divergencia&&mkrow.divergencia.nivel==='media'){
+    const w=$('span',{html:'⚠️'});w.style.cssText='font-size:10px;color:#d29922;flex:none';r.append(w);
+  }
   r.append($('span',{class:'info'},'ⓘ por qué'));
   return r;
 }
@@ -1413,12 +1438,14 @@ function marketHtml(home,away){
   const mk=(S.mercado||[]).find(x=>x.home===home&&x.away===away);
   if(!mk)return '';
   const f=v=>v!=null?(v+'%'):'—';
-  const dH=(mk.sys.pH!=null&&mk.mkt.pH!=null)?Math.round(mk.sys.pH-mk.mkt.pH):null;
-  let lect='';
-  if(dH!=null){
-    lect = Math.abs(dH)<=5 ? 'Sistema y mercado <b>coinciden</b> en el favorito.'
-      : (dH>0 ? 'El sistema es <b>más confiado</b> en '+home+' (+'+dH+' pts vs el mercado).'
-              : 'El sistema es <b>más cauto</b> con '+home+' ('+dH+' pts vs el mercado).');
+  const dv=mk.divergencia||{nivel:'baja',msg:''};
+  let banner='';
+  if(dv.nivel==='alta'){
+    banner=`<div style="background:#3d1418;border-left:3px solid #f85149;color:#f85149;padding:8px 11px;border-radius:6px;font-size:12.5px;margin-top:5px"><b>⚠️ Gran divergencia con el mercado.</b> ${dv.msg} Cuando esto pasa, el mercado suele tener razón — tomar el pronóstico del sistema con pinzas.</div>`;
+  } else if(dv.nivel==='media'){
+    banner=`<div style="background:#3a2e12;border-left:3px solid #d29922;color:#d29922;padding:8px 11px;border-radius:6px;font-size:12.5px;margin-top:5px">⚠️ Divergencia media. ${dv.msg}</div>`;
+  } else if(mk.mkt.pH!=null){
+    banner=`<div class="muted" style="font-size:11.5px;margin-top:5px">📊 Sistema y mercado <b>coinciden</b> en líneas generales.</div>`;
   }
   const row=(lbl,d,cls)=>`<tr><td><b>${lbl}</b></td><td class="n ${cls}">${f(d.pH)}</td><td class="n muted">${f(d.pD)}</td><td class="n ${cls}">${f(d.pA)}</td><td class="n">${d.score||'—'}</td><td class="n muted">${f(d.over25)}</td></tr>`;
   return `<div class="flbl" style="margin-top:14px">🌐 Visión del mercado (mundo online)</div>
@@ -1426,7 +1453,7 @@ function marketHtml(home,away){
       <tr><th></th><th class="n">Gana ${home}</th><th class="n">Empate</th><th class="n">Gana ${away}</th><th class="n">Marcador</th><th class="n">Over 2.5</th></tr>
       ${row('🤖 Sistema',mk.sys,'q')}${row('🌐 Mercado',mk.mkt,'')}
     </table>
-    ${lect?('<div class="muted" style="font-size:11.5px;margin-top:5px">📊 '+lect+'</div>'):''}
+    ${banner}
     <div class="muted" style="font-size:11px;margin-top:3px">Fuente mercado: ${mk.mkt.fuente||'—'}</div>`;
 }
 function paneComp(p){
