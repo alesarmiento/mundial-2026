@@ -2,12 +2,14 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://sports.yahoo.com/soccer/live/world-cup-2026-scores-results-schedule-live-updates-195336732.html",
+    "fuente": "https://cryptobriefing.com/brazil-haiti-world-cup-cunha-brace/ + ESPN live BRA-HAI (Cunha 23', 36'; Vinicius Jr 45+1')",
     "actualizado": "2026-06-20"
   },
   "jugadores": [
     {"jugador": "Lionel Messi", "equipo": "Argentina", "goles": 3},
     {"jugador": "Jonathan David", "equipo": "Canada", "goles": 3},
+    {"jugador": "Matheus Cunha", "equipo": "Brazil", "goles": 2},
+    {"jugador": "Vinicius Junior", "equipo": "Brazil", "goles": 2},
     {"jugador": "Erling Haaland", "equipo": "Norway", "goles": 2},
     {"jugador": "Kylian Mbappe", "equipo": "France", "goles": 2},
     {"jugador": "Harry Kane", "equipo": "England", "goles": 2},
@@ -18,7 +20,6 @@
     {"jugador": "Johan Manzambi", "equipo": "Switzerland", "goles": 2},
     {"jugador": "Cyle Larin", "equipo": "Canada", "goles": 2},
     {"jugador": "Ismael Saibari", "equipo": "Morocco", "goles": 2},
-    {"jugador": "Vinicius Junior", "equipo": "Brazil", "goles": 1},
     {"jugador": "Jude Bellingham", "equipo": "England", "goles": 1},
     {"jugador": "Marcus Rashford", "equipo": "England", "goles": 1},
     {"jugador": "Viktor Gyokeres", "equipo": "Sweden", "goles": 1},
