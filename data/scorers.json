@@ -2,7 +2,7 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://www.espn.com/soccer/match/_/gameId/760447/sweden-netherlands + https://www.nbcsports.com/soccer/news/netherlands-vs-japan-live-updates-world-cup-live-score-video-highlights-goals (NED vs SWE 5-1 y NED vs JPN 2-2, 20-jun-2026)",
+    "fuente": "https://www.espn.com/soccer/match/_/gameId/760448/ivory-coast-germany (GER 2-1 CIV, Undav doblete, 20-jun-2026) + https://www.outlookindia.com/sports/football/germany-vs-ivory-coast-live-score-fifa-world-cup-2026-group-e-ger-civ-updates-toronto-stadium-highlights",
     "actualizado": "2026-06-20"
   },
   "jugadores": [
@@ -22,6 +22,7 @@
     {"jugador": "Elijah Just", "equipo": "New Zealand", "goles": 2},
     {"jugador": "Johan Manzambi", "equipo": "Switzerland", "goles": 2},
     {"jugador": "Cyle Larin", "equipo": "Canada", "goles": 2},
-    {"jugador": "Ismael Saibari", "equipo": "Morocco", "goles": 2}
+    {"jugador": "Ismael Saibari", "equipo": "Morocco", "goles": 2},
+    {"jugador": "Deniz Undav", "equipo": "Germany", "goles": 2}
   ]
 }
