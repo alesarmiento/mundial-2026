@@ -2,12 +2,15 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://cryptobriefing.com/galarza-fastest-goal-2026-world-cup/ + heavy.com + football360.com.au (Turkiye 0-1 Paraguay, 20-jun-2026)",
+    "fuente": "https://www.espn.com/soccer/match/_/gameId/760447/sweden-netherlands + https://www.nbcsports.com/soccer/news/netherlands-vs-japan-live-updates-world-cup-live-score-video-highlights-goals (NED vs SWE 5-1 y NED vs JPN 2-2, 20-jun-2026)",
     "actualizado": "2026-06-20"
   },
   "jugadores": [
     {"jugador": "Lionel Messi", "equipo": "Argentina", "goles": 3},
     {"jugador": "Jonathan David", "equipo": "Canada", "goles": 3},
+    {"jugador": "Brian Brobbey", "equipo": "Netherlands", "goles": 2},
+    {"jugador": "Cody Gakpo", "equipo": "Netherlands", "goles": 2},
+    {"jugador": "Crysencio Summerville", "equipo": "Netherlands", "goles": 2},
     {"jugador": "Matheus Cunha", "equipo": "Brazil", "goles": 2},
     {"jugador": "Vinicius Junior", "equipo": "Brazil", "goles": 2},
     {"jugador": "Erling Haaland", "equipo": "Norway", "goles": 2},
@@ -19,12 +22,6 @@
     {"jugador": "Elijah Just", "equipo": "New Zealand", "goles": 2},
     {"jugador": "Johan Manzambi", "equipo": "Switzerland", "goles": 2},
     {"jugador": "Cyle Larin", "equipo": "Canada", "goles": 2},
-    {"jugador": "Ismael Saibari", "equipo": "Morocco", "goles": 2},
-    {"jugador": "Jude Bellingham", "equipo": "England", "goles": 1},
-    {"jugador": "Marcus Rashford", "equipo": "England", "goles": 1},
-    {"jugador": "Viktor Gyokeres", "equipo": "Sweden", "goles": 1},
-    {"jugador": "Luis Romo", "equipo": "Mexico", "goles": 1},
-    {"jugador": "Alex Freeman", "equipo": "United States", "goles": 1},
-    {"jugador": "Matias Galarza", "equipo": "Paraguay", "goles": 1}
+    {"jugador": "Ismael Saibari", "equipo": "Morocco", "goles": 2}
   ]
 }
