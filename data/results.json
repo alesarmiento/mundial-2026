@@ -2,7 +2,7 @@
   "_meta": {
     "descripcion": "Ledger de resultados REALES. Cada partido entra con su fuente. NUNCA se inventa un marcador. Si no se puede verificar, no se agrega.",
     "fase_valores": "grupos | dieciseisavos | octavos | cuartos | semis | tercer_puesto | final",
-    "ultima_fecha_cargada": "2026-06-20"
+    "ultima_fecha_cargada": "2026-06-21"
   },
   "partidos": [
     {"fecha": "2026-06-11", "fase": "grupos", "grupo": "A", "local": "Mexico", "visita": "South Africa", "gl": 2, "gv": 0, "fuente": "https://www.nbcsports.com/soccer/news/2026-world-cup-group-stage-table-full-standings-for-all-12-groups"},
@@ -39,6 +39,7 @@
     {"fecha": "2026-06-19", "fase": "grupos", "grupo": "D", "local": "Turkiye", "visita": "Paraguay", "gl": 0, "gv": 1, "fuente": "https://cryptobriefing.com/galarza-fastest-goal-2026-world-cup/"},
     {"fecha": "2026-06-20", "fase": "grupos", "grupo": "F", "local": "Netherlands", "visita": "Sweden", "gl": 5, "gv": 1, "fuente": "https://www.espn.com/soccer/match/_/gameId/760447/sweden-netherlands"},
     {"fecha": "2026-06-20", "fase": "grupos", "grupo": "E", "local": "Germany", "visita": "Ivory Coast", "gl": 2, "gv": 1, "fuente": "https://www.espn.com/soccer/match/_/gameId/760448/ivory-coast-germany"},
-    {"fecha": "2026-06-20", "fase": "grupos", "grupo": "E", "local": "Ecuador", "visita": "Curacao", "gl": 0, "gv": 0, "fuente": "https://sports.yahoo.com/soccer/live/world-cup-2026-scores-results-schedule-live-updates-195336732.html (ECU 0-0 CUW FT; Eloy Room heroico, Bolavip/Yahoo confirman empate sin goles)"}
+    {"fecha": "2026-06-20", "fase": "grupos", "grupo": "E", "local": "Ecuador", "visita": "Curacao", "gl": 0, "gv": 0, "fuente": "https://sports.yahoo.com/soccer/live/world-cup-2026-scores-results-schedule-live-updates-195336732.html (ECU 0-0 CUW FT; Eloy Room heroico, Bolavip/Yahoo confirman empate sin goles)"},
+    {"fecha": "2026-06-20", "fase": "grupos", "grupo": "F", "local": "Tunisia", "visita": "Japan", "gl": 0, "gv": 4, "fuente": "https://www.foxsports.com/live-blog/soccer/tunisia-vs-japan-live-updates-score-latest-world-cup-news-goals (Japan 4-0 FT; Kamada 4', Ueda 31', Ito ~67', Ueda 83'; confirmado Fox Sports / ESPN / Yahoo Sports)"}
   ]
 }
