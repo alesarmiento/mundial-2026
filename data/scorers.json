@@ -2,7 +2,7 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://www.foxsports.com/live-blog/soccer/tunisia-vs-japan-live-updates-score-latest-world-cup-news-goals + https://www.goal.com/en/lists/world-cup-2026-golden-boot-standings-fifa-award/blt29fdba0896b8fd09 (verificado 21-jun-2026; Japan 4-0 Tunisia FT; Kamada 2G, Ueda 2G)",
+    "fuente": "https://worldsoccertalk.com/world-cup/spain-vs-saudi-arabia-live-updates-minute-by-minute-coverage-of-the-2026-world-cup-group-h-game/ + https://www.goal.com/en/lists/world-cup-2026-golden-boot-standings-fifa-award/blt29fdba0896b8fd09 (verificado 21-jun-2026; Spain 4-0 Saudi Arabia FT; Oyarzabal 2G; Yamal 1G)",
     "actualizado": "2026-06-21"
   },
   "jugadores": [
@@ -25,6 +25,7 @@
     {"jugador": "Ismael Saibari", "equipo": "Morocco", "goles": 2},
     {"jugador": "Deniz Undav", "equipo": "Germany", "goles": 2},
     {"jugador": "Daichi Kamada", "equipo": "Japan", "goles": 2},
-    {"jugador": "Ayase Ueda", "equipo": "Japan", "goles": 2}
+    {"jugador": "Ayase Ueda", "equipo": "Japan", "goles": 2},
+    {"jugador": "Mikel Oyarzabal", "equipo": "Spain", "goles": 2}
   ]
 }
