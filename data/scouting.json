@@ -1,70 +1,67 @@
 {
   "_meta": {
-    "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. La rutina la puebla EN EL MISMO PASO que el mercado, investigando por web, para TODOS los partidos de la jornada del dia. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
-    "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' o se omite. Las alineaciones son 'probable' hasta ~60 min antes del pitazo; al confirmarse se pasa a 'confirmada'. NUNCA inventar nombres ni bajas.",
-    "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita = once probable o confirmado. bajas_local/bajas_visita = lista de ausencias/dudas con motivo. lectura = sintesis corta. lean = direccion cualitativa (texto corto). fuentes = URLs.",
-    "actualizado": "2026-06-19",
-    "cobertura": "jornada completa del dia (todos los partidos con fixture <= hoy sin jugar)"
+    "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
+    "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' o se omite. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
+    "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
+    "actualizado": "2026-06-22",
+    "cobertura": "jornada completa del dia"
   },
   "partidos": [
     {
-      "home": "United States", "away": "Australia", "fecha": "2026-06-19",
+      "home": "Argentina", "away": "Austria", "fecha": "2026-06-22",
       "estado_alineacion": "probable",
-      "xi_local": "Freese; Freeman, Richards, Ream, Robinson; Adams; Dest, Tillman, McKennie, Pulisic; Balogun (Pulisic en duda)",
-      "xi_visita": "Beach; Burgess, Circati, Souttar; Italiano, O'Neill, Metcalfe, Bos; Irankunda, Toure (3-4-2-1)",
-      "bajas_local": ["Pulisic en duda por lesion en el gemelo; Pochettino no lo confirmo y podria ir al banco como precaucion"],
-      "bajas_visita": ["Toure tuvo un calambre vs Turquia pero esta disponible; Popovic confirmo plantel completo, sin bajas"],
-      "lectura": "Australia llega a pleno y sin bajas, con el 3-4-2-1 que volteo a Turquia (apuesta: arquero juvenil Beach sobre Mat Ryan). USA tiene a su figura, Pulisic, en duda por el gemelo. Lean cualitativo: leve a Australia / partido cerrado de pocos goles. Refuerza que el 59% del mercado a USA se ve inflado.",
-      "lean": "Leve a Australia · pocos goles",
+      "xi_local": "E. Martinez; Molina, C. Romero, L. Martinez, Medina (o Tagliafico); De Paul, Mac Allister, Enzo Fernandez; Messi, J. Alvarez, N. Gonzalez (4-3-3). Messi titular esperado (viene de hat-trick a Argelia). Julian Alvarez entra por Lautaro. OJO: con la clasificacion cerca, ESPN plantea una variante MUY rotada (Paz, Almada, incluso descanso de Messi) — NO confirmada.",
+      "xi_visita": "Schlager; Posch (duda), Lienhart, Alaba, Mwene; Seiwald, X. Schlager, Laimer; Schmid, Sabitzer; Kalajdzic (4-2-3-1 aprox).",
+      "bajas_local": ["Gonzalo Montiel: lesion muscular (salio al entretiempo vs Argelia), en duda; lo reemplazaria Molina", "Lautaro Martinez: sin lesion, pierde el puesto por bajo rendimiento ante J. Alvarez"],
+      "bajas_visita": ["Stefan Posch: en duda por mandibula fracturada"],
+      "lectura": "Argentina lidera el Grupo J tras el 3-0 a Argelia (hat-trick de Messi); con un triunfo sella primer puesto y clasificacion. Austria es 2da tras ganar 3-1 a Jordania. El dilema clave es cuanto rota Scaloni teniendo la clasificacion tan cerca — eso, no el nivel del rival, es lo que mas podria abrir el partido.",
+      "lean": "Fuerte a Argentina si pone XI titular; el unico atenuante real es una rotacion fuerte (no confirmada) que le de aire a Austria.",
       "fuentes": [
-        "https://www.nbcsports.com/soccer/news/how-will-usa-line-up-against-australia-in-second-game-of-their-2026-world-cup-as-pochettinos-usmnt-seek-2-0-start",
-        "https://www.sportsmole.co.uk/football/usa/world-cup-2026/team-news/usa-vs-australia-injury-suspension-list-predicted-xis_599443.html",
-        "https://www.rotowire.com/soccer/article/usa-vs-australia-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-d-118651"
+        "https://www.si.com/soccer/argentina-predicted-lineup-vs-austria-world-cup-6-22-26",
+        "https://www.espn.com/soccer/story/_/id/49120325/fifa-world-cup-2026-argentina-vs-austria-tv-channel-how-watch-kickoff-live-stream-referee-predicted-line-ups",
+        "https://www.nbcsports.com/soccer/news/how-to-watch-argentina-vs-austria-live-stream-tv-channel-team-news-prediction"
       ]
     },
     {
-      "home": "Scotland", "away": "Morocco", "fecha": "2026-06-19",
+      "home": "France", "away": "Iraq", "fecha": "2026-06-22",
       "estado_alineacion": "probable",
-      "xi_local": "Gunn; Hickey, Hanley, Hendry, Robertson; Ferguson, McGinn; Doak, McTominay, Christie; Adams (4-2-3-1)",
-      "xi_visita": "Bono; Mazraoui, Issa Diop, Chadi Riad, Hakimi; Bouaddi, El Aynaoui, Ounahi; El Khannouss, Saibari, Brahim Diaz (4-3-3)",
-      "bajas_local": ["Plantel completo en el ultimo entreno; McKenna se perdio una practica el miercoles pero esta disponible"],
-      "bajas_visita": ["Sin bajas nuevas tras el 1-1 con Brasil; perdio a Ezzalzouli y Aguerd por lesion ANTES del Mundial, pero llega entero"],
-      "lectura": "Morocco llega entero y en confianza tras aguantarle el 1-1 a Brasil; el modelo y el mercado lo ven favorito. Scotland sin bajas pero por debajo en nivel, y nunca paso de fase de grupos en un torneo grande: mucho en juego.",
-      "lean": "Favorito Morocco; Scotland pelea desde abajo",
+      "xi_local": "Maignan; Kounde, Saliba, Upamecano, Hernandez (o Digne); Tchouameni, Rabiot; Olise, Dembele, Doue (o Barcola); Mbappe (4-2-3-1).",
+      "xi_visita": "Jalal Hassan; Hussein Ali, Zaid Tahseen, Akam Hashem, Merchas Doski; Bayesh, Al-Ammari, Zaid Ismael, Ahmed Qasem; Al Hamadi, Aymen Hussein (4-4-2).",
+      "bajas_local": ["Malo Gusto: golpe en tobillo, confirmado disponible", "Saliba: con molestias pero titular esperado", "Tchouameni: rumor de que no entreno NO confirmado — en duda leve"],
+      "bajas_visita": ["Ali Jasim: molestia en cuello, probable banca", "Mohanad Ali: duda por lesion"],
+      "lectura": "Francia gano 3-1 a Senegal; Iraq fue arrollado 4-1 por Noruega. Opta da a Francia ~88% de victoria. La incognita es cuanto rota Deschamps, no el resultado.",
+      "lean": "Francia con amplitud, victoria local con varios goles.",
       "fuentes": [
-        "https://www.rotowire.com/soccer/article/scotland-vs-morocco-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-c-118659",
-        "https://www.sportsmole.co.uk/football/scotland/world-cup-2026/preview/scotland-vs-morocco-prediction-team-news-lineups_599454.html",
-        "https://www.espn.com/soccer/story/_/id/49107538/scotland-morocco-line-ups-world-cup-predicted-xis"
+        "https://www.rotowire.com/soccer/article/france-vs-iraq-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-i-119062",
+        "https://www.sportsmole.co.uk/football/france/world-cup-2026/preview/france-vs-iraq-prediction-team-news-lineups_599660.html"
       ]
     },
     {
-      "home": "Brazil", "away": "Haiti", "fecha": "2026-06-19",
+      "home": "Norway", "away": "Senegal", "fecha": "2026-06-22",
       "estado_alineacion": "probable",
-      "xi_local": "Alisson; Ibanez, Gabriel Magalhaes, Marquinhos, Douglas Santos; Bruno Guimaraes, Paqueta, Fabinho; Raphinha, Igor Thiago, Vinicius Jr (sin Neymar)",
-      "xi_visita": "Placide; bloque bajo 4-2-3-1 planteado a contener (XI completo no confirmado por las fuentes)",
-      "bajas_local": ["Neymar OUT: no se recupero de su lesion", "Casemiro en duda para el XI; Bruno Guimaraes, Paqueta y Fabinho podrian entrar"],
-      "bajas_visita": ["Sin bajas de peso reportadas"],
-      "lectura": "Brasil sin Neymar (lesion) y posiblemente sin Casemiro de arranque, pero sigue siendo favorito abrumador ante una Haiti que se planta a defender (perdio 1-0 con Scotland). El sistema proyecta goleada (4-0). Riesgo de sorpresa muy bajo.",
-      "lean": "Brasil favorito abrumador pese a la baja de Neymar",
+      "xi_local": "Nyland; Ryerson, Ajer, Heggem, Moller Wolfe; Aursnes, Berge, Odegaard; Nusa, Haaland, Sorloth (4-3-3).",
+      "xi_visita": "Mendy; Diatta, Koulibaly, Niakhate, Diouf; P. Gueye, I. Gueye, Lamine Camara; Ismaila Sarr, Sadio Mane; Nicolas Jackson (4-2-3-1).",
+      "bajas_local": ["Sin lesionados (plantel completo)"],
+      "bajas_visita": ["Sin lesionados (plantel completo)"],
+      "lectura": "Noruega lidera el Grupo I (4-1 a Iraq) y con un triunfo queda casi clasificada; Senegal viene de caer 3-1 con Francia y necesita reaccionar. El partido mas parejo del grupo.",
+      "lean": "Equilibrado, ligeramente a empate. Haaland/Odegaard vs la profundidad senegalesa.",
       "fuentes": [
-        "https://www.rotowire.com/soccer/article/brazil-vs-haiti-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-c-118660",
-        "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/brazil-s-possible-lineup-to-face-haiti-at-the-fifa-world-cup-2026-2026-06-19",
-        "https://www.espn.com/soccer/story/_/id/49097937/brazil-haiti-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups"
+        "https://www.rotowire.com/soccer/article/norway-vs-senegal-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-i-119063",
+        "https://www.si.com/soccer/norway-vs-senegal-world-cup-preview-predictions-lineups-6-22-26"
       ]
     },
     {
-      "home": "Turkiye", "away": "Paraguay", "fecha": "2026-06-19",
+      "home": "Jordan", "away": "Algeria", "fecha": "2026-06-22",
       "estado_alineacion": "probable",
-      "xi_local": "Guler, Kenan Yildiz y Calhanoglu disponibles; Yildiz vuelve al XI tras molestia en el gemelo (en la fecha 1 entro desde el banco). XI completo no detallado por las fuentes.",
-      "xi_visita": "Gill; Caceres, G. Gomez, Alderete, Maidana; Bobadilla, Cubas; D. Gomez, Enciso, Almiron; Sanabria (4-4-2)",
-      "bajas_local": ["Kenan Yildiz vuelve al XI tras sobrecarga en el gemelo; Guler y Calhanoglu disponibles pese a molestias previas al torneo"],
-      "bajas_visita": ["Sin bajas de peso reportadas"],
-      "lectura": "Partido a todo o nada: ambos perdieron la fecha 1. Turkiye tiene el plantel mas talentoso y recupera a Yildiz; Montella viene de responder cada derrota con una victoria desde la Euro 2024. Ligero favoritismo turco en un duelo de necesidad para los dos.",
-      "lean": "Turkiye ligero favorito; ambos obligados a ganar",
+      "xi_local": "Abulaila; Al-Rousan, Yazan Al-Arab, Abualnadi (o Nasib); Haddad, Al Rashdan, Al Rawabdeh, Abu Taha; Ali Olwan, Odeh Fakhoury; Mousa Tamari (3-4-2-1).",
+      "xi_visita": "Luca Zidane; Mandi, Bensebaini, Belaid; Boudaoui, Bentaleb, Ait-Nouri; Mahrez, Maza, Gouiri (variantes segun fuente). Mahrez vuelve al XI tras ser omitido vs Argentina.",
+      "bajas_local": ["Abdallah Nasib: duda fisica (salio al 81 vs Austria); su ausencia desarmaria la linea de 3"],
+      "bajas_visita": ["Sin lesionados confirmados. Mahrez NO estaba lesionado (fue omision tecnica vs Argentina)"],
+      "lectura": "Ambos con 0 puntos; el perdedor queda practicamente eliminado, asi que es un cuasi mata-mata. Argelia tiene mas jerarquia individual (Mahrez, Gouiri, Ait-Nouri); Jordania apuesta al orden y al contragolpe de Tamari.",
+      "lean": "Lean leve a Argelia por talento individual, pero ajustado.",
       "fuentes": [
-        "https://www.rotowire.com/soccer/article/turkey-vs-paraguay-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-d-118661",
-        "https://www.sportsmole.co.uk/football/turkey/world-cup-2026/preview/turkey-vs-paraguay-prediction-team-news-lineups_599370.html",
-        "https://khelnow.com/football/world-football-paraguay-predicted-lineup-vs-turkiye-fifa-world-cup-202606"
+        "https://www.rotowire.com/soccer/article/jordan-vs-algeria-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-j-119061",
+        "https://www.sportsmole.co.uk/football/jordan/world-cup-2026/team-news/jordan-vs-algeria-injury-suspension-list-predicted-xis--world-cup-2026_599711.html"
       ]
     }
   ]
