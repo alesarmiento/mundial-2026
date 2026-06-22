@@ -89,6 +89,12 @@ def _lambdas(ra, rb, fa=1.0, fb=1.0):
     base = 1.35
     return max(0.18, (base + sup / 2.0) * fa), max(0.18, (base - sup / 2.0) * fb)
 
+def round_score(x):
+    """Redondeo half-up del xG. El marcador mostrado/puntuado es round_score(xG) de cada equipo
+    (marcador ESPERADO). Es DISTINTO del marcador exacto mas probable (moda) que se ve en el top-3:
+    no es un bug, son dos estadisticas distintas (esperado vs modal)."""
+    return int(x + 0.5)
+
 def match_pred(home, away, elo, ad=None, w=0.0, host_adv=0.0, hosts=()):
     """Prediccion analitica de un partido: P(gana local/empate/gana visita) + marcador mas probable.
     Capa ataque/defensa (ad,w) y localia de anfitriones (host_adv,hosts) son opcionales:
@@ -111,13 +117,11 @@ def match_pred(home, away, elo, ad=None, w=0.0, host_adv=0.0, hosts=()):
             else: pA += p
             if p > bestp: bestp, best = p, (i, j)
     s = pH + pD + pA
-    # marcador mostrado Y puntuado = el marcador exacto MAS PROBABLE (la moda 'best' de la distribucion),
-    # que es exactamente el #1 de los "3 marcadores mas probables" del modal. (Decision 22-jun: antes se
-    # redondeaba el xG de cada equipo por separado, pero eso a veces cae en un marcador que NO es el mas
-    # probable -ej. xG 1.82 redondea a 2 aunque 1 gol sea mas probable-; usar la moda lo hace consistente
-    # con lo que se muestra en el top-3.)
+    # marcador mostrado Y puntuado = REDONDEO del xG (goles ESPERADOS) de cada equipo. Es el marcador
+    # esperado y ha rendido bien en el puntaje. NOTA: puede diferir del marcador exacto mas probable
+    # (la moda 'best', que se ve como #1 en el top-3) -> no es un bug, son dos estadisticas distintas.
     xgH, xgA = round(la, 2), round(lb, 2)
-    disp = [best[0], best[1]]
+    disp = [round_score(xgH), round_score(xgA)]
     return {"pH": round(100 * pH / s, 1), "pD": round(100 * pD / s, 1),
             "pA": round(100 * pA / s, 1), "score": [best[0], best[1]],
             "score_med": disp,
@@ -837,18 +841,19 @@ def main():
         fxjson = load("fixtures.json"); fixtures = fxjson.get("fixtures", []); fx_meta = fxjson.get("_meta", {})
     por_fecha, fecha_activa = build_por_fecha(teams, results, elo, fixtures, ultima, cfg)
 
-    # INVARIANTE (no romper): el marcador mostrado/puntuado SIEMPRE = el marcador exacto mas probable
-    # (la moda 'score'), que es el #1 de los 3 marcadores del modal. Garantiza que el headline y el
-    # top-3 nunca se contradigan (bug detectado 22-jun: redondeo del xG != moda). Si se desvia, corta el deploy.
+    # INVARIANTE (no romper): el marcador mostrado/puntuado SIEMPRE = redondeo del xG de cada equipo
+    # (marcador esperado). Si alguien lo cambia por la moda u otro ajuste, corta el deploy. (El marcador
+    # esperado puede diferir del exacto mas probable del top-3: es esperado, NO es un bug.)
     for _d in por_fecha:
         for _p in _d.get("partidos", []):
             _pr = _p.get("pred")
             if not _pr:
                 continue
-            if _pr["score_med"] != _pr["score"]:
+            _esp = [round_score(_pr["xgH"]), round_score(_pr["xgA"])]
+            if _pr["score_med"] != _esp:
                 raise SystemExit(
                     f"INVARIANTE ROTA: {_p['home']} vs {_p['away']} score_med={_pr['score_med']} "
-                    f"!= marcador mas probable {_pr['score']}. El headline debe ser la moda (top-3 #1).")
+                    f"!= redondeo xG {_esp}. El marcador puntuado debe ser el redondeo del xG (esperado).")
 
     players = {}
     pl_path = os.path.join(DATA, "players.json")
