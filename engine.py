@@ -1235,6 +1235,19 @@ function lectura(home,away,dh,da,pred){
   const xg=(pred&&pred.xgH!=null)?`xG = goles esperados (promedio): ${home} ${pred.xgH} · ${away} ${pred.xgA}. `:'';
   return `<div class="lect">📊 ${xg}El marcador mostrado redondea ese xG (no es probabilidad): ${ps.join('; ')}.</div>`;
 }
+function topScoresHtml(pred,home,away){
+  if(!pred||pred.xgH==null)return '';
+  const lh=pred.xgH, la=pred.xgA;
+  const P=(l,k)=>{let p=Math.exp(-l);for(let i=1;i<=k;i++)p*=l/i;return p;};
+  const cells=[];
+  for(let i=0;i<7;i++)for(let j=0;j<7;j++)cells.push([i,j,P(lh,i)*P(la,j)]);
+  cells.sort((a,b)=>b[2]-a[2]);
+  const chips=cells.slice(0,3).map((s,k)=>`<div style="background:#161b22;border:1px solid ${k===0?'#3fb950':'#272e3a'};border-radius:7px;padding:6px 12px;text-align:center;min-width:54px"><div style="font-size:16px;font-weight:700">${s[0]}–${s[1]}</div><div class="muted" style="font-size:11px">${Math.round(s[2]*100)}%</div></div>`).join('');
+  const mH=Math.round((1-P(lh,0))*100), mA=Math.round((1-P(la,0))*100);
+  return `<div class="flbl" style="margin-top:13px">🎲 Marcadores más probables</div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">${chips}</div>
+    <div class="muted" style="font-size:11.5px;margin-top:6px">Prob. de marcar ≥1 gol: <b>${home} ${mH}%</b> · <b>${away} ${mA}%</b>. <span style="font-size:11px">El marcador de arriba es solo el más probable; la distribución completa también cuenta.</span></div>`;
+}
 function openModal(m){
   const D=S.equipo_detalle||{}, dh=D[m.home], da=D[m.away];
   let pred=null, realTxt='', probTxt='', scoreTxt='';
@@ -1248,6 +1261,7 @@ function openModal(m){
     `<div class="mh">${m.home} vs ${m.away}</div>
      <div class="msub">${m.grupo?('Grupo '+m.grupo+' · '):''}${scoreTxt}${probTxt}${realTxt}</div>
      ${xgHtml}
+     ${topScoresHtml(pred,m.home,m.away)}
      <div class="tcards">${teamCard(m.home,dh)}${teamCard(m.away,da)}</div>
      ${lectura(m.home,m.away,dh,da,pred)}
      ${marketHtml(m.home,m.away)}
