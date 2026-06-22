@@ -2,11 +2,11 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://dailybeirut.com/en/world-cup-2026/deniz-undav-leads-germany-to-world-cup-round-of-32-with-crucial-goals/ + https://sports.yahoo.com/articles/world-cup-2026-golden-boot-093312240.html (verificado 22-jun-2026; Undav 3G: 1 vs Curacao + 2 vs Ivory Coast; co-lider con Messi y David; NZ-Egypt FT 1-3 no modifica el top-15)",
+    "fuente": "https://sports.yahoo.com/soccer/article/world-cup-2026-lionel-messi-establishes-commanding-lead-in-golden-boot-race-with-record-breaking-goals-010143798.html + https://www.cbssports.com/soccer/news/argentina-austria-live-updates-world-cup-2026-score-result/live/ (verificado 22-jun-2026; Messi 5G: hat-trick vs Argelia + brace vs Austria; record historico 18 goles en Mundiales; David 3G Canada; Undav 3G Germany sin nuevo partido)",
     "actualizado": "2026-06-22"
   },
   "jugadores": [
-    {"jugador": "Lionel Messi", "equipo": "Argentina", "goles": 3},
+    {"jugador": "Lionel Messi", "equipo": "Argentina", "goles": 5},
     {"jugador": "Jonathan David", "equipo": "Canada", "goles": 3},
     {"jugador": "Deniz Undav", "equipo": "Germany", "goles": 3},
     {"jugador": "Brian Brobbey", "equipo": "Netherlands", "goles": 2},

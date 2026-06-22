@@ -4,24 +4,9 @@
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' o se omite. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
     "actualizado": "2026-06-22",
-    "cobertura": "jornada completa del dia"
+    "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "Argentina", "away": "Austria", "fecha": "2026-06-22",
-      "estado_alineacion": "probable",
-      "xi_local": "E. Martinez; Molina, C. Romero, L. Martinez, Medina (o Tagliafico); De Paul, Mac Allister, Enzo Fernandez; Messi, J. Alvarez, N. Gonzalez (4-3-3). Messi titular esperado (viene de hat-trick a Argelia). Julian Alvarez entra por Lautaro. OJO: con la clasificacion cerca, ESPN plantea una variante MUY rotada (Paz, Almada, incluso descanso de Messi) — NO confirmada.",
-      "xi_visita": "Schlager; Posch (duda), Lienhart, Alaba, Mwene; Seiwald, X. Schlager, Laimer; Schmid, Sabitzer; Kalajdzic (4-2-3-1 aprox).",
-      "bajas_local": ["Gonzalo Montiel: lesion muscular (salio al entretiempo vs Argelia), en duda; lo reemplazaria Molina", "Lautaro Martinez: sin lesion, pierde el puesto por bajo rendimiento ante J. Alvarez"],
-      "bajas_visita": ["Stefan Posch: en duda por mandibula fracturada"],
-      "lectura": "Argentina lidera el Grupo J tras el 3-0 a Argelia (hat-trick de Messi); con un triunfo sella primer puesto y clasificacion. Austria es 2da tras ganar 3-1 a Jordania. El dilema clave es cuanto rota Scaloni teniendo la clasificacion tan cerca — eso, no el nivel del rival, es lo que mas podria abrir el partido.",
-      "lean": "Fuerte a Argentina si pone XI titular; el unico atenuante real es una rotacion fuerte (no confirmada) que le de aire a Austria.",
-      "fuentes": [
-        "https://www.si.com/soccer/argentina-predicted-lineup-vs-austria-world-cup-6-22-26",
-        "https://www.espn.com/soccer/story/_/id/49120325/fifa-world-cup-2026-argentina-vs-austria-tv-channel-how-watch-kickoff-live-stream-referee-predicted-line-ups",
-        "https://www.nbcsports.com/soccer/news/how-to-watch-argentina-vs-austria-live-stream-tv-channel-team-news-prediction"
-      ]
-    },
     {
       "home": "France", "away": "Iraq", "fecha": "2026-06-22",
       "estado_alineacion": "probable",

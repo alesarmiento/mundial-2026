@@ -2,7 +2,7 @@
   "_meta": {
     "descripcion": "Ledger de resultados REALES. Cada partido entra con su fuente. NUNCA se inventa un marcador. Si no se puede verificar, no se agrega.",
     "fase_valores": "grupos | dieciseisavos | octavos | cuartos | semis | tercer_puesto | final",
-    "ultima_fecha_cargada": "2026-06-21"
+    "ultima_fecha_cargada": "2026-06-22"
   },
   "partidos": [
     {"fecha": "2026-06-11", "fase": "grupos", "grupo": "A", "local": "Mexico", "visita": "South Africa", "gl": 2, "gv": 0, "fuente": "https://www.nbcsports.com/soccer/news/2026-world-cup-group-stage-table-full-standings-for-all-12-groups"},
@@ -44,6 +44,7 @@
     {"fecha": "2026-06-21", "fase": "grupos", "grupo": "H", "local": "Spain", "visita": "Saudi Arabia", "gl": 4, "gv": 0, "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021483 (Spain 4-0 FT; Yamal 10', Oyarzabal x2, Altambakti OG 49'; confirmado FIFA / ESPN / Fox Sports / World Soccer Talk)"},
     {"fecha": "2026-06-21", "fase": "grupos", "grupo": "G", "local": "Belgium", "visita": "Iran", "gl": 0, "gv": 0, "fuente": "https://www.espn.com/soccer/match/_/gameId/760451/iran-belgium (Belgium 0-0 Iran FT; Nathan Ngoy roja 66'; Beiranvand heroico; confirmado ESPN / CBS Sports / Outlook India / Sports Illustrated)"},
     {"fecha": "2026-06-21", "fase": "grupos", "grupo": "H", "local": "Uruguay", "visita": "Cape Verde", "gl": 2, "gv": 2, "fuente": "https://www.espn.com/soccer/story/_/id/49138051/uruguay-cape-verde-live-world-cup-2026-latest-updates-commentary-score-result (Uruguay 2-2 Cape Verde FT; Kevin Pina 21', Araujo 44', Canobbio 45+6', Helio Varela 61'; confirmado ESPN / Outlook India / FanSided / Fox Sports)"},
-    {"fecha": "2026-06-21", "fase": "grupos", "grupo": "G", "local": "New Zealand", "visita": "Egypt", "gl": 1, "gv": 3, "fuente": "https://cryptobriefing.com/egypt-comeback-new-zealand-world-cup-2026/ (Egypt 3-1 NZ FT; Finn Surman 15', Mostafa Ziko 58', Mohamed Salah 67', Mahmoud Trezeguet 82'; confirmado Yahoo Sports / ESPN / Ahram Online / CryptoBriefing)"}
+    {"fecha": "2026-06-21", "fase": "grupos", "grupo": "G", "local": "New Zealand", "visita": "Egypt", "gl": 1, "gv": 3, "fuente": "https://cryptobriefing.com/egypt-comeback-new-zealand-world-cup-2026/ (Egypt 3-1 NZ FT; Finn Surman 15', Mostafa Ziko 58', Mohamed Salah 67', Mahmoud Trezeguet 82'; confirmado Yahoo Sports / ESPN / Ahram Online / CryptoBriefing)"},
+    {"fecha": "2026-06-22", "fase": "grupos", "grupo": "J", "local": "Argentina", "visita": "Austria", "gl": 2, "gv": 0, "fuente": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-austria-match-report-highlights (Argentina 2-0 FT; Messi 38' y 90+5' — record all-time de goles en Mundiales (18 goles); confirmado FIFA / ESPN / CBS Sports / Al Jazeera / NBC Sports / Goal.com)"}
   ]
 }
