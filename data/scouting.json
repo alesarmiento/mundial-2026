@@ -3,24 +3,10 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' o se omite. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-06-22",
+    "actualizado": "2026-06-23",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "France", "away": "Iraq", "fecha": "2026-06-22",
-      "estado_alineacion": "probable",
-      "xi_local": "Maignan; Kounde, Saliba, Upamecano, Hernandez (o Digne); Tchouameni, Rabiot; Olise, Dembele, Doue (o Barcola); Mbappe (4-2-3-1).",
-      "xi_visita": "Jalal Hassan; Hussein Ali, Zaid Tahseen, Akam Hashem, Merchas Doski; Bayesh, Al-Ammari, Zaid Ismael, Ahmed Qasem; Al Hamadi, Aymen Hussein (4-4-2).",
-      "bajas_local": ["Malo Gusto: golpe en tobillo, confirmado disponible", "Saliba: con molestias pero titular esperado", "Tchouameni: rumor de que no entreno NO confirmado — en duda leve"],
-      "bajas_visita": ["Ali Jasim: molestia en cuello, probable banca", "Mohanad Ali: duda por lesion"],
-      "lectura": "Francia gano 3-1 a Senegal; Iraq fue arrollado 4-1 por Noruega. Opta da a Francia ~88% de victoria. La incognita es cuanto rota Deschamps, no el resultado.",
-      "lean": "Francia con amplitud, victoria local con varios goles.",
-      "fuentes": [
-        "https://www.rotowire.com/soccer/article/france-vs-iraq-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-i-119062",
-        "https://www.sportsmole.co.uk/football/france/world-cup-2026/preview/france-vs-iraq-prediction-team-news-lineups_599660.html"
-      ]
-    },
     {
       "home": "Norway", "away": "Senegal", "fecha": "2026-06-22",
       "estado_alineacion": "probable",
@@ -47,6 +33,66 @@
       "fuentes": [
         "https://www.rotowire.com/soccer/article/jordan-vs-algeria-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-j-119061",
         "https://www.sportsmole.co.uk/football/jordan/world-cup-2026/team-news/jordan-vs-algeria-injury-suspension-list-predicted-xis--world-cup-2026_599711.html"
+      ]
+    },
+    {
+      "home": "Portugal", "away": "Uzbekistan", "fecha": "2026-06-23",
+      "estado_alineacion": "probable",
+      "xi_local": "Diogo Costa; Cancelo, Dias (o Araujo), Veiga, Mendes; Neves, Vitinha; Conceicao (o B. Silva), Fernandes; Neto, Ronaldo (4-3-3).",
+      "xi_visita": "Yusupov; Khusanov, Abdullaev, Ashurmatov; Karimov, Mozgovoy, Shukurov, Nasrullaev; Fayzullayev, Urunov, Shomurodov (4-4-2).",
+      "bajas_local": ["Ruben Dias: lesion muscular matchday 1 (vs Congo) — probable regreso al XI; entrenando con grupo"],
+      "bajas_visita": ["Sin lesionados confirmados"],
+      "lectura": "Portugal emato 1-1 con DR Congo y necesita la victoria para asegurar clasificacion. Uzbekistan cayo 3-1 ante Colombia. Ronaldo activo (5 goles en el torneo); el equipo de Martinez tiene mas calidad en todas las lineas. Partido de control: Portugal deberia manejar el ritmo desde el inicio.",
+      "lean": "Portugal favorito claro. Victoria local con Ronaldo en zona de gol.",
+      "fuentes": [
+        "https://www.sportsmole.co.uk/football/portugal/world-cup/team-news/portugal-vs-uzbekistan-injury-suspension-list-predicted-xis_599766.html",
+        "https://ca.sports.yahoo.com/news/portugal-xi-vs-uzbekistan-confirmed-153952259.html",
+        "https://www.rotowire.com/soccer/article/portugal-vs-uzbekistan-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-k-119186"
+      ]
+    },
+    {
+      "home": "England", "away": "Ghana", "fecha": "2026-06-23",
+      "estado_alineacion": "probable",
+      "xi_local": "Pickford; James, Konsa (o Guehi), Stones, O'Reilly; Rice, Anderson; Madueke, Bellingham, Gordon; Kane (4-3-3).",
+      "xi_visita": "Asare; Ameyaw, Amartey, Amoah, Mensah; Partey, Paintsil; Abdul Fatawu, A. Ayew, Williams; J. Ayew (o Kudus) (4-2-3-1).",
+      "bajas_local": ["Saka (Achilles, duda leve — entrenó el lunes, esperado disponible)", "Rashford (muslo, duda leve — esperado disponible)", "Rice (muslo, duda leve — esperado disponible)", "Decision tactica: Konsa vs Guehi en defensa central"],
+      "bajas_visita": ["Ati-Zigi (portero titular — lesion de ~3 semanas, fuera); Asare es el reemplazo", "Andre Ayew (36 anios, en duda — podria no arrancar)"],
+      "lectura": "England gano 4-2 a Croatia; Ghana gano 1-0 a Panama. Ambos con 3 puntos — el ganador toma el liderato del Grupo L y asegura casi el paso a dieciseisavos. Kane ya tiene 2 goles. Ghana juega ordenado con Partey de eje, pero pierde la solidez del portero titular. England deberia manejar el partido.",
+      "lean": "Victoria de England. Ghana puede competir en tramos pero la diferencia de jerarquia es clara.",
+      "fuentes": [
+        "https://www.sportsmole.co.uk/football/england/world-cup-2026/preview/england-vs-ghana-prediction-team-news-lineups_599721.html",
+        "https://www.rotowire.com/soccer/article/england-vs-ghana-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-l-119187",
+        "https://sports.yahoo.com/articles/preview-england-vs-ghana-team-200500221.html"
+      ]
+    },
+    {
+      "home": "Panama", "away": "Croatia", "fecha": "2026-06-23",
+      "estado_alineacion": "probable",
+      "xi_local": "Mejia; Murillo, Escobar, Miller, Harvey; Barcenas, Godoy, Carrasquilla, Diaz; Fajardo, Waterman (4-4-2).",
+      "xi_visita": "Livakovic; Stanisic, Sutalo, Gvardiol, Erlic; Kovacic, Modric, Pasalic; Vlasic, Kramaric, Perisic (4-3-3).",
+      "bajas_local": ["Carlos Harvey (amarilla acumulada — una tarjeta mas y pierde el tercer partido)", "Cesar Blackman (idem riesgo de sancion)"],
+      "bajas_visita": ["Luka Vuskovic: posible baja si Croatia vuelve a linea de 4 (fue titular en esquema de 3 vs England)", "Sin lesionados confirmados"],
+      "lectura": "Ambos con 0 puntos — es practicamente un mata-mata. Croatia cayo 4-2 vs England; Panama perdio 1-0 vs Ghana. El perdedor queda casi eliminado. Croatia tiene mucha mas calidad individual (Modric, Kovacic, Kramaric, Gvardiol); Panama es solido defensivamente y corre en transicion (Fajardo, Waterman). Si Croatia controla el mediocampo, deberia ganar.",
+      "lean": "Croatia favorita por calidad de plantilla, pero Panama lucha por su vida y puede sorprender.",
+      "fuentes": [
+        "https://www.sportsmole.co.uk/football/panama/world-cup-2026/preview/panama-vs-croatia-prediction-team-news-lineups_599736.html",
+        "https://www.rotowire.com/soccer/article/panama-vs-croatia-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-l-119188",
+        "https://sports.yahoo.com/articles/panama-vs-croatia-prediction-world-083500564.html"
+      ]
+    },
+    {
+      "home": "Colombia", "away": "DR Congo", "fecha": "2026-06-23",
+      "estado_alineacion": "probable",
+      "xi_local": "Vargas; Munoz, D. Sanchez, Lucumi, Mojica; Lerma, Rios; Arias, J. Rodriguez, L. Diaz; Cordoba (4-2-3-1).",
+      "xi_visita": "Mpasi; Wan-Bissaka, Mbemba, Tuanzebe, Masuaku; Bongonda, Pickel, Moutoussamy, Elia; Bakambu, Wissa (4-3-3).",
+      "bajas_local": ["Sin lesionados confirmados"],
+      "bajas_visita": ["Chancel Mbemba (amarilla acumulada vs Portugal — riesgo de sancion si ve otra tarjeta)"],
+      "lectura": "Colombia lidera el Grupo K con victoria 3-1 sobre Uzbekistan (Luis Diaz brillante, James Rodriguez en rol 10). DR Congo emato 1-1 con Portugal (Yoane Wissa sorpresivo). Con una victoria Colombia asegura clasificacion; Congo necesita sumar si no quiere depender de la ultima fecha. James Rodriguez sigue siendo el diferencial creativo; Luis Diaz, la amenaza directa por izquierda.",
+      "lean": "Colombia favorita en casa (Guadalajara). Luis Diaz y James como claves del partido.",
+      "fuentes": [
+        "https://www.sportsmole.co.uk/football/colombia/world-cup-2026/preview/colombia-vs-congo-dr-prediction-team-news-lineups_599761.html",
+        "https://sports.yahoo.com/articles/colombia-vs-dr-congo-prediction-093500942.html",
+        "https://www.squawka.com/en/news/world-cup/colombia-vs-dr-congo-team-news-predicted-lineups/"
       ]
     }
   ]
