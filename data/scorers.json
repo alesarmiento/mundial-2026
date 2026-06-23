@@ -2,11 +2,12 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://sports.yahoo.com/soccer/article/world-cup-2026-lionel-messi-establishes-commanding-lead-in-golden-boot-race-with-record-breaking-goals-010143798.html + https://www.cbssports.com/soccer/news/argentina-austria-live-updates-world-cup-2026-score-result/live/ (verificado 22-jun-2026; Messi 5G: hat-trick vs Argelia + brace vs Austria; record historico 18 goles en Mundiales; David 3G Canada; Undav 3G Germany sin nuevo partido)",
-    "actualizado": "2026-06-22"
+    "fuente": "https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-games-2026-june-22-live-updates-rcna351129 + https://www.foxsports.com/live-blog/soccer/france-vs-iraq-live-updates-score-latest-world-cup-news-goals (verificado 23-jun-2026; Mbappe 4G: 2 vs Senegal + 2 vs Iraq — 15/16 goles historicos WC en carrera; Dembele primer gol WC vs Iraq; Messi sigue lider con 5G)",
+    "actualizado": "2026-06-23"
   },
   "jugadores": [
     {"jugador": "Lionel Messi", "equipo": "Argentina", "goles": 5},
+    {"jugador": "Kylian Mbappe", "equipo": "France", "goles": 4},
     {"jugador": "Jonathan David", "equipo": "Canada", "goles": 3},
     {"jugador": "Deniz Undav", "equipo": "Germany", "goles": 3},
     {"jugador": "Brian Brobbey", "equipo": "Netherlands", "goles": 2},
@@ -15,7 +16,6 @@
     {"jugador": "Matheus Cunha", "equipo": "Brazil", "goles": 2},
     {"jugador": "Vinicius Junior", "equipo": "Brazil", "goles": 2},
     {"jugador": "Erling Haaland", "equipo": "Norway", "goles": 2},
-    {"jugador": "Kylian Mbappe", "equipo": "France", "goles": 2},
     {"jugador": "Harry Kane", "equipo": "England", "goles": 2},
     {"jugador": "Kai Havertz", "equipo": "Germany", "goles": 2},
     {"jugador": "Yasin Ayari", "equipo": "Sweden", "goles": 2},
@@ -26,6 +26,7 @@
     {"jugador": "Ismael Saibari", "equipo": "Morocco", "goles": 2},
     {"jugador": "Daichi Kamada", "equipo": "Japan", "goles": 2},
     {"jugador": "Ayase Ueda", "equipo": "Japan", "goles": 2},
-    {"jugador": "Mikel Oyarzabal", "equipo": "Spain", "goles": 2}
+    {"jugador": "Mikel Oyarzabal", "equipo": "Spain", "goles": 2},
+    {"jugador": "Ousmane Dembele", "equipo": "France", "goles": 1}
   ]
 }
