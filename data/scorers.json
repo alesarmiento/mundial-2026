@@ -2,7 +2,7 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-games-2026-june-22-live-updates-rcna351129 + https://www.foxsports.com/live-blog/soccer/france-vs-iraq-live-updates-score-latest-world-cup-news-goals (verificado 23-jun-2026; Mbappe 4G: 2 vs Senegal + 2 vs Iraq — 15/16 goles historicos WC en carrera; Dembele primer gol WC vs Iraq; Messi sigue lider con 5G)",
+    "fuente": "https://sports.yahoo.com/soccer/live/world-cup-2026-scores-results-schedule-live-updates-195336732.html + ESPN (Norway 3-2 Senegal FT; Haaland brace → 4G total, tied 2do con Mbappe; Sarr brace → 2G vs Senegal; Pedersen 43'; Messi lider con 5G; verificado Yahoo Sports / ESPN / Outlook India 23-jun-2026)",
     "actualizado": "2026-06-23"
   },
   "jugadores": [
@@ -15,7 +15,8 @@
     {"jugador": "Crysencio Summerville", "equipo": "Netherlands", "goles": 2},
     {"jugador": "Matheus Cunha", "equipo": "Brazil", "goles": 2},
     {"jugador": "Vinicius Junior", "equipo": "Brazil", "goles": 2},
-    {"jugador": "Erling Haaland", "equipo": "Norway", "goles": 2},
+    {"jugador": "Erling Haaland", "equipo": "Norway", "goles": 4},
+    {"jugador": "Ismaila Sarr", "equipo": "Senegal", "goles": 2},
     {"jugador": "Harry Kane", "equipo": "England", "goles": 2},
     {"jugador": "Kai Havertz", "equipo": "Germany", "goles": 2},
     {"jugador": "Yasin Ayari", "equipo": "Sweden", "goles": 2},
