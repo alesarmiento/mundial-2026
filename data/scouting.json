@@ -3,25 +3,10 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' o se omite. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-06-23",
+    "actualizado": "2026-06-23T22:05Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "England", "away": "Ghana", "fecha": "2026-06-23",
-      "estado_alineacion": "probable",
-      "xi_local": "Pickford; James, Konsa (o Guehi), Stones, O'Reilly; Rice, Anderson; Madueke, Bellingham, Gordon; Kane (4-3-3).",
-      "xi_visita": "Asare; Ameyaw, Amartey, Amoah, Mensah; Partey, Paintsil; Abdul Fatawu, A. Ayew, Williams; J. Ayew (o Kudus) (4-2-3-1).",
-      "bajas_local": ["Saka (Achilles, duda leve — entrenó el lunes, esperado disponible)", "Rashford (muslo, duda leve — esperado disponible)", "Rice (muslo, duda leve — esperado disponible)", "Decision tactica: Konsa vs Guehi en defensa central"],
-      "bajas_visita": ["Ati-Zigi (portero titular — lesion de ~3 semanas, fuera); Asare es el reemplazo", "Andre Ayew (36 anios, en duda — podria no arrancar)"],
-      "lectura": "England gano 4-2 a Croatia; Ghana gano 1-0 a Panama. Ambos con 3 puntos — el ganador toma el liderato del Grupo L y asegura casi el paso a dieciseisavos. Kane ya tiene 2 goles. Ghana juega ordenado con Partey de eje, pero pierde la solidez del portero titular. England deberia manejar el partido.",
-      "lean": "Victoria de England. Ghana puede competir en tramos pero la diferencia de jerarquia es clara.",
-      "fuentes": [
-        "https://www.sportsmole.co.uk/football/england/world-cup-2026/preview/england-vs-ghana-prediction-team-news-lineups_599721.html",
-        "https://www.rotowire.com/soccer/article/england-vs-ghana-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-l-119187",
-        "https://sports.yahoo.com/articles/preview-england-vs-ghana-team-200500221.html"
-      ]
-    },
     {
       "home": "Panama", "away": "Croatia", "fecha": "2026-06-23",
       "estado_alineacion": "probable",
