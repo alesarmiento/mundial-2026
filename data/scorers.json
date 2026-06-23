@@ -2,7 +2,7 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://sports.yahoo.com/soccer/live/world-cup-2026-scores-results-schedule-live-updates-195336732.html + ESPN (Norway 3-2 Senegal FT; Haaland brace → 4G total, tied 2do con Mbappe; Sarr brace → 2G vs Senegal; Pedersen 43'; Messi lider con 5G; verificado Yahoo Sports / ESPN / Outlook India 23-jun-2026). Checkeado post Jordan 1-2 Algeria (Benbouali 69', Gouiri 82' → 1G c/u; no entran top 15).",
+    "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021503 + https://worldsoccertalk.com/world-cup/portugal-vs-uzbekistan-live-updates-minute-by-minute-coverage-of-the-2026-world-cup-group-k-game/ + NBC News / Fox Sports (Portugal 5-0 Uzbekistan FT; Ronaldo brace 6'+39' = 2G totales 2026; Nuno Mendes 17', Leao 87'; confirmado FIFA oficial / NBC / Fox Sports 23-jun-2026). Messi lidera con 5G; Mbappe y Haaland en 4G c/u.",
     "actualizado": "2026-06-23"
   },
   "jugadores": [
@@ -28,6 +28,6 @@
     {"jugador": "Daichi Kamada", "equipo": "Japan", "goles": 2},
     {"jugador": "Ayase Ueda", "equipo": "Japan", "goles": 2},
     {"jugador": "Mikel Oyarzabal", "equipo": "Spain", "goles": 2},
-    {"jugador": "Ousmane Dembele", "equipo": "France", "goles": 1}
+    {"jugador": "Cristiano Ronaldo", "equipo": "Portugal", "goles": 2}
   ]
 }
