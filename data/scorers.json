@@ -2,7 +2,7 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/adidas-golden-boot-race-top-scorer + https://www.nbcsports.com/soccer/news/2026-world-cup-top-goalscorers-full-list-latest-on-race-for-the-golden-boot + ESPN (verificado 24-jun-2026 tras Colombia 1-0 DR Congo; Muñoz 2G agregado). Messi lidera con 5G; Mbappe y Haaland en 4G c/u.",
+    "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021451 + https://www.fifa.com/en/match-centre/match/17/285023/289273/400021448 + ESPN + NBC News (verificado 24-jun-2026 tras SUI 2-1 CAN y BIH 3-1 QAT; Manzambi 3G, Promise David 1G, Alajbegovic 1G, Mahmic 1G agregados). Messi lidera con 5G; Mbappe y Haaland en 4G c/u.",
     "actualizado": "2026-06-24"
   },
   "jugadores": [
@@ -22,13 +22,16 @@
     {"jugador": "Yasin Ayari", "equipo": "Sweden", "goles": 2},
     {"jugador": "Folarin Balogun", "equipo": "United States", "goles": 2},
     {"jugador": "Elijah Just", "equipo": "New Zealand", "goles": 2},
-    {"jugador": "Johan Manzambi", "equipo": "Switzerland", "goles": 2},
+    {"jugador": "Johan Manzambi", "equipo": "Switzerland", "goles": 3},
     {"jugador": "Cyle Larin", "equipo": "Canada", "goles": 2},
     {"jugador": "Ismael Saibari", "equipo": "Morocco", "goles": 2},
     {"jugador": "Daichi Kamada", "equipo": "Japan", "goles": 2},
     {"jugador": "Ayase Ueda", "equipo": "Japan", "goles": 2},
     {"jugador": "Mikel Oyarzabal", "equipo": "Spain", "goles": 2},
     {"jugador": "Cristiano Ronaldo", "equipo": "Portugal", "goles": 2},
-    {"jugador": "Daniel Muñoz", "equipo": "Colombia", "goles": 2}
+    {"jugador": "Daniel Muñoz", "equipo": "Colombia", "goles": 2},
+    {"jugador": "Promise David", "equipo": "Canada", "goles": 1},
+    {"jugador": "Kerim Alajbegovic", "equipo": "Bosnia and Herzegovina", "goles": 1},
+    {"jugador": "Ermin Mahmic", "equipo": "Bosnia and Herzegovina", "goles": 1}
   ]
 }

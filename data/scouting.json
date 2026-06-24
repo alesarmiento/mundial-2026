@@ -3,40 +3,10 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-06-24T04:10Z",
+    "actualizado": "2026-06-24T21:04Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "Switzerland", "away": "Canada", "fecha": "2026-06-24",
-      "estado_alineacion": "probable",
-      "xi_local": "Kobel; Widmer, Elvedi, Akanji, Rodriguez; Manzambi, Xhaka, Freuler; Ndoye, Embolo, Vargas (4-3-3).",
-      "xi_visita": "Crepeau; Johnston, de Fougerolles, Cornelius, Laryea; Buchanan, Eustaquio, Saliba, Ahmed; David, Larin (4-4-2).",
-      "bajas_local": ["Sin lesionados confirmados"],
-      "bajas_visita": ["Ismael Kone (fractura de tibia y perone — baja para el resto del torneo)", "Alphonso Davies (lesion de isquiotibial — dudoso como titular, posible banca)"],
-      "lectura": "Ambos llegaron a 6 puntos y ya clasificaron. Suiza gano 4-1 a Bosnia; Canada aplasto 6-0 a Qatar. Un empate le alcanza a Canada para liderar el grupo por diferencia de goles. Suiza necesita ganar para terminar primero. Jonathan David (3 goles, lider goleador del grupo) vs. el mediocampo de Xhaka es el duelo clave. Si Davies juega desde el inicio, Canada tiene mas opciones de descontrol en transicion.",
-      "lean": "Canada favorita por situacion de tabla con empate; partido muy parejo. Suiza apretara por la victoria.",
-      "fuentes": [
-        "https://www.sportsmole.co.uk/football/switzerland/world-cup-2026/preview/switzerland-vs-canada-prediction-team-news-lineups_599751.html",
-        "https://www.rotowire.com/soccer/article/switzerland-vs-canada-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-b-119339",
-        "https://www.101greatgoals.com/match-previews/world-cup-matches/switzerland-v-canada-line-ups-stats-preview-tv-channel-live-online-stream-prediction/"
-      ]
-    },
-    {
-      "home": "Bosnia and Herzegovina", "away": "Qatar", "fecha": "2026-06-24",
-      "estado_alineacion": "probable",
-      "xi_local": "Vasilj; Dedic, Katic, Hadzikadunic, Kolasinac; Alajbegovic, Sunjic, Tahirovic, Memic; Demirovic, Dzeko (4-4-2).",
-      "xi_visita": "Abunada; Al Oui, Pedro Miguel, Khoukhi, Al Brake; Boudiaf, Gaber, Seydinaissa Laye; Edmilson Junior, Abdurisag, Afif (4-3-3).",
-      "bajas_local": ["Tarik Muharemovic (suspendido — tarjeta roja vs Suiza en jornada 2)"],
-      "bajas_visita": ["Homam Ahmed (suspendido — tarjeta roja vs Canada)", "Assim Madibo (suspendido — tarjeta roja vs Canada)"],
-      "lectura": "Ambos con 1 punto, practicamente eliminados. El ganador mantiene opciones remotas como mejor tercero; el perdedor cierra su Mundial. Bosnia tiene mas calidad individual (Dzeko, Demirovic, Sunjic), pero pierde a Muharemovic en defensa. Qatar pierde dos centrocampistas clave por sancion y llega golpeado tras el 6-0 ante Canada. Akram Afif sigue siendo el peligro de Qatar en banda.",
-      "lean": "Bosnia ligera favorita por calidad ofensiva. Qatar busca reivindicarse tras el mayor humillan del torneo.",
-      "fuentes": [
-        "https://www.rotowire.com/soccer/article/bosnia-and-herzegovina-vs-qatar-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-b-119338",
-        "https://www.sportsmole.co.uk/football/bosnia-herzegovina/world-cup-2026/preview/bosnia-hvina-vs-qatar-prediction-team-news-lineups_599838.html",
-        "https://www.espn.com/soccer/story/_/id/49138188/bosnia-herzegovina-qatar-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups"
-      ]
-    },
     {
       "home": "Scotland", "away": "Brazil", "fecha": "2026-06-24",
       "estado_alineacion": "probable",
