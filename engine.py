@@ -863,6 +863,8 @@ def main():
     market = load("market.json") if os.path.exists(os.path.join(DATA, "market.json")) else {"partidos": []}
     # capa de inteligencia cualitativa (IA): se MUESTRA en el modal, NO entra en ningun calculo.
     scouting = load("scouting.json") if os.path.exists(os.path.join(DATA, "scouting.json")) else {"partidos": []}
+    # plan de la polla (ultima fecha): marcadores optimizados + clasificados. Passthrough, no toca el motor.
+    plan_polla = load("plan_polla.json") if os.path.exists(os.path.join(DATA, "plan_polla.json")) else {"marcadores": []}
 
     tmeta = teams.get("_meta", {}); pmeta = players.get("_meta", {}) if players else {}
     metodologia = {
@@ -963,6 +965,7 @@ def main():
         "comparativa": comparativa,
         "mercado": mercado,
         "scouting": scouting.get("partidos", []),
+        "plan_polla": plan_polla.get("marcadores", []),
         "equipo_detalle": equipo_detalle,
         "mu_liga": mu_liga,
         "ad_ratings": ad,
@@ -1247,6 +1250,17 @@ function topScoresHtml(pred,home,away){
     <div style="display:flex;gap:8px;flex-wrap:wrap">${chips}</div>
     <div class="muted" style="font-size:11.5px;margin-top:6px">Prob. de marcar ≥1 gol: <b>${home} ${mH}%</b> · <b>${away} ${mA}%</b>. <span style="font-size:11px">El marcador de arriba es solo el más probable; la distribución completa también cuenta.</span></div>`;
 }
+function planPollaHtml(home,away){
+  const pp=(S.plan_polla||[]).find(x=>x.home===home&&x.away===away);
+  if(!pp)return '';
+  const dif=!pp.xg||pp.plan[0]!==pp.xg[0]||pp.plan[1]!==pp.xg[1];
+  const xgtxt=(dif&&pp.xg)?` <span class="muted" style="font-size:11px">(xG: ${pp.xg[0]}–${pp.xg[1]})</span>`:'';
+  return `<div class="flbl" style="margin-top:13px">🎯 Plan polla — última fecha de grupos</div>
+    <div style="background:#10261a;border-left:3px solid #3fb950;padding:8px 11px;border-radius:6px;font-size:13px">
+      Marcador a cargar: <b style="font-size:16px">${pp.plan[0]}–${pp.plan[1]}</b>${xgtxt}
+      ${pp.nota?`<div class="muted" style="font-size:11.5px;margin-top:4px">${pp.nota}</div>`:''}
+    </div>`;
+}
 function openModal(m){
   const D=S.equipo_detalle||{}, dh=D[m.home], da=D[m.away];
   let pred=null, realTxt='', probTxt='', scoreTxt='';
@@ -1264,6 +1278,7 @@ function openModal(m){
      <div class="tcards">${teamCard(m.home,dh)}${teamCard(m.away,da)}</div>
      ${lectura(m.home,m.away,dh,da,pred)}
      ${marketHtml(m.home,m.away)}
+     ${planPollaHtml(m.home,m.away)}
      ${scoutingHtml(m.home,m.away)}
      <div class="muted" style="font-size:11px;margin-top:10px">Ataque/defensa centrados en 1.0 (promedio mundial), ajustados por la fuerza de los rivales enfrentados y encogidos por tamaño de muestra. Elo de eloratings.net evolucionado con cada resultado.</div>`;
   document.getElementById('modalbg').classList.add('on');
