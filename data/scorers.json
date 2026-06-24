@@ -2,8 +2,8 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021503 + https://worldsoccertalk.com/world-cup/portugal-vs-uzbekistan-live-updates-minute-by-minute-coverage-of-the-2026-world-cup-group-k-game/ + NBC News / Fox Sports (Portugal 5-0 Uzbekistan FT; Ronaldo brace 6'+39' = 2G totales 2026; Nuno Mendes 17', Leao 87'; confirmado FIFA oficial / NBC / Fox Sports 23-jun-2026). Messi lidera con 5G; Mbappe y Haaland en 4G c/u.",
-    "actualizado": "2026-06-23"
+    "fuente": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/adidas-golden-boot-race-top-scorer + https://www.nbcsports.com/soccer/news/2026-world-cup-top-goalscorers-full-list-latest-on-race-for-the-golden-boot + Yahoo Sports / ESPN (verificado 24-jun-2026 tras Panama 0-1 Croatia; Budimir 1G no altera el top 15). Messi lidera con 5G; Mbappe y Haaland en 4G c/u.",
+    "actualizado": "2026-06-24"
   },
   "jugadores": [
     {"jugador": "Lionel Messi", "equipo": "Argentina", "goles": 5},
