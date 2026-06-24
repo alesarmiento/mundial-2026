@@ -1,27 +1,12 @@
 {
   "_meta": {
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
-    "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' o se omite. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
+    "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-06-23T22:05Z",
+    "actualizado": "2026-06-24T00:10Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "Panama", "away": "Croatia", "fecha": "2026-06-23",
-      "estado_alineacion": "probable",
-      "xi_local": "Mejia; Murillo, Escobar, Miller, Harvey; Barcenas, Godoy, Carrasquilla, Diaz; Fajardo, Waterman (4-4-2).",
-      "xi_visita": "Livakovic; Stanisic, Sutalo, Gvardiol, Erlic; Kovacic, Modric, Pasalic; Vlasic, Kramaric, Perisic (4-3-3).",
-      "bajas_local": ["Carlos Harvey (amarilla acumulada — una tarjeta mas y pierde el tercer partido)", "Cesar Blackman (idem riesgo de sancion)"],
-      "bajas_visita": ["Luka Vuskovic: posible baja si Croatia vuelve a linea de 4 (fue titular en esquema de 3 vs England)", "Sin lesionados confirmados"],
-      "lectura": "Ambos con 0 puntos — es practicamente un mata-mata. Croatia cayo 4-2 vs England; Panama perdio 1-0 vs Ghana. El perdedor queda casi eliminado. Croatia tiene mucha mas calidad individual (Modric, Kovacic, Kramaric, Gvardiol); Panama es solido defensivamente y corre en transicion (Fajardo, Waterman). Si Croatia controla el mediocampo, deberia ganar.",
-      "lean": "Croatia favorita por calidad de plantilla, pero Panama lucha por su vida y puede sorprender.",
-      "fuentes": [
-        "https://www.sportsmole.co.uk/football/panama/world-cup-2026/preview/panama-vs-croatia-prediction-team-news-lineups_599736.html",
-        "https://www.rotowire.com/soccer/article/panama-vs-croatia-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-l-119188",
-        "https://sports.yahoo.com/articles/panama-vs-croatia-prediction-world-083500564.html"
-      ]
-    },
     {
       "home": "Colombia", "away": "DR Congo", "fecha": "2026-06-23",
       "estado_alineacion": "probable",
@@ -35,6 +20,96 @@
         "https://www.sportsmole.co.uk/football/colombia/world-cup-2026/preview/colombia-vs-congo-dr-prediction-team-news-lineups_599761.html",
         "https://sports.yahoo.com/articles/colombia-vs-dr-congo-prediction-093500942.html",
         "https://www.squawka.com/en/news/world-cup/colombia-vs-dr-congo-team-news-predicted-lineups/"
+      ]
+    },
+    {
+      "home": "Switzerland", "away": "Canada", "fecha": "2026-06-24",
+      "estado_alineacion": "probable",
+      "xi_local": "Kobel; Widmer, Elvedi, Akanji, Rodriguez; Manzambi, Xhaka, Freuler; Ndoye, Embolo, Vargas (4-3-3).",
+      "xi_visita": "Crepeau; Johnston, de Fougerolles, Cornelius, Laryea; Buchanan, Eustaquio, Saliba, Ahmed; David, Larin (4-4-2).",
+      "bajas_local": ["Sin lesionados confirmados"],
+      "bajas_visita": ["Ismael Kone (fractura de tibia y perone — baja para el resto del torneo)", "Alphonso Davies (lesion de isquiotibial — dudoso como titular, posible banca)"],
+      "lectura": "Ambos llegaron a 6 puntos y ya clasificaron. Suiza gano 4-1 a Bosnia; Canada aplasto 6-0 a Qatar. Un empate le alcanza a Canada para liderar el grupo por diferencia de goles. Suiza necesita ganar para terminar primero. Jonathan David (3 goles, lider goleador del grupo) vs. el mediocampo de Xhaka es el duelo clave. Si Davies juega desde el inicio, Canada tiene mas opciones de descontrol en transicion.",
+      "lean": "Canada favorita por situacion de tabla con empate; partido muy parejo. Suiza apretara por la victoria.",
+      "fuentes": [
+        "https://www.sportsmole.co.uk/football/switzerland/world-cup-2026/preview/switzerland-vs-canada-prediction-team-news-lineups_599751.html",
+        "https://www.rotowire.com/soccer/article/switzerland-vs-canada-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-b-119339",
+        "https://www.101greatgoals.com/match-previews/world-cup-matches/switzerland-v-canada-line-ups-stats-preview-tv-channel-live-online-stream-prediction/"
+      ]
+    },
+    {
+      "home": "Bosnia and Herzegovina", "away": "Qatar", "fecha": "2026-06-24",
+      "estado_alineacion": "probable",
+      "xi_local": "Vasilj; Dedic, Katic, Hadzikadunic, Kolasinac; Alajbegovic, Sunjic, Tahirovic, Memic; Demirovic, Dzeko (4-4-2).",
+      "xi_visita": "Abunada; Al Oui, Pedro Miguel, Khoukhi, Al Brake; Boudiaf, Gaber, Seydinaissa Laye; Edmilson Junior, Abdurisag, Afif (4-3-3).",
+      "bajas_local": ["Tarik Muharemovic (suspendido — tarjeta roja vs Suiza en jornada 2)"],
+      "bajas_visita": ["Homam Ahmed (suspendido — tarjeta roja vs Canada)", "Assim Madibo (suspendido — tarjeta roja vs Canada)"],
+      "lectura": "Ambos con 1 punto, practicamente eliminados. El ganador mantiene opciones remotas como mejor tercero; el perdedor cierra su Mundial. Bosnia tiene mas calidad individual (Dzeko, Demirovic, Sunjic), pero pierde a Muharemovic en defensa. Qatar pierde dos centrocampistas clave por sancion y llega golpeado tras el 6-0 ante Canada. Akram Afif sigue siendo el peligro de Qatar en banda.",
+      "lean": "Bosnia ligera favorita por calidad ofensiva. Qatar busca reivindicarse tras el mayor humillan del torneo.",
+      "fuentes": [
+        "https://www.rotowire.com/soccer/article/bosnia-and-herzegovina-vs-qatar-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-b-119338",
+        "https://www.sportsmole.co.uk/football/bosnia-herzegovina/world-cup-2026/preview/bosnia-hvina-vs-qatar-prediction-team-news-lineups_599838.html",
+        "https://www.espn.com/soccer/story/_/id/49138188/bosnia-herzegovina-qatar-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups"
+      ]
+    },
+    {
+      "home": "Scotland", "away": "Brazil", "fecha": "2026-06-24",
+      "estado_alineacion": "probable",
+      "xi_local": "Gunn; Patterson, McKenna, Hendry, Robertson; McGinn, Christie, Ferguson, Doak; McTominay, Adams (4-2-3-1).",
+      "xi_visita": "Alisson; Danilo, Marquinhos, Gabriel, Douglas Santos; Casemiro, Bruno Guimaraes; Rayan, Paqueta, Vinicius Junior; Matheus Cunha (4-2-3-1).",
+      "bajas_local": ["Scott McKenna (lesion de gemelo — no ha jugado en el torneo, volvio a entrenar, posible regreso)"],
+      "bajas_visita": ["Raphinha (lesion de isquiotibial — baja confirmada; reemplazado por Rayan, de Bournemouth, 19 anos)", "Neymar (apto fisicamente pero improbable como titular segun CT Ancelotti)"],
+      "lectura": "Escocia necesita ganar Y esperar resultados para avanzar como tercer mejor (3 pts). Brasil ya clasifico (4 pts) y puede rotar o administrar. Sin Raphinha, el joven Rayan debuta como titular derecho. Vinicius Jr. y Cunha siguen siendo la amenaza principal. Escocia se defiende ordenada en bloque bajo y golpea en transicion (McTominay, Doak). El riesgo para Brasil es bajar la intensidad con rotaciones.",
+      "lean": "Brasil amplio favorito, pero posible rotacion da chance a una Escocia que juega con nada que perder.",
+      "fuentes": [
+        "https://sports.yahoo.com/articles/preview-scotland-vs-brazil-team-220500336.html",
+        "https://www.sportsmole.co.uk/football/brazil/world-cup-2026/predicted-lineups/raphinha-blow-neymar-rayan-decisions-predicted-brazil-lineup-vs-scotland_599772.html",
+        "https://www.rotowire.com/soccer/article/scotland-vs-brazil-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-c-119341"
+      ]
+    },
+    {
+      "home": "Morocco", "away": "Haiti", "fecha": "2026-06-24",
+      "estado_alineacion": "probable",
+      "xi_local": "Bounou; Hakimi, Diop, Riad, Mazraoui; El Aynaoui, Bouaddi; Diaz, Ounahi, El Khannouss; Saibari (4-3-3).",
+      "xi_visita": "Placide; Arcus, Delcroix, Ade, Experience; Deedson, Bellegarde, Jean Jacques, Providence; Isidor, Pierrot (4-5-1 defensivo).",
+      "bajas_local": ["Nayef Aguerd (en duda — no ha jugado en el torneo por lesion)", "Abde Ezzalzouli (en duda — sin jugar en el torneo por lesion)"],
+      "bajas_visita": ["Duckens Nazon (lesion no especificada — dudoso)", "Leverton Pierre (lesion — descartado para el resto del torneo)"],
+      "lectura": "Marruecos domina el Grupo C con 4 puntos (empate 1-1 con Brasil, victoria 1-0 vs Escocia). Haiti fue el primer eliminado del torneo — sin puntos ni goles marcados en dos partidos. Ismael Saibari ha marcado ambos goles marroquies. Hakimi y Brahim Diaz son los motores creativos. El debate interno: sale Marruecos a golear para mejorar diferencia de goles, o administra a ojo del partido del otro grupo.",
+      "lean": "Marruecos favorita amplia. Haiti juega por el honor.",
+      "fuentes": [
+        "https://www.sportsmole.co.uk/football/morocco/world-cup-2026/preview/morocco-vs-haiti-prediction-team-news-lineups_599775.html",
+        "https://www.rotowire.com/soccer/article/morocco-vs-haiti-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-c-119340",
+        "https://www.espn.com/soccer/story/_/id/49141508/fifa-world-cup-2026-morocco-vs-haiti-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups"
+      ]
+    },
+    {
+      "home": "Czechia", "away": "Mexico", "fecha": "2026-06-24",
+      "estado_alineacion": "probable",
+      "xi_local": "Kovar; Hranac, Holes, Krejci; Coufal, Sadilek, Sulc, Soucek, Sojka; Hlozek, Schick (3-5-2).",
+      "xi_visita": "Ochoa; Sanchez, Moreno, Lopez, Gallardo; Alvarez, Antuna; Mora, Vega, Huerta; Gimenez (4-2-3-1).",
+      "bajas_local": ["David Jurasek (lesion de muslo en entrenamiento — baja para el resto del torneo)"],
+      "bajas_visita": ["Sin lesionados confirmados"],
+      "lectura": "Mexico ya clasifico a segunda ronda con 6 puntos maximos posibles en jornada 2 (unico equipo con pleno). Chequia tiene 1 punto y solo puede avanzar como mejor tercero si gana este partido. Mexico puede rotar o administrar, lo que abre la puerta a una posible sorpresa. Patrik Schick busca su primer gol del torneo para mantener esperanzas de Bota de Oro checa. Santiago Gimenez es la gran amenaza mexicana.",
+      "lean": "Mexico favorita por rendimiento y clasificacion ya asegurada. Chequia jugara con todo — partido con margen para la sorpresa si Mexico baja el ritmo.",
+      "fuentes": [
+        "https://www.sportsmole.co.uk/football/czech-republic/world-cup-2026/preview/czech-republic-vs-mexico-prediction-team-news-lineups_599786.html",
+        "https://www.rotowire.com/soccer/article/czechia-vs-mexico-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-a-119342",
+        "https://sports.yahoo.com/articles/czech-republic-vs-mexico-prediction-092000737.html"
+      ]
+    },
+    {
+      "home": "South Africa", "away": "South Korea", "fecha": "2026-06-24",
+      "estado_alineacion": "probable",
+      "xi_local": "Williams; Mudau, Okon, Mbokazi, Modiba; Adams, Sithole, Mbatha; Mofokeng, Rayners, Appollis (4-3-3).",
+      "xi_visita": "Kim Seung-Gyu; Lee Han-beom, Kim Min-jae, Lee Gi-hyuk; Seol Young-woo, Hwang In-beom, Paik Seung-ho, Lee Tae-seok; Lee Kang-in, Lee Jae-sung; Son Heung-min (3-4-2-1).",
+      "bajas_local": ["Teboho Mokoena (suspendido — segunda tarjeta amarilla acumulada vs Chequia; baja clave en mediocampo)", "Siyanda Zwane (en duda — mencionado en riesgo de sancion)"],
+      "bajas_visita": ["Sin lesionados ni suspendidos confirmados"],
+      "lectura": "Corea del Sur llega con 3 puntos (victoria 1-0 vs Chequia en J1) y clasifica con un empate. Sudafrica tiene 1 punto y necesita ganar Y esperar que Mexico-Chequia no ayude a los checos. Sin Mokoena, el motor organizador de Bafana Bafana, el equipo pierde ritmo en el medio. Son Heung-min busca su primer gol del torneo. Sphephelo Sithole vuelve de suspension para reforzar el mediocampo local.",
+      "lean": "South Korea favorita con tranquilidad. Sudafrica necesita un resultado extraordinario y depende tambien de otros.",
+      "fuentes": [
+        "https://www.sportsmole.co.uk/football/south-africa/world-cup-2026/preview/south-africa-vs-south-korea-prediction-team-news-lineups_599815.html",
+        "https://sports.yahoo.com/articles/preview-south-africa-vs-south-011000125.html",
+        "https://www.squawka.com/en/news/world-cup/south-africa-vs-south-korea-team-news-predicted-lineups/"
       ]
     }
   ]
