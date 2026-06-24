@@ -3,25 +3,10 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-06-24T00:10Z",
+    "actualizado": "2026-06-24T04:10Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "Colombia", "away": "DR Congo", "fecha": "2026-06-23",
-      "estado_alineacion": "probable",
-      "xi_local": "Vargas; Munoz, D. Sanchez, Lucumi, Mojica; Lerma, Rios; Arias, J. Rodriguez, L. Diaz; Cordoba (4-2-3-1).",
-      "xi_visita": "Mpasi; Wan-Bissaka, Mbemba, Tuanzebe, Masuaku; Bongonda, Pickel, Moutoussamy, Elia; Bakambu, Wissa (4-3-3).",
-      "bajas_local": ["Sin lesionados confirmados"],
-      "bajas_visita": ["Chancel Mbemba (amarilla acumulada vs Portugal — riesgo de sancion si ve otra tarjeta)"],
-      "lectura": "Colombia lidera el Grupo K con victoria 3-1 sobre Uzbekistan (Luis Diaz brillante, James Rodriguez en rol 10). DR Congo emato 1-1 con Portugal (Yoane Wissa sorpresivo). Con una victoria Colombia asegura clasificacion; Congo necesita sumar si no quiere depender de la ultima fecha. James Rodriguez sigue siendo el diferencial creativo; Luis Diaz, la amenaza directa por izquierda.",
-      "lean": "Colombia favorita en casa (Guadalajara). Luis Diaz y James como claves del partido.",
-      "fuentes": [
-        "https://www.sportsmole.co.uk/football/colombia/world-cup-2026/preview/colombia-vs-congo-dr-prediction-team-news-lineups_599761.html",
-        "https://sports.yahoo.com/articles/colombia-vs-dr-congo-prediction-093500942.html",
-        "https://www.squawka.com/en/news/world-cup/colombia-vs-dr-congo-team-news-predicted-lineups/"
-      ]
-    },
     {
       "home": "Switzerland", "away": "Canada", "fecha": "2026-06-24",
       "estado_alineacion": "probable",

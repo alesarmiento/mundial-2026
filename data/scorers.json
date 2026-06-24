@@ -2,7 +2,7 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/adidas-golden-boot-race-top-scorer + https://www.nbcsports.com/soccer/news/2026-world-cup-top-goalscorers-full-list-latest-on-race-for-the-golden-boot + Yahoo Sports / ESPN (verificado 24-jun-2026 tras Panama 0-1 Croatia; Budimir 1G no altera el top 15). Messi lidera con 5G; Mbappe y Haaland en 4G c/u.",
+    "fuente": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/adidas-golden-boot-race-top-scorer + https://www.nbcsports.com/soccer/news/2026-world-cup-top-goalscorers-full-list-latest-on-race-for-the-golden-boot + ESPN (verificado 24-jun-2026 tras Colombia 1-0 DR Congo; Muñoz 2G agregado). Messi lidera con 5G; Mbappe y Haaland en 4G c/u.",
     "actualizado": "2026-06-24"
   },
   "jugadores": [
@@ -28,6 +28,7 @@
     {"jugador": "Daichi Kamada", "equipo": "Japan", "goles": 2},
     {"jugador": "Ayase Ueda", "equipo": "Japan", "goles": 2},
     {"jugador": "Mikel Oyarzabal", "equipo": "Spain", "goles": 2},
-    {"jugador": "Cristiano Ronaldo", "equipo": "Portugal", "goles": 2}
+    {"jugador": "Cristiano Ronaldo", "equipo": "Portugal", "goles": 2},
+    {"jugador": "Daniel Muñoz", "equipo": "Colombia", "goles": 2}
   ]
 }
