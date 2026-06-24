@@ -1255,10 +1255,16 @@ function planPollaHtml(home,away){
   if(!pp)return '';
   const dif=!pp.xg||pp.plan[0]!==pp.xg[0]||pp.plan[1]!==pp.xg[1];
   const xgtxt=(dif&&pp.xg)?` <span class="muted" style="font-size:11px">(xG: ${pp.xg[0]}–${pp.xg[1]})</span>`:'';
+  let mio='';
+  if(pp.mio){
+    const d=pp.mio[0]!==pp.plan[0]||pp.mio[1]!==pp.plan[1];
+    mio=`<div style="margin-top:6px;border-top:1px solid #1c3a28;padding-top:6px">👤 Tu pronóstico: <b style="font-size:15px;color:${d?'#d29922':'#3fb950'}">${pp.mio[0]}–${pp.mio[1]}</b><span class="muted" style="font-size:11px"> · ${d?'difiere del plan':'coincide'}</span></div>`;
+  }
   return `<div class="flbl" style="margin-top:13px">🎯 Plan polla — última fecha de grupos</div>
     <div style="background:#10261a;border-left:3px solid #3fb950;padding:8px 11px;border-radius:6px;font-size:13px">
-      Marcador a cargar: <b style="font-size:16px">${pp.plan[0]}–${pp.plan[1]}</b>${xgtxt}
+      🤖 Plan del sistema: <b style="font-size:16px">${pp.plan[0]}–${pp.plan[1]}</b>${xgtxt}
       ${pp.nota?`<div class="muted" style="font-size:11.5px;margin-top:4px">${pp.nota}</div>`:''}
+      ${mio}
     </div>`;
 }
 function openModal(m){

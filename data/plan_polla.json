@@ -2,38 +2,476 @@
   "_meta": {
     "descripcion": "Plan de pronostico para la ULTIMA FECHA de grupos (24-27 jun), optimizado para la polla: maximiza puntos combinando marcador + los 7 pts por clasificado (que en esta polla se derivan de los marcadores predichos). Los marcadores son los mas probables (capa xG + ajuste por rotacion/incentivos), con 2 retoques de costo casi nulo para asegurar los 32 clasificados robustos del modelo. NO modifica el motor; se MUESTRA en el modal.",
     "estrategia": "Marcadores mas probables EXCEPTO donde un retoque de bajo costo asegura un clasificado (sobre todo terceros). Uruguay-Espana 0-2 (saca a Uruguay) y Congo-Uzbekistan 1-1 (deja afuera a Congo) son los 2 retoques clave que meten a Suecia y Escocia.",
-    "actualizado": "2026-06-24"
+    "actualizado": "2026-06-24",
+    "mi_puntaje_jugados": 106,
+    "sistema_puntaje_jugados": 118
   },
   "clasificados_32": [
-    "Mexico","South Korea","Canada","Switzerland","Brazil","Morocco","United States","Australia",
-    "Germany","Ivory Coast","Netherlands","Japan","Egypt","Belgium","Spain","France","Norway",
-    "Argentina","Austria","Colombia","Portugal","England","Ghana","Croatia",
-    "Sweden","Scotland","Algeria","Paraguay","Senegal","Iran","Cape Verde","Bosnia and Herzegovina"
+    "Mexico",
+    "South Korea",
+    "Canada",
+    "Switzerland",
+    "Brazil",
+    "Morocco",
+    "United States",
+    "Australia",
+    "Germany",
+    "Ivory Coast",
+    "Netherlands",
+    "Japan",
+    "Egypt",
+    "Belgium",
+    "Spain",
+    "France",
+    "Norway",
+    "Argentina",
+    "Austria",
+    "Colombia",
+    "Portugal",
+    "England",
+    "Ghana",
+    "Croatia",
+    "Sweden",
+    "Scotland",
+    "Algeria",
+    "Paraguay",
+    "Senegal",
+    "Iran",
+    "Cape Verde",
+    "Bosnia and Herzegovina"
   ],
   "marcadores": [
-    {"home":"Czechia","away":"Mexico","fecha":"2026-06-24","xg":[0,3],"plan":[1,2],"nota":"Mexico ya 1ro, rota; Chequia a muerte -> mas cerrado"},
-    {"home":"South Africa","away":"South Korea","fecha":"2026-06-24","xg":[0,2],"plan":[0,2],"nota":""},
-    {"home":"Switzerland","away":"Canada","fecha":"2026-06-24","xg":[1,1],"plan":[1,1],"nota":"ambos por el 1ro"},
-    {"home":"Bosnia and Herzegovina","away":"Qatar","fecha":"2026-06-24","xg":[2,1],"plan":[2,0],"nota":"Bosnia debe ganar y cuidar el arco (asegura 3ro)"},
-    {"home":"Scotland","away":"Brazil","fecha":"2026-06-24","xg":[1,2],"plan":[1,2],"nota":"Brasil a fondo (pelea 1ro)"},
-    {"home":"Morocco","away":"Haiti","fecha":"2026-06-24","xg":[3,0],"plan":[3,0],"nota":"Marruecos quiere goles (pelea 1ro)"},
-    {"home":"Turkiye","away":"United States","fecha":"2026-06-25","xg":[1,3],"plan":[1,1],"nota":"USA rota (Pulisic duda) -> trabado"},
-    {"home":"Paraguay","away":"Australia","fecha":"2026-06-25","xg":[1,1],"plan":[1,1],"nota":"mata-mata; a Australia le sirve el empate"},
-    {"home":"Curacao","away":"Ivory Coast","fecha":"2026-06-25","xg":[0,3],"plan":[0,3],"nota":""},
-    {"home":"Ecuador","away":"Germany","fecha":"2026-06-25","xg":[1,2],"plan":[1,1],"nota":"Alemania rota MASIVO (Kimmich fuera) -> riesgo de sorpresa"},
-    {"home":"Japan","away":"Sweden","fecha":"2026-06-25","xg":[3,1],"plan":[2,1],"nota":"Japon no rota pero abierto; Suecia peligrosa"},
-    {"home":"Tunisia","away":"Netherlands","fecha":"2026-06-25","xg":[0,3],"plan":[0,3],"nota":"NL quiere goles para el 1ro"},
-    {"home":"Egypt","away":"Iran","fecha":"2026-06-26","xg":[1,1],"plan":[1,1],"nota":"Egipto comodo con empate; Iran obligado"},
-    {"home":"New Zealand","away":"Belgium","fecha":"2026-06-26","xg":[0,3],"plan":[0,2],"nota":"Belgica debe ganar, clara"},
-    {"home":"Cape Verde","away":"Saudi Arabia","fecha":"2026-06-26","xg":[1,1],"plan":[1,1],"nota":"CV no pierde; Saudi obligado (asegura CV como 3ro)"},
-    {"home":"Uruguay","away":"Spain","fecha":"2026-06-26","xg":[0,3],"plan":[0,2],"nota":"RETOQUE CLAVE: Espana administra; saca a Uruguay (mete a CV/Suecia/Escocia)"},
-    {"home":"Norway","away":"France","fecha":"2026-06-26","xg":[1,2],"plan":[1,2],"nota":"ambos por el 1ro, Francia favorita"},
-    {"home":"Senegal","away":"Iraq","fecha":"2026-06-26","xg":[3,0],"plan":[3,0],"nota":"Senegal asegura 3ro"},
-    {"home":"Algeria","away":"Austria","fecha":"2026-06-27","xg":[1,2],"plan":[1,1],"nota":"Argelia al frente (debe ganar); Austria a la contra"},
-    {"home":"Jordan","away":"Argentina","fecha":"2026-06-27","xg":[0,4],"plan":[1,2],"nota":"Argentina rota fuerte, Messi puede descansar"},
-    {"home":"Colombia","away":"Portugal","fecha":"2026-06-27","xg":[2,1],"plan":[1,1],"nota":"ambos por el 1ro; a Colombia le sirve el empate"},
-    {"home":"DR Congo","away":"Uzbekistan","fecha":"2026-06-27","xg":[1,1],"plan":[1,1],"nota":"RETOQUE CLAVE: empate deja a Congo afuera -> entran Suecia y Escocia"},
-    {"home":"Panama","away":"England","fecha":"2026-06-27","xg":[0,3],"plan":[0,2],"nota":"Inglaterra rota parcial pero cuida GD"},
-    {"home":"Croatia","away":"Ghana","fecha":"2026-06-27","xg":[3,0],"plan":[1,0],"nota":"es 50-50; Ghana comoda con empate (mejor GD), Croacia debe ganar"}
+    {
+      "home": "Czechia",
+      "away": "Mexico",
+      "fecha": "2026-06-24",
+      "xg": [
+        0,
+        3
+      ],
+      "plan": [
+        1,
+        2
+      ],
+      "nota": "Mexico ya 1ro, rota; Chequia a muerte -> mas cerrado",
+      "mio": [
+        1,
+        2
+      ]
+    },
+    {
+      "home": "South Africa",
+      "away": "South Korea",
+      "fecha": "2026-06-24",
+      "xg": [
+        0,
+        2
+      ],
+      "plan": [
+        0,
+        2
+      ],
+      "nota": "",
+      "mio": [
+        0,
+        2
+      ]
+    },
+    {
+      "home": "Switzerland",
+      "away": "Canada",
+      "fecha": "2026-06-24",
+      "xg": [
+        1,
+        1
+      ],
+      "plan": [
+        1,
+        1
+      ],
+      "nota": "ambos por el 1ro",
+      "mio": [
+        1,
+        1
+      ]
+    },
+    {
+      "home": "Bosnia and Herzegovina",
+      "away": "Qatar",
+      "fecha": "2026-06-24",
+      "xg": [
+        2,
+        1
+      ],
+      "plan": [
+        2,
+        0
+      ],
+      "nota": "Bosnia debe ganar y cuidar el arco (asegura 3ro)",
+      "mio": [
+        2,
+        0
+      ]
+    },
+    {
+      "home": "Scotland",
+      "away": "Brazil",
+      "fecha": "2026-06-24",
+      "xg": [
+        1,
+        2
+      ],
+      "plan": [
+        1,
+        2
+      ],
+      "nota": "Brasil a fondo (pelea 1ro)",
+      "mio": [
+        1,
+        2
+      ]
+    },
+    {
+      "home": "Morocco",
+      "away": "Haiti",
+      "fecha": "2026-06-24",
+      "xg": [
+        3,
+        0
+      ],
+      "plan": [
+        3,
+        0
+      ],
+      "nota": "Marruecos quiere goles (pelea 1ro)",
+      "mio": [
+        3,
+        0
+      ]
+    },
+    {
+      "home": "Turkiye",
+      "away": "United States",
+      "fecha": "2026-06-25",
+      "xg": [
+        1,
+        3
+      ],
+      "plan": [
+        1,
+        1
+      ],
+      "nota": "USA rota (Pulisic duda) -> trabado",
+      "mio": [
+        1,
+        2
+      ]
+    },
+    {
+      "home": "Paraguay",
+      "away": "Australia",
+      "fecha": "2026-06-25",
+      "xg": [
+        1,
+        1
+      ],
+      "plan": [
+        1,
+        1
+      ],
+      "nota": "mata-mata; a Australia le sirve el empate",
+      "mio": [
+        1,
+        2
+      ]
+    },
+    {
+      "home": "Curacao",
+      "away": "Ivory Coast",
+      "fecha": "2026-06-25",
+      "xg": [
+        0,
+        3
+      ],
+      "plan": [
+        0,
+        3
+      ],
+      "nota": "",
+      "mio": [
+        0,
+        3
+      ]
+    },
+    {
+      "home": "Ecuador",
+      "away": "Germany",
+      "fecha": "2026-06-25",
+      "xg": [
+        1,
+        2
+      ],
+      "plan": [
+        1,
+        1
+      ],
+      "nota": "Alemania rota MASIVO (Kimmich fuera) -> riesgo de sorpresa",
+      "mio": [
+        1,
+        2
+      ]
+    },
+    {
+      "home": "Japan",
+      "away": "Sweden",
+      "fecha": "2026-06-25",
+      "xg": [
+        3,
+        1
+      ],
+      "plan": [
+        2,
+        1
+      ],
+      "nota": "Japon no rota pero abierto; Suecia peligrosa",
+      "mio": [
+        3,
+        1
+      ]
+    },
+    {
+      "home": "Tunisia",
+      "away": "Netherlands",
+      "fecha": "2026-06-25",
+      "xg": [
+        0,
+        3
+      ],
+      "plan": [
+        0,
+        3
+      ],
+      "nota": "NL quiere goles para el 1ro",
+      "mio": [
+        0,
+        3
+      ]
+    },
+    {
+      "home": "Egypt",
+      "away": "Iran",
+      "fecha": "2026-06-26",
+      "xg": [
+        1,
+        1
+      ],
+      "plan": [
+        1,
+        1
+      ],
+      "nota": "Egipto comodo con empate; Iran obligado",
+      "mio": [
+        2,
+        1
+      ]
+    },
+    {
+      "home": "New Zealand",
+      "away": "Belgium",
+      "fecha": "2026-06-26",
+      "xg": [
+        0,
+        3
+      ],
+      "plan": [
+        0,
+        2
+      ],
+      "nota": "Belgica debe ganar, clara",
+      "mio": [
+        0,
+        3
+      ]
+    },
+    {
+      "home": "Cape Verde",
+      "away": "Saudi Arabia",
+      "fecha": "2026-06-26",
+      "xg": [
+        1,
+        1
+      ],
+      "plan": [
+        1,
+        1
+      ],
+      "nota": "CV no pierde; Saudi obligado (asegura CV como 3ro)",
+      "mio": [
+        1,
+        1
+      ]
+    },
+    {
+      "home": "Uruguay",
+      "away": "Spain",
+      "fecha": "2026-06-26",
+      "xg": [
+        0,
+        3
+      ],
+      "plan": [
+        0,
+        2
+      ],
+      "nota": "RETOQUE CLAVE: Espana administra; saca a Uruguay (mete a CV/Suecia/Escocia)",
+      "mio": [
+        0,
+        2
+      ]
+    },
+    {
+      "home": "Norway",
+      "away": "France",
+      "fecha": "2026-06-26",
+      "xg": [
+        1,
+        2
+      ],
+      "plan": [
+        1,
+        2
+      ],
+      "nota": "ambos por el 1ro, Francia favorita",
+      "mio": [
+        1,
+        2
+      ]
+    },
+    {
+      "home": "Senegal",
+      "away": "Iraq",
+      "fecha": "2026-06-26",
+      "xg": [
+        3,
+        0
+      ],
+      "plan": [
+        3,
+        0
+      ],
+      "nota": "Senegal asegura 3ro",
+      "mio": [
+        2,
+        0
+      ]
+    },
+    {
+      "home": "Algeria",
+      "away": "Austria",
+      "fecha": "2026-06-27",
+      "xg": [
+        1,
+        2
+      ],
+      "plan": [
+        1,
+        1
+      ],
+      "nota": "Argelia al frente (debe ganar); Austria a la contra",
+      "mio": [
+        1,
+        2
+      ]
+    },
+    {
+      "home": "Jordan",
+      "away": "Argentina",
+      "fecha": "2026-06-27",
+      "xg": [
+        0,
+        4
+      ],
+      "plan": [
+        1,
+        2
+      ],
+      "nota": "Argentina rota fuerte, Messi puede descansar",
+      "mio": [
+        0,
+        4
+      ]
+    },
+    {
+      "home": "Colombia",
+      "away": "Portugal",
+      "fecha": "2026-06-27",
+      "xg": [
+        2,
+        1
+      ],
+      "plan": [
+        1,
+        1
+      ],
+      "nota": "ambos por el 1ro; a Colombia le sirve el empate",
+      "mio": [
+        1,
+        2
+      ]
+    },
+    {
+      "home": "DR Congo",
+      "away": "Uzbekistan",
+      "fecha": "2026-06-27",
+      "xg": [
+        1,
+        1
+      ],
+      "plan": [
+        1,
+        1
+      ],
+      "nota": "RETOQUE CLAVE: empate deja a Congo afuera -> entran Suecia y Escocia",
+      "mio": [
+        1,
+        1
+      ]
+    },
+    {
+      "home": "Panama",
+      "away": "England",
+      "fecha": "2026-06-27",
+      "xg": [
+        0,
+        3
+      ],
+      "plan": [
+        0,
+        2
+      ],
+      "nota": "Inglaterra rota parcial pero cuida GD",
+      "mio": [
+        0,
+        3
+      ]
+    },
+    {
+      "home": "Croatia",
+      "away": "Ghana",
+      "fecha": "2026-06-27",
+      "xg": [
+        3,
+        0
+      ],
+      "plan": [
+        1,
+        0
+      ],
+      "nota": "es 50-50; Ghana comoda con empate (mejor GD), Croacia debe ganar",
+      "mio": [
+        3,
+        0
+      ]
+    }
   ]
 }
