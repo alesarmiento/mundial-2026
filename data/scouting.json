@@ -3,40 +3,10 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-06-24T21:04Z",
+    "actualizado": "2026-06-25T00:06Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "Scotland", "away": "Brazil", "fecha": "2026-06-24",
-      "estado_alineacion": "probable",
-      "xi_local": "Gunn; Patterson, McKenna, Hendry, Robertson; McGinn, Christie, Ferguson, Doak; McTominay, Adams (4-2-3-1).",
-      "xi_visita": "Alisson; Danilo, Marquinhos, Gabriel, Douglas Santos; Casemiro, Bruno Guimaraes; Rayan, Paqueta, Vinicius Junior; Matheus Cunha (4-2-3-1).",
-      "bajas_local": ["Scott McKenna (lesion de gemelo — no ha jugado en el torneo, volvio a entrenar, posible regreso)"],
-      "bajas_visita": ["Raphinha (lesion de isquiotibial — baja confirmada; reemplazado por Rayan, de Bournemouth, 19 anos)", "Neymar (apto fisicamente pero improbable como titular segun CT Ancelotti)"],
-      "lectura": "Escocia necesita ganar Y esperar resultados para avanzar como tercer mejor (3 pts). Brasil ya clasifico (4 pts) y puede rotar o administrar. Sin Raphinha, el joven Rayan debuta como titular derecho. Vinicius Jr. y Cunha siguen siendo la amenaza principal. Escocia se defiende ordenada en bloque bajo y golpea en transicion (McTominay, Doak). El riesgo para Brasil es bajar la intensidad con rotaciones.",
-      "lean": "Brasil amplio favorito, pero posible rotacion da chance a una Escocia que juega con nada que perder.",
-      "fuentes": [
-        "https://sports.yahoo.com/articles/preview-scotland-vs-brazil-team-220500336.html",
-        "https://www.sportsmole.co.uk/football/brazil/world-cup-2026/predicted-lineups/raphinha-blow-neymar-rayan-decisions-predicted-brazil-lineup-vs-scotland_599772.html",
-        "https://www.rotowire.com/soccer/article/scotland-vs-brazil-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-c-119341"
-      ]
-    },
-    {
-      "home": "Morocco", "away": "Haiti", "fecha": "2026-06-24",
-      "estado_alineacion": "probable",
-      "xi_local": "Bounou; Hakimi, Diop, Riad, Mazraoui; El Aynaoui, Bouaddi; Diaz, Ounahi, El Khannouss; Saibari (4-3-3).",
-      "xi_visita": "Placide; Arcus, Delcroix, Ade, Experience; Deedson, Bellegarde, Jean Jacques, Providence; Isidor, Pierrot (4-5-1 defensivo).",
-      "bajas_local": ["Nayef Aguerd (en duda — no ha jugado en el torneo por lesion)", "Abde Ezzalzouli (en duda — sin jugar en el torneo por lesion)"],
-      "bajas_visita": ["Duckens Nazon (lesion no especificada — dudoso)", "Leverton Pierre (lesion — descartado para el resto del torneo)"],
-      "lectura": "Marruecos domina el Grupo C con 4 puntos (empate 1-1 con Brasil, victoria 1-0 vs Escocia). Haiti fue el primer eliminado del torneo — sin puntos ni goles marcados en dos partidos. Ismael Saibari ha marcado ambos goles marroquies. Hakimi y Brahim Diaz son los motores creativos. El debate interno: sale Marruecos a golear para mejorar diferencia de goles, o administra a ojo del partido del otro grupo.",
-      "lean": "Marruecos favorita amplia. Haiti juega por el honor.",
-      "fuentes": [
-        "https://www.sportsmole.co.uk/football/morocco/world-cup-2026/preview/morocco-vs-haiti-prediction-team-news-lineups_599775.html",
-        "https://www.rotowire.com/soccer/article/morocco-vs-haiti-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-c-119340",
-        "https://www.espn.com/soccer/story/_/id/49141508/fifa-world-cup-2026-morocco-vs-haiti-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups"
-      ]
-    },
     {
       "home": "Czechia", "away": "Mexico", "fecha": "2026-06-24",
       "estado_alineacion": "probable",
@@ -57,7 +27,7 @@
       "estado_alineacion": "probable",
       "xi_local": "Williams; Mudau, Okon, Mbokazi, Modiba; Adams, Sithole, Mbatha; Mofokeng, Rayners, Appollis (4-3-3).",
       "xi_visita": "Kim Seung-Gyu; Lee Han-beom, Kim Min-jae, Lee Gi-hyuk; Seol Young-woo, Hwang In-beom, Paik Seung-ho, Lee Tae-seok; Lee Kang-in, Lee Jae-sung; Son Heung-min (3-4-2-1).",
-      "bajas_local": ["Teboho Mokoena (suspendido — segunda tarjeta amarilla acumulada vs Chequia; baja clave en mediocampo)", "Siyanda Zwane (en duda — mencionado en riesgo de sancion)"],
+      "bajas_local": ["Teboho Mokoena (suspendido — segunda tarjeta amarilla acumulada vs Chequia; baja clave en mediocampo)"],
       "bajas_visita": ["Sin lesionados ni suspendidos confirmados"],
       "lectura": "Corea del Sur llega con 3 puntos (victoria 1-0 vs Chequia en J1) y clasifica con un empate. Sudafrica tiene 1 punto y necesita ganar Y esperar que Mexico-Chequia no ayude a los checos. Sin Mokoena, el motor organizador de Bafana Bafana, el equipo pierde ritmo en el medio. Son Heung-min busca su primer gol del torneo. Sphephelo Sithole vuelve de suspension para reforzar el mediocampo local.",
       "lean": "South Korea favorita con tranquilidad. Sudafrica necesita un resultado extraordinario y depende tambien de otros.",
@@ -65,6 +35,96 @@
         "https://www.sportsmole.co.uk/football/south-africa/world-cup-2026/preview/south-africa-vs-south-korea-prediction-team-news-lineups_599815.html",
         "https://sports.yahoo.com/articles/preview-south-africa-vs-south-011000125.html",
         "https://www.squawka.com/en/news/world-cup/south-africa-vs-south-korea-team-news-predicted-lineups/"
+      ]
+    },
+    {
+      "home": "Curacao", "away": "Ivory Coast", "fecha": "2026-06-25",
+      "estado_alineacion": "probable",
+      "xi_local": "Room; Brenet, Gaari, Obispo, Floranus; Fonville, Chong, Comenencia, J.Bacuna, L.Bacuna; Locadia (4-4-2).",
+      "xi_visita": "Fofana; Doue, Kossounou, Agbadou, Konan; Kessie, Sangare; Diallo, Oulai, Diomande; Bonny (4-2-3-1).",
+      "bajas_local": ["Locadia (contusion — es duda pero deberia estar disponible para el inicio)"],
+      "bajas_visita": ["Wilfried Singo (en duda — lesion de muslo contra Alemania)", "Evan Ndicka (volvio a entrenar — podria debutar en el torneo)"],
+      "lectura": "Ivory Coast llega con 3 puntos (1-0 vs Ecuador en J1, 1-2 vs Alemania en J2) y clasifica con un empate. Curacao tiene 1 punto (0-0 vs Ecuador) y necesita ganar, pero ni ganando tiene clasificacion garantizada como mejor tercero. El guardameta Eloy Room fue figura del torneo con 15 atajadas contra Ecuador. Amad Diallo y Kessie son los motores creativos marfileños. Curacao apuesta a bloque bajo y contraataque como hizo ante Ecuador.",
+      "lean": "Ivory Coast amplia favorita — controlan su destino con un empate y tienen plantel superior.",
+      "fuentes": [
+        "https://www.rotowire.com/soccer/article/curacao-vs-ivory-coast-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-e-119484",
+        "https://www.sportsmole.co.uk/football/curacao/world-cup-2026/preview/curacao-vs-ivory-coast-prediction-team-news-lineups_599885.html",
+        "https://www.espn.com/soccer/story/_/id/49141629/fifa-world-cup-2026-curacao-vs-ivory-coast-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups"
+      ]
+    },
+    {
+      "home": "Ecuador", "away": "Germany", "fecha": "2026-06-25",
+      "estado_alineacion": "probable",
+      "xi_local": "Galindez; Ordonez, Pacho, Hincapie; Yeboah, Franco, Caicedo, Estupinan; Plata, Vite; Valencia (3-4-2-1).",
+      "xi_visita": "Baumann; Kimmich, Ruediger, Tah, Raum; Goretzka, Stiller; Leweling, Amiri, Beier; Undav (4-2-3-1).",
+      "bajas_local": ["Sin lesionados confirmados"],
+      "bajas_visita": ["Nico Schlotterbeck (lesion de tobillo vs Costa de Marfil — baja para el resto del torneo)", "Oliver Neuer posiblemente descansa — Baumann titular esperado"],
+      "lectura": "Alemania ya clasifica primera del Grupo E con 6 puntos perfectos (7-1 y 2-1). Ecuador tiene apenas 1 punto (0-1 y 0-0) y DEBE ganar para tener alguna chance de avanzar como mejor tercero. Con Schlotterbeck fuera, Nagelsmann podria rotar defensores — eso puede abrir espacios. Enner Valencia y Moises Caicedo son las piezas clave del Ecuador. Deniz Undav busca ampliar su cuenta de la Bota de Oro.",
+      "lean": "Alemania favorita aun rotando. Ecuador tiene motivacion desesperada pero enfrenta al equipo mas en forma del torneo.",
+      "fuentes": [
+        "https://www.rotowire.com/soccer/article/ecuador-vs-germany-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-e-119485",
+        "https://www.sportsmole.co.uk/football/germany/world-cup-2026/preview/ecuador-vs-germany-prediction-team-news-lineups_599880.html",
+        "https://www.espn.com/soccer/story/_/id/49155323/ecuador-germany-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups"
+      ]
+    },
+    {
+      "home": "Japan", "away": "Sweden", "fecha": "2026-06-25",
+      "estado_alineacion": "probable",
+      "xi_local": "Suzuki; Itakura, Watanabe, H.Ito; Doan, Sano, Kamada, Nakamura; J.Ito, Maeda; Ueda (3-4-2-1).",
+      "xi_visita": "Nordfeldt; I.Hien, Lagerbielke, Lindelof; Bernhardsson, Ayari, Karlstrom, Nygren, Gudmundsson; Gyokeres, Isak (3-5-2).",
+      "bajas_local": ["Wataru Endo (baja para todo el torneo — lesion previa)", "Takefusa Kubo (lesion de rodilla — sin confirmar para este partido)", "Shuto Machino (enfermedad — dudoso)"],
+      "bajas_visita": ["Sin lesionados confirmados"],
+      "lectura": "Japon clasifica con un empate (4 pts, igual que Holanda). Suecia DEBE ganar para superar a Japon. La dupla Gyokeres-Isak es una de las mejores del torneo (Isak y Gyokeres tienen 3 goles juntos). Japon perdi a Endo antes del torneo y ve en duda a Kubo. El bloque japones en transicion defensiva (Kamada en mediocampo) dificulta el juego de Suecia. Pero sin Endo ni Kubo, el creativo de Japon es mas limitado.",
+      "lean": "Partido muy abierto — Suecia tiene poder de ataque pero Japon juega con bloque defensivo. El empate le sirve a Japon; Suecia necesita los 3.",
+      "fuentes": [
+        "https://www.sportsmole.co.uk/football/japan/world-cup-2026/preview/japan-vs-sweden-prediction-team-news-lineups_599879.html",
+        "https://www.rotowire.com/soccer/article/japan-vs-sweden-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-f-119486",
+        "https://sports.yahoo.com/articles/preview-japan-vs-sweden-team-231000350.html"
+      ]
+    },
+    {
+      "home": "Tunisia", "away": "Netherlands", "fecha": "2026-06-25",
+      "estado_alineacion": "probable",
+      "xi_local": "Ben Hessen; Ben Hamida, Rekik, Talbi; Valery, Khedira, Skhiri, Abdi; Hannibal, Saad; Mastouri (4-2-3-1).",
+      "xi_visita": "Flekken; Dumfries, van Hecke, van Dijk, van de Ven; Gravenberch, Reijnders, De Jong; Gakpo, Brobbey, Bergwijn (4-3-3).",
+      "bajas_local": [],
+      "bajas_visita": ["Brian Brobbey (contusion leve — en duda para el inicio)", "Memphis Depay (lesion de muslo — trabajando en su recuperacion)", "Quinten Timber (conmocion cerebral — regresa a la convocatoria vs Tunisia)"],
+      "lectura": "Tunez esta eliminada (0 puntos tras 5-1 vs Suecia y 0-4 vs Japon). El nuevo CT Herve Renard — legendario por ganar la Copa Africa con Zambia y Marruecos — debuta buscando devolver la dignidad. Holanda peleara el liderato del grupo (igual en puntos con Japon pero adelante en diferencia de goles). Tunez cambio entrenador tras la goleada; puede haber juventud en el 11 inicial.",
+      "lean": "Holanda favorita clara. Tunez puede salir mas ofensiva bajo Renard — partido abierto, muchos goles posibles.",
+      "fuentes": [
+        "https://www.sportsmole.co.uk/football/tunisia/world-cup-2026/preview/tunisia-vs-netherlands-prediction-team-news-lineups_599913.html",
+        "https://www.rotowire.com/soccer/article/tunisia-vs-netherlands-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-f-119487",
+        "https://www.skysports.com/football/news/12098/13543097/world-cup-2026-group-f-guide-fixtures-schedule-standings-and-odds-for-netherlands-japan-sweden-and-tunisia"
+      ]
+    },
+    {
+      "home": "Turkiye", "away": "United States", "fecha": "2026-06-25",
+      "estado_alineacion": "probable",
+      "xi_local": "Gunok; Celik, Demiral, Bardakci, Muldur; Calhanoglu, Yokuslu; Yildiz, Guler, Yazici; Yilmaz (4-2-3-1).",
+      "xi_visita": "Turner; Richards, Zimmermann, Long, Robinson; Musah, McKennie; Weah, Pepi, Ferreira; Balogun (4-3-3 rotado).",
+      "bajas_local": ["Kenan Yildiz (lesion de pantorrilla — 'en duda' pero se espera que juegue)"],
+      "bajas_visita": ["Christian Pulisic (contusion de pantorrilla — apto para el partido, retorno al entrenamiento confirmado)", "Tyler Adams, Folarin Balogun, Chris Richards, Antonee Robinson (tarjeta amarilla acumulada — en riesgo de suspension para octavos si ven otra)"],
+      "lectura": "USA ya clasifico primero del Grupo D con 6 puntos (4-1 y 2-0). Turquia esta eliminada (0 puntos). El CT Berhalter enfrenta el dilema de rotar para cuidar amarillados o mantener ritmo competitivo. Turquia presento 62 remates en 2 partidos pero no convirtio: el bloqueo mental y la falta de definicion los condeno. Arda Guler busca su primer gol del torneo.",
+      "lean": "USA favorita aun rotando. Turquia puede mejorar su imagen final, pero la carga anotadora de USA (6 goles en 2 partidos) es difícil de neutralizar.",
+      "fuentes": [
+        "https://www.rotowire.com/soccer/article/turkiye-vs-usa-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-d-119483",
+        "https://www.sportsmole.co.uk/football/turkey/world-cup-2026/preview/turkey-vs-usa-prediction-team-news-lineups_599846.html",
+        "https://www.espn.com/soccer/story/_/id/49151521/turkiye-vs-usmnt-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups"
+      ]
+    },
+    {
+      "home": "Paraguay", "away": "Australia", "fecha": "2026-06-25",
+      "estado_alineacion": "probable",
+      "xi_local": "Gill; Caceres, G.Gomez, Alderete, Alonso; Mauricio, Cubas, D.Gomez, Galarza; Pitta, Enciso (4-2-3-1).",
+      "xi_visita": "Beach; Italiano, Circati, Souttar, Burgess, Bos; Metcalfe, O'Neill, Okon-Engstler; Irankunda, Toure (3-4-3).",
+      "bajas_local": ["Miguel Almiron (suspendido — expulsado contra Turquia; baja sensible en el mediocampo creativo)"],
+      "bajas_visita": ["Mathew Leckie (lesion muscular vs USA — en duda; Cristian Volpato podria entrar)"],
+      "lectura": "Ambos equipos tienen 3 puntos y clasificaron a dieciseisavos (Turquia eliminada). El partido define quien termina 2do y quien 3ro, lo que tiene impacto en la rama del cuadro. Paraguay gano a Turquia 1-0 con 10 hombres (expulsion de Almiron antes del descanso). Sin Almiron, el Paraguay pierde su capitan y motor creativo. Australia perdio 0-2 ante USA pero tiene mejor diferencia de goles. Leckie es duda; Irankunda (joven atacante) podria ser la sorpresa.",
+      "lean": "Australia leve favorita por ranking y estabilidad defensiva. Paraguay puede sorprender con Enciso y Galarza, pero sin Almiron el armado ofensivo es mas directo.",
+      "fuentes": [
+        "https://www.sportsmole.co.uk/football/paraguay/world-cup-2026/preview/paraguay-vs-australia-prediction-team-news-lineups_599899.html",
+        "https://www.espn.com/soccer/story/_/id/49155739/paraguay-australia-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups",
+        "https://onefootball.com/en/news/preview-paraguay-vs-australia-team-news-lineups-predictions-world-cup-2606-43049745"
       ]
     }
   ]
