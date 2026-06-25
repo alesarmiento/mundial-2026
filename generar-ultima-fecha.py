@@ -142,15 +142,21 @@ def seedmap(teamset, statef):
     return {t:i+1 for i,t in enumerate(sorted(teamset,key=k,reverse=True))}
 mine_seed=seedmap(mine32, st)
 real_seed=seedmap(realproy32, rst)
-# diferencia EXPLICITA: tu cuadro (mine32) vs el MODELO (robust = mejor estimacion de quien clasifica)
-# Usamos robust (no realproy) para que sea consistente con la lista de muertos de abajo y no marque
-# como "muerto" a un equipo que el modelo da probable (ej. Iran 68%) solo porque tu pronostico de ese
-# partido lo deja afuera. El +7 lo decide la realidad, no tu marcador.
-mine_only=sorted(mine32-robust, key=lambda t:-mine_seed.get(t,99))   # los tuyos que el modelo da AFUERA
-real_only=sorted(robust-mine32, key=lambda t:real_seed.get(t,99))    # los que el modelo da adentro y no tenes
-PLUS='&#10133;'
+# Diferencia tu cuadro vs tu proyeccion (real+proy), separando los casos donde el MODELO disiente:
+#  - 💀 muerto real  = lo tenes, tu proy lo deja afuera Y el modelo tambien (coincide con la lista de abajo)
+#  - 🎲 sorpresa      = lo tenes, tu proy lo deja afuera PERO el modelo lo da probable (Iran): +7 si clasifica
+#  - ➕ te falta       = tu proy lo mete y no lo tenes, y el modelo lo confirma
+#  - 🎲 dudoso (der)  = tu proy lo mete pero el modelo lo da improbable (DR Congo)
+_mine_only=mine32-realproy32
+_real_only=realproy32-mine32
+g_dead    =sorted([t for t in _mine_only if t not in robust], key=lambda t:-mine_seed.get(t,99))
+g_surprise=sorted([t for t in _mine_only if t in robust],      key=lambda t:-mine_seed.get(t,99))
+g_add     =sorted([t for t in _real_only if t in robust],      key=lambda t:real_seed.get(t,99))
+g_weak    =sorted([t for t in _real_only if t not in robust],  key=lambda t:real_seed.get(t,99))
+mine_only=g_dead; real_only=g_add  # para el cartel (los casos "claros")
+PLUS='&#10133;'; DICE='&#127922;'
 
-def panel(title, gr, st2, b8s, accent, sub, deadset=None, seed=None, addset=None):
+def panel(title, gr, st2, b8s, accent, sub, deadset=None, seed=None, addset=None, surpriseset=None, weakset=None):
     blocks=''
     for g in sorted(gr):
         rws=''
@@ -164,6 +170,10 @@ def panel(title, gr, st2, b8s, accent, sub, deadset=None, seed=None, addset=None
             nm=ES[t]
             if deadset and isq and t in deadset:
                 cfg='#f85149'; cbg='#2d1418'; nm=ES[t]+' '+SKULL+' <span style="font-size:9px;color:#f85149;font-weight:700">&minus;7</span>'
+            elif surpriseset and isq and t in surpriseset:
+                cfg='#e3b341'; cbg='#2b2410'; nm=ES[t]+' '+DICE
+            elif weakset and isq and t in weakset:
+                cfg='#e3b341'; cbg='#2b2410'; nm=ES[t]+' '+DICE
             elif addset and isq and t in addset:
                 cfg='#58a6ff'; cbg='#0d2233'; nm=ES[t]+' '+PLUS
             sd=' <span style="color:#8b949e;font-size:9px;font-weight:600">#%d</span>'%seed[t] if (seed and isq and t in seed) else ''
@@ -180,14 +190,16 @@ compare48=('<div class="box"><h2>Los 48 equipos: tu cuadro vs la realidad &mdash
  'El <b style="color:#8b949e">#n</b> = puesto en el ranking de los 32 (por puntos).</div>'
  # CARTEL: la diferencia explicita entre TU cuadro y REAL+PROYECTADO
  '<div style="background:#0d1117;border:1px solid #30363d;border-radius:9px;padding:11px 14px;margin-bottom:14px;font-size:13px;line-height:1.7">'
- '<div style="font-weight:700;margin-bottom:4px">La diferencia entre tu cuadro y lo que dice el MODELO (quien va a clasificar) &mdash; son <b>'+str(len(mine_only))+'</b> equipos en cada lado:</div>'
- '<div><span style="color:#f85149;font-weight:700">'+SKULL+' ERRORES probables</span> (los tenes pero el modelo los da AFUERA &mdash; <b style="color:#f85149">hasta '+str(len(mine_only)*7)+' pts</b> en riesgo): '+', '.join(ES[t] for t in mine_only)+'</div>'
- '<div><span style="color:#58a6ff;font-weight:700">'+PLUS+' El modelo los da ADENTRO y a vos te FALTAN:</span> '+', '.join(ES[t] for t in real_only)+'</div>'
- '<div style="color:#8b949e;font-size:11.5px;margin-top:4px">En TU panel esos errores van en <b style="color:#f85149">rojo '+SKULL+'</b>; los que te faltan, en <b style="color:#58a6ff">azul '+PLUS+'</b>. <b>Nota:</b> un equipo tuyo igual te suma +7 si clasifica en la realidad, sin importar tu marcador (ej. Iran: lo tenes, si da la sorpresa cobras igual).</div>'
+ '<div style="font-weight:700;margin-bottom:5px">Tu cuadro vs lo que va a pasar &mdash; donde difieren:</div>'
+ '<div><span style="color:#f85149;font-weight:700">'+SKULL+' Muertos</span> (los tenes y NO clasifican &mdash; tu proyeccion y el modelo coinciden; <b style="color:#f85149">'+str(len(g_dead)*7)+' pts</b> perdidos): '+(', '.join(ES[t] for t in g_dead) or '&mdash;')+'</div>'
+ +('<div><span style="color:#e3b341;font-weight:700">'+DICE+' Sorpresa posible</span> (los tenes; tu pronostico los deja afuera, pero el modelo los da PROBABLES &mdash; si clasifican cobras +7 igual): '+', '.join(ES[t] for t in g_surprise)+'</div>' if g_surprise else '')
+ +'<div><span style="color:#58a6ff;font-weight:700">'+PLUS+' Te faltan</span> (clasifican y no los tenes): '+(', '.join(ES[t] for t in g_add) or '&mdash;')+'</div>'
+ +('<div><span style="color:#e3b341;font-weight:700">'+DICE+' Dudoso</span> (tu pronostico los mete pero el modelo los da improbables): '+', '.join(ES[t] for t in g_weak)+'</div>' if g_weak else '')
+ +'<div style="color:#8b949e;font-size:11.5px;margin-top:5px">En el cuadro: '+SKULL+' rojo = muerto, '+DICE+' amarillo = incierto (tu proy y el modelo no coinciden), '+PLUS+' azul = te falta. <b>Clave:</b> un equipo tuyo te suma +7 si clasifica EN LA REALIDAD, sin importar tu marcador.</div>'
  '</div>'
  '<div class="cmp">'
- +panel('TUS PRONOSTICOS', groups, st, b8, '#d29922', 'lo jugado (congelado) + tu ultima fecha proyectada &middot; '+SKULL+' rojo = lo metes y NO clasifica (real+proy)', mine_only, mine_seed, None)
- +panel('REAL + PROYECTADO', rgroups, rst, rb8, '#58a6ff', 'resultados reales + tu ultima fecha proyectada &middot; '+PLUS+' azul = clasifica y a vos te FALTA', None, real_seed, real_only)
+ +panel('TUS PRONOSTICOS', groups, st, b8, '#d29922', 'tu cuadro (congelado + ultima fecha) &middot; '+SKULL+' muerto &middot; '+DICE+' tu proy lo deja afuera pero el modelo lo da probable', g_dead, mine_seed, None, g_surprise, None)
+ +panel('REAL + PROYECTADO', rgroups, rst, rb8, '#58a6ff', 'real + tus picks &middot; '+PLUS+' clasifica y te falta &middot; '+DICE+' lo proyectas adentro pero el modelo duda', None, real_seed, g_add, None, g_weak)
  +'</div></div>')
 
 # (fecha, local, visita, xG, EVmax, FINAL, flag_rotacion, razon)
@@ -318,7 +330,7 @@ h1{font-size:22px;margin-bottom:4px} h2{font-size:17px;margin:0 0 10px}
 <div class="nav"><a href="./index.html">&larr; Volver al panel del Mundial (modelo)</a></div>
 <h1>Mi estimacion &mdash; Ultima fecha de grupos</h1>
 <div class="badge"><b style="color:#e3b341">Esta pagina es MI estimacion personal</b>, no la salida del modelo. Los marcadores de la ultima fecha estan derivados de <b>mis estimaciones previas</b> (mi cuadro congelado de las dos primeras fechas) mas mi lectura de la ultima jornada. El panel del modelo (probabilistico) esta en el enlace de arriba. Los partidos ya jugados muestran su <b>resultado REAL</b>; los pendientes, mi pronostico. Es una proyeccion, no una certeza.</div>
-<div class="sub">Puntaje jugado: <b>174</b> &middot; Marcadores ultima fecha en EV-optimo: <b>+6.7</b> esperados vs tus picks &middot; Clasificados: tu cuadro acierta <b>%d/32</b><br>Columnas por grupo: <b>HOY</b> = reales hoy (2 fechas) &middot; <b>TU</b> = tu cuadro al cierre &middot; <b>REAL+PROY</b> = si se cumplen nuestros marcadores (&#9989; = clasifica en ESE escenario). El color y el &#9989;/&#128128; del NOMBRE = segun el MODELO (mejor estimacion real). Los <b>&#128128; "muertos"</b> son clasificados de tu cuadro congelado que el modelo no respalda (apuestas de larga: si dan la sorpresa, igual te suman +7).</div>
+<div class="sub">Clasificados: tu cuadro acierta <b>%d/32</b> segun el modelo. Tu <b>puntaje real</b> va abajo en &laquo;Mi participacion&raquo; (se recalcula con cada resultado).<br>Columnas por grupo: <b>HOY</b> = reales (2 fechas) &middot; <b>TU</b> = tu cuadro al cierre &middot; <b>REAL+PROY</b> = si se cumplen tus marcadores. El color del NOMBRE = segun el MODELO (mejor estimacion de quien clasifica). <b style="color:#f85149">&#128128; muertos</b> = los das pero el modelo no; <b style="color:#e3b341">&#127922; incierto</b> = tu proyeccion y el modelo no coinciden (si clasifica, +7 igual).</div>
 %s
 %s
 <div class="grid">%s</div>
