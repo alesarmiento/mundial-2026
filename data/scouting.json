@@ -3,40 +3,10 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-06-25T00:06Z",
+    "actualizado": "2026-06-25T03:15Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "Czechia", "away": "Mexico", "fecha": "2026-06-24",
-      "estado_alineacion": "probable",
-      "xi_local": "Kovar; Hranac, Holes, Krejci; Coufal, Sadilek, Sulc, Soucek, Sojka; Hlozek, Schick (3-5-2).",
-      "xi_visita": "Ochoa; Sanchez, Moreno, Lopez, Gallardo; Alvarez, Antuna; Mora, Vega, Huerta; Gimenez (4-2-3-1).",
-      "bajas_local": ["David Jurasek (lesion de muslo en entrenamiento — baja para el resto del torneo)"],
-      "bajas_visita": ["Sin lesionados confirmados"],
-      "lectura": "Mexico ya clasifico a segunda ronda con 6 puntos maximos posibles en jornada 2 (unico equipo con pleno). Chequia tiene 1 punto y solo puede avanzar como mejor tercero si gana este partido. Mexico puede rotar o administrar, lo que abre la puerta a una posible sorpresa. Patrik Schick busca su primer gol del torneo para mantener esperanzas de Bota de Oro checa. Santiago Gimenez es la gran amenaza mexicana.",
-      "lean": "Mexico favorita por rendimiento y clasificacion ya asegurada. Chequia jugara con todo — partido con margen para la sorpresa si Mexico baja el ritmo.",
-      "fuentes": [
-        "https://www.sportsmole.co.uk/football/czech-republic/world-cup-2026/preview/czech-republic-vs-mexico-prediction-team-news-lineups_599786.html",
-        "https://www.rotowire.com/soccer/article/czechia-vs-mexico-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-a-119342",
-        "https://sports.yahoo.com/articles/czech-republic-vs-mexico-prediction-092000737.html"
-      ]
-    },
-    {
-      "home": "South Africa", "away": "South Korea", "fecha": "2026-06-24",
-      "estado_alineacion": "probable",
-      "xi_local": "Williams; Mudau, Okon, Mbokazi, Modiba; Adams, Sithole, Mbatha; Mofokeng, Rayners, Appollis (4-3-3).",
-      "xi_visita": "Kim Seung-Gyu; Lee Han-beom, Kim Min-jae, Lee Gi-hyuk; Seol Young-woo, Hwang In-beom, Paik Seung-ho, Lee Tae-seok; Lee Kang-in, Lee Jae-sung; Son Heung-min (3-4-2-1).",
-      "bajas_local": ["Teboho Mokoena (suspendido — segunda tarjeta amarilla acumulada vs Chequia; baja clave en mediocampo)"],
-      "bajas_visita": ["Sin lesionados ni suspendidos confirmados"],
-      "lectura": "Corea del Sur llega con 3 puntos (victoria 1-0 vs Chequia en J1) y clasifica con un empate. Sudafrica tiene 1 punto y necesita ganar Y esperar que Mexico-Chequia no ayude a los checos. Sin Mokoena, el motor organizador de Bafana Bafana, el equipo pierde ritmo en el medio. Son Heung-min busca su primer gol del torneo. Sphephelo Sithole vuelve de suspension para reforzar el mediocampo local.",
-      "lean": "South Korea favorita con tranquilidad. Sudafrica necesita un resultado extraordinario y depende tambien de otros.",
-      "fuentes": [
-        "https://www.sportsmole.co.uk/football/south-africa/world-cup-2026/preview/south-africa-vs-south-korea-prediction-team-news-lineups_599815.html",
-        "https://sports.yahoo.com/articles/preview-south-africa-vs-south-011000125.html",
-        "https://www.squawka.com/en/news/world-cup/south-africa-vs-south-korea-team-news-predicted-lineups/"
-      ]
-    },
     {
       "home": "Curacao", "away": "Ivory Coast", "fecha": "2026-06-25",
       "estado_alineacion": "probable",

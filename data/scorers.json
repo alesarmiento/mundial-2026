@@ -2,7 +2,7 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021455 (SCO 0-3 BRA: Vinicius Jr x2, Cunha x1) + https://www.fifa.com/en/match-centre/match/17/285023/289273/400021452 (MAR 4-2 HAI: Hakimi, Saibari, Rahimi) + ESPN + Fox Sports + Outlook India (verificado 25-jun-2026 00:06 UTC). Messi lidera con 5G; Mbappe, Haaland y Vinicius Jr en 4G c/u.",
+    "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021444 (CZE 0-3 MEX: Chavez 55', Quinones 61', Fidalgo 90+4') + https://www.fifa.com/en/match-centre/match/17/285023/289273/400021445 (RSA 1-0 KOR: Maseko 63') + https://www.foxsports.com/stories/soccer/2026-fifa-world-cup-golden-boot-tracker + ESPN + FIFA Golden Boot (verificado 25-jun-2026 03:15 UTC). Messi lidera con 5G; Mbappe, Haaland y Vinicius Jr en 4G c/u. Nuevos goleadores del Grupo A (Chavez, Quinones, Fidalgo, Maseko: 1G c/u) no entran en el top ~15.",
     "actualizado": "2026-06-25"
   },
   "jugadores": [
