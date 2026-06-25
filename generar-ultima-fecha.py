@@ -1,5 +1,6 @@
-import json
-d=json.load(open('/Users/asarmiento/.claude/skills/mundial-predictor/data/state.json'))
+import json, os
+BASE=os.path.dirname(os.path.abspath(__file__))  # carpeta del skill, portable (Mac o nube)
+d=json.load(open(os.path.join(BASE,'data/state.json')))
 probs=d['probs']; g_of={t:g for g,ts in d['grupos'].items() for t in ts}
 robust=set(sorted(probs,key=lambda t:-probs[t]['r32'])[:32])
 jug=[('Mexico','South Africa',2,1),('South Korea','Czechia',1,1),('Czechia','South Africa',2,1),('Mexico','South Korea',2,1),('Canada','Bosnia and Herzegovina',1,0),('Qatar','Switzerland',0,2),('Switzerland','Bosnia and Herzegovina',3,1),('Canada','Qatar',3,0),('Brazil','Morocco',3,0),('Haiti','Scotland',0,2),('Scotland','Morocco',1,2),('Brazil','Haiti',4,0),('United States','Paraguay',1,0),('Australia','Turkiye',1,2),('United States','Australia',1,1),('Turkiye','Paraguay',2,1),('Germany','Curacao',4,0),('Ivory Coast','Ecuador',0,1),('Germany','Ivory Coast',2,1),('Ecuador','Curacao',3,0),('Netherlands','Japan',2,1),('Sweden','Tunisia',2,0),('Netherlands','Sweden',3,1),('Tunisia','Japan',0,3),('Belgium','Egypt',3,1),('Iran','New Zealand',2,0),('Belgium','Iran',2,1),('New Zealand','Egypt',1,2),('Spain','Cape Verde',5,0),('Saudi Arabia','Uruguay',0,2),('Spain','Saudi Arabia',4,0),('Uruguay','Cape Verde',2,0),('France','Senegal',2,1),('Iraq','Norway',0,3),('France','Iraq',3,0),('Norway','Senegal',2,1),('Argentina','Algeria',2,0),('Austria','Jordan',2,1),('Argentina','Austria',2,0),('Jordan','Algeria',1,2),('Portugal','DR Congo',2,0),('Uzbekistan','Colombia',0,2),('Portugal','Uzbekistan',2,0),('Colombia','DR Congo',2,0),('England','Croatia',2,1),('Ghana','Panama',1,2),('England','Ghana',4,0),('Panama','Croatia',1,3)]
@@ -28,7 +29,7 @@ def resolve(last, base_jug):
 # TU cuadro: tus predicciones de jugados (fijas) + mi ultima fecha
 mine32, groups, b8, st = resolve(mine_last, jug)
 # REAL+PROY: resultados reales jugados + mi ultima fecha SOLO para lo que aun no se jugo (evita doble conteo)
-_res=json.load(open('/Users/asarmiento/.claude/skills/mundial-predictor/data/results.json'))['partidos']
+_res=json.load(open(os.path.join(BASE,'data/results.json')))['partidos']
 real_jug=[(m['local'],m['visita'],m['gl'],m['gv']) for m in _res]
 played_pairs={(m['local'],m['visita']) for m in _res}
 pending_last={k:v for k,v in mine_last.items() if k not in played_pairs}
@@ -43,7 +44,7 @@ miss=sorted([t for t in robust if t not in mine32])
 
 # ===== MI PARTICIPACION: pronostico por partido vs real, con puntaje (regla del sistema) =====
 ESp={'Algeria':'Argelia','Argentina':'Argentina','Australia':'Australia','Austria':'Austria','Belgium':'Belgica','Bosnia and Herzegovina':'Bosnia','Brazil':'Brasil','Canada':'Canada','Cape Verde':'Cabo Verde','Colombia':'Colombia','Croatia':'Croacia','Curacao':'Curazao','Czechia':'Chequia','DR Congo':'R.D. Congo','Ecuador':'Ecuador','Egypt':'Egipto','England':'Inglaterra','France':'Francia','Germany':'Alemania','Ghana':'Ghana','Haiti':'Haiti','Iran':'Iran','Iraq':'Irak','Ivory Coast':'C. Marfil','Japan':'Japon','Jordan':'Jordania','Mexico':'Mexico','Morocco':'Marruecos','Netherlands':'P. Bajos','New Zealand':'N. Zelanda','Norway':'Noruega','Panama':'Panama','Paraguay':'Paraguay','Portugal':'Portugal','Qatar':'Catar','Saudi Arabia':'Arabia S.','Scotland':'Escocia','Senegal':'Senegal','South Africa':'Sudafrica','South Korea':'Corea Sur','Spain':'Espana','Sweden':'Suecia','Switzerland':'Suiza','Tunisia':'Tunez','Turkiye':'Turquia','United States':'USA','Uruguay':'Uruguay','Uzbekistan':'Uzbekistan'}
-_fx=json.load(open('/Users/asarmiento/.claude/skills/mundial-predictor/data/fixtures.json'))['fixtures']
+_fx=json.load(open(os.path.join(BASE,'data/fixtures.json')))['fixtures']
 fxdate={(f['home'],f['away']):f['date'][:10] for f in _fx}
 realres={(m['local'],m['visita']):(m['gl'],m['gv']) for m in _res}
 # probabilidades del MODELO (Elo + ataque/defensa) por partido: P(resultado 1X2) y P(marcador exacto, Poisson)
@@ -363,8 +364,9 @@ En %d coinciden. La diferencia son <b>%d equipos</b>:<br>
 %s</div>
 </body></html>'''%(len(live), miparticipacion, compare48, cards, CHK, len(live), chips(live,'#56d364'), SKULL, len(dead), len(dead)*7, chips(dead,'#f85149'), len(live), len(miss), chips(miss,'#58a6ff'), len(live), len(dead), ', '.join(dead), ', '.join(miss), len(dead), thirds_html, len(live), mh)
 
-open('/Users/asarmiento/Downloads/estrategia-polla.html','w').write(html)
-open('/Users/asarmiento/.claude/skills/mundial-predictor/ultima-fecha.html','w').write(html)
+open(os.path.join(BASE,'ultima-fecha.html'),'w').write(html)  # vista publicada (repo / GitHub Pages)
+_dl=os.path.expanduser('~/Downloads')                          # copia local solo si existe la carpeta (Mac)
+if os.path.isdir(_dl): open(os.path.join(_dl,'estrategia-polla.html'),'w').write(html)
 print('TU apuesta (32) = 28 vivos +', dead)
 print('SISTEMA (32)    = 28 vivos +', miss)
 print('Coinciden:', len(live), '| Difieren:', len(dead), 'vs', len(miss))

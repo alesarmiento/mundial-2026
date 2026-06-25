@@ -25,8 +25,14 @@ Se ejecuta en la nube (auto-ritmo: despertar cuando deberían haber terminado pa
    la fuerza Elo de cada selección, las probabilidades de campeón y de avance por ronda, los premios
    (goleador/arquero/joven), la proyección del cuadro de eliminatorias Y el **puntaje de la polla del
    modelo** (suma los puntos del/los partido(s) nuevo(s); cada partido se puntúa con el pronóstico PREVIO
-   al partido, sin mirar el resultado). Un solo partido puede mover todo. Luego
+   al partido, sin mirar el resultado). Un solo partido puede mover todo.
+   **Luego, SIEMPRE correr también `python3 generar-ultima-fecha.py`** para regenerar la vista
+   `ultima-fecha.html` (la página "Mi estimación / última fecha" con los pronósticos de Alejandro y su
+   puntaje de participación). El generador lee el `state.json` recién calculado + los picks fijos del
+   usuario, así que la participación se actualiza sola con cada resultado real. **No editar los picks**
+   (están fijos en el script; solo Alejandro los cambia). Luego
    `git add -A && git commit -m "auto: actualizar Mundial" && git push`. GitHub Pages republica solo.
+   *(Equivalente: `./deploy.sh`, que ya corre el motor + el generador + commit + push.)*
 
 6. **Reporte final en palabras simples** (para Alejandro, no técnico): qué partido(s) cargaste con su
    marcador; cómo se movieron las probabilidades (quién subió/bajó, si cambió el favorito); cómo quedó el

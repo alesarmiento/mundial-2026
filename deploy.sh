@@ -7,6 +7,12 @@ cd "$(dirname "$0")"
 
 python3 engine.py "$@"
 
+# Regenerar tambien la vista "Mi estimacion / ultima fecha" (pronosticos del usuario) si existe el generador.
+# Lee el state.json recien calculado + los picks fijos del script -> ultima-fecha.html.
+if [ -f generar-ultima-fecha.py ]; then
+  python3 generar-ultima-fecha.py >/dev/null 2>&1 || echo "AVISO: generar-ultima-fecha.py fallo (la vista de pronosticos no se actualizo)"
+fi
+
 FECHA=$(python3 -c "import json;print(json.load(open('data/results.json'))['_meta']['ultima_fecha_cargada'])" 2>/dev/null || echo "")
 git add -A
 if git commit -m "auto: actualizar Mundial 2026 (fecha ${FECHA})" >/dev/null 2>&1; then
