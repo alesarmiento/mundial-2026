@@ -4,7 +4,7 @@ probs=d['probs']; g_of={t:g for g,ts in d['grupos'].items() for t in ts}
 robust=set(sorted(probs,key=lambda t:-probs[t]['r32'])[:32])
 jug=[('Mexico','South Africa',2,1),('South Korea','Czechia',1,1),('Czechia','South Africa',2,1),('Mexico','South Korea',2,1),('Canada','Bosnia and Herzegovina',1,0),('Qatar','Switzerland',0,2),('Switzerland','Bosnia and Herzegovina',3,1),('Canada','Qatar',3,0),('Brazil','Morocco',3,0),('Haiti','Scotland',0,2),('Scotland','Morocco',1,2),('Brazil','Haiti',4,0),('United States','Paraguay',1,0),('Australia','Turkiye',1,2),('United States','Australia',1,1),('Turkiye','Paraguay',2,1),('Germany','Curacao',4,0),('Ivory Coast','Ecuador',0,1),('Germany','Ivory Coast',2,1),('Ecuador','Curacao',3,0),('Netherlands','Japan',2,1),('Sweden','Tunisia',2,0),('Netherlands','Sweden',3,1),('Tunisia','Japan',0,3),('Belgium','Egypt',3,1),('Iran','New Zealand',2,0),('Belgium','Iran',2,1),('New Zealand','Egypt',1,2),('Spain','Cape Verde',5,0),('Saudi Arabia','Uruguay',0,2),('Spain','Saudi Arabia',4,0),('Uruguay','Cape Verde',2,0),('France','Senegal',2,1),('Iraq','Norway',0,3),('France','Iraq',3,0),('Norway','Senegal',2,1),('Argentina','Algeria',2,0),('Austria','Jordan',2,1),('Argentina','Austria',2,0),('Jordan','Algeria',1,2),('Portugal','DR Congo',2,0),('Uzbekistan','Colombia',0,2),('Portugal','Uzbekistan',2,0),('Colombia','DR Congo',2,0),('England','Croatia',2,1),('Ghana','Panama',1,2),('England','Ghana',4,0),('Panama','Croatia',1,3)]
 # Mi pronostico de ultima fecha (EV-optimo + overlay rotacion)
-mine_last={('Czechia','Mexico'):(1,2),('South Africa','South Korea'):(0,2),('Switzerland','Canada'):(1,1),('Bosnia and Herzegovina','Qatar'):(2,0),('Scotland','Brazil'):(0,2),('Morocco','Haiti'):(2,0),('Turkiye','United States'):(1,2),('Paraguay','Australia'):(0,1),('Curacao','Ivory Coast'):(0,2),('Ecuador','Germany'):(1,2),('Japan','Sweden'):(3,1),('Tunisia','Netherlands'):(0,3),('Egypt','Iran'):(1,0),('New Zealand','Belgium'):(0,2),('Cape Verde','Saudi Arabia'):(1,0),('Uruguay','Spain'):(0,2),('Norway','France'):(1,2),('Senegal','Iraq'):(2,0),('Algeria','Austria'):(0,1),('Jordan','Argentina'):(1,2),('Colombia','Portugal'):(2,1),('DR Congo','Uzbekistan'):(1,0),('Panama','England'):(0,3),('Croatia','Ghana'):(1,0)}
+mine_last={('Czechia','Mexico'):(1,2),('South Africa','South Korea'):(0,2),('Switzerland','Canada'):(1,1),('Bosnia and Herzegovina','Qatar'):(2,0),('Scotland','Brazil'):(0,2),('Morocco','Haiti'):(2,0),('Turkiye','United States'):(1,2),('Paraguay','Australia'):(0,1),('Curacao','Ivory Coast'):(0,3),('Ecuador','Germany'):(1,2),('Japan','Sweden'):(3,1),('Tunisia','Netherlands'):(0,3),('Egypt','Iran'):(1,0),('New Zealand','Belgium'):(0,2),('Cape Verde','Saudi Arabia'):(1,0),('Uruguay','Spain'):(0,2),('Norway','France'):(1,2),('Senegal','Iraq'):(2,0),('Algeria','Austria'):(0,1),('Jordan','Argentina'):(1,2),('Colombia','Portugal'):(2,1),('DR Congo','Uzbekistan'):(1,0),('Panama','England'):(0,3),('Croatia','Ghana'):(1,0)}
 
 def resolve(last, base_jug):
     st={t:{'pts':0,'gf':0,'gc':0} for t in g_of}
@@ -46,6 +46,19 @@ ESp={'Algeria':'Argelia','Argentina':'Argentina','Australia':'Australia','Austri
 _fx=json.load(open('/Users/asarmiento/.claude/skills/mundial-predictor/data/fixtures.json'))['fixtures']
 fxdate={(f['home'],f['away']):f['date'][:10] for f in _fx}
 realres={(m['local'],m['visita']):(m['gl'],m['gv']) for m in _res}
+# probabilidades del MODELO (Elo + ataque/defensa) por partido: P(resultado 1X2) y P(marcador exacto, Poisson)
+import math as _math
+predix={}
+for _blk in d.get('por_fecha',[]):
+    for _p in _blk.get('partidos',[]):
+        if _p.get('pred'): predix[(_p['home'],_p['away'])]=_p['pred']
+def _pois(k,l): return (_math.exp(-l)*l**k/_math.factorial(k)) if l and l>0 else (1.0 if k==0 else 0.0)
+def model_prob(h,a,gh,ga):
+    pr=predix.get((h,a))
+    if not pr: return None
+    pout=pr['pH'] if gh>ga else (pr['pD'] if gh==ga else pr['pA'])
+    pex=_pois(gh,pr.get('xgH',0))*_pois(ga,pr.get('xgA',0))*100
+    return (pout,pex)
 def score_pred(pred,real):
     ph,pa=pred; rh,ra=real
     o=lambda x,y:(x>y)-(x<y); p=0
@@ -61,26 +74,31 @@ prow=''; curday=None
 for (h,a),pred in part_items:
     day=fxdate.get((h,a),'?');
     if day!=curday:
-        prow+='<tr><td colspan="5" style="padding:8px 6px 3px;color:#58a6ff;font-weight:700;font-size:12px">'+DAYLBL.get(day,day)+'</td></tr>'; curday=day
+        prow+='<tr><td colspan="6" style="padding:8px 6px 3px;color:#58a6ff;font-weight:700;font-size:12px">'+DAYLBL.get(day,day)+'</td></tr>'; curday=day
     real=realres.get((h,a))
     pk='%d-%d'%pred
+    mp=model_prob(h,a,pred[0],pred[1])
+    if mp:
+        pout,pex=mp; pcol = '#56d364' if pout>=65 else ('#e3b341' if pout>=45 else '#f0883e')
+        probcell='<td style="text-align:center;font-size:10.5px"><b style="color:%s">%.0f%%</b> <span style="color:#6e7681">res</span> &middot; <span style="color:#8b949e">%.0f%% ex</span></td>'%(pcol,pout,pex)
+    else:
+        probcell='<td style="text-align:center;color:#6e7681;font-size:10.5px">&mdash;</td>'
     if real:
         p=score_pred(pred,real); mi_ganado+=p; mi_jugados+=1
         rl='%d-%d'%real
         pc = '#56d364' if p>=4 else ('#d29922' if p>0 else '#f85149')
-        prow+='<tr style="border-bottom:1px solid #21262d"><td style="padding:4px 6px">%s vs %s</td><td style="text-align:center;color:#8b949e">%s</td><td style="text-align:center;font-weight:700">%s</td><td style="text-align:center;color:%s;font-weight:700">+%d</td><td style="color:#7d8590;font-size:10.5px">jugado</td></tr>'%(ESp[h],ESp[a],pk,rl,pc,p)
+        prow+='<tr style="border-bottom:1px solid #21262d"><td style="padding:4px 6px">%s vs %s</td><td style="text-align:center;color:#8b949e">%s</td>%s<td style="text-align:center;font-weight:700">%s</td><td style="text-align:center;color:%s;font-weight:700">+%d</td><td style="color:#7d8590;font-size:10.5px">jugado</td></tr>'%(ESp[h],ESp[a],pk,probcell,rl,pc,p)
     else:
         mi_pend+=1
-        prow+='<tr style="border-bottom:1px solid #21262d"><td style="padding:4px 6px">%s vs %s</td><td style="text-align:center;color:#e3b341;font-weight:700">%s</td><td style="text-align:center;color:#6e7681">&mdash;</td><td style="text-align:center;color:#6e7681">&middot;</td><td style="color:#7d8590;font-size:10.5px">por jugar</td></tr>'%(ESp[h],ESp[a],pk)
+        prow+='<tr style="border-bottom:1px solid #21262d"><td style="padding:4px 6px">%s vs %s</td><td style="text-align:center;color:#e3b341;font-weight:700">%s</td>%s<td style="text-align:center;color:#6e7681">&mdash;</td><td style="text-align:center;color:#6e7681">&middot;</td><td style="color:#7d8590;font-size:10.5px">por jugar</td></tr>'%(ESp[h],ESp[a],pk,probcell)
 mi_max=mi_jugados*11
 miparticipacion=('<div class="box" style="border-color:#d29922"><h2 style="color:#e3b341">%s Mi participacion &mdash; pronostico y puntaje (24-27 jun)</h2>'
- '<div style="color:#8b949e;font-size:12px;margin-bottom:10px">Mis marcadores de la ultima fecha jugando de verdad en la polla. Regla del sistema: <b>ganador +3, gol local +2, gol visita +2, exacto +4</b> (max 11/partido). Se recalcula solo a medida que entran los resultados reales.</div>'
+ '<div style="color:#8b949e;font-size:12px;margin-bottom:10px">Mis marcadores de la ultima fecha jugando de verdad en la polla. Regla del sistema: <b>ganador +3, gol local +2, gol visita +2, exacto +4</b> (max 11/partido). La columna <b>Prob. modelo</b> = chance segun el motor (Elo + ataque/defensa) de que ACIERTES: <b style="color:#56d364">res</b> = el resultado 1X2 (los +3), <b style="color:#8b949e">ex</b> = el marcador exacto (los 11). En <b style="color:#f0883e">naranja</b>, picks de baja probabilidad (apuestas/ajustes). Se recalcula solo con cada resultado real.</div>'
  '<div style="display:flex;gap:18px;flex-wrap:wrap;margin-bottom:12px">'
  '<div style="background:#0d1117;border:1px solid #d29922;border-radius:9px;padding:10px 16px"><div style="font-size:11px;color:#8b949e">GANADO (jugados)</div><div style="font-size:26px;font-weight:800;color:#e3b341">%d<span style="font-size:13px;color:#7d8590"> / %d</span></div><div style="font-size:10.5px;color:#7d8590">%d partidos jugados</div></div>'
  '<div style="background:#0d1117;border:1px solid #30363d;border-radius:9px;padding:10px 16px"><div style="font-size:11px;color:#8b949e">EN JUEGO</div><div style="font-size:26px;font-weight:800;color:#58a6ff">%d</div><div style="font-size:10.5px;color:#7d8590">partidos por jugar</div></div>'
  '</div>'
- '<table style="width:100%%;border-collapse:collapse;font-size:12.5px"><tr style="color:#7d8590;font-size:10.5px"><td style="padding:2px 6px">Partido</td><td style="text-align:center">Mi pick</td><td style="text-align:center">Real</td><td style="text-align:center">Pts</td><td></td></tr>'
- +prow+'</table></div>')%(CHK,mi_ganado,mi_max,mi_jugados,mi_pend)
+ '<table style="width:100%%;border-collapse:collapse;font-size:12.5px"><tr style="color:#7d8590;font-size:10.5px"><td style="padding:2px 6px">Partido</td><td style="text-align:center">Mi pick</td><td style="text-align:center">Prob. modelo</td><td style="text-align:center">Real</td><td style="text-align:center">Pts</td><td></td></tr>')%(CHK,mi_ganado,mi_max,mi_jugados,mi_pend)+prow+'</table></div>'
 
 ana={'A':'CERRADO (real): Mexico 1o, Sudafrica 2o. Corea 3a con 3 pts -> ENTRA como mejor tercero. Chequia afuera.','B':'CERRADO (real): Suiza 1o (gano 2-1), Canada 2o. Bosnia 3o con 4 pts (goleo 3-1 a Catar) -> VIVO.','C':'CERRADO (real): Brasil 1o (3-0), Marruecos 2o (4-2). Escocia 3a pero perdio 0-3 -> SE CAE del corte.','D':'USA 1ro. Australia el 2do mas seguro (DG 0). Con tu Australia 0-1, Australia queda en tus 32 (clasificado seguro) y Paraguay 3o al volado. Se juega HOY.','E':'Alemania 1ro, C.Marfil 2do (vivo). Ecuador (1pt) sigue en TUS 32: +7 si DA LA SORPRESA y le gana a Alemania rotada, pero pronosticamos Alemania 2-1 (lo mas real). Se juega HOY.','F':'PaisesBajos y Japon adentro. Suecia 3a: con tu Japon 3-1 cae a 3a pero sostiene mejor-tercero. Se juega HOY.','G':'Con tu Egipto 1-0: Egipto 1o, Belgica 2o, e Iran cae a 3o y queda AFUERA.','H':'Espana 1a. Con tu Cabo Verde 1-0, CV sube a 2do y clasifica directo; Uruguay 3o afuera.','I':'Francia, Noruega, Senegal: los 3 VIVOS.','J':'Argentina, Austria, Argelia: los 3 VIVOS.','K':'Colombia y Portugal; sin tercero clasificado.','L':'Inglaterra y Croacia. Te falta Ghana.'}
 
@@ -142,7 +160,7 @@ def panel(title, gr, st2, b8s, accent, sub, deadset=None, seed=None, addset=None
             else: cfg='#6e7681'; cbg='#161b22'; tag='4'
             nm=ES[t]
             if deadset and isq and t in deadset:
-                cfg='#f85149'; cbg='#2d1418'; nm=ES[t]+' '+SKULL
+                cfg='#f85149'; cbg='#2d1418'; nm=ES[t]+' '+SKULL+' <span style="font-size:9px;color:#f85149;font-weight:700">&minus;7</span>'
             elif addset and isq and t in addset:
                 cfg='#58a6ff'; cbg='#0d2233'; nm=ES[t]+' '+PLUS
             sd=' <span style="color:#8b949e;font-size:9px;font-weight:600">#%d</span>'%seed[t] if (seed and isq and t in seed) else ''
@@ -160,7 +178,7 @@ compare48=('<div class="box"><h2>Los 48 equipos: tu cuadro vs la realidad &mdash
  # CARTEL: la diferencia explicita entre TU cuadro y REAL+PROYECTADO
  '<div style="background:#0d1117;border:1px solid #30363d;border-radius:9px;padding:11px 14px;margin-bottom:14px;font-size:13px;line-height:1.7">'
  '<div style="font-weight:700;margin-bottom:4px">La diferencia entre tu estimacion y real+proyectado &mdash; son <b>'+str(len(mine_only))+'</b> equipos en cada lado:</div>'
- '<div><span style="color:#f85149;font-weight:700">'+SKULL+' Vos incluis y (real+proy) NO clasifican:</span> '+', '.join(ES[t] for t in mine_only)+'</div>'
+ '<div><span style="color:#f85149;font-weight:700">'+SKULL+' ERRORES que te cuestan puntos</span> (los incluis pero NO clasifican &mdash; <b style="color:#f85149">'+str(len(mine_only))+' &times; 7 = '+str(len(mine_only)*7)+' pts</b> menos que un cuadro perfecto): '+', '.join(ES[t] for t in mine_only)+'</div>'
  '<div><span style="color:#58a6ff;font-weight:700">'+PLUS+' Clasifican (real+proy) y a vos te FALTAN:</span> '+', '.join(ES[t] for t in real_only)+'</div>'
  '<div style="color:#8b949e;font-size:11.5px;margin-top:4px">Abajo: en TU panel esos equipos van en <b style="color:#f85149">rojo '+SKULL+'</b>; en el panel real, los que te faltan van en <b style="color:#58a6ff">azul '+PLUS+'</b>. Los demas coinciden.</div>'
  '</div>'
