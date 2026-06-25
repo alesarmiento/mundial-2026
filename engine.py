@@ -1123,6 +1123,7 @@ a{color:var(--ac2);text-decoration:none}
 .lect{background:#11203a;border-left:3px solid var(--ac2);padding:9px 12px;border-radius:6px;font-size:12.5px;margin-top:6px}
 </style></head><body>
 <h1>⚽ Mundial 2026 · Predictor</h1>
+<div style="margin:6px 0 10px"><a href="./ultima-fecha.html" style="display:inline-block;background:#1f2937;border:1px solid #d29922;border-left:4px solid #d29922;border-radius:8px;padding:8px 13px;color:#e3b341;text-decoration:none;font-size:13px;font-weight:600">📋 Mi estimación — última fecha de grupos (mis pronósticos) →</a></div>
 <div class="sub" id="sub"></div>
 <div class="tabs" id="tabs"></div>
 <div id="panes"></div>
