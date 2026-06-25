@@ -124,8 +124,12 @@ def seedmap(teamset, statef):
     return {t:i+1 for i,t in enumerate(sorted(teamset,key=k,reverse=True))}
 mine_seed=seedmap(mine32, st)
 real_seed=seedmap(realproy32, rst)
+# diferencia EXPLICITA: tu cuadro (mine32) vs real+proyectado (realproy32)
+mine_only=sorted(mine32-realproy32, key=lambda t:-mine_seed.get(t,99))   # metes y NO clasifican
+real_only=sorted(realproy32-mine32, key=lambda t:real_seed.get(t,99))    # clasifican y te faltan
+PLUS='&#10133;'
 
-def panel(title, gr, st2, b8s, accent, sub, deadset=None, seed=None):
+def panel(title, gr, st2, b8s, accent, sub, deadset=None, seed=None, addset=None):
     blocks=''
     for g in sorted(gr):
         rws=''
@@ -139,6 +143,8 @@ def panel(title, gr, st2, b8s, accent, sub, deadset=None, seed=None):
             nm=ES[t]
             if deadset and isq and t in deadset:
                 cfg='#f85149'; cbg='#2d1418'; nm=ES[t]+' '+SKULL
+            elif addset and isq and t in addset:
+                cfg='#58a6ff'; cbg='#0d2233'; nm=ES[t]+' '+PLUS
             sd=' <span style="color:#8b949e;font-size:9px;font-weight:600">#%d</span>'%seed[t] if (seed and isq and t in seed) else ''
             cut='border-bottom:2px dashed #3d444d;' if i==1 else ''
             rws+='<tr style="background:%s;%s"><td style="color:%s;font-weight:700;width:30px;padding:3px 6px">%s</td><td style="color:%s;padding:3px 6px">%s%s</td><td style="text-align:center;font-weight:700;color:%s;width:26px">%d</td><td style="text-align:center;color:#7d8590;width:36px;font-size:10.5px">%+d</td></tr>'%(cbg,cut,cfg,tag,cfg,nm,sd,cfg,pts,dg)
@@ -150,11 +156,17 @@ compare48=('<div class="box"><h2>Los 48 equipos: tu cuadro vs la realidad &mdash
  '<b style="color:#7ee787">1&ordm;-2&ordm; (verde)</b> = clasifican directo &mdash; la <b>linea punteada</b> es ese corte. '
  '<b style="color:#f0883e">3&ordm; con '+CHK+' (naranja)</b> = mejor tercero que clasifica; '
  '<b style="color:#8b949e">3&ordm; gris</b> o <b style="color:#6e7681">4&ordm;</b> = afuera. '
- 'En TU panel, <b style="color:#f85149">rojo + '+SKULL+'</b> = lo incluiste pero el modelo dice que NO clasifica (tus apuestas de larga). '
- 'El <b style="color:#8b949e">#n</b> al lado de cada clasificado es su puesto en el ranking de los 32 (por puntos).</div>'
+ 'El <b style="color:#8b949e">#n</b> = puesto en el ranking de los 32 (por puntos).</div>'
+ # CARTEL: la diferencia explicita entre TU cuadro y REAL+PROYECTADO
+ '<div style="background:#0d1117;border:1px solid #30363d;border-radius:9px;padding:11px 14px;margin-bottom:14px;font-size:13px;line-height:1.7">'
+ '<div style="font-weight:700;margin-bottom:4px">La diferencia entre tu estimacion y real+proyectado &mdash; son <b>'+str(len(mine_only))+'</b> equipos en cada lado:</div>'
+ '<div><span style="color:#f85149;font-weight:700">'+SKULL+' Vos incluis y (real+proy) NO clasifican:</span> '+', '.join(ES[t] for t in mine_only)+'</div>'
+ '<div><span style="color:#58a6ff;font-weight:700">'+PLUS+' Clasifican (real+proy) y a vos te FALTAN:</span> '+', '.join(ES[t] for t in real_only)+'</div>'
+ '<div style="color:#8b949e;font-size:11.5px;margin-top:4px">Abajo: en TU panel esos equipos van en <b style="color:#f85149">rojo '+SKULL+'</b>; en el panel real, los que te faltan van en <b style="color:#58a6ff">azul '+PLUS+'</b>. Los demas coinciden.</div>'
+ '</div>'
  '<div class="cmp">'
- +panel('TUS PRONOSTICOS', groups, st, b8, '#d29922', 'lo jugado (congelado) + tu ultima fecha proyectada &middot; '+SKULL+' = lo incluiste y no clasifica', dead, mine_seed)
- +panel('REAL + PROYECTADO', rgroups, rst, rb8, '#58a6ff', 'resultados reales + tu ultima fecha proyectada', None, real_seed)
+ +panel('TUS PRONOSTICOS', groups, st, b8, '#d29922', 'lo jugado (congelado) + tu ultima fecha proyectada &middot; '+SKULL+' rojo = lo metes y NO clasifica (real+proy)', mine_only, mine_seed, None)
+ +panel('REAL + PROYECTADO', rgroups, rst, rb8, '#58a6ff', 'resultados reales + tu ultima fecha proyectada &middot; '+PLUS+' azul = clasifica y a vos te FALTA', None, real_seed, real_only)
  +'</div></div>')
 
 # (fecha, local, visita, xG, EVmax, FINAL, flag_rotacion, razon)
