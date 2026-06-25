@@ -3,40 +3,10 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-06-25T03:15Z",
+    "actualizado": "2026-06-25T22:15Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "Curacao", "away": "Ivory Coast", "fecha": "2026-06-25",
-      "estado_alineacion": "probable",
-      "xi_local": "Room; Brenet, Gaari, Obispo, Floranus; Fonville, Chong, Comenencia, J.Bacuna, L.Bacuna; Locadia (4-4-2).",
-      "xi_visita": "Fofana; Doue, Kossounou, Agbadou, Konan; Kessie, Sangare; Diallo, Oulai, Diomande; Bonny (4-2-3-1).",
-      "bajas_local": ["Locadia (contusion — es duda pero deberia estar disponible para el inicio)"],
-      "bajas_visita": ["Wilfried Singo (en duda — lesion de muslo contra Alemania)", "Evan Ndicka (volvio a entrenar — podria debutar en el torneo)"],
-      "lectura": "Ivory Coast llega con 3 puntos (1-0 vs Ecuador en J1, 1-2 vs Alemania en J2) y clasifica con un empate. Curacao tiene 1 punto (0-0 vs Ecuador) y necesita ganar, pero ni ganando tiene clasificacion garantizada como mejor tercero. El guardameta Eloy Room fue figura del torneo con 15 atajadas contra Ecuador. Amad Diallo y Kessie son los motores creativos marfileños. Curacao apuesta a bloque bajo y contraataque como hizo ante Ecuador.",
-      "lean": "Ivory Coast amplia favorita — controlan su destino con un empate y tienen plantel superior.",
-      "fuentes": [
-        "https://www.rotowire.com/soccer/article/curacao-vs-ivory-coast-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-e-119484",
-        "https://www.sportsmole.co.uk/football/curacao/world-cup-2026/preview/curacao-vs-ivory-coast-prediction-team-news-lineups_599885.html",
-        "https://www.espn.com/soccer/story/_/id/49141629/fifa-world-cup-2026-curacao-vs-ivory-coast-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups"
-      ]
-    },
-    {
-      "home": "Ecuador", "away": "Germany", "fecha": "2026-06-25",
-      "estado_alineacion": "probable",
-      "xi_local": "Galindez; Ordonez, Pacho, Hincapie; Yeboah, Franco, Caicedo, Estupinan; Plata, Vite; Valencia (3-4-2-1).",
-      "xi_visita": "Baumann; Kimmich, Ruediger, Tah, Raum; Goretzka, Stiller; Leweling, Amiri, Beier; Undav (4-2-3-1).",
-      "bajas_local": ["Sin lesionados confirmados"],
-      "bajas_visita": ["Nico Schlotterbeck (lesion de tobillo vs Costa de Marfil — baja para el resto del torneo)", "Oliver Neuer posiblemente descansa — Baumann titular esperado"],
-      "lectura": "Alemania ya clasifica primera del Grupo E con 6 puntos perfectos (7-1 y 2-1). Ecuador tiene apenas 1 punto (0-1 y 0-0) y DEBE ganar para tener alguna chance de avanzar como mejor tercero. Con Schlotterbeck fuera, Nagelsmann podria rotar defensores — eso puede abrir espacios. Enner Valencia y Moises Caicedo son las piezas clave del Ecuador. Deniz Undav busca ampliar su cuenta de la Bota de Oro.",
-      "lean": "Alemania favorita aun rotando. Ecuador tiene motivacion desesperada pero enfrenta al equipo mas en forma del torneo.",
-      "fuentes": [
-        "https://www.rotowire.com/soccer/article/ecuador-vs-germany-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-e-119485",
-        "https://www.sportsmole.co.uk/football/germany/world-cup-2026/preview/ecuador-vs-germany-prediction-team-news-lineups_599880.html",
-        "https://www.espn.com/soccer/story/_/id/49155323/ecuador-germany-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups"
-      ]
-    },
     {
       "home": "Japan", "away": "Sweden", "fecha": "2026-06-25",
       "estado_alineacion": "probable",
