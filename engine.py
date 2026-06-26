@@ -977,6 +977,17 @@ def main():
     }
     save("state.json", state)
     render_panel(state)
+    # Regenerar tambien la vista "Mi estimacion / ultima fecha" del usuario (si existe el generador).
+    # Asi, cada vez que la rutina corre engine.py, esa vista se actualiza sola con los resultados nuevos
+    # (no depende de que la rutina lea ROUTINE.md). El generador usa los picks fijos del usuario.
+    _gen = os.path.join(HERE, "generar-ultima-fecha.py")
+    if os.path.exists(_gen):
+        try:
+            import subprocess
+            subprocess.run([sys.executable, _gen], cwd=HERE, check=False,
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=60)
+        except Exception as _e:
+            print("AVISO: no se pudo regenerar ultima-fecha.html:", _e)
     top = state["ranking_campeon"][:5]
     print(f"OK · {n_played}/{n_total} partidos de grupo jugados · {n} sims")
     print("Top 5 campeon:", ", ".join(f"{x['equipo']} {x['campeon']}%" for x in top))

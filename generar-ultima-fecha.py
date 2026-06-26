@@ -304,6 +304,18 @@ for pos,gg,team,pts,dg,gf,estado,col,rz in ranking3:
     t3rows+='<tr'+cut+'><td style="padding:3px 6px;color:#7d8590">%d</td><td style="font-weight:600">%s <span style="color:#7d8590;font-size:10px">G%s</span></td><td style="text-align:center">%s</td><td style="text-align:center">%s</td><td style="text-align:center">%s</td><td style="color:%s;font-weight:600;font-size:11px">%s</td><td style="color:#8b949e;font-size:11px">%s</td></tr>'%(pos,team,gg,str(pts),dg,str(gf),col,estado,rz)
 thirds_html='<table style="width:100%%;border-collapse:collapse;font-size:12.5px">'+t3rows+'</table>'
 
+# Terceros segun TU ESTIMACION PURA (tu cuadro: groups/b8/st) -> como irian quedando con tus marcadores
+_k3m=lambda t:(st[t]['pts'],st[t]['gf']-st[t]['gc'],st[t]['gf'])
+_mine_thirds=sorted([(g,groups[g][2]) for g in groups],key=lambda gt:_k3m(gt[1]),reverse=True)
+m3rows='<tr style="color:#7d8590;font-size:10.5px"><td style="padding:2px 6px">#</td><td>Equipo</td><td style="text-align:center">Pts</td><td style="text-align:center">DG</td><td style="text-align:center">GF</td><td style="text-align:center">Estado</td></tr>'
+for _pos,(_g,_t) in enumerate(_mine_thirds,1):
+    _s=st[_t]; _dg=_s['gf']-_s['gc']; _dgs='0' if _dg==0 else '%+d'%_dg
+    _in=_t in b8
+    _est,_col=('IN','#56d364') if _in else ('OUT','#f85149')
+    _cut=' style="border-top:2px solid #d29922"' if _pos==9 else ''
+    m3rows+='<tr'+_cut+'><td style="padding:3px 6px;color:#7d8590">%d</td><td style="font-weight:600">%s <span style="color:#7d8590;font-size:10px">G%s</span></td><td style="text-align:center">%s</td><td style="text-align:center">%s</td><td style="text-align:center">%s</td><td style="text-align:center;color:%s;font-weight:600;font-size:11px">%s</td></tr>'%(_pos,ES[_t],_g,str(_s['pts']),_dgs,str(_s['gf']),_col,_est)
+mine_thirds_html='<table style="width:100%%;border-collapse:collapse;font-size:12px">'+m3rows+'</table>'
+
 def chips(lst,c):
     return ''.join('<span style="background:%s22;border:1px solid %s;color:%s;padding:3px 9px;border-radius:7px;margin:3px;display:inline-block;font-size:13px">%s</span>'%(c,c,c,t) for t in lst)
 
@@ -355,14 +367,17 @@ En %d coinciden. La diferencia son <b>%d equipos</b>:<br>
 <span style="color:#8b949e;font-size:12.5px">Tus %d estan "muertos" porque en las fechas JUGADAS los pronosticaste ganando de mas, y eso quedo congelado en tu cuadro. El sistema arranca limpio de la realidad.</span>
 </div></div>
 
-<div class="box"><h2>Ranking de 3eros lugares (REAL+PROY) &mdash; quien clasifica y por que</h2>
-<div style="color:#8b949e;font-size:12px;margin-bottom:10px">12 terceros, solo <b>8 clasifican</b> (tabla auto-calculada bajo el plan: resultados reales + tu ultima fecha). La <b style="color:#d29922">linea amarilla</b> marca el corte 8&ordm;/9&ordm;. <b style="color:#56d364">Cambios por lo de ayer:</b> Corea (perdio con Sudafrica pero ya tenia 3 pts) <b>ENTRA</b>; Escocia (perdio 0-3 con Brasil) <b>SE CAE</b>. Como ahora pronosticamos que Alemania le gana a Ecuador (lo real), Ecuador queda 3o con 1 pt y sale de la pelea, lo que <b>libera el cupo</b>: entran <b>Paraguay y Argelia</b> (ya no hay volado entre ellos) y Escocia queda 1a afuera. <b style="color:#f0883e">Ecuador</b> sigue en tu cuadro de puntaje: es una apuesta de larga (modelo ~12%%) que solo paga +7 si DA LA SORPRESA.</div>
-%s</div>
+<div class="box"><h2>Ranking de los 3eros lugares &mdash; tu estimacion vs lo real</h2>
+<div style="color:#8b949e;font-size:12px;margin-bottom:10px">12 terceros, solo <b>8 clasifican</b>; la <b style="color:#d29922">linea amarilla</b> marca el corte 8&ordm;/9&ordm;. <b>Izquierda:</b> como irian quedando los 12 terceros segun <b style="color:#d29922">TU estimacion pura</b> (tu cuadro congelado + tus marcadores de la ultima fecha). <b>Derecha:</b> el escenario <b style="color:#58a6ff">REAL + PROYECTADO</b> (resultados ya jugados + tus picks de lo que falta), auto-calculado, con el detalle de por que entra/sale cada uno. Comparalas para ver donde tu cuadro se separa de la realidad.</div>
+<div style="display:grid;grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr);gap:16px">
+<div><h3 style="color:#d29922;font-size:14px;margin:0 0 6px">TU estimacion (terceros)</h3>%s</div>
+<div><h3 style="color:#58a6ff;font-size:14px;margin:0 0 6px">REAL + PROYECTADO</h3>%s</div>
+</div></div>
 
 <div class="box"><h2>Partidos a pronosticar &mdash; uno por uno (estrategia EV-optimo)</h2>
 <div style="color:#8b949e;font-size:12px;margin-bottom:10px">Clasificados ya clavados en %d/32, asi que cada partido se optimiza por <b>marcador</b>. Cadena: <b>xG</b> (modelo) &rarr; <b>EV-max</b> (lo que mas puntua) &rarr; <b>FINAL</b> (con ajuste por rotacion). <span style="color:#56d364">Verde</span> = EV-max directo. <span style="color:#d29922">Amarillo</span> = ajustado porque un equipo ya 1o descansa (Mexico, USA, Alemania, Argentina) o 50-50 (Croacia).</div>
 %s</div>
-</body></html>'''%(len(live), miparticipacion, compare48, cards, CHK, len(live), chips(live,'#56d364'), SKULL, len(dead), len(dead)*7, chips(dead,'#f85149'), len(live), len(miss), chips(miss,'#58a6ff'), len(live), len(dead), ', '.join(dead), ', '.join(miss), len(dead), thirds_html, len(live), mh)
+</body></html>'''%(len(live), miparticipacion, compare48, cards, CHK, len(live), chips(live,'#56d364'), SKULL, len(dead), len(dead)*7, chips(dead,'#f85149'), len(live), len(miss), chips(miss,'#58a6ff'), len(live), len(dead), ', '.join(dead), ', '.join(miss), len(dead), mine_thirds_html, thirds_html, len(live), mh)
 
 open(os.path.join(BASE,'ultima-fecha.html'),'w').write(html)  # vista publicada (repo / GitHub Pages)
 _dl=os.path.expanduser('~/Downloads')                          # copia local solo si existe la carpeta (Mac)
