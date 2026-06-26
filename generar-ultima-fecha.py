@@ -4,6 +4,10 @@ d=json.load(open(os.path.join(BASE,'data/state.json')))
 probs=d['probs']; g_of={t:g for g,ts in d['grupos'].items() for t in ts}
 robust=set(sorted(probs,key=lambda t:-probs[t]['r32'])[:32])
 jug=[('Mexico','South Africa',2,1),('South Korea','Czechia',1,1),('Czechia','South Africa',2,1),('Mexico','South Korea',2,1),('Canada','Bosnia and Herzegovina',1,0),('Qatar','Switzerland',0,2),('Switzerland','Bosnia and Herzegovina',3,1),('Canada','Qatar',3,0),('Brazil','Morocco',3,0),('Haiti','Scotland',0,2),('Scotland','Morocco',1,2),('Brazil','Haiti',4,0),('United States','Paraguay',1,0),('Australia','Turkiye',1,2),('United States','Australia',1,1),('Turkiye','Paraguay',2,1),('Germany','Curacao',4,0),('Ivory Coast','Ecuador',0,1),('Germany','Ivory Coast',2,1),('Ecuador','Curacao',3,0),('Netherlands','Japan',2,1),('Sweden','Tunisia',2,0),('Netherlands','Sweden',3,1),('Tunisia','Japan',0,3),('Belgium','Egypt',3,1),('Iran','New Zealand',2,0),('Belgium','Iran',2,1),('New Zealand','Egypt',1,2),('Spain','Cape Verde',5,0),('Saudi Arabia','Uruguay',0,2),('Spain','Saudi Arabia',4,0),('Uruguay','Cape Verde',2,0),('France','Senegal',2,1),('Iraq','Norway',0,3),('France','Iraq',3,0),('Norway','Senegal',2,1),('Argentina','Algeria',2,0),('Austria','Jordan',2,1),('Argentina','Austria',2,0),('Jordan','Algeria',1,2),('Portugal','DR Congo',2,0),('Uzbekistan','Colombia',0,2),('Portugal','Uzbekistan',2,0),('Colombia','DR Congo',2,0),('England','Croatia',2,1),('Ghana','Panama',1,2),('England','Ghana',4,0),('Panama','Croatia',1,3)]
+# Ranking FIFA oficial (jun-2026) usado como criterio de desempate REAL de FIFA tras pts/DG/GF.
+# Nota: el criterio 4 oficial es "juego limpio" (tarjetas), que el modelo NO trackea; usamos el
+# criterio 5 (Ranking FIFA) como desempate determinista. Fuente: Yahoo/ESPN ranking jun-2026.
+fifa_rank={'Argentina':1,'France':2,'Spain':3,'England':4,'Brazil':5,'Morocco':6,'Netherlands':7,'Germany':8,'Portugal':9,'Belgium':10,'Mexico':11,'Colombia':12,'United States':13,'Croatia':15,'Japan':16,'Senegal':17,'Switzerland':18,'Uruguay':19,'Austria':21,'Iran':22,'South Korea':23,'Australia':25,'Egypt':26,'Norway':27,'Canada':28,'Algeria':29,'Ecuador':30,'Ivory Coast':31,'Turkiye':32,'Sweden':36,'Paraguay':37,'Panama':40,'Scotland':41,'DR Congo':43,'Czechia':44,'Uzbekistan':54,'Qatar':57,'Tunisia':58,'Saudi Arabia':59,'Iraq':60,'South Africa':61,'Cape Verde':63,'Bosnia and Herzegovina':64,'Ghana':65,'Jordan':68,'Curacao':81,'New Zealand':84,'Haiti':87}
 # Mi pronostico de ultima fecha (EV-optimo + overlay rotacion)
 mine_last={('Czechia','Mexico'):(1,2),('South Africa','South Korea'):(0,2),('Switzerland','Canada'):(1,1),('Bosnia and Herzegovina','Qatar'):(2,0),('Scotland','Brazil'):(0,2),('Morocco','Haiti'):(2,0),('Turkiye','United States'):(1,2),('Paraguay','Australia'):(0,1),('Curacao','Ivory Coast'):(0,3),('Ecuador','Germany'):(1,2),('Japan','Sweden'):(3,1),('Tunisia','Netherlands'):(0,3),('Egypt','Iran'):(2,1),('New Zealand','Belgium'):(0,2),('Cape Verde','Saudi Arabia'):(1,0),('Uruguay','Spain'):(0,2),('Norway','France'):(1,2),('Senegal','Iraq'):(2,0),('Algeria','Austria'):(0,1),('Jordan','Argentina'):(1,2),('Colombia','Portugal'):(1,2),('DR Congo','Uzbekistan'):(1,0),('Panama','England'):(0,3),('Croatia','Ghana'):(1,0)}
 
@@ -15,7 +19,8 @@ def resolve(last, base_jug):
     for (h,a),(gh,ga) in last.items():
         st[h]['pts']+=3 if gh>ga else (1 if gh==ga else 0); st[h]['gf']+=gh; st[h]['gc']+=ga
         st[a]['pts']+=3 if ga>gh else (1 if ga==gh else 0); st[a]['gf']+=ga; st[a]['gc']+=gh
-    key=lambda t:(st[t]['pts'],st[t]['gf']-st[t]['gc'],st[t]['gf'])
+    # FIFA: pts -> DG -> GF -> (juego limpio, no trackeado) -> Ranking FIFA (menor n = mejor)
+    key=lambda t:(st[t]['pts'],st[t]['gf']-st[t]['gc'],st[t]['gf'],-fifa_rank.get(t,99))
     groups={}; thirds=[]
     for g,ts in d['grupos'].items():
         o=sorted(ts,key=key,reverse=True); groups[g]=o; thirds.append(o[2])
@@ -101,7 +106,7 @@ miparticipacion=('<div class="box" style="border-color:#d29922"><h2 style="color
  '</div>'
  '<table style="width:100%%;border-collapse:collapse;font-size:12.5px"><tr style="color:#7d8590;font-size:10.5px"><td style="padding:2px 6px">Partido</td><td style="text-align:center">Mi pick</td><td style="text-align:center">Prob. modelo</td><td style="text-align:center">Real</td><td style="text-align:center">Pts</td><td></td></tr>')%(CHK,mi_ganado,mi_max,mi_jugados,mi_pend)+prow+'</table></div>'
 
-ana={'A':'CERRADO (real): Mexico 1o, Sudafrica 2o. Corea 3a con 3 pts -> ENTRA como mejor tercero. Chequia afuera.','B':'CERRADO (real): Suiza 1o (gano 2-1), Canada 2o. Bosnia 3o con 4 pts (goleo 3-1 a Catar) -> VIVO.','C':'CERRADO (real): Brasil 1o (3-0), Marruecos 2o (4-2). Escocia 3a pero perdio 0-3 -> SE CAE del corte.','D':'USA 1ro. Australia el 2do mas seguro (DG 0). Con tu Australia 0-1, Australia queda en tus 32 (clasificado seguro) y Paraguay 3o al volado. Se juega HOY.','E':'Alemania 1ro, C.Marfil 2do (vivo). Ecuador (1pt) sigue en TUS 32: +7 si DA LA SORPRESA y le gana a Alemania rotada, pero pronosticamos Alemania 2-1 (lo mas real). Se juega HOY.','F':'PaisesBajos y Japon adentro. Suecia 3a: con tu Japon 3-1 cae a 3a pero sostiene mejor-tercero. Se juega HOY.','G':'Con tu Egipto 2-1: Egipto 1o, Belgica 2o, Iran 3o (en TU proyeccion, afuera). PERO Iran sigue en tus 32: si en la REALIDAD clasifica, cobras +7 igual, sin importar este marcador.','H':'Espana 1a. Con tu Cabo Verde 1-0, CV sube a 2do y clasifica directo; Uruguay 3o afuera.','I':'Francia, Noruega, Senegal: los 3 VIVOS.','J':'Argentina, Austria, Argelia: los 3 VIVOS.','K':'Colombia y Portugal; sin tercero clasificado.','L':'Inglaterra y Croacia. Te falta Ghana.'}
+ana={'A':'CERRADO (real): Mexico 1o, Sudafrica 2o. Corea 3a con 3 pts -> ENTRA como mejor tercero. Chequia afuera.','B':'CERRADO (real): Suiza 1o (gano 2-1), Canada 2o. Bosnia 3o con 4 pts (goleo 3-1 a Catar) -> VIVO.','C':'CERRADO (real): Brasil 1o (3-0), Marruecos 2o (4-2). Escocia 3a pero perdio 0-3 -> SE CAE del corte.','D':'USA 1ro. Australia el 2do mas seguro (DG 0). Con tu Australia 0-1, Australia queda en tus 32 y Paraguay 3o (pelea el ultimo cupo de terceros; ver tabla). Se juega HOY.','E':'Alemania 1ro, C.Marfil 2do (vivo). Ecuador (1pt) sigue en TUS 32: +7 si DA LA SORPRESA y le gana a Alemania rotada, pero pronosticamos Alemania 2-1 (lo mas real). Se juega HOY.','F':'PaisesBajos y Japon adentro. Suecia 3a: con tu Japon 3-1 cae a 3a pero sostiene mejor-tercero. Se juega HOY.','G':'Con tu Egipto 2-1: Egipto 1o, Belgica 2o, Iran 3o (en TU proyeccion, afuera). PERO Iran sigue en tus 32: si en la REALIDAD clasifica, cobras +7 igual, sin importar este marcador.','H':'Espana 1a. Con tu Cabo Verde 1-0, CV sube a 2do y clasifica directo; Uruguay 3o afuera.','I':'Francia, Noruega, Senegal: los 3 VIVOS.','J':'Argentina, Austria, Argelia: los 3 VIVOS.','K':'Colombia y Portugal; sin tercero clasificado.','L':'Inglaterra y Croacia. Te falta Ghana.'}
 
 def cellcolor(t,i):
     q=(i<2) or (t in b8)
@@ -283,14 +288,14 @@ notes3={
  'Senegal':'Le gana a Irak -> 3 pts, buen DG.',
  'South Korea':'Perdio 0-1 con Sudafrica (REAL) pero ya tenia 3 pts -> 3a de A y entra como mejor tercero.',
  'Sweden':'Pierde 3-1 con Japon (tu pick) pero con GF alto (7) se sostiene.',
- 'Paraguay':'Con tu Australia 0-1, Australia es 2o directo y Paraguay queda 3o de D.',
- 'Algeria':'3a de J; entra o sale segun como cierren los demas terceros.',
+ 'Paraguay':'Empata con Argelia (3 pts/-3/GF2). Por criterio FIFA el desempate va a juego limpio (tarjetas) y luego Ranking FIFA: Paraguay (37o) esta por DEBAJO de Argelia (29o) -> queda 9o, afuera.',
+ 'Algeria':'Empata con Paraguay (3 pts/-3/GF2). Desempate FIFA: tras juego limpio, Ranking FIFA -> Argelia (29o) supera a Paraguay (37o) -> se queda el 8o cupo. (NO es sorteo: en 2026 FIFA elimino el bolillero.)',
  'Scotland':'REAL 24-jun perdio 0-3 con Brasil -> 3 pts pero DG bajo: se cae del corte.',
- 'Ecuador':'Sigue en TU cuadro de puntaje (2o de E) -> +7 si DA LA SORPRESA y le gana a Alemania. Pero la proyeccion realista (Alemania gana 2-1) lo deja 3o con 1 pt: afuera. Apuesta de larga (modelo ~12%).',
- 'Iran':'Con tu Egipto 1-0, Iran 3o de G con 2 pts: afuera.',
+ 'Ecuador':'Ya CLASIFICO (le gano 2-1 a Alemania, REAL): 4 pts, 3o de E -> entra.',
+ 'Iran':'Con tu Egipto 2-1, Iran 3o de G con 2 pts: afuera en tu proyeccion (pero el modelo lo da probable).',
  'Uruguay':'Con tu Cabo Verde 1-0, Uruguay 3o de H con 2 pts: afuera.',
 }
-_k3=lambda t:(rst[t]['pts'],rst[t]['gf']-rst[t]['gc'],rst[t]['gf'])
+_k3=lambda t:(rst[t]['pts'],rst[t]['gf']-rst[t]['gc'],rst[t]['gf'],-fifa_rank.get(t,99))
 _thirds_rank=sorted([(g,rgroups[g][2]) for g in rgroups],key=lambda gt:_k3(gt[1]),reverse=True)
 ranking3=[]
 for _pos,(_g,_t) in enumerate(_thirds_rank,1):
@@ -304,7 +309,7 @@ for _pos,(_g,_t) in enumerate(_thirds_rank,1):
 n_in=sum(1 for r in ranking3 if r[6].startswith('IN'))
 
 # Terceros segun TU ESTIMACION PURA (tu cuadro: groups/b8/st)
-_k3m=lambda t:(st[t]['pts'],st[t]['gf']-st[t]['gc'],st[t]['gf'])
+_k3m=lambda t:(st[t]['pts'],st[t]['gf']-st[t]['gc'],st[t]['gf'],-fifa_rank.get(t,99))
 _mine_thirds=sorted([(g,groups[g][2]) for g in groups],key=lambda gt:_k3m(gt[1]),reverse=True)
 mine_rows=[]
 for _pos,(_g,_t) in enumerate(_mine_thirds,1):
@@ -383,7 +388,7 @@ En %d coinciden. La diferencia son <b>%d equipos</b>:<br>
 </div></div>
 
 <div class="box"><h2>Ranking de los 3eros lugares &mdash; tu estimacion vs lo real</h2>
-<div style="color:#8b949e;font-size:12px;margin-bottom:10px">12 terceros, solo <b>8 clasifican</b>; la <b style="color:#d29922">linea amarilla</b> marca el corte 8&ordm;/9&ordm;. <b>Izquierda:</b> como irian quedando los 12 terceros segun <b style="color:#d29922">TU estimacion pura</b> (tu cuadro congelado + tus marcadores de la ultima fecha). <b>Derecha:</b> el escenario <b style="color:#58a6ff">REAL + PROYECTADO</b> (resultados ya jugados + tus picks de lo que falta), auto-calculado, con el detalle de por que entra/sale cada uno. Comparalas para ver donde tu cuadro se separa de la realidad.</div>
+<div style="color:#8b949e;font-size:12px;margin-bottom:10px">12 terceros, solo <b>8 clasifican</b>; la <b style="color:#d29922">linea amarilla</b> marca el corte 8&ordm;/9&ordm;. <b>Izquierda:</b> como irian quedando segun <b style="color:#d29922">TU estimacion pura</b>; <b>Derecha:</b> el escenario <b style="color:#58a6ff">REAL + PROYECTADO</b>. <b style="color:#e3b341">Desempate FIFA 2026</b> (orden oficial): 1) puntos, 2) dif. de gol, 3) goles a favor, 4) <b>juego limpio</b> (tarjetas), 5) <b>Ranking FIFA</b>. <b>FIFA elimino el sorteo en 2026.</b> Como el modelo no trackea tarjetas, los empates exactos los resolvemos por <b>Ranking FIFA</b> (ej.: Argelia 29&ordm; supera a Paraguay 37&ordm; por el ultimo cupo). <span style="font-size:11px">Fuente: reglamento FIFA 2026 (FOX Sports / Yahoo / FIFA.com).</span></div>
 %s</div>
 
 <div class="box"><h2>Partidos a pronosticar &mdash; uno por uno (estrategia EV-optimo)</h2>
