@@ -157,31 +157,28 @@ g_weak    =sorted([t for t in _real_only if t not in robust],  key=lambda t:real
 mine_only=g_dead; real_only=g_add  # para el cartel (los casos "claros")
 PLUS='&#10133;'; DICE='&#127922;'
 
-def panel(title, gr, st2, b8s, accent, sub, deadset=None, seed=None, addset=None, surpriseset=None, weakset=None):
-    blocks=''
-    for g in sorted(gr):
-        rws=''
-        for i,t in enumerate(gr[g]):
-            pts=st2[t]['pts']; dg=st2[t]['gf']-st2[t]['gc']
-            isq=(i<2) or (i==2 and t in b8s)
-            if i<2: cfg='#7ee787'; cbg='#0f2417'; tag=str(i+1)
-            elif i==2 and t in b8s: cfg='#f0883e'; cbg='#2b1d10'; tag='3'+CHK
-            elif i==2: cfg='#8b949e'; cbg='#161b22'; tag='3'
-            else: cfg='#6e7681'; cbg='#161b22'; tag='4'
-            nm=ES[t]
-            if deadset and isq and t in deadset:
-                cfg='#f85149'; cbg='#2d1418'; nm=ES[t]+' '+SKULL+' <span style="font-size:9px;color:#f85149;font-weight:700">&minus;7</span>'
-            elif surpriseset and isq and t in surpriseset:
-                cfg='#e3b341'; cbg='#2b2410'; nm=ES[t]+' '+DICE
-            elif weakset and isq and t in weakset:
-                cfg='#e3b341'; cbg='#2b2410'; nm=ES[t]+' '+DICE
-            elif addset and isq and t in addset:
-                cfg='#58a6ff'; cbg='#0d2233'; nm=ES[t]+' '+PLUS
-            sd=' <span style="color:#8b949e;font-size:9px;font-weight:600">#%d</span>'%seed[t] if (seed and isq and t in seed) else ''
-            cut='border-bottom:2px dashed #3d444d;' if i==1 else ''
-            rws+='<tr style="background:%s;%s"><td style="color:%s;font-weight:700;width:30px;padding:3px 6px">%s</td><td style="color:%s;padding:3px 6px">%s%s</td><td style="text-align:center;font-weight:700;color:%s;width:26px">%d</td><td style="text-align:center;color:#7d8590;width:36px;font-size:10.5px">%+d</td></tr>'%(cbg,cut,cfg,tag,cfg,nm,sd,cfg,pts,dg)
-        blocks+='<div class="gb"><div class="gbh">Grupo '+g+'</div><table>'+rws+'</table></div>'
-    return '<div class="cpanel"><h3 style="color:'+accent+'">'+title+'</h3><div style="color:#8b949e;font-size:11px;margin:-2px 0 8px">'+sub+'</div>'+blocks+'</div>'
+def gblock(g, gr, st2, b8s, deadset=None, seed=None, addset=None, surpriseset=None, weakset=None):
+    rws=''
+    for i,t in enumerate(gr[g]):
+        pts=st2[t]['pts']; dg=st2[t]['gf']-st2[t]['gc']
+        isq=(i<2) or (i==2 and t in b8s)
+        if i<2: cfg='#7ee787'; cbg='#0f2417'; tag=str(i+1)
+        elif i==2 and t in b8s: cfg='#f0883e'; cbg='#2b1d10'; tag='3'+CHK
+        elif i==2: cfg='#8b949e'; cbg='#161b22'; tag='3'
+        else: cfg='#6e7681'; cbg='#161b22'; tag='4'
+        nm=ES[t]
+        if deadset and isq and t in deadset:
+            cfg='#f85149'; cbg='#2d1418'; nm=ES[t]+' '+SKULL+' <span style="font-size:9px;color:#f85149;font-weight:700">&minus;7</span>'
+        elif surpriseset and isq and t in surpriseset:
+            cfg='#e3b341'; cbg='#2b2410'; nm=ES[t]+' '+DICE
+        elif weakset and isq and t in weakset:
+            cfg='#e3b341'; cbg='#2b2410'; nm=ES[t]+' '+DICE
+        elif addset and isq and t in addset:
+            cfg='#58a6ff'; cbg='#0d2233'; nm=ES[t]+' '+PLUS
+        sd=' <span style="color:#8b949e;font-size:9px;font-weight:600">#%d</span>'%seed[t] if (seed and isq and t in seed) else ''
+        cut='border-bottom:2px dashed #3d444d;' if i==1 else ''
+        rws+='<tr style="background:%s;%s"><td style="color:%s;font-weight:700;width:30px;padding:3px 6px">%s</td><td style="color:%s;padding:3px 6px;white-space:nowrap">%s%s</td><td style="text-align:center;font-weight:700;color:%s;width:26px">%d</td><td style="text-align:center;color:#7d8590;width:36px;font-size:10.5px">%+d</td></tr>'%(cbg,cut,cfg,tag,cfg,nm,sd,cfg,pts,dg)
+    return '<div class="gb"><div class="gbh">Grupo '+g+'</div><table>'+rws+'</table></div>'
 
 compare48=('<div class="box"><h2>Los 48 equipos: tu cuadro vs la realidad &mdash; con cortes de clasificacion</h2>'
  '<div style="color:#8b949e;font-size:12px;margin-bottom:12px">Cada grupo ordenado por puntos (incluye tu ultima fecha proyectada). '
@@ -198,10 +195,17 @@ compare48=('<div class="box"><h2>Los 48 equipos: tu cuadro vs la realidad &mdash
  +('<div><span style="color:#e3b341;font-weight:700">'+DICE+' Dudoso</span> (tu pronostico los mete pero el modelo los da improbables): '+', '.join(ES[t] for t in g_weak)+'</div>' if g_weak else '')
  +'<div style="color:#8b949e;font-size:11.5px;margin-top:5px">En el cuadro: '+SKULL+' rojo = muerto, '+DICE+' amarillo = incierto (tu proy y el modelo no coinciden), '+PLUS+' azul = te falta. <b>Clave:</b> un equipo tuyo te suma +7 si clasifica EN LA REALIDAD, sin importar tu marcador.</div>'
  '</div>'
- '<div class="cmp">'
- +panel('TUS PRONOSTICOS', groups, st, b8, '#d29922', 'tu cuadro (congelado + ultima fecha) &middot; '+SKULL+' muerto &middot; '+DICE+' tu proy lo deja afuera pero el modelo lo da probable', g_dead, mine_seed, None, g_surprise, None)
- +panel('REAL + PROYECTADO', rgroups, rst, rb8, '#58a6ff', 'real + tus picks &middot; '+PLUS+' clasifica y te falta &middot; '+DICE+' lo proyectas adentro pero el modelo duda', None, real_seed, g_add, None, g_weak)
- +'</div></div>')
+ # Cabecera de las dos columnas
+ '<div class="cmp" style="margin-bottom:4px">'
+ '<div class="cpanel"><h3 style="color:#d29922">TUS PRONOSTICOS</h3><div style="color:#8b949e;font-size:11px">tu cuadro (congelado + ultima fecha) &middot; '+SKULL+' muerto &middot; '+DICE+' incierto</div></div>'
+ '<div class="cpanel"><h3 style="color:#58a6ff">REAL + PROYECTADO</h3><div style="color:#8b949e;font-size:11px">real + tus picks &middot; '+PLUS+' clasifica y te falta &middot; '+DICE+' dudoso</div></div>'
+ '</div>'
+ # Grupo por grupo: cada grupo en su propia fila de 2 columnas -> izquierda y derecha SIEMPRE alineadas
+ +''.join('<div class="cmp" style="align-items:start;margin-bottom:2px">'
+   +gblock(g, groups, st, b8, deadset=g_dead, seed=mine_seed, surpriseset=g_surprise)
+   +gblock(g, rgroups, rst, rb8, seed=real_seed, addset=g_add, weakset=g_weak)
+   +'</div>' for g in sorted(groups))
+ +'</div>')
 
 # (fecha, local, visita, xG, EVmax, FINAL, flag_rotacion, razon)
 matches=[
@@ -298,23 +302,34 @@ for _pos,(_g,_t) in enumerate(_thirds_rank,1):
     _dgs='0' if _dg==0 else '%+d'%_dg
     ranking3.append((_pos,_g,ES[_t],_s['pts'],_dgs,_s['gf'],_est,_col,notes3.get(_t,'3o de '+_g+'.')))
 n_in=sum(1 for r in ranking3 if r[6].startswith('IN'))
-t3rows='<tr style="color:#7d8590;font-size:10.5px"><td style="padding:2px 6px">#</td><td>Equipo</td><td style="text-align:center">Pts</td><td style="text-align:center">DG</td><td style="text-align:center">GF</td><td>Estado</td><td>Por que</td></tr>'
-for pos,gg,team,pts,dg,gf,estado,col,rz in ranking3:
-    cut=' style="border-top:2px solid #d29922"' if pos==9 else ''
-    t3rows+='<tr'+cut+'><td style="padding:3px 6px;color:#7d8590">%d</td><td style="font-weight:600">%s <span style="color:#7d8590;font-size:10px">G%s</span></td><td style="text-align:center">%s</td><td style="text-align:center">%s</td><td style="text-align:center">%s</td><td style="color:%s;font-weight:600;font-size:11px">%s</td><td style="color:#8b949e;font-size:11px">%s</td></tr>'%(pos,team,gg,str(pts),dg,str(gf),col,estado,rz)
-thirds_html='<table style="width:100%%;border-collapse:collapse;font-size:12.5px">'+t3rows+'</table>'
 
-# Terceros segun TU ESTIMACION PURA (tu cuadro: groups/b8/st) -> como irian quedando con tus marcadores
+# Terceros segun TU ESTIMACION PURA (tu cuadro: groups/b8/st)
 _k3m=lambda t:(st[t]['pts'],st[t]['gf']-st[t]['gc'],st[t]['gf'])
 _mine_thirds=sorted([(g,groups[g][2]) for g in groups],key=lambda gt:_k3m(gt[1]),reverse=True)
-m3rows='<tr style="color:#7d8590;font-size:10.5px"><td style="padding:2px 6px">#</td><td>Equipo</td><td style="text-align:center">Pts</td><td style="text-align:center">DG</td><td style="text-align:center">GF</td><td style="text-align:center">Estado</td></tr>'
+mine_rows=[]
 for _pos,(_g,_t) in enumerate(_mine_thirds,1):
     _s=st[_t]; _dg=_s['gf']-_s['gc']; _dgs='0' if _dg==0 else '%+d'%_dg
-    _in=_t in b8
-    _est,_col=('IN','#56d364') if _in else ('OUT','#f85149')
-    _cut=' style="border-top:2px solid #d29922"' if _pos==9 else ''
-    m3rows+='<tr'+_cut+'><td style="padding:3px 6px;color:#7d8590">%d</td><td style="font-weight:600">%s <span style="color:#7d8590;font-size:10px">G%s</span></td><td style="text-align:center">%s</td><td style="text-align:center">%s</td><td style="text-align:center">%s</td><td style="text-align:center;color:%s;font-weight:600;font-size:11px">%s</td></tr>'%(_pos,ES[_t],_g,str(_s['pts']),_dgs,str(_s['gf']),_col,_est)
-mine_thirds_html='<table style="width:100%%;border-collapse:collapse;font-size:12px">'+m3rows+'</table>'
+    _est,_col=('IN','#56d364') if _t in b8 else ('OUT','#f85149')
+    mine_rows.append((_pos,ES[_t],_g,_s['pts'],_dgs,_s['gf'],_est,_col))
+
+# Tabla COMBINADA: una sola tabla, cada fila empareja el puesto i de ambos lados -> misma altura
+_SEP='border-left:2px solid #30363d;'
+_thr='text-align:center'
+combo_super=('<tr><td colspan="6" style="color:#d29922;font-weight:700;font-size:13px;padding:2px 6px 6px">TU estimacion (terceros)</td>'
+ '<td colspan="7" style="color:#58a6ff;font-weight:700;font-size:13px;padding:2px 6px 6px;'+_SEP+'">REAL + PROYECTADO</td></tr>')
+combo_hdr=('<tr style="color:#7d8590;font-size:10px">'
+ '<td style="padding:2px 6px">#</td><td>Equipo</td><td style="'+_thr+'">Pts</td><td style="'+_thr+'">DG</td><td style="'+_thr+'">GF</td><td style="'+_thr+'">Estado</td>'
+ '<td style="padding:2px 6px;'+_SEP+'">#</td><td>Equipo</td><td style="'+_thr+'">Pts</td><td style="'+_thr+'">DG</td><td style="'+_thr+'">GF</td><td style="'+_thr+'">Estado</td><td>Por que</td></tr>')
+combo_rows=''
+for i in range(12):
+    lp,lt,lg,lpts,ldg,lgf,lest,lcol=mine_rows[i]
+    rp,rg,rt,rpts,rdg,rgf,rest,rcol,rz=ranking3[i]
+    cut=' style="border-top:2px solid #d29922"' if i==8 else ''
+    combo_rows+=('<tr'+cut+'>'
+     '<td style="padding:3px 6px;color:#7d8590">%d</td><td style="font-weight:600">%s <span style="color:#7d8590;font-size:10px">G%s</span></td><td style="'+_thr+'">%s</td><td style="'+_thr+'">%s</td><td style="'+_thr+'">%s</td><td style="'+_thr+';color:%s;font-weight:600;font-size:11px">%s</td>'
+     '<td style="padding:3px 6px;color:#7d8590;'+_SEP+'">%d</td><td style="font-weight:600">%s <span style="color:#7d8590;font-size:10px">G%s</span></td><td style="'+_thr+'">%s</td><td style="'+_thr+'">%s</td><td style="'+_thr+'">%s</td><td style="'+_thr+';color:%s;font-weight:600;font-size:11px">%s</td><td style="color:#8b949e;font-size:11px;line-height:1.35">%s</td>'
+     '</tr>')%(lp,lt,lg,str(lpts),ldg,str(lgf),lcol,lest, rp,rt,rg,str(rpts),rdg,str(rgf),rcol,rest,rz)
+combined3_html='<table style="width:100%;border-collapse:collapse;font-size:12px;vertical-align:top">'+combo_super+combo_hdr+combo_rows+'</table>'
 
 def chips(lst,c):
     return ''.join('<span style="background:%s22;border:1px solid %s;color:%s;padding:3px 9px;border-radius:7px;margin:3px;display:inline-block;font-size:13px">%s</span>'%(c,c,c,t) for t in lst)
@@ -369,15 +384,12 @@ En %d coinciden. La diferencia son <b>%d equipos</b>:<br>
 
 <div class="box"><h2>Ranking de los 3eros lugares &mdash; tu estimacion vs lo real</h2>
 <div style="color:#8b949e;font-size:12px;margin-bottom:10px">12 terceros, solo <b>8 clasifican</b>; la <b style="color:#d29922">linea amarilla</b> marca el corte 8&ordm;/9&ordm;. <b>Izquierda:</b> como irian quedando los 12 terceros segun <b style="color:#d29922">TU estimacion pura</b> (tu cuadro congelado + tus marcadores de la ultima fecha). <b>Derecha:</b> el escenario <b style="color:#58a6ff">REAL + PROYECTADO</b> (resultados ya jugados + tus picks de lo que falta), auto-calculado, con el detalle de por que entra/sale cada uno. Comparalas para ver donde tu cuadro se separa de la realidad.</div>
-<div style="display:grid;grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr);gap:16px">
-<div><h3 style="color:#d29922;font-size:14px;margin:0 0 6px">TU estimacion (terceros)</h3>%s</div>
-<div><h3 style="color:#58a6ff;font-size:14px;margin:0 0 6px">REAL + PROYECTADO</h3>%s</div>
-</div></div>
+%s</div>
 
 <div class="box"><h2>Partidos a pronosticar &mdash; uno por uno (estrategia EV-optimo)</h2>
 <div style="color:#8b949e;font-size:12px;margin-bottom:10px">Clasificados ya clavados en %d/32, asi que cada partido se optimiza por <b>marcador</b>. Cadena: <b>xG</b> (modelo) &rarr; <b>EV-max</b> (lo que mas puntua) &rarr; <b>FINAL</b> (con ajuste por rotacion). <span style="color:#56d364">Verde</span> = EV-max directo. <span style="color:#d29922">Amarillo</span> = ajustado porque un equipo ya 1o descansa (Mexico, USA, Alemania, Argentina) o 50-50 (Croacia).</div>
 %s</div>
-</body></html>'''%(len(live), miparticipacion, compare48, cards, CHK, len(live), chips(live,'#56d364'), SKULL, len(dead), len(dead)*7, chips(dead,'#f85149'), len(live), len(miss), chips(miss,'#58a6ff'), len(live), len(dead), ', '.join(dead), ', '.join(miss), len(dead), mine_thirds_html, thirds_html, len(live), mh)
+</body></html>'''%(len(live), miparticipacion, compare48, cards, CHK, len(live), chips(live,'#56d364'), SKULL, len(dead), len(dead)*7, chips(dead,'#f85149'), len(live), len(miss), chips(miss,'#58a6ff'), len(live), len(dead), ', '.join(dead), ', '.join(miss), len(dead), combined3_html, len(live), mh)
 
 open(os.path.join(BASE,'ultima-fecha.html'),'w').write(html)  # vista publicada (repo / GitHub Pages)
 _dl=os.path.expanduser('~/Downloads')                          # copia local solo si existe la carpeta (Mac)
