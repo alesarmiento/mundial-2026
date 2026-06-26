@@ -4,6 +4,7 @@ d=json.load(open(os.path.join(BASE,'data/state.json')))
 probs=d['probs']; g_of={t:g for g,ts in d['grupos'].items() for t in ts}
 robust=set(sorted(probs,key=lambda t:-probs[t]['r32'])[:32])
 clinched=set(t for t in probs if probs[t]['r32']>=99.95)  # ya 100% clasificados (real)
+eliminated=set(t for t in probs if probs[t]['r32']<=0.05)  # ya 100% eliminados (no pueden clasificar)
 jug=[('Mexico','South Africa',2,1),('South Korea','Czechia',1,1),('Czechia','South Africa',2,1),('Mexico','South Korea',2,1),('Canada','Bosnia and Herzegovina',1,0),('Qatar','Switzerland',0,2),('Switzerland','Bosnia and Herzegovina',3,1),('Canada','Qatar',3,0),('Brazil','Morocco',3,0),('Haiti','Scotland',0,2),('Scotland','Morocco',1,2),('Brazil','Haiti',4,0),('United States','Paraguay',1,0),('Australia','Turkiye',1,2),('United States','Australia',1,1),('Turkiye','Paraguay',2,1),('Germany','Curacao',4,0),('Ivory Coast','Ecuador',0,1),('Germany','Ivory Coast',2,1),('Ecuador','Curacao',3,0),('Netherlands','Japan',2,1),('Sweden','Tunisia',2,0),('Netherlands','Sweden',3,1),('Tunisia','Japan',0,3),('Belgium','Egypt',3,1),('Iran','New Zealand',2,0),('Belgium','Iran',2,1),('New Zealand','Egypt',1,2),('Spain','Cape Verde',5,0),('Saudi Arabia','Uruguay',0,2),('Spain','Saudi Arabia',4,0),('Uruguay','Cape Verde',2,0),('France','Senegal',2,1),('Iraq','Norway',0,3),('France','Iraq',3,0),('Norway','Senegal',2,1),('Argentina','Algeria',2,0),('Austria','Jordan',2,1),('Argentina','Austria',2,0),('Jordan','Algeria',1,2),('Portugal','DR Congo',2,0),('Uzbekistan','Colombia',0,2),('Portugal','Uzbekistan',2,0),('Colombia','DR Congo',2,0),('England','Croatia',2,1),('Ghana','Panama',1,2),('England','Ghana',4,0),('Panama','Croatia',1,3)]
 # Ranking FIFA oficial (jun-2026) usado como criterio de desempate REAL de FIFA tras pts/DG/GF.
 # Nota: el criterio 4 oficial es "juego limpio" (tarjetas), que el modelo NO trackea; usamos el
@@ -316,13 +317,18 @@ mine_rows=[]
 for _pos,(_g,_t) in enumerate(_mine_thirds,1):
     _s=st[_t]; _dg=_s['gf']-_s['gc']; _dgs='0' if _dg==0 else '%+d'%_dg
     _est,_col=('IN','#56d364') if _t in b8 else ('OUT','#f85149')
-    _nm=ES[_t]+(' <span title="ya clasificado 100%" style="color:#56d364;font-size:10px">'+CHK+'</span>' if _t in clinched else '')
+    if _t in clinched:
+        _nm=ES[_t]+' <span title="ya clasificado 100%" style="color:#56d364;font-size:10px">'+CHK+'</span>'
+    elif _t in eliminated:
+        _nm='<span style="color:#f85149">'+ES[_t]+'</span> <span title="ya eliminado 100%" style="color:#f85149;font-size:10px">'+X+'</span>'
+    else:
+        _nm=ES[_t]
     mine_rows.append((_pos,_nm,_g,_s['pts'],_dgs,_s['gf'],_est,_col))
 
 # Tabla COMBINADA: una sola tabla, cada fila empareja el puesto i de ambos lados -> misma altura
 _SEP='border-left:2px solid #30363d;'
 _thr='text-align:center'
-combo_super=('<tr><td colspan="6" style="color:#d29922;font-weight:700;font-size:13px;padding:2px 6px 6px">TU estimacion (terceros) &mdash; <span style="color:#56d364;font-weight:400;font-size:11px">'+CHK+' = ya clasificado 100%</span></td>'
+combo_super=('<tr><td colspan="6" style="color:#d29922;font-weight:700;font-size:13px;padding:2px 6px 6px">TU estimacion (terceros) &mdash; <span style="color:#56d364;font-weight:400;font-size:11px">'+CHK+' ya dentro 100%</span> <span style="color:#f85149;font-weight:400;font-size:11px">&middot; '+X+' ya eliminado 100%</span></td>'
  '<td colspan="7" style="color:#58a6ff;font-weight:700;font-size:13px;padding:2px 6px 6px;'+_SEP+'">REAL + PROYECTADO</td></tr>')
 combo_hdr=('<tr style="color:#7d8590;font-size:10px">'
  '<td style="padding:2px 6px">#</td><td>Equipo</td><td style="'+_thr+'">Pts</td><td style="'+_thr+'">DG</td><td style="'+_thr+'">GF</td><td style="'+_thr+'">Estado</td>'
