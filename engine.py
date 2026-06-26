@@ -1451,7 +1451,8 @@ function paneBracket(p){
   if(pr && pr.rondas){
     const pc=$('div',{class:'card'});
     pc.append($('div',{class:'gtitle'},'🔮 Proyeccion del cuadro — arbol de eliminatorias'));
-    pc.append($('div',{class:'muted',html:'<small>Cruces segun el <b>arbol oficial</b> (Wikipedia knockout stage), con los clasificados mas probables por grupo. El % de cada equipo es su <b>probabilidad (Monte Carlo) de llegar a la ronda siguiente</b> — avanza el mayor, por eso el campeon del arbol coincide SIEMPRE con el #1 del tab Campeon. Proyeccion puntual: cambia con cada resultado.</small>'}));
+    pc.append($('div',{html:'<small><b style="color:#3fb950">■ Verde = confirmado</b> (1º/2º de un grupo ya cerrado, posicion fija) · <b style="color:#e3873e">■ Naranja = estimado</b> (proyeccion del modelo). Se actualiza en cada corrida del motor.</small>',style:'margin:2px 0 8px'}));
+    pc.append($('div',{class:'muted',html:'<small>Cruces segun el <b>arbol oficial</b> (Wikipedia knockout stage), con los clasificados mas probables por grupo. El % es la <b>probabilidad (Monte Carlo) de llegar a la ronda siguiente</b> — avanza el mayor (en negrita). Proyeccion puntual: cambia con cada resultado.</small>'}));
     pc.append(bracketTree(pr));
     p.append(pc);
   }
@@ -1462,16 +1463,17 @@ function fmtPos(c){return c?(c[0]+'°'+c.slice(1)):'';}
 function bmBox(m, round){
   const box=$('div',{class:'bm'});
   const conf=new Set(S.ko_confirmed||[]);
-  const isR32 = round==='Dieciseisavos';  // marca de confirmado SOLO en 16avos
+  const isR32 = round==='Dieciseisavos';  // confirmado solo en 16avos (1º/2º de grupo cerrado)
   [['home','pHome','posHome'],['away','pAway','posAway']].forEach(([t,pk,pos])=>{
     const win=m.winner===m[t];
-    const r=$('div',{class:'br'+(win?' w':'')});
-    const ok=isR32&&m[t]&&conf.has(m[t]);  // equipo CONFIRMADO (1º/2º de grupo cerrado)
-    if(ok){r.style.background='#16432a';r.style.borderLeft='3px solid #3fb950';}
+    const r=$('div',{class:'br'});
+    const confirmed = isR32 && m[t] && conf.has(m[t]);
+    const col = !m[t] ? '#6e7681' : (confirmed ? '#3fb950' : '#e3873e');  // VERDE=confirmado / NARANJA=estimado
+    if(confirmed) r.style.background='#13301f';
+    else if(win) r.style.background='#241a0c';  // realce suave del avance estimado
     const badge=m[pos]?`<span style="font-size:9px;color:#8b949e;border:1px solid #2d3440;border-radius:4px;padding:0 3px;margin-right:4px;font-weight:600">${fmtPos(m[pos])}</span>`:'';
-    const nmstyle=ok?'style="color:#56d364;font-weight:700"':'';
-    r.append($('span',{class:'tn',html:badge+`<span ${nmstyle}>`+(m[t]||'—')+'</span>'}));
-    r.append($('span',{class:'pp'}, m[pk]!=null?(m[pk]+'%'):''));
+    r.append($('span',{class:'tn',html:badge+`<span style="color:${col};font-weight:${win?700:500}">`+(m[t]||'—')+'</span>'}));
+    r.append($('span',{class:'pp',html:`<span style="color:${col}">`+(m[pk]!=null?(m[pk]+'%'):'')+'</span>'}));
     box.append(r);
   });
   return box;
