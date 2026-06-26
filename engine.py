@@ -194,7 +194,7 @@ def build_por_fecha(teams, results, elo, fixtures, anchor, cfg=None, ko_fixtures
             at = ko_resolve(kf["away"], posmap, kowin, kolose)
             e = {"home": ht or ko_label(kf["home"]), "away": at or ko_label(kf["away"]),
                  "home_real": bool(ht), "away_real": bool(at), "fase": kf["fase"],
-                 "sede": kf.get("sede"), "match": kf.get("match"), "ko": True}
+                 "sede": kf.get("sede"), "match": kf.get("match"), "ko": True, "utc": kf.get("utc")}
             r = played.get(frozenset((ht, at))) if (ht and at) else None
             if r:
                 e["jugado"] = True
@@ -1255,8 +1255,9 @@ var _scoreMap=null;
 function scoreFor(h,a){if(!_scoreMap){_scoreMap={};((S.puntaje&&S.puntaje.por_partido)||[]).forEach(x=>{_scoreMap[x.home+'|'+x.away]=x})}return _scoreMap[h+'|'+a]}
 function matchRow(m){
   const FASELBL={dieciseisavos:'16avos',octavos:'Octavos',cuartos:'Cuartos',semis:'Semis',tercer_puesto:'3º puesto',final:'Final'};
-  const r=$('div',{class:'mrow clk'});
-  if(!m.ko) r.onclick=()=>openModal(m);
+  const clickable = !m.ko || m.jugado || (m.home_real && m.away_real);  // KO: detalle solo si ambos equipos ya estan definidos
+  const r=$('div',{class:'mrow'+(clickable?' clk':'')});
+  if(clickable) r.onclick=()=>openModal(m);
   const h=horaCL(m.utc);
   r.append($('span',{class:'hora'}, h?(h+' hs'):''));
   r.append($('span',{class:'gc'}, m.grupo?('Gr '+m.grupo):(FASELBL[m.fase]||m.fase||'')));
@@ -1286,7 +1287,7 @@ function matchRow(m){
   } else if(mkrow&&mkrow.divergencia&&mkrow.divergencia.nivel==='media'){
     const w=$('span',{html:'⚠️'});w.style.cssText='font-size:10px;color:#d29922;flex:none';r.append(w);
   }
-  r.append($('span',{class:'info'},'ⓘ por qué'));
+  if(clickable) r.append($('span',{class:'info'},'ⓘ por qué'));
   return r;
 }
 function modalForm(d){
@@ -1458,17 +1459,18 @@ function paneBracket(p){
 }
 
 function fmtPos(c){return c?(c[0]+'°'+c.slice(1)):'';}
-function bmBox(m){
+function bmBox(m, round){
   const box=$('div',{class:'bm'});
   const conf=new Set(S.ko_confirmed||[]);
+  const isR32 = round==='Dieciseisavos';  // marca de confirmado SOLO en 16avos
   [['home','pHome','posHome'],['away','pAway','posAway']].forEach(([t,pk,pos])=>{
     const win=m.winner===m[t];
     const r=$('div',{class:'br'+(win?' w':'')});
+    const ok=isR32&&m[t]&&conf.has(m[t]);  // equipo CONFIRMADO (1º/2º de grupo cerrado)
+    if(ok){r.style.background='#16432a';r.style.borderLeft='3px solid #3fb950';}
     const badge=m[pos]?`<span style="font-size:9px;color:#8b949e;border:1px solid #2d3440;border-radius:4px;padding:0 3px;margin-right:4px;font-weight:600">${fmtPos(m[pos])}</span>`:'';
-    const ok=m[t]&&conf.has(m[t]);  // equipo CONFIRMADO (1º/2º de grupo cerrado)
-    const chk=ok?'<span title="confirmado" style="color:#3fb950;font-weight:700;margin-left:4px">✓</span>':'';
-    const nmstyle=ok?'style="color:#3fb950;font-weight:600"':'';
-    r.append($('span',{class:'tn',html:badge+`<span ${nmstyle}>`+(m[t]||'—')+'</span>'+chk}));
+    const nmstyle=ok?'style="color:#56d364;font-weight:700"':'';
+    r.append($('span',{class:'tn',html:badge+`<span ${nmstyle}>`+(m[t]||'—')+'</span>'}));
     r.append($('span',{class:'pp'}, m[pk]!=null?(m[pk]+'%'):''));
     box.append(r);
   });
@@ -1484,12 +1486,12 @@ function bracketTree(pr){
     if(rd.ronda!=='Final'){
       for(let i=0;i<rd.partidos.length;i+=2){
         const pair=$('div',{class:'pair'});
-        pair.append(bmBox(rd.partidos[i]));
-        if(rd.partidos[i+1])pair.append(bmBox(rd.partidos[i+1]));
+        pair.append(bmBox(rd.partidos[i], rd.ronda));
+        if(rd.partidos[i+1])pair.append(bmBox(rd.partidos[i+1], rd.ronda));
         col.append(pair);
       }
     } else {
-      col.append(bmBox(rd.partidos[0]));
+      col.append(bmBox(rd.partidos[0], rd.ronda));
     }
     bk.append(col);
   });
