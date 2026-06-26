@@ -11,7 +11,7 @@ jug=[('Mexico','South Africa',2,1),('South Korea','Czechia',1,1),('Czechia','Sou
 # criterio 5 (Ranking FIFA) como desempate determinista. Fuente: Yahoo/ESPN ranking jun-2026.
 fifa_rank={'Argentina':1,'France':2,'Spain':3,'England':4,'Brazil':5,'Morocco':6,'Netherlands':7,'Germany':8,'Portugal':9,'Belgium':10,'Mexico':11,'Colombia':12,'United States':13,'Croatia':15,'Japan':16,'Senegal':17,'Switzerland':18,'Uruguay':19,'Austria':21,'Iran':22,'South Korea':23,'Australia':25,'Egypt':26,'Norway':27,'Canada':28,'Algeria':29,'Ecuador':30,'Ivory Coast':31,'Turkiye':32,'Sweden':36,'Paraguay':37,'Panama':40,'Scotland':41,'DR Congo':43,'Czechia':44,'Uzbekistan':54,'Qatar':57,'Tunisia':58,'Saudi Arabia':59,'Iraq':60,'South Africa':61,'Cape Verde':63,'Bosnia and Herzegovina':64,'Ghana':65,'Jordan':68,'Curacao':81,'New Zealand':84,'Haiti':87}
 # Mi pronostico de ultima fecha (EV-optimo + overlay rotacion)
-mine_last={('Czechia','Mexico'):(1,2),('South Africa','South Korea'):(0,2),('Switzerland','Canada'):(1,1),('Bosnia and Herzegovina','Qatar'):(2,0),('Scotland','Brazil'):(0,2),('Morocco','Haiti'):(2,0),('Turkiye','United States'):(1,2),('Paraguay','Australia'):(0,1),('Curacao','Ivory Coast'):(0,3),('Ecuador','Germany'):(1,2),('Japan','Sweden'):(3,1),('Tunisia','Netherlands'):(0,3),('Egypt','Iran'):(2,1),('New Zealand','Belgium'):(0,2),('Cape Verde','Saudi Arabia'):(1,0),('Uruguay','Spain'):(0,2),('Norway','France'):(1,2),('Senegal','Iraq'):(2,0),('Algeria','Austria'):(0,1),('Jordan','Argentina'):(1,2),('Colombia','Portugal'):(1,2),('DR Congo','Uzbekistan'):(1,0),('Panama','England'):(0,3),('Croatia','Ghana'):(1,0)}
+mine_last={('Czechia','Mexico'):(1,2),('South Africa','South Korea'):(0,2),('Switzerland','Canada'):(1,1),('Bosnia and Herzegovina','Qatar'):(2,0),('Scotland','Brazil'):(0,2),('Morocco','Haiti'):(2,0),('Turkiye','United States'):(1,2),('Paraguay','Australia'):(0,1),('Curacao','Ivory Coast'):(0,3),('Ecuador','Germany'):(1,2),('Japan','Sweden'):(3,1),('Tunisia','Netherlands'):(0,3),('Egypt','Iran'):(5,1),('New Zealand','Belgium'):(0,2),('Cape Verde','Saudi Arabia'):(1,0),('Uruguay','Spain'):(0,2),('Norway','France'):(1,2),('Senegal','Iraq'):(2,0),('Algeria','Austria'):(0,1),('Jordan','Argentina'):(1,2),('Colombia','Portugal'):(1,2),('DR Congo','Uzbekistan'):(1,1),('Panama','England'):(0,3),('Croatia','Ghana'):(1,0)}
 
 def resolve(last, base_jug):
     st={t:{'pts':0,'gf':0,'gc':0} for t in g_of}
@@ -108,7 +108,7 @@ miparticipacion=('<div class="box" style="border-color:#d29922"><h2 style="color
  '</div>'
  '<table style="width:100%%;border-collapse:collapse;font-size:12.5px"><tr style="color:#7d8590;font-size:10.5px"><td style="padding:2px 6px">Partido</td><td style="text-align:center">Mi pick</td><td style="text-align:center">Prob. modelo</td><td style="text-align:center">Real</td><td style="text-align:center">Pts</td><td></td></tr>')%(CHK,mi_ganado,mi_max,mi_jugados,mi_pend)+prow+'</table></div>'
 
-ana={'A':'CERRADO (real): Mexico 1o, Sudafrica 2o. Corea 3a con 3 pts -> ENTRA como mejor tercero. Chequia afuera.','B':'CERRADO (real): Suiza 1o (gano 2-1), Canada 2o. Bosnia 3o con 4 pts (goleo 3-1 a Catar) -> VIVO.','C':'CERRADO (real): Brasil 1o (3-0), Marruecos 2o (4-2). Escocia 3a pero perdio 0-3 -> SE CAE del corte.','D':'USA 1ro. Australia el 2do mas seguro (DG 0). Con tu Australia 0-1, Australia queda en tus 32 y Paraguay 3o (pelea el ultimo cupo de terceros; ver tabla). Se juega HOY.','E':'Alemania 1ro, C.Marfil 2do (vivo). Ecuador (1pt) sigue en TUS 32: +7 si DA LA SORPRESA y le gana a Alemania rotada, pero pronosticamos Alemania 2-1 (lo mas real). Se juega HOY.','F':'PaisesBajos y Japon adentro. Suecia 3a: con tu Japon 3-1 cae a 3a pero sostiene mejor-tercero. Se juega HOY.','G':'Con tu Egipto 2-1: Egipto 1o, Belgica 2o, Iran 3o (en TU proyeccion, afuera). PERO Iran sigue en tus 32: si en la REALIDAD clasifica, cobras +7 igual, sin importar este marcador.','H':'Espana 1a. Con tu Cabo Verde 1-0, CV sube a 2do y clasifica directo; Uruguay 3o afuera.','I':'Francia, Noruega, Senegal: los 3 VIVOS.','J':'Argentina, Austria, Argelia: los 3 VIVOS.','K':'Colombia y Portugal; sin tercero clasificado.','L':'Inglaterra y Croacia. Te falta Ghana.'}
+ana={'A':'CERRADO (real): Mexico 1o, Sudafrica 2o. Corea 3a con 3 pts -> ENTRA como mejor tercero. Chequia afuera.','B':'CERRADO (real): Suiza 1o (gano 2-1), Canada 2o. Bosnia 3o con 4 pts (goleo 3-1 a Catar) -> VIVO.','C':'CERRADO (real): Brasil 1o (3-0), Marruecos 2o (4-2). Escocia 3a pero perdio 0-3 -> SE CAE del corte.','D':'USA 1ro. Australia el 2do mas seguro (DG 0). Con tu Australia 0-1, Australia queda en tus 32 y Paraguay 3o (pelea el ultimo cupo de terceros; ver tabla). Se juega HOY.','E':'Alemania 1ro, C.Marfil 2do (vivo). Ecuador (1pt) sigue en TUS 32: +7 si DA LA SORPRESA y le gana a Alemania rotada, pero pronosticamos Alemania 2-1 (lo mas real). Se juega HOY.','F':'PaisesBajos y Japon adentro. Suecia 3a: con tu Japon 3-1 cae a 3a pero sostiene mejor-tercero. Se juega HOY.','G':'Con tu Egipto 5-1 (goleada): Iran cae a 3o y, por el margen 4+, queda DEBAJO de Argelia en tu cuadro -> sale Iran, entra ARGELIA. Apuesta a que Egipto gana (Iran afuera en la realidad).','H':'Espana 1a. Con tu Cabo Verde 1-0, CV sube a 2do y clasifica directo; Uruguay 3o afuera.','I':'Francia, Noruega, Senegal: los 3 VIVOS.','J':'Argentina, Austria, Argelia: los 3 VIVOS.','K':'Colombia y Portugal; sin tercero clasificado.','L':'Inglaterra y Croacia. Te falta Ghana.'}
 
 def cellcolor(t,i):
     q=(i<2) or (t in b8)
@@ -228,7 +228,7 @@ matches=[
  ('Jue 25-jun','Ecuador','Alemania','0.6-1.9','0-1','1-2',0,'AJUSTE (mismo criterio que Turquia): Ecuador ya esta en tus 32, asi que si DA LA SORPRESA y gana igual te suma +7 sin importar este marcador. Como lo mas probable es que Alemania (aunque rota) gane, vamos al marcador real: Alemania 2-1. Si Ecuador realmente gana, cobras sus 7 igual.'),
  ('Sab 25-jun','Japon','Suecia','3.1-0.7','3-0','3-1',0,'TU PICK: Japon 3-1. Japon no rota (pelea 1o), goleador; Suecia peligrosa marca uno pero pierde -> Suecia sigue 3a y clasifica como mejor tercero (sube su GF a 7).'),
  ('Sab 25-jun','Tunez','Paises Bajos','0.2-3.4','0-3','0-3',0,'NL quiere goles para el 1o; EV-max directo'),
- ('Vie 26-jun','Egipto','Iran','1.2-1.3','0-1','2-1',1,'TU PICK: Egipto 2-1 (crees que Egipto no pierde). CLAVE: este marcador NO cambia tu cuadro -> Iran queda en tus 32 IGUAL, asi que si Iran da la sorpresa y clasifica, cobras +7 sin importar este pick. Aca solo elegis el marcador que creas. El modelo da leve favorito a Iran (Egipto ya clasificado no se juega nada), pero manda tu lectura.'),
+ ('Vie 26-jun','Egipto','Iran','1.2-1.3','0-1','5-1',1,'TU PICK: Egipto 5-1 (goleada). MOVIMIENTO ESTRATEGICO: si crees que Egipto gana, Iran (2 pts) queda AFUERA en la realidad y entra Argelia. El 5-1 (margen 4+) es lo que hace falta para que en TU cuadro Iran caiga debajo de Argelia -> ahora tu apuesta es ARGELIA, no Iran. Cuesta puntos de marcador (5-1 es raro), pero alinea tu clasificado con quien realmente pasa si Egipto gana.'),
  ('Vie 26-jun','N.Zelanda','Belgica','0.3-2.8','0-2','0-2',0,'Belgica debe ganar; EV-max 0-2'),
  ('Vie 26-jun','Cabo Verde','Saudi','1.3-1.0','1-0','1-0',0,'TU PICK: Cabo Verde 1-0 (coincide con el EV-max). Gana y SUBE a 2o de H -> clasifica directo y deja a Uruguay (3o) afuera.'),
  ('Vie 26-jun','Uruguay','Espana','0.3-2.5','0-2','0-2',0,'EV-max directo (Espana administra el 1o)'),
@@ -284,7 +284,7 @@ for fe,h,a,xg,ev,fin,flag,rz in matches:
 
 # ranking3 AUTO-CALCULADO desde la proyeccion REAL+PROY (rgroups/rb8/rst) -> nunca queda stale
 notes3={
- 'DR Congo':'Con tu DR Congo 1-0 a Uzbekistan llega a 4 pts.',
+ 'DR Congo':'Con tu empate 1-1 a Uzbekistan queda en 3 pts (en tu cuadro), GF bajo: afuera del corte.',
  'Ghana':'Ya tiene 4 pts reales (empato Inglaterra + gano Panama).',
  'Bosnia and Herzegovina':'REAL 24-jun goleo 3-1 a Catar -> 4 pts.',
  'Senegal':'Le gana a Irak -> 3 pts, buen DG.',
@@ -294,7 +294,7 @@ notes3={
  'Algeria':'Empata con Paraguay (3 pts/-3/GF2). Desempate FIFA: tras juego limpio, Ranking FIFA -> Argelia (29o) supera a Paraguay (37o) -> se queda el 8o cupo. (NO es sorteo: en 2026 FIFA elimino el bolillero.)',
  'Scotland':'REAL 24-jun perdio 0-3 con Brasil -> 3 pts pero DG bajo: se cae del corte.',
  'Ecuador':'Ya CLASIFICO (le gano 2-1 a Alemania, REAL): 4 pts, 3o de E -> entra.',
- 'Iran':'Con tu Egipto 2-1, Iran 3o de G con 2 pts: afuera en tu proyeccion (pero el modelo lo da probable).',
+ 'Iran':'Con tu Egipto 5-1, Iran cae 3o de G y por debajo de Argelia (margen 4+): SALE de tu apuesta. (Apuesta a que Egipto gana.)',
  'Uruguay':'Con tu Cabo Verde 1-0, Uruguay 3o de H con 2 pts: afuera.',
 }
 _k3=lambda t:(rst[t]['pts'],rst[t]['gf']-rst[t]['gc'],rst[t]['gf'],-fifa_rank.get(t,99))
