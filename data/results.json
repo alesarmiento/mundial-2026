@@ -2,7 +2,7 @@
   "_meta": {
     "descripcion": "Ledger de resultados REALES. Cada partido entra con su fuente. NUNCA se inventa un marcador. Si no se puede verificar, no se agrega.",
     "fase_valores": "grupos | dieciseisavos | octavos | cuartos | semis | tercer_puesto | final",
-    "ultima_fecha_cargada": "2026-06-25"
+    "ultima_fecha_cargada": "2026-06-26"
   },
   "partidos": [
     {
@@ -604,6 +604,26 @@
       "gl": 0,
       "gv": 0,
       "fuente": "https://sports.yahoo.com/soccer/live/world-cup-schedule-scores-live-updates-results-group-d-group-e-group-f-160927428.html (0-0 FT; Australia 2a por mejor DG, Paraguay 3o con 4 pts espera como mejor tercero; confirmado Yahoo/ESPN)"
+    },
+    {
+      "fecha": "2026-06-26",
+      "fase": "grupos",
+      "grupo": "I",
+      "local": "Norway",
+      "visita": "France",
+      "gl": 1,
+      "gv": 4,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021489 (Norway 1-4 France FT; Dembele hat-trick 3G (tres goles en los primeros 32 min, 2do hat-trick mas rapido de la historia del WC); Aasgaard 1G NOR; 4to gol FRA en duda — Mbappe descansado/no anoto; Francia 1ro del Grupo I con 9 pts invicta; confirmado FIFA / Fox Sports / NBC Sports / Yahoo Sports / VAVEL)"
+    },
+    {
+      "fecha": "2026-06-26",
+      "fase": "grupos",
+      "grupo": "I",
+      "local": "Senegal",
+      "visita": "Iraq",
+      "gl": 5,
+      "gv": 0,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021493 (Senegal 5-0 Iraq FT; H. Diarra 4', I. Sarr 56', P. Gueye 59' y 71', I. Ndiaye 82'; Senegal 2do del Grupo I con 6 pts; Iraq eliminado; confirmado FIFA / Fox Sports / Yahoo Sports / Outlook India)"
     }
   ]
 }

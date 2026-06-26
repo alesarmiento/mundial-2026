@@ -3,42 +3,10 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-06-26T04:15Z",
+    "actualizado": "2026-06-26T21:10Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "Norway", "away": "France", "fecha": "2026-06-26",
-      "estado_alineacion": "probable",
-      "xi_local": "Nyland; Pedersen, Ajer, Heggem, Moller Wolfe; Aursnes, Berge, Odegaard (en duda — posible rotacion); Nusa, Haaland (en duda — posible rotacion), Sorloth (4-3-3).",
-      "xi_visita": "Maignan; Kounde, Saliba, Upamecano, T. Hernandez; Tchouameni, Kante, Rabiot; Dembele, Mbappe, Barcola (4-3-3).",
-      "bajas_local": ["Haaland y Odegaard — gestion de carga: posible rotacion (no confirmado; podrian jugar si Solbakken prioriza el primer lugar)"],
-      "bajas_visita": ["Sin bajas confirmadas. Didier Deschamps ausente por fallecimiento de su madre — equipo conducido por su cuerpo tecnico."],
-      "lectura": "Ambos equipos ya clasificaron al R32. El ganador se lleva el primer lugar del Grupo I; un empate le alcanza a Francia. Noruega evalua descansar a Haaland (4 goles) y Odegaard, aunque ninguno esta descartado. Francia no tiene lesionados pero Deschamps viaja para el funeral de su madre. Incluso con rotaciones, Francia cuenta con Mbappe, Dembele y Barcola — una de las ternas ofensivas mas peligrosas del torneo. La clave del partido es si Noruega arriesga con sus titulares o prioriza la frescura para la eliminatoria.",
-      "lean": "Francia favorita incluso rotando. Si Noruega descansa a Haaland y Odegaard, las chances de Francia crecen; si los pone, el partido se abre.",
-      "fuentes": [
-        "https://www.rotowire.com/soccer/article/norway-vs-france-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-i-119630",
-        "https://sports.yahoo.com/soccer/article/world-cup-2026-france-manager-didier-deschamps-will-miss-match-vs-norway-to-attend-mothers-funeral-201309200.html",
-        "https://www.sportsmole.co.uk/football/norway/world-cup-2026/predicted-lineups/defensive-doubts-predicted-norway-xi-vs-france_600017.html",
-        "https://www.espn.com/soccer/story/_/id/49162941/norway-vs-france-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups"
-      ]
-    },
-    {
-      "home": "Senegal", "away": "Iraq", "fecha": "2026-06-26",
-      "estado_alineacion": "probable",
-      "xi_local": "Diaw; Diatta, Koulibaly, Niakhate, E-H Diouf; I. Gueye, P. Gueye; I. Sarr, Camara, Mane; Jackson (4-2-3-1).",
-      "xi_visita": "Basil; Hussein Ali, Tahseen, Hashim, Doski; Al Ammari; Qasem, Ismael, Iqbal, Bayesh; Al Hamadi (4-1-4-1).",
-      "bajas_local": ["Edouard Mendy (lesion de rodilla — descartado para este partido; Mory Diaw titulariza)"],
-      "bajas_visita": ["Amjad Hussein (dudoso — posible baja que seria golpe duro para Iraq; goleador clave del equipo)"],
-      "lectura": "Senegal necesita ganar Y corregir diferencia de goles negativa para tener opciones como mejor tercero. Iraq esta eliminado (derrota 0-3 ante Francia). Sarr (2 goles) y Mane son los lideres ofensivos de Senegal. La baja de Mendy pone a prueba la meta senegalesa — Diaw reemplaza al portero del Chelsea. Iraq mostro poco en sus dos partidos pero mantuvo algo de estructura defensiva.",
-      "lean": "Senegal favorita clara y necesita ganar amplio. El contexto empuja a un Senegal muy ofensivo — Iraq en modo defensivo pero con poco colmillo.",
-      "fuentes": [
-        "https://www.sportsmole.co.uk/football/senegal/world-cup-2026/preview/senegal-vs-iraq-prediction-team-news-lineups_599956.html",
-        "https://www.rotowire.com/soccer/article/senegal-vs-iraq-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-i-119631",
-        "https://sports.yahoo.com/articles/preview-senegal-vs-iraq-team-191000909.html",
-        "https://www.espn.com/soccer/story/_/id/49165930/fifa-world-cup-2026-senegal-vs-iraq-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups"
-      ]
-    },
     {
       "home": "Uruguay", "away": "Spain", "fecha": "2026-06-26",
       "estado_alineacion": "probable",

@@ -2,11 +2,12 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://www.foxsports.com/stories/soccer/2026-fifa-world-cup-golden-boot-tracker + https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/adidas-golden-boot-race-top-scorer (verificado 26-jun-2026 04:15 UTC). Top sin cambios: Messi 5G, Mbappe/Vinicius/Haaland 4G c/u. Grupo D: Guler/Yilmaz/Kaan Ayhan (TUR, 1G c/u), Trusty/Berhalter (USA, 1G c/u) — no alcanzan el top 15. Paraguay 0-0 Australia, sin goles.",
+    "fuente": "https://www.foxsports.com/stories/soccer/2026-fifa-world-cup-golden-boot-tracker + https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/adidas-golden-boot-race-top-scorer + https://sports.yahoo.com/soccer/article/world-cup-golden-boot-goal-leaders-and-scorers-lionel-messi-vinicius-junior-kylian-mbappe-erling-haaland-010143798.html (verificado 26-jun-2026 21:10 UTC). Dembele hat-trick vs Norway: suma 4 total (1 vs Iraq + 3 vs Norway), empata con Mbappe/Vinicius/Haaland. Sarr: 3 goles (1 vs Iraq jun-26). Messi sigue lider con 5.",
     "actualizado": "2026-06-26"
   },
   "jugadores": [
     {"jugador": "Lionel Messi", "equipo": "Argentina", "goles": 5},
+    {"jugador": "Ousmane Dembele", "equipo": "France", "goles": 4},
     {"jugador": "Kylian Mbappe", "equipo": "France", "goles": 4},
     {"jugador": "Jonathan David", "equipo": "Canada", "goles": 3},
     {"jugador": "Deniz Undav", "equipo": "Germany", "goles": 3},
@@ -16,7 +17,7 @@
     {"jugador": "Matheus Cunha", "equipo": "Brazil", "goles": 3},
     {"jugador": "Vinicius Junior", "equipo": "Brazil", "goles": 4},
     {"jugador": "Erling Haaland", "equipo": "Norway", "goles": 4},
-    {"jugador": "Ismaila Sarr", "equipo": "Senegal", "goles": 2},
+    {"jugador": "Ismaila Sarr", "equipo": "Senegal", "goles": 3},
     {"jugador": "Harry Kane", "equipo": "England", "goles": 2},
     {"jugador": "Kai Havertz", "equipo": "Germany", "goles": 2},
     {"jugador": "Yasin Ayari", "equipo": "Sweden", "goles": 2},
@@ -41,6 +42,7 @@
     {"jugador": "Gonzalo Plata", "equipo": "Ecuador", "goles": 1},
     {"jugador": "Daizen Maeda", "equipo": "Japan", "goles": 1},
     {"jugador": "Anthony Elanga", "equipo": "Sweden", "goles": 1},
-    {"jugador": "Jan Paul van Hecke", "equipo": "Netherlands", "goles": 1}
+    {"jugador": "Jan Paul van Hecke", "equipo": "Netherlands", "goles": 1},
+    {"jugador": "Pape Gueye", "equipo": "Senegal", "goles": 2}
   ]
 }
