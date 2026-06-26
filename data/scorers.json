@@ -2,7 +2,7 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://www.foxsports.com/stories/soccer/2026-fifa-world-cup-golden-boot-tracker + https://www.fifa.com/en/match-centre/match/17/285023/289273/400021471 (JPN 1-1 SWE: Maeda 56', Elanga 62') + https://www.fifa.com/en/match-centre/match/17/285023/289273/400021473 (TUN 1-3 NED: Brobbey 7', van Hecke 62') + FIFA Golden Boot (verificado 26-jun-2026 01:10 UTC). Messi lidera con 5G; Mbappe, Haaland y Vinicius Jr en 4G c/u. Nuevos goleadores hoy: Brobbey (NED 3G total), van Hecke (NED 1G), Maeda (JPN 1G), Elanga (SWE 1G).",
+    "fuente": "https://www.foxsports.com/stories/soccer/2026-fifa-world-cup-golden-boot-tracker + https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/adidas-golden-boot-race-top-scorer (verificado 26-jun-2026 04:15 UTC). Top sin cambios: Messi 5G, Mbappe/Vinicius/Haaland 4G c/u. Grupo D: Guler/Yilmaz/Kaan Ayhan (TUR, 1G c/u), Trusty/Berhalter (USA, 1G c/u) — no alcanzan el top 15. Paraguay 0-0 Australia, sin goles.",
     "actualizado": "2026-06-26"
   },
   "jugadores": [
