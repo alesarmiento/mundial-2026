@@ -1,0 +1,44 @@
+{
+  "_meta": {
+    "descripcion": "Calendario de eliminatorias (KO) 2026: fecha + sede + cruce por slot. Fuente: Wikipedia '2026 FIFA World Cup knockout stage' + FIFA.com. R32 con slots del r32_skeleton (1X=ganador grupo, 2X=2do, 3:.. = mejor tercero de esos grupos). R16->Final encadenados por orden de arbol (Wxx = ganador del partido xx; Lxx = perdedor). Las posiciones se resuelven a equipo real cuando se conocen (grupo cerrado o partido jugado).",
+    "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage"
+  },
+  "partidos": [
+    {"match":73,"fase":"dieciseisavos","date":"2026-06-28","sede":"Inglewood","home":"2A","away":"2B"},
+    {"match":74,"fase":"dieciseisavos","date":"2026-06-29","sede":"Foxborough","home":"1E","away":"3:A,B,C,D,F"},
+    {"match":75,"fase":"dieciseisavos","date":"2026-06-29","sede":"Guadalupe","home":"1F","away":"2C"},
+    {"match":76,"fase":"dieciseisavos","date":"2026-06-29","sede":"Houston","home":"1C","away":"2F"},
+    {"match":77,"fase":"dieciseisavos","date":"2026-06-30","sede":"East Rutherford","home":"1I","away":"3:C,D,F,G,H"},
+    {"match":78,"fase":"dieciseisavos","date":"2026-06-30","sede":"Arlington","home":"2E","away":"2I"},
+    {"match":79,"fase":"dieciseisavos","date":"2026-06-30","sede":"Ciudad de Mexico","home":"1A","away":"3:C,E,F,H,I"},
+    {"match":80,"fase":"dieciseisavos","date":"2026-07-01","sede":"Atlanta","home":"1L","away":"3:E,H,I,J,K"},
+    {"match":81,"fase":"dieciseisavos","date":"2026-07-01","sede":"Santa Clara","home":"1D","away":"3:B,E,F,I,J"},
+    {"match":82,"fase":"dieciseisavos","date":"2026-07-01","sede":"Seattle","home":"1G","away":"3:A,E,H,I,J"},
+    {"match":83,"fase":"dieciseisavos","date":"2026-07-02","sede":"Toronto","home":"2K","away":"2L"},
+    {"match":84,"fase":"dieciseisavos","date":"2026-07-02","sede":"Inglewood","home":"1H","away":"2J"},
+    {"match":85,"fase":"dieciseisavos","date":"2026-07-02","sede":"Vancouver","home":"1B","away":"3:E,F,G,I,J"},
+    {"match":86,"fase":"dieciseisavos","date":"2026-07-03","sede":"Miami Gardens","home":"1J","away":"2H"},
+    {"match":87,"fase":"dieciseisavos","date":"2026-07-03","sede":"Kansas City","home":"1K","away":"3:D,E,I,J,L"},
+    {"match":88,"fase":"dieciseisavos","date":"2026-07-03","sede":"Arlington","home":"2D","away":"2G"},
+
+    {"match":89,"fase":"octavos","date":"2026-07-04","sede":"Philadelphia","home":"W74","away":"W77"},
+    {"match":90,"fase":"octavos","date":"2026-07-04","sede":"Houston","home":"W73","away":"W75"},
+    {"match":91,"fase":"octavos","date":"2026-07-05","sede":"East Rutherford","home":"W83","away":"W84"},
+    {"match":92,"fase":"octavos","date":"2026-07-05","sede":"Ciudad de Mexico","home":"W81","away":"W82"},
+    {"match":93,"fase":"octavos","date":"2026-07-06","sede":"Arlington","home":"W76","away":"W78"},
+    {"match":94,"fase":"octavos","date":"2026-07-06","sede":"Seattle","home":"W79","away":"W80"},
+    {"match":95,"fase":"octavos","date":"2026-07-07","sede":"Atlanta","home":"W86","away":"W88"},
+    {"match":96,"fase":"octavos","date":"2026-07-07","sede":"Vancouver","home":"W85","away":"W87"},
+
+    {"match":97,"fase":"cuartos","date":"2026-07-09","sede":"Foxborough","home":"W89","away":"W90"},
+    {"match":98,"fase":"cuartos","date":"2026-07-10","sede":"Inglewood","home":"W91","away":"W92"},
+    {"match":99,"fase":"cuartos","date":"2026-07-11","sede":"Miami Gardens","home":"W93","away":"W94"},
+    {"match":100,"fase":"cuartos","date":"2026-07-11","sede":"Kansas City","home":"W95","away":"W96"},
+
+    {"match":101,"fase":"semis","date":"2026-07-14","sede":"Arlington","home":"W97","away":"W98"},
+    {"match":102,"fase":"semis","date":"2026-07-15","sede":"Atlanta","home":"W99","away":"W100"},
+
+    {"match":103,"fase":"tercer_puesto","date":"2026-07-18","sede":"Miami Gardens","home":"L101","away":"L102"},
+    {"match":104,"fase":"final","date":"2026-07-19","sede":"East Rutherford","home":"W101","away":"W102"}
+  ]
+}

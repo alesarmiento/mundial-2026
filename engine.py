@@ -127,7 +127,31 @@ def match_pred(home, away, elo, ad=None, w=0.0, host_adv=0.0, hosts=()):
             "score_med": disp,
             "xgH": xgH, "xgA": xgA}
 
-def build_por_fecha(teams, results, elo, fixtures, anchor, cfg=None):
+def ko_label(code):
+    """Etiqueta legible de una posicion de eliminatoria sin resolver."""
+    if code.startswith("3:"): return "3º (" + code[2:].replace(",", "/") + ")"
+    if code.startswith("W") and code[1:].isdigit(): return "Ganador " + code[1:]
+    if code.startswith("L") and code[1:].isdigit(): return "Perdedor " + code[1:]
+    if code and code[0] in "123": return code[0] + "º " + code[1:]
+    return code
+
+def ko_position_map(grupos, base):
+    """1X/2X/3X -> equipo real, SOLO para grupos cerrados (3 PJ c/u). Si no, la posicion queda generica."""
+    pos = {}
+    for g, ts in grupos.items():
+        if all(base[t]["pj"] >= 3 for t in ts):
+            o = sorted(ts, key=lambda t: rank_key(base[t]), reverse=True)
+            pos["1" + g], pos["2" + g], pos["3" + g] = o[0], o[1], o[2]
+    return pos
+
+def ko_resolve(code, posmap, kowin, kolose):
+    """Equipo real si la posicion ya se conoce (grupo cerrado o partido KO jugado); si no None."""
+    if code in posmap: return posmap[code]
+    if code.startswith("W") and code[1:].isdigit(): return kowin.get(int(code[1:]))
+    if code.startswith("L") and code[1:].isdigit(): return kolose.get(int(code[1:]))
+    return None
+
+def build_por_fecha(teams, results, elo, fixtures, anchor, cfg=None, ko_fixtures=None, base=None):
     """Vista por dia: cada partido con resultado real (si jugado) o prediccion (si por jugar)."""
     cfg = cfg or {}
     ad = compute_ad(results, cfg.get("ghist"), teams["grupos"]) if cfg.get("w", 0) > 0 else None
@@ -149,6 +173,38 @@ def build_por_fecha(teams, results, elo, fixtures, anchor, cfg=None):
             e["pred"] = match_pred(h, a, elo, ad, cfg.get("w", 0.0),
                                    cfg.get("host_adv", 0.0), cfg.get("hosts", set()))
         by_date[fx["date"]].append(e)
+    # ---- eliminatorias (KO): inyectar dias con cruces resueltos (grupo cerrado / partido jugado) o genericos ----
+    if ko_fixtures and base is not None:
+        posmap = ko_position_map(teams["grupos"], base)
+        kowin, kolose = {}, {}
+        # resolver ganadores/perdedores de partidos KO ya jugados, iterando hasta punto fijo
+        for _ in range(6):
+            for kf in ko_fixtures:
+                ht = ko_resolve(kf["home"], posmap, kowin, kolose)
+                at = ko_resolve(kf["away"], posmap, kowin, kolose)
+                if ht and at:
+                    r = played.get(frozenset((ht, at)))
+                    if r:
+                        w = r["local"] if r["gl"] > r["gv"] else (r["visita"] if r["gv"] > r["gl"] else r.get("ganador"))
+                        if w:
+                            kowin[kf["match"]] = w
+                            kolose[kf["match"]] = at if w == ht else ht
+        for kf in ko_fixtures:
+            ht = ko_resolve(kf["home"], posmap, kowin, kolose)
+            at = ko_resolve(kf["away"], posmap, kowin, kolose)
+            e = {"home": ht or ko_label(kf["home"]), "away": at or ko_label(kf["away"]),
+                 "home_real": bool(ht), "away_real": bool(at), "fase": kf["fase"],
+                 "sede": kf.get("sede"), "match": kf.get("match"), "ko": True}
+            r = played.get(frozenset((ht, at))) if (ht and at) else None
+            if r:
+                e["jugado"] = True
+                if r["local"] == ht: e["gl"], e["gv"] = r["gl"], r["gv"]
+                else: e["gl"], e["gv"] = r["gv"], r["gl"]
+                e["fuente"] = r.get("fuente"); seen.add(frozenset((ht, at)))
+            else:
+                e["jugado"] = False
+                e["pred"] = match_pred(ht, at, elo, ad, cfg.get("w", 0.0), cfg.get("host_adv", 0.0), cfg.get("hosts", set())) if (ht and at) else None
+            by_date[kf["date"]].append(e)
     # resultados sin fixture en el calendario (p.ej. eliminatorias cargadas a mano)
     for m in results:
         if frozenset((m["local"], m["visita"])) not in seen:
@@ -839,7 +895,11 @@ def main():
     fx_path = os.path.join(DATA, "fixtures.json")
     if os.path.exists(fx_path):
         fxjson = load("fixtures.json"); fixtures = fxjson.get("fixtures", []); fx_meta = fxjson.get("_meta", {})
-    por_fecha, fecha_activa = build_por_fecha(teams, results, elo, fixtures, ultima, cfg)
+    ko_fixtures = []
+    if os.path.exists(os.path.join(DATA, "ko_fixtures.json")):
+        ko_fixtures = load("ko_fixtures.json").get("partidos", [])
+    por_fecha, fecha_activa = build_por_fecha(teams, results, elo, fixtures, ultima, cfg,
+                                              ko_fixtures=ko_fixtures, base=base)
 
     # INVARIANTE (no romper): el marcador mostrado/puntuado SIEMPRE = redondeo del xG de cada equipo
     # (marcador esperado). Si alguien lo cambia por la moda u otro ajuste, corta el deploy. (El marcador
@@ -957,6 +1017,10 @@ def main():
         "evolucion": ev,
         "por_fecha": por_fecha,
         "fecha_activa": fecha_activa,
+        "ko_confirmed": sorted({o[i] for g, ts in teams["grupos"].items()
+                                if all(base[t]["pj"] >= 3 for t in ts)
+                                for o in [sorted(ts, key=lambda t: rank_key(base[t]), reverse=True)]
+                                for i in (0, 1)}),
         "podio": podio,
         "premios": premios,
         "proyeccion": proyeccion,
@@ -1190,12 +1254,14 @@ function horaCL(utc){if(!utc)return '';try{
 var _scoreMap=null;
 function scoreFor(h,a){if(!_scoreMap){_scoreMap={};((S.puntaje&&S.puntaje.por_partido)||[]).forEach(x=>{_scoreMap[x.home+'|'+x.away]=x})}return _scoreMap[h+'|'+a]}
 function matchRow(m){
+  const FASELBL={dieciseisavos:'16avos',octavos:'Octavos',cuartos:'Cuartos',semis:'Semis',tercer_puesto:'3º puesto',final:'Final'};
   const r=$('div',{class:'mrow clk'});
-  r.onclick=()=>openModal(m);
+  if(!m.ko) r.onclick=()=>openModal(m);
   const h=horaCL(m.utc);
   r.append($('span',{class:'hora'}, h?(h+' hs'):''));
-  r.append($('span',{class:'gc'}, m.grupo?('Gr '+m.grupo):(m.fase||'')));
+  r.append($('span',{class:'gc'}, m.grupo?('Gr '+m.grupo):(FASELBL[m.fase]||m.fase||'')));
   r.append($('span',{class:'tm'},$('b',{},m.home),$('span',{class:'muted'},'vs'),$('b',{},m.away)));
+  if(m.ko&&m.sede){const sv=$('span',{class:'muted',html:'📍'+m.sede});sv.style.cssText='font-size:10.5px;flex:none';r.append(sv);}
   if(m.jugado){
     r.append($('span',{class:'sc'}, m.gl+'–'+m.gv));
     const sc=scoreFor(m.home,m.away);
@@ -1379,17 +1445,6 @@ function paneGrupos(p){
 }
 
 function paneBracket(p){
-  const card=$('div',{class:'card'});
-  card.append($('div',{class:'gtitle'},'Probabilidad de alcanzar cada ronda'));
-  const tb=$('table');tb.append($('tr',{},$('th',{},'Equipo'),$('th',{class:'n'},'R32'),
-    $('th',{class:'n'},'Octavos'),$('th',{class:'n'},'Cuartos'),$('th',{class:'n'},'Semis'),
-    $('th',{class:'n'},'Final'),$('th',{class:'n'},'Campeon')));
-  S.ranking_campeon.slice(0,24).forEach(r=>{
-    const tr=$('tr',{});tr.append($('td',{html:'<b>'+r.equipo+'</b>'}));
-    [r.r32,r.octavos,r.cuartos,r.semis,r.final,r.campeon].forEach((v,i)=>
-      tr.append($('td',{class:'n'+(i===5?' q':' muted')},pct(v))));
-    tb.append(tr)});
-  card.append(tb);p.append(card);
   // Proyeccion del cuadro (arbol de eliminatorias)
   const pr=S.proyeccion;
   if(pr && pr.rondas){
@@ -1405,11 +1460,15 @@ function paneBracket(p){
 function fmtPos(c){return c?(c[0]+'°'+c.slice(1)):'';}
 function bmBox(m){
   const box=$('div',{class:'bm'});
+  const conf=new Set(S.ko_confirmed||[]);
   [['home','pHome','posHome'],['away','pAway','posAway']].forEach(([t,pk,pos])=>{
     const win=m.winner===m[t];
     const r=$('div',{class:'br'+(win?' w':'')});
     const badge=m[pos]?`<span style="font-size:9px;color:#8b949e;border:1px solid #2d3440;border-radius:4px;padding:0 3px;margin-right:4px;font-weight:600">${fmtPos(m[pos])}</span>`:'';
-    r.append($('span',{class:'tn',html:badge+(m[t]||'—')}));
+    const ok=m[t]&&conf.has(m[t]);  // equipo CONFIRMADO (1º/2º de grupo cerrado)
+    const chk=ok?'<span title="confirmado" style="color:#3fb950;font-weight:700;margin-left:4px">✓</span>':'';
+    const nmstyle=ok?'style="color:#3fb950;font-weight:600"':'';
+    r.append($('span',{class:'tn',html:badge+`<span ${nmstyle}>`+(m[t]||'—')+'</span>'+chk}));
     r.append($('span',{class:'pp'}, m[pk]!=null?(m[pk]+'%'):''));
     box.append(r);
   });
