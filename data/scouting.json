@@ -3,7 +3,7 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-06-26T21:10Z",
+    "actualizado": "2026-06-27T00:10Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
@@ -69,6 +69,102 @@
         "https://www.sportsmole.co.uk/football/belgium/world-cup-2026/preview/new-zealand-vs-belgium-prediction-team-news-lineups_599916.html",
         "https://www.squawka.com/en/news/world-cup/new-zealand-vs-belgium-team-news-predicted-lineups/",
         "https://www.goal.com/en/news/new-zealand-belgium-world-cup-preview/blt15910be7a6f8f7b9"
+      ]
+    },
+    {
+      "home": "Panama", "away": "England", "fecha": "2026-06-27",
+      "estado_alineacion": "probable",
+      "xi_local": "Mosquera; Murillo, Ramos, Córdoba, Andrade; Blackman, Martínez, Harvey, Barcenas; Rodríguez, Fajardo (4-4-2).",
+      "xi_visita": "Pickford; (RD en duda — Reece James baja, posible Konsa o Alexander-Arnold), Guehi, (CB/DL por confirmar); Anderson, Rice; Madueke, Bellingham, Rashford; Kane (4-2-3-1 probable).",
+      "bajas_local": ["Adalberto Carrasquilla (baja — lesion de aductores; motor creativo del mediocampo)", "Aníbal Godoy (dudoso — posiblemente comenzaria desde la banca)"],
+      "bajas_visita": ["Reece James (baja — lesion de isquiotibiales; descartado al menos 2 partidos)", "Bukayo Saka (dudoso — molestia de Aquiles; Madueke lo reemplaza en el once)"],
+      "lectura": "Panama ya esta eliminada (0 pts en dos derrotas: 0-1 vs Ghana y 0-1 vs Croatia). England lidera el Grupo L con 4 pts y ya aseguro el avance a dieciseisavos; una victoria le garantiza el primer lugar del grupo. Tuchel podria rotar a alguna figura, pero Kane y Bellingham deberan mantenerse. La baja de Carrasquilla es un golpe para Panama, que intento construir su juego desde el mediocampo. Sin nada que perder, Panama puede intentar un partido mas abierto. England llega con confianza tras golear 4-2 a Croatia en el debut.",
+      "lean": "England amplia favorita. Panama puede competir en algun tramo pero la diferencia de calidad es demasiado grande. Esperar goleada inglesa.",
+      "fuentes": [
+        "https://www.sportsmole.co.uk/football/england/world-cup-2026/preview/panama-vs-england-prediction-team-news-lineups_600066.html",
+        "https://www.sportsmole.co.uk/football/panama/world-cup-2026/predicted-lineups/double-fitness-doubt-predicted-panama-xi-vs-england_600069.html",
+        "https://sports.yahoo.com/articles/panama-vs-england-world-cup-160946921.html",
+        "https://www.espn.com/football/story/_/id/48701061/england-world-cup-2026-schedule-fixtures-results-scores-group-l-how-watch-uk-news-analysis-injuries"
+      ]
+    },
+    {
+      "home": "Croatia", "away": "Ghana", "fecha": "2026-06-27",
+      "estado_alineacion": "probable",
+      "xi_local": "Livakovic; Stanisic, Pongracic, Sutalo, Gvardiol; Kovacic, Modric; Baturina, Pasalic, Perisic; Budimir (4-2-3-1).",
+      "xi_visita": "Asare; Senaya, Adjetey, Opoku, Mensah; Yirenkyi, Partey, Sibo; I. Williams, Semenyo; J. Ayew (4-3-3).",
+      "bajas_local": ["Sin bajas confirmadas — Dalic hace un solo cambio (Budimir ingresa como titular en reemplazo de Musa)"],
+      "bajas_visita": ["Lawrence Ati-Zigi (dudoso/baja — lesion sufrida vs Panama; Benjamin Asare mantuvo el arco ante England)"],
+      "lectura": "El partido mas importante de la jornada en el Grupo L (Lincoln Financial Field, Filadelfia). Ghana tiene 4 pts y le alcanza con empate para avanzar como 2do. Croatia tiene 3 pts y DEBE GANAR para clasificar — un empate los elimina (quedan en 4 pts pero Ghana los supera en GD). Modric (201a cap internacional) lidera a Croatia, que mostro caracter con el gol de Budimir al entrar al descanso ante Panama. Ghana fue compacta y solida: el 0-0 con England fue un resultado enorme. Asare en el arco tuvo una actuacion estelar. Kudus (no mencionado en el XI probable; en duda) podria ser diferencia.",
+      "lean": "Croatia necesita la victoria y lo sabe — llegara con todo. Ghana puede buscar el empate con disciplina tactica. Leve ventaja a Croatia por necesidad y calidad ofensiva, pero Ghana es capaz de aguantar.",
+      "fuentes": [
+        "https://www.rotowire.com/soccer/article/croatia-vs-ghana-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-l-119773",
+        "https://www.sportsmole.co.uk/football/croatia/world-cup-2026/predicted-lineups/up-the-ante-predicted-croatia-xi-vs-ghana_600074.html",
+        "https://www.sportsmole.co.uk/football/ghana/world-cup-2026/predicted-lineups/stick-or-twist-in-the-sticks-predicted-ghana-xi-vs-croatia_600077.html",
+        "https://www.espn.com/soccer/story/_/id/49172894/fifa-world-cup-2026-croatia-vs-ghana-tv-channel-how-watch-kickoff-live-stream-injury-predicted-lineups"
+      ]
+    },
+    {
+      "home": "Colombia", "away": "Portugal", "fecha": "2026-06-27",
+      "estado_alineacion": "probable",
+      "xi_local": "D. Ospina; D. Munoz, D. Sanchez, J. Lucumi, J. Mojica; J. Lerma, R. Rios; J. Arias, J. Rodriguez, L. Diaz; J. Cordoba (4-2-3-1).",
+      "xi_visita": "Diogo Costa; Cancelo, R. Dias, Veiga, Nuno Mendes; Joao Neves, Vitinha; B. Silva, B. Fernandes, Pedro Neto; Ronaldo (4-2-3-1).",
+      "bajas_local": ["Luis Suarez (dudoso — molestia de hombro sufrida vs DR Congo; probable titular segun fuentes)"],
+      "bajas_visita": ["Tomas Araujo (dudoso — lesion; Veiga probable en su lugar)"],
+      "lectura": "El partido mas atractivo de la jornada. Colombia es lider del Grupo K con 6 pts (maximos); Portugal es 2do con 4 pts. Ambos ya clasificados a dieciseisavos, pero el primer lugar del grupo (y la mejor rama del bracket) esta en juego. Un empate clasifica a Colombia como 1ero. Portugal necesita ganar para tomar la cima. James Rodriguez y Luis Diaz son el corazon de Colombia; Ronaldo sale con hambre de goles para cerrar la fase de grupos. La ausencia de Amoura (en el otro partido del grupo, de Argelia) no importa aqui, pero el nivel de Portugal fue impresionante: 5-0 a Uzbekistan.",
+      "lean": "Partido muy parejo. Colombia tiene la comodidad de que el empate les sirve, lo que puede hacerlos mas solidos defensivamente. Portugal con Ronaldo motivado en el cierre de fase. Leve lean: Colombia si juega al contraataque con Diaz.",
+      "fuentes": [
+        "https://www.rotowire.com/soccer/article/colombia-vs-portugal-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-k-119775",
+        "https://www.sportsmole.co.uk/football/portugal/world-cup-2026/preview/colombia-vs-portugal-prediction-team-news-lineups_600099.html",
+        "https://www.sportsmole.co.uk/football/portugal/world-cup-2026/predicted-lineups/will-ronaldo-start-how-portugal-could-line-up-against-colombia_600101.html",
+        "https://www.si.com/soccer/portugal-predicted-lineup-vs-colombia-world-cup-6-27-26"
+      ]
+    },
+    {
+      "home": "DR Congo", "away": "Uzbekistan", "fecha": "2026-06-27",
+      "estado_alineacion": "probable",
+      "xi_local": "Mpasi; Wan-Bissaka, Tuanzebe, Mbemba, Masuaku; Mukau, Moutoussamy, Kayembe; (aleros/delanteros en duda — XI no confirmado en su totalidad) (4-3-3 probable).",
+      "xi_visita": "Yusupov; Khusanov, Abdullaev, Ashurmatov; Karimov, Shukurov, Khamrobekov, Nasrullaev; Fayzullayev, Urunov; Shomurodov (4-4-2).",
+      "bajas_local": ["Steve Kapuadi (probable baja del XI — Desabre considera cambio de sistema de 5 a 4 en defensa)"],
+      "bajas_visita": ["Rustam Ashurmatov (se retiro con molestia en el debut vs Portugal; luego volvio — probable titular)"],
+      "lectura": "Partido de consolacion del Grupo K: ambos equipos ya eliminados (DR Congo 1pt, Uzbekistan 0pts). DR Congo viene de perder contra Portugal (1-1) y Colombia (0-1). Uzbekistan concedio 8 goles en dos partidos (0-5 vs Portugal, 1-3 vs Colombia). Desabre podria cambiar a linea de cuatro para ser mas ofensivo. Shomurodov (capitan de Uzbekistan, Cagliari) busca su primer gol del torneo. Wan-Bissaka y Masuaku dan experiencia europea a Congo.",
+      "lean": "DR Congo leve favorita en el papel, pero en el contexto de eliminacion ambas selecciones podrian no dar el 100%. Uzbekistan puede sorprender con Shomurodov y Fayzullayev.",
+      "fuentes": [
+        "https://www.rotowire.com/soccer/article/dr-congo-vs-uzbekistan-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-k-119776",
+        "https://www.sportsmole.co.uk/football/congo-dr/world-cup-2026/preview/congo-dr-vs-uzbekistan-prediction-team-news-lineups_600068.html",
+        "https://www.sportsmole.co.uk/football/congo-dr/world-cup-2026/predicted-lineups/desabre-to-abandon-back-five-predicted-congo-dr-xi-vs-uzbekistan_600075.html",
+        "https://sports.yahoo.com/articles/dr-congo-vs-uzbekistan-prediction-101000096.html"
+      ]
+    },
+    {
+      "home": "Algeria", "away": "Austria", "fecha": "2026-06-27",
+      "estado_alineacion": "probable",
+      "xi_local": "Luca Zidane; Belghali, Mandi, Bensebaini, Ait Nouri; Boudaoui, Maza; Chaibi, Mahrez, Hadj Moussa; Gouiri (4-2-3-1).",
+      "xi_visita": "A. Schlager; Posch, Danso, Alaba, Mwene; Seiwald, X. Schlager; Wimmer, Sabitzer, Schmid; Arnautovic (4-2-3-1).",
+      "bajas_local": ["Mohamed Amoura (BAJA — lesion de isquiotibiales; maxima amenaza ofensiva de Argelia fuera del partido)"],
+      "bajas_visita": ["Sin bajas confirmadas — Arnautovic (37 anos, goleador historico de Austria con 47 goles) ingresaria al once titular reemplazando a Gregoritsch"],
+      "lectura": "Partido decisivo del Grupo J para el segundo lugar. Ambos equipos tienen 3 pts. Austria llega con GD 0 (gano 3-1 a Jordan, perdio 0-2 vs Argentina). Argelia tiene GD -2 (perdio 0-3 vs Argentina, gano 2-1 vs Jordan). Una victoria de Austria les garantiza el 2do puesto; un EMPATE tambien les sirve (quedan iguales en pts pero Austria adelanta por mejor GD). Argelia NECESITA GANAR para asegurar su clasificacion. Sin Amoura, Mahrez se convierte en el pilar ofensivo de los Fennecs. Arnautovic como titular por primera vez en el Mundial — el goleador historico de Austria busca marcar diferencia.",
+      "lean": "Austria ligeramente favorita — el empate les alcanza y eso les da mas libertad tactica. Argelia sin Amoura pierde su mayor arma por derecha. Clave: si Mahrez y Gouiri activan, Argelia puede ganar; si Arnautovic aparece, Austria controla.",
+      "fuentes": [
+        "https://www.sportsmole.co.uk/football/algeria/world-cup-2026/preview/algeria-vs-austria-prediction-team-news-lineups_600058.html",
+        "https://www.rotowire.com/soccer/article/algeria-vs-austria-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-j-119778",
+        "https://www.sportsmole.co.uk/football/algeria/world-cup-2026/predicted-lineups/midfield-changes-algeria-predicted-xi-vs-austria_600059.html",
+        "https://www.sportsmole.co.uk/football/algeria/world-cup-2026/predicted-lineups/arnautovic-in-austria-predicted-xi-vs-algeria_600062.html"
+      ]
+    },
+    {
+      "home": "Jordan", "away": "Argentina", "fecha": "2026-06-27",
+      "estado_alineacion": "probable",
+      "xi_local": "Al-Debes; (XI sin confirmar — probable XI sin cambios con Ali Olwan como delantero titular) (formacion en duda).",
+      "xi_visita": "Musso; Molina, Otamendi, Senesi, Tagliafico; Lo Celso, Paredes, Barco; Nico Paz, J. Alvarez, Nico Gonzalez (4-3-3). Messi: en duda si titula — insistio en jugar pero Scaloni hace rotaciones masivas.",
+      "bajas_local": ["Sin bajas confirmadas — posible XI sin cambios (Jordan ya eliminada con 0 pts)"],
+      "bajas_visita": ["Cristian Romero (baja — molestia en la rodilla derecha sufrida ante Austria; Otamendi lo reemplaza)"],
+      "lectura": "Partido de despedida para Jordan (eliminada, 0 pts tras dos derrotas). Argentina ya esta primera del Grupo J con 6 pts y clasifica con comodidad. Scaloni planea rotaciones masivas para cuidar a los titulares de cara a dieciseisavos. Messi insistio en jugar (declaraciones a TNT Sports de Argentina) aunque podria salir de entrada o ingresar desde el banco. Ali Olwan lidera la delantera de Jordan y esta a 1 gol de igualar el record historico de goles de su seleccion — un hito historico en juego.",
+      "lean": "Argentina favorita masiva incluso con rotaciones. Jordan puede encontrar un gol de honor con Olwan si Argentina baja la guardia. El partido mas interesante: la busqueda del record de Olwan y si Messi sale desde el inicio.",
+      "fuentes": [
+        "https://www.sportsmole.co.uk/football/argentina/world-cup-2026/predicted-lineups/will-messi-survive-scaloni-rotation-predicted-argentina-lineup-vs-jordan_600041.html",
+        "https://www.espn.com/soccer/story/_/id/49173254/fifa-world-cup-2026-jordan-vs-argentina-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups",
+        "https://worldsoccertalk.com/world-cup/lionel-scaloni-planning-changes-to-messis-argentina-after-booking-world-cup-knockout-stage-berth/",
+        "https://www.si.com/soccer/argentina-predicted-lineup-vs-jordan-world-cup-6-27-26"
       ]
     }
   ]
