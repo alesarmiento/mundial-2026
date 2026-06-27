@@ -3,42 +3,10 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-06-27T02:10Z",
+    "actualizado": "2026-06-27T05:10Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "Egypt", "away": "Iran", "fecha": "2026-06-26",
-      "estado_alineacion": "probable",
-      "xi_local": "El Shenawy; Rabia, Mohamed Hany, Mohamed Abdelmonem, Fatouh; Emam Ashour, Hamdy Fathy; Ibrahim Adel, Salah, Trezeguet; Marmoush (4-2-3-1).",
-      "xi_visita": "Beiranvand; Rezaeian, Kanaanizadegan, Hajsafi, Mohammadi; Ezatolahi, Torabi; Ghoddos, Jahanbakhsh, Taremi; Mohebi (4-2-3-1).",
-      "bajas_local": ["Sin bajas confirmadas"],
-      "bajas_visita": ["Sin bajas confirmadas"],
-      "lectura": "Egipto lidera Grupo G con 3 pts (victoria 3-1 vs Nueva Zelanda). Iran tiene 2 pts (dos empates). Un empate clasifica a Egipto; Iran necesita ganar para avanzar. Salah es el motor de Egipto (1G, 2A en el torneo), Marmoush agrega peligro arriba. Iran con Taremi y Jahanbakhsh debe atacar, lo que abre espacios para el contraataque egipcio. Beiranvand fue heroico ante Belgica (0-0). Partido de alta tension: Egipto buscaria el empate tranquilo; Iran obligado a ir al frente.",
-      "lean": "Empate le sirve a Egipto. Si Iran va a buscar el resultado, podria abrir espacios para el contraataque con Salah. Escenario favorece a Egipto mas alla del resultado.",
-      "fuentes": [
-        "https://www.espn.com/soccer/story/_/id/49141716/fifa-world-cup-2026-egypt-vs-iran-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups",
-        "https://www.sportsmole.co.uk/football/egypt/world-cup-2026/preview/egypt-vs-iran-prediction-team-news-lineups_599975.html",
-        "https://theanalyst.com/articles/egypt-vs-iran-prediction-world-cup-2026-match-preview",
-        "https://www.goal.com/en/news/egypt-iran-world-cup-preview/bltbce2e5fc24897843"
-      ]
-    },
-    {
-      "home": "New Zealand", "away": "Belgium", "fecha": "2026-06-26",
-      "estado_alineacion": "probable",
-      "xi_local": "Mapham; Rojas, Surman, Cacace; Sarpreet Singh, Clayton, R. Bell; Cacace (LB), Waine; Wood, Garbett (4-4-2 / 4-2-3-1 probable).",
-      "xi_visita": "Casteels; Castagne, Debast (dudoso), Faes, Theate; Onana, Tielemans; Saelemaekers, De Bruyne, Trossard; Lukaku (4-2-3-1).",
-      "bajas_local": ["Sin lesionados confirmados"],
-      "bajas_visita": ["Nathan Ngoy (suspendido — tarjeta roja ante Iran)", "Jeremy Doku (dudoso — en tabla de lesiones)", "Zeno Debast (dudoso — en tabla de lesiones)"],
-      "lectura": "Belgica DEBE ganar para asegurar el avance (2 pts en 2 empates contra Egipto y Iran). Nueva Zelanda tiene 1 pt y necesita una victoria para mantenerse viva. Belgica, con De Bruyne y Lukaku, no ha podido conectar en este torneo — el equipo no fluye y fue neutralizado por Iran incluso jugando con 10 hombres. Nueva Zelanda es compacta: Sarpreet Singh es el creativo; Wood el ariete de referencia. El partido se juega en Vancouver.",
-      "lean": "Belgica favorita pero bajo presion. Si no gana, podria depender de otros resultados para clasificar. Nueva Zelanda podria buscar el empate y vivir del contraataque.",
-      "fuentes": [
-        "https://www.rotowire.com/soccer/article/new-zealand-vs-belgium-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-g-119636",
-        "https://www.sportsmole.co.uk/football/belgium/world-cup-2026/preview/new-zealand-vs-belgium-prediction-team-news-lineups_599916.html",
-        "https://www.squawka.com/en/news/world-cup/new-zealand-vs-belgium-team-news-predicted-lineups/",
-        "https://www.goal.com/en/news/new-zealand-belgium-world-cup-preview/blt15910be7a6f8f7b9"
-      ]
-    },
     {
       "home": "Panama", "away": "England", "fecha": "2026-06-27",
       "estado_alineacion": "probable",
