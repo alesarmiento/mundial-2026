@@ -347,8 +347,8 @@ for i in range(12):
     rp,rg,rt,rpts,rdg,rgf,rest,rcol,rz=ranking3[i]
     cut=' style="border-top:2px solid #d29922"' if i==8 else ''
     combo_rows+=('<tr'+cut+'>'
-     '<td style="padding:3px 6px;color:#7d8590">%d</td><td style="font-weight:600">%s <span style="color:#7d8590;font-size:10px">G%s</span></td><td style="'+_thr+'">%s</td><td style="'+_thr+'">%s</td><td style="'+_thr+'">%s</td><td style="'+_thr+';color:%s;font-weight:600;font-size:11px">%s</td>'
-     '<td style="padding:3px 6px;color:#7d8590;'+_SEP+'">%d</td><td style="font-weight:600">%s <span style="color:#7d8590;font-size:10px">G%s</span></td><td style="'+_thr+'">%s</td><td style="'+_thr+'">%s</td><td style="'+_thr+'">%s</td><td style="'+_thr+';color:%s;font-weight:600;font-size:11px">%s</td><td style="color:#8b949e;font-size:11px;line-height:1.35">%s</td>'
+     '<td style="padding:3px 6px;color:#7d8590">%d</td><td style="font-weight:600;white-space:nowrap">%s <span style="color:#7d8590;font-size:10px">G%s</span></td><td style="'+_thr+'">%s</td><td style="'+_thr+'">%s</td><td style="'+_thr+'">%s</td><td style="'+_thr+';color:%s;font-weight:600;font-size:11px">%s</td>'
+     '<td style="padding:3px 6px;color:#7d8590;'+_SEP+'">%d</td><td style="font-weight:600;white-space:nowrap">%s <span style="color:#7d8590;font-size:10px">G%s</span></td><td style="'+_thr+'">%s</td><td style="'+_thr+'">%s</td><td style="'+_thr+'">%s</td><td style="'+_thr+';color:%s;font-weight:600;font-size:11px">%s</td><td style="color:#8b949e;font-size:11px;line-height:1.35">%s</td>'
      '</tr>')%(lp,lt,lg,str(lpts),ldg,str(lgf),lcol,lest, rp,rt,rg,str(rpts),rdg,str(rgf),rcol,rest,rz)
 combined3_html='<table style="width:100%;border-collapse:collapse;font-size:12px;vertical-align:top">'+combo_super+combo_hdr+combo_rows+'</table>'
 
