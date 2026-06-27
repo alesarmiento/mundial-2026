@@ -19,7 +19,7 @@ Sin dependencias externas (solo stdlib).
 
 import json, os, sys, math, random, hashlib
 from collections import defaultdict
-from itertools import combinations
+from itertools import combinations, product
 
 random.seed(42)  # reproducible: misma data -> mismo panel
 
@@ -380,6 +380,52 @@ def all_group_fixtures(grupos):
 
 def rank_key(s):
     return (s["pts"], s["gf"] - s["gc"], s["gf"])
+
+def compute_ko_secured(grupos, base, fixtures, results):
+    """Equipos YA 100% clasificados a 16avos pero cuyo PUESTO exacto aun no esta fijo
+    (estado intermedio entre 'confirmado/puesto fijo' y 'estimado'):
+      - terceros garantizados de grupos cerrados (los 8-#abiertos mejores entran si o si), y
+      - equipos que ya aseguraron top-2 en un grupo abierto (clinch matematico).
+    Excluye a los de puesto fijo (esos quedan en ko_confirmed). Conservador: ante empate de
+    desempate, asume el peor caso, asi nunca marca de mas."""
+    closed = [g for g, ts in grupos.items() if all(base[t]["pj"] >= 3 for t in ts)]
+    opened = [g for g, ts in grupos.items() if any(base[t]["pj"] < 3 for t in ts)]
+    secured = set()
+    # --- terceros garantizados de grupos cerrados ---
+    cthirds = []
+    for g in closed:
+        order = sorted(grupos[g], key=lambda t: rank_key(base[t]), reverse=True)
+        cthirds.append((order[2], rank_key(base[order[2]])))
+    cthirds.sort(key=lambda x: x[1], reverse=True)
+    n_guar = 8 - len(opened)   # aunque los #abiertos terceros que faltan los superen, igual entran
+    for tm, _ in cthirds[:max(0, n_guar)]:
+        secured.add(tm)
+    # --- clinch de top-2 en grupos abiertos (enumeracion exacta de lo que falta) ---
+    played = {frozenset((m["local"], m["visita"])) for m in results if m.get("fase", "grupos") == "grupos"}
+    for g in opened:
+        ts = grupos[g]
+        rem = [(f["home"], f["away"]) for f in fixtures
+               if f.get("grupo") == g and frozenset((f["home"], f["away"])) not in played]
+        if not rem:
+            continue
+        grid = [(gh, ga) for gh in range(6) for ga in range(6)]   # marcadores 0-5: cubre desempates
+        safe = {t: True for t in ts}
+        for combo in product(grid, repeat=len(rem)):
+            tab = {t: dict(base[t]) for t in ts}
+            for (a, b), (gh, ga) in zip(rem, combo):
+                tab[a]["gf"] += gh; tab[a]["gc"] += ga
+                tab[b]["gf"] += ga; tab[b]["gc"] += gh
+                tab[a]["pts"] += 3 if gh > ga else (1 if gh == ga else 0)
+                tab[b]["pts"] += 3 if ga > gh else (1 if gh == ga else 0)
+            for cand in ts:
+                ck = rank_key(tab[cand])
+                ahead = sum(1 for t in ts if t != cand and rank_key(tab[t]) >= ck)
+                if ahead > 1:   # podria caer a 3o o peor en este escenario
+                    safe[cand] = False
+        for cand in ts:
+            if safe[cand]:
+                secured.add(cand)
+    return sorted(secured)
 
 # ---------- una simulacion ----------
 def simulate_once(grupos, elo, base, played, fixtures, skeleton, rcfg):
@@ -1021,6 +1067,7 @@ def main():
                                 if all(base[t]["pj"] >= 3 for t in ts)
                                 for o in [sorted(ts, key=lambda t: rank_key(base[t]), reverse=True)]
                                 for i in (0, 1)}),
+        "ko_secured": compute_ko_secured(teams["grupos"], base, fixtures, results),
         "podio": podio,
         "premios": premios,
         "proyeccion": proyeccion,
@@ -1451,7 +1498,7 @@ function paneBracket(p){
   if(pr && pr.rondas){
     const pc=$('div',{class:'card'});
     pc.append($('div',{class:'gtitle'},'🔮 Proyeccion del cuadro — arbol de eliminatorias'));
-    pc.append($('div',{html:'<small><b style="color:#3fb950">■ Verde = confirmado</b> (1º/2º de un grupo ya cerrado, posicion fija) · <b style="color:#e3873e">■ Naranja = estimado</b> (proyeccion del modelo). Se actualiza en cada corrida del motor.</small>',style:'margin:2px 0 8px'}));
+    pc.append($('div',{html:'<small><b style="color:#3fb950">■ Verde = puesto fijo</b> (1º/2º de un grupo ya cerrado) · <b style="color:#39c5cf">✓ Cian = clasificado</b> (100% en 16avos, pero puesto por definir: top-2 ya asegurado o tercero garantizado) · <b style="color:#e3873e">■ Naranja = estimado</b> (proyeccion del modelo). Se actualiza en cada corrida del motor.</small>',style:'margin:2px 0 8px'}));
     pc.append($('div',{class:'muted',html:'<small>Cruces segun el <b>arbol oficial</b> (Wikipedia knockout stage), con los clasificados mas probables por grupo. El % es la <b>probabilidad (Monte Carlo) de llegar a la ronda siguiente</b> — avanza el mayor (en negrita). Proyeccion puntual: cambia con cada resultado.</small>'}));
     pc.append(bracketTree(pr));
     p.append(pc);
@@ -1463,16 +1510,20 @@ function fmtPos(c){return c?(c[0]+'°'+c.slice(1)):'';}
 function bmBox(m, round){
   const box=$('div',{class:'bm'});
   const conf=new Set(S.ko_confirmed||[]);
-  const isR32 = round==='Dieciseisavos';  // confirmado solo en 16avos (1º/2º de grupo cerrado)
+  const sec=new Set(S.ko_secured||[]);
+  const isR32 = round==='Dieciseisavos';  // confirmado/asegurado solo en 16avos
   [['home','pHome','posHome'],['away','pAway','posAway']].forEach(([t,pk,pos])=>{
     const win=m.winner===m[t];
     const r=$('div',{class:'br'});
-    const confirmed = isR32 && m[t] && conf.has(m[t]);
-    const col = !m[t] ? '#6e7681' : (confirmed ? '#3fb950' : '#e3873e');  // VERDE=confirmado / NARANJA=estimado
+    const confirmed = isR32 && m[t] && conf.has(m[t]);                  // puesto fijo
+    const secured = isR32 && m[t] && !confirmed && sec.has(m[t]);        // clasificado, puesto por definir
+    const col = !m[t] ? '#6e7681' : (confirmed ? '#3fb950' : (secured ? '#39c5cf' : '#e3873e'));  // VERDE=puesto fijo / CIAN=clasificado(puesto x definir) / NARANJA=estimado
     if(confirmed) r.style.background='#13301f';
+    else if(secured) r.style.background='#0d2b30';
     else if(win) r.style.background='#241a0c';  // realce suave del avance estimado
+    const chk=secured?`<span style="color:#39c5cf;font-weight:700;margin-right:3px">✓</span>`:'';
     const badge=m[pos]?`<span style="font-size:9px;color:#8b949e;border:1px solid #2d3440;border-radius:4px;padding:0 3px;margin-right:4px;font-weight:600">${fmtPos(m[pos])}</span>`:'';
-    r.append($('span',{class:'tn',html:badge+`<span style="color:${col};font-weight:${win?700:500}">`+(m[t]||'—')+'</span>'}));
+    r.append($('span',{class:'tn',html:badge+chk+`<span style="color:${col};font-weight:${win?700:500}">`+(m[t]||'—')+'</span>'}));
     r.append($('span',{class:'pp',html:`<span style="color:${col}">`+(m[pk]!=null?(m[pk]+'%'):'')+'</span>'}));
     box.append(r);
   });
