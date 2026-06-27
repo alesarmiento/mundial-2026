@@ -2,7 +2,7 @@
   "_meta": {
     "descripcion": "Ledger de resultados REALES. Cada partido entra con su fuente. NUNCA se inventa un marcador. Si no se puede verificar, no se agrega.",
     "fase_valores": "grupos | dieciseisavos | octavos | cuartos | semis | tercer_puesto | final",
-    "ultima_fecha_cargada": "2026-06-26"
+    "ultima_fecha_cargada": "2026-06-27"
   },
   "partidos": [
     {
@@ -664,6 +664,26 @@
       "gl": 1,
       "gv": 5,
       "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021481 (New Zealand 1-5 Belgium FT; Leandro Trossard 28' y 50' (brace), Kevin De Bruyne 66', Romelu Lukaku 86', Alexis Saelemaekers 90+4' (BEL); Elijah Just 84' (NZL); Belgium 1ro del Grupo G con 5 pts y GD+4; New Zealand eliminada; confirmado FIFA / ESPN / Outlook India / Yahoo Sports)"
+    },
+    {
+      "fecha": "2026-06-27",
+      "fase": "grupos",
+      "grupo": "L",
+      "local": "Panama",
+      "visita": "England",
+      "gl": 0,
+      "gv": 2,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021508 (Panama 0-2 England FT; Bellingham 62', Kane 67' (11o gol en Mundiales, record historico all-time de England superando a Lineker con 10); England 1ro del Grupo L con 9 pts; Panama eliminada; confirmado FIFA / Sky Sports / NBC Sports / ITV News / Outlook India / Yahoo Sports / ESPN)"
+    },
+    {
+      "fecha": "2026-06-27",
+      "fase": "grupos",
+      "grupo": "L",
+      "local": "Croatia",
+      "visita": "Ghana",
+      "gl": 2,
+      "gv": 1,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021509 (Croatia 2-1 Ghana FT; Sucic 31', Luckassen 73' (GHA), Vlasic 83'; Croatia 2do del Grupo L con 6 pts clasifica a dieciseisavos; Ghana 3ra con 4 pts como posible mejor tercero; confirmado FIFA / ESPN / Outlook India / 101greatgoals / Flashscore)"
     }
   ]
 }

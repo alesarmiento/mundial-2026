@@ -2,7 +2,7 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021481 (NZL 1-5 BEL: Trossard 28'+50'; confirmado FIFA/ESPN) + tabla base de Fox Sports/FIFA tracker (27-jun-2026 05:10 UTC). Trossard suma 2G tras brace vs NZ (gol BEL vs EGY fue OG). Messi sigue lider con 5G.",
+    "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021508 (PAN 0-2 ENG: Bellingham 62', Kane 67') + https://www.fifa.com/en/match-centre/match/17/285023/289273/400021509 (CRO 2-1 GHA: Sucic 31', Vlasic 83') + Kane 3G confirmado ESPN/Yahoo Sports; Bellingham 2G confirmado Sky Sports/NBC Sports (27-jun-2026 23:00 UTC).",
     "actualizado": "2026-06-27"
   },
   "jugadores": [
@@ -18,8 +18,9 @@
     {"jugador": "Ismaila Sarr", "equipo": "Senegal", "goles": 3},
     {"jugador": "Johan Manzambi", "equipo": "Switzerland", "goles": 3},
     {"jugador": "Ismael Saibari", "equipo": "Morocco", "goles": 3},
+    {"jugador": "Harry Kane", "equipo": "England", "goles": 3},
     {"jugador": "Cody Gakpo", "equipo": "Netherlands", "goles": 2},
-    {"jugador": "Harry Kane", "equipo": "England", "goles": 2},
+    {"jugador": "Jude Bellingham", "equipo": "England", "goles": 2},
     {"jugador": "Mikel Oyarzabal", "equipo": "Spain", "goles": 2},
     {"jugador": "Leandro Trossard", "equipo": "Belgium", "goles": 2}
   ]
