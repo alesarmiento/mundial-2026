@@ -3,42 +3,10 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-06-27T00:10Z",
+    "actualizado": "2026-06-27T02:10Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "Uruguay", "away": "Spain", "fecha": "2026-06-26",
-      "estado_alineacion": "probable",
-      "xi_local": "Muslera; Varela, Jose Gimenez, (CB reemplazante — Araujo baja, probable Coates o Caceres), Mathias Olivera; Valverde, Ugarte, Bentancur; Pellistri, Darwin Nunez, (reemplazante De Arrascaeta — probable Facundo Torres o Suarez) (4-3-3).",
-      "xi_visita": "Unai Simon; Porro, Pau Cubarsi, Laporte, Cucurella; Rodri, Zubimendi, Pedri; Lamine Yamal, Oyarzabal, Nico Williams (4-3-3).",
-      "bajas_local": ["Ronald Araujo (lesion de pantorrilla — descartado por Bielsa; baja central defensivo titular)", "Giorgian De Arrascaeta (lesion de pantorrilla — descartado por Bielsa; baja principal motor creativo)"],
-      "bajas_visita": ["Sin bajas confirmadas"],
-      "lectura": "Espana lidera Grupo H con 4 pts (4-0 a Arabia, 0-0 con Cabo Verde); Uruguay tiene 2 pts (1-1 con Arabia, 2-2 con Cabo Verde). Ambos clasificados. Espana primer lugar con victoria; Uruguay necesita los 3 puntos para pelear el primer lugar. La doble baja de Araujo (defensa) y De Arrascaeta (creativo) complica enormemente a Bielsa. Espana presenta su once de gala con Yamal, Pedri y Nico Williams. Uruguay dependera de Darwin Nunez y Valverde para generar peligro.",
-      "lean": "Espana favorita. La doble baja de Uruguay (Araujo + De Arrascaeta) es un golpe muy duro ante un equipo tan completo como Espana.",
-      "fuentes": [
-        "https://www.rotowire.com/soccer/article/uruguay-vs-spain-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-h-119634",
-        "https://www.sportsmole.co.uk/football/spain/world-cup-2026/predicted-lineups/double-injury-blow-for-uruguay-how-bielsas-side-could-line-up-vs-spain_599996.html",
-        "https://www.espn.com/soccer/story/_/id/49167172/fifa-world-cup-2026-uruguay-vs-spain-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups",
-        "https://www.aljazeera.com/sports/2026/6/25/world-cup-2026-uruguay-vs-spain-knockouts-prediction-lineups"
-      ]
-    },
-    {
-      "home": "Cape Verde", "away": "Saudi Arabia", "fecha": "2026-06-26",
-      "estado_alineacion": "probable",
-      "xi_local": "Vozinha; Moreira, Costa, Pico, Paulo; Pina, Y. Semedo; Mendes, Monteiro, W. Semedo; Livramento (4-3-3).",
-      "xi_visita": "Mohammed Al-Owais; Saud Abdulhamid, Hassan Al-Tambakti, Ali Lajami, Nawaf Boushal; Mohamed Kanno, Abdullah Al-Khaibari, Musab Al-Juwayr; Salem Al-Dawsari, Firas Al-Buraikan, Saleh Al-Shehri (4-3-3).",
-      "bajas_local": ["Sidny Lopes Cabral (suspendido)", "Telmo Arcanjo (dudoso — molestia)", "Borges Cabral (dudoso — molestia)", "Jovane Cabral (prueba de ultimo minuto tras molestia vs Uruguay)", "Kevin Pina y Jamiro Monteiro (molestias menores superadas — deberan jugar)"],
-      "bajas_visita": ["Sin bajas confirmadas"],
-      "lectura": "Ambos equipos en 3ro y 4to lugar del Grupo H, los dos con opciones de avanzar como mejor tercero SOLO si ganan. Un empate elimina a los dos. Cabo Verde fue la sorpresa del grupo: empate heroico 0-0 ante Espana con Vozinha formidable en el arco, luego 2-2 con Uruguay remontando. Arabia Saudita fue goleada 0-4 por Espana y carece de gol (su unico tanto fue un autogol propio ante Uruguay). El partido se juega en Houston. Cabo Verde, mas cohesionado y con mejor rendimiento, es leve favorita.",
-      "lean": "Cabo Verde leve favorita. Arabia Saudita necesita despertar ofensivamente — Al-Dawsari y Buraikan deben aparecer o los 'Tubaroes Azuis' avanzan.",
-      "fuentes": [
-        "https://www.rotowire.com/soccer/article/cape-verde-vs-saudi-arabia-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-h-119633",
-        "https://www.sportsmole.co.uk/football/cape-verde/world-cup-2026/preview/cape-verde-vs-saudi-arabia-prediction-team-news-lineups_599983.html",
-        "https://www.espn.com/soccer/story/_/id/49141810/fifa-world-cup-2026-cape-verde-vs-saudi-arabia-tv-channel-how-watch-kick-live-stream-referee-predicted-line-ups",
-        "https://ca.sports.yahoo.com/news/preview-cape-verde-vs-saudi-001000934.html"
-      ]
-    },
     {
       "home": "Egypt", "away": "Iran", "fecha": "2026-06-26",
       "estado_alineacion": "probable",
