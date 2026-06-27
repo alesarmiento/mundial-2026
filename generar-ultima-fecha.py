@@ -41,13 +41,15 @@ real_jug=[(m['local'],m['visita'],m['gl'],m['gv']) for m in _res]
 played_pairs={(m['local'],m['visita']) for m in _res}
 pending_last={k:v for k,v in mine_last.items() if k not in played_pairs}
 realproy32, rgroups, rb8, rst = resolve(pending_last, real_jug)
-# SISTEMA = robusto
-sistema32 = robust
+# "REAL + PROYECTADO" = proyeccion determinista: resultados REALES + tus marcadores proyectados para lo que falta.
+# (Antes se comparaba contra `robust` = top-32 del modelo Monte Carlo; eso metia equipos dudosos como Iran 65%
+#  que NO estan en tu proyeccion. Ahora la comparacion calza con la tabla de terceros, que tambien usa realproy32.)
+sistema32 = realproy32
 
 CHK=chr(9989); SKULL=chr(128128); X=chr(10060)
-live=sorted([t for t in mine32 if t in robust])
-dead=sorted([t for t in mine32 if t not in robust])
-miss=sorted([t for t in robust if t not in mine32])
+live=sorted([t for t in mine32 if t in realproy32])
+dead=sorted([t for t in mine32 if t not in realproy32])
+miss=sorted([t for t in realproy32 if t not in mine32])
 
 # ===== MI PARTICIPACION: pronostico por partido vs real, con puntaje (regla del sistema) =====
 ESp={'Algeria':'Argelia','Argentina':'Argentina','Australia':'Australia','Austria':'Austria','Belgium':'Belgica','Bosnia and Herzegovina':'Bosnia','Brazil':'Brasil','Canada':'Canada','Cape Verde':'Cabo Verde','Colombia':'Colombia','Croatia':'Croacia','Curacao':'Curazao','Czechia':'Chequia','DR Congo':'R.D. Congo','Ecuador':'Ecuador','Egypt':'Egipto','England':'Inglaterra','France':'Francia','Germany':'Alemania','Ghana':'Ghana','Haiti':'Haiti','Iran':'Iran','Iraq':'Irak','Ivory Coast':'C. Marfil','Japan':'Japon','Jordan':'Jordania','Mexico':'Mexico','Morocco':'Marruecos','Netherlands':'P. Bajos','New Zealand':'N. Zelanda','Norway':'Noruega','Panama':'Panama','Paraguay':'Paraguay','Portugal':'Portugal','Qatar':'Catar','Saudi Arabia':'Arabia S.','Scotland':'Escocia','Senegal':'Senegal','South Africa':'Sudafrica','South Korea':'Corea Sur','Spain':'Espana','Sweden':'Suecia','Switzerland':'Suiza','Tunisia':'Tunez','Turkiye':'Turquia','United States':'USA','Uruguay':'Uruguay','Uzbekistan':'Uzbekistan'}
@@ -290,8 +292,8 @@ notes3={
  'Senegal':'Le gana a Irak -> 3 pts, buen DG.',
  'South Korea':'Perdio 0-1 con Sudafrica (REAL) pero ya tenia 3 pts -> 3a de A y entra como mejor tercero.',
  'Sweden':'Pierde 3-1 con Japon (tu pick) pero con GF alto (7) se sostiene.',
- 'Paraguay':'Empata con Argelia (3 pts/-3/GF2). Por criterio FIFA el desempate va a juego limpio (tarjetas) y luego Ranking FIFA: Paraguay (37o) esta por DEBAJO de Argelia (29o) -> queda 9o, afuera.',
- 'Algeria':'Empata con Paraguay (3 pts/-3/GF2). Desempate FIFA: tras juego limpio, Ranking FIFA -> Argelia (29o) supera a Paraguay (37o) -> se queda el 8o cupo. (NO es sorteo: en 2026 FIFA elimino el bolillero.)',
+ 'Paraguay':'REAL: 4 pts (3o de D, grupo ya cerrado). De los 8 grupos cerrados es top-4 de terceros -> CLASIFICADO 100% como mejor tercero (entra pase lo que pase).',
+ 'Algeria':'En tu proyeccion (Argelia 0-1 Austria) queda 3o de J con 3 pts y toma el ultimo cupo de terceros (8o), por encima de Escocia (9a, peor DG). NO es 100%: el grupo J sigue abierto.',
  'Scotland':'REAL 24-jun perdio 0-3 con Brasil -> 3 pts pero DG bajo: se cae del corte.',
  'Ecuador':'Ya CLASIFICO (le gano 2-1 a Alemania, REAL): 4 pts, 3o de E -> entra.',
  'Iran':'Con tu Egipto 5-1, Iran cae 3o de G y por debajo de Argelia (margen 4+): SALE de tu apuesta. (Apuesta a que Egipto gana.)',
@@ -303,11 +305,17 @@ ranking3=[]
 for _pos,(_g,_t) in enumerate(_thirds_rank,1):
     _s=rst[_t];_dg=_s['gf']-_s['gc']
     _inb8=_t in rb8
-    if _t=='Ecuador': _est,_col='OUT (apuesta)','#f0883e'
-    elif _inb8: _est,_col='IN','#56d364'
+    if _inb8: _est,_col='IN','#56d364'
     else: _est,_col='OUT','#f85149'
+    # marca 100% (real), mismo criterio que la columna izquierda: clinched -> ya dentro, eliminated -> ya afuera
+    if _t in clinched:
+        _nm=ES[_t]+' <span title="ya clasificado 100%" style="color:#56d364;font-size:10px">'+CHK+'</span>'
+    elif _t in eliminated:
+        _nm='<span style="color:#f85149">'+ES[_t]+'</span> <span title="ya eliminado 100%" style="color:#f85149;font-size:10px">'+X+'</span>'
+    else:
+        _nm=ES[_t]
     _dgs='0' if _dg==0 else '%+d'%_dg
-    ranking3.append((_pos,_g,ES[_t],_s['pts'],_dgs,_s['gf'],_est,_col,notes3.get(_t,'3o de '+_g+'.')))
+    ranking3.append((_pos,_g,_nm,_s['pts'],_dgs,_s['gf'],_est,_col,notes3.get(_t,'3o de '+_g+'.')))
 n_in=sum(1 for r in ranking3 if r[6].startswith('IN'))
 
 # Terceros segun TU ESTIMACION PURA (tu cuadro: groups/b8/st)
@@ -382,17 +390,17 @@ h1{font-size:22px;margin-bottom:4px} h2{font-size:17px;margin:0 0 10px}
 <div><b style="color:#56d364">%d VIVOS (clasifican):</b><br>%s</div>
 <div style="margin-top:10px"><b style="color:#f85149">%s %d MUERTOS (no clasifican, %d pts perdidos):</b><br>%s</div></div>
 
-<div class="box"><h2 style="color:#58a6ff">Lo que apostaria el SISTEMA</h2>
-<div style="color:#8b949e;font-size:12px;margin-bottom:8px">Los 32 robustos (mas probables segun el modelo)</div>
-<div><b style="color:#56d364">Los mismos %d VIVOS</b> + estos %d que a vos te FALTAN:<br>%s</div></div>
+<div class="box"><h2 style="color:#58a6ff">REAL + PROYECTADO</h2>
+<div style="color:#8b949e;font-size:12px;margin-bottom:8px">Tus 32 segun los resultados REALES jugados + tus marcadores proyectados para lo que falta (proyeccion determinista, no el modelo)</div>
+<div><b style="color:#56d364">Los mismos %d VIVOS</b> + estos %d que tu cuadro congelado NO tiene:<br>%s</div></div>
 </div>
 
 <div class="box"><h2>La diferencia (lo que cambia)</h2>
 <div style="font-size:14px;line-height:1.8">
 En %d coinciden. La diferencia son <b>%d equipos</b>:<br>
-&bull; <b style="color:#f85149">Tu apuesta:</b> %s &mdash; van a quedar afuera<br>
-&bull; <b style="color:#58a6ff">El sistema apuesta:</b> %s &mdash; estos clasifican<br>
-<span style="color:#8b949e;font-size:12.5px">Tus %d estan "muertos" porque en las fechas JUGADAS los pronosticaste ganando de mas, y eso quedo congelado en tu cuadro. El sistema arranca limpio de la realidad.</span>
+&bull; <b style="color:#f85149">Tu cuadro congelado:</b> %s &mdash; van a quedar afuera<br>
+&bull; <b style="color:#58a6ff">Real + proyectado:</b> %s &mdash; estos clasifican<br>
+<span style="color:#8b949e;font-size:12.5px">Tus %d estan "muertos" porque en las fechas JUGADAS los pronosticaste ganando de mas, y eso quedo congelado en tu cuadro. La columna real+proyectado parte de los resultados REALES.</span>
 </div></div>
 
 <div class="box"><h2>Ranking de los 3eros lugares &mdash; tu estimacion vs lo real</h2>
