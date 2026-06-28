@@ -4,7 +4,7 @@
     "regla_de_oro": "Solo con fuente real (ESPN odds, oddschecker, Dimers, bet365, Kalshi, Forebet). Las cuotas se convierten a probabilidad quitando el margen y se normalizan a 100. Nunca inventar.",
     "campos": "pH/pD/pA = % implicado de gana local / empate / gana visita (orientado al home del fixture). score = marcador mas probable del mercado. over25 = % de over 2.5 goles.",
     "actualizado": "2026-06-28",
-    "ultima_actualizacion": "2026-06-28T00:15:00Z"
+    "ultima_actualizacion": "2026-06-28T01:10:00Z"
   },
   "partidos": [
     {"home": "Portugal", "away": "DR Congo", "fecha": "2026-06-17",
@@ -165,6 +165,21 @@
      "fuente": "bet365 (2/9 SEN – 21/4 draw – 11/1 IRQ, normalizado); over 2.5 consenso multibookmaker; 25-jun-2026"},
     {"home": "South Africa", "away": "Canada", "fecha": "2026-06-28",
      "pH": 17, "pD": 27, "pA": 56, "score": "1-2", "over25": 40,
-     "fuente": "CBS Sports / FanDuel (SAF +450 / draw +250 / CAN -140, normalizado; under 2.5 -151 implicado; 28-jun-2026)"}
+     "fuente": "CBS Sports / FanDuel (SAF +450 / draw +250 / CAN -140, normalizado; under 2.5 -151 implicado; 28-jun-2026)"},
+    {"home": "Brazil", "away": "Japan", "fecha": "2026-06-29",
+     "pH": 55, "pD": 25, "pA": 20, "score": "2-0", "over25": 57,
+     "fuente": "DraftKings (BRA -135 / draw +280 / JPN +390, normalizado; over 2.5 -130; 28-jun-2026)"},
+    {"home": "Germany", "away": "Paraguay", "fecha": "2026-06-29",
+     "pH": 70, "pD": 19, "pA": 11, "score": "2-0",
+     "fuente": "DraftKings (GER -265 / draw +400 / PAR +750, normalizado; 28-jun-2026)"},
+    {"home": "Netherlands", "away": "Morocco", "fecha": "2026-06-29",
+     "pH": 44, "pD": 29, "pA": 27, "score": "1-0", "over25": 44,
+     "fuente": "DraftKings (NED +115 / draw +230 / MAR +260, normalizado; over 2.5 +125; 28-jun-2026)"},
+    {"home": "Ivory Coast", "away": "Norway", "fecha": "2026-06-30",
+     "pH": 26, "pD": 27, "pA": 47, "score": "1-2", "over25": 51,
+     "fuente": "DraftKings (CIV +265 / draw +250 / NOR +105, normalizado; over 2.5 -105; 28-jun-2026)"},
+    {"home": "France", "away": "Sweden", "fecha": "2026-06-30",
+     "pH": 74, "pD": 17, "pA": 9, "score": "2-0",
+     "fuente": "DraftKings (FRA -330 / draw +475 / SWE +900, normalizado; 28-jun-2026)"}
   ]
 }
