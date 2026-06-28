@@ -176,6 +176,11 @@ def build_por_fecha(teams, results, elo, fixtures, anchor, cfg=None, ko_fixtures
     # ---- eliminatorias (KO): inyectar dias con cruces resueltos (grupo cerrado / partido jugado) o genericos ----
     if ko_fixtures and base is not None:
         posmap = ko_position_map(teams["grupos"], base)
+        # resolver los slots COMPUESTOS de tercero ('3:A,B,C,D,F'...) a equipo real (asignacion oficial FIFA)
+        _sk_away = {s["slot"]: s["away"] for s in teams["r32_skeleton"]}
+        for _sid, _tm in resolve_third_slots(teams["grupos"], base, teams["r32_skeleton"]).items():
+            if _tm:
+                posmap[_sk_away[_sid]] = _tm
         kowin, kolose = {}, {}
         # resolver ganadores/perdedores de partidos KO ya jugados, iterando hasta punto fijo
         for _ in range(6):
@@ -317,6 +322,22 @@ def _match_thirds(slots_allowed, qual_groups):
     bt(0)
     return res
 
+def resolve_third_slots(grupos, base, skeleton):
+    """Resuelve los slots de tercero del R32 ('3:A,B,C,D,F'...) a equipo real, SOLO con la fase de grupos
+    cerrada. Devuelve {slot_id: equipo_tercero}. Usa la tabla OFICIAL FIFA 2026 segun la combinacion de
+    grupos clasificados; si esa combinacion no esta tabulada, cae al matching generico. {} si no cerro."""
+    if not all(base[t]["pj"] >= 3 for ts in grupos.values() for t in ts):
+        return {}
+    order = {g: sorted(ts, key=lambda t: rank_key(base[t]), reverse=True) for g, ts in grupos.items()}
+    group_third = {g: order[g][2] for g in grupos}
+    qual_groups = set(sorted(grupos, key=lambda g: rank_key(base[group_third[g]]), reverse=True)[:8])
+    slots3 = [s for s in skeleton if s["away"].startswith("3:")]
+    smap = THIRD_PLACE_TABLE.get(frozenset(qual_groups))
+    if smap:
+        return {s["slot"]: group_third[smap[s["slot"]]] for s in slots3}
+    match = _match_thirds([(s["slot"], s["away"].split(":")[1].split(",")) for s in slots3], qual_groups)
+    return {s["slot"]: (group_third[match[s["slot"]]] if s["slot"] in match else None) for s in slots3}
+
 def projected_bracket(teams, probs, elo, base):
     grupos = teams["grupos"]; skeleton = teams["r32_skeleton"]
     complete = all(base[t]["pj"] >= 3 for ts in grupos.values() for t in ts)
@@ -327,17 +348,8 @@ def projected_bracket(teams, probs, elo, base):
         g1 = {g: o[0] for g, o in order.items()}
         g2 = {g: o[1] for g, o in order.items()}
         group_third = {g: o[2] for g, o in order.items()}
-        qual_groups = set(sorted(grupos, key=lambda g: rank_key(base[group_third[g]]), reverse=True)[:8])
-        # Tabla OFICIAL FIFA 2026 (Wikipedia '2026 FIFA World Cup knockout stage') para resolver que tercero
-        # va a cada slot segun la COMBINACION de grupos clasificados. El matching por allowed-lists tiene
-        # varias soluciones validas; solo la tabla oficial da el cruce correcto. Si la combinacion no esta
-        # tabulada, se cae al matching generico.
-        smap = THIRD_PLACE_TABLE.get(frozenset(qual_groups))
-        if smap:
-            assign = {s["slot"]: group_third[smap[s["slot"]]] for s in slots3}
-        else:
-            match = _match_thirds([(s["slot"], s["away"].split(":")[1].split(",")) for s in slots3], qual_groups)
-            assign = {s["slot"]: (group_third[match[s["slot"]]] if s["slot"] in match else None) for s in slots3}
+        slotmap = resolve_third_slots(grupos, base, skeleton)
+        assign = {s["slot"]: slotmap.get(s["slot"]) for s in slots3}
     else:
         g1 = {g: max(ts, key=lambda t: probs[t]["grupo1"]) for g, ts in grupos.items()}
         g2 = {g: max(ts, key=lambda t: probs[t]["g2"]) for g, ts in grupos.items()}
