@@ -1106,7 +1106,17 @@ def main():
     comparativa = compute_comparison(teams, results, fixtures, ghist, cfg["scoring_w"]) if cfg["scoring_w"] > 0 else None
     ad_det = ad if ad else compute_ad(results, ghist, teams["grupos"])
     equipo_detalle = build_equipo_detalle(teams, results, ghist, elo, ad_det)
-    mercado = build_market_view(fixtures, results, elo, ad_det, cfg["scoring_w"], market, cfg["host_adv"], cfg["hosts"])
+    # tambien comparar el mercado en ELIMINATORIAS: los cruces del bracket (equipos reales) no estan en
+    # 'fixtures' (que son solo de grupos), asi que se agregan como pseudo-fixtures para que build_market_view
+    # los empareje con market.json. La fecha se toma de la entrada de mercado correspondiente.
+    _mk_fecha = {frozenset((x["home"], x["away"])): x.get("fecha", "") for x in market.get("partidos", [])}
+    ko_fix = []
+    for _rd in proyeccion.get("rondas", []):
+        for _mt in _rd.get("partidos", []):
+            _h, _a = _mt.get("home"), _mt.get("away")
+            if _h and _a and _h != "?" and _a != "?":
+                ko_fix.append({"home": _h, "away": _a, "date": _mk_fecha.get(frozenset((_h, _a)), "")})
+    mercado = build_market_view(fixtures + ko_fix, results, elo, ad_det, cfg["scoring_w"], market, cfg["host_adv"], cfg["hosts"])
     mu_liga = ad_det.get("mu") if ad_det else None
 
     # estado para el panel
