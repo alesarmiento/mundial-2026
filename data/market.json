@@ -4,7 +4,7 @@
     "regla_de_oro": "Solo con fuente real (ESPN odds, oddschecker, Dimers, bet365, Kalshi, Forebet). Las cuotas se convierten a probabilidad quitando el margen y se normalizan a 100. Nunca inventar.",
     "campos": "pH/pD/pA = % implicado de gana local / empate / gana visita (orientado al home del fixture). score = marcador mas probable del mercado. over25 = % de over 2.5 goles.",
     "actualizado": "2026-06-28",
-    "ultima_actualizacion": "2026-06-28T03:10:00Z"
+    "ultima_actualizacion": "2026-06-28T06:10:00Z"
   },
   "partidos": [
     {
@@ -536,6 +536,24 @@
       "fuente": "bet365 (POR +130 / draw +220 / CRO +260, normalizado; 27-jun-2026)"
     },
     {
+      "home": "Spain",
+      "away": "Austria",
+      "fecha": "2026-07-02",
+      "pH": 73,
+      "pD": 19,
+      "pA": 8,
+      "fuente": "FanDuel (Spain -330 / Draw +390 / Austria +1100, normalizado; 28-jun-2026)"
+    },
+    {
+      "home": "Switzerland",
+      "away": "Algeria",
+      "fecha": "2026-07-02",
+      "pH": 58,
+      "pD": 24,
+      "pA": 18,
+      "fuente": "FanDuel (Switzerland -155 / Draw +300 / Algeria +440, normalizado; 28-jun-2026)"
+    },
+    {
       "home": "Australia",
       "away": "Egypt",
       "fecha": "2026-07-03",
@@ -554,6 +572,15 @@
       "pA": 6,
       "score": "3-0",
       "fuente": "bet365 (ARG -700 / draw +700 / CPV +1400, normalizado; 26-jun-2026)"
+    },
+    {
+      "home": "Colombia",
+      "away": "Ghana",
+      "fecha": "2026-07-03",
+      "pH": 54,
+      "pD": 27,
+      "pA": 19,
+      "fuente": "FanDuel (Colombia -135 / Draw +250 / Ghana +410, normalizado; 28-jun-2026)"
     },
     {
       "home": "Norway",
