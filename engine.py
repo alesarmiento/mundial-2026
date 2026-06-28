@@ -290,6 +290,15 @@ def estimate_awards(players, probs, em, elo, defstats=None, scorers=None):
     return {"goleador": fin_gol(gole), "arquero": fin(arq), "joven": fin(jov)}
 
 # ---------- proyeccion del cuadro de eliminatorias (cruce modal) ----------
+# Tabla oficial FIFA 2026 de asignacion de los 8 mejores terceros a slots del R32, por combinacion de
+# grupos clasificados (frozenset de letras -> {slot_id: grupo del tercero}). Fuente: Wikipedia
+# '2026 FIFA World Cup knockout stage'. Se agregan combinaciones a medida que se necesitan (la real del
+# torneo ya esta; para otras combinaciones el motor cae al matching generico _match_thirds).
+THIRD_PLACE_TABLE = {
+    frozenset(['B', 'D', 'E', 'F', 'I', 'J', 'K', 'L']):
+        {1: 'D', 2: 'F', 7: 'B', 8: 'I', 11: 'E', 12: 'K', 15: 'J', 16: 'L'},
+}
+
 def _match_thirds(slots_allowed, qual_groups):
     """Asigna cada slot de tercero a UN grupo clasificado permitido (matching perfecto, MRV+backtracking).
     slots_allowed: [(slot_id, [grupos permitidos])]; qual_groups: set de 8 grupos cuyo 3o clasifico."""
@@ -319,8 +328,16 @@ def projected_bracket(teams, probs, elo, base):
         g2 = {g: o[1] for g, o in order.items()}
         group_third = {g: o[2] for g, o in order.items()}
         qual_groups = set(sorted(grupos, key=lambda g: rank_key(base[group_third[g]]), reverse=True)[:8])
-        match = _match_thirds([(s["slot"], s["away"].split(":")[1].split(",")) for s in slots3], qual_groups)
-        assign = {s["slot"]: (group_third[match[s["slot"]]] if s["slot"] in match else None) for s in slots3}
+        # Tabla OFICIAL FIFA 2026 (Wikipedia '2026 FIFA World Cup knockout stage') para resolver que tercero
+        # va a cada slot segun la COMBINACION de grupos clasificados. El matching por allowed-lists tiene
+        # varias soluciones validas; solo la tabla oficial da el cruce correcto. Si la combinacion no esta
+        # tabulada, se cae al matching generico.
+        smap = THIRD_PLACE_TABLE.get(frozenset(qual_groups))
+        if smap:
+            assign = {s["slot"]: group_third[smap[s["slot"]]] for s in slots3}
+        else:
+            match = _match_thirds([(s["slot"], s["away"].split(":")[1].split(",")) for s in slots3], qual_groups)
+            assign = {s["slot"]: (group_third[match[s["slot"]]] if s["slot"] in match else None) for s in slots3}
     else:
         g1 = {g: max(ts, key=lambda t: probs[t]["grupo1"]) for g, ts in grupos.items()}
         g2 = {g: max(ts, key=lambda t: probs[t]["g2"]) for g, ts in grupos.items()}
