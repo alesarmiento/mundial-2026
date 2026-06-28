@@ -2,7 +2,7 @@
   "_meta": {
     "descripcion": "Ledger de resultados REALES. Cada partido entra con su fuente. NUNCA se inventa un marcador. Si no se puede verificar, no se agrega.",
     "fase_valores": "grupos | dieciseisavos | octavos | cuartos | semis | tercer_puesto | final",
-    "ultima_fecha_cargada": "2026-06-27"
+    "ultima_fecha_cargada": "2026-06-28"
   },
   "partidos": [
     {
@@ -724,6 +724,15 @@
       "gl": 1,
       "gv": 3,
       "fuente": "https://www.espn.com/soccer/match/_/gameId/760483/argentina-jordan + https://www.fifa.com/en/match-centre/match/17/285023/289273/400021495 (Jordan 1-3 Argentina FT; Lo Celso 19' (ARG), Lautaro Martinez 31' pen (ARG), Al-Tamari 55' (JOR), Messi 80' (ARG — 6to gol en el torneo, gol en su 7o Mundial consecutivo); Argentina 1ro del Grupo J invicta con 9pts; Jordan eliminada con 0pts; confirmado ESPN / FIFA / Yahoo Sports / Outlook India)"
+    },
+    {
+      "fecha": "2026-06-28",
+      "fase": "dieciseisavos",
+      "local": "South Africa",
+      "visita": "Canada",
+      "gl": 0,
+      "gv": 1,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021518 + https://www.espn.com/soccer/match/_/gameId/760486/canada-south-africa + https://sports.yahoo.com/soccer/live/world-cup-live-updates-results-canada-vs-south-africa-kicks-off-round-of-32-173000083.html (South Africa 0-1 Canada FT; Stephen Eustaquio en tiempo de descuento; Canada avanza a octavos por primera vez en su historia; Alphonso Davies entro de cambio en el minuto 75; confirmado FIFA / ESPN / Yahoo Sports / CBC)"
     }
   ]
 }
