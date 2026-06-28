@@ -3,42 +3,10 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-06-28T01:10:00Z",
+    "actualizado": "2026-06-28T04:00:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "Algeria", "away": "Austria", "fecha": "2026-06-27",
-      "estado_alineacion": "probable",
-      "xi_local": "Luca Zidane; Belghali, Mandi, Bensebaini, Ait Nouri; Boudaoui, Maza; Chaibi, Mahrez, Hadj Moussa; Gouiri (4-2-3-1).",
-      "xi_visita": "A. Schlager; Posch, Danso, Alaba, Mwene; Seiwald, X. Schlager; Wimmer, Sabitzer, Schmid; Arnautovic (4-2-3-1).",
-      "bajas_local": ["Mohamed Amoura (BAJA — lesion de isquiotibiales; maxima amenaza ofensiva de Argelia fuera del partido)"],
-      "bajas_visita": ["Sin bajas confirmadas — Arnautovic (37 anos, goleador historico de Austria con 47 goles) ingresaria al once titular reemplazando a Gregoritsch"],
-      "lectura": "Partido decisivo del Grupo J para el segundo lugar. Ambos equipos tienen 3 pts. Austria llega con GD 0 (gano 3-1 a Jordan, perdio 0-2 vs Argentina). Argelia tiene GD -2 (perdio 0-3 vs Argentina, gano 2-1 vs Jordan). Una victoria de Austria les garantiza el 2do puesto; un EMPATE tambien les sirve (quedan iguales en pts pero Austria adelanta por mejor GD). Argelia NECESITA GANAR para asegurar su clasificacion. Sin Amoura, Mahrez se convierte en el pilar ofensivo de los Fennecs. Arnautovic como titular por primera vez en el Mundial — el goleador historico de Austria busca marcar diferencia.",
-      "lean": "Austria ligeramente favorita — el empate les alcanza y eso les da mas libertad tactica. Argelia sin Amoura pierde su mayor arma por derecha. Clave: si Mahrez y Gouiri activan, Argelia puede ganar; si Arnautovic aparece, Austria controla.",
-      "fuentes": [
-        "https://www.sportsmole.co.uk/football/algeria/world-cup-2026/preview/algeria-vs-austria-prediction-team-news-lineups_600058.html",
-        "https://www.rotowire.com/soccer/article/algeria-vs-austria-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-j-119778",
-        "https://www.sportsmole.co.uk/football/algeria/world-cup-2026/predicted-lineups/midfield-changes-algeria-predicted-xi-vs-austria_600059.html",
-        "https://www.sportsmole.co.uk/football/algeria/world-cup-2026/predicted-lineups/arnautovic-in-austria-predicted-xi-vs-algeria_600062.html"
-      ]
-    },
-    {
-      "home": "Jordan", "away": "Argentina", "fecha": "2026-06-27",
-      "estado_alineacion": "probable",
-      "xi_local": "Al-Debes; (XI sin confirmar — probable XI sin cambios con Ali Olwan como delantero titular) (formacion en duda).",
-      "xi_visita": "Musso; Molina, Otamendi, Senesi, Tagliafico; Lo Celso, Paredes, Barco; Nico Paz, J. Alvarez, Nico Gonzalez (4-3-3). Messi: en duda si titula — insistio en jugar pero Scaloni hace rotaciones masivas.",
-      "bajas_local": ["Sin bajas confirmadas — posible XI sin cambios (Jordan ya eliminada con 0 pts)"],
-      "bajas_visita": ["Cristian Romero (baja — molestia en la rodilla derecha sufrida ante Austria; Otamendi lo reemplaza)"],
-      "lectura": "Partido de despedida para Jordan (eliminada, 0 pts tras dos derrotas). Argentina ya esta primera del Grupo J con 6 pts y clasifica con comodidad. Scaloni planea rotaciones masivas para cuidar a los titulares de cara a dieciseisavos. Messi insistio en jugar (declaraciones a TNT Sports de Argentina) aunque podria salir de entrada o ingresar desde el banco. Ali Olwan lidera la delantera de Jordan y esta a 1 gol de igualar el record historico de goles de su seleccion — un hito historico en juego.",
-      "lean": "Argentina favorita masiva incluso con rotaciones. Jordan puede encontrar un gol de honor con Olwan si Argentina baja la guardia. El partido mas interesante: la busqueda del record de Olwan y si Messi sale desde el inicio.",
-      "fuentes": [
-        "https://www.sportsmole.co.uk/football/argentina/world-cup-2026/predicted-lineups/will-messi-survive-scaloni-rotation-predicted-argentina-lineup-vs-jordan_600041.html",
-        "https://www.espn.com/soccer/story/_/id/49173254/fifa-world-cup-2026-jordan-vs-argentina-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups",
-        "https://worldsoccertalk.com/world-cup/lionel-scaloni-planning-changes-to-messis-argentina-after-booking-world-cup-knockout-stage-berth/",
-        "https://www.si.com/soccer/argentina-predicted-lineup-vs-jordan-world-cup-6-27-26"
-      ]
-    },
     {
       "home": "South Africa", "away": "Canada", "fecha": "2026-06-28",
       "estado_alineacion": "probable",

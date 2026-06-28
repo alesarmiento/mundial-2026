@@ -2,11 +2,11 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021500 (COD 3-1 UZB: Wissa 68' pen y 90+1', Mayele 78'; Shomurodov 10' UZB) + https://www.fifa.com/en/match-centre/match/17/285023/289273/400021505 (COL 0-0 POR FT) + https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/adidas-golden-boot-race-top-scorer + ESPN/Yahoo Sports/Fox Sports (28-jun-2026 02:00 UTC). Wissa confirmado 3G: 1G vs Portugal (45+5') + 2G vs Uzbekistan. Ronaldo 2G: 2G vs Uzbekistan confirmado ESPN/Yahoo.",
+    "fuente": "https://www.espn.com/soccer/match/_/gameId/760483/argentina-jordan (Messi 80' — 6to gol del torneo) + https://www.espn.com/soccer/match/_/gameId/760484 (Mahrez 60' y 90+3' — 2 goles vs Austria) + https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/adidas-golden-boot-race-top-scorer + ESPN/Yahoo Sports/Fox Sports (28-jun-2026 04:00 UTC). Messi lidera con 6G. Mahrez nuevo en tabla con 2G.",
     "actualizado": "2026-06-28"
   },
   "jugadores": [
-    {"jugador": "Lionel Messi", "equipo": "Argentina", "goles": 5},
+    {"jugador": "Lionel Messi", "equipo": "Argentina", "goles": 6},
     {"jugador": "Ousmane Dembele", "equipo": "France", "goles": 4},
     {"jugador": "Kylian Mbappe", "equipo": "France", "goles": 4},
     {"jugador": "Vinicius Junior", "equipo": "Brazil", "goles": 4},
@@ -24,6 +24,7 @@
     {"jugador": "Jude Bellingham", "equipo": "England", "goles": 2},
     {"jugador": "Mikel Oyarzabal", "equipo": "Spain", "goles": 2},
     {"jugador": "Leandro Trossard", "equipo": "Belgium", "goles": 2},
-    {"jugador": "Cristiano Ronaldo", "equipo": "Portugal", "goles": 2}
+    {"jugador": "Cristiano Ronaldo", "equipo": "Portugal", "goles": 2},
+    {"jugador": "Riyad Mahrez", "equipo": "Algeria", "goles": 2}
   ]
 }
