@@ -290,24 +290,54 @@ def estimate_awards(players, probs, em, elo, defstats=None, scorers=None):
     return {"goleador": fin_gol(gole), "arquero": fin(arq), "joven": fin(jov)}
 
 # ---------- proyeccion del cuadro de eliminatorias (cruce modal) ----------
-def projected_bracket(teams, probs, elo):
+def _match_thirds(slots_allowed, qual_groups):
+    """Asigna cada slot de tercero a UN grupo clasificado permitido (matching perfecto, MRV+backtracking).
+    slots_allowed: [(slot_id, [grupos permitidos])]; qual_groups: set de 8 grupos cuyo 3o clasifico."""
+    order = sorted(slots_allowed, key=lambda s: sum(1 for g in s[1] if g in qual_groups))
+    res, used = {}, set()
+    def bt(i):
+        if i == len(order):
+            return True
+        sid, allowed = order[i]
+        for g in [g for g in allowed if g in qual_groups and g not in used]:
+            used.add(g); res[sid] = g
+            if bt(i + 1):
+                return True
+            used.discard(g); res.pop(sid, None)
+        return False
+    bt(0)
+    return res
+
+def projected_bracket(teams, probs, elo, base):
     grupos = teams["grupos"]; skeleton = teams["r32_skeleton"]
-    g1 = {g: max(ts, key=lambda t: probs[t]["grupo1"]) for g, ts in grupos.items()}
-    g2 = {g: max(ts, key=lambda t: probs[t]["g2"]) for g, ts in grupos.items()}
-    thirdq = {t: max(0.0, probs[t]["r32"] - probs[t]["top2"]) for t in probs}
-    group_third = {g: max(ts, key=lambda t: thirdq[t]) for g, ts in grupos.items()}
-    used = set(g1.values()) | set(g2.values())
-    assign, taken = {}, set()
-    for s in [s for s in skeleton if s["away"].startswith("3:")]:
-        allowed = s["away"].split(":")[1].split(",")
-        cand = [g for g in allowed if g not in taken and group_third[g] not in used]
-        if not cand:
-            cand = [g for g in allowed if g not in taken]
-        cand.sort(key=lambda g: thirdq[group_third[g]], reverse=True)
-        if cand:
-            assign[s["slot"]] = group_third[cand[0]]; taken.add(cand[0])
-        else:
-            assign[s["slot"]] = None
+    complete = all(base[t]["pj"] >= 3 for ts in grupos.values() for t in ts)
+    slots3 = [s for s in skeleton if s["away"].startswith("3:")]
+    if complete:
+        # Fase de grupos cerrada: usar standings REALES (1o/2o/3o por puntos) y los 8 mejores terceros reales.
+        order = {g: sorted(ts, key=lambda t: rank_key(base[t]), reverse=True) for g, ts in grupos.items()}
+        g1 = {g: o[0] for g, o in order.items()}
+        g2 = {g: o[1] for g, o in order.items()}
+        group_third = {g: o[2] for g, o in order.items()}
+        qual_groups = set(sorted(grupos, key=lambda g: rank_key(base[group_third[g]]), reverse=True)[:8])
+        match = _match_thirds([(s["slot"], s["away"].split(":")[1].split(",")) for s in slots3], qual_groups)
+        assign = {s["slot"]: (group_third[match[s["slot"]]] if s["slot"] in match else None) for s in slots3}
+    else:
+        g1 = {g: max(ts, key=lambda t: probs[t]["grupo1"]) for g, ts in grupos.items()}
+        g2 = {g: max(ts, key=lambda t: probs[t]["g2"]) for g, ts in grupos.items()}
+        thirdq = {t: max(0.0, probs[t]["r32"] - probs[t]["top2"]) for t in probs}
+        group_third = {g: max(ts, key=lambda t: thirdq[t]) for g, ts in grupos.items()}
+        used = set(g1.values()) | set(g2.values())
+        assign, taken = {}, set()
+        for s in slots3:
+            allowed = s["away"].split(":")[1].split(",")
+            cand = [g for g in allowed if g not in taken and group_third[g] not in used]
+            if not cand:
+                cand = [g for g in allowed if g not in taken]
+            cand.sort(key=lambda g: thirdq[group_third[g]], reverse=True)
+            if cand:
+                assign[s["slot"]] = group_third[cand[0]]; taken.add(cand[0])
+            else:
+                assign[s["slot"]] = None
     # etiqueta de posicion proyectada por equipo (1X / 2X / 3X) para mostrar en el bracket
     third_group = {tm: g for g, tm in group_third.items()}
     poslabel = {}
@@ -397,7 +427,10 @@ def compute_ko_secured(grupos, base, fixtures, results):
         order = sorted(grupos[g], key=lambda t: rank_key(base[t]), reverse=True)
         cthirds.append((order[2], rank_key(base[order[2]])))
     cthirds.sort(key=lambda x: x[1], reverse=True)
-    n_guar = 8 - len(opened)   # aunque los #abiertos terceros que faltan los superen, igual entran
+    # Mientras haya grupos abiertos, los mejores (8-#abiertos) terceros entran si o si pero con SLOT por definir
+    # (cian). Si la fase de grupos ya cerro del todo, los terceros tienen slot fijo -> van a ko_confirmed (verde),
+    # no a 'secured'. Por eso aqui sumamos 0 cuando no quedan grupos abiertos.
+    n_guar = (8 - len(opened)) if opened else 0
     for tm, _ in cthirds[:max(0, n_guar)]:
         secured.add(tm)
     # --- clinch de top-2 en grupos abiertos (enumeracion exacta de lo que falta) ---
@@ -426,6 +459,21 @@ def compute_ko_secured(grupos, base, fixtures, results):
             if safe[cand]:
                 secured.add(cand)
     return sorted(secured)
+
+def compute_ko_confirmed(grupos, base):
+    """Equipos con PUESTO FIJO en el cuadro de 16avos (verde): 1o/2o de cada grupo ya cerrado.
+    Ademas, si TODA la fase de grupos termino, los 8 mejores terceros tienen slot fijo (la combinacion
+    de grupos clasificados ya esta determinada) -> tambien confirmados."""
+    closed = [g for g, ts in grupos.items() if all(base[t]["pj"] >= 3 for t in ts)]
+    conf = set()
+    for g in closed:
+        o = sorted(grupos[g], key=lambda t: rank_key(base[t]), reverse=True)
+        conf.add(o[0]); conf.add(o[1])
+    if len(closed) == len(grupos):   # fase de grupos completa: terceros con slot fijo
+        thirds = [sorted(grupos[g], key=lambda t: rank_key(base[t]), reverse=True)[2] for g in closed]
+        for t in sorted(thirds, key=lambda t: rank_key(base[t]), reverse=True)[:8]:
+            conf.add(t)
+    return sorted(conf)
 
 # ---------- una simulacion ----------
 def simulate_once(grupos, elo, base, played, fixtures, skeleton, rcfg):
@@ -992,7 +1040,7 @@ def main():
         for tm, against in ((m["local"], m["gv"]), (m["visita"], m["gl"])):
             defstats[tm]["pj"] += 1; defstats[tm]["gc"] += against; defstats[tm]["cs"] += (against == 0)
     premios = estimate_awards(players, probs, em, elo, defstats, scorers)
-    proyeccion = projected_bracket(teams, probs, elo)
+    proyeccion = projected_bracket(teams, probs, elo, base)
     podio = sorted(
         [{"equipo": t, "p1": probs[t]["campeon"], "p2": probs[t]["sub"],
           "p3": probs[t]["tercero"], "top3": round(probs[t]["campeon"] + probs[t]["sub"] + probs[t]["tercero"], 1)}
@@ -1063,10 +1111,7 @@ def main():
         "evolucion": ev,
         "por_fecha": por_fecha,
         "fecha_activa": fecha_activa,
-        "ko_confirmed": sorted({o[i] for g, ts in teams["grupos"].items()
-                                if all(base[t]["pj"] >= 3 for t in ts)
-                                for o in [sorted(ts, key=lambda t: rank_key(base[t]), reverse=True)]
-                                for i in (0, 1)}),
+        "ko_confirmed": compute_ko_confirmed(teams["grupos"], base),
         "ko_secured": compute_ko_secured(teams["grupos"], base, fixtures, results),
         "podio": podio,
         "premios": premios,
