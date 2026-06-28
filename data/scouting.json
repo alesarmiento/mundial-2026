@@ -3,24 +3,28 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-06-28T04:00:00Z",
+    "actualizado": "2026-06-28T19:15:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
     {
       "home": "South Africa", "away": "Canada", "fecha": "2026-06-28",
-      "estado_alineacion": "probable",
-      "xi_local": "Williams; Mudau, Okon, Mbokazi, Modiba; Mokoena, Mbatha; Maseko, Mofokeng, Appollis; Makgopa (4-2-3-1).",
-      "xi_visita": "Crepeau; Johnston, De Fougerolles, Cornelius, Davies; Buchanan, Eustaquio; Saliba, Ahmed; David, Larin (4-2-3-1). Davies confirmado titular por Marsch.",
-      "bajas_local": ["Themba Zwane (BAJA — suspension acumulada desde fase de grupos; baja para el partido de dieciseisavos)"],
-      "bajas_visita": ["Ismael Kone (BAJA — fractura de pierna sufrida vs Qatar; fuera del torneo)", "Stephen Eustaquio (dudoso — molestia reciente; se espera titular desde el inicio)"],
-      "lectura": "Partido historico: primer partido de eliminatorias en un Mundial para ambas selecciones. South Africa (Bafana Bafana) llego como 2do del Grupo A con 4 pts: perdio 0-2 vs Mexico, empato 1-1 vs Czechia, gano 1-0 vs Corea del Sur. Canada clasifica 2do del Grupo B con 4 pts: empate 1-1 vs Bosnia, goleada 6-0 a Qatar, derrota 1-2 vs Suiza. Alphonso Davies (Bayern Munich), capitan de Canada, fue confirmado titular por el DT Jesse Marsch tras recuperarse de una lesion de isquiotibiales que lo saco del debut. Jonathan David (3 goles, maximo goleador de Canada all-time con 39 internacionales) es el mayor peligro canadiense. Por South Africa, Makgopa lidera el ataque; Mokoena regresa a disposicion tras suspension. Partido en SoFi Stadium (Inglewood, Los Angeles), a las 19:00 UTC.",
-      "lean": "Canada es el favorito del mercado (~56%): Davies, David y Buchanan tienen mayor calidad individual. South Africa puede ser peligrosa en transiciones con Appollis y Mofokeng por bandas. El encuentro puede ser mas cerrado de lo que los numeros indican — ambos equipos llegan al primer partido de eliminatorias con algo que demostrar. Leve lean Canada, pero South Africa con potencial de sorpresa.",
+      "estado_alineacion": "confirmada",
+      "xi_local": "Williams; Modiba, Mbokazi, Mudau, Okon; Mokoena, Sithole; Appollis, Mofokeng, Maseko; Makgopa (4-2-3-1). Sithole titular en lugar de Mbatha.",
+      "xi_visita": "Crepeau; Johnston, Bombito, Cornelius, Laryea; Buchanan, Eustaquio (c), Saliba, Millar; David, Oluwaseyi (4-4-2). Davies en BANCO — decision tactica de Marsch. Bombito regresa al XI titular. De Fougerolles y Larin en banco.",
+      "bajas_local": ["Themba Zwane (BAJA — suspension acumulada desde fase de grupos; fuera del partido de dieciseisavos)"],
+      "bajas_visita": [
+        "Ismael Kone (BAJA — fractura de pierna sufrida vs Qatar; fuera del torneo)",
+        "Alphonso Davies (BANCO — decision tactica de Jesse Marsch; Davies recuperado de lesion de isquiotibiales pero no arranca de titular; disponible para ingresar desde el banco en el 2do tiempo)"
+      ],
+      "lectura": "Partido historico: primer partido de eliminatorias en un Mundial para ambas selecciones. South Africa (Bafana Bafana) llego como 2do del Grupo A con 4 pts: perdio 0-2 vs Mexico, empato 1-1 vs Czechia, gano 1-0 vs Corea del Sur. Canada clasifica 2do del Grupo B con 4 pts: empate 1-1 vs Bosnia, goleada 6-0 a Qatar, derrota 1-2 vs Suiza. Gran novedad: Marsch deja a Davies en el banco (recuperado pero sin minutos en el torneo) y arranca con 4-4-2; Bombito regresa como central; Oluwaseyi (en lugar de Larin) de punta junto a Jonathan David (3 goles en el torneo). South Africa sale con la misma base, con Sithole por Mbatha en el doble pivot. Partido en SoFi Stadium (Inglewood, Los Angeles).",
+      "lean": "Canada sigue siendo el favorito del mercado (~56%): David y el potencial de Davies desde el banco son las cartas mas fuertes. La sorpresa es que Davies no arranca, lo que reduce algo la amenaza por la banda izquierda, aunque Laryea es un lateral competente. South Africa puede ser peligrosa en transiciones con Appollis y Mofokeng. Lean Canada, con Davies como arma del banco para el 2do tiempo.",
       "fuentes": [
-        "https://www.cbssports.com/soccer/news/canada-vs-south-africa-odds-prediction-time-2026-world-cup-round-of-32-picks/",
-        "https://www.sportsmole.co.uk/football/canada/world-cup-2026/preview/south-africa-vs-canada-prediction-team-news-lineups_600163.html",
-        "https://www.sportsmole.co.uk/football/canada/world-cup-2026/predicted-lineups/will-davies-be-involved-how-canada-could-line-up-vs-south-africa_600168.html",
-        "https://www.foxsports.com/stories/soccer/canada-south-africa-world-cup-round-of-32-knockout-round"
+        "https://www.tsn.ca/soccer/fifa-world-cup/article/eustaquio-bombito-return-to-canada-xi-against-south-africa/",
+        "https://worldsoccertalk.com/amp/world-cup/why-isnt-alphonso-davies-playing-for-canada-against-south-africa-in-the-2026-world-cup-round-of-16/",
+        "https://www.prizepicks.com/playbook-article/south-africa-vs-canada-lineups-confirmed-starting-xis-world-cup-today",
+        "https://www.mlssoccer.com/competitions/fifa-world-cup/news/canada-starting-lineup-vs-south-africa-world-cup-round-of-32",
+        "https://www.espn.com/soccer/story/_/id/49201528/canada-star-alphonso-davies-ready-world-cup-knockouts-decoy-role"
       ]
     }
   ]
