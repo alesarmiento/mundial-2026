@@ -4,7 +4,7 @@
     "regla_de_oro": "Solo con fuente real (ESPN odds, oddschecker, Dimers, bet365, Kalshi, Forebet). Las cuotas se convierten a probabilidad quitando el margen y se normalizan a 100. Nunca inventar.",
     "campos": "pH/pD/pA = % implicado de gana local / empate / gana visita (orientado al home del fixture). score = marcador mas probable del mercado. over25 = % de over 2.5 goles.",
     "actualizado": "2026-06-28",
-    "ultima_actualizacion": "2026-06-28T01:10:00Z"
+    "ultima_actualizacion": "2026-06-28T03:10:00Z"
   },
   "partidos": [
     {"home": "Portugal", "away": "DR Congo", "fecha": "2026-06-17",
@@ -157,6 +157,18 @@
     {"home": "Colombia", "away": "Portugal", "fecha": "2026-06-27",
      "pH": 28, "pD": 28, "pA": 44,
      "fuente": "CBS Sports / oddschecker (+220 / +210 / +100, normalizado; 27-jun-2026)"},
+    {"home": "United States", "away": "Bosnia and Herzegovina", "fecha": "2026-07-01",
+     "pH": 63, "pD": 22, "pA": 15, "score": "2-0",
+     "fuente": "DraftKings (USA -195 / draw +330 / BOS +550, normalizado; 26-27-jun-2026)"},
+    {"home": "Portugal", "away": "Croatia", "fecha": "2026-07-02",
+     "pH": 42, "pD": 31, "pA": 27, "score": "1-0",
+     "fuente": "bet365 (POR +130 / draw +220 / CRO +260, normalizado; 27-jun-2026)"},
+    {"home": "Australia", "away": "Egypt", "fecha": "2026-07-03",
+     "pH": 30, "pD": 32, "pA": 38, "score": "1-1",
+     "fuente": "DraftKings (AUS +225 / draw +200 / EGY +150, normalizado; 27-jun-2026)"},
+    {"home": "Argentina", "away": "Cape Verde", "fecha": "2026-07-03",
+     "pH": 82, "pD": 12, "pA": 6, "score": "3-0",
+     "fuente": "bet365 (ARG -700 / draw +700 / CPV +1400, normalizado; 26-jun-2026)"},
     {"home": "Norway", "away": "France", "fecha": "2026-06-26",
      "pH": 21, "pD": 21, "pA": 58, "score": "1-2", "over25": 54,
      "fuente": "ESPN odds (+350 NOR / +360 draw / -155 FRA, normalizado); DraftKings over -130/+110; 25-jun-2026"},
