@@ -3,42 +3,10 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-06-27T05:10Z",
+    "actualizado": "2026-06-28T00:20:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "Panama", "away": "England", "fecha": "2026-06-27",
-      "estado_alineacion": "probable",
-      "xi_local": "Mosquera; Murillo, Ramos, Córdoba, Andrade; Blackman, Martínez, Harvey, Barcenas; Rodríguez, Fajardo (4-4-2).",
-      "xi_visita": "Pickford; (RD en duda — Reece James baja, posible Konsa o Alexander-Arnold), Guehi, (CB/DL por confirmar); Anderson, Rice; Madueke, Bellingham, Rashford; Kane (4-2-3-1 probable).",
-      "bajas_local": ["Adalberto Carrasquilla (baja — lesion de aductores; motor creativo del mediocampo)", "Aníbal Godoy (dudoso — posiblemente comenzaria desde la banca)"],
-      "bajas_visita": ["Reece James (baja — lesion de isquiotibiales; descartado al menos 2 partidos)", "Bukayo Saka (dudoso — molestia de Aquiles; Madueke lo reemplaza en el once)"],
-      "lectura": "Panama ya esta eliminada (0 pts en dos derrotas: 0-1 vs Ghana y 0-1 vs Croatia). England lidera el Grupo L con 4 pts y ya aseguro el avance a dieciseisavos; una victoria le garantiza el primer lugar del grupo. Tuchel podria rotar a alguna figura, pero Kane y Bellingham deberan mantenerse. La baja de Carrasquilla es un golpe para Panama, que intento construir su juego desde el mediocampo. Sin nada que perder, Panama puede intentar un partido mas abierto. England llega con confianza tras golear 4-2 a Croatia en el debut.",
-      "lean": "England amplia favorita. Panama puede competir en algun tramo pero la diferencia de calidad es demasiado grande. Esperar goleada inglesa.",
-      "fuentes": [
-        "https://www.sportsmole.co.uk/football/england/world-cup-2026/preview/panama-vs-england-prediction-team-news-lineups_600066.html",
-        "https://www.sportsmole.co.uk/football/panama/world-cup-2026/predicted-lineups/double-fitness-doubt-predicted-panama-xi-vs-england_600069.html",
-        "https://sports.yahoo.com/articles/panama-vs-england-world-cup-160946921.html",
-        "https://www.espn.com/football/story/_/id/48701061/england-world-cup-2026-schedule-fixtures-results-scores-group-l-how-watch-uk-news-analysis-injuries"
-      ]
-    },
-    {
-      "home": "Croatia", "away": "Ghana", "fecha": "2026-06-27",
-      "estado_alineacion": "probable",
-      "xi_local": "Livakovic; Stanisic, Pongracic, Sutalo, Gvardiol; Kovacic, Modric; Baturina, Pasalic, Perisic; Budimir (4-2-3-1).",
-      "xi_visita": "Asare; Senaya, Adjetey, Opoku, Mensah; Yirenkyi, Partey, Sibo; I. Williams, Semenyo; J. Ayew (4-3-3).",
-      "bajas_local": ["Sin bajas confirmadas — Dalic hace un solo cambio (Budimir ingresa como titular en reemplazo de Musa)"],
-      "bajas_visita": ["Lawrence Ati-Zigi (dudoso/baja — lesion sufrida vs Panama; Benjamin Asare mantuvo el arco ante England)"],
-      "lectura": "El partido mas importante de la jornada en el Grupo L (Lincoln Financial Field, Filadelfia). Ghana tiene 4 pts y le alcanza con empate para avanzar como 2do. Croatia tiene 3 pts y DEBE GANAR para clasificar — un empate los elimina (quedan en 4 pts pero Ghana los supera en GD). Modric (201a cap internacional) lidera a Croatia, que mostro caracter con el gol de Budimir al entrar al descanso ante Panama. Ghana fue compacta y solida: el 0-0 con England fue un resultado enorme. Asare en el arco tuvo una actuacion estelar. Kudus (no mencionado en el XI probable; en duda) podria ser diferencia.",
-      "lean": "Croatia necesita la victoria y lo sabe — llegara con todo. Ghana puede buscar el empate con disciplina tactica. Leve ventaja a Croatia por necesidad y calidad ofensiva, pero Ghana es capaz de aguantar.",
-      "fuentes": [
-        "https://www.rotowire.com/soccer/article/croatia-vs-ghana-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-group-l-119773",
-        "https://www.sportsmole.co.uk/football/croatia/world-cup-2026/predicted-lineups/up-the-ante-predicted-croatia-xi-vs-ghana_600074.html",
-        "https://www.sportsmole.co.uk/football/ghana/world-cup-2026/predicted-lineups/stick-or-twist-in-the-sticks-predicted-ghana-xi-vs-croatia_600077.html",
-        "https://www.espn.com/soccer/story/_/id/49172894/fifa-world-cup-2026-croatia-vs-ghana-tv-channel-how-watch-kickoff-live-stream-injury-predicted-lineups"
-      ]
-    },
     {
       "home": "Colombia", "away": "Portugal", "fecha": "2026-06-27",
       "estado_alineacion": "probable",
@@ -101,6 +69,22 @@
         "https://www.espn.com/soccer/story/_/id/49173254/fifa-world-cup-2026-jordan-vs-argentina-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups",
         "https://worldsoccertalk.com/world-cup/lionel-scaloni-planning-changes-to-messis-argentina-after-booking-world-cup-knockout-stage-berth/",
         "https://www.si.com/soccer/argentina-predicted-lineup-vs-jordan-world-cup-6-27-26"
+      ]
+    },
+    {
+      "home": "South Africa", "away": "Canada", "fecha": "2026-06-28",
+      "estado_alineacion": "probable",
+      "xi_local": "Williams; Mudau, Okon, Mbokazi, Modiba; Mokoena, Mbatha; Maseko, Mofokeng, Appollis; Makgopa (4-2-3-1).",
+      "xi_visita": "Crepeau; Johnston, De Fougerolles, Cornelius, Davies; Buchanan, Eustaquio; Saliba, Ahmed; David, Larin (4-2-3-1). Davies confirmado titular por Marsch.",
+      "bajas_local": ["Themba Zwane (BAJA — suspension acumulada desde fase de grupos; baja para el partido de dieciseisavos)"],
+      "bajas_visita": ["Ismael Kone (BAJA — fractura de pierna sufrida vs Qatar; fuera del torneo)", "Stephen Eustaquio (dudoso — molestia reciente; se espera titular desde el inicio)"],
+      "lectura": "Partido historico: primer partido de eliminatorias en un Mundial para ambas selecciones. South Africa (Bafana Bafana) llego como 2do del Grupo A con 4 pts: perdio 0-2 vs Mexico, empato 1-1 vs Czechia, gano 1-0 vs Corea del Sur. Canada clasifica 2do del Grupo B con 4 pts: empate 1-1 vs Bosnia, goleada 6-0 a Qatar, derrota 1-2 vs Suiza. Alphonso Davies (Bayern Munich), capitan de Canada, fue confirmado titular por el DT Jesse Marsch tras recuperarse de una lesion de isquiotibiales que lo saco del debut. Jonathan David (3 goles, maximo goleador de Canada all-time con 39 internacionales) es el mayor peligro canadiense. Por South Africa, Makgopa lidera el ataque; Mokoena regresa a disposicion tras suspension. Partido en SoFi Stadium (Inglewood, Los Angeles), a las 19:00 UTC.",
+      "lean": "Canada es el favorito del mercado (~56%): Davies, David y Buchanan tienen mayor calidad individual. South Africa puede ser peligrosa en transiciones con Appollis y Mofokeng por bandas. El encuentro puede ser mas cerrado de lo que los numeros indican — ambos equipos llegan al primer partido de eliminatorias con algo que demostrar. Leve lean Canada, pero South Africa con potencial de sorpresa.",
+      "fuentes": [
+        "https://www.cbssports.com/soccer/news/canada-vs-south-africa-odds-prediction-time-2026-world-cup-round-of-32-picks/",
+        "https://www.sportsmole.co.uk/football/canada/world-cup-2026/preview/south-africa-vs-canada-prediction-team-news-lineups_600163.html",
+        "https://www.sportsmole.co.uk/football/canada/world-cup-2026/predicted-lineups/will-davies-be-involved-how-canada-could-line-up-vs-south-africa_600168.html",
+        "https://www.foxsports.com/stories/soccer/canada-south-africa-world-cup-round-of-32-knockout-round"
       ]
     }
   ]

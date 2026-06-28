@@ -3,8 +3,8 @@
     "descripcion": "Consenso del mercado/mundo online por partido del dia (1X2 implicado, marcador mas probable, over 2.5). Para comparar contra el sistema y medir calibracion. La rutina lo actualiza con las cuotas del dia para TODOS los partidos.",
     "regla_de_oro": "Solo con fuente real (ESPN odds, oddschecker, Dimers, bet365, Kalshi, Forebet). Las cuotas se convierten a probabilidad quitando el margen y se normalizan a 100. Nunca inventar.",
     "campos": "pH/pD/pA = % implicado de gana local / empate / gana visita (orientado al home del fixture). score = marcador mas probable del mercado. over25 = % de over 2.5 goles.",
-    "actualizado": "2026-06-25",
-    "ultima_actualizacion": "2026-06-25T20:10:00Z"
+    "actualizado": "2026-06-28",
+    "ultima_actualizacion": "2026-06-28T00:15:00Z"
   },
   "partidos": [
     {"home": "Portugal", "away": "DR Congo", "fecha": "2026-06-17",
@@ -162,6 +162,9 @@
      "fuente": "ESPN odds (+350 NOR / +360 draw / -155 FRA, normalizado); DraftKings over -130/+110; 25-jun-2026"},
     {"home": "Senegal", "away": "Iraq", "fecha": "2026-06-26",
      "pH": 77, "pD": 15, "pA": 8, "score": "2-0", "over25": 55,
-     "fuente": "bet365 (2/9 SEN – 21/4 draw – 11/1 IRQ, normalizado); over 2.5 consenso multibookmaker; 25-jun-2026"}
+     "fuente": "bet365 (2/9 SEN – 21/4 draw – 11/1 IRQ, normalizado); over 2.5 consenso multibookmaker; 25-jun-2026"},
+    {"home": "South Africa", "away": "Canada", "fecha": "2026-06-28",
+     "pH": 17, "pD": 27, "pA": 56, "score": "1-2", "over25": 40,
+     "fuente": "CBS Sports / FanDuel (SAF +450 / draw +250 / CAN -140, normalizado; under 2.5 -151 implicado; 28-jun-2026)"}
   ]
 }
