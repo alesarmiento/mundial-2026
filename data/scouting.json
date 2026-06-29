@@ -3,7 +3,7 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-06-28T21:30:00Z",
+    "actualizado": "2026-06-29T00:10:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
@@ -13,10 +13,11 @@
       "fecha": "2026-06-29",
       "estado_alineacion": "probable",
       "xi_local": "Souza; Beraldo, Bruno, Henrique, Augusto; Casemiro, Bruno Guimaraes; Luiz Henrique, Vinicius Junior, Paqueta; Martinelli (4-3-3 probable).",
-      "xi_visita": "Suzuki; Machida, Watanabe, Ito; Sugawara, Sano, Morita; Kubo, Nakamura, Minamino; Ueda (3-4-2-1 probable).",
+      "xi_visita": "Suzuki; Machida, Watanabe, Ito; Sugawara, Sano, Morita; Kubo (EN DUDA), Nakamura, Minamino; Ueda (3-4-2-1 probable).",
       "bajas_local": [],
       "bajas_visita": [
-        "Ko Itakura (CB) — EN DUDA: molestias fisicas en el partido vs Suecia; se espera que juegue pero no confirmado"
+        "Ko Itakura (CB) — EN DUDA: molestias fisicas en el partido vs Suecia; se espera que juegue pero no confirmado",
+        "Takefusa Kubo (EXT) — EN DUDA: lesion de rodilla; no ha entrenado de forma completa en los ultimos dias; expectativa de no estar en el XI inicial segun Sports Mole"
       ],
       "lectura": "Brasil avanza como lider del Grupo C (9 pts, invicto: empate 1-1 vs Marruecos, 3-0 a Haiti, 3-0 a Escocia). Japon clasifica 2do del Grupo F con 5 pts (empate 2-2 vs Holanda, goleada 4-0 a Tunez, empate 1-1 vs Suecia). Vinicius Jr. lleva 4 goles en el torneo y es el motor ofensivo de Brasil. Japon utilizo sistema 3-4-2-1 con gran solidez defensiva; su debut europeo-asiatico en la Copa del Mundo sigue sorprendiendo. Brasil buscara la posesion y los espacios para Vinicius y Martinelli por las bandas.",
       "lean": "Brasil es favorito claro (~55% mercado). Su ataque con Vinicius, Paqueta y Martinelli tiene mas calidad individual. Sin embargo, Japon demostro ser un equipo solido y organizado — elimino a Alemania en 2022. Con Itakura en duda, el bloque defensivo japones podria verse comprometido. Lean Brasil, pero Japon tiene con que sorprender.",
@@ -50,16 +51,17 @@
       "fecha": "2026-06-29",
       "estado_alineacion": "probable",
       "xi_local": "Flekken; Dumfries, De Vrij, Van Dijk, Van de Ven; Schouten, Gravenberch; Simons, Gakpo, Malen; Brobbey (4-3-3 probable — Van de Ven reemplaza a Ake en lateral izquierdo).",
-      "xi_visita": "Bono; Mazraoui, Diop, Aguerd, Attiyat Allah; Bouaddi, Amallah, Ounahi; Ziyech (o Saibari), En-Nesyri, Rahimi (4-2-3-1 o 4-3-3 probable).",
+      "xi_visita": "Bono; Hakimi, Diop, Aguerd, Mazraoui; El Aynaoui, Bouaddi; Brahim Diaz, Ounahi, El Khannouss; Saibari (4-2-3-1 probable — Hakimi, Bouaddi, Ounahi y Mazraoui retoman el XI; Brahim Diaz y El Khannouss esperados segun ESPN/Sports Mole).",
       "bajas_local": [
-        "Nathan Ake (LB) — EN DUDA: molestia muscular; Van de Ven entra como reemplazante"
+        "Nathan Ake (LB) — BAJA: molestia muscular; Van de Ven entra como titular"
       ],
       "bajas_visita": [],
-      "lectura": "Holanda cierra el Grupo F invicta con 9 pts (2-2 vs Japon, 5-1 a Suecia, 3-1 a Tunez). Marruecos avanza 2do del Grupo C con 6 pts (empate 1-1 vs Brasil, 1-0 a Escocia, 4-2 a Haiti). Brobbey (3 goles, LDC MVP) y Gakpo son la artilleria holandesa. Saibari de Marruecos (3 goles) es la gran carta ofensiva del equipo de Regragui. Dumfries y Brobbey se reportaron recuperados. Van de Ven entra por el lateral si Ake no llega.",
-      "lean": "Holanda enfrenta al Marruecos que ya la elimino en Qatar 2022. El mercado da a Holanda como favorita (~44%) pero Marruecos tiene un 27% de posibilidades segun las casas. La clave sera si Saibari puede crear problemas detras de la linea defensiva holandesa. Lean Holanda, con Marruecos como el rival mas peligroso de su cuadro del torneo.",
+      "lectura": "Holanda cierra el Grupo F invicta con 9 pts (2-2 vs Japon, 5-1 a Suecia, 3-1 a Tunez). Marruecos avanza 2do del Grupo C con 6 pts (empate 1-1 vs Brasil, 1-0 a Escocia, 4-2 a Haiti). Brobbey (3 goles) y Gakpo son la artilleria holandesa. Marruecos recupera a Hakimi, Bouaddi, Ounahi y Mazraoui, que rotaron en la fase de grupos. Saibari (3 goles en el torneo) y Brahim Diaz son las cartas ofensivas del equipo de Regragui. Recordatorio historico: Marruecos elimino a Holanda en Qatar 2022.",
+      "lean": "Holanda enfrenta al Marruecos que ya la elimino en Qatar 2022. El mercado da a Holanda como favorita (~44-46%) pero Marruecos con Hakimi, Bouaddi y Ounahi recuperados es mucho mas peligroso que en los partidos de la fase de grupos. La clave sera si Saibari y Brahim Diaz pueden crear problemas detras de la linea defensiva holandesa. Lean Holanda, pero partido muy parejo — el equipo de Regragui sabe lo que hace en este formato.",
       "fuentes": [
         "https://www.sportsmole.co.uk/football/netherlands/world-cup-2026/predicted-lineups/double-fitness-boost-how-netherlands-could-line-up-vs-morocco_600224.html",
-        "https://sports.yahoo.com/articles/preview-netherlands-vs-morocco-team-010000608.html"
+        "https://sports.yahoo.com/articles/preview-netherlands-vs-morocco-team-010000608.html",
+        "https://www.espn.com/soccer/story/_/id/49199529/fifa-world-cup-2026-netherlands-vs-morocco-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups"
       ]
     },
     {
