@@ -3,7 +3,7 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-06-29T00:10:00Z",
+    "actualizado": "2026-06-29T03:30:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
@@ -12,19 +12,22 @@
       "away": "Japan",
       "fecha": "2026-06-29",
       "estado_alineacion": "probable",
-      "xi_local": "Souza; Beraldo, Bruno, Henrique, Augusto; Casemiro, Bruno Guimaraes; Luiz Henrique, Vinicius Junior, Paqueta; Martinelli (4-3-3 probable).",
-      "xi_visita": "Suzuki; Machida, Watanabe, Ito; Sugawara, Sano, Morita; Kubo (EN DUDA), Nakamura, Minamino; Ueda (3-4-2-1 probable).",
-      "bajas_local": [],
-      "bajas_visita": [
-        "Ko Itakura (CB) — EN DUDA: molestias fisicas en el partido vs Suecia; se espera que juegue pero no confirmado",
-        "Takefusa Kubo (EXT) — EN DUDA: lesion de rodilla; no ha entrenado de forma completa en los ultimos dias; expectativa de no estar en el XI inicial segun Sports Mole"
+      "xi_local": "Alisson; Danilo, Marquinhos, Gabriel Magalhaes, Douglas Santos; Bruno Guimaraes, Casemiro, Lucas Paqueta; Rayan, Matheus Cunha, Vinicius Junior (4-3-3 probable — Ancelotti mantiene el XI vs Escocia; Raphinha sigue de baja).",
+      "xi_visita": "Suzuki; Watanabe, Taniguchi, Hiroki Ito, Sugawara; Ao Tanaka, Kamada, Nakamura; Ritsu Doan, Daizen Maeda, Ueda (3-4-2-1 probable — Itakura se espera disponible; Kubo descartado).",
+      "bajas_local": [
+        "Raphinha (EXT D) — BAJA: lesion de isquiotibiales sufrida contra Haiti; se perdio el partido vs Escocia y sigue descartado para este partido segun Yahoo Sports / Sports Mole"
       ],
-      "lectura": "Brasil avanza como lider del Grupo C (9 pts, invicto: empate 1-1 vs Marruecos, 3-0 a Haiti, 3-0 a Escocia). Japon clasifica 2do del Grupo F con 5 pts (empate 2-2 vs Holanda, goleada 4-0 a Tunez, empate 1-1 vs Suecia). Vinicius Jr. lleva 4 goles en el torneo y es el motor ofensivo de Brasil. Japon utilizo sistema 3-4-2-1 con gran solidez defensiva; su debut europeo-asiatico en la Copa del Mundo sigue sorprendiendo. Brasil buscara la posesion y los espacios para Vinicius y Martinelli por las bandas.",
-      "lean": "Brasil es favorito claro (~55% mercado). Su ataque con Vinicius, Paqueta y Martinelli tiene mas calidad individual. Sin embargo, Japon demostro ser un equipo solido y organizado — elimino a Alemania en 2022. Con Itakura en duda, el bloque defensivo japones podria verse comprometido. Lean Brasil, pero Japon tiene con que sorprender.",
+      "bajas_visita": [
+        "Takefusa Kubo (EXT) — BAJA: lesion de rodilla; no ha entrenado de forma completa; descartado para este partido segun Sports Mole",
+        "Ko Itakura (CB) — EN DUDA: salio en el primer tiempo vs Suecia por molestias; se espera que juegue y lidere la defensa como capitan, pero sin confirmacion oficial"
+      ],
+      "lectura": "Brasil lidera el Grupo C invicto con 9 pts (empate 1-1 vs Marruecos, 3-0 a Haiti, 3-0 a Escocia). Japon clasifica 2do del Grupo F con 5 pts (empate 2-2 vs Holanda, goleada 4-0 a Tunez, empate 1-1 vs Suecia). Vinicius Jr. lleva 4 goles en el torneo y es el motor ofensivo de Brasil junto a Matheus Cunha (3 goles). Japon utilizo un sistema 3-4-2-1 con gran solidez defensiva y batio a Alemania en Qatar 2022. Con Kubo descartado y posible duda de Itakura, el bloque defensivo japones podria verse comprometido. Brasil buscara la posesion y los espacios por las bandas para Vinicius y Cunha.",
+      "lean": "Brasil es favorito claro (~55% mercado). Su ataque con Vinicius, Cunha y el joven Rayan tiene calidad individual superior. Sin embargo, Japon demostro en Qatar 2022 que puede eliminar a potencias europeas y sudamericanas. Con Kubo fuera e Itakura en duda, el bloque defensivo japones corre riesgo por banda. Lean Brasil, pero Japon tiene con que sorprender si sus contragolpes con Doan y Maeda funcionan.",
       "fuentes": [
+        "https://uk.sports.yahoo.com/news/brazil-xi-vs-japan-confirmed-160845015.html",
         "https://www.sportsmole.co.uk/football/japan/world-cup-2026/predicted-lineups/defensive-injury-doubt-predicted-japan-xi-vs-brazil_600207.html",
-        "https://sports.yahoo.com/articles/preview-brazil-vs-japan-team-170500580.html",
-        "https://www.goal.com/en/news/brazil-japan-world-cup-preview/bltfacb1acd696ead12"
+        "https://www.espn.com/soccer/story/_/id/49194679/brazil-vs-japan-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups",
+        "https://www.sportsmole.co.uk/football/brazil/world-cup-2026/preview/brazil-vs-japan-prediction-team-news-lineups_600204.html"
       ]
     },
     {
@@ -32,17 +35,23 @@
       "away": "Paraguay",
       "fecha": "2026-06-29",
       "estado_alineacion": "probable",
-      "xi_local": "Ter Stegen; Kimmich, Rudiger, Tah, Mittelstadt; Kroos (o Andrich), Gundogan; Musiala, Havertz, Wirtz; Fullkrug (4-2-3-1 probable — Rudiger reemplaza a Schlotterbeck lesionado).",
-      "xi_visita": "Espinola; Alderete, Balbuena, Alonso, Otamendi; Almiron, Cubas, Villasanti; Sanabria, Gamarra; Almada (4-3-3 o 4-4-2 probable — Almiron regresa de suspension).",
+      "xi_local": "Neuer; Kimmich, Rudiger, Tah, Brown; Nmecha, Pavlovic; Sane, Musiala, Wirtz; Havertz (4-2-3-1 probable — Rudiger reemplaza a Schlotterbeck; Brown regresa de molestia muscular).",
+      "xi_visita": "Gill; Caceres, Gustavo Gomez, Velazquez, Alonso; Almiron, Galarza, Cubas, Mauricio; Avalos, Enciso (4-4-2 probable — Almiron regresa de suspension; Diego Gomez suspendido; Alderete en duda).",
       "bajas_local": [
-        "Nico Schlotterbeck (CB) — BAJA POR TORNEO: lesion de ligamentos de rodilla sufrida en el partido vs Costa de Marfil; Rudiger cubrira la posicion"
+        "Nico Schlotterbeck (CB) — BAJA POR TORNEO: lesion de ligamentos de rodilla sufrida vs Costa de Marfil; Rudiger ocupa el puesto",
+        "Nathaniel Brown (LB) — fue descartado vs Ecuador por molestia muscular, pero dado de alta y se espera de titular segun Sports Mole / Yahoo Sports"
       ],
-      "bajas_visita": [],
-      "lectura": "Alemania clasifica 1ro del Grupo E con 6 pts (7-1 a Curacao, 2-1 a Costa de Marfil) pero perdio 1-2 vs Ecuador en la ultima jornada. Paraguay avanza como uno de los mejores terceros (4 pts: empate 1-1 vs Canada, 1-0 a Turquia, 0-0 vs Australia). Gran novedad: Almiron regresa tras cumplir su suspension. La baja de Schlotterbeck obliga a Nagelsmann a reestructurar la defensa con Rudiger. Paraguay llegara a defenderse y buscar el contragolpe.",
-      "lean": "Alemania es favorita clara (~70% mercado) por mayor calidad con Wirtz, Musiala y Havertz. Sin embargo, la derrota vs Ecuador mostro vulnerabilidades defensivas. Con Almiron de regreso, Paraguay tiene una amenaza real en transicion. Lean Alemania, pero con Paraguay como riesgo real si los alemanes no cierran los espacios.",
+      "bajas_visita": [
+        "Diego Gomez (CM) — SUSPENDIDO: tarjetas acumuladas; era tomador habitual de penales y tiros de esquina — baja sensible para Paraguay",
+        "Omar Alderete (CB) — EN DUDA: molestia muscular; si no llega, Gustavo Gomez y Velazquez forman la pareja de centrales segun Sports Mole"
+      ],
+      "lectura": "Alemania clasifica 1ro del Grupo E con 6 pts (7-1 a Curacao, 2-1 a Costa de Marfil) pero perdio 1-2 vs Ecuador en la ultima jornada. Paraguay avanza como uno de los mejores terceros (4 pts: empate 1-1 vs Canada, 1-0 a Turquia, 0-0 vs Australia). La gran novedad: Almiron regresa tras suspension y la baja de Diego Gomez deja a Paraguay sin su tomador de balones parados. Alemania recupera a Nathaniel Brown en el lateral. Nagelsmann no tiene a Schlotterbeck pero confia en la dupla Rudiger-Tah. Paraguay llegara a replegarse y buscar el contragolpe con Enciso y Almiron.",
+      "lean": "Alemania es favorita clara (~70% mercado) con Wirtz, Musiala y Sane como motor ofensivo. Sin embargo, la derrota vs Ecuador mostro vulnerabilidades defensivas cuando los contrarios salen a presionar alto. Con Almiron de regreso y Diego Gomez suspendido, el equilibrio en el mediocampo paraguayo cambia. Lean Alemania, pero Paraguay con contragolpe rapido puede sorprender si los alemanes dejan espacios.",
       "fuentes": [
-        "https://www.sportsmole.co.uk/football/germany/world-cup-2026/preview/germany-vs-paraguay-prediction-team-news-lineups_600229.html",
-        "https://www.goal.com/en-us/news/germany-paraguay-world-cup-preview/blt69845ea4b54b1ac0"
+        "https://www.sportsmole.co.uk/football/germany/world-cup-2026/team-news/germany-vs-paraguay-injury-suspension-list-predicted-xis_600233.html",
+        "https://www.sportsmole.co.uk/football/germany/world-cup-2026/predicted-lineups/will-brown-be-passed-fit-how-germany-could-line-up-against-paraguay_600234.html",
+        "https://uk.sports.yahoo.com/news/germany-xi-vs-paraguay-confirmed-175211636.html",
+        "https://www.rotowire.com/soccer/article/germany-vs-paraguay-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120070"
       ]
     },
     {
@@ -50,18 +59,20 @@
       "away": "Morocco",
       "fecha": "2026-06-29",
       "estado_alineacion": "probable",
-      "xi_local": "Flekken; Dumfries, De Vrij, Van Dijk, Van de Ven; Schouten, Gravenberch; Simons, Gakpo, Malen; Brobbey (4-3-3 probable — Van de Ven reemplaza a Ake en lateral izquierdo).",
-      "xi_visita": "Bono; Hakimi, Diop, Aguerd, Mazraoui; El Aynaoui, Bouaddi; Brahim Diaz, Ounahi, El Khannouss; Saibari (4-2-3-1 probable — Hakimi, Bouaddi, Ounahi y Mazraoui retoman el XI; Brahim Diaz y El Khannouss esperados segun ESPN/Sports Mole).",
+      "xi_local": "Verbruggen; Dumfries, Van Hecke, Van Dijk, Van de Ven; Gravenberch, De Jong, Reijnders; Malen, Brobbey, Gakpo (4-3-3 probable — Ake sigue fuera; Van de Ven de lateral; Dumfries y Brobbey dados de alta).",
+      "xi_visita": "Bounou; Hakimi, Halhal, Riad, Mazraoui; El Aynaoui, Bouaddi; Brahim Diaz, Ounahi, El Khannouss; Saibari (4-2-3-1 probable — Hakimi, Mazraoui, Bouaddi y Ounahi recuperan el XI titular segun Sports Mole / ESPN).",
       "bajas_local": [
-        "Nathan Ake (LB) — BAJA: molestia muscular; Van de Ven entra como titular"
+        "Nathan Ake (LB) — BAJA: molestia muscular; Micky van de Ven regresa como lateral izquierdo titular",
+        "Dumfries y Brobbey — molestias leves tras la fase de grupos, pero DADOS DE ALTA y disponibles para este partido segun Sports Mole"
       ],
       "bajas_visita": [],
-      "lectura": "Holanda cierra el Grupo F invicta con 9 pts (2-2 vs Japon, 5-1 a Suecia, 3-1 a Tunez). Marruecos avanza 2do del Grupo C con 6 pts (empate 1-1 vs Brasil, 1-0 a Escocia, 4-2 a Haiti). Brobbey (3 goles) y Gakpo son la artilleria holandesa. Marruecos recupera a Hakimi, Bouaddi, Ounahi y Mazraoui, que rotaron en la fase de grupos. Saibari (3 goles en el torneo) y Brahim Diaz son las cartas ofensivas del equipo de Regragui. Recordatorio historico: Marruecos elimino a Holanda en Qatar 2022.",
-      "lean": "Holanda enfrenta al Marruecos que ya la elimino en Qatar 2022. El mercado da a Holanda como favorita (~44-46%) pero Marruecos con Hakimi, Bouaddi y Ounahi recuperados es mucho mas peligroso que en los partidos de la fase de grupos. La clave sera si Saibari y Brahim Diaz pueden crear problemas detras de la linea defensiva holandesa. Lean Holanda, pero partido muy parejo — el equipo de Regragui sabe lo que hace en este formato.",
+      "lectura": "Holanda cierra el Grupo F invicta con 9 pts (2-2 vs Japon, 5-1 a Suecia, 3-1 a Tunez). Marruecos avanza 2do del Grupo C con 6 pts (empate 1-1 vs Brasil, 1-0 a Escocia, 4-2 a Haiti). Brobbey (3 goles) y Gakpo son la artilleria holandesa. Marruecos recupera a Hakimi, Bouaddi, Ounahi y Mazraoui que rotaron en la fase de grupos. Saibari (3 goles en el torneo) y Brahim Diaz son las cartas ofensivas del equipo de Regragui. Recordatorio historico clave: Marruecos elimino a Holanda en Qatar 2022 (2-1).",
+      "lean": "Holanda entra como favorita en las casas (~44%) pero Marruecos, con sus titulares recuperados, es un rival totalmente distinto al que mostro en la fase de grupos. Hakimi por derecha y Saibari como punta son amenazas reales. La clave sera si Brobbey y Gakpo pueden generar situaciones claras ante el bloque bajo de Regragui. Lean Holanda, pero partido muy parejo — Marruecos sabe lo que hace en este formato y tiene historial reciente a favor.",
       "fuentes": [
         "https://www.sportsmole.co.uk/football/netherlands/world-cup-2026/predicted-lineups/double-fitness-boost-how-netherlands-could-line-up-vs-morocco_600224.html",
-        "https://sports.yahoo.com/articles/preview-netherlands-vs-morocco-team-010000608.html",
-        "https://www.espn.com/soccer/story/_/id/49199529/fifa-world-cup-2026-netherlands-vs-morocco-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups"
+        "https://www.sportsmole.co.uk/football/netherlands/world-cup-2026/predicted-lineups/ouahbi-to-make-changes-how-morocco-could-line-up-vs-netherlands_600225.html",
+        "https://www.espn.com/soccer/story/_/id/49199529/fifa-world-cup-2026-netherlands-vs-morocco-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups",
+        "https://sports.yahoo.com/articles/preview-netherlands-vs-morocco-team-010000608.html"
       ]
     },
     {
@@ -94,7 +105,7 @@
       "bajas_visita": [
         "Isak Hien (CB) — BAJA POR TORNEO: lesion de isquiotibiales sufrida en el partido vs Japon; el esquema defensivo de Suecia debera reorganizarse"
       ],
-      "lectura": "Francia lidera el Grupo I invicta con 9 pts (3-1 a Senegal, 3-0 a Irak, 4-1 a Noruega). Suecia clasifica como uno de los mejores terceros del Grupo F con 4 pts (5-1 a Tunez, 1-5 vs Holanda, 1-1 vs Japon). Dembele hat-trick vs Noruega; Mbappe recuperado. La gran baja de Suecia es Hien en defensa — Lindelof y Lagerbielke deberan liderar una linea reorganizada. Gyokeres (Leicester City, goleador del equipo) es la unica amenaza real de los suecos.",
+      "lectura": "Francia lidera el Grupo I invicta con 9 pts (3-1 a Senegal, 3-0 a Irak, 4-1 a Noruega). Suecia clasifica como uno de los mejores terceros del Grupo F con 4 pts (5-1 a Tunez, 1-5 vs Holanda, 1-1 vs Japon). Dembele hat-trick vs Noruega; Mbappe recuperado. La gran baja de Suecia es Hien en defensa — Lindelof y Lagerbielke deberan liderar una linea reorganizada. Gyokeres es la unica amenaza real de los suecos.",
       "lean": "Francia es clara favorita (~74% mercado) con calidad individual en cada linea. La baja de Hien debilita significativamente la defensa sueca ante el ataque frances con Dembele, Mbappe y Barcola. Lean Francia con comodidad, aunque Gyokeres e Isak pueden crear problemas en un mal dia de los galos.",
       "fuentes": [
         "https://www.sportsmole.co.uk/football/france/world-cup-2026/preview/france-vs-sweden-prediction-team-news-lineups_600264.html"
@@ -111,7 +122,7 @@
       "bajas_visita": [
         "Enner Valencia — EN DUDA: forma fisica cuestionada pero se espera que este disponible para este partido clave"
       ],
-      "lectura": "Mexico cierra el Grupo A invicto con 9 pts y sin goles en contra (2-0 a Sudafrica, 1-0 a Corea del Sur, 3-0 a Czechia). Ecuador avanza como uno de los mejores terceros del Grupo E con 4 pts: la gran hazana fue el 2-1 a Alemania en la ultima jornada (goles de Angulo y Plata). Moisés Caicedo es el organizador del medio de Ecuador. Mexico llega con mucha confianza pero enfrentara a un Ecuador con una moral altisima tras eliminar al campeon del mundo anterior.",
+      "lectura": "Mexico cierra el Grupo A invicto con 9 pts y sin goles en contra (2-0 a Sudafrica, 1-0 a Corea del Sur, 3-0 a Czechia). Ecuador avanza como uno de los mejores terceros del Grupo E con 4 pts: la gran hazana fue el 2-1 a Alemania en la ultima jornada (goles de Angulo y Plata). Moisés Caicedo es el organizador del medio de Ecuador. Mexico llega con mucha confianza pero enfrentara a un Ecuador con una moral altisima tras eliminar al campeon mundial anterior.",
       "lean": "Mexico es favorito en las casas (~43%) pero Ecuador al ~26% sorprende como 'underdog' peligroso tras vencer a Alemania. Si Mexico no logra marcar rapido, Ecuador puede salir a contragolpear con Plata y Caicedo. Lean Mexico en tiempo regular, pero partido mucho mas parejo de lo que la diferencia en el ranking sugiere.",
       "fuentes": [
         "https://www.sportsmole.co.uk/football/mexico/world-cup-2026/predicted-lineups/can-el-tri-continue-perfect-run-predicted-mexico-xi-vs-ecuador_600283.html",
