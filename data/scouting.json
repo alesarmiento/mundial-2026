@@ -3,7 +3,7 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-06-29T19:10:00Z",
+    "actualizado": "2026-06-29T20:15:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
@@ -11,45 +11,47 @@
       "home": "Germany",
       "away": "Paraguay",
       "fecha": "2026-06-29",
-      "estado_alineacion": "probable",
-      "xi_local": "Neuer; Kimmich, Rudiger, Tah, Brown; Nmecha, Pavlovic; Sane, Musiala, Wirtz; Havertz (4-2-3-1 probable — Rudiger reemplaza a Schlotterbeck; Brown regresa de molestia muscular).",
-      "xi_visita": "Gill; Caceres, Gustavo Gomez, Velazquez, Alonso; Almiron, Galarza, Cubas, Mauricio; Avalos, Enciso (4-4-2 probable — Almiron regresa de suspension; Diego Gomez suspendido; Alderete en duda).",
+      "estado_alineacion": "confirmada",
+      "xi_local": "Neuer; Kimmich, Tah, Rudiger, Brown; Nmecha, Pavlovic; Sane, Undav, Wirtz; Havertz (4-2-3-1 CONFIRMADA — Undav titular en lugar de Musiala; Brown confirma en el lateral izquierdo).",
+      "xi_visita": "Gill; Caceres, Gustavo Gomez, Canale, Junior Alonso; Almiron, Bobadilla, Cubas, Galarza, Enciso; Avalos (4-5-1 CONFIRMADA — Almiron regresa tras suspension; Canale y Gustavo Gomez en centrales; Bobadilla en el costado derecho del mediocampo).",
       "bajas_local": [
         "Nico Schlotterbeck (CB) — BAJA POR TORNEO: lesion de ligamentos de rodilla sufrida vs Costa de Marfil; Rudiger ocupa el puesto",
-        "Nathaniel Brown (LB) — fue descartado vs Ecuador por molestia muscular, pero dado de alta y se espera de titular segun Sports Mole / Yahoo Sports"
+        "Jamal Musiala (AM) — DESCANSADO: fuera del XI confirmado; Nagelsmann opta por Undav como mediapunta mas orientado al gol"
       ],
       "bajas_visita": [
-        "Diego Gomez (CM) — SUSPENDIDO: tarjetas acumuladas; era tomador habitual de penales y tiros de esquina — baja sensible para Paraguay",
-        "Omar Alderete (CB) — EN DUDA: molestia muscular; si no llega, Gustavo Gomez y Velazquez forman la pareja de centrales segun Sports Mole"
+        "Diego Gomez (CM) — SUSPENDIDO: tarjetas acumuladas; era tomador habitual de balones parados — baja sensible para Paraguay",
+        "Omar Alderete (CB) — FUERA: no esta en el XI confirmado; Canale ocupa el puesto central junto a Gustavo Gomez"
       ],
-      "lectura": "Alemania clasifica 1ro del Grupo E con 6 pts (7-1 a Curacao, 2-1 a Costa de Marfil) pero perdio 1-2 vs Ecuador en la ultima jornada. Paraguay avanza como uno de los mejores terceros (4 pts: empate 1-1 vs Canada, 1-0 a Turquia, 0-0 vs Australia). La gran novedad: Almiron regresa tras suspension y la baja de Diego Gomez deja a Paraguay sin su tomador de balones parados. Alemania recupera a Nathaniel Brown en el lateral. Nagelsmann no tiene a Schlotterbeck pero confia en la dupla Rudiger-Tah. Paraguay llegara a replegarse y buscar el contragolpe con Enciso y Almiron.",
-      "lean": "Alemania es favorita clara (~70% mercado) con Wirtz, Musiala y Sane como motor ofensivo. Sin embargo, la derrota vs Ecuador mostro vulnerabilidades defensivas cuando los contrarios salen a presionar alto. Con Almiron de regreso y Diego Gomez suspendido, el equilibrio en el mediocampo paraguayo cambia. Lean Alemania, pero Paraguay con contragolpe rapido puede sorprender si los alemanes dejan espacios.",
+      "lectura": "Alemania clasifica 1ro del Grupo E con 6 pts (7-1 a Curacao, 2-1 a Costa de Marfil) pero cayo 1-2 vs Ecuador en la ultima jornada — senales de vulnerabilidad defensiva ante presion alta. Paraguay avanza como uno de los mejores terceros con 4 pts (1-1 vs Canada, 1-0 a Turquia, 0-0 vs Australia). En el XI confirmado, la sorpresa alemana es Undav por Musiala como mediapunta; Nagelsmann busca mas potencia en el remate que creatividad. Paraguay de 4-5-1 usa a Almiron y Enciso en los costados del mediocampo para el contragolpe, pero pierde a Alderete en la defensa central (Canale entra en su lugar).",
+      "lean": "Alemania es favorita clara (~70% mercado) con Wirtz, Sane y Havertz como motor; Undav aporta movilidad y llegada al area. Paraguay llegara replegado en 4-5-1 buscando el contragolpe con Almiron, Enciso y el rapido Avalos. La clave es si Alemania puede romper el bloque paraguayo sin los espacios que le dio Ecuador. Lean Alemania, pero si Paraguay aguanta los primeros 30 minutos, el partido se puede complicar.",
       "fuentes": [
-        "https://www.sportsmole.co.uk/football/germany/world-cup-2026/team-news/germany-vs-paraguay-injury-suspension-list-predicted-xis_600233.html",
-        "https://www.sportsmole.co.uk/football/germany/world-cup-2026/predicted-lineups/will-brown-be-passed-fit-how-germany-could-line-up-against-paraguay_600234.html",
-        "https://uk.sports.yahoo.com/news/germany-xi-vs-paraguay-confirmed-175211636.html",
-        "https://www.rotowire.com/soccer/article/germany-vs-paraguay-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120070"
+        "https://worldsoccertalk.com/world-cup/germany-vs-paraguay-confirmed-lineups-for-the-2026-world-cup-game/",
+        "https://khelnow.com/football/world-football-paraguay-starting-lineup-vs-germany-fifa-world-cup-202606",
+        "https://ca.sports.yahoo.com/news/confirmed-lineups-germany-vs-paraguay-191600253.html",
+        "https://bulinews.com/confirmed-lineups-germany-paraguay",
+        "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021513",
+        "https://www.sportsmole.co.uk/football/germany/world-cup-2026/team-news/germany-vs-paraguay-injury-suspension-list-predicted-xis_600233.html"
       ]
     },
     {
       "home": "Netherlands",
       "away": "Morocco",
       "fecha": "2026-06-29",
-      "estado_alineacion": "probable",
-      "xi_local": "Verbruggen; Dumfries, Van Hecke, Van Dijk, Van de Ven; Gravenberch, De Jong, Reijnders; Malen, Brobbey, Gakpo (4-3-3 probable — Ake sigue fuera; Van de Ven de lateral; Dumfries y Brobbey dados de alta).",
-      "xi_visita": "Bounou; Hakimi, Halhal, Riad, Mazraoui; El Aynaoui, Bouaddi; Brahim Diaz, Ounahi, El Khannouss; Saibari (4-2-3-1 probable — Hakimi, Mazraoui, Bouaddi y Ounahi recuperan el XI titular segun Sports Mole / ESPN).",
+      "estado_alineacion": "confirmada",
+      "xi_local": "Verbruggen; Dumfries, Van Dijk, Van Hecke, Van de Ven; Gravenberch, De Jong, Reijnders; Malen, Brobbey, Gakpo (4-3-3 CONFIRMADA — Ake sigue fuera; Van de Ven como lateral izquierdo; Dumfries y Brobbey titulares confirmados).",
+      "xi_visita": "Bounou; Hakimi, Issa Diop, Riad, Mazraoui; El Aynaoui, Bouaddi; Brahim Diaz, Ounahi, El Khannouss; Saibari (4-2-3-1 CONFIRMADA — Issa Diop titular en defensa en lugar de Halhal; Hakimi, Bouaddi, Ounahi y Mazraoui de vuelta al XI).",
       "bajas_local": [
-        "Nathan Ake (LB) — BAJA: molestia muscular; Micky van de Ven regresa como lateral izquierdo titular",
-        "Dumfries y Brobbey — molestias leves tras la fase de grupos, pero DADOS DE ALTA y disponibles para este partido segun Sports Mole"
+        "Nathan Ake (LB) — BAJA: molestia muscular; Van de Ven ocupa el lateral izquierdo titular"
       ],
       "bajas_visita": [],
-      "lectura": "Holanda cierra el Grupo F invicta con 9 pts (2-2 vs Japon, 5-1 a Suecia, 3-1 a Tunez). Marruecos avanza 2do del Grupo C con 6 pts (empate 1-1 vs Brasil, 1-0 a Escocia, 4-2 a Haiti). Brobbey (3 goles) y Gakpo son la artilleria holandesa. Marruecos recupera a Hakimi, Bouaddi, Ounahi y Mazraoui que rotaron en la fase de grupos. Saibari (3 goles en el torneo) y Brahim Diaz son las cartas ofensivas del equipo de Regragui. Recordatorio historico clave: Marruecos elimino a Holanda en Qatar 2022 (2-1).",
-      "lean": "Holanda entra como favorita en las casas (~44%) pero Marruecos, con sus titulares recuperados, es un rival totalmente distinto al que mostro en la fase de grupos. Hakimi por derecha y Saibari como punta son amenazas reales. La clave sera si Brobbey y Gakpo pueden generar situaciones claras ante el bloque bajo de Regragui. Lean Holanda, pero partido muy parejo — Marruecos sabe lo que hace en este formato y tiene historial reciente a favor.",
+      "lectura": "Holanda cierra el Grupo F invicta con 9 pts (2-2 vs Japon, 5-1 a Suecia, 3-1 a Tunez). Marruecos avanza 2do del Grupo C con 6 pts (empate 1-1 vs Brasil, 1-0 a Escocia, 4-2 a Haiti). Brobbey (3 goles) y Gakpo son la artilleria holandesa, ambos confirmados como titulares. Marruecos recupera a Hakimi, Bouaddi, Ounahi y Mazraoui que rotaron en la fase de grupos; la sorpresa es Issa Diop en lugar de Halhal en la defensa. Saibari (3 goles en el torneo) y Brahim Diaz son las cartas ofensivas del equipo de Regragui. Recordatorio historico clave: Marruecos elimino a Holanda en Qatar 2022 (2-1).",
+      "lean": "Holanda entra como favorita en las casas (~44%) pero Marruecos con sus titulares recuperados es un rival de nivel completamente distinto. Hakimi por derecha y Saibari como punta son amenazas reales. La clave sera si Brobbey y Gakpo pueden generar situaciones claras ante el bloque bajo de Regragui. Lean Holanda por calidad individual, pero partido muy parejo — Marruecos sabe lo que hace en este formato y tiene historial reciente a favor.",
       "fuentes": [
         "https://www.sportsmole.co.uk/football/netherlands/world-cup-2026/predicted-lineups/double-fitness-boost-how-netherlands-could-line-up-vs-morocco_600224.html",
-        "https://www.sportsmole.co.uk/football/netherlands/world-cup-2026/predicted-lineups/ouahbi-to-make-changes-how-morocco-could-line-up-vs-netherlands_600225.html",
+        "https://uk.sports.yahoo.com/news/netherlands-xi-vs-morocco-predicted-152400279.html",
         "https://www.espn.com/soccer/story/_/id/49199529/fifa-world-cup-2026-netherlands-vs-morocco-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups",
-        "https://sports.yahoo.com/articles/preview-netherlands-vs-morocco-team-010000608.html"
+        "https://www.lineups.com/betting/netherlands-morocco-starting-11-starting-lineups-formations-key-information/",
+        "https://www.g.rotowire.com/soccer/article/netherlands-vs-morocco-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120071"
       ]
     },
     {
