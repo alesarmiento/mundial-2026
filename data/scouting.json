@@ -3,33 +3,10 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-06-29T03:30:00Z",
+    "actualizado": "2026-06-29T19:10:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "Brazil",
-      "away": "Japan",
-      "fecha": "2026-06-29",
-      "estado_alineacion": "probable",
-      "xi_local": "Alisson; Danilo, Marquinhos, Gabriel Magalhaes, Douglas Santos; Bruno Guimaraes, Casemiro, Lucas Paqueta; Rayan, Matheus Cunha, Vinicius Junior (4-3-3 probable — Ancelotti mantiene el XI vs Escocia; Raphinha sigue de baja).",
-      "xi_visita": "Suzuki; Watanabe, Taniguchi, Hiroki Ito, Sugawara; Ao Tanaka, Kamada, Nakamura; Ritsu Doan, Daizen Maeda, Ueda (3-4-2-1 probable — Itakura se espera disponible; Kubo descartado).",
-      "bajas_local": [
-        "Raphinha (EXT D) — BAJA: lesion de isquiotibiales sufrida contra Haiti; se perdio el partido vs Escocia y sigue descartado para este partido segun Yahoo Sports / Sports Mole"
-      ],
-      "bajas_visita": [
-        "Takefusa Kubo (EXT) — BAJA: lesion de rodilla; no ha entrenado de forma completa; descartado para este partido segun Sports Mole",
-        "Ko Itakura (CB) — EN DUDA: salio en el primer tiempo vs Suecia por molestias; se espera que juegue y lidere la defensa como capitan, pero sin confirmacion oficial"
-      ],
-      "lectura": "Brasil lidera el Grupo C invicto con 9 pts (empate 1-1 vs Marruecos, 3-0 a Haiti, 3-0 a Escocia). Japon clasifica 2do del Grupo F con 5 pts (empate 2-2 vs Holanda, goleada 4-0 a Tunez, empate 1-1 vs Suecia). Vinicius Jr. lleva 4 goles en el torneo y es el motor ofensivo de Brasil junto a Matheus Cunha (3 goles). Japon utilizo un sistema 3-4-2-1 con gran solidez defensiva y batio a Alemania en Qatar 2022. Con Kubo descartado y posible duda de Itakura, el bloque defensivo japones podria verse comprometido. Brasil buscara la posesion y los espacios por las bandas para Vinicius y Cunha.",
-      "lean": "Brasil es favorito claro (~55% mercado). Su ataque con Vinicius, Cunha y el joven Rayan tiene calidad individual superior. Sin embargo, Japon demostro en Qatar 2022 que puede eliminar a potencias europeas y sudamericanas. Con Kubo fuera e Itakura en duda, el bloque defensivo japones corre riesgo por banda. Lean Brasil, pero Japon tiene con que sorprender si sus contragolpes con Doan y Maeda funcionan.",
-      "fuentes": [
-        "https://uk.sports.yahoo.com/news/brazil-xi-vs-japan-confirmed-160845015.html",
-        "https://www.sportsmole.co.uk/football/japan/world-cup-2026/predicted-lineups/defensive-injury-doubt-predicted-japan-xi-vs-brazil_600207.html",
-        "https://www.espn.com/soccer/story/_/id/49194679/brazil-vs-japan-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups",
-        "https://www.sportsmole.co.uk/football/brazil/world-cup-2026/preview/brazil-vs-japan-prediction-team-news-lineups_600204.html"
-      ]
-    },
     {
       "home": "Germany",
       "away": "Paraguay",

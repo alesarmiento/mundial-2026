@@ -2,7 +2,7 @@
   "_meta": {
     "descripcion": "Ledger de resultados REALES. Cada partido entra con su fuente. NUNCA se inventa un marcador. Si no se puede verificar, no se agrega.",
     "fase_valores": "grupos | dieciseisavos | octavos | cuartos | semis | tercer_puesto | final",
-    "ultima_fecha_cargada": "2026-06-28"
+    "ultima_fecha_cargada": "2026-06-29"
   },
   "partidos": [
     {
@@ -733,6 +733,15 @@
       "gl": 0,
       "gv": 1,
       "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021518 + https://www.espn.com/soccer/match/_/gameId/760486/canada-south-africa + https://sports.yahoo.com/soccer/live/world-cup-live-updates-results-canada-vs-south-africa-kicks-off-round-of-32-173000083.html (South Africa 0-1 Canada FT; Stephen Eustaquio en tiempo de descuento; Canada avanza a octavos por primera vez en su historia; Alphonso Davies entro de cambio en el minuto 75; confirmado FIFA / ESPN / Yahoo Sports / CBC)"
+    },
+    {
+      "fecha": "2026-06-29",
+      "fase": "dieciseisavos",
+      "local": "Brazil",
+      "visita": "Japan",
+      "gl": 2,
+      "gv": 1,
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760487/japan-brazil (Brazil 2-1 Japan FT; Kaishu Sano 29' (JPN), Casemiro 56' header (BRA), Gabriel Martinelli 90+6' (BRA — asistencia Bruno Guimaraes, gol sobre la hora en el 6to minuto de descuento); Brasil avanza a octavos; confirmado ESPN / CBS Sports / NBC Sports / Yahoo Sports / Al Jazeera)"
     }
   ]
 }
