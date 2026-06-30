@@ -3,7 +3,7 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-06-30T03:10:00Z",
+    "actualizado": "2026-06-30T17:20:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
@@ -11,19 +11,18 @@
       "home": "Ivory Coast",
       "away": "Norway",
       "fecha": "2026-06-30",
-      "estado_alineacion": "probable",
-      "xi_local": "Sangare; Aurier, Agbadou, Deli, Boly; Kessie, Sangaré; Pepe, Zaha, Diallo; Gradel (o Haller) (4-2-3-1 probable — Agbadou regresa tras perderse el partido vs Curacao).",
-      "xi_visita": "Nyland; Ryerson, Hanche-Olsen, Ostigard; Pedersen, Nusa, Odegaard, Aursnes; Sorloth; Haaland, Bobb (4-3-3 probable — Odegaard y Nusa regresan tras rotar vs Francia).",
+      "estado_alineacion": "confirmada",
+      "xi_local": "Fofana; Konan, Kossounou, Doue, Agbadou; Kessie; Sangare, Inao Oulai, Diomande, Pepe; Bonny (4-1-4-1 confirmada — Amad Diallo en banco; Bonny como 9).",
+      "xi_visita": "Nyland; Ajer, Moller Wolfe, M.H. Pedersen, Heggem; P. Berg, Berge, Odegaard; Sorloth, Haaland, Nusa (4-3-3 confirmada — Berg y Berge titulares; Heggem en lateral izquierdo).",
       "bajas_local": [
-        "Emmanuel Agbadou (CB) — regresa tras perderse la jornada vs Curacao; se espera en el XI",
-        "Amad Diallo (MO) — EN DUDA: fue cambiado en el partido vs Curacao; se evalua para el partido"
+        "Amad Diallo — NO TITULAR: confirmado en banco; Bonny es el 9 confirmado"
       ],
       "bajas_visita": [],
-      "lectura": "Costa de Marfil clasifica 2do del Grupo E con 6 pts (1-0 a Ecuador, 1-2 vs Alemania, 2-0 a Curacao; Pepe con doblete en el ultimo partido). Noruega avanza 2do del Grupo I con 7 pts (4-1 a Irak, 3-2 a Senegal, 1-4 vs Francia — pero Solbakken roto muchos titulares vs Francia; Haaland, Odegaard y Nusa descansaron). Con los titulares de vuelta, Noruega muestra su verdadera cara. Nicolas Pepe (2 goles vs Curacao) es el motor ofensivo marfileno.",
-      "lean": "Noruega es favorita para el mercado (~47%) gracias a Haaland (4 goles en el torneo) y al retorno de Odegaard y Nusa. Costa de Marfil puede competir si Agbadou esta al 100% en defensa y si Diallo esta disponible por el costado. Lean Noruega, con mucho peso en el duelo Haaland vs la defensa marfilena.",
+      "lectura": "Costa de Marfil 2do del Grupo E con 6 pts (Pepe doblete vs Curacao). Noruega 2do del Grupo I con 7 pts — Haaland, Odegaard y Nusa regresan al XI completo tras rotar vs Francia. CIV juega 4-1-4-1 con Bonny como unica punta y Pepe por dentro. Noruega presenta su once de gala con Sorloth-Haaland-Nusa arriba y Berg+Berge controlando el centro. Partido en curso (KO 17:00 UTC).",
+      "lean": "Noruega favorita (~47% mercado) con Haaland (4 goles en el torneo) y Odegaard como gran amenaza. Costa de Marfil puede competir con Kessie y Sangare cerrando el mediocampo y Pepe generando peligro. Lean Noruega.",
       "fuentes": [
-        "https://www.goal.com/en/news/ivory-coast-norway-world-cup-preview/bltc20cf346c3521000",
-        "https://sports.yahoo.com/articles/preview-ivory-coast-vs-norway-170000026.html"
+        "https://www.fanduel.com/research/ivory-coast-vs-norway-confirmed-lineups-and-formations-today-predictions-world-cup-2026",
+        "https://worldsoccertalk.com/world-cup/is-erling-haaland-playing-ivory-coast-vs-norway-confirmed-lineups-for-the-2026-world-cup-match/"
       ]
     },
     {
@@ -31,16 +30,17 @@
       "away": "Sweden",
       "fecha": "2026-06-30",
       "estado_alineacion": "probable",
-      "xi_local": "Maignan; Kounde, Saliba, Upamecano, T.Hernandez; Tchouameni, Rabiot; Dembele, Olise, Barcola; Mbappe (4-2-3-1 probable).",
-      "xi_visita": "Zetterström; Lagerbielke, Lindelof, Ekdal (o Starfelt); Bernhardsson, Svensson, Ayari, Gudmundsson; Elanga, Gyokeres, Isak (4-4-2 o 3-4-2-1 en duda — formacion afectada por baja de Hien).",
+      "xi_local": "Maignan; Kounde, Upamecano, Saliba, T.Hernandez; Tchouameni, Rabiot; Olise, Dembele, Doue; Mbappe (4-2-3-1 probable — Saliba regresa tras descanso preventivo vs Noruega por molestia de espalda; Doue reemplaza a Barcola).",
+      "xi_visita": "Zetterström; Lagerbielke, Lindelof, Gudmundsson; Bernhardsson, Bergvall, Ayari, Stroud; Elanga, Gyokeres, Isak (3-4-3 probable — Lindelof cae a CB para cubrir la baja de Hien; Gudmundsson tambien como CB).",
       "bajas_local": [],
       "bajas_visita": [
-        "Isak Hien (CB) — BAJA POR TORNEO: lesion de isquiotibiales sufrida en el partido vs Japon; el esquema defensivo de Suecia debera reorganizarse"
+        "Isak Hien (CB) — BAJA POR TORNEO: lesion de isquiotibiales sufrida en partido vs Japon; Lindelof y Gudmundsson reorganizan la defensa en 3-4-3"
       ],
-      "lectura": "Francia lidera el Grupo I invicta con 9 pts (3-1 a Senegal, 3-0 a Irak, 4-1 a Noruega). Suecia clasifica como uno de los mejores terceros del Grupo F con 4 pts (5-1 a Tunez, 1-5 vs Holanda, 1-1 vs Japon). Dembele hat-trick vs Noruega; Mbappe recuperado. La gran baja de Suecia es Hien en defensa — Lindelof y Lagerbielke deberan liderar una linea reorganizada. Gyokeres es la unica amenaza real de los suecos.",
-      "lean": "Francia es clara favorita (~74% mercado) con calidad individual en cada linea. La baja de Hien debilita significativamente la defensa sueca ante el ataque frances con Dembele, Mbappe y Barcola. Lean Francia con comodidad, aunque Gyokeres e Isak pueden crear problemas en un mal dia de los galos.",
+      "lectura": "Francia lidera Grupo I invicta con 9 pts (3-1 a Senegal, 3-0 a Irak, 4-1 a Noruega; Dembele hat-trick). Suecia mejor tercero del Grupo F con 4 pts (5-1 a Tunez, 1-5 vs Holanda, 1-1 vs Japon). Saliba regresa al XI tras descanso preventivo. Suecia sin Hien reorganiza la defensa en tres. Gyokeres e Isak son la unica amenaza real. KO 21:00 UTC.",
+      "lean": "Francia favorita clara (~74% mercado). Sin Hien, la defensa sueca esta expuesta ante Dembele, Mbappe y Doue. Lean Francia, aunque Gyokeres puede anotar si tiene espacio al contragolpe.",
       "fuentes": [
-        "https://www.sportsmole.co.uk/football/france/world-cup-2026/preview/france-vs-sweden-prediction-team-news-lineups_600264.html"
+        "https://www.si.com/soccer/france-predicted-lineup-vs-sweden-world-cup-6-30-26",
+        "https://www.aljazeera.com/news/2026/6/30/france-sweden-fifa-world-cup-round-of-32-prediction-schedule-lineups-mbappe-dembele"
       ]
     },
     {
@@ -48,17 +48,15 @@
       "away": "Ecuador",
       "fecha": "2026-06-30",
       "estado_alineacion": "probable",
-      "xi_local": "Rangel; Sanchez, Montes, Vasquez, Gallardo; Gutierrez, Lira, Fidalgo; Alvarado, Jimenez, Quinones (4-3-3 probable — Jimenez regresa tras ser reservado vs Czechia).",
-      "xi_visita": "Galindez; Franco, Ordonez, Pacho, Hincapie; Yeboah, M.Caicedo, Vite, Angulo; Plata, E.Valencia (4-4-2 probable).",
+      "xi_local": "Rangel; Sanchez, Montes, Vasquez, Gallardo; Lira, Romo, Gutierrez; Alvarado, Jimenez, Quinones (4-3-3 probable — Jimenez regresa al XI; Romo en el doble pivote).",
+      "xi_visita": "Galindez; Franco, Ordonez, Pacho, Hincapie; Yeboah, M.Caicedo, Vite, Angulo; Plata, E.Valencia (4-4-2 probable — Caicedo capitan; Valencia a 1 gol de los 50 internacionales).",
       "bajas_local": [],
-      "bajas_visita": [
-        "Enner Valencia — EN DUDA: forma fisica cuestionada pero se espera que este disponible para este partido clave"
-      ],
-      "lectura": "Mexico cierra el Grupo A invicto con 9 pts y sin goles en contra (2-0 a Sudafrica, 1-0 a Corea del Sur, 3-0 a Czechia). Ecuador avanza como uno de los mejores terceros del Grupo E con 4 pts: la gran hazana fue el 2-1 a Alemania en la ultima jornada (goles de Angulo y Plata). Moisés Caicedo es el organizador del medio de Ecuador. Mexico llega con mucha confianza pero enfrentara a un Ecuador con una moral altisima tras eliminar al campeon mundial anterior.",
-      "lean": "Mexico es favorito en las casas (~43%) pero Ecuador al ~26% sorprende como 'underdog' peligroso tras vencer a Alemania. Si Mexico no logra marcar rapido, Ecuador puede salir a contragolpear con Plata y Caicedo. Lean Mexico en tiempo regular, pero partido mucho mas parejo de lo que la diferencia en el ranking sugiere.",
+      "bajas_visita": [],
+      "lectura": "Mexico invicto con 9 pts en Grupo A (2-0 a Sudafrica, 1-0 a Corea del Sur, 3-0 a Czechia). Ecuador mejor tercero del Grupo E con 4 pts tras el sorprendente 2-1 a Alemania (Angulo y Plata). Caicedo organiza el mediocampo ecuatoriano. Mexico juega en el Estadio Azteca (local de facto). Valencia busca su gol 50 con la seleccion. KO 01:00 UTC del 1 de julio.",
+      "lean": "Mexico favorito (~43% mercado) jugando en su estadio, pero Ecuador (~26%) es 'underdog' muy peligroso tras eliminar a Alemania. Plata y Caicedo al contragolpe son la principal amenaza. Lean Mexico, partido parejo.",
       "fuentes": [
-        "https://www.sportsmole.co.uk/football/mexico/world-cup-2026/predicted-lineups/can-el-tri-continue-perfect-run-predicted-mexico-xi-vs-ecuador_600283.html",
-        "https://sports.yahoo.com/articles/does-mexico-play-round-32-001757982.html"
+        "https://ca.sports.yahoo.com/news/mexico-vs-ecuador-lineups-confirmed-112014312.html",
+        "https://www.sportsmole.co.uk/football/mexico/world-cup-2026/preview/mexico-vs-ecuador-prediction-team-news-lineups_600278.html"
       ]
     }
   ]
