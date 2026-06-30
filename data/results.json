@@ -2,7 +2,7 @@
   "_meta": {
     "descripcion": "Ledger de resultados REALES. Cada partido entra con su fuente. NUNCA se inventa un marcador. Si no se puede verificar, no se agrega.",
     "fase_valores": "grupos | dieciseisavos | octavos | cuartos | semis | tercer_puesto | final",
-    "ultima_fecha_cargada": "2026-06-29"
+    "ultima_fecha_cargada": "2026-06-30"
   },
   "partidos": [
     {
@@ -742,6 +742,16 @@
       "gl": 2,
       "gv": 1,
       "fuente": "https://www.espn.com/soccer/match/_/gameId/760487/japan-brazil (Brazil 2-1 Japan FT; Kaishu Sano 29' (JPN), Casemiro 56' header (BRA), Gabriel Martinelli 90+6' (BRA — asistencia Bruno Guimaraes, gol sobre la hora en el 6to minuto de descuento); Brasil avanza a octavos; confirmado ESPN / CBS Sports / NBC Sports / Yahoo Sports / Al Jazeera)"
+    },
+    {
+      "fecha": "2026-06-29",
+      "fase": "dieciseisavos",
+      "local": "Germany",
+      "visita": "Paraguay",
+      "gl": 1,
+      "gv": 1,
+      "ganador": "Paraguay",
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760489/paraguay-germany (Germany 1-1 Paraguay FT aet; Enciso 42' pen (PAR), Havertz 54' (GER); gol de Tah en el 105' anulado por VAR; Paraguay gana 4-3 en penales: Gill ataja a Havertz y Woltemade; Tah falla al cielo; Canale convierte el definitivo; UPSETAZO historico, Alemania eliminada; confirmado ESPN / FOX Sports / CBS Sports / France24 / Al Jazeera / Outlook India)"
     }
   ]
 }

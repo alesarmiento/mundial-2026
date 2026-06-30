@@ -3,36 +3,10 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-06-29T20:15:00Z",
+    "actualizado": "2026-06-30T00:10:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "Germany",
-      "away": "Paraguay",
-      "fecha": "2026-06-29",
-      "estado_alineacion": "confirmada",
-      "xi_local": "Neuer; Kimmich, Tah, Rudiger, Brown; Nmecha, Pavlovic; Sane, Undav, Wirtz; Havertz (4-2-3-1 CONFIRMADA — Undav titular en lugar de Musiala; Brown confirma en el lateral izquierdo).",
-      "xi_visita": "Gill; Caceres, Gustavo Gomez, Canale, Junior Alonso; Almiron, Bobadilla, Cubas, Galarza, Enciso; Avalos (4-5-1 CONFIRMADA — Almiron regresa tras suspension; Canale y Gustavo Gomez en centrales; Bobadilla en el costado derecho del mediocampo).",
-      "bajas_local": [
-        "Nico Schlotterbeck (CB) — BAJA POR TORNEO: lesion de ligamentos de rodilla sufrida vs Costa de Marfil; Rudiger ocupa el puesto",
-        "Jamal Musiala (AM) — DESCANSADO: fuera del XI confirmado; Nagelsmann opta por Undav como mediapunta mas orientado al gol"
-      ],
-      "bajas_visita": [
-        "Diego Gomez (CM) — SUSPENDIDO: tarjetas acumuladas; era tomador habitual de balones parados — baja sensible para Paraguay",
-        "Omar Alderete (CB) — FUERA: no esta en el XI confirmado; Canale ocupa el puesto central junto a Gustavo Gomez"
-      ],
-      "lectura": "Alemania clasifica 1ro del Grupo E con 6 pts (7-1 a Curacao, 2-1 a Costa de Marfil) pero cayo 1-2 vs Ecuador en la ultima jornada — senales de vulnerabilidad defensiva ante presion alta. Paraguay avanza como uno de los mejores terceros con 4 pts (1-1 vs Canada, 1-0 a Turquia, 0-0 vs Australia). En el XI confirmado, la sorpresa alemana es Undav por Musiala como mediapunta; Nagelsmann busca mas potencia en el remate que creatividad. Paraguay de 4-5-1 usa a Almiron y Enciso en los costados del mediocampo para el contragolpe, pero pierde a Alderete en la defensa central (Canale entra en su lugar).",
-      "lean": "Alemania es favorita clara (~70% mercado) con Wirtz, Sane y Havertz como motor; Undav aporta movilidad y llegada al area. Paraguay llegara replegado en 4-5-1 buscando el contragolpe con Almiron, Enciso y el rapido Avalos. La clave es si Alemania puede romper el bloque paraguayo sin los espacios que le dio Ecuador. Lean Alemania, pero si Paraguay aguanta los primeros 30 minutos, el partido se puede complicar.",
-      "fuentes": [
-        "https://worldsoccertalk.com/world-cup/germany-vs-paraguay-confirmed-lineups-for-the-2026-world-cup-game/",
-        "https://khelnow.com/football/world-football-paraguay-starting-lineup-vs-germany-fifa-world-cup-202606",
-        "https://ca.sports.yahoo.com/news/confirmed-lineups-germany-vs-paraguay-191600253.html",
-        "https://bulinews.com/confirmed-lineups-germany-paraguay",
-        "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021513",
-        "https://www.sportsmole.co.uk/football/germany/world-cup-2026/team-news/germany-vs-paraguay-injury-suspension-list-predicted-xis_600233.html"
-      ]
-    },
     {
       "home": "Netherlands",
       "away": "Morocco",
