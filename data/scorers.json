@@ -2,14 +2,14 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://www.skysports.com/football/ivory-coast-vs-norway/549843 + https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-games-2026-june-30-live-updates-rcna352364 + Yahoo Sports / Al Jazeera (30-jun-2026 ~19:10 UTC). R32 CIV-NOR: Haaland 86' = 5G total (asciende al 2do lugar, 1G atras de Messi). Nusa 1G (NOR, no alcanza top15). Amad Diallo 1G (CIV, no alcanza top15). Tabla actualizada.",
+    "fuente": "https://www.foxsports.com/stories/soccer/2026-fifa-world-cup-golden-boot-tracker + https://www.fifa.com/en/match-centre/match/17/285023/289287/400021523 (France 3-0 Sweden FT; Mbappe x2 = 6G total, iguala a Messi en la cima de la Bota de Oro; Barcola 1G no alcanza top-15; confirmado Fox Sports / FIFA / Yahoo Sports / NBC Sports)",
     "actualizado": "2026-06-30"
   },
   "jugadores": [
     {"jugador": "Lionel Messi", "equipo": "Argentina", "goles": 6},
+    {"jugador": "Kylian Mbappe", "equipo": "France", "goles": 6},
     {"jugador": "Erling Haaland", "equipo": "Norway", "goles": 5},
     {"jugador": "Ousmane Dembele", "equipo": "France", "goles": 4},
-    {"jugador": "Kylian Mbappe", "equipo": "France", "goles": 4},
     {"jugador": "Vinicius Junior", "equipo": "Brazil", "goles": 4},
     {"jugador": "Jonathan David", "equipo": "Canada", "goles": 3},
     {"jugador": "Deniz Undav", "equipo": "Germany", "goles": 3},
