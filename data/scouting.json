@@ -3,28 +3,10 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-06-30T17:20:00Z",
+    "actualizado": "2026-06-30T19:15:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "Ivory Coast",
-      "away": "Norway",
-      "fecha": "2026-06-30",
-      "estado_alineacion": "confirmada",
-      "xi_local": "Fofana; Konan, Kossounou, Doue, Agbadou; Kessie; Sangare, Inao Oulai, Diomande, Pepe; Bonny (4-1-4-1 confirmada — Amad Diallo en banco; Bonny como 9).",
-      "xi_visita": "Nyland; Ajer, Moller Wolfe, M.H. Pedersen, Heggem; P. Berg, Berge, Odegaard; Sorloth, Haaland, Nusa (4-3-3 confirmada — Berg y Berge titulares; Heggem en lateral izquierdo).",
-      "bajas_local": [
-        "Amad Diallo — NO TITULAR: confirmado en banco; Bonny es el 9 confirmado"
-      ],
-      "bajas_visita": [],
-      "lectura": "Costa de Marfil 2do del Grupo E con 6 pts (Pepe doblete vs Curacao). Noruega 2do del Grupo I con 7 pts — Haaland, Odegaard y Nusa regresan al XI completo tras rotar vs Francia. CIV juega 4-1-4-1 con Bonny como unica punta y Pepe por dentro. Noruega presenta su once de gala con Sorloth-Haaland-Nusa arriba y Berg+Berge controlando el centro. Partido en curso (KO 17:00 UTC).",
-      "lean": "Noruega favorita (~47% mercado) con Haaland (4 goles en el torneo) y Odegaard como gran amenaza. Costa de Marfil puede competir con Kessie y Sangare cerrando el mediocampo y Pepe generando peligro. Lean Noruega.",
-      "fuentes": [
-        "https://www.fanduel.com/research/ivory-coast-vs-norway-confirmed-lineups-and-formations-today-predictions-world-cup-2026",
-        "https://worldsoccertalk.com/world-cup/is-erling-haaland-playing-ivory-coast-vs-norway-confirmed-lineups-for-the-2026-world-cup-match/"
-      ]
-    },
     {
       "home": "France",
       "away": "Sweden",
