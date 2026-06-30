@@ -3,31 +3,10 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-06-30T00:10:00Z",
+    "actualizado": "2026-06-30T03:10:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "Netherlands",
-      "away": "Morocco",
-      "fecha": "2026-06-29",
-      "estado_alineacion": "confirmada",
-      "xi_local": "Verbruggen; Dumfries, Van Dijk, Van Hecke, Van de Ven; Gravenberch, De Jong, Reijnders; Malen, Brobbey, Gakpo (4-3-3 CONFIRMADA — Ake sigue fuera; Van de Ven como lateral izquierdo; Dumfries y Brobbey titulares confirmados).",
-      "xi_visita": "Bounou; Hakimi, Issa Diop, Riad, Mazraoui; El Aynaoui, Bouaddi; Brahim Diaz, Ounahi, El Khannouss; Saibari (4-2-3-1 CONFIRMADA — Issa Diop titular en defensa en lugar de Halhal; Hakimi, Bouaddi, Ounahi y Mazraoui de vuelta al XI).",
-      "bajas_local": [
-        "Nathan Ake (LB) — BAJA: molestia muscular; Van de Ven ocupa el lateral izquierdo titular"
-      ],
-      "bajas_visita": [],
-      "lectura": "Holanda cierra el Grupo F invicta con 9 pts (2-2 vs Japon, 5-1 a Suecia, 3-1 a Tunez). Marruecos avanza 2do del Grupo C con 6 pts (empate 1-1 vs Brasil, 1-0 a Escocia, 4-2 a Haiti). Brobbey (3 goles) y Gakpo son la artilleria holandesa, ambos confirmados como titulares. Marruecos recupera a Hakimi, Bouaddi, Ounahi y Mazraoui que rotaron en la fase de grupos; la sorpresa es Issa Diop en lugar de Halhal en la defensa. Saibari (3 goles en el torneo) y Brahim Diaz son las cartas ofensivas del equipo de Regragui. Recordatorio historico clave: Marruecos elimino a Holanda en Qatar 2022 (2-1).",
-      "lean": "Holanda entra como favorita en las casas (~44%) pero Marruecos con sus titulares recuperados es un rival de nivel completamente distinto. Hakimi por derecha y Saibari como punta son amenazas reales. La clave sera si Brobbey y Gakpo pueden generar situaciones claras ante el bloque bajo de Regragui. Lean Holanda por calidad individual, pero partido muy parejo — Marruecos sabe lo que hace en este formato y tiene historial reciente a favor.",
-      "fuentes": [
-        "https://www.sportsmole.co.uk/football/netherlands/world-cup-2026/predicted-lineups/double-fitness-boost-how-netherlands-could-line-up-vs-morocco_600224.html",
-        "https://uk.sports.yahoo.com/news/netherlands-xi-vs-morocco-predicted-152400279.html",
-        "https://www.espn.com/soccer/story/_/id/49199529/fifa-world-cup-2026-netherlands-vs-morocco-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups",
-        "https://www.lineups.com/betting/netherlands-morocco-starting-11-starting-lineups-formations-key-information/",
-        "https://www.g.rotowire.com/soccer/article/netherlands-vs-morocco-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120071"
-      ]
-    },
     {
       "home": "Ivory Coast",
       "away": "Norway",
