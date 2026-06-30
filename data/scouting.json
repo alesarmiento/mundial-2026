@@ -3,7 +3,7 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-06-30T19:15:00Z",
+    "actualizado": "2026-06-30T21:15:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
@@ -11,15 +11,17 @@
       "home": "France",
       "away": "Sweden",
       "fecha": "2026-06-30",
-      "estado_alineacion": "probable",
-      "xi_local": "Maignan; Kounde, Upamecano, Saliba, T.Hernandez; Tchouameni, Rabiot; Olise, Dembele, Doue; Mbappe (4-2-3-1 probable — Saliba regresa tras descanso preventivo vs Noruega por molestia de espalda; Doue reemplaza a Barcola).",
-      "xi_visita": "Zetterström; Lagerbielke, Lindelof, Gudmundsson; Bernhardsson, Bergvall, Ayari, Stroud; Elanga, Gyokeres, Isak (3-4-3 probable — Lindelof cae a CB para cubrir la baja de Hien; Gudmundsson tambien como CB).",
-      "bajas_local": [],
+      "estado_alineacion": "confirmada",
+      "xi_local": "Maignan; Kounde, Saliba, Upamecano, Digne; Tchouameni, Rabiot; Dembele, Olise, Barcola; Mbappe (4-2-3-1 confirmado — Digne reemplaza a T.Hernandez en LI; Barcola en el XI en lugar de Doue).",
+      "xi_visita": "Zetterström; Lagerbielke, Lindelof, Gudmundsson; Svensson, Bergvall, Ayari, Stroud; Elanga, Gyokeres, Isak (3-4-3 confirmado — Svensson reemplaza a Bernhardsson; Lindelof y Gudmundsson como CB3 junto a Lagerbielke).",
+      "bajas_local": [
+        "Marcus Thuram (DC) — BAJA: lesion de pantorrilla confirmada pre-partido; fuente Yardbarker/World Soccer Talk"
+      ],
       "bajas_visita": [
         "Isak Hien (CB) — BAJA POR TORNEO: lesion de isquiotibiales sufrida en partido vs Japon; Lindelof y Gudmundsson reorganizan la defensa en 3-4-3"
       ],
-      "lectura": "Francia lidera Grupo I invicta con 9 pts (3-1 a Senegal, 3-0 a Irak, 4-1 a Noruega; Dembele hat-trick). Suecia mejor tercero del Grupo F con 4 pts (5-1 a Tunez, 1-5 vs Holanda, 1-1 vs Japon). Saliba regresa al XI tras descanso preventivo. Suecia sin Hien reorganiza la defensa en tres. Gyokeres e Isak son la unica amenaza real. KO 21:00 UTC.",
-      "lean": "Francia favorita clara (~74% mercado). Sin Hien, la defensa sueca esta expuesta ante Dembele, Mbappe y Doue. Lean Francia, aunque Gyokeres puede anotar si tiene espacio al contragolpe.",
+      "lectura": "Francia lidera Grupo I invicta con 9 pts (3-1 a Senegal, 3-0 a Irak, 4-1 a Noruega; Dembele hat-trick). Suecia mejor tercero del Grupo F con 4 pts (5-1 a Tunez, 1-5 vs Holanda, 1-1 vs Japon). Digne juega por T.Hernandez; Barcola en el XI; Thuram baja por pantorrilla. Suecia sin Hien reorganiza en 3-4-3 con Svensson por Bernhardsson. Gyokeres e Isak son la unica amenaza real. KO 21:00 UTC (partido EN CURSO al actualizar).",
+      "lean": "Francia favorita clara (~74% mercado). Sin Hien y con Thuram baja, Svensson-Bergvall-Ayari debe contener a Dembele, Mbappe y Barcola. Lean Francia, aunque Gyokeres puede anotar al contragolpe si Upamecano-Saliba bajan la guardia.",
       "fuentes": [
         "https://www.si.com/soccer/france-predicted-lineup-vs-sweden-world-cup-6-30-26",
         "https://www.aljazeera.com/news/2026/6/30/france-sweden-fifa-world-cup-round-of-32-prediction-schedule-lineups-mbappe-dembele"
