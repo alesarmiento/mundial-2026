@@ -2,8 +2,8 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/adidas-golden-boot-race-top-scorer + https://sports.yahoo.com/articles/world-cup-golden-boot-live-041757844.html + ESPN/CBS Sports (29-jun-2026 ~19:00 UTC). R32: Brazil 2-1 Japan — Casemiro 1G y Martinelli 1G (no alcanzan el top 15, 1 gol c/u). Tabla sin cambios en el top 15.",
-    "actualizado": "2026-06-29"
+    "fuente": "https://www.outlookindia.com/sports/football/netherlands-vs-morocco-live-score-fifa-world-cup-2026-round-of-32-ned-v-mar-updates-estadio-monterrey-highlights + https://sports.yahoo.com/soccer/live/world-cup-2026-scores-results-schedule-live-updates-round-of-32-173000083.html + Al Jazeera / NBC Sports (30-jun-2026 ~04:00 UTC). R32 NED-MAR: Gakpo 72' = 3G total (sube al top empate 3G). Issa Diop 1G (MAR, no alcanza top). Tabla actualizada.",
+    "actualizado": "2026-06-30"
   },
   "jugadores": [
     {"jugador": "Lionel Messi", "equipo": "Argentina", "goles": 6},
@@ -20,7 +20,7 @@
     {"jugador": "Ismael Saibari", "equipo": "Morocco", "goles": 3},
     {"jugador": "Harry Kane", "equipo": "England", "goles": 3},
     {"jugador": "Yoane Wissa", "equipo": "DR Congo", "goles": 3},
-    {"jugador": "Cody Gakpo", "equipo": "Netherlands", "goles": 2},
+    {"jugador": "Cody Gakpo", "equipo": "Netherlands", "goles": 3},
     {"jugador": "Jude Bellingham", "equipo": "England", "goles": 2},
     {"jugador": "Mikel Oyarzabal", "equipo": "Spain", "goles": 2},
     {"jugador": "Leandro Trossard", "equipo": "Belgium", "goles": 2},
