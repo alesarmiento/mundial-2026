@@ -3,7 +3,7 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-07-01T19:15:00Z",
+    "actualizado": "2026-07-01T20:25:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
@@ -11,18 +11,19 @@
       "home": "Belgium",
       "away": "Senegal",
       "fecha": "2026-07-01",
-      "estado_alineacion": "probable",
-      "xi_local": "Courtois; Castagne, Debast, De Winter, De Cuyper; Tielemans, Onana, De Bruyne (c); Doku, Lukaku, Trossard (4-3-3 probable — De Bruyne como eje creativo; Doku y Trossard en las bandas; Lukaku como centrodelantero).",
-      "xi_visita": "Seny Dieng (Mendy BAJA CONFIRMADA); Jakobs, Koulibaly (c), Niakhate, El Hadji Malick Diouf; Gueye, Pape Matar Sarr, Camara; Ismaila Sarr, Jackson, Mane (4-3-3 probable).",
+      "estado_alineacion": "confirmada",
+      "xi_local": "Courtois; Castagne, Mechele, Theate, De Cuyper; Tielemans, Vanaken; Doku, De Bruyne (c), Trossard; De Ketelaere (4-2-3-1 CONFIRMADO — SORPRESA: Lukaku al banco; De Ketelaere como falso-9; Mechele y Theate reemplazan a Debast/De Winter; Vanaken en lugar de Onana).",
+      "xi_visita": "Mory Diaw (Mendy BAJA, Seny Dieng al banco — titulariza Diaw); Diatta, Niakhate, Pathe Ciss, Jakobs; H.Diarra, Gueye (c), P.Gueye; I.Ndiaye, Mane, I.Sarr (4-3-3 CONFIRMADO — SORPRESA: Koulibaly al banco; Pathe Ciss de CB; Iliman Ndiaye primer titular del torneo).",
       "bajas_local": [],
-      "bajas_visita": ["Edouard Mendy (portero titular, BAJA CONFIRMADA — lesion de rodilla sufrida vs Noruega; no estuvo en el entrenamiento del martes; el tecnico Thiaw confirmo que no jugara; entra Seny Dieng)"],
-      "lectura": "Belgium 1ro del Grupo G con 5 pts, pero su paso de ronda fue ajustado: solo 1 victoria convincente (5-1 a NZ) y 2 empates (Egypt 1-1, Iran 0-0, con Ngoy expulsado). Senegal clasifico como 3ro del Grupo I con 6 pts: perdio 1-4 vs Francia y 2-3 vs Noruega, pero destruyo a Iraq 5-0. Mane, Jackson e Ismaila Sarr (3 goles en el torneo) son de los extremos mas peligrosos del torneo. La baja CONFIRMADA de Mendy en el arco (entra Dieng) es el factor clave del partido — le da a Lukaku y Doku una ventaja psicologica frente a un portero con menos experiencia en grandes escenarios. De Bruyne y Trossard (2 goles) organizan el ataque belga. KO 20:00 UTC, Lumen Field, Seattle.",
-      "lean": "Belgium favorito (~45% mercado), ahora con ventaja extra por la baja confirmada de Mendy. Senegal sigue peligroso con Mane, Jackson y Sarr, pero la porteria con Dieng es un factor de incertidumbre real. Lean Belgium moderado.",
+      "bajas_visita": ["Edouard Mendy (portero titular, BAJA CONFIRMADA — lesion de rodilla vs Noruega; regreso al club para pruebas; no disponible; titulariza Mory Diaw, no Seny Dieng como se esperaba)"],
+      "lectura": "Belgium 1ro del Grupo G (5 pts, GD+4) pero con paso de ronda ajustado: victoria contundente 5-1 vs NZ, empates 1-1 vs Egypt y 0-0 vs Iran (Ngoy expulsado). Senegal 3ro del Grupo I (6 pts). Las grandes sorpresas de los XI confirmados: LUKAKU va al banco (De Ketelaere como falso-9) y KOULIBALY al banco (Pathe Ciss en el eje defensivo). En arco senegalés titulariza Mory Diaw, no Seny Dieng. De Bruyne es el cerebro creativo. Mane, Iliman Ndiaye e Ismaila Sarr (3 goles) forman el ataque. Partido en curso desde KO 20:00 UTC, Lumen Field, Seattle.",
+      "lean": "Belgium favorito (~45% mercado). La sorpresa de Lukaku al banco cambia la dinamica ofensiva — mas creacion que referencia. Koulibaly al banco es una incognita defensiva para Senegal. Mane y Sarr siguen siendo armas de alto nivel. Lean Belgium moderado.",
       "fuentes": [
-        "https://www.foxsports.com/articles/soccer/senegal-goalkeeper-edouard-mendy-out-with-injury-for-knockout-round-match-against-belgium",
-        "https://www.washingtonpost.com/sports/soccer/2026/06/30/edouard-mendy-world-cup-senegal-belgium/c3b599dc-74f3-11f1-b665-5f8be87f3787_story.html",
-        "https://www.rotowire.com/soccer/article/belgium-vs-senegal-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120376",
-        "https://www.sportsmole.co.uk/football/belgium/world-cup-2026/predicted-lineups/is-debast-back-for-the-knockouts-predicted-belgium-xi-vs-senegal_600367.html"
+        "https://www.moroccoworldnews.com/2026/07/326718/belgium-senegal-lineups-confirmed-lukaku-and-koulibaly-start-on-bench/",
+        "https://www.fanduel.com/research/belgium-vs-senegal-confirmed-lineups-and-formations-today-predictions-world-cup-2026",
+        "https://worldsoccertalk.com/world-cup/is-jeremy-doku-playing-belgium-vs-senegal-confirmed-lineups-for-the-2026-world-cup-game/",
+        "https://cryptobriefing.com/mory-diaw-senegal-goalkeeper-mendy-injury/",
+        "https://www.rotowire.com/soccer/article/belgium-vs-senegal-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120376"
       ]
     },
     {
