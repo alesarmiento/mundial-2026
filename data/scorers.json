@@ -2,25 +2,24 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://www.outlookindia.com/sports/football/england-vs-dr-congo-live-score-fifa-world-cup-2026-round-of-32-eng-v-cod-updates-atlanta-stadium-highlights + https://www.nbcsports.com/soccer/news/2026-world-cup-top-goalscorers-full-list-latest-on-race-for-the-golden-boot (Kane brace vs DR Congo eleva su cuenta a 5 goles — 13 en toda su carrera mundialista; empareja con Haaland en 3ro; confirmado Outlook India / Al Jazeera / NBC Sports / ESPN / VAVEL)",
+    "fuente": "https://www.espn.com/soccer/match/_/gameId/760493/senegal-belgium + https://www.goal.com/en/lists/world-cup-2026-golden-boot-standings-fifa-award/blt29fdba0896b8fd09 + https://sports.yahoo.com/soccer/article/world-cup-goal-leaders-golden-boot-lionel-messi-erling-haaland-kylian-mbappe-ousmane-dembele-010143798.html (Sarr anoto en Belgium 3-2 Senegal AET — 4 goles total, sube al grupo de 4; Mbappe 6 lider en asistencias sobre Messi 6; Kane y Haaland 5; confirmado ESPN / Goal.com / Yahoo Sports / FIFA)",
     "actualizado": "2026-07-01"
   },
   "jugadores": [
-    {"jugador": "Lionel Messi", "equipo": "Argentina", "goles": 6},
     {"jugador": "Kylian Mbappe", "equipo": "France", "goles": 6},
+    {"jugador": "Lionel Messi", "equipo": "Argentina", "goles": 6},
     {"jugador": "Erling Haaland", "equipo": "Norway", "goles": 5},
     {"jugador": "Harry Kane", "equipo": "England", "goles": 5},
     {"jugador": "Ousmane Dembele", "equipo": "France", "goles": 4},
     {"jugador": "Vinicius Junior", "equipo": "Brazil", "goles": 4},
+    {"jugador": "Ismaila Sarr", "equipo": "Senegal", "goles": 4},
     {"jugador": "Jonathan David", "equipo": "Canada", "goles": 3},
     {"jugador": "Deniz Undav", "equipo": "Germany", "goles": 3},
     {"jugador": "Brian Brobbey", "equipo": "Netherlands", "goles": 3},
     {"jugador": "Matheus Cunha", "equipo": "Brazil", "goles": 3},
-    {"jugador": "Ismaila Sarr", "equipo": "Senegal", "goles": 3},
     {"jugador": "Johan Manzambi", "equipo": "Switzerland", "goles": 3},
     {"jugador": "Ismael Saibari", "equipo": "Morocco", "goles": 3},
     {"jugador": "Yoane Wissa", "equipo": "DR Congo", "goles": 3},
-    {"jugador": "Cody Gakpo", "equipo": "Netherlands", "goles": 3},
-    {"jugador": "Julian Quinones", "equipo": "Mexico", "goles": 3}
+    {"jugador": "Cody Gakpo", "equipo": "Netherlands", "goles": 3}
   ]
 }
