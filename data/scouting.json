@@ -3,7 +3,7 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-07-01T18:15:00Z",
+    "actualizado": "2026-07-01T19:15:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
@@ -13,15 +13,16 @@
       "fecha": "2026-07-01",
       "estado_alineacion": "probable",
       "xi_local": "Courtois; Castagne, Debast, De Winter, De Cuyper; Tielemans, Onana, De Bruyne (c); Doku, Lukaku, Trossard (4-3-3 probable — De Bruyne como eje creativo; Doku y Trossard en las bandas; Lukaku como centrodelantero).",
-      "xi_visita": "Dieng o Diaw (Edouard Mendy en duda, lesion de rodilla); Jakobs, Koulibaly (c), Niakhate, El Hadji Malick Diouf; Gueye, Pape Matar Sarr, Camara; Ismaila Sarr, Jackson, Mane (4-3-3 probable — portero en duda es el principal factor de incertidumbre).",
+      "xi_visita": "Seny Dieng (Mendy BAJA CONFIRMADA); Jakobs, Koulibaly (c), Niakhate, El Hadji Malick Diouf; Gueye, Pape Matar Sarr, Camara; Ismaila Sarr, Jackson, Mane (4-3-3 probable).",
       "bajas_local": [],
-      "bajas_visita": ["Edouard Mendy (portero titular, esguince de rodilla — probable baja, en duda; si no juega entra Seny Dieng o Mory Diaw)"],
-      "lectura": "Belgium 1ro del Grupo G con 5 pts, pero su paso de ronda fue ajustado: solo 1 victoria convincente (5-1 a NZ) y 2 empates (Egypt 1-1, Iran 0-0, con Ngoy expulsado). Senegal clasifico como 3ro del Grupo I con 6 pts: perdio 1-4 vs Francia y 2-3 vs Noruega, pero destruyo a Iraq 5-0. Mane, Jackson e Ismaila Sarr (3 goles en el torneo) son de los extremos mas peligrosos del torneo. La posible baja de Mendy en el arco es el factor clave. De Bruyne y Trossard (2 goles) organizan el ataque belga. KO ~20:00 UTC, Lumen Field, Seattle.",
-      "lean": "Partido muy parejo. Belgium favorito leve (~45% mercado). Senegal peligroso en ataque con trio explosivo. Si Mendy no juega, la porteria senegalesa es vulnerable a Lukaku y Doku. Lean Belgium ligero, condicionado por la porteria de Senegal.",
+      "bajas_visita": ["Edouard Mendy (portero titular, BAJA CONFIRMADA — lesion de rodilla sufrida vs Noruega; no estuvo en el entrenamiento del martes; el tecnico Thiaw confirmo que no jugara; entra Seny Dieng)"],
+      "lectura": "Belgium 1ro del Grupo G con 5 pts, pero su paso de ronda fue ajustado: solo 1 victoria convincente (5-1 a NZ) y 2 empates (Egypt 1-1, Iran 0-0, con Ngoy expulsado). Senegal clasifico como 3ro del Grupo I con 6 pts: perdio 1-4 vs Francia y 2-3 vs Noruega, pero destruyo a Iraq 5-0. Mane, Jackson e Ismaila Sarr (3 goles en el torneo) son de los extremos mas peligrosos del torneo. La baja CONFIRMADA de Mendy en el arco (entra Dieng) es el factor clave del partido — le da a Lukaku y Doku una ventaja psicologica frente a un portero con menos experiencia en grandes escenarios. De Bruyne y Trossard (2 goles) organizan el ataque belga. KO 20:00 UTC, Lumen Field, Seattle.",
+      "lean": "Belgium favorito (~45% mercado), ahora con ventaja extra por la baja confirmada de Mendy. Senegal sigue peligroso con Mane, Jackson y Sarr, pero la porteria con Dieng es un factor de incertidumbre real. Lean Belgium moderado.",
       "fuentes": [
-        "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-senegal-live-stream-team-news-tickets-and-more",
+        "https://www.foxsports.com/articles/soccer/senegal-goalkeeper-edouard-mendy-out-with-injury-for-knockout-round-match-against-belgium",
+        "https://www.washingtonpost.com/sports/soccer/2026/06/30/edouard-mendy-world-cup-senegal-belgium/c3b599dc-74f3-11f1-b665-5f8be87f3787_story.html",
         "https://www.rotowire.com/soccer/article/belgium-vs-senegal-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120376",
-        "https://www.goal.com/en-us/news/belgium-senegal-world-cup-preview/blt1c958015a91eebc7"
+        "https://www.sportsmole.co.uk/football/belgium/world-cup-2026/predicted-lineups/is-debast-back-for-the-knockouts-predicted-belgium-xi-vs-senegal_600367.html"
       ]
     },
     {
