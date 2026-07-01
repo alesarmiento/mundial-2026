@@ -3,28 +3,10 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-07-01T04:10:00Z",
+    "actualizado": "2026-07-01T18:15:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "England",
-      "away": "DR Congo",
-      "fecha": "2026-07-01",
-      "estado_alineacion": "probable",
-      "xi_local": "Pickford; Spence, Konsa, Guehi, O'Reilly; Anderson, Rice; Saka, Bellingham, Rashford; Kane (4-2-3-1 probable — Spence reemplaza a James lesionado en el carril derecho; Rice y Anderson como doble pivote).",
-      "xi_visita": "Mpasi; Wan-Bissaka, Mbemba, Tuanzebe, Kapuadi, Masuaku; Mukau, Moutoussamy, Kayembe; Wissa, Bakambu (5-3-2 probable — bloque bajo con Wan-Bissaka aportando desborde por la derecha; Wissa y Bakambu como dupla atacante).",
-      "bajas_local": ["Reece James (lesion de isquiotibiales, no disponible)", "Jarell Quansah (esguince de tobillo sufrido vs Panama, no disponible)"],
-      "bajas_visita": [],
-      "lectura": "England lider del Grupo L con 9 pts e invicto. Kane lleva 3 goles (record historico de goleador de England en Mundiales). Bellingham, Saka y Rashford ofensiva de alto nivel bajo Tuchel. DR Congo sorprendio siendo el primero de los 8 mejores terceros tras su epica remontada 3-1 a Uzbekistan (Wissa 2 goles en los ultimos 22 min). Primera vez historica de Congo DR en una eliminatoria mundialista. Tuchel pierde a James (hamstring) y Quansah (tobillo vs Panama); Spence asume el carril derecho. KO ~16:00 UTC, Atlanta.",
-      "lean": "England amplio favorito (~74% mercado, Opta 74% de victoria en 90 min). DR Congo en bloque 5-3-2 con contragolpes rapidos via Wissa y Bakambu. Sin James la defensa inglesa es mas vulnerable por la derecha. Lean England claro, pero el Congo puede sorprender en transicion.",
-      "fuentes": [
-        "https://www.sportsmole.co.uk/football/england/world-cup-2026/team-news/england-vs-dr-congo-injury-suspension-list-predicted-xis_600341.html",
-        "https://www.skysports.com/football/news/12098/13559299/england-2026-world-cup-news-reece-james-and-jarell-quansah-to-miss-last-32-clash-vs-dr-congo-with-injury",
-        "https://www.aljazeera.com/sports/2026/6/30/england-vs-dr-congo-world-cup-round-of-32-kane-match-prediction-lineups",
-        "https://www.rotowire.com/soccer/article/england-vs-dr-congo-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120375"
-      ]
-    },
     {
       "home": "Belgium",
       "away": "Senegal",

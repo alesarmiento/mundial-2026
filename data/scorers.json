@@ -2,13 +2,14 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://www.nbcsports.com/soccer/news/2026-world-cup-top-goalscorers-full-list-latest-on-race-for-the-golden-boot + https://www.fifa.com/en/match-centre/match/17/285023/289287/400021520 (Mexico 2-0 Ecuador FT; Julian Quinones 22' = 3er gol del torneo; confirmado NBC Sports / FIFA / Al Jazeera / ESPN)",
+    "fuente": "https://www.outlookindia.com/sports/football/england-vs-dr-congo-live-score-fifa-world-cup-2026-round-of-32-eng-v-cod-updates-atlanta-stadium-highlights + https://www.nbcsports.com/soccer/news/2026-world-cup-top-goalscorers-full-list-latest-on-race-for-the-golden-boot (Kane brace vs DR Congo eleva su cuenta a 5 goles — 13 en toda su carrera mundialista; empareja con Haaland en 3ro; confirmado Outlook India / Al Jazeera / NBC Sports / ESPN / VAVEL)",
     "actualizado": "2026-07-01"
   },
   "jugadores": [
     {"jugador": "Lionel Messi", "equipo": "Argentina", "goles": 6},
     {"jugador": "Kylian Mbappe", "equipo": "France", "goles": 6},
     {"jugador": "Erling Haaland", "equipo": "Norway", "goles": 5},
+    {"jugador": "Harry Kane", "equipo": "England", "goles": 5},
     {"jugador": "Ousmane Dembele", "equipo": "France", "goles": 4},
     {"jugador": "Vinicius Junior", "equipo": "Brazil", "goles": 4},
     {"jugador": "Jonathan David", "equipo": "Canada", "goles": 3},
@@ -18,7 +19,6 @@
     {"jugador": "Ismaila Sarr", "equipo": "Senegal", "goles": 3},
     {"jugador": "Johan Manzambi", "equipo": "Switzerland", "goles": 3},
     {"jugador": "Ismael Saibari", "equipo": "Morocco", "goles": 3},
-    {"jugador": "Harry Kane", "equipo": "England", "goles": 3},
     {"jugador": "Yoane Wissa", "equipo": "DR Congo", "goles": 3},
     {"jugador": "Cody Gakpo", "equipo": "Netherlands", "goles": 3},
     {"jugador": "Julian Quinones", "equipo": "Mexico", "goles": 3}
