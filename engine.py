@@ -390,19 +390,25 @@ def projected_bracket(teams, probs, elo, base, results=None):
     # partidos KO ya jugados -> fuerzan ganador REAL (y marcador); los pendientes se proyectan por probabilidad
     played_ko = {frozenset((m["local"], m["visita"])): m
                  for m in (results or []) if m.get("fase", "grupos") != "grupos"}
+    # 'real_here' = equipos que REALMENTE llegaron a esta ronda (via resultados jugados). Con grupos cerrados,
+    # los 32 de R32 son reales; en cada ronda solo el ganador de un partido JUGADO pasa como real -> verde en
+    # la ronda a la que llego. Los proyectados (ganador de un partido aun no jugado) NO son reales (naranja).
+    real_here = set(t for pair in pairs for t in pair if t) if complete else set()
     for nm in ["Dieciseisavos", "Octavos", "Cuartos", "Semifinal", "Final"]:
         key = NEXT[nm]
-        matches, winners = [], []
+        matches, winners, real_next = [], [], set()
         for h, a in pairs:
             if h and a:
                 ph, pa = probs[h][key], probs[a][key]
                 md = {"home": h, "away": a, "pHome": round(ph, 1), "pAway": round(pa, 1),
-                      "posHome": poslabel.get(h), "posAway": poslabel.get(a)}
+                      "posHome": poslabel.get(h), "posAway": poslabel.get(a),
+                      "homeReal": h in real_here, "awayReal": a in real_here}
                 r = played_ko.get(frozenset((h, a)))
                 if r:
                     gh, ga = (r["gl"], r["gv"]) if r["local"] == h else (r["gv"], r["gl"])
                     w = h if gh > ga else (a if ga > gh else (r.get("ganador") or (h if ph >= pa else a)))
                     md.update({"jugado": True, "gl": gh, "gv": ga})
+                    real_next.add(w)   # solo el ganador de un partido JUGADO pasa como real a la ronda siguiente
                 else:
                     w = h if ph >= pa else a
                 md["winner"] = w
@@ -416,6 +422,7 @@ def projected_bracket(teams, probs, elo, base, results=None):
         if len(winners) <= 1:
             break
         pairs = [(winners[i], winners[i + 1]) for i in range(0, len(winners), 2)]
+        real_here = real_next
     champion = bracket[-1]["partidos"][0]["winner"] if bracket else None
     return {"rondas": bracket, "campeon_proyectado": champion}
 
@@ -1607,7 +1614,7 @@ function paneBracket(p){
   if(pr && pr.rondas){
     const pc=$('div',{class:'card'});
     pc.append($('div',{class:'gtitle'},'🔮 Proyeccion del cuadro — arbol de eliminatorias'));
-    pc.append($('div',{html:'<small><b style="color:#3fb950">■ Verde = puesto fijo</b> (1º/2º de un grupo ya cerrado) · <b style="color:#39c5cf">✓ Cian = clasificado</b> (100% en 16avos, pero puesto por definir: top-2 ya asegurado o tercero garantizado) · <b style="color:#e3873e">■ Naranja = estimado</b> (proyeccion del modelo). Se actualiza en cada corrida del motor.</small>',style:'margin:2px 0 8px'}));
+    pc.append($('div',{html:'<small><b style="color:#3fb950">✓ Verde = realmente en esta ronda</b> (paso de verdad, o puesto fijo de 16avos) · <b style="color:#39c5cf">✓ Cian = clasificado</b> (100% en 16avos, puesto por definir) · <b style="color:#e3873e">■ Naranja = proyectado</b> (aun no llego de verdad; estimacion del modelo) · <b style="color:#8b949e">gris = eliminado</b>. Los partidos jugados muestran el marcador real.</small>',style:'margin:2px 0 8px'}));
     pc.append($('div',{class:'muted',html:'<small>Cruces segun el <b>arbol oficial</b> (Wikipedia knockout stage), con los clasificados mas probables por grupo. El % es la <b>probabilidad (Monte Carlo) de llegar a la ronda siguiente</b> — avanza el mayor (en negrita). Proyeccion puntual: cambia con cada resultado.</small>'}));
     pc.append(bracketTree(pr));
     p.append(pc);
@@ -1622,20 +1629,25 @@ function bmBox(m, round){
   const sec=new Set(S.ko_secured||[]);
   const isR32 = round==='Dieciseisavos';  // confirmado/asegurado solo en 16avos
   const played=!!m.jugado;   // partido de KO ya jugado -> mostrar marcador real y ganador en verde
-  [['home','pHome','posHome','gl'],['away','pAway','posAway','gv']].forEach(([t,pk,pos,gk])=>{
+  [['home','pHome','posHome','gl','homeReal'],['away','pAway','posAway','gv','awayReal']].forEach(([t,pk,pos,gk,rk])=>{
     const win=m.winner===m[t];
     const r=$('div',{class:'br'});
-    const confirmed = isR32 && m[t] && conf.has(m[t]);                  // puesto fijo
+    const confirmed = isR32 && m[t] && conf.has(m[t]);                  // puesto fijo (1o/2o grupo cerrado)
     const secured = isR32 && m[t] && !confirmed && sec.has(m[t]);        // clasificado, puesto por definir
+    const realAdv = !!m[rk];   // realmente llego a esta ronda (por resultados jugados)
+    // VERDE = realmente en esta ronda (avanzo de verdad, o puesto fijo). CIAN = clasificado sin puesto.
+    // NARANJA = proyectado (aun no llego de verdad). GRIS = perdedor de un partido jugado.
+    const green = m[t] && ((played&&win) || (!played && (realAdv||confirmed)));
     let col;
     if(!m[t]) col='#6e7681';
-    else if(played) col = win ? '#3fb950' : '#8b949e';                   // jugado: ganador verde, perdedor gris
-    else col = confirmed ? '#3fb950' : (secured ? '#39c5cf' : '#e3873e');// VERDE=puesto fijo / CIAN=clasificado / NARANJA=estimado
-    if(played && win) r.style.background='#13301f';
-    else if(!played && confirmed) r.style.background='#13301f';
+    else if(played) col = win ? '#3fb950' : '#8b949e';
+    else if(green) col='#3fb950';
+    else col = secured ? '#39c5cf' : '#e3873e';
+    if(green) r.style.background='#13301f';
     else if(!played && secured) r.style.background='#0d2b30';
-    else if(!played && win) r.style.background='#241a0c';  // realce suave del avance estimado
-    const chk=(played?win:secured)?`<span style="color:${played?'#3fb950':'#39c5cf'};font-weight:700;margin-right:3px">✓</span>`:'';
+    else if(!played && win) r.style.background='#241a0c';  // realce suave del avance proyectado
+    const chk = green ? `<span style="color:#3fb950;font-weight:700;margin-right:3px">✓</span>`
+              : (secured&&!played) ? `<span style="color:#39c5cf;font-weight:700;margin-right:3px">✓</span>` : '';
     const badge=m[pos]?`<span style="font-size:9px;color:#8b949e;border:1px solid #2d3440;border-radius:4px;padding:0 3px;margin-right:4px;font-weight:600">${fmtPos(m[pos])}</span>`:'';
     r.append($('span',{class:'tn',html:badge+chk+`<span style="color:${col};font-weight:${win?700:500}">`+(m[t]||'—')+'</span>'}));
     const val = played ? (m[gk]!=null?('<b>'+m[gk]+'</b>'):'') : (m[pk]!=null?(m[pk]+'%'):'');
