@@ -3,7 +3,7 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-06-30T23:10:00Z",
+    "actualizado": "2026-07-01T00:09:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
@@ -16,11 +16,64 @@
       "xi_visita": "Galindez; Franco, Ordonez, Pacho, Hincapie; Yeboah, M.Caicedo, Vite, Angulo; Plata, E.Valencia (4-4-2 probable — Caicedo capitan; Valencia a 1 gol de los 50 internacionales).",
       "bajas_local": [],
       "bajas_visita": [],
-      "lectura": "Mexico invicto con 9 pts en Grupo A (2-0 a Sudafrica, 1-0 a Corea del Sur, 3-0 a Czechia). Ecuador mejor tercero del Grupo E con 4 pts tras el sorprendente 2-1 a Alemania (Angulo y Plata). Caicedo organiza el mediocampo ecuatoriano. Mexico juega en el Estadio Azteca (local de facto). Valencia busca su gol 50 con la seleccion. KO 01:00 UTC del 1 de julio.",
-      "lean": "Mexico favorito (~43% mercado) jugando en su estadio, pero Ecuador (~26%) es 'underdog' muy peligroso tras eliminar a Alemania. Plata y Caicedo al contragolpe son la principal amenaza. Lean Mexico, partido parejo.",
+      "lectura": "Mexico invicto con 9 pts en Grupo A (2-0 a Sudafrica, 1-0 a Corea del Sur, 3-0 a Czechia) y unico equipo sin goles en contra en la fase de grupos. Ecuador mejor tercero del Grupo E con 4 pts tras el sorprendente 2-1 a Alemania (Angulo y Plata). Caicedo organiza el mediocampo ecuatoriano. Mexico juega en el Estadio Azteca (local de facto). Jimenez regresa al XI. KO 01:00 UTC del 1 de julio.",
+      "lean": "Mexico favorito (~43% mercado) jugando en su estadio, pero Ecuador (~26%) es un 'underdog' muy peligroso tras eliminar a Alemania. Plata y Caicedo al contragolpe son la principal amenaza. Lean Mexico, partido parejo.",
       "fuentes": [
         "https://ca.sports.yahoo.com/news/mexico-vs-ecuador-lineups-confirmed-112014312.html",
         "https://www.sportsmole.co.uk/football/mexico/world-cup-2026/preview/mexico-vs-ecuador-prediction-team-news-lineups_600278.html"
+      ]
+    },
+    {
+      "home": "England",
+      "away": "DR Congo",
+      "fecha": "2026-07-01",
+      "estado_alineacion": "probable",
+      "xi_local": "Pickford; Spence, Konsa, Guehi, O'Reilly; Anderson, Rice; Saka, Bellingham, Rashford; Kane (4-2-3-1 probable — Spence reemplaza a James lesionado en el carril derecho; Rice y Anderson como doble pivote).",
+      "xi_visita": "Mpasi; Wan-Bissaka, Mbemba, Tuanzebe, Kapuadi, Masuaku; Mukau, Moutoussamy, Kayembe; Wissa, Bakambu (5-3-2 probable — bloque bajo con Wan-Bissaka aportando desborde por la derecha; Wissa y Bakambu como dupla atacante).",
+      "bajas_local": ["Reece James (lesion de isquiotibiales, no disponible)", "Jarell Quansah (esguince de tobillo sufrido vs Panama, no disponible)"],
+      "bajas_visita": [],
+      "lectura": "England lider del Grupo L con 9 pts e invicto. Kane lleva 3 goles (record historico de goleador de England en Mundiales). Bellingham, Saka y Rashford ofensiva de alto nivel bajo Tuchel. DR Congo sorprendio siendo el primero de los 8 mejores terceros tras su epica remontada 3-1 a Uzbekistan (Wissa 2 goles en los ultimos 22 min). Primera vez historica de Congo DR en una eliminatoria mundialista. Tuchel pierde a James (hamstring) y Quansah (tobillo vs Panama); Spence asume el carril derecho. KO ~16:00 UTC, Atlanta.",
+      "lean": "England amplio favorito (~74% mercado, Opta 74% de victoria en 90 min). DR Congo en bloque 5-3-2 con contragolpes rapidos via Wissa y Bakambu. Sin James la defensa inglesa es mas vulnerable por la derecha. Lean England claro, pero el Congo puede sorprender en transicion.",
+      "fuentes": [
+        "https://www.sportsmole.co.uk/football/england/world-cup-2026/team-news/england-vs-dr-congo-injury-suspension-list-predicted-xis_600341.html",
+        "https://www.skysports.com/football/news/12098/13559299/england-2026-world-cup-news-reece-james-and-jarell-quansah-to-miss-last-32-clash-vs-dr-congo-with-injury",
+        "https://www.aljazeera.com/sports/2026/6/30/england-vs-dr-congo-world-cup-round-of-32-kane-match-prediction-lineups",
+        "https://www.rotowire.com/soccer/article/england-vs-dr-congo-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120375"
+      ]
+    },
+    {
+      "home": "Belgium",
+      "away": "Senegal",
+      "fecha": "2026-07-01",
+      "estado_alineacion": "probable",
+      "xi_local": "Courtois; Castagne, Debast, De Winter, De Cuyper; Tielemans, Onana, De Bruyne (c); Doku, Lukaku, Trossard (4-3-3 probable — De Bruyne como eje creativo; Doku y Trossard en las bandas; Lukaku como centrodelantero).",
+      "xi_visita": "Dieng o Diaw (Edouard Mendy en duda, lesion de rodilla); Jakobs, Koulibaly (c), Niakhate, El Hadji Malick Diouf; Gueye, Pape Matar Sarr, Camara; Ismaila Sarr, Jackson, Mane (4-3-3 probable — portero en duda es el principal factor de incertidumbre).",
+      "bajas_local": [],
+      "bajas_visita": ["Edouard Mendy (portero titular, esguince de rodilla — probable baja, en duda; si no juega entra Seny Dieng o Mory Diaw)"],
+      "lectura": "Belgium 1ro del Grupo G con 5 pts, pero su paso de ronda fue ajustado: solo 1 victoria convincente (5-1 a NZ) y 2 empates (Egypt 1-1, Iran 0-0, con Ngoy expulsado). Senegal clasifico como 3ro del Grupo I con 6 pts: perdio 1-4 vs Francia y 2-3 vs Noruega, pero destruyo a Iraq 5-0. Mane, Jackson e Ismaila Sarr (3 goles en el torneo) son de los extremos mas peligrosos del torneo. La posible baja de Mendy en el arco es el factor clave. De Bruyne y Trossard (2 goles) organizan el ataque belga. KO ~20:00 UTC, Lumen Field, Seattle.",
+      "lean": "Partido muy parejo. Belgium favorito leve (~45% mercado). Senegal peligroso en ataque con trio explosivo. Si Mendy no juega, la porteria senegalesa es vulnerable a Lukaku y Doku. Lean Belgium ligero, condicionado por la porteria de Senegal.",
+      "fuentes": [
+        "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/belgium-senegal-live-stream-team-news-tickets-and-more",
+        "https://www.rotowire.com/soccer/article/belgium-vs-senegal-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120376",
+        "https://www.goal.com/en-us/news/belgium-senegal-world-cup-preview/blt1c958015a91eebc7"
+      ]
+    },
+    {
+      "home": "United States",
+      "away": "Bosnia and Herzegovina",
+      "fecha": "2026-07-01",
+      "estado_alineacion": "probable",
+      "xi_local": "Freese; Dest, Richards, Ream, Robinson; Adams, Tillman, McKennie; Pulisic, Balogun, Weah (4-3-3 probable — Pulisic regresa al XI titular recuperado del golpe vs Turquia; Balogun busca su tercer gol para acercarse a la Bota de Oro; Adams como motor del mediocampo).",
+      "xi_visita": "Vasilj; Dedic, Katic, Hadzikadunic, Kolasinac; Bajraktarevic, Tahirovic, Sunjic, Alajbegovic; Demirovic, Dzeko (4-4-2 probable — Dzeko capitan y referencia ofensiva veterana; Demirovic como segundo delantero).",
+      "bajas_local": [],
+      "bajas_visita": [],
+      "lectura": "USA 1ro del Grupo D con 2 victorias (4-1 vs Paraguay — Balogun brace, 2-0 vs Australia) y 1 derrota con rotacion total (3-2 vs Turquia con 9 cambios). Bosnia llega a su primera eliminatoria mundialista historica: clasifico como 5to mejor tercero (4 pts: empate 1-1 vs Canada, derrota vs Suiza, victoria 3-1 vs Qatar). Pulisic, limitado al banquillo vs Turquia por precaucion, vuelve al XI. Balogun lleva 2 goles. Dzeko es la principal amenaza de Bosnia. KO ~00:00 UTC del 2 de julio (8 PM ET del 1 de julio), Levi's Stadium, Santa Clara.",
+      "lean": "USA favorito claro (~63% mercado) jugando en casa ante su aficion. Bosnia peligrosa con Dzeko y Demirovic arriba, pero su defensa no es de elite. Pulisic y Balogun son la clave ofensiva. Lean USA comodo.",
+      "fuentes": [
+        "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/usa-bosnia-and-herzegovina-live-stream-team-news-tickets",
+        "https://www.nbcsports.com/soccer/news/who-is-bosnia-and-herzegovina-cheat-sheet-analysis-on-the-usmnts-round-of-32-f",
+        "https://www.si.com/soccer/usmnt-predicted-lineup-vs-bosnia-herzegovina-world-cup-7-1-26",
+        "https://www.foxsports.com/stories/soccer/usmnt-world-cup-pulisic-bosnia-and-herzegovina-storylines-projected-lineup-predictions"
       ]
     }
   ]
