@@ -3,26 +3,10 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-07-01T00:09:00Z",
+    "actualizado": "2026-07-01T04:10:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "Mexico",
-      "away": "Ecuador",
-      "fecha": "2026-06-30",
-      "estado_alineacion": "probable",
-      "xi_local": "Rangel; Sanchez, Montes, Vasquez, Gallardo; Lira, Romo, Gutierrez; Alvarado, Jimenez, Quinones (4-3-3 probable — Jimenez regresa al XI; Romo en el doble pivote).",
-      "xi_visita": "Galindez; Franco, Ordonez, Pacho, Hincapie; Yeboah, M.Caicedo, Vite, Angulo; Plata, E.Valencia (4-4-2 probable — Caicedo capitan; Valencia a 1 gol de los 50 internacionales).",
-      "bajas_local": [],
-      "bajas_visita": [],
-      "lectura": "Mexico invicto con 9 pts en Grupo A (2-0 a Sudafrica, 1-0 a Corea del Sur, 3-0 a Czechia) y unico equipo sin goles en contra en la fase de grupos. Ecuador mejor tercero del Grupo E con 4 pts tras el sorprendente 2-1 a Alemania (Angulo y Plata). Caicedo organiza el mediocampo ecuatoriano. Mexico juega en el Estadio Azteca (local de facto). Jimenez regresa al XI. KO 01:00 UTC del 1 de julio.",
-      "lean": "Mexico favorito (~43% mercado) jugando en su estadio, pero Ecuador (~26%) es un 'underdog' muy peligroso tras eliminar a Alemania. Plata y Caicedo al contragolpe son la principal amenaza. Lean Mexico, partido parejo.",
-      "fuentes": [
-        "https://ca.sports.yahoo.com/news/mexico-vs-ecuador-lineups-confirmed-112014312.html",
-        "https://www.sportsmole.co.uk/football/mexico/world-cup-2026/preview/mexico-vs-ecuador-prediction-team-news-lineups_600278.html"
-      ]
-    },
     {
       "home": "England",
       "away": "DR Congo",
