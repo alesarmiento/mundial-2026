@@ -338,7 +338,7 @@ def resolve_third_slots(grupos, base, skeleton):
     match = _match_thirds([(s["slot"], s["away"].split(":")[1].split(",")) for s in slots3], qual_groups)
     return {s["slot"]: (group_third[match[s["slot"]]] if s["slot"] in match else None) for s in slots3}
 
-def projected_bracket(teams, probs, elo, base):
+def projected_bracket(teams, probs, elo, base, results=None):
     grupos = teams["grupos"]; skeleton = teams["r32_skeleton"]
     complete = all(base[t]["pj"] >= 3 for ts in grupos.values() for t in ts)
     slots3 = [s for s in skeleton if s["away"].startswith("3:")]
@@ -387,15 +387,26 @@ def projected_bracket(teams, probs, elo, base):
     # (las mismas del tab Campeon/Avance) -> el campeon del arbol coincide SIEMPRE con el #1 del ranking.
     NEXT = {"Dieciseisavos": "octavos", "Octavos": "cuartos", "Cuartos": "semis",
             "Semifinal": "final", "Final": "campeon"}
+    # partidos KO ya jugados -> fuerzan ganador REAL (y marcador); los pendientes se proyectan por probabilidad
+    played_ko = {frozenset((m["local"], m["visita"])): m
+                 for m in (results or []) if m.get("fase", "grupos") != "grupos"}
     for nm in ["Dieciseisavos", "Octavos", "Cuartos", "Semifinal", "Final"]:
         key = NEXT[nm]
         matches, winners = [], []
         for h, a in pairs:
             if h and a:
                 ph, pa = probs[h][key], probs[a][key]
-                w = h if ph >= pa else a
-                matches.append({"home": h, "away": a, "pHome": round(ph, 1), "pAway": round(pa, 1), "winner": w,
-                                "posHome": poslabel.get(h), "posAway": poslabel.get(a)})
+                md = {"home": h, "away": a, "pHome": round(ph, 1), "pAway": round(pa, 1),
+                      "posHome": poslabel.get(h), "posAway": poslabel.get(a)}
+                r = played_ko.get(frozenset((h, a)))
+                if r:
+                    gh, ga = (r["gl"], r["gv"]) if r["local"] == h else (r["gv"], r["gl"])
+                    w = h if gh > ga else (a if ga > gh else (r.get("ganador") or (h if ph >= pa else a)))
+                    md.update({"jugado": True, "gl": gh, "gv": ga})
+                else:
+                    w = h if ph >= pa else a
+                md["winner"] = w
+                matches.append(md)
             else:
                 w = h or a or "?"
                 matches.append({"home": h or "?", "away": a or "?", "pHome": None, "pAway": None, "winner": w,
@@ -505,7 +516,7 @@ def compute_ko_confirmed(grupos, base):
     return sorted(conf)
 
 # ---------- una simulacion ----------
-def simulate_once(grupos, elo, base, played, fixtures, skeleton, rcfg):
+def simulate_once(grupos, elo, base, played, fixtures, skeleton, rcfg, ko_played=None):
     # copia mutable de la tabla
     tab = {tm: dict(v) for tm, v in base.items()}
     ad, w = rcfg["ad"], rcfg["w"]
@@ -532,26 +543,31 @@ def simulate_once(grupos, elo, base, played, fixtures, skeleton, rcfg):
     qualn_thirds = thirds[:8]
     third_by_group = {g: tm for g, tm, _ in qualn_thirds}
 
-    # resolver slots de terceros (matching contra grupos permitidos)
+    # resolver slots de terceros. Con la fase de grupos cerrada, usar la asignacion OFICIAL FIFA (misma que
+    # el bracket real); si no, matching generico (backtracking) sobre los grupos permitidos.
     slots3 = [s for s in skeleton if s["away"].startswith("3:")]
-    avail = dict(third_by_group)  # grupo -> equipo
-    assign = {}
-    def backtrack(i):
-        if i == len(slots3):
-            return True
-        allowed = slots3[i]["away"].split(":")[1].split(",")
-        for g in allowed:
-            if g in avail:
-                assign[slots3[i]["slot"]] = avail.pop(g)
-                if backtrack(i + 1):
-                    return True
-                avail[g] = assign.pop(slots3[i]["slot"])
-        return False
-    if not backtrack(0):
-        # fallback: asignar en orden
-        rem = list(third_by_group.values())
-        for s in slots3:
-            assign[s["slot"]] = rem.pop() if rem else next(iter(third_by_group.values()))
+    official = resolve_third_slots(grupos, base, skeleton)
+    if official:
+        assign = {s["slot"]: official.get(s["slot"]) for s in slots3}
+    else:
+        avail = dict(third_by_group)  # grupo -> equipo
+        assign = {}
+        def backtrack(i):
+            if i == len(slots3):
+                return True
+            allowed = slots3[i]["away"].split(":")[1].split(",")
+            for g in allowed:
+                if g in avail:
+                    assign[slots3[i]["slot"]] = avail.pop(g)
+                    if backtrack(i + 1):
+                        return True
+                    avail[g] = assign.pop(slots3[i]["slot"])
+            return False
+        if not backtrack(0):
+            # fallback: asignar en orden
+            rem = list(third_by_group.values())
+            for s in slots3:
+                assign[s["slot"]] = rem.pop() if rem else next(iter(third_by_group.values()))
 
     def resolve(code):
         if code.startswith("3:"):
@@ -569,18 +585,21 @@ def simulate_once(grupos, elo, base, played, fixtures, skeleton, rcfg):
     # rondas eliminatorias (cruce secuencial; la final SE JUEGA)
     # r32 (32) -> octavos (16) -> cuartos (8) -> semis (4) -> final (2) -> campeon (1)
     reached = {"r32": [t for pair in bracket for t in pair]}
-    winners_r = [ko_winner(a, elo[a], b, elo[b]) for a, b in bracket]  # 16
+    # avance: si el partido de KO ya se jugo, gana el ganador REAL; si no, se simula por Elo
+    def _adv(a, b):
+        rw = (ko_played or {}).get(frozenset((a, b)))
+        return rw if rw else ko_winner(a, elo[a], b, elo[b])
+    winners_r = [_adv(a, b) for a, b in bracket]  # 16
     reached["octavos"] = list(winners_r)
     cur = winners_r
     for st in ["cuartos", "semis", "final", "campeon"]:   # 16->8->4->2->1
-        nxt = [ko_winner(cur[i], elo[cur[i]], cur[i + 1], elo[cur[i + 1]])
-               for i in range(0, len(cur), 2)]
+        nxt = [_adv(cur[i], cur[i + 1]) for i in range(0, len(cur), 2)]
         reached[st] = list(nxt)
         cur = nxt
     return winners, runners, third_by_group, reached
 
 # ---------- agregacion Monte Carlo ----------
-def run_mc(grupos, elo, base, played, fixtures, skeleton, n, rcfg=None):
+def run_mc(grupos, elo, base, played, fixtures, skeleton, n, rcfg=None, ko_played=None):
     if rcfg is None:
         rcfg = {"ad": None, "w": 0.0, "host_adv": 0.0, "hosts": set()}
     teams = list(base.keys())
@@ -588,7 +607,7 @@ def run_mc(grupos, elo, base, played, fixtures, skeleton, n, rcfg=None):
                "semis": 0, "final": 0, "campeon": 0, "sub": 0, "tercero": 0} for t in teams}
     for _ in range(n):
         winners, runners, thirds, reached = simulate_once(
-            grupos, elo, base, played, fixtures, skeleton, rcfg)
+            grupos, elo, base, played, fixtures, skeleton, rcfg, ko_played)
         for g, t in winners.items():
             cnt[t]["grupo1"] += 1; cnt[t]["top2"] += 1; cnt[t]["r32"] += 1
         for g, t in runners.items():
@@ -974,7 +993,13 @@ def compute(results_subset, teams, n, cfg):
     played = apply_group_results(base, results_subset)
     fixtures = all_group_fixtures(grupos)
     rcfg = {"ad": ad, "w": cfg.get("w", 0.0), "host_adv": cfg.get("host_adv", 0.0), "hosts": cfg.get("hosts", set())}
-    probs = run_mc(grupos, elo, base, played, fixtures, skeleton, n, rcfg)
+    # ganadores REALES de partidos de eliminatorias ya jugados -> se fuerzan en la simulacion
+    def _kw(m):
+        return m["local"] if m["gl"] > m["gv"] else (m["visita"] if m["gv"] > m["gl"] else m.get("ganador"))
+    ko_played = {frozenset((m["local"], m["visita"])): _kw(m)
+                 for m in results_subset if m.get("fase", "grupos") != "grupos"}
+    ko_played = {k: v for k, v in ko_played.items() if v}
+    probs = run_mc(grupos, elo, base, played, fixtures, skeleton, n, rcfg, ko_played)
     return elo, base, probs, len(played), len(fixtures), ad
 
 def main():
@@ -1069,7 +1094,7 @@ def main():
         for tm, against in ((m["local"], m["gv"]), (m["visita"], m["gl"])):
             defstats[tm]["pj"] += 1; defstats[tm]["gc"] += against; defstats[tm]["cs"] += (against == 0)
     premios = estimate_awards(players, probs, em, elo, defstats, scorers)
-    proyeccion = projected_bracket(teams, probs, elo, base)
+    proyeccion = projected_bracket(teams, probs, elo, base, results)
     podio = sorted(
         [{"equipo": t, "p1": probs[t]["campeon"], "p2": probs[t]["sub"],
           "p3": probs[t]["tercero"], "top3": round(probs[t]["campeon"] + probs[t]["sub"] + probs[t]["tercero"], 1)}
@@ -1596,19 +1621,25 @@ function bmBox(m, round){
   const conf=new Set(S.ko_confirmed||[]);
   const sec=new Set(S.ko_secured||[]);
   const isR32 = round==='Dieciseisavos';  // confirmado/asegurado solo en 16avos
-  [['home','pHome','posHome'],['away','pAway','posAway']].forEach(([t,pk,pos])=>{
+  const played=!!m.jugado;   // partido de KO ya jugado -> mostrar marcador real y ganador en verde
+  [['home','pHome','posHome','gl'],['away','pAway','posAway','gv']].forEach(([t,pk,pos,gk])=>{
     const win=m.winner===m[t];
     const r=$('div',{class:'br'});
     const confirmed = isR32 && m[t] && conf.has(m[t]);                  // puesto fijo
     const secured = isR32 && m[t] && !confirmed && sec.has(m[t]);        // clasificado, puesto por definir
-    const col = !m[t] ? '#6e7681' : (confirmed ? '#3fb950' : (secured ? '#39c5cf' : '#e3873e'));  // VERDE=puesto fijo / CIAN=clasificado(puesto x definir) / NARANJA=estimado
-    if(confirmed) r.style.background='#13301f';
-    else if(secured) r.style.background='#0d2b30';
-    else if(win) r.style.background='#241a0c';  // realce suave del avance estimado
-    const chk=secured?`<span style="color:#39c5cf;font-weight:700;margin-right:3px">✓</span>`:'';
+    let col;
+    if(!m[t]) col='#6e7681';
+    else if(played) col = win ? '#3fb950' : '#8b949e';                   // jugado: ganador verde, perdedor gris
+    else col = confirmed ? '#3fb950' : (secured ? '#39c5cf' : '#e3873e');// VERDE=puesto fijo / CIAN=clasificado / NARANJA=estimado
+    if(played && win) r.style.background='#13301f';
+    else if(!played && confirmed) r.style.background='#13301f';
+    else if(!played && secured) r.style.background='#0d2b30';
+    else if(!played && win) r.style.background='#241a0c';  // realce suave del avance estimado
+    const chk=(played?win:secured)?`<span style="color:${played?'#3fb950':'#39c5cf'};font-weight:700;margin-right:3px">✓</span>`:'';
     const badge=m[pos]?`<span style="font-size:9px;color:#8b949e;border:1px solid #2d3440;border-radius:4px;padding:0 3px;margin-right:4px;font-weight:600">${fmtPos(m[pos])}</span>`:'';
     r.append($('span',{class:'tn',html:badge+chk+`<span style="color:${col};font-weight:${win?700:500}">`+(m[t]||'—')+'</span>'}));
-    r.append($('span',{class:'pp',html:`<span style="color:${col}">`+(m[pk]!=null?(m[pk]+'%'):'')+'</span>'}));
+    const val = played ? (m[gk]!=null?('<b>'+m[gk]+'</b>'):'') : (m[pk]!=null?(m[pk]+'%'):'');
+    r.append($('span',{class:'pp',html:`<span style="color:${col}">`+val+'</span>'}));
     box.append(r);
   });
   return box;
