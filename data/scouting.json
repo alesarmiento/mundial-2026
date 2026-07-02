@@ -3,26 +3,71 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-07-01T23:10:00Z",
+    "actualizado": "2026-07-02T00:30:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
     {
-      "home": "United States",
-      "away": "Bosnia and Herzegovina",
-      "fecha": "2026-07-01",
+      "home": "Spain",
+      "away": "Austria",
+      "fecha": "2026-07-02",
       "estado_alineacion": "probable",
-      "xi_local": "Freese; Dest, Richards, Ream, Robinson; Adams, Tillman, McKennie; Pulisic, Balogun, Weah (4-3-3 probable — Pulisic regresa al XI titular recuperado del golpe vs Turquia; Balogun busca su tercer gol para acercarse a la Bota de Oro; Adams como motor del mediocampo).",
-      "xi_visita": "Vasilj; Dedic, Katic, Hadzikadunic, Kolasinac; Bajraktarevic, Tahirovic, Sunjic, Alajbegovic; Demirovic, Dzeko (4-4-2 probable — Dzeko capitan y referencia ofensiva veterana; Demirovic como segundo delantero).",
+      "xi_local": "Simon; Llorente, Cubarsi, Laporte, Cucurella; Merino, Rodri, Pedri; Yamal, Oyarzabal, Baena (4-3-3 probable — Yamal totalmente recuperado de su molestia muscular; Rodri como pivote; Oyarzabal referente ofensivo con 2 goles en grupos; Baena el goleador de la victoria vs Uruguay).",
+      "xi_visita": "A. Schlager; Posch, Lienhart, Alaba, Mwene; Siewald, X. Schlager; Laimer, Schmid, Sabitzer; Arnautovic (4-2-3-1 probable — Alaba y Arnautovic en duda leve tras golpes vs Algeria, pero Rangnick los espera disponibles; Sabitzer como mediapunta creativo; Arnautovic referencia en punta).",
+      "bajas_local": [
+        "Nico Williams (lesion en la ingle, baja confirmada — recibio falta de Nicolas de la Cruz en el cierre del partido de grupos vs Uruguay)",
+        "Yeremy Pino (molestia en el hombro izquierdo, en duda — cayo de mala manera vs Uruguay; su participacion en el resto del torneo es incierta)"
+      ],
+      "bajas_visita": [
+        "David Alaba (golpe leve vs Algeria, en duda leve — Rangnick lo minimizy en conferencia; probablemente disponible)",
+        "Marko Arnautovic (misma situacion que Alaba — golpe vs Algeria, en duda pero probable para jugar)"
+      ],
+      "lectura": "Espana llego al R32 como lider del Grupo H (7 pts: 0-0 Cabo Verde, 4-0 Arabia Saudita, 1-0 Uruguay) con la mejor defensa del torneo. Austria clasifico 2do del Grupo J con 4 pts y protagonizo el empate mas dramatico del grupo: un 3-3 con Algeria donde Mahrez puso el 2-3 al 90+3' y Kalajdzic igualó al 90+6'. Sin Nico Williams ni posiblemente Pino, Yamal y Pedri cargan con la creatividad espanola. El partido se juega en SoFi Stadium, Los Angeles (19:00 UTC). Espana busca su primer titulo desde 2010.",
+      "lean": "Espana favoritisima con 73% de probabilidad segun el mercado (8% Austria). Austria puede plantear un bloque defensivo compacto y buscar el contragolpe con Arnautovic en punta y Sabitzer de mediapunta, pero la diferencia de nivel es considerable. Lean: Espana avanza cómodamente en 90 minutos.",
+      "fuentes": [
+        "https://www.sportsmole.co.uk/football/spain/world-cup-2026/team-news/spain-vs-austria-injury-suspension-lists-predicted-xis_600400.html",
+        "https://www.sportsmole.co.uk/football/spain/world-cup-2026/preview/spain-vs-austria-prediction-team-news-lineups_600390.html",
+        "https://www.football365.com/match-preview/spain-v-austria-prediction-preview"
+      ]
+    },
+    {
+      "home": "Portugal",
+      "away": "Croatia",
+      "fecha": "2026-07-02",
+      "estado_alineacion": "probable",
+      "xi_local": "Diogo Costa; Dalot, R. Dias, Goncalo Inacio, Nuno Mendes; Joao Neves, Vitinha, Bruno Fernandes; Francisco Conceicao, Cristiano Ronaldo, Rafael Leao (4-3-3 probable — Ronaldo en su 6to y probablemente ultimo Mundial; Bruno Fernandes como motor creativo; Leao como desequilibrio por izquierda; Cancelo reemplazado por Dalot en lateral derecho).",
+      "xi_visita": "Livakovic; Stanisic, Sutalo, Gvardiol, Pongracic; Kovacic, Modric, Pasalic; Vlasic, Kramaric, Perisic (4-3-3 probable — Modric a los 40 anos lidera el mediocampo croata; Gvardiol solido en defensa; Kramaric como referente ofensivo; Kovacic el equilibrio entre ataque y defensa).",
       "bajas_local": [],
       "bajas_visita": [],
-      "lectura": "USA 1ro del Grupo D con 2 victorias (4-1 vs Paraguay — Balogun brace, 2-0 vs Australia) y 1 derrota con rotacion total (3-2 vs Turquia con 9 cambios). Bosnia llega a su primera eliminatoria mundialista historica: clasifico como 5to mejor tercero (4 pts: empate 1-1 vs Canada, derrota vs Suiza, victoria 3-1 vs Qatar). Pulisic, limitado al banquillo vs Turquia por precaucion, vuelve al XI. Balogun lleva 2 goles. Dzeko es la principal amenaza de Bosnia. KO ~00:00 UTC del 2 de julio (8 PM ET del 1 de julio), Levi's Stadium, Santa Clara.",
-      "lean": "USA favorito claro (~63% mercado) jugando en casa ante su aficion. Bosnia peligrosa con Dzeko y Demirovic arriba, pero su defensa no es de elite. Pulisic y Balogun son la clave ofensiva. Lean USA comodo.",
+      "lectura": "Portugal termino 2do del Grupo K con 5 pts (1-1 RD Congo, 5-0 Uzbekistan — Ronaldo brace, 0-0 Colombia) y llega con forma irregular. Croacia fue 2do del Grupo L con 6 pts (4-2 Inglaterra en debut historico, 0-1 Panama, 2-1 Ghana). El duelo de generaciones es el titular: Cristiano Ronaldo (6to Mundial, 6 goles en grupos — record por WC) vs Luka Modric (40 anos, probablemente su ultimo partido mundialista). Partido en BMO Field, Toronto (~23:00 UTC). El ganador enfrentara al vencedor de Espana vs Austria en octavos.",
+      "lean": "Partido muy igualado: mercado da 42% Portugal vs 27% Croacia (31% empate). Bruno Fernandes, Leao y Conceicao pueden ser la diferencia ofensiva; Modric y Kovacic son garantia de control en el centro. Lean: Portugal avanza, pero Croacia es historicamente solida en eliminatorias de Mundiales — no se descarta tiempo extra ni penales.",
       "fuentes": [
-        "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/usa-bosnia-and-herzegovina-live-stream-team-news-tickets",
-        "https://www.nbcsports.com/soccer/news/who-is-bosnia-and-herzegovina-cheat-sheet-analysis-on-the-usmnts-round-of-32-f",
-        "https://www.si.com/soccer/usmnt-predicted-lineup-vs-bosnia-herzegovina-world-cup-7-1-26",
-        "https://www.foxsports.com/stories/soccer/usmnt-world-cup-pulisic-bosnia-and-herzegovina-storylines-projected-lineup-predictions"
+        "https://www.rotowire.com/soccer/article/portugal-vs-croatia-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120534",
+        "https://www.squawka.com/en/news/world-cup/portugal-vs-croatia-team-news-predicted-lineups/",
+        "https://www.si.com/soccer/portugal-predicted-lineup-vs-croatia-world-cup-7-2-26",
+        "https://www.sportsmole.co.uk/football/portugal/world-cup-2026/preview/portugal-vs-croatia-prediction-team-news-lineups_600433.html"
+      ]
+    },
+    {
+      "home": "Switzerland",
+      "away": "Algeria",
+      "fecha": "2026-07-02",
+      "estado_alineacion": "probable",
+      "xi_local": "Kobel; Widmer (en duda), Akanji, Elvedi, Rodriguez; Xhaka, Freuler; Ndoye, Manzambi, Vargas; Embolo (4-2-3-1 probable — Widmer en duda por molestia en la cadera: no entrenó el domingo pero no esta descartado; Xhaka capitan y motor del mediocampo; Manzambi con 3 goles en el torneo como interior atacante; Embolo referencia en punta).",
+      "xi_visita": "Benbout; Belghali, Mandi, Bensebaini, Ait-Nouri; Boudaoui, Bentaleb, Maza; Mahrez, Gouiri, Chaibi (4-3-3 probable — Mahrez el peligro principal por banda derecha; Bentaleb (64 caps) como pivote y lider del mediocampo; Gouiri como 9 si Amoura no llega; Bensebaini solido por izquierda).",
+      "bajas_local": [
+        "Silvan Widmer (molestia en la cadera — no entrenó el domingo; en duda pero no descartado para el R32)"
+      ],
+      "bajas_visita": [
+        "Mohamed El Amine Amoura (lesion no especificada, seria duda — en carrera contra el tiempo para llegar al partido; Gouiri lo reemplazaria como 9)"
+      ],
+      "lectura": "Suiza cerro la fase de grupos liderando el Grupo B con 7 puntos (1-1 Qatar, 4-1 Bosnia, 2-1 Canada) mostrando solidez defensiva y potencia con Manzambi y Embolo. Argelia llego al R32 como 3ro del Grupo J con 4 pts tras una derrota 0-3 ante Argentina, una victoria 2-1 vs Jordan, y un trepidante 3-3 vs Austria (Mahrez marco el 2-3 al 90+3' y luego Kalajdzic igualó al 90+6'). Partido en BC Place, Vancouver (~03:00 UTC del 3 de julio = 8pm PT del 2 de julio). El apoyo argelino en la ciudad sera masivo.",
+      "lean": "Suiza favorita segun el mercado (58% vs 18% Algeria). Argelia llega con Mahrez en forma y con el caracter demostrado en el dramatico 3-3 final. Si Amoura juega, cambia el perfil ofensivo argelino significativamente. Lean: Suiza avanza, aunque probablemente con sufrimiento — puede llegar al tiempo extra.",
+      "fuentes": [
+        "https://www.sportsmole.co.uk/football/switzerland/world-cup-2026/preview/switzerland-vs-algeria-prediction-team-news-lineups_600371.html",
+        "https://www.sportsmole.co.uk/football/switzerland/world-cup-2026/predicted-lineups/right-back-options-predicted-switzerland-xi-vs-algeria_600426.html",
+        "https://www.sportsmole.co.uk/football/algeria/world-cup-2026/predicted-lineups/forward-dilemma-predicted-algeria-xi-vs-switzerland_600427.html",
+        "https://sports.yahoo.com/articles/world-cup-2026-r32-switzerland-162000326.html"
       ]
     }
   ]
