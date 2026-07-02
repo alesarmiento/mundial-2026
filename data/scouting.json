@@ -3,33 +3,10 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-07-02T04:15:00Z",
+    "actualizado": "2026-07-02T21:15:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "Spain",
-      "away": "Austria",
-      "fecha": "2026-07-02",
-      "estado_alineacion": "probable",
-      "xi_local": "Simon; Llorente, Cubarsi, Laporte, Cucurella; Merino, Rodri, Pedri; Yamal, Oyarzabal, Baena (4-3-3 probable — Yamal totalmente recuperado de su molestia muscular; Rodri como pivote; Oyarzabal referente ofensivo con 2 goles en grupos; Baena el goleador de la victoria vs Uruguay).",
-      "xi_visita": "A. Schlager; Posch, Lienhart, Alaba, Mwene; Siewald, X. Schlager; Laimer, Schmid, Sabitzer; Arnautovic (4-2-3-1 probable — Alaba y Arnautovic en duda leve tras golpes vs Algeria, pero Rangnick los espera disponibles; Sabitzer como mediapunta creativo; Arnautovic referencia en punta).",
-      "bajas_local": [
-        "Nico Williams (lesion en la ingle, baja confirmada — recibio falta de Nicolas de la Cruz en el cierre del partido de grupos vs Uruguay)",
-        "Yeremy Pino (molestia en el hombro izquierdo, en duda — cayo de mala manera vs Uruguay; su participacion en el resto del torneo es incierta)"
-      ],
-      "bajas_visita": [
-        "David Alaba (golpe leve vs Algeria, en duda leve — Rangnick lo minimizy en conferencia; probablemente disponible)",
-        "Marko Arnautovic (misma situacion que Alaba — golpe vs Algeria, en duda pero probable para jugar)"
-      ],
-      "lectura": "Espana llego al R32 como lider del Grupo H (7 pts: 0-0 Cabo Verde, 4-0 Arabia Saudita, 1-0 Uruguay) con la mejor defensa del torneo. Austria clasifico 2do del Grupo J con 4 pts y protagonizo el empate mas dramatico del grupo: un 3-3 con Algeria donde Mahrez puso el 2-3 al 90+3' y Kalajdzic igualó al 90+6'. Sin Nico Williams ni posiblemente Pino, Yamal y Pedri cargan con la creatividad espanola. El partido se juega en SoFi Stadium, Los Angeles (19:00 UTC). Espana busca su primer titulo desde 2010.",
-      "lean": "Espana favoritisima con 73% de probabilidad segun el mercado (8% Austria). Austria puede plantear un bloque defensivo compacto y buscar el contragolpe con Arnautovic en punta y Sabitzer de mediapunta, pero la diferencia de nivel es considerable. Lean: Espana avanza cómodamente en 90 minutos.",
-      "fuentes": [
-        "https://www.sportsmole.co.uk/football/spain/world-cup-2026/team-news/spain-vs-austria-injury-suspension-lists-predicted-xis_600400.html",
-        "https://www.sportsmole.co.uk/football/spain/world-cup-2026/preview/spain-vs-austria-prediction-team-news-lineups_600390.html",
-        "https://www.football365.com/match-preview/spain-v-austria-prediction-preview"
-      ]
-    },
     {
       "home": "Portugal",
       "away": "Croatia",

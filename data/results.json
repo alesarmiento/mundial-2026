@@ -2,7 +2,7 @@
   "_meta": {
     "descripcion": "Ledger de resultados REALES. Cada partido entra con su fuente. NUNCA se inventa un marcador. Si no se puede verificar, no se agrega.",
     "fase_valores": "grupos | dieciseisavos | octavos | cuartos | semis | tercer_puesto | final",
-    "ultima_fecha_cargada": "2026-07-01"
+    "ultima_fecha_cargada": "2026-07-02"
   },
   "partidos": [
     {
@@ -816,6 +816,15 @@
       "gl": 2,
       "gv": 0,
       "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021524 + https://www.espn.com/soccer/match/_/gameId/760494/bosnia-herzegovina-united-states (USA 2-0 FT; Balogun 45' (luego expulsado 64', suspension proximo partido), Tillman 82' free kick; USA avanza a octavos vs Belgium; primer victoria en eliminatorias desde 2002; confirmado FIFA / ESPN / NBC News / CBS Sports / CNN / Outlook India)"
+    },
+    {
+      "fecha": "2026-07-02",
+      "fase": "dieciseisavos",
+      "local": "Spain",
+      "visita": "Austria",
+      "gl": 3,
+      "gv": 0,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021519 + https://sports.yahoo.com/soccer/fifa-world-cup/austria-spain-13532373/ (Spain 3-0 Austria FT; Oyarzabal 36' (1-0, asistencia Cucurella), Porro 62' header (2-0, asistencia Baena), Oyarzabal 2o gol ~83' (3-0); primer knockout win de Espana en el Mundial desde 2010; Spain avanza a octavos; confirmado FIFA / CBS Sports / NBC News / NBC Sports / Yahoo Sports / Fox Sports)"
     }
   ]
 }
