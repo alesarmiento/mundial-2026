@@ -3,7 +3,7 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-07-02T00:30:00Z",
+    "actualizado": "2026-07-02T04:15:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
@@ -35,17 +35,20 @@
       "away": "Croatia",
       "fecha": "2026-07-02",
       "estado_alineacion": "probable",
-      "xi_local": "Diogo Costa; Dalot, R. Dias, Goncalo Inacio, Nuno Mendes; Joao Neves, Vitinha, Bruno Fernandes; Francisco Conceicao, Cristiano Ronaldo, Rafael Leao (4-3-3 probable — Ronaldo en su 6to y probablemente ultimo Mundial; Bruno Fernandes como motor creativo; Leao como desequilibrio por izquierda; Cancelo reemplazado por Dalot en lateral derecho).",
-      "xi_visita": "Livakovic; Stanisic, Sutalo, Gvardiol, Pongracic; Kovacic, Modric, Pasalic; Vlasic, Kramaric, Perisic (4-3-3 probable — Modric a los 40 anos lidera el mediocampo croata; Gvardiol solido en defensa; Kramaric como referente ofensivo; Kovacic el equilibrio entre ataque y defensa).",
+      "xi_local": "Diogo Costa; Cancelo, R. Dias, Renato Veiga, Nuno Mendes; Vitinha, Joao Neves; Pedro Neto, Bruno Fernandes, Joao Felix; Cristiano Ronaldo (4-2-3-1 probable segun RotoWire/ESPN — Cancelo sobre Dalot; Renato Veiga en lugar de Goncalo Inacio; Bruno Fernandes de mediapunta; Felix y Neto en extremos. ALTERNATIVA Sports Mole: 4-3-3 con Dalot/Inacio/Conceicao/Leao — hay genuina disputa hasta la alineacion oficial).",
+      "xi_visita": "Livakovic; Stanisic, Pongracic, Sutalo, Gvardiol; Kovacic, Modric, Sucic; Vlasic, Budimir, Perisic (4-3-3 probable — NOVEDAD: Gvardiol REGRESA al lateral izquierdo tras baja sorpresa vs Ghana; Perisic sube al carril izquierdo del ataque; Budimir como 9 con 1 gol en el torneo vs Panama; Sucic reemplaza a Pasalic; Modric 40 anos y Kovacic en el doble pivote).",
       "bajas_local": [],
-      "bajas_visita": [],
-      "lectura": "Portugal termino 2do del Grupo K con 5 pts (1-1 RD Congo, 5-0 Uzbekistan — Ronaldo brace, 0-0 Colombia) y llega con forma irregular. Croacia fue 2do del Grupo L con 6 pts (4-2 Inglaterra en debut historico, 0-1 Panama, 2-1 Ghana). El duelo de generaciones es el titular: Cristiano Ronaldo (6to Mundial, 6 goles en grupos — record por WC) vs Luka Modric (40 anos, probablemente su ultimo partido mundialista). Partido en BMO Field, Toronto (~23:00 UTC). El ganador enfrentara al vencedor de Espana vs Austria en octavos.",
-      "lean": "Partido muy igualado: mercado da 42% Portugal vs 27% Croacia (31% empate). Bruno Fernandes, Leao y Conceicao pueden ser la diferencia ofensiva; Modric y Kovacic son garantia de control en el centro. Lean: Portugal avanza, pero Croacia es historicamente solida en eliminatorias de Mundiales — no se descarta tiempo extra ni penales.",
+      "bajas_visita": [
+        "Josko Gvardiol — no fue baja (fue omision tactica vs Ghana); REGRESA aqui como titular en LB segun multiples fuentes"
+      ],
+      "lectura": "Portugal termino 2do del Grupo K con 5 pts (1-1 RD Congo, 5-0 Uzbekistan con Ronaldo brace, 0-0 Colombia) con debate interno sobre la seleccion — DT Roberto Martinez criticado por condescender con Ronaldo en la eleccion. Croacia fue 2do del Grupo L con 6 pts (4-2 Inglaterra, 0-1 Panama, 2-1 Ghana) y llega con el refuerzo de Gvardiol al lateral. El choque de generaciones: Cristiano Ronaldo (6to Mundial) vs Luka Modric (40 anos). Partido en BMO Field, Toronto (~23:00 UTC). El ganador enfrenta al vencedor de Espana vs Austria en octavos.",
+      "lean": "Partido muy igualado: mercado da 42% Portugal vs 27% Croacia (31% empate). Si Martinez opta por el 4-2-3-1, Joao Felix y Pedro Neto dan mas verticalidad que Conceicao/Leao. Croacia con Gvardiol recuperado es mas solida defensivamente; Modric siempre peligroso en eliminatorias. Lean: Portugal avanza, pero Croacia puede llevar al tiempo extra o penales — historicamente los mejores en eso.",
       "fuentes": [
         "https://www.rotowire.com/soccer/article/portugal-vs-croatia-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120534",
+        "https://www.espn.com/soccer/story/_/id/49221788/portugal-vs-croatia-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups",
         "https://www.squawka.com/en/news/world-cup/portugal-vs-croatia-team-news-predicted-lineups/",
-        "https://www.si.com/soccer/portugal-predicted-lineup-vs-croatia-world-cup-7-2-26",
-        "https://www.sportsmole.co.uk/football/portugal/world-cup-2026/preview/portugal-vs-croatia-prediction-team-news-lineups_600433.html"
+        "https://www.sportsmole.co.uk/football/portugal/world-cup-2026/preview/portugal-vs-croatia-prediction-team-news-lineups_600433.html",
+        "https://www.101greatgoals.com/match-previews/world-cup-matches/portugal-v-croatia-line-ups-stats-preview-tv-channel-live-online-stream-prediction-cristiano-ronaldo/"
       ]
     },
     {
