@@ -2,8 +2,8 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://www.espn.com/soccer/match/_/gameId/760493/senegal-belgium + https://www.goal.com/en/lists/world-cup-2026-golden-boot-standings-fifa-award/blt29fdba0896b8fd09 + https://sports.yahoo.com/soccer/article/world-cup-goal-leaders-golden-boot-lionel-messi-erling-haaland-kylian-mbappe-ousmane-dembele-010143798.html (Sarr anoto en Belgium 3-2 Senegal AET — 4 goles total, sube al grupo de 4; Mbappe 6 lider en asistencias sobre Messi 6; Kane y Haaland 5; confirmado ESPN / Goal.com / Yahoo Sports / FIFA)",
-    "actualizado": "2026-07-01"
+    "fuente": "https://www.espn.com/soccer/story/_/id/49117037/lionel-messi-erling-haaland-kylian-mbappe-harry-kane-folarin-balogun-world-cup-golden-boot-top-scorer + https://sports.yahoo.com/articles/world-cup-golden-boot-live-041757844.html (Balogun sube a 3 goles tras anotar vs Bosnia 45'; Mbappe 6 sigue lider por asistencias sobre Messi 6; Kane y Haaland 5; confirmado ESPN / Yahoo Sports / FIFA)",
+    "actualizado": "2026-07-02"
   },
   "jugadores": [
     {"jugador": "Kylian Mbappe", "equipo": "France", "goles": 6},
@@ -13,6 +13,7 @@
     {"jugador": "Ousmane Dembele", "equipo": "France", "goles": 4},
     {"jugador": "Vinicius Junior", "equipo": "Brazil", "goles": 4},
     {"jugador": "Ismaila Sarr", "equipo": "Senegal", "goles": 4},
+    {"jugador": "Folarin Balogun", "equipo": "United States", "goles": 3},
     {"jugador": "Jonathan David", "equipo": "Canada", "goles": 3},
     {"jugador": "Deniz Undav", "equipo": "Germany", "goles": 3},
     {"jugador": "Brian Brobbey", "equipo": "Netherlands", "goles": 3},
