@@ -2,8 +2,8 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/adidas-golden-boot-race-top-scorer + https://sports.yahoo.com/soccer/fifa-world-cup/austria-spain-13532373/ (Oyarzabal suma 2 goles vs Austria (36' y ~83') y alcanza 4 totales en el torneo; Mbappe 6 y Messi 6 siguen co-lideres; Kane 5 y Haaland 5; confirmado FIFA / NBC News / CBS Sports / Yahoo Sports / Fox Sports)",
-    "actualizado": "2026-07-02"
+    "fuente": "https://www.espn.com/football/story/_/id/49251703/portugal-croatia-live-world-cup-2026-latest-updates-commentary-score-result + https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-games-2026-july-2-live-updates-rcna352733 (Ronaldo 68' pen vs Croatia suma su 3er gol del torneo; Mbappe 6 y Messi 6 co-lideres; Haaland 5, Kane 5; confirmado ESPN / CBC / NBC News / Al Jazeera)",
+    "actualizado": "2026-07-03"
   },
   "jugadores": [
     {"jugador": "Kylian Mbappe", "equipo": "France", "goles": 6},
@@ -22,6 +22,7 @@
     {"jugador": "Johan Manzambi", "equipo": "Switzerland", "goles": 3},
     {"jugador": "Ismael Saibari", "equipo": "Morocco", "goles": 3},
     {"jugador": "Yoane Wissa", "equipo": "DR Congo", "goles": 3},
-    {"jugador": "Cody Gakpo", "equipo": "Netherlands", "goles": 3}
+    {"jugador": "Cody Gakpo", "equipo": "Netherlands", "goles": 3},
+    {"jugador": "Cristiano Ronaldo", "equipo": "Portugal", "goles": 3}
   ]
 }
