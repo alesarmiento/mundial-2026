@@ -3,7 +3,7 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-07-02T21:15:00Z",
+    "actualizado": "2026-07-03T00:10:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
@@ -18,7 +18,7 @@
       "bajas_visita": [
         "Josko Gvardiol — no fue baja (fue omision tactica vs Ghana); REGRESA aqui como titular en LB segun multiples fuentes"
       ],
-      "lectura": "Portugal termino 2do del Grupo K con 5 pts (1-1 RD Congo, 5-0 Uzbekistan con Ronaldo brace, 0-0 Colombia) con debate interno sobre la seleccion — DT Roberto Martinez criticado por condescender con Ronaldo en la eleccion. Croacia fue 2do del Grupo L con 6 pts (4-2 Inglaterra, 0-1 Panama, 2-1 Ghana) y llega con el refuerzo de Gvardiol al lateral. El choque de generaciones: Cristiano Ronaldo (6to Mundial) vs Luka Modric (40 anos). Partido en BMO Field, Toronto (~23:00 UTC). El ganador enfrenta al vencedor de Espana vs Austria en octavos.",
+      "lectura": "Portugal termino 2do del Grupo K con 5 pts (1-1 RD Congo, 5-0 Uzbekistan con Ronaldo brace, 0-0 Colombia) con debate interno sobre la seleccion — DT Roberto Martinez criticado por condescender con Ronaldo en la eleccion. Croacia fue 2do del Grupo L con 6 pts (4-2 Inglaterra, 0-1 Panama, 2-1 Ghana) y llega con el refuerzo de Gvardiol al lateral. El choque de generaciones: Cristiano Ronaldo (6to Mundial) vs Luka Modric (40 anos). Partido en BMO Field, Toronto (~23:00 UTC del 2 de julio). El ganador enfrenta al vencedor de Espana vs Austria en octavos.",
       "lean": "Partido muy igualado: mercado da 42% Portugal vs 27% Croacia (31% empate). Si Martinez opta por el 4-2-3-1, Joao Felix y Pedro Neto dan mas verticalidad que Conceicao/Leao. Croacia con Gvardiol recuperado es mas solida defensivamente; Modric siempre peligroso en eliminatorias. Lean: Portugal avanza, pero Croacia puede llevar al tiempo extra o penales — historicamente los mejores en eso.",
       "fuentes": [
         "https://www.rotowire.com/soccer/article/portugal-vs-croatia-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120534",
@@ -48,6 +48,81 @@
         "https://www.sportsmole.co.uk/football/switzerland/world-cup-2026/predicted-lineups/right-back-options-predicted-switzerland-xi-vs-algeria_600426.html",
         "https://www.sportsmole.co.uk/football/algeria/world-cup-2026/predicted-lineups/forward-dilemma-predicted-algeria-xi-vs-switzerland_600427.html",
         "https://sports.yahoo.com/articles/world-cup-2026-r32-switzerland-162000326.html"
+      ]
+    },
+    {
+      "home": "Australia",
+      "away": "Egypt",
+      "fecha": "2026-07-03",
+      "estado_alineacion": "probable",
+      "xi_local": "Ryan (c); Geria, Souttar, Burgess, Bos; Metcalfe, Irvine, O'Neill; Goodwin/Tilio (reemplaza a Leckie, baja por lesion), Irankunda, Mabil (4-3-3 probable segun Sports Mole / Yahoo Sports UK — Leckie e Italiano fuera del torneo por lesion; Irankunda como opcion joven de ataque).",
+      "xi_visita": "El Shenawy; Nasr, Abdelmonem (en duda, tobillo), Hany, Rabia; Ashour, Zizo; Warda, Marmoush, Salah (en duda, hamstring); Trezeguet (4-2-3-1 probable — Salah es la gran incognita: comenzó tratamiento por desgarro en isquiotibial sufrido vs Iran; hay optimismo oficial de que llegue al arranque; si no juega, Mostafa Mohamed o Kahraba podrian entrar).",
+      "bajas_local": [
+        "Jacob Italiano (lesion de ingle, fuera del torneo)",
+        "Mathew Leckie (desgarro en isquiotibial, fuera del torneo)"
+      ],
+      "bajas_visita": [
+        "Mohanad Lasheen (suspendido — tarjeta amarilla acumulada vs Iran)",
+        "Ahmed El Fotouh (lesion grave de isquiotibial, muy probable baja)",
+        "Mohamed Salah (desgarro en isquiotibial leve, EN DUDA — optimismo oficial segun delegacion egipcia; comenzó tratamiento inmediato tras vs Iran segun FIFA)",
+        "Hamdy Fathy (molestia en la ingle, en duda)",
+        "Hossam Abdelmaguid (molestia en la cabeza, en duda)"
+      ],
+      "lectura": "Australia llega como 2do del Grupo D con 4 puntos (2-0 Turkiye, 0-2 USA, 0-0 Paraguay) con solidez defensiva pero escasa profundidad goleadora y sin Leckie ni Italiano. Egipto fue 2do del Grupo G con 5 puntos (1-1 Belgium, 3-1 New Zealand, 1-1 Iran). La duda de Salah es el factor principal: si juega desde el inicio, Egipto tiene diferencial de calidad individual. Marmoush y Trezeguet siguen siendo peligrosos incluso sin él. Sede: AT&T Stadium, Arlington (Dallas). 18:00 UTC. El ganador enfrenta al vencedor de Argentina vs Cape Verde.",
+      "lean": "Egypt leve favorito del mercado (38% vs 30% Australia). La superioridad individual de Egipto a traves de Salah o Marmoush deberia marcar la diferencia. Australia mostró limitaciones de gol en grupos y pierde referencias clave. Lean: Egypt avanza, posiblemente en partido cerrado.",
+      "fuentes": [
+        "https://www.sportsmole.co.uk/football/australia/world-cup-2026/preview/australia-vs-egypt-prediction-team-news-lineups_600483.html",
+        "https://uk.sports.yahoo.com/news/australia-vs-egypt-lineups-confirmed-125009101.html",
+        "https://www.espn.com/soccer/story/_/id/49213238/australia-vs-egypt-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups",
+        "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/egypt-injury-worries-australia-mohamed-salah",
+        "https://www.rotowire.com/soccer/article/australia-vs-egypt-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120684"
+      ]
+    },
+    {
+      "home": "Argentina",
+      "away": "Cape Verde",
+      "fecha": "2026-07-03",
+      "estado_alineacion": "probable",
+      "xi_local": "E. Martinez; Molina, Romero (regresa de molestia en rodilla), L. Martinez, Tagliafico; Mac Allister (regresa al XI titular), E. Fernandez, De Paul; Messi (regresa al XI titular), Lautaro Martinez, J. Alvarez (4-3-3 probable segun Sports Mole / ESPN / RotoWire — Messi y Mac Allister descansaron vs Jordan entrando de cambio; Romero reemplaza a Otamendi).",
+      "xi_visita": "Vozinha; S. Moreira, R. Lopes, D. Borges, Sidny Cabral; K. Pina; R. Mendes, J. Monteiro, D. Duarte, G. Rodrigues; G. Benchimol/J. Tavares (4-1-4-1 probable segun Sports Mole / RotoWire — Cape Verde usara bloque bajo compacto; Garry Rodrigues el peligro en transicion).",
+      "bajas_local": [
+        "Sin bajas confirmadas de importancia"
+      ],
+      "bajas_visita": [
+        "Sin bajas confirmadas"
+      ],
+      "lectura": "Argentina cerro la fase de grupos invicta (1ra del Grupo J, 9 pts: 3-0 Algeria, 2-0 Austria, 3-1 Jordan) con Messi como lider absoluto: 6 goles en el torneo (co-lider Bota de Oro junto a Mbappe), gol en 7 mundiales consecutivos, todos los records. Cape Verde hizo historia en su primer Mundial y al R32 como 2do del Grupo H con tres empates (0-0 vs Espana, 2-2 vs Uruguay, 0-0 vs Arabia Saudita). El DT de Cape Verde reconocio que no van a marcar a Messi individualmente. Sede: Hard Rock Stadium, Miami. 22:00 UTC.",
+      "lean": "La diferencia de nivel es abrumadora: mercado pone a Argentina en 82% de probabilidad. Messi y Mac Allister regresan al XI y Argentina tiene el banco mas profundo del torneo. Cape Verde puede resistir con bloque bajo los primeros 20-30 minutos, pero la calidad argentina deberia resolver antes del descanso. Lean: Argentina gana con claridad y Messi marca para ampliar el record.",
+      "fuentes": [
+        "https://www.sportsmole.co.uk/football/argentina/world-cup-2026/preview/argentina-vs-cape-verde-prediction-team-news-lineups_600481.html",
+        "https://www.sportsmole.co.uk/football/argentina/world-cup-2026/predicted-lineups/messi-returns-romero-boost-predicted-argentina-xi-vs-cape-verde_600514.html",
+        "https://www.espn.com/soccer/story/_/id/49234020/fifa-world-cup-2026-argentina-vs-cape-verde-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups-lionel-messi",
+        "https://www.rotowire.com/soccer/article/argentina-vs-cape-verde-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120686",
+        "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021521"
+      ]
+    },
+    {
+      "home": "Colombia",
+      "away": "Ghana",
+      "fecha": "2026-07-03",
+      "estado_alineacion": "probable",
+      "xi_local": "Vargas; Muñoz, D. Sanchez, Lucumi, Mojica; Lerma, Rios; J. Arias, James Rodriguez (c), L. Diaz; L. Suarez (4-2-3-1 probable segun Sports Mole / RotoWire / bet365 News — Suarez regresa al XI titular tras aparecer de suplente por duda fisica ya superada; Daniel Muñoz con 2 goles en el torneo; Luis Diaz en Bayern Munich como mayor amenaza).",
+      "xi_visita": "Ati-Zigi (en duda, ingle — podria ser Danlad Ibrahim); Seidu, Opoku (regresa de lesion), Abdul Mumin, Baba; Partey (c), Owusu, Semenyo; K. Sulemana, J. Ayew, I. Williams (4-3-3 probable segun Sports Mole / Squawka — Jerome Opoku regresa al equipo tras perderse vs Croatia; Thomas Partey como eje del mediocampo).",
+      "bajas_local": [
+        "Sin bajas confirmadas. Luis Suarez tuvo duda menor fisica ya superada y es apto para titular."
+      ],
+      "bajas_visita": [
+        "Lawrence Ati-Zigi (molestia en la ingle, en duda para arrancar — Danlad Ibrahim como posible reemplazante)",
+        "Jerome Opoku (lesion superada — REGRESA; habia perdido el partido del grupo vs Croatia)"
+      ],
+      "lectura": "Colombia fue el equipo mas solido del Grupo K: 1ro con 7 puntos (3-1 Uzbekistan, 1-0 DR Congo, 0-0 Portugal), con una defensa casi impenetrable y Luis Diaz como detonador en ataque. Ghana llego como 3ro del Grupo L con 4 puntos (1-0 Panama, 0-0 England, 1-2 Croatia), con recursos para ser peligrosa en transicion pero con interrogantes fisicos. Sede: Children's Mercy Park (Arrowhead), Kansas City. ~01:30 UTC del 4 de julio. Es el partido mas tardio del dia.",
+      "lean": "Colombia favorita (54%) segun el mercado. La solidez defensiva de los colombianos mas el talento de Diaz, James y Suarez dan un margen claro. Ghana tiene recursos (Partey, Semenyo, Kamaldeen, Iñaki Williams) para ser peligrosa en transicion, pero carece del nivel tecnico de Colombia. Lean: Colombia avanza a octavos, posiblemente con gol de Diaz o James.",
+      "fuentes": [
+        "https://www.sportsmole.co.uk/football/colombia/world-cup-2026/preview/colombia-vs-ghana-prediction-team-news-lineups_600509.html",
+        "https://www.sportsmole.co.uk/football/colombia/world-cup-2026/predicted-lineups/will-suarez-start-how-colombia-could-line-up-against-ghana_600511.html",
+        "https://www.rotowire.com/soccer/article/colombia-vs-ghana-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120687",
+        "https://news.bet365.com/en-us/article/colombia-vs-ghana-preview-and-lineup-predictions/2026070214483032484",
+        "https://www.squawka.com/en/news/world-cup/colombia-vs-ghana-team-news-predicted-lineups/"
       ]
     }
   ]
