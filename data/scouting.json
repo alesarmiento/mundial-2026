@@ -3,35 +3,10 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-07-03T17:15:00Z",
+    "actualizado": "2026-07-03T23:15:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "Australia",
-      "away": "Egypt",
-      "fecha": "2026-07-03",
-      "estado_alineacion": "confirmada",
-      "xi_local": "Beach; Bos, Circati, Souttar, Herrington, Behich; Irvine, O'Neill, Metcalfe, Volpato; Irankunda (3-4-2-1 / cinco defensores con wing-backs — Australia cambia de 4-3-3 a sistema defensivo de cinco: Circati y Herrington se suman a Souttar como CBs; Bos y Behich como wing-backs; Volpato y Metcalfe como mediapuntas; Irankunda unico punta).",
-      "xi_visita": "Shobeir; Ibrahim, Rabia, Hany, Hafez; Fathy, Attia; Zico, Salah, Ashour; Marmoush (4-2-3-1 — SALAH CONFIRMADO EN EL XI INICIAL tras recuperarse del desgarro leve en isquiotibial; Marmoush como centro delantero; doble pivote Fathy-Attia; trio creativo Zico-Salah-Ashour).",
-      "bajas_local": [
-        "Jacob Italiano (lesion de ingle, fuera del torneo)",
-        "Mathew Leckie (desgarro en isquiotibial, fuera del torneo)"
-      ],
-      "bajas_visita": [
-        "Mohanad Lasheen (suspendido — tarjeta amarilla acumulada vs Iran)",
-        "Ahmed El Fotouh (lesion grave de isquiotibial, baja confirmada)",
-        "Mohamed Salah: APTO Y TITULAR — supero el desgarro leve en isquiotibial y fue confirmado en el XI inicial segun World Soccer Talk / Central Oregon Daily / WhoScored"
-      ],
-      "lectura": "Australia sorprende con un sistema de cinco defensores (3-4-2-1) para contener a Salah y Marmoush: Patrick Beach entre los tres palos (no Ryan); Circati y Herrington se suman a Souttar como CBs; Bos y Behich como wing-backs. La gran noticia: Salah ES TITULAR confirmado, se recupero en tiempo record. Con Salah en cancha, Egipto tiene diferencial individual enorme sobre una Australia que perdio a Leckie e Italiano. Marmoush lidera la linea. AT&T Stadium, Arlington (Dallas). 18:00 UTC. El ganador enfrenta al vencedor de Argentina vs Cape Verde.",
-      "lean": "Egypt favorito del mercado (38% vs 30% AUS). Con Salah confirmado titular, el diferencial individual egipcio es aun mayor. El bloque de cinco australiano puede resistir, pero la clase de Salah + Marmoush deberia ser decisiva. Lean: Egypt avanza, posiblemente 1-0 o 2-0.",
-      "fuentes": [
-        "https://worldsoccertalk.com/world-cup/is-mo-salah-playing-australia-vs-egypt-projected-lineups-for-the-2026-world-cup-game/",
-        "https://www.centraloregondaily.com/sports/egypts-world-cup-lineup-vs-australia-mo-salah-starting-round-of-32/article_002b7bf9-7209-5e11-a20d-4e875370c788.html",
-        "https://www.whoscored.com/news/313YfyV2OEKqK2ykCjnMYw/show/20260703-australia-vs-egypt-confirmed-lineup-1783097030",
-        "https://www.si.com/soccer/australia-vs-egypt-world-cup-preview-predictions-lineups-7-3-26"
-      ]
-    },
     {
       "home": "Argentina",
       "away": "Cape Verde",

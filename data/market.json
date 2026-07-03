@@ -3,8 +3,8 @@
     "descripcion": "Consenso del mercado/mundo online por partido del dia (1X2 implicado, marcador mas probable, over 2.5). Para comparar contra el sistema y medir calibracion. La rutina lo actualiza con las cuotas del dia para TODOS los partidos.",
     "regla_de_oro": "Solo con fuente real (ESPN odds, oddschecker, Dimers, bet365, Kalshi, Forebet). Las cuotas se convierten a probabilidad quitando el margen y se normalizan a 100. Nunca inventar.",
     "campos": "pH/pD/pA = % implicado de gana local / empate / gana visita (orientado al home del fixture). score = marcador mas probable del mercado. over25 = % de over 2.5 goles.",
-    "actualizado": "2026-06-28",
-    "ultima_actualizacion": "2026-06-28T06:10:00Z"
+    "actualizado": "2026-07-03",
+    "ultima_actualizacion": "2026-07-03T23:15:00Z"
   },
   "partidos": [
     {
@@ -700,6 +700,61 @@
       "score": "1-2",
       "over25": 51,
       "fuente": "Kalshi (BEL +117 / draw +233 / SEN +270; O2.5 -117) via SportsBettingDime, 28-jun-2026; marcador NBC 1-2"
+    },
+    {
+      "home": "Canada",
+      "away": "Morocco",
+      "fecha": "2026-07-04",
+      "pH": 19,
+      "pD": 27,
+      "pA": 54,
+      "over25": 44,
+      "fuente": "DraftKings / covers.com / FanDuel (CAN +400 / draw +250 / MAR -125; over 2.5 +125; 3-jul-2026)"
+    },
+    {
+      "home": "Paraguay",
+      "away": "France",
+      "fecha": "2026-07-04",
+      "pH": 5,
+      "pD": 14,
+      "pA": 81,
+      "fuente": "Fox Sports / DraftKings (PRY +1700 / draw +600 / FRA -600; normalizado; 3-jul-2026)"
+    },
+    {
+      "home": "Brazil",
+      "away": "Norway",
+      "fecha": "2026-07-05",
+      "pH": 53,
+      "pD": 26,
+      "pA": 21,
+      "fuente": "Fox Sports / DraftKings (BRA -125 / draw +260 / NOR +360; normalizado; 3-jul-2026)"
+    },
+    {
+      "home": "Mexico",
+      "away": "England",
+      "fecha": "2026-07-05",
+      "pH": 32,
+      "pD": 31,
+      "pA": 37,
+      "fuente": "bet365 / FanDuel / Kalshi (MEX +200 / draw +210 / ENG +150; Kalshi MEX 32%/D 30%/ENG 40%; normalizado; 3-jul-2026)"
+    },
+    {
+      "home": "Spain",
+      "away": "Portugal",
+      "fecha": "2026-07-06",
+      "pH": 51,
+      "pD": 27,
+      "pA": 22,
+      "fuente": "Fox Sports / DraftKings (ESP -115 / draw +250 / POR +320; normalizado; 3-jul-2026)"
+    },
+    {
+      "home": "Belgium",
+      "away": "United States",
+      "fecha": "2026-07-06",
+      "pH": 35,
+      "pD": 29,
+      "pA": 36,
+      "fuente": "Fox Sports / DraftKings (BEL +170 / draw +230 / USA +165; normalizado; 3-jul-2026)"
     }
   ]
 }
