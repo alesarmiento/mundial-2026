@@ -3,7 +3,7 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-07-03T08:00:00Z",
+    "actualizado": "2026-07-03T03:10:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
@@ -56,6 +56,29 @@
         "https://www.espn.com/soccer/story/_/id/49234020/fifa-world-cup-2026-argentina-vs-cape-verde-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups-lionel-messi",
         "https://www.rotowire.com/soccer/article/argentina-vs-cape-verde-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120686",
         "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021521"
+      ]
+    },
+    {
+      "home": "Switzerland",
+      "away": "Algeria",
+      "fecha": "2026-07-03",
+      "estado_alineacion": "probable",
+      "xi_local": "Kobel; Widmer (en duda, sustituible por Stergiou), Elvedi, Akanji, Ricardo Rodriguez; Freuler, Xhaka; Vargas, Manzambi, Sow; Embolo (4-2-3-1 probable segun RotoWire / FIFA — Manzambi como figura emergente del torneo: 3 goles y 1 asistencia en 3 partidos; Widmer y Muheim con dudas fisicas menores en la previa).",
+      "xi_visita": "L. Zidane; Ait-Nouri, Mandi, Bensebaini, Belghali; Chaibi, Bentaleb; Aouar, Maza, Mahrez; Gouiri (4-2-3-1 probable segun RotoWire / beIN SPORTS — Mahrez lider y motor creativo; Maza y Aouar como conexion entre lineas; Bensebaini amenaza en el juego aereo).",
+      "bajas_local": [
+        "Silvan Widmer (molestia fisica, en duda — posible Stergiou en su lugar)",
+        "Miro Muheim (molestia fisica, en duda)"
+      ],
+      "bajas_visita": [
+        "Sin bajas confirmadas de importancia"
+      ],
+      "lectura": "Switzerland llego lider invicta del Grupo B (7 pts: 1-1 Qatar, 4-1 Bosnia, 2-1 Canada), con solidez defensiva y el joven Manzambi como gran revelacion del torneo. Argelia clasifico tercera del Grupo J con 4 puntos por una DG mejor que la de Austria, en un final dramatico (empate 3-3 en el minuto 90+6). El partido se juega en BC Place, Vancouver. El ganador enfrentara al vencedor de Colombia vs Ghana en octavos. NOTA: El partido inicio ~03:00 UTC y esta en curso; este scouting es de pre-partido.",
+      "lean": "Switzerland favorita (58% mercado vs 18% Algeria). La organizacion tactica de Yakin, con Xhaka y Freuler dominando el medioampo y la amenaza de Manzambi, dan ventaja suiza. Algeria tiene calidad en Mahrez y Gouiri para el contragolpe, y fue letal en transiciones a lo largo del grupo, pero la defensa suiza es de las mas solidas del torneo. Lean: Switzerland avanza, posiblemente por diferencia minima.",
+      "fuentes": [
+        "https://www.rotowire.com/soccer/article/switzerland-vs-algeria-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120535",
+        "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/switzerland-algeria-live-stream-team-news-tickets-and-more",
+        "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/how-and-where-to-watch-switzerland-vs-algeria-in-the-round-of-32-of-the-2026-fifa-world-cup-2026-07-02",
+        "https://www.rotowire.com/soccer/article/switzerland-vs-algeria-picks-odds-best-bets-2026-world-cup-round-of-32-120683"
       ]
     },
     {
