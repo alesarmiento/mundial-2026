@@ -1445,10 +1445,12 @@ function matchRow(m){
     r.append($('span',{class:'pron'},'pron '+ps[0]+'–'+ps[1]));
   } else { r.append($('span',{class:'muted'},'—')) }
   const mkrow=(S.mercado||[]).find(x=>x.home===m.home&&x.away===m.away);
-  if(mkrow&&mkrow.divergencia&&mkrow.divergencia.nivel==='alta'){
-    const w=$('span',{html:'⚠️ vs mercado'});w.style.cssText='font-size:10px;color:#f85149;border:1px solid #f85149;border-radius:5px;padding:0 5px;flex:none';r.append(w);
-  } else if(mkrow&&mkrow.divergencia&&mkrow.divergencia.nivel==='media'){
-    const w=$('span',{html:'⚠️'});w.style.cssText='font-size:10px;color:#d29922;flex:none';r.append(w);
+  if(!m.jugado&&mkrow&&mkrow.mkt&&mkrow.mkt.pH!=null){
+    const mkt=mkrow.mkt,dv=mkrow.divergencia||{};
+    const mfav=mkt.pA>mkt.pH&&mkt.pA>mkt.pD?(m.away+' '+mkt.pA+'%'):mkt.pH>mkt.pD?(m.home+' '+mkt.pH+'%'):('E '+mkt.pD+'%');
+    const col=dv.nivel==='alta'?'#f85149':dv.nivel==='media'?'#d29922':'#8b949e';
+    const ico=dv.nivel==='alta'?'⚠️ ':'🌐 ';
+    const w=$('span',{html:ico+mfav});w.style.cssText=`font-size:10px;color:${col};border:1px solid ${col};border-radius:4px;padding:0 4px;flex:none`;r.append(w);
   }
   if(clickable) r.append($('span',{class:'info'},'ⓘ por qué'));
   return r;
