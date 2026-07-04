@@ -3,56 +3,34 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-07-04T03:30:00Z",
+    "actualizado": "2026-07-04T19:15:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "Canada",
-      "away": "Morocco",
-      "fecha": "2026-07-04",
-      "estado_alineacion": "probable",
-      "xi_local": "Crepeau; Johnston, Bombito, Cornelius, A. Davies; Buchanan, Eustaquio, Saliba, Millar; David, Oluwaseyi (4-4-2 / 4-2-3-1 — Alphonso Davies regresa al XI inicial tras entrar de cambio vs South Africa; Eustaquio como mediocampista organizador; Jonathan David como referencia en el ataque).",
-      "xi_visita": "Bounou; Hakimi, Diop, Riad (en duda), Mazraoui; Bouaddi, Ounahi, El Aynaoui; Diaz, Saibari, El Khannouss (4-3-3 — Chadi Riad con molestia, podria ser reemplazado; Ismael Saibari (4 goles) como amenaza principal; Brahim Diaz como creativo entre lineas).",
-      "bajas_local": [
-        "Ismael Kone (tobillo roto — baja confirmada para el torneo)"
-      ],
-      "bajas_visita": [
-        "Chadi Riad (molestia fisica — en duda, podria ser reemplazado en el XI)"
-      ],
-      "lectura": "Canada llega tras su historica primera victoria en eliminatorias mundialistas (1-0 a South Africa con gol de Eustaquio en el descuento). Alphonso Davies, recuperado de lesion, podria hacer su primer arranque del torneo en el lateral izquierdo. Morocco, que elimino a Netherlands en penales en la ronda anterior, presenta su bloque caracteristico con Hakimi, Saibari y Brahim Diaz como figuras. NRG Stadium, Houston. Kickoff 17:00 UTC (1 PM ET / 12 PM CDT).",
-      "lean": "Morocco favorita (54% mercado) por mayor experiencia en eliminatorias y calidad tecnica (recuerdo de Qatar 2022 donde llego a semifinales). Canada es competitivo y tiene terreno casi de local (USA), pero le falta rodaje en knockouts. Jonathan David y Alphonso Davies son la esperanza canadiense. Lean: Morocco gana con dificultad, 2-1 o 1-0 en tiempo extra.",
-      "fuentes": [
-        "https://www.rotowire.com/soccer/article/canada-vs-morocco-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-16-120851",
-        "https://www.sportsmole.co.uk/football/canada/world-cup-2026/preview/canada-vs-morocco-prediction-team-news-lineups_600547.html",
-        "https://www.espn.com/soccer/story/_/id/49246432/fifa-world-cup-2026-canada-vs-morocco-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups",
-        "https://www.aljazeera.com/sports/2026/7/3/canada-morocco-fifa-world-cup-round-of-16-saibari-prediction-schedule",
-        "https://lastwordonsports.com/football/2026/07/03/canada-vs-morocco-team-news-and-predicted-lineup/"
-      ]
-    },
     {
       "home": "Paraguay",
       "away": "France",
       "fecha": "2026-07-04",
       "estado_alineacion": "probable",
       "xi_local": "Gill; Caceres, Canale, G. Gomez, Alonso; Almiron, Cubas, D. Gomez (regresa de suspension), Galarza; Enciso (en duda), Avalos (en duda) (4-4-2 — Diego Gomez disponible tras cumplir suspension; Orlando Gill fue el heroe en penales vs Germany; Paraguay jugo el mejor partido de su historia eliminando a Alemania).",
-      "xi_visita": "Maignan; Kounde, Upamecano, Saliba, T. Hernandez; Tchouameni, Rabiot; Dembele, Olise, Barcola; Mbappe (4-2-3-1 — Mbappe lider con 6 goles liderando la Bota de Oro; Dembele con 4 goles y hat-trick previo; Olise con 5 asistencias; France recupera a todos salvo Thuram).",
+      "xi_visita": "Maignan; Kounde, Upamecano, Saliba, T. Hernandez; Camavinga (reemplaza a Tchouameni — BAJA CONFIRMADA), Rabiot; Dembele, Olise, Barcola; Mbappe (4-2-3-1 — Mbappe lider con 6 goles en la Bota de Oro; Dembele con 4 goles y hat-trick previo; Olise como creativo entre lineas; Camavinga entra al doble pivote por la lesion de Tchouameni).",
       "bajas_local": [
         "Omar Alderete (lesion muscular — fuera ~2 semanas)",
         "Julio Enciso (molestia fisica — en duda para el XI)",
         "Gabriel Avalos (molestia fisica — en duda para el XI)"
       ],
       "bajas_visita": [
+        "Aurelien Tchouameni (dolor de aductor — BAJA CONFIRMADA para este partido; salio del entrenamiento del viernes con molestia)",
         "Marcus Thuram (molestia en el gemelo — fuera del XI pero en el plantel)"
       ],
-      "lectura": "Paraguay llego aqui tras el historico partido de penales contra Alemania — Orlando Gill fue el heroe bajo los tres palos. Ahora enfrenta a la potencia francesa, diferencia de ranking de 38 posiciones. France mostro dominio total en la fase de grupos con Mbappe y Dembele como figuras. Lincoln Financial Field, Philadelphia. Kickoff 21:00 UTC (5 PM ET). Diego Gomez (suspension cumplida) regresa al mediocampo paraguayo, lo que da mas creatividad al equipo guarani.",
-      "lean": "Francia aplastante favorita (81% mercado). La diferencia tecnica entre ambas plantillas es abismal. Paraguay puede resistir el primer tiempo con un bloque bajo defensivo pero France tiene demasiados detonadores ofensivos (Mbappe, Dembele, Olise, Barcola). Lean: France gana con claridad, probablemente 3-0 o 3-1, aunque Paraguay puede marcar si logra una transicion rapida.",
+      "lectura": "Paraguay llego aqui tras el historico partido de penales contra Alemania — Orlando Gill fue el heroe bajo los tres palos. Ahora enfrenta a la potencia francesa. France mostro dominio total en la fase de grupos con Mbappe y Dembele como figuras, y llega con una novedad: Tchouameni cae con dolor de aductor, lo que abre un lugar a Camavinga en el doble pivote junto a Rabiot. Lincoln Financial Field, Philadelphia. Kickoff 21:00 UTC (5 PM ET). Diego Gomez (suspension cumplida) regresa al mediocampo paraguayo, lo que da mas creatividad al equipo guarani.",
+      "lean": "Francia aplastante favorita (81% mercado, FIFA Opta 78.8%). La diferencia tecnica entre ambas plantillas es abismal incluso sin Tchouameni: Camavinga es un reemplazante de nivel Champions League. Paraguay puede resistir el primer tiempo con un bloque bajo pero France tiene demasiados detonadores ofensivos. Lean: France gana con claridad, 3-0 o 3-1.",
       "fuentes": [
+        "https://www.si.com/soccer/france-predicted-lineup-vs-paraguay-world-cup-7-4-26",
         "https://www.rotowire.com/soccer/article/paraguay-vs-france-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-16-120852",
-        "https://www.sportsmole.co.uk/football/paraguay/world-cup-2026/preview/paraguay-vs-france-prediction-team-news-lineups_600503.html",
+        "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/france-s-possible-lineup-vs-paraguay-in-the-2026-world-cup-round-of-16-2026-07-04",
         "https://www.espn.com/soccer/story/_/id/49233642/paraguay-vs-france-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups",
-        "https://sports.yahoo.com/articles/france-vs-paraguay-world-cup-230119095.html",
-        "https://www.goal.com/en-us/news/paraguay-france-world-cup-preview/blt712b3214d1bbc4da"
+        "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021533"
       ]
     }
   ]

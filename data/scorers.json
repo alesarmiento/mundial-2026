@@ -2,7 +2,7 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://sports.yahoo.com/articles/2026-world-cup-golden-boot-111625930.html + https://www.espn.com/soccer/story/_/id/49117037/lionel-messi-erling-haaland-kylian-mbappe-harry-kane-folarin-balogun-world-cup-golden-boot-top-scorer + https://www.goal.com/en/lists/world-cup-2026-golden-boot-standings-fifa-award/blt29fdba0896b8fd09 (Verificado post-Colombia 1-0 Ghana (dieciseisavos, 4-jul): standings sin cambio; Arias (1 gol) no alcanza el top-18; Messi 7G lider, Mbappe 6G 2do; confirmado Yahoo Sports / ESPN / Goal.com / NBC Sports)",
+    "fuente": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/adidas-golden-boot-race-top-scorer + https://sports.yahoo.com/articles/world-cup-golden-boot-live-041757844.html + https://www.foxsports.com/stories/soccer/2026-fifa-world-cup-golden-boot-tracker (Verificado post-Canada 0-3 Morocco (octavos, 4-jul): Ounahi 2G y Rahimi 2G totales para MAR no alcanzan el top-18 (umbral 3G); standings sin cambio; Messi 7G lider, Mbappe 6G 2do; Saibari (MAR, 3G) lesionado en primer tiempo vs Canada; confirmado FIFA / Yahoo Sports / Fox Sports / Goal.com)",
     "actualizado": "2026-07-04"
   },
   "jugadores": [
