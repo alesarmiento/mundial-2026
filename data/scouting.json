@@ -3,36 +3,10 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-07-04T22:15:00Z",
+    "actualizado": "2026-07-04T23:15:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "Paraguay",
-      "away": "France",
-      "fecha": "2026-07-04",
-      "estado_alineacion": "probable",
-      "xi_local": "Gill; Caceres, Canale, G. Gomez, Alonso; Almiron, Cubas, D. Gomez (regresa de suspension), Galarza; Enciso (en duda), Avalos (en duda) (4-4-2 — Diego Gomez disponible tras cumplir suspension; Orlando Gill fue el heroe en penales vs Germany; Paraguay jugo el mejor partido de su historia eliminando a Alemania).",
-      "xi_visita": "Maignan; Kounde, Upamecano, Saliba, T. Hernandez; Camavinga (reemplaza a Tchouameni — BAJA CONFIRMADA), Rabiot; Dembele, Olise, Barcola; Mbappe (4-2-3-1 — Mbappe lider con 6 goles en la Bota de Oro; Dembele con 4 goles y hat-trick previo; Olise como creativo entre lineas; Camavinga entra al doble pivote por la lesion de Tchouameni).",
-      "bajas_local": [
-        "Omar Alderete (lesion muscular — fuera ~2 semanas)",
-        "Julio Enciso (molestia fisica — en duda para el XI)",
-        "Gabriel Avalos (molestia fisica — en duda para el XI)"
-      ],
-      "bajas_visita": [
-        "Aurelien Tchouameni (dolor de aductor — BAJA CONFIRMADA para este partido; salio del entrenamiento del viernes con molestia)",
-        "Marcus Thuram (molestia en el gemelo — fuera del XI pero en el plantel)"
-      ],
-      "lectura": "Paraguay llego aqui tras el historico partido de penales contra Alemania — Orlando Gill fue el heroe bajo los tres palos. Ahora enfrenta a la potencia francesa. France mostro dominio total en la fase de grupos con Mbappe y Dembele como figuras, y llega con una novedad: Tchouameni cae con dolor de aductor, lo que abre un lugar a Camavinga en el doble pivote junto a Rabiot. Lincoln Financial Field, Philadelphia. Kickoff 21:00 UTC (5 PM ET). Diego Gomez (suspension cumplida) regresa al mediocampo paraguayo, lo que da mas creatividad al equipo guarani.",
-      "lean": "Francia aplastante favorita (81% mercado, FIFA Opta 78.8%). La diferencia tecnica entre ambas plantillas es abismal incluso sin Tchouameni: Camavinga es un reemplazante de nivel Champions League. Paraguay puede resistir el primer tiempo con un bloque bajo pero France tiene demasiados detonadores ofensivos. Lean: France gana con claridad, 3-0 o 3-1.",
-      "fuentes": [
-        "https://www.si.com/soccer/france-predicted-lineup-vs-paraguay-world-cup-7-4-26",
-        "https://www.rotowire.com/soccer/article/paraguay-vs-france-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-16-120852",
-        "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/france-s-possible-lineup-vs-paraguay-in-the-2026-world-cup-round-of-16-2026-07-04",
-        "https://www.espn.com/soccer/story/_/id/49233642/paraguay-vs-france-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups",
-        "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021533"
-      ]
-    },
     {
       "home": "Brazil",
       "away": "Norway",

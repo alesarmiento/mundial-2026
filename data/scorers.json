@@ -2,12 +2,12 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/adidas-golden-boot-race-top-scorer + https://sports.yahoo.com/articles/world-cup-golden-boot-live-041757844.html + https://www.foxsports.com/stories/soccer/2026-fifa-world-cup-golden-boot-tracker (Verificado post-Canada 0-3 Morocco (octavos, 4-jul): Ounahi 2G y Rahimi 2G totales para MAR no alcanzan el top-18 (umbral 3G); standings sin cambio; Messi 7G lider, Mbappe 6G 2do; Saibari (MAR, 3G) lesionado en primer tiempo vs Canada; confirmado FIFA / Yahoo Sports / Fox Sports / Goal.com)",
+    "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021533 + https://www.nbcsports.com/soccer/live/paraguay-vs-france-live-updates-score-goals-highlights-stats-2026-fifa-world-cup-july-4 + https://sports.yahoo.com/articles/world-cup-golden-boot-live-041757844.html (Verificado post-Paraguay 0-1 France (octavos, 4-jul): Mbappe penal 70' sube a 7G — empata a Messi en el liderazgo; Messi 7G / Mbappe 7G; Haaland y Kane 5G cada uno en 3ro; Dembele / Vini Jr / Oyarzabal / I. Sarr en 4G; confirmado FIFA / NBC Sports / CBS Sports / Al Jazeera)",
     "actualizado": "2026-07-04"
   },
   "jugadores": [
     {"jugador": "Lionel Messi", "equipo": "Argentina", "goles": 7},
-    {"jugador": "Kylian Mbappe", "equipo": "France", "goles": 6},
+    {"jugador": "Kylian Mbappe", "equipo": "France", "goles": 7},
     {"jugador": "Erling Haaland", "equipo": "Norway", "goles": 5},
     {"jugador": "Harry Kane", "equipo": "England", "goles": 5},
     {"jugador": "Ousmane Dembele", "equipo": "France", "goles": 4},
