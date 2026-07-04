@@ -3,32 +3,10 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-07-03T23:15:00Z",
+    "actualizado": "2026-07-04T00:09:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "Argentina",
-      "away": "Cape Verde",
-      "fecha": "2026-07-03",
-      "estado_alineacion": "probable",
-      "xi_local": "E. Martinez; Molina, Romero, L. Martinez, Medina; De Paul, Mac Allister, E. Fernandez; Almada; Messi, Lautaro Martinez (4-3-3 con Almada como extremo/mediapunta; Medina confirmado en LB en lugar de Tagliafico; Romero regresa al XI; Messi y Mac Allister de vuelta al XI inicial tras descansar vs Jordan).",
-      "xi_visita": "Vozinha; Moreira, Pico, Diney, S. Cabral; Lenini; Mendes, Duarte, Monteiro, J. Cabral; Livramento (4-1-4-1 compacto — Lenini como pivote; bloque bajo ultra-defensivo para contener a Argentina).",
-      "bajas_local": [
-        "Sin bajas confirmadas de importancia"
-      ],
-      "bajas_visita": [
-        "Sin bajas confirmadas"
-      ],
-      "lectura": "Argentina regresa con Messi y Mac Allister al XI titular con el añadido de Almada como creativo. Medina en LB en lugar de Tagliafico, Romero regresa al once. Cape Verde planteara un bloque bajo ultra-defensivo con Lenini como pivote y cuatro mediocampistas para taponar los carriles: Vozinha tendra que ser heroico. Hard Rock Stadium, Miami. 22:00 UTC.",
-      "lean": "La diferencia de nivel es abrumadora: mercado pone a Argentina en 82% de probabilidad. Messi, Mac Allister y Almada hacen a Argentina virtualmente imparable. Cape Verde puede resistir los primeros 20-30 min con bloque bajo, pero la calidad deberia resolver antes del descanso. Lean: Argentina gana con claridad, posiblemente 3-0 o 4-0.",
-      "fuentes": [
-        "https://uk.sports.yahoo.com/news/argentina-xi-vs-cape-verde-221550066.html",
-        "https://www.sportsmole.co.uk/football/argentina/world-cup-2026/preview/argentina-vs-cape-verde-prediction-team-news-lineups_600481.html",
-        "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021521",
-        "https://www.espn.com/soccer/story/_/id/49234020/fifa-world-cup-2026-argentina-vs-cape-verde-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups-lionel-messi"
-      ]
-    },
     {
       "home": "Colombia",
       "away": "Ghana",
@@ -43,13 +21,61 @@
         "Lawrence Ati-Zigi (molestia en la ingle — Asare como titular en el arco)",
         "Inaki Williams (fuera del XI — Kamaldeen Sulemana como titular en su lugar)"
       ],
-      "lectura": "Colombia entra con Cordoba como punta descartando a Suarez del XI inicial, y con rotaciones en la linea defensiva (Arias y Machado por Munoz y Mojica). Ghana se presenta con la sorpresa de Asare en el arco por Ati-Zigi. Thomas Partey sigue siendo el eje del mediocampo ghanes. Luis Diaz y James Rodriguez continuan como detonadores de Colombia. Children's Mercy Park, Kansas City. ~01:30 UTC del 4 de julio.",
+      "lectura": "Colombia entra con Cordoba como punta descartando a Suarez del XI inicial, y con rotaciones en la linea defensiva (Arias y Machado por Munoz y Mojica). Ghana se presenta con la sorpresa de Asare en el arco por Ati-Zigi. Thomas Partey sigue siendo el eje del mediocampo ghanes. Luis Diaz y James Rodriguez continuan como detonadores de Colombia. Children's Mercy Park, Kansas City. Arranca ~01:30 UTC del 4 de julio.",
       "lean": "Colombia favorita (54%) por solidez defensiva y mayor talento colectivo. Ghana tiene recursos en transicion (Semenyo, Partey, Kamaldeen) pero carece del nivel tecnico de Colombia. La linea Diaz-James-J.Arias deberia marcar la diferencia. Lean: Colombia avanza a octavos.",
       "fuentes": [
         "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/colombia-s-predicted-lineup-for-fifa-world-cup-2026-clash-against-ghana-2026-07-03",
         "https://www.rotowire.com/soccer/article/colombia-vs-ghana-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120687",
         "https://www.sportsmole.co.uk/football/colombia/world-cup-2026/preview/colombia-vs-ghana-prediction-team-news-lineups_600509.html",
         "https://sports.yahoo.com/articles/colombia-vs-ghana-predictions-odds-150000546.html"
+      ]
+    },
+    {
+      "home": "Canada",
+      "away": "Morocco",
+      "fecha": "2026-07-04",
+      "estado_alineacion": "probable",
+      "xi_local": "Crepeau; Johnston, Bombito, Cornelius, A. Davies; Buchanan, Eustaquio, Saliba, Millar; David, Oluwaseyi (4-4-2 / 4-2-3-1 — Alphonso Davies regresa al XI inicial tras entrar de cambio vs South Africa; Eustaquio como mediocampista organizador; Jonathan David como referencia en el ataque).",
+      "xi_visita": "Bounou; Hakimi, Diop, Riad (en duda), Mazraoui; Bouaddi, Ounahi, El Aynaoui; Diaz, Saibari, El Khannouss (4-3-3 — Chadi Riad con molestia, podria ser reemplazado; Ismael Saibari (4 goles) como amenaza principal; Brahim Diaz como creativo entre lineas).",
+      "bajas_local": [
+        "Ismael Kone (tobillo roto — baja confirmada para el torneo)"
+      ],
+      "bajas_visita": [
+        "Chadi Riad (molestia fisica — en duda, podria ser reemplazado en el XI)"
+      ],
+      "lectura": "Canada llega tras su historica primera victoria en eliminatorias mundialistas (1-0 a South Africa con gol de Eustaquio en el descuento). Alphonso Davies, recuperado de lesion, podria hacer su primer arranque del torneo en el lateral izquierdo. Morocco, que elimino a Netherlands en penales en la ronda anterior, presenta su bloque caracteristico con Hakimi, Saibari y Brahim Diaz como figuras. NRG Stadium, Houston. Kickoff 17:00 UTC (1 PM ET / 12 PM CDT).",
+      "lean": "Morocco favorita (54% mercado) por mayor experiencia en eliminatorias y calidad tecnica (recuerdo de Qatar 2022 donde llego a semifinales). Canada es competitivo y tiene terreno casi de local (USA), pero le falta rodaje en knockouts. Jonathan David y Alphonso Davies son la esperanza canadiense. Lean: Morocco gana con dificultad, 2-1 o 1-0 en tiempo extra.",
+      "fuentes": [
+        "https://www.rotowire.com/soccer/article/canada-vs-morocco-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-16-120851",
+        "https://www.sportsmole.co.uk/football/canada/world-cup-2026/preview/canada-vs-morocco-prediction-team-news-lineups_600547.html",
+        "https://www.espn.com/soccer/story/_/id/49246432/fifa-world-cup-2026-canada-vs-morocco-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups",
+        "https://www.aljazeera.com/sports/2026/7/3/canada-morocco-fifa-world-cup-round-of-16-saibari-prediction-schedule",
+        "https://lastwordonsports.com/football/2026/07/03/canada-vs-morocco-team-news-and-predicted-lineup/"
+      ]
+    },
+    {
+      "home": "Paraguay",
+      "away": "France",
+      "fecha": "2026-07-04",
+      "estado_alineacion": "probable",
+      "xi_local": "Gill; Caceres, Canale, G. Gomez, Alonso; Almiron, Cubas, D. Gomez (regresa de suspension), Galarza; Enciso (en duda), Avalos (en duda) (4-4-2 — Diego Gomez disponible tras cumplir suspension; Orlando Gill fue el heroe en penales vs Germany; Paraguay jugo el mejor partido de su historia eliminando a Alemania).",
+      "xi_visita": "Maignan; Kounde, Upamecano, Saliba, T. Hernandez; Tchouameni, Rabiot; Dembele, Olise, Barcola; Mbappe (4-2-3-1 — Mbappe lider con 6 goles liderando la Bota de Oro; Dembele con 4 goles y hat-trick previo; Olise con 5 asistencias; France recupera a todos salvo Thuram).",
+      "bajas_local": [
+        "Omar Alderete (lesion muscular — fuera ~2 semanas)",
+        "Julio Enciso (molestia fisica — en duda para el XI)",
+        "Gabriel Avalos (molestia fisica — en duda para el XI)"
+      ],
+      "bajas_visita": [
+        "Marcus Thuram (molestia en el gemelo — fuera del XI pero en el plantel)"
+      ],
+      "lectura": "Paraguay llego aqui tras el historico partido de penales contra Alemania — Orlando Gill fue el heroe bajo los tres palos. Ahora enfrenta a la potencia francesa, diferencia de ranking de 38 posiciones. France mostro dominio total en la fase de grupos con Mbappe y Dembele como figuras. Lincoln Financial Field, Philadelphia. Kickoff 21:00 UTC (5 PM ET). Diego Gomez (suspension cumplida) regresa al mediocampo paraguayo, lo que da mas creatividad al equipo guarani.",
+      "lean": "Francia aplastante favorita (81% mercado). La diferencia tecnica entre ambas plantillas es abismal. Paraguay puede resistir el primer tiempo con un bloque bajo defensivo pero France tiene demasiados detonadores ofensivos (Mbappe, Dembele, Olise, Barcola). Lean: France gana con claridad, probablemente 3-0 o 3-1, aunque Paraguay puede marcar si logra una transicion rapida.",
+      "fuentes": [
+        "https://www.rotowire.com/soccer/article/paraguay-vs-france-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-16-120852",
+        "https://www.sportsmole.co.uk/football/paraguay/world-cup-2026/preview/paraguay-vs-france-prediction-team-news-lineups_600503.html",
+        "https://www.espn.com/soccer/story/_/id/49233642/paraguay-vs-france-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups",
+        "https://sports.yahoo.com/articles/france-vs-paraguay-world-cup-230119095.html",
+        "https://www.goal.com/en-us/news/paraguay-france-world-cup-preview/blt712b3214d1bbc4da"
       ]
     }
   ]
