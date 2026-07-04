@@ -3,7 +3,7 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-07-04T19:15:00Z",
+    "actualizado": "2026-07-04T22:15:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
@@ -31,6 +31,56 @@
         "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/france-s-possible-lineup-vs-paraguay-in-the-2026-world-cup-round-of-16-2026-07-04",
         "https://www.espn.com/soccer/story/_/id/49233642/paraguay-vs-france-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups",
         "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021533"
+      ]
+    },
+    {
+      "home": "Brazil",
+      "away": "Norway",
+      "fecha": "2026-07-05",
+      "estado_alineacion": "probable",
+      "xi_local": "Alisson; Danilo, Marquinhos, Gabriel, Guilherme Santos; Danilo Santos (entra por Paqueta lesionado), Casemiro (en duda pero esperado), Bruno Guimaraes; Rodrygo, Matheus Cunha, Vinicius Junior (4-3-3 — Ancelotti mantiene su estructura preferida; Endrick podria entrar si Casemiro no llega; Vini Jr es el detonador con 4 goles y 10 remates al arco en el torneo).",
+      "xi_visita": "Nyland; Pedersen, Ajer, Heggem, Moller Wolfe; Odegaard, Berge, Berg; Sorloth, Haaland, Nusa (4-3-3 — Haaland lider compartido de la Bota de Oro con 5 goles y xG de 5.06; Odegaard como motor creativo con 3 asistencias; Nusa el extremo dinamico que elimino a Ivory Coast con golazo al angulo).",
+      "bajas_local": [
+        "Raphinha (lesion — baja confirmada para el resto del torneo)",
+        "Lucas Paqueta (lesion muscular en muslo izquierdo — salio al descanso vs Japan; baja probable, no se arriesgara)",
+        "Casemiro (molestia fisica — en duda; hay optimismo sobre su participacion segun reportes del viernes)"
+      ],
+      "bajas_visita": [
+        "Julian Ryerson (lesion en muslo — baja confirmada)"
+      ],
+      "lectura": "El choque de titanes del Mundial: Vinicius Junior (BRA, 4G) vs Erling Haaland (NOR, 5G) con una plaza en cuartos en juego. Brazil llega al MetLife Stadium de New Jersey con bajas sensibles: Raphinha fue ya descartado, Paqueta es baja probable tras lesionarse vs Japan, y Casemiro llega con molestia. Ancelotti deberia tirar de Danilo Santos para cubrir el mediocampo. Norway fue impresionante eliminando a Ivory Coast con una gran actuacion de Haaland (gol decisivo 86') y una extraordinaria actuacion de Nusa. La linea alta de Noruega puede ser castigada por la velocidad de Vini Jr. Kickoff 20:00 UTC (4 PM ET), MetLife Stadium, East Rutherford.",
+      "lean": "Brasil favorito (53% mercado) en un partido que promete ser abierto. La ausencia de Paqueta debilita la creacion de juego de Brazil; Ancelotti debera reorganizar el mediocampo. Haaland es una amenaza constante y Norway puede sorprender en transicion. Lean: partido ajustado con Brazil ganando por la minima (2-1) o en alargue; Vini Jr marcando diferencia en los momentos claves.",
+      "fuentes": [
+        "https://www.espn.com/soccer/story/_/id/49256507/brazil-vs-norway-fifa-world-cup-2026-tv-channel-how-watch-kickoff-live-stream-injury-predicted-lineups",
+        "https://www.sportsmole.co.uk/football/brazil/world-cup-2026/preview/brazil-vs-norway-prediction-team-news-lineups_600608.html",
+        "https://www.rotowire.com/soccer/article/brazil-vs-norway-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-16-121006",
+        "https://www.olympics.com/en/news/fifa-world-cup-2026-brazil-vs-norway-erling-haaland-vini-jr-battle-place-last-eight",
+        "https://sundayguardianlive.com/sports/brazil-injury-update-lucas-paqueta-suffers-thigh-injury-will-neymar-start-vs-norway-in-fifa-world-cup-2026-round-of-16-check-selecao-likely-lineup-222019/"
+      ]
+    },
+    {
+      "home": "Mexico",
+      "away": "England",
+      "fecha": "2026-07-05",
+      "estado_alineacion": "probable",
+      "xi_local": "Rangel; Sanchez, Montes, Vasquez, Gallardo; Mora, Lira, Romo; Alvarado, Jimenez, Quinones (4-3-3 — Mexico lleva 4 partidos sin conceder un solo gol: vs South Africa, South Korea, Czechia y Ecuador; Jimenez y Quinones suman 5 de los 8 goles mexicanos; juegan en casa historica con altitud a >2,200 m).",
+      "xi_visita": "Pickford; Spence, Konsa, Guehi, O'Reilly; Rice (en duda menor), Anderson; Madueke, Bellingham, Gordon; Kane (4-2-3-1 — Kane con 5 goles y 13 en toda su carrera mundialista (supero a Pele); Bellingham como motor creativo; Rice esperado pese a molestia en isquiotibiales; Reece James baja confirmada).",
+      "bajas_local": [
+        "No hay bajas confirmadas. Quinones, Alvarado y Mora salieron ante Ecuador pero se espera que esten disponibles."
+      ],
+      "bajas_visita": [
+        "Reece James (lesion en isquiotibial — baja confirmada)",
+        "Jarell Quansah (lesion de tobillo — baja confirmada)",
+        "Declan Rice (molestia leve en isquiotibial — en duda menor; esperado disponible tras entrenamiento del jueves)"
+      ],
+      "lectura": "El choque historico del Azteca: Mexico, invicto y sin conceder, recibe a Inglaterra en su estadio emblematico. La altitud del Estadio Azteca (2,240 metros sobre el nivel del mar) es un factor determinante — Mexico nunca perdio un partido de Copa del Mundo en este escenario (7 victorias, 3 empates). England llega con baja de Reece James y la duda de Rice, pero con Kane en modo historico. Mexico viene de eliminar a Ecuador con una actuacion precisa y disciplinada. Kickoff 00:00 UTC del 6 de julio (8 PM ET del 5 de julio).",
+      "lean": "Partido equilibradisimo (mercado: MEX 32% / D 31% / ENG 37%). La altitud y la fortaleza defensiva de Mexico son los factores clave. England tiene el ariete mas en forma (Kane) pero Mexico puede aspirar al desgaste. Lean: partido muy cerrado, posiblemente en alargue; Mexico aprovecha su localismo pero England tiene calidad suficiente para marcar la diferencia.",
+      "fuentes": [
+        "https://www.sportsmole.co.uk/football/england/world-cup-2026/preview/mexico-vs-england-prediction-team-news-lineups_600597.html",
+        "https://www.skysports.com/football/news/11095/13559759/mexico-vs-england-predicted-line-ups-sky-sports-writers-pick-their-xis-with-declan-rice-anthony-gordon-and-john-stones-among-players-debated",
+        "https://www.rotowire.com/soccer/article/mexico-vs-england-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-16-121007",
+        "https://www.nbcchicago.com/world-cup/mexico-vs-england-world-cup-showdown-loaded-with-historic-implications/3956473/",
+        "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-england-preview-live-stream-team-news-tickets"
       ]
     }
   ]
