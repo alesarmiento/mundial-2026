@@ -3,8 +3,8 @@
     "descripcion": "Consenso del mercado/mundo online por partido del dia (1X2 implicado, marcador mas probable, over 2.5). Para comparar contra el sistema y medir calibracion. La rutina lo actualiza con las cuotas del dia para TODOS los partidos.",
     "regla_de_oro": "Solo con fuente real (ESPN odds, oddschecker, Dimers, bet365, Kalshi, Forebet). Las cuotas se convierten a probabilidad quitando el margen y se normalizan a 100. Nunca inventar.",
     "campos": "pH/pD/pA = % implicado de gana local / empate / gana visita (orientado al home del fixture). score = marcador mas probable del mercado. over25 = % de over 2.5 goles.",
-    "actualizado": "2026-07-03",
-    "ultima_actualizacion": "2026-07-03T23:15:00Z"
+    "actualizado": "2026-07-04",
+    "ultima_actualizacion": "2026-07-04T01:15:00Z"
   },
   "partidos": [
     {
@@ -755,6 +755,17 @@
       "pD": 29,
       "pA": 36,
       "fuente": "Fox Sports / DraftKings (BEL +170 / draw +230 / USA +165; normalizado; 3-jul-2026)"
+    },
+    {
+      "home": "Argentina",
+      "away": "Egypt",
+      "fecha": "2026-07-07",
+      "pH": 76,
+      "pD": 17,
+      "pA": 7,
+      "score": "3-0",
+      "over25": 61,
+      "fuente": "Kalshi / SportsBettingDime (ARG avance 84% = -525; ARG team total O2.5 -115 via OutKick; 1X2 derivado/normalizado; 3-4-jul-2026)"
     }
   ]
 }

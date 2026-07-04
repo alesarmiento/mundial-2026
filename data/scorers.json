@@ -2,12 +2,12 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/adidas-golden-boot-race-top-scorer + https://www.foxsports.com/stories/soccer/2026-fifa-world-cup-golden-boot-tracker + https://www.espn.com/soccer/story/_/id/49117037 (Verificado post Australia 1-1 Egypt (pen): Emam Ashour (EGY) 1G no ingresa al top 15; Mohamed Hany OG no cuenta; lideres Mbappe y Messi con 6G — Mbappe adelante en desempate por asistencias; Haaland y Kane con 5G; Oyarzabal/Dembele/Vinicius/Sarr con 4G; confirmado FIFA / Fox Sports / ESPN / NBC Sports / Outlook India)",
-    "actualizado": "2026-07-03"
+    "fuente": "https://sports.yahoo.com/soccer/article/world-cup-goal-leaders-golden-boot-lionel-messi-erling-haaland-kylian-mbappe-ousmane-dembele-010143798.html + https://www.foxsports.com/stories/soccer/2026-fifa-world-cup-golden-boot-tracker + https://www.espn.com/soccer/match/_/gameId/760500/cape-verde-argentina (Messi gol 29' vs Cape Verde en dieciseisavos = 7o gol del torneo, reclaima liderato en solitario; Mbappe 6G queda 2do; confirmado Yahoo Sports / Fox Sports / ESPN / NBC Sports / Al Jazeera)",
+    "actualizado": "2026-07-04"
   },
   "jugadores": [
+    {"jugador": "Lionel Messi", "equipo": "Argentina", "goles": 7},
     {"jugador": "Kylian Mbappe", "equipo": "France", "goles": 6},
-    {"jugador": "Lionel Messi", "equipo": "Argentina", "goles": 6},
     {"jugador": "Erling Haaland", "equipo": "Norway", "goles": 5},
     {"jugador": "Harry Kane", "equipo": "England", "goles": 5},
     {"jugador": "Ousmane Dembele", "equipo": "France", "goles": 4},
