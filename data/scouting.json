@@ -3,33 +3,10 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-07-04T00:09:00Z",
+    "actualizado": "2026-07-04T03:30:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "Colombia",
-      "away": "Ghana",
-      "fecha": "2026-07-03",
-      "estado_alineacion": "probable",
-      "xi_local": "Vargas; S. Arias, D. Sanchez, Lucumi, Machado; Lerma, Puerta; J. Arias, James Rodriguez (c), L. Diaz; J. Cordoba (4-2-3-1 / 4-3-3 — Jhon Cordoba como delantero centro en lugar de Luis Suarez; Santiago Arias por Daniel Munoz en lateral derecho; Gustavo Puerta en lugar de Rios en la doble pivote; Deiver Machado en lugar de Mojica en LB).",
-      "xi_visita": "Asare; Senaya, Adjetey, Opoku, Mensah; Partey, Sibo, Yirenkyi; Semenyo, Ayew, Kamaldeen (4-3-3 — Lawrence Ati-Zigi fuera por molestia en la ingle, Asare como titular en el arco; Jerome Opoku regresa al XI tras perderse el partido vs Croatia; Kamaldeen Sulemana en lugar de Inaki Williams en la banda).",
-      "bajas_local": [
-        "Luis Suarez fuera del XI inicial (Cordoba titular como punta) — segun beIN Sports y RotoWire"
-      ],
-      "bajas_visita": [
-        "Lawrence Ati-Zigi (molestia en la ingle — Asare como titular en el arco)",
-        "Inaki Williams (fuera del XI — Kamaldeen Sulemana como titular en su lugar)"
-      ],
-      "lectura": "Colombia entra con Cordoba como punta descartando a Suarez del XI inicial, y con rotaciones en la linea defensiva (Arias y Machado por Munoz y Mojica). Ghana se presenta con la sorpresa de Asare en el arco por Ati-Zigi. Thomas Partey sigue siendo el eje del mediocampo ghanes. Luis Diaz y James Rodriguez continuan como detonadores de Colombia. Children's Mercy Park, Kansas City. Arranca ~01:30 UTC del 4 de julio.",
-      "lean": "Colombia favorita (54%) por solidez defensiva y mayor talento colectivo. Ghana tiene recursos en transicion (Semenyo, Partey, Kamaldeen) pero carece del nivel tecnico de Colombia. La linea Diaz-James-J.Arias deberia marcar la diferencia. Lean: Colombia avanza a octavos.",
-      "fuentes": [
-        "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/colombia-s-predicted-lineup-for-fifa-world-cup-2026-clash-against-ghana-2026-07-03",
-        "https://www.rotowire.com/soccer/article/colombia-vs-ghana-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-32-120687",
-        "https://www.sportsmole.co.uk/football/colombia/world-cup-2026/preview/colombia-vs-ghana-prediction-team-news-lineups_600509.html",
-        "https://sports.yahoo.com/articles/colombia-vs-ghana-predictions-odds-150000546.html"
-      ]
-    },
     {
       "home": "Canada",
       "away": "Morocco",
