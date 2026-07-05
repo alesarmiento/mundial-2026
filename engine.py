@@ -938,6 +938,15 @@ def build_market_view(fixtures, results, elo, ad, w, market, host_adv=0.0, hosts
         pb = [math.exp(-lb) * lb ** j / math.factorial(j) for j in range(9)]
         over = sum(pa[i] * pb[j] for i in range(9) for j in range(9) if i + j >= 3)
         sc = p["score_med"]; m = mkt[key]
+        # si la entrada de mercado vino con local/visita invertidos respecto del fixture, REORIENTAR:
+        # pH/pA se intercambian y el marcador se refleja (bug detectado 4-jul: 'Spain vs Portugal' en el
+        # mercado vs fixture 'Portugal vs Spain' mostraba el 51% de Espana como si fuera de Portugal).
+        if m.get("home") != f["home"]:
+            m = dict(m)
+            m["pH"], m["pA"] = m.get("pA"), m.get("pH")
+            if m.get("score") and "-" in str(m["score"]):
+                a, b = str(m["score"]).split("-", 1)
+                m["score"] = b + "-" + a
         # divergencia sistema vs mercado: distinto favorito = ALTA; misma direccion pero gap grande = MEDIA
         def fav(pH, pD, pA):
             return "H" if pH >= max(pD, pA) else ("D" if pD >= pA else "A")
