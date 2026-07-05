@@ -2,13 +2,13 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021533 + https://www.nbcsports.com/soccer/live/paraguay-vs-france-live-updates-score-goals-highlights-stats-2026-fifa-world-cup-july-4 + https://sports.yahoo.com/articles/world-cup-golden-boot-live-041757844.html (Verificado post-Paraguay 0-1 France (octavos, 4-jul): Mbappe penal 70' sube a 7G — empata a Messi en el liderazgo; Messi 7G / Mbappe 7G; Haaland y Kane 5G cada uno en 3ro; Dembele / Vini Jr / Oyarzabal / I. Sarr en 4G; confirmado FIFA / NBC Sports / CBS Sports / Al Jazeera)",
-    "actualizado": "2026-07-04"
+    "fuente": "https://www.espn.com/soccer/match/_/gameId/760504/norway-brazil + https://www.nbcsports.com/soccer/news/2026-world-cup-top-goalscorers-full-list-latest-on-race-for-the-golden-boot + https://www.foxsports.com/stories/soccer/2026-fifa-world-cup-golden-boot-tracker (Verificado post-Norway 2-1 Brazil (octavos, 5-jul): Haaland brace sube a 7G — tres lideres empatados: Messi 7G / Mbappe 7G / Haaland 7G; Kane en 4to con 5G; confirmado ESPN / NBC Sports / FOX Sports / Yahoo Sports)",
+    "actualizado": "2026-07-05"
   },
   "jugadores": [
     {"jugador": "Lionel Messi", "equipo": "Argentina", "goles": 7},
     {"jugador": "Kylian Mbappe", "equipo": "France", "goles": 7},
-    {"jugador": "Erling Haaland", "equipo": "Norway", "goles": 5},
+    {"jugador": "Erling Haaland", "equipo": "Norway", "goles": 7},
     {"jugador": "Harry Kane", "equipo": "England", "goles": 5},
     {"jugador": "Ousmane Dembele", "equipo": "France", "goles": 4},
     {"jugador": "Vinicius Junior", "equipo": "Brazil", "goles": 4},
