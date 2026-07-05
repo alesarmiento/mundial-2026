@@ -301,7 +301,7 @@ def estimate_awards(players, probs, em, elo, defstats=None, scorers=None):
 # torneo ya esta; para otras combinaciones el motor cae al matching generico _match_thirds).
 THIRD_PLACE_TABLE = {
     frozenset(['B', 'D', 'E', 'F', 'I', 'J', 'K', 'L']):
-        {1: 'D', 2: 'F', 7: 'B', 8: 'I', 11: 'E', 12: 'K', 15: 'J', 16: 'L'},
+        {1: 'D', 2: 'F', 7: 'E', 8: 'K', 9: 'B', 10: 'I', 15: 'J', 16: 'L'},
 }
 
 def _match_thirds(slots_allowed, qual_groups):
