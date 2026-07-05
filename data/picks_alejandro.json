@@ -1,0 +1,18 @@
+{
+ "_meta": {
+  "descripcion": "Picks de Alejandro por partido en ELIMINATORIAS, para el duelo modelo vs Alejandro (el puntaje se calcula igual que la polla: 3 ganador a los 120' + 2 gol local + 2 gol visita + 4 exacto; penales no cuentan).",
+  "fuente": "Plataforma de la polla (capturas 4-jul y 5-jul) + confirmaciones en el chat.",
+  "regla": "SOLO Alejandro los cambia. La rutina NO toca este archivo.",
+  "nota": "Argentina-Egypt: cambiado de 2-1 a 2-0 el 4-jul por recomendacion aceptada (asumido 2-0; confirmar si fue 3-0)."
+ },
+ "octavos": [
+  {"home": "Canada", "away": "Morocco", "pick": [1, 2]},
+  {"home": "Paraguay", "away": "France", "pick": [0, 2]},
+  {"home": "Brazil", "away": "Norway", "pick": [2, 1]},
+  {"home": "Mexico", "away": "England", "pick": [1, 2]},
+  {"home": "Portugal", "away": "Spain", "pick": [1, 2]},
+  {"home": "United States", "away": "Belgium", "pick": [2, 1]},
+  {"home": "Argentina", "away": "Egypt", "pick": [2, 0]},
+  {"home": "Switzerland", "away": "Colombia", "pick": [1, 2]}
+ ]
+}
