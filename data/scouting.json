@@ -3,33 +3,10 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-07-06T01:15:00Z",
+    "actualizado": "2026-07-06T03:15:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
-    {
-      "home": "Mexico",
-      "away": "England",
-      "fecha": "2026-07-05",
-      "estado_alineacion": "confirmada",
-      "xi_local": "Rangel; Sanchez, Montes, Vasquez, Gallardo; Romo, Lira, Mora; Alvarado, Jimenez, Quinones (4-3-3 — Mexico invicto y sin conceder un solo gol en sus 5 partidos del torneo; la altitud del Azteca a 2,240 msnm es un factor determinante que Mexico ha dominado históricamente; kickoff retrasado 1h por tormenta electrica → 9 PM ET / 01:00 UTC).",
-      "xi_visita": "Pickford; Quansah, Konsa, Guehi, O'Reilly; Anderson, Rice; Saka, Bellingham, Gordon; Kane (4-2-3-1 — Tuchel hace 3 cambios respecto al XI vs DR Congo: Saka y Gordon reemplazan a Madueke y Rashford en ataque; Quansah retorna en defensa en lugar de Spence; Rice disponible pese a molestia previa en isquiotibiales).",
-      "bajas_local": [
-        "Sin bajas confirmadas para este partido."
-      ],
-      "bajas_visita": [
-        "Reece James (lesion en isquiotibial — baja confirmada para todo el torneo)",
-        "Nota: Quansah recuperado e incluido en el once titular confirmado"
-      ],
-      "lectura": "La noche del Azteca: Mexico recibe a Inglaterra en el estadio emblematico que vio a Maradona y a Pele, con mas de 80,000 almas rugiendo. Mexico es el unico equipo del torneo sin encajar un solo gol y llega invicto en 5 partidos. El partido fue retrasado 1 hora por una tormenta electrica sobre la Ciudad de Mexico (nuevo horario: 9 PM ET / 01:00 UTC). Tuchel apuesta por la velocidad de Saka y Gordon para atacar las bandas; Kane busca seguir ampliando su record historico de goles con England en Mundiales. El ganador enfrenta a Noruega en cuartos de final.",
-      "lean": "Mexico en casa y en altitud es historicamente casi invencible en el Azteca (7V-3E-0P en Mundiales). La efervescencia local, la defensa cerrada y el desgaste que provoca la altitud sobre el rival son los factores clave. England tiene calidad suficiente (Kane en modo historico, Bellingham como motor) pero la altitud y el ambiente son formidables. Mercado: MEX 32% / D 31% / ENG 37%. Lean: partido cerrado que podria ir a alargue; Mexico tiene todo el contexto a favor pero England es suficientemente solida para inquietar.",
-      "fuentes": [
-        "https://worldsoccertalk.com/amp/world-cup/are-harry-kane-and-julian-quinones-playing-mexico-vs-england-confirmed-lineups-for-the-2026-world-cup-game/",
-        "https://www.nbcsports.com/soccer/live/mexico-vs-england-live-updates-score-goals-highlights-stats-from-2026-fifa-world-cup",
-        "https://www.espn.com/soccer/story/_/id/49280042/mexico-england-live-world-cup-2026-latest-updates-commentary-score-result",
-        "https://www.cbssports.com/soccer/news/mexico-england-live-updates-world-cup-2026-score-result/live/"
-      ]
-    },
     {
       "home": "Spain",
       "away": "Portugal",

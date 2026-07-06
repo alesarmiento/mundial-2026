@@ -2,18 +2,19 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://www.espn.com/soccer/match/_/gameId/760504/norway-brazil + https://www.nbcsports.com/soccer/news/2026-world-cup-top-goalscorers-full-list-latest-on-race-for-the-golden-boot + https://www.foxsports.com/stories/soccer/2026-fifa-world-cup-golden-boot-tracker (Verificado post-Norway 2-1 Brazil (octavos, 5-jul): Haaland brace sube a 7G — tres lideres empatados: Messi 7G / Mbappe 7G / Haaland 7G; Kane en 4to con 5G; confirmado ESPN / NBC Sports / FOX Sports / Yahoo Sports)",
-    "actualizado": "2026-07-05"
+    "fuente": "https://www.espn.com/soccer/story/_/id/49280180/mexico-england-world-cup-2026-result-score-recap-jude-bellingham-harry-kane-jarell-quansah + https://www.espn.com/soccer/story/_/id/49117037/lionel-messi-erling-haaland-kylian-mbappe-harry-kane-folarin-balogun-world-cup-golden-boot-top-scorer + https://www.nbcsports.com/soccer/news/2026-world-cup-top-goalscorers-full-list-latest-on-race-for-the-golden-boot (Post Mexico 2-3 England (dieciseisavos, 5-jul): Bellingham brace (2G) + Kane pen (1G); Kane sube a 6G; Bellingham debuta en el ranking con 3G; Messi/Mbappe/Haaland lideran con 7G; confirmado ESPN / Fox Sports / NBC Sports)",
+    "actualizado": "2026-07-06"
   },
   "jugadores": [
     {"jugador": "Lionel Messi", "equipo": "Argentina", "goles": 7},
     {"jugador": "Kylian Mbappe", "equipo": "France", "goles": 7},
     {"jugador": "Erling Haaland", "equipo": "Norway", "goles": 7},
-    {"jugador": "Harry Kane", "equipo": "England", "goles": 5},
+    {"jugador": "Harry Kane", "equipo": "England", "goles": 6},
     {"jugador": "Ousmane Dembele", "equipo": "France", "goles": 4},
     {"jugador": "Vinicius Junior", "equipo": "Brazil", "goles": 4},
     {"jugador": "Mikel Oyarzabal", "equipo": "Spain", "goles": 4},
     {"jugador": "Ismaila Sarr", "equipo": "Senegal", "goles": 4},
+    {"jugador": "Jude Bellingham", "equipo": "England", "goles": 3},
     {"jugador": "Folarin Balogun", "equipo": "United States", "goles": 3},
     {"jugador": "Jonathan David", "equipo": "Canada", "goles": 3},
     {"jugador": "Deniz Undav", "equipo": "Germany", "goles": 3},
