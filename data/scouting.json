@@ -3,7 +3,7 @@
   "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
   "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
   "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-  "actualizado": "2026-07-06T03:15:00Z",
+  "actualizado": "2026-07-06T17:15:00Z",
   "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
  },
  "partidos": [
@@ -56,38 +56,52 @@
    ]
   },
   {
-   "home": "United States",
-   "away": "Belgium",
-   "fecha": "2026-07-06",
+   "home": "Argentina",
+   "away": "Egypt",
+   "fecha": "2026-07-07",
    "estado_alineacion": "probable",
-   "xi_local": "Freese; Freeman, Richards, Ream, Robinson; Adams, McKennie, Tillman; Dest, Pulisic; Balogun (o Pepi) de 9",
-   "xi_visita": "Courtois; Castagne, Ngoy, Mechele, Theate; Tielemans, Onana; Trossard, De Bruyne, Doku; De Ketelaere (Lukaku podria ir de arranque, en duda)",
-   "bajas_local": "NOTICIA CLAVE: FIFA ANULO la roja de Balogun -> habilitado. McKenzie (pie) y C. Roldan (cuadriceps) en evaluacion, volvieron a entrenar.",
-   "bajas_visita": "Debast en duda (aun no juega en el torneo). Lukaku recien tomando ritmo, candidato a primera titularidad.",
-   "lectura": "Belgica tiene mas talento individual arriba (De Bruyne, Doku, Trossard); USA tiene localia (Seattle), fisico y un sistema mas cohesionado. La vuelta de Balogun le devuelve al 9 titular. Previa general: partido parejisimo, alargue escenario muy plausible.",
-   "lean": "Parejo con leve inclinacion USA por localia y la habilitacion de Balogun; alto riesgo de definicion tardia.",
+   "xi_local": "Emi Martinez; Molina (duda), Romero, Lisandro Martinez, Medina/Tagliafico (Medina duda - calambre vs Cape Verde; Tagliafico cubre si no llega); De Paul, Mac Allister, Enzo Fernandez (duda); Almada, Lautaro Martinez, Messi. Formacion 4-3-3. Scaloni evalua triple duda en defensa y mediocampo; Nico Gonzalez en duda adicional por esguince de tobillo (podria reemplazar a Almada).",
+   "xi_visita": "Shobeir; Mohamed Hany, Rabia, Yasser Ibrahim, Karim Hafez (duda - salio al 80' vs Australia); Hamdy Fathy, Marwan Attia; Zico, Emam Ashour, Mohamed Salah; Omar Marmoush. Formacion 4-2-3-1.",
+   "bajas_local": [
+    "Facundo Medina (duda - calambre al salir en tiempo extra vs Cape Verde; Tagliafico disponible de reserva en LB)",
+    "Nahuel Molina (duda - no completo sesion de recuperacion completa)",
+    "Enzo Fernandez (duda - no completo sesion de recuperacion completa)",
+    "Nico Gonzalez (duda - esguince de tobillo reportado, baja probable)"
+   ],
+   "bajas_visita": [
+    "Karim Hafez (lateral izquierdo - salio al 80' vs Australia, condicion incierta entre fatiga y lesion menor)"
+   ],
+   "lectura": "Argentina llega como favorita indiscutida, pero con el susto fisico del alargue vs Cape Verde (3-2 en 120', gol decisivo en 115'). Messi lidera la Bota de Oro con 7 goles y busca su primer Mundial consecutivo como campeon. Egipto fue la gran sorpresa: elimino a Australia en penales (4-2) con la Panenka de Salah y el fallo de dos socceroos; Marmoush es la mayor amenaza ofensiva. El partido entre las dos estrellas mas grandes de sus generaciones: Messi vs Salah. Scaloni debe decidir si arriesga con las tres dudas defensivas o hace cambios. Mercedes-Benz Stadium, Atlanta. Kickoff 12pm ET / 16:00 UTC.",
+   "lean": "Argentina favorita clara (mercado: ARG 76% / D 17% / EGY 7%). Las dudas defensivas (Medina, Molina, Enzo) agregan incertidumbre pero Scaloni tiene cobertura con Tagliafico. Egipto puede intentar presionar alto y generar con Marmoush y Salah en transicion. Lean: Argentina pasa con relativa comodidad hacia cuartos; el riesgo real es si las bajas fisicas generan descuido defensivo en los primeros minutos. Messi candidato a ampliar cuenta de goles.",
    "fuentes": [
-    "https://www.espn.com/soccer/story/_/id/49269414/usa-vs-belgium-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups",
-    "https://www.foxsports.com/stories/soccer/2026-world-cup-odds-how-far-will-team-usa-go",
-    "https://www.rotowire.com/soccer/article/usa-vs-belgium-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-16-121161",
-    "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/usa-belgium-live-stream-team-news-tickets-and-more"
+    "https://www.sportsmole.co.uk/football/argentina/world-cup-2026/preview/argentina-vs-egypt-prediction-team-news-lineups_600679.html",
+    "https://www.sportsmole.co.uk/football/argentina/world-cup-2026/predicted-lineups/triple-fitness-update-martinez-or-alvarez-predicted-argentina-xi-vs-egypt_600706.html",
+    "https://www.rotowire.com/soccer/article/argentina-vs-egypt-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-16-121312",
+    "https://www.espn.com/soccer/story/_/id/49277696/fifa-world-cup-2026-argentina-vs-egypt-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups-lionel-messi"
    ]
   },
   {
-   "home": "Portugal",
-   "away": "Spain",
-   "fecha": "2026-07-06",
+   "home": "Switzerland",
+   "away": "Colombia",
+   "fecha": "2026-07-07",
    "estado_alineacion": "probable",
-   "xi_local": "Diogo Costa; Cancelo, Ruben Dias, Renato Veiga, Nuno Mendes; Joao Neves, Vitinha; Pedro Neto, Bruno Fernandes, Rafael Leao; Cristiano Ronaldo",
-   "xi_visita": "Unai Simon; Llorente, Cubarsi, Laporte, Cucurella; Merino, Rodri, Pedri; Lamine Yamal, Oyarzabal, Alex Baena",
-   "bajas_local": "Sin ausencias reportadas. Ronaldo titular pero cuestionado (salio al 80' vs Croacia; Goncalo Ramos entro y marco el gol del triunfo).",
-   "bajas_visita": "Sin ausencias reportadas. Yamal titular (llego con molestias al partido vs Austria, confirmado para hoy).",
-   "lectura": "Espana invicta y SIN goles en contra en el torneo (4 vallas invictas); Oyarzabal maximo goleador (4). Portugal irregular: 0-0 con Colombia y triunfo agonico vs Croacia, pero Ronaldo lidera el xG del torneo (4.15, 3 goles). Antecedente: Portugal vencio a Espana por penales en la final de Nations League 2025.",
-   "lean": "Espana favorita clara (modelo 67%, mercado ~53%, Opta 49% a los 90'); si un partido del dia huele a definicion larga, es este (25% de alargue segun Opta).",
+   "xi_local": "Kobel; Zakaria, Akanji, Elvedi, Rodriguez; Xhaka, Freuler; Ndoye, Manzambi, Vargas; Embolo. Formacion 4-2-3-1. Manzambi en el rol de 10 tras ganarse el puesto a lo largo del torneo (3G, el mas joven en 5 contribuciones en un Mundial desde 1966). Aebischer y Jaquez con dudas musculares.",
+   "xi_visita": "Vargas; Munoz, Sanchez, Lucumi, Mojica; Lerma, Rodriguez/Quintero (James en duda - illness), Puerta; Arias, Borre/Hernandez (Cordoba baja), Diaz. Formacion 4-3-3. James Rodriguez es la gran duda ofensiva; Quintero es el reemplazo mas probable si no llega.",
+   "bajas_local": [
+    "Michel Aebischer (lesion muscular - entrenando de forma individual, en duda para el partido)",
+    "Luca Jaquez (lesion muscular - entrenando separado del grupo, en duda para el partido)"
+   ],
+   "bajas_visita": [
+    "Jhon Cordoba (lesion - salio temprano vs Ghana en dieciseisavos, baja confirmada)",
+    "James Rodriguez (illness - enfermedad, en duda; Juan Quintero candidato a reemplazarlo)"
+   ],
+   "lectura": "Switzerland llega en su mejor momento: 4 victorias en fila (incluyendo 4-1 a Bosnia, 2-1 a Canada y 2-0 a Algeria en dieciseisavos), con Manzambi como revelacion del torneo. Colombia llego invicta a esta instancia (5W, 1D) con un sistema colectivo muy solido, pero enfrenta dos bajas sensibles: Cordoba confirmado afuera y James Rodriguez en duda por enfermedad. Luis Diaz sigue siendo la principal amenaza y Jhon Arias aporto el gol eliminatorio vs Ghana. BC Place, Vancouver. Kickoff 4pm ET / 20:00 UTC.",
+   "lean": "Mercado favorece a Colombia (COL +125 / D +210 / SUI +250 segun bet365; aproximadamente COL 41% / D 29% / SUI 30%). Switzerland es muy dificil de batir con Xhaka/Freuler en el doble pivote y Kobel bajo los palos, pero su techo goleador es limitado. Colombia sin James pierde creatividad; con James seria favorita clara. Lean: partido cerrado, posible alargue o definicion ajustada; Colombia con leve ventaja si James juega, Switzerland con mas chances si no llega.",
    "fuentes": [
-    "https://www.espn.com/soccer/story/_/id/49266158/fifa-world-cup-2026-portugal-vs-spain-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups",
-    "https://www.aljazeera.com/sports/2026/7/6/portugal-vs-spain-fifa-world-cup-last-16-ronaldo-yamal-prediction-kickoff-start-time",
-    "https://www.squawka.com/us/news/world-cup/match-preview-portugal-vs-spain-07-06-26-world-cup-2026-round-of-16/"
+    "https://www.sportsmole.co.uk/football/switzerland/world-cup-2026/preview/switzerland-vs-colombia-prediction-team-news-lineups_600736.html",
+    "https://www.sportsmole.co.uk/football/switzerland/world-cup-2026/predicted-lineups/will-jaquez-aebischer-make-it-in-time-predicted-switzerland-xi-vs-colombia_600746.html",
+    "https://www.rotowire.com/soccer/article/switzerland-vs-colombia-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-16-121310",
+    "https://www.espn.com/soccer/story/_/id/49278663/fifa-world-cup-2026-switzerland-vs-colombia-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups"
    ]
   }
  ]
