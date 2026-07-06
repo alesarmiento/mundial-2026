@@ -1,59 +1,77 @@
 {
-  "_meta": {
-    "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
-    "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
-    "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-07-06T03:15:00Z",
-    "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
+ "_meta": {
+  "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
+  "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
+  "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
+  "actualizado": "2026-07-06T03:15:00Z",
+  "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
+ },
+ "partidos": [
+  {
+   "home": "Spain",
+   "away": "Portugal",
+   "fecha": "2026-07-06",
+   "estado_alineacion": "probable",
+   "xi_local": "Simon; Porro, Cubarsi, Laporte, Cucurella; Rodri, Pedri, Olmo; Yamal, Oyarzabal, Baena (4-3-3 — Dani Olmo en mediocampo en lugar de Fabian Ruiz segun fuentes del dia; Nico Williams y Yeremy Pino fuera por lesion; Oyarzabal lidera la Bota de Oro de Espana con 4 goles).",
+   "xi_visita": "Diogo Costa; Cancelo, Dias, Veiga, Mendes; Neves, Vitinha; Neto, Bruno Fernandes, Leao; Ronaldo (4-3-3 — Portugal arriba con plantel completo; Ronaldo lleva 3 goles en el torneo, siendo el 6to Mundial de su carrera a los 41 anos; recordar que Ronaldo no habia marcado en eliminatorias mundialistas antes de este torneo y rompió ese maleficio en dieciseisavos vs Croacia).",
+   "bajas_local": [
+    "Nico Williams (desgarro en la ingle — baja confirmada para el partido)",
+    "Yeremy Pino (esguince de ligamentos en el hombro — baja confirmada para el partido)"
+   ],
+   "bajas_visita": [
+    "Sin bajas confirmadas; Portugal llega con el plantel completo."
+   ],
+   "lectura": "El Clasico Iberico en el Mundial: por primera vez en la historia del torneo, Espana y Portugal se eliminan entre si en una ronda eliminatoria. Espana llego primera en su grupo y fue dominante (3-0 a Austria en dieciseisavos), aunque pierde a sus dos extremos titulares (Williams y Pino). Portugal remonto con un gol de Ramos en el 90+4' para superar a Croacia 2-1 y sigue con Ronaldo como pieza central. El ganador enfrenta al vencedor de Belgium vs USA en cuartos. Kickoff 3:00 PM ET / 19:00 UTC. AT&T Stadium, Arlington, Texas.",
+   "lean": "Espana es favorita leve (mercado: ESP 51% / D 27% / POR 22%) pero sin sus extremos Williams y Pino la amplitud ofensiva se reduce. Yamal, Rodri y Pedri siguen siendo la columna vertebral; Oyarzabal es letal. Portugal depende del colectivo con Leao en transicion rapida y Bruno Fernandes como cerebro. El Clasico Iberico históricamente es muy cerrado. Lean: Espana tiene mas argumentos en el juego de posesión, pero Portugal puede neutralizarla y definir a favor si llega a penales; marcador igualado y alargue como escenario probable.",
+   "fuentes": [
+    "https://www.sportsmole.co.uk/football/portugal/world-cup-2026/preview/portugal-vs-spain-prediction-team-news-lineups_600650.html",
+    "https://www.sportsmole.co.uk/football/spain/world-cup-2026/predicted-lineups/yamal-olmo-porro-status-predicted-spain-xi-vs-portugal_600654.html",
+    "https://sports.yahoo.com/articles/spain-xi-vs-portugal-confirmed-185630668.html",
+    "https://www.espn.com/soccer/story/_/id/49266158/fifa-world-cup-2026-portugal-vs-spain-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups"
+   ]
   },
-  "partidos": [
-    {
-      "home": "Spain",
-      "away": "Portugal",
-      "fecha": "2026-07-06",
-      "estado_alineacion": "probable",
-      "xi_local": "Simon; Porro, Cubarsi, Laporte, Cucurella; Rodri, Pedri, Olmo; Yamal, Oyarzabal, Baena (4-3-3 — Dani Olmo en mediocampo en lugar de Fabian Ruiz segun fuentes del dia; Nico Williams y Yeremy Pino fuera por lesion; Oyarzabal lidera la Bota de Oro de Espana con 4 goles).",
-      "xi_visita": "Diogo Costa; Cancelo, Dias, Veiga, Mendes; Neves, Vitinha; Neto, Bruno Fernandes, Leao; Ronaldo (4-3-3 — Portugal arriba con plantel completo; Ronaldo lleva 3 goles en el torneo, siendo el 6to Mundial de su carrera a los 41 anos; recordar que Ronaldo no habia marcado en eliminatorias mundialistas antes de este torneo y rompió ese maleficio en dieciseisavos vs Croacia).",
-      "bajas_local": [
-        "Nico Williams (desgarro en la ingle — baja confirmada para el partido)",
-        "Yeremy Pino (esguince de ligamentos en el hombro — baja confirmada para el partido)"
-      ],
-      "bajas_visita": [
-        "Sin bajas confirmadas; Portugal llega con el plantel completo."
-      ],
-      "lectura": "El Clasico Iberico en el Mundial: por primera vez en la historia del torneo, Espana y Portugal se eliminan entre si en una ronda eliminatoria. Espana llego primera en su grupo y fue dominante (3-0 a Austria en dieciseisavos), aunque pierde a sus dos extremos titulares (Williams y Pino). Portugal remonto con un gol de Ramos en el 90+4' para superar a Croacia 2-1 y sigue con Ronaldo como pieza central. El ganador enfrenta al vencedor de Belgium vs USA en cuartos. Kickoff 3:00 PM ET / 19:00 UTC. AT&T Stadium, Arlington, Texas.",
-      "lean": "Espana es favorita leve (mercado: ESP 51% / D 27% / POR 22%) pero sin sus extremos Williams y Pino la amplitud ofensiva se reduce. Yamal, Rodri y Pedri siguen siendo la columna vertebral; Oyarzabal es letal. Portugal depende del colectivo con Leao en transicion rapida y Bruno Fernandes como cerebro. El Clasico Iberico históricamente es muy cerrado. Lean: Espana tiene mas argumentos en el juego de posesión, pero Portugal puede neutralizarla y definir a favor si llega a penales; marcador igualado y alargue como escenario probable.",
-      "fuentes": [
-        "https://www.sportsmole.co.uk/football/portugal/world-cup-2026/preview/portugal-vs-spain-prediction-team-news-lineups_600650.html",
-        "https://www.sportsmole.co.uk/football/spain/world-cup-2026/predicted-lineups/yamal-olmo-porro-status-predicted-spain-xi-vs-portugal_600654.html",
-        "https://sports.yahoo.com/articles/spain-xi-vs-portugal-confirmed-185630668.html",
-        "https://www.espn.com/soccer/story/_/id/49266158/fifa-world-cup-2026-portugal-vs-spain-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups"
-      ]
-    },
-    {
-      "home": "Belgium",
-      "away": "United States",
-      "fecha": "2026-07-06",
-      "estado_alineacion": "probable",
-      "xi_local": "Courtois; Castagne, Ngoy, Mechele, Theate; Tielemans, Onana; Trossard, De Bruyne, Doku; De Ketelaere (4-3-3 — Lukaku esperado desde el banco (habitual en este torneo); Zeno Debast baja de todo el torneo (pierna); Trossard apto pese a molestia previa; Ngoy disponible tras cumplir su suspension en la fase de grupos vs Nueva Zelanda).",
-      "xi_visita": "Freese; Freeman, Richards, Ream, Robinson; McKennie, Adams; Tillman, Pulisic, Dest; Balogun (4-2-3-1 — BALOGUN DISPONIBLE: FIFA levanto su suspension bajo art. 27 del Codigo Disciplinario con 1 ano de probacion; Pepi al banco; McKenzie (pie) y Roldan (muscular) en duda).",
-      "bajas_local": [
-        "Zeno Debast (lesion en pierna — baja de todo el torneo)"
-      ],
-      "bajas_visita": [
-        "Mark McKenzie (lesion de pie — en duda, a evaluar)",
-        "Cristian Roldan (lesion muscular — en duda, a evaluar)",
-        "NOTA Balogun: suspension levantada por FIFA (art. 27; decision controversial — Trump solicito revision a Infantino; Real Federacion Belga expresa asombro y estudia recursos)"
-      ],
-      "lectura": "El gran partido del co-anfitrion USA: Estados Unidos busca su primer cuarto de final desde el 2002 en casa, y RECUPERA a su maximo goleador: Balogun disponible tras la decision controversial de FIFA de levantar su suspension de 1 partido (art. 27 del Codigo Disciplinario con 1 ano de probacion; Trump llamo a Infantino para pedir la revision; la Real Federacion Belga manifesto asombro y estudia recursos). Belgica vive su buen momento con una remontada epica vs Senegal (0-2 a 3-2 en tiempo extra, gol de Tielemans al minuto 124' — el gol ganador mas tardio en la historia de los Mundiales). De Bruyne y Doku son las principales amenazas belgicas; Balogun, Pulisic y Tillman llevan el ataque de USA. Lumen Field, Seattle. 8 PM ET / 00:00 UTC 7-jul.",
-      "lean": "Mercado practicamente parejo: BEL 35% / D 29% / USA 36%. Con Balogun de vuelta (3 goles en el torneo), USA recupera su arma ofensiva principal. Belgica llega con mas calidad individual pero con el desgaste fisico del alargue vs Senegal. USA en casa con el Lumen Field lleno tiene el factor ambiente. Lukaku puede salir del banco como factor diferencia. Lean: partido muy abierto y parejo; con Balogun disponible USA tiene mas opciones de imponer su juego; Belgica sigue siendo peligrosa con De Bruyne y Doku.",
-      "fuentes": [
-        "https://www.sportsmole.co.uk/football/belgium/world-cup-2026/preview/usa-vs-belgium-prediction-team-news-lineups_600664.html",
-        "https://www.espn.com/soccer/story/_/id/49269414/usa-vs-belgium-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups",
-        "https://www.espn.com/soccer/story/_/id/49277378/usmnt-folarin-balogun-red-card-suspended-belgium",
-        "https://www.cbssports.com/soccer/news/folarin-balogun-usmnt-world-cup-belgium-fifa-lifts-suspension/",
-        "https://www.nbcnews.com/sports/soccer/folarin-balogun-usmnt-soccer-fifa-world-cup-belgium-red-card-rcna353041"
-      ]
-    }
-  ]
+  {
+   "home": "Belgium",
+   "away": "United States",
+   "fecha": "2026-07-06",
+   "estado_alineacion": "probable",
+   "xi_local": "Courtois; Castagne, Ngoy, Mechele, Theate; Tielemans, Onana; Trossard, De Bruyne, Doku; De Ketelaere (4-3-3 — Lukaku esperado desde el banco (habitual en este torneo); Zeno Debast baja de todo el torneo (pierna); Trossard apto pese a molestia previa; Ngoy disponible tras cumplir su suspension en la fase de grupos vs Nueva Zelanda).",
+   "xi_visita": "Freese; Freeman, Richards, Ream, Robinson; McKennie, Adams; Tillman, Pulisic, Dest; Balogun (4-2-3-1 — BALOGUN DISPONIBLE: FIFA levanto su suspension bajo art. 27 del Codigo Disciplinario con 1 ano de probacion; Pepi al banco; McKenzie (pie) y Roldan (muscular) en duda).",
+   "bajas_local": [
+    "Zeno Debast (lesion en pierna — baja de todo el torneo)"
+   ],
+   "bajas_visita": [
+    "Mark McKenzie (lesion de pie — en duda, a evaluar)",
+    "Cristian Roldan (lesion muscular — en duda, a evaluar)",
+    "NOTA Balogun: suspension levantada por FIFA (art. 27; decision controversial — Trump solicito revision a Infantino; Real Federacion Belga expresa asombro y estudia recursos)"
+   ],
+   "lectura": "El gran partido del co-anfitrion USA: Estados Unidos busca su primer cuarto de final desde el 2002 en casa, y RECUPERA a su maximo goleador: Balogun disponible tras la decision controversial de FIFA de levantar su suspension de 1 partido (art. 27 del Codigo Disciplinario con 1 ano de probacion; Trump llamo a Infantino para pedir la revision; la Real Federacion Belga manifesto asombro y estudia recursos). Belgica vive su buen momento con una remontada epica vs Senegal (0-2 a 3-2 en tiempo extra, gol de Tielemans al minuto 124' — el gol ganador mas tardio en la historia de los Mundiales). De Bruyne y Doku son las principales amenazas belgicas; Balogun, Pulisic y Tillman llevan el ataque de USA. Lumen Field, Seattle. 8 PM ET / 00:00 UTC 7-jul.",
+   "lean": "Mercado practicamente parejo: BEL 35% / D 29% / USA 36%. Con Balogun de vuelta (3 goles en el torneo), USA recupera su arma ofensiva principal. Belgica llega con mas calidad individual pero con el desgaste fisico del alargue vs Senegal. USA en casa con el Lumen Field lleno tiene el factor ambiente. Lukaku puede salir del banco como factor diferencia. Lean: partido muy abierto y parejo; con Balogun disponible USA tiene mas opciones de imponer su juego; Belgica sigue siendo peligrosa con De Bruyne y Doku.",
+   "fuentes": [
+    "https://www.sportsmole.co.uk/football/belgium/world-cup-2026/preview/usa-vs-belgium-prediction-team-news-lineups_600664.html",
+    "https://www.espn.com/soccer/story/_/id/49269414/usa-vs-belgium-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups",
+    "https://www.espn.com/soccer/story/_/id/49277378/usmnt-folarin-balogun-red-card-suspended-belgium",
+    "https://www.cbssports.com/soccer/news/folarin-balogun-usmnt-world-cup-belgium-fifa-lifts-suspension/",
+    "https://www.nbcnews.com/sports/soccer/folarin-balogun-usmnt-soccer-fifa-world-cup-belgium-red-card-rcna353041"
+   ]
+  },
+  {
+   "home": "United States",
+   "away": "Belgium",
+   "fecha": "2026-07-06",
+   "estado_alineacion": "probable",
+   "xi_local": "Freese; Freeman, Richards, Ream, Robinson; Adams, McKennie, Tillman; Dest, Pulisic; Balogun (o Pepi) de 9",
+   "xi_visita": "Courtois; Castagne, Ngoy, Mechele, Theate; Tielemans, Onana; Trossard, De Bruyne, Doku; De Ketelaere (Lukaku podria ir de arranque, en duda)",
+   "bajas_local": "NOTICIA CLAVE: FIFA ANULO la roja de Balogun -> habilitado. McKenzie (pie) y C. Roldan (cuadriceps) en evaluacion, volvieron a entrenar.",
+   "bajas_visita": "Debast en duda (aun no juega en el torneo). Lukaku recien tomando ritmo, candidato a primera titularidad.",
+   "lectura": "Belgica tiene mas talento individual arriba (De Bruyne, Doku, Trossard); USA tiene localia (Seattle), fisico y un sistema mas cohesionado. La vuelta de Balogun le devuelve al 9 titular. Previa general: partido parejisimo, alargue escenario muy plausible.",
+   "lean": "Parejo con leve inclinacion USA por localia y la habilitacion de Balogun; alto riesgo de definicion tardia.",
+   "fuentes": [
+    "https://www.espn.com/soccer/story/_/id/49269414/usa-vs-belgium-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups",
+    "https://www.foxsports.com/stories/soccer/2026-world-cup-odds-how-far-will-team-usa-go",
+    "https://www.rotowire.com/soccer/article/usa-vs-belgium-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-16-121161",
+    "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/usa-belgium-live-stream-team-news-tickets-and-more"
+   ]
+  }
+ ]
 }
