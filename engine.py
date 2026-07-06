@@ -1116,9 +1116,10 @@ def main():
           "p3": probs[t]["tercero"], "top3": round(probs[t]["campeon"] + probs[t]["sub"] + probs[t]["tercero"], 1)}
          for t in probs], key=lambda x: x["top3"], reverse=True)[:10]
 
-    # picks de torneo (campeon/podio/premios/clasificados): FLOTAN (estimacion viva) mientras la fase
-    # de grupos no termine, y se CONGELAN una sola vez al cerrar la fase de grupos. Asi la prediccion
-    # oficial queda fijada justo cuando se conoce el cuadro, para comparar contra la realidad del KO.
+    # picks de torneo (campeon/podio/premios/clasificados): CONGELADOS PRE-TORNEO (picks.json locked=true,
+    # corte 15-jun) — correccion 4-jul: la regla anterior (flotar y congelar al cierre de grupos) auto-cumplia
+    # el pick de clasificados (32/32 gratis) y dejaba elegir campeon/premios con toda la fase jugada.
+    # Mientras exista un picks.json con locked=true, este bloque NO se ejecuta (solo con --relock-picks).
     grupo_cerrado = n_played >= n_total
     pick_path = os.path.join(DATA, "picks.json")
     prev_picks = load("picks.json") if os.path.exists(pick_path) else {}
@@ -1784,8 +1785,8 @@ function paneScore(p){
   c0.append($('div',{class:'warn',html:'<b>Sin trampa:</b> el pronóstico de cada partido se reconstruye con el estado del modelo PREVIO al partido (solo resultados de fechas anteriores) y el marcador real no influye en la predicción — se usa únicamente para puntuar.'}));
   const locked=S.picks&&S.picks.locked;
   const pickTxt=locked
-    ? 'Picks de torneo (campeón/podio/premios) CONGELADOS al '+(S.picks.corte||Q.corte||'—')+' (cierre de la fase de grupos).'
-    : 'Picks de torneo (campeón/podio/premios) <b>todavía NO congelados</b>: son estimación VIVA y se fijan automáticamente al cerrar la fase de grupos, para comparar contra la realidad del cuadro.';
+    ? 'Picks de torneo (campeón/podio/premios/clasificados) CONGELADOS PRE-TORNEO (corte '+(S.picks.corte||Q.corte||'—')+'), como en una polla real. Corrección 4-jul: antes flotaban hasta el cierre de grupos, lo que auto-cumplía los clasificados (32/32); restaurados al pick pre-torneo (27/32 reales).'
+    : 'Picks de torneo (campeón/podio/premios) <b>todavía NO congelados</b>: son estimación VIVA. Regla corregida 4-jul: deben congelarse PRE-TORNEO (no al cierre de grupos, que auto-cumple los clasificados).';
   c0.append($('div',{class:'muted',html:'<small>'+pickTxt+' Acumulativo por partido: ganador 3 · goles local 2 · goles visita 2 · marcador exacto 4 (máx 11).</small>'}));
   if(Q.modelo_nota)c0.append($('div',{class:'muted',html:'<small>🔧 '+Q.modelo_nota+'</small>'}));
   p.append(c0);
