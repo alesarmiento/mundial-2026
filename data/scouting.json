@@ -3,7 +3,7 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-07-06T00:15:00Z",
+    "actualizado": "2026-07-06T01:15:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
@@ -35,7 +35,7 @@
       "away": "Portugal",
       "fecha": "2026-07-06",
       "estado_alineacion": "probable",
-      "xi_local": "Simon; Porro, Cubarsi, Laporte, Cucurella; Rodri, Pedri, Fabian Ruiz; Yamal, Oyarzabal, Baena (4-3-3 — Nico Williams y Yeremy Pino fuera por lesion; Yamal, Porro, Olmo y Laporte entrenaron suave el viernes pero se espera que sean solo gestión de carga, no lesion; Oyarzabal comparte liderazgo en la Bota de Oro con 4 goles).",
+      "xi_local": "Simon; Porro, Cubarsi, Laporte, Cucurella; Rodri, Pedri, Olmo; Yamal, Oyarzabal, Baena (4-3-3 — Dani Olmo en mediocampo en lugar de Fabian Ruiz segun fuentes del dia; Nico Williams y Yeremy Pino fuera por lesion; Oyarzabal lidera la Bota de Oro de Espana con 4 goles).",
       "xi_visita": "Diogo Costa; Cancelo, Dias, Veiga, Mendes; Neves, Vitinha; Neto, Bruno Fernandes, Leao; Ronaldo (4-3-3 — Portugal arriba con plantel completo; Ronaldo lleva 3 goles en el torneo, siendo el 6to Mundial de su carrera a los 41 anos; recordar que Ronaldo no habia marcado en eliminatorias mundialistas antes de este torneo y rompió ese maleficio en dieciseisavos vs Croacia).",
       "bajas_local": [
         "Nico Williams (desgarro en la ingle — baja confirmada para el partido)",
@@ -59,22 +59,23 @@
       "fecha": "2026-07-06",
       "estado_alineacion": "probable",
       "xi_local": "Courtois; Castagne, Ngoy, Mechele, Theate; Tielemans, Onana; Trossard, De Bruyne, Doku; De Ketelaere (4-3-3 — Lukaku esperado desde el banco (habitual en este torneo); Zeno Debast baja de todo el torneo (pierna); Trossard apto pese a molestia previa; Ngoy disponible tras cumplir su suspension en la fase de grupos vs Nueva Zelanda).",
-      "xi_visita": "Freese; Freeman, Richards, Ream, Robinson; McKennie, Adams; Tillman, Pulisic, Dest; Pepi (4-2-3-1 — Balogun suspendido por tarjeta roja vs Bosnia en minuto 64; cumple 1 partido de ban; Pepi es el reemplazante natural; McKenzie (pie) y Roldan (muscular) en duda y a evaluar antes del partido).",
+      "xi_visita": "Freese; Freeman, Richards, Ream, Robinson; McKennie, Adams; Tillman, Pulisic, Dest; Balogun (4-2-3-1 — BALOGUN DISPONIBLE: FIFA levanto su suspension bajo art. 27 del Codigo Disciplinario con 1 ano de probacion; Pepi al banco; McKenzie (pie) y Roldan (muscular) en duda).",
       "bajas_local": [
         "Zeno Debast (lesion en pierna — baja de todo el torneo)"
       ],
       "bajas_visita": [
-        "Folarin Balogun (suspension por tarjeta roja ante Bosnia en min 64 — cumple 1 partido de ban)",
         "Mark McKenzie (lesion de pie — en duda, a evaluar)",
-        "Cristian Roldan (lesion muscular — en duda, a evaluar)"
+        "Cristian Roldan (lesion muscular — en duda, a evaluar)",
+        "NOTA Balogun: suspension levantada por FIFA (art. 27; decision controversial — Trump solicito revision a Infantino; Real Federacion Belga expresa asombro y estudia recursos)"
       ],
-      "lectura": "El gran partido del co-anfitrion USA: Estados Unidos busca su primer cuarto de final desde el Mundial del 2002 en casa, sin su maximo goleador (Balogun suspendido, 3 goles en el torneo). Belgica vive su buen momento con una remontada epica vs Senegal (0-2 a 3-2 en tiempo extra, gol de Tielemans al minuto 124' — el gol ganador mas tardio en la historia de los Mundiales). De Bruyne y Doku son las principales amenazas belgicas; Pulisic y Tillman deberan cargar con el ataque estadounidense. Lumen Field, Seattle. 8 PM ET / 00:00 UTC 7-jul.",
-      "lean": "Mercado practicamente parejo: BEL 35% / D 29% / USA 36%. Belgica llega con mas calidad individual pero con el desgaste fisico del alargue vs Senegal. USA en casa y con multitud del Lumen Field tiene el factor ambiente; la ausencia de Balogun es una baja importante pero Pepi es un delantero competente (13 goles en 41 partidos con USA). Lukaku habitualmente sale del banco y puede ser el factor diferencia. Lean: partido muy abierto y parejo; Belgica tiene mas experiencia en eliminatorias pero USA el impulso de jugar en casa.",
+      "lectura": "El gran partido del co-anfitrion USA: Estados Unidos busca su primer cuarto de final desde el 2002 en casa, y RECUPERA a su maximo goleador: Balogun disponible tras la decision controversial de FIFA de levantar su suspension de 1 partido (art. 27 del Codigo Disciplinario con 1 ano de probacion; Trump llamo a Infantino para pedir la revision; la Real Federacion Belga manifesto asombro y estudia recursos). Belgica vive su buen momento con una remontada epica vs Senegal (0-2 a 3-2 en tiempo extra, gol de Tielemans al minuto 124' — el gol ganador mas tardio en la historia de los Mundiales). De Bruyne y Doku son las principales amenazas belgicas; Balogun, Pulisic y Tillman llevan el ataque de USA. Lumen Field, Seattle. 8 PM ET / 00:00 UTC 7-jul.",
+      "lean": "Mercado practicamente parejo: BEL 35% / D 29% / USA 36%. Con Balogun de vuelta (3 goles en el torneo), USA recupera su arma ofensiva principal. Belgica llega con mas calidad individual pero con el desgaste fisico del alargue vs Senegal. USA en casa con el Lumen Field lleno tiene el factor ambiente. Lukaku puede salir del banco como factor diferencia. Lean: partido muy abierto y parejo; con Balogun disponible USA tiene mas opciones de imponer su juego; Belgica sigue siendo peligrosa con De Bruyne y Doku.",
       "fuentes": [
         "https://www.sportsmole.co.uk/football/belgium/world-cup-2026/preview/usa-vs-belgium-prediction-team-news-lineups_600664.html",
         "https://www.espn.com/soccer/story/_/id/49269414/usa-vs-belgium-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups",
-        "https://lastwordonsports.com/football/2026/07/04/united-states-vs-belgium-team-news-and-predicted-lineups/",
-        "https://www.rotowire.com/soccer/article/usa-vs-belgium-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-16-121161"
+        "https://www.espn.com/soccer/story/_/id/49277378/usmnt-folarin-balogun-red-card-suspended-belgium",
+        "https://www.cbssports.com/soccer/news/folarin-balogun-usmnt-world-cup-belgium-fifa-lifts-suspension/",
+        "https://www.nbcnews.com/sports/soccer/folarin-balogun-usmnt-soccer-fifa-world-cup-belgium-red-card-rcna353041"
       ]
     }
   ]
