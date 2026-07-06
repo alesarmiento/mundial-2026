@@ -3,8 +3,8 @@
     "descripcion": "Consenso del mercado/mundo online por partido del dia (1X2 implicado, marcador mas probable, over 2.5). Para comparar contra el sistema y medir calibracion. La rutina lo actualiza con las cuotas del dia para TODOS los partidos.",
     "regla_de_oro": "Solo con fuente real (ESPN odds, oddschecker, Dimers, bet365, Kalshi, Forebet). Las cuotas se convierten a probabilidad quitando el margen y se normalizan a 100. Nunca inventar.",
     "campos": "pH/pD/pA = % implicado de gana local / empate / gana visita (orientado al home del fixture). score = marcador mas probable del mercado. over25 = % de over 2.5 goles.",
-    "actualizado": "2026-07-04",
-    "ultima_actualizacion": "2026-07-04T06:10:00Z"
+    "actualizado": "2026-07-06",
+    "ultima_actualizacion": "2026-07-06T23:15:00Z"
   },
   "partidos": [
     {
@@ -777,6 +777,27 @@
       "score": "0-1",
       "over25": 41,
       "fuente": "Bet365 (COL +130 / Draw +225 / SUI +210; over 2.5 +130) + BetMGM (COL +120 / Draw +225 / SUI +220; normalizado; 4-jul-2026) / sportsbettingdime.com + sports.betmgm.com"
+    },
+    {
+      "home": "France",
+      "away": "Morocco",
+      "fecha": "2026-07-09",
+      "pH": 60,
+      "pD": 25,
+      "pA": 15,
+      "score": "2-0",
+      "over25": 46,
+      "fuente": "DraftKings (FRA -175 / draw +285 / MAR +500; under 2.5 -120; normalizado; 4-6-jul-2026) / dknetwork.draftkings.com + vegasinsider.com + sportsbettingdime.com"
+    },
+    {
+      "home": "Norway",
+      "away": "England",
+      "fecha": "2026-07-11",
+      "pH": 25,
+      "pD": 27,
+      "pA": 48,
+      "score": "2-3",
+      "fuente": "DraftKings (ENG -105 / draw +250 / NOR +280; normalizado; 5-6-jul-2026) / dknetwork.draftkings.com + sportsbettingdime.com + squawka.com (marcador Signal model: England 3-2)"
     }
   ]
 }
