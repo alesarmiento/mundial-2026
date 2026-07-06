@@ -2,7 +2,7 @@
   "_meta": {
     "descripcion": "Ledger de resultados REALES. Cada partido entra con su fuente. NUNCA se inventa un marcador. Si no se puede verificar, no se agrega.",
     "fase_valores": "grupos | dieciseisavos | octavos | cuartos | semis | tercer_puesto | final",
-    "ultima_fecha_cargada": "2026-07-05"
+    "ultima_fecha_cargada": "2026-07-06"
   },
   "partidos": [
     {
@@ -907,6 +907,15 @@
       "gl": 2,
       "gv": 3,
       "fuente": "https://www.espn.com/soccer/story/_/id/49280180/mexico-england-world-cup-2026-result-score-recap-jude-bellingham-harry-kane-jarell-quansah + https://www.nbcsports.com/soccer/live/mexico-vs-england-live-updates-score-goals-highlights-stats-from-2026-fifa-world-cup + https://www.foxsports.com/stories/soccer/brilliant-bellingham-england-star-scores-2-goals-2-minutes-vs-mexico (Mexico 2-3 England FT; Bellingham 36' y 38' (brace en 98 segundos — el mas rapido de la historia de England en un Mundial; asistencias Saka y Kane respectivamente), Kane 60' pen (ENG); Quinones 42' (MEX), Jimenez 69' pen (MEX); Quansah roja 54'; England avanza a cuartos vs Norway; Mexico cae en el Azteca por primera vez en un Mundial; Estadio Azteca, Ciudad de Mexico; confirmado ESPN / Fox Sports / NBC Sports / CBS Sports / Yahoo Sports)"
+    },
+    {
+      "fecha": "2026-07-06",
+      "fase": "octavos",
+      "local": "Spain",
+      "visita": "Portugal",
+      "gl": 1,
+      "gv": 0,
+      "fuente": "https://www.espn.com/soccer/story/_/id/49287306/portugal-vs-spain-live-2026-world-cup-updates-score-commentary-result + https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-2026-july-6-usa-live-updates-rcna353164 (Spain 1-0 Portugal FT; Mikel Merino gol en tiempo de descuento — remate de cabeza tras centro de Ferran Torres; Rodri y Pedri dominaron el mediocampo; Spain tuvo 56% posesion y 1.77 xG vs solo 0.56 xG de Portugal; España avanza a cuartos vs Norway; Portugal y Ronaldo eliminados; AT&T Stadium, Arlington, Texas; confirmado ESPN / NBC News / CBS Sports / Yahoo Sports)"
     }
   ]
 }

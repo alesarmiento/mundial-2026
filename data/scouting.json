@@ -3,33 +3,10 @@
   "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
   "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
   "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-  "actualizado": "2026-07-06T17:15:00Z",
+  "actualizado": "2026-07-06T21:10:00Z",
   "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
  },
  "partidos": [
-  {
-   "home": "Spain",
-   "away": "Portugal",
-   "fecha": "2026-07-06",
-   "estado_alineacion": "probable",
-   "xi_local": "Simon; Porro, Cubarsi, Laporte, Cucurella; Rodri, Pedri, Olmo; Yamal, Oyarzabal, Baena (4-3-3 — Dani Olmo en mediocampo en lugar de Fabian Ruiz segun fuentes del dia; Nico Williams y Yeremy Pino fuera por lesion; Oyarzabal lidera la Bota de Oro de Espana con 4 goles).",
-   "xi_visita": "Diogo Costa; Cancelo, Dias, Veiga, Mendes; Neves, Vitinha; Neto, Bruno Fernandes, Leao; Ronaldo (4-3-3 — Portugal arriba con plantel completo; Ronaldo lleva 3 goles en el torneo, siendo el 6to Mundial de su carrera a los 41 anos; recordar que Ronaldo no habia marcado en eliminatorias mundialistas antes de este torneo y rompió ese maleficio en dieciseisavos vs Croacia).",
-   "bajas_local": [
-    "Nico Williams (desgarro en la ingle — baja confirmada para el partido)",
-    "Yeremy Pino (esguince de ligamentos en el hombro — baja confirmada para el partido)"
-   ],
-   "bajas_visita": [
-    "Sin bajas confirmadas; Portugal llega con el plantel completo."
-   ],
-   "lectura": "El Clasico Iberico en el Mundial: por primera vez en la historia del torneo, Espana y Portugal se eliminan entre si en una ronda eliminatoria. Espana llego primera en su grupo y fue dominante (3-0 a Austria en dieciseisavos), aunque pierde a sus dos extremos titulares (Williams y Pino). Portugal remonto con un gol de Ramos en el 90+4' para superar a Croacia 2-1 y sigue con Ronaldo como pieza central. El ganador enfrenta al vencedor de Belgium vs USA en cuartos. Kickoff 3:00 PM ET / 19:00 UTC. AT&T Stadium, Arlington, Texas.",
-   "lean": "Espana es favorita leve (mercado: ESP 51% / D 27% / POR 22%) pero sin sus extremos Williams y Pino la amplitud ofensiva se reduce. Yamal, Rodri y Pedri siguen siendo la columna vertebral; Oyarzabal es letal. Portugal depende del colectivo con Leao en transicion rapida y Bruno Fernandes como cerebro. El Clasico Iberico históricamente es muy cerrado. Lean: Espana tiene mas argumentos en el juego de posesión, pero Portugal puede neutralizarla y definir a favor si llega a penales; marcador igualado y alargue como escenario probable.",
-   "fuentes": [
-    "https://www.sportsmole.co.uk/football/portugal/world-cup-2026/preview/portugal-vs-spain-prediction-team-news-lineups_600650.html",
-    "https://www.sportsmole.co.uk/football/spain/world-cup-2026/predicted-lineups/yamal-olmo-porro-status-predicted-spain-xi-vs-portugal_600654.html",
-    "https://sports.yahoo.com/articles/spain-xi-vs-portugal-confirmed-185630668.html",
-    "https://www.espn.com/soccer/story/_/id/49266158/fifa-world-cup-2026-portugal-vs-spain-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups"
-   ]
-  },
   {
    "home": "Belgium",
    "away": "United States",
