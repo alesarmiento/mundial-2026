@@ -3,7 +3,7 @@
     "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
     "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
     "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-    "actualizado": "2026-07-05T22:15:00Z",
+    "actualizado": "2026-07-06T00:15:00Z",
     "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
   },
   "partidos": [
@@ -11,25 +11,70 @@
       "home": "Mexico",
       "away": "England",
       "fecha": "2026-07-05",
-      "estado_alineacion": "probable",
-      "xi_local": "Rangel; Sanchez, Montes, Vasquez, Gallardo; Mora, Lira, Romo; Alvarado, Jimenez, Quinones (4-3-3 — Mexico lleva 4 partidos sin conceder un solo gol: vs South Africa, South Korea, Czechia y Ecuador; Jimenez y Quinones suman 5 de los 8 goles mexicanos; juegan en casa historica con altitud a >2,200 m).",
-      "xi_visita": "Pickford; Spence, Konsa, Guehi, O'Reilly; Rice (en duda menor), Anderson; Madueke, Bellingham, Gordon; Kane (4-2-3-1 — Kane con 5 goles y 13 en toda su carrera mundialista (supero a Pele); Bellingham como motor creativo; Rice esperado pese a molestia en isquiotibiales; Reece James baja confirmada).",
+      "estado_alineacion": "confirmada",
+      "xi_local": "Rangel; Sanchez, Montes, Vasquez, Gallardo; Romo, Lira, Mora; Alvarado, Jimenez, Quinones (4-3-3 — Mexico invicto y sin conceder un solo gol en sus 5 partidos del torneo; la altitud del Azteca a 2,240 msnm es un factor determinante que Mexico ha dominado históricamente; kickoff retrasado 1h por tormenta electrica → 9 PM ET / 01:00 UTC).",
+      "xi_visita": "Pickford; Quansah, Konsa, Guehi, O'Reilly; Anderson, Rice; Saka, Bellingham, Gordon; Kane (4-2-3-1 — Tuchel hace 3 cambios respecto al XI vs DR Congo: Saka y Gordon reemplazan a Madueke y Rashford en ataque; Quansah retorna en defensa en lugar de Spence; Rice disponible pese a molestia previa en isquiotibiales).",
       "bajas_local": [
-        "No hay bajas confirmadas. Quinones, Alvarado y Mora salieron ante Ecuador pero se espera que esten disponibles."
+        "Sin bajas confirmadas para este partido."
       ],
       "bajas_visita": [
-        "Reece James (lesion en isquiotibial — baja confirmada)",
-        "Jarell Quansah (lesion de tobillo — baja confirmada)",
-        "Declan Rice (molestia leve en isquiotibial — en duda menor; esperado disponible tras entrenamiento del jueves)"
+        "Reece James (lesion en isquiotibial — baja confirmada para todo el torneo)",
+        "Nota: Quansah recuperado e incluido en el once titular confirmado"
       ],
-      "lectura": "El choque historico del Azteca: Mexico, invicto y sin conceder, recibe a Inglaterra en su estadio emblematico. La altitud del Estadio Azteca (2,240 metros sobre el nivel del mar) es un factor determinante — Mexico nunca perdio un partido de Copa del Mundo en este escenario (7 victorias, 3 empates). England llega con baja de Reece James y la duda de Rice, pero con Kane en modo historico. Mexico viene de eliminar a Ecuador con una actuacion precisa y disciplinada. Kickoff 00:00 UTC del 6 de julio (8 PM ET del 5 de julio).",
-      "lean": "Partido equilibradisimo (mercado: MEX 32% / D 31% / ENG 37%). La altitud y la fortaleza defensiva de Mexico son los factores clave. England tiene el ariete mas en forma (Kane) pero Mexico puede aspirar al desgaste. Lean: partido muy cerrado, posiblemente en alargue; Mexico aprovecha su localismo pero England tiene calidad suficiente para marcar la diferencia.",
+      "lectura": "La noche del Azteca: Mexico recibe a Inglaterra en el estadio emblematico que vio a Maradona y a Pele, con mas de 80,000 almas rugiendo. Mexico es el unico equipo del torneo sin encajar un solo gol y llega invicto en 5 partidos. El partido fue retrasado 1 hora por una tormenta electrica sobre la Ciudad de Mexico (nuevo horario: 9 PM ET / 01:00 UTC). Tuchel apuesta por la velocidad de Saka y Gordon para atacar las bandas; Kane busca seguir ampliando su record historico de goles con England en Mundiales. El ganador enfrenta a Noruega en cuartos de final.",
+      "lean": "Mexico en casa y en altitud es historicamente casi invencible en el Azteca (7V-3E-0P en Mundiales). La efervescencia local, la defensa cerrada y el desgaste que provoca la altitud sobre el rival son los factores clave. England tiene calidad suficiente (Kane en modo historico, Bellingham como motor) pero la altitud y el ambiente son formidables. Mercado: MEX 32% / D 31% / ENG 37%. Lean: partido cerrado que podria ir a alargue; Mexico tiene todo el contexto a favor pero England es suficientemente solida para inquietar.",
       "fuentes": [
-        "https://www.sportsmole.co.uk/football/england/world-cup-2026/preview/mexico-vs-england-prediction-team-news-lineups_600597.html",
-        "https://www.skysports.com/football/news/11095/13559759/mexico-vs-england-predicted-line-ups-sky-sports-writers-pick-their-xis-with-declan-rice-anthony-gordon-and-john-stones-among-players-debated",
-        "https://www.rotowire.com/soccer/article/mexico-vs-england-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-16-121007",
-        "https://www.nbcchicago.com/world-cup/mexico-vs-england-world-cup-showdown-loaded-with-historic-implications/3956473/",
-        "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-england-preview-live-stream-team-news-tickets"
+        "https://worldsoccertalk.com/amp/world-cup/are-harry-kane-and-julian-quinones-playing-mexico-vs-england-confirmed-lineups-for-the-2026-world-cup-game/",
+        "https://www.nbcsports.com/soccer/live/mexico-vs-england-live-updates-score-goals-highlights-stats-from-2026-fifa-world-cup",
+        "https://www.espn.com/soccer/story/_/id/49280042/mexico-england-live-world-cup-2026-latest-updates-commentary-score-result",
+        "https://www.cbssports.com/soccer/news/mexico-england-live-updates-world-cup-2026-score-result/live/"
+      ]
+    },
+    {
+      "home": "Spain",
+      "away": "Portugal",
+      "fecha": "2026-07-06",
+      "estado_alineacion": "probable",
+      "xi_local": "Simon; Porro, Cubarsi, Laporte, Cucurella; Rodri, Pedri, Fabian Ruiz; Yamal, Oyarzabal, Baena (4-3-3 — Nico Williams y Yeremy Pino fuera por lesion; Yamal, Porro, Olmo y Laporte entrenaron suave el viernes pero se espera que sean solo gestión de carga, no lesion; Oyarzabal comparte liderazgo en la Bota de Oro con 4 goles).",
+      "xi_visita": "Diogo Costa; Cancelo, Dias, Veiga, Mendes; Neves, Vitinha; Neto, Bruno Fernandes, Leao; Ronaldo (4-3-3 — Portugal arriba con plantel completo; Ronaldo lleva 3 goles en el torneo, siendo el 6to Mundial de su carrera a los 41 anos; recordar que Ronaldo no habia marcado en eliminatorias mundialistas antes de este torneo y rompió ese maleficio en dieciseisavos vs Croacia).",
+      "bajas_local": [
+        "Nico Williams (desgarro en la ingle — baja confirmada para el partido)",
+        "Yeremy Pino (esguince de ligamentos en el hombro — baja confirmada para el partido)"
+      ],
+      "bajas_visita": [
+        "Sin bajas confirmadas; Portugal llega con el plantel completo."
+      ],
+      "lectura": "El Clasico Iberico en el Mundial: por primera vez en la historia del torneo, Espana y Portugal se eliminan entre si en una ronda eliminatoria. Espana llego primera en su grupo y fue dominante (3-0 a Austria en dieciseisavos), aunque pierde a sus dos extremos titulares (Williams y Pino). Portugal remonto con un gol de Ramos en el 90+4' para superar a Croacia 2-1 y sigue con Ronaldo como pieza central. El ganador enfrenta al vencedor de Belgium vs USA en cuartos. Kickoff 3:00 PM ET / 19:00 UTC. AT&T Stadium, Arlington, Texas.",
+      "lean": "Espana es favorita leve (mercado: ESP 51% / D 27% / POR 22%) pero sin sus extremos Williams y Pino la amplitud ofensiva se reduce. Yamal, Rodri y Pedri siguen siendo la columna vertebral; Oyarzabal es letal. Portugal depende del colectivo con Leao en transicion rapida y Bruno Fernandes como cerebro. El Clasico Iberico históricamente es muy cerrado. Lean: Espana tiene mas argumentos en el juego de posesión, pero Portugal puede neutralizarla y definir a favor si llega a penales; marcador igualado y alargue como escenario probable.",
+      "fuentes": [
+        "https://www.sportsmole.co.uk/football/portugal/world-cup-2026/preview/portugal-vs-spain-prediction-team-news-lineups_600650.html",
+        "https://www.sportsmole.co.uk/football/spain/world-cup-2026/predicted-lineups/yamal-olmo-porro-status-predicted-spain-xi-vs-portugal_600654.html",
+        "https://sports.yahoo.com/articles/spain-xi-vs-portugal-confirmed-185630668.html",
+        "https://www.espn.com/soccer/story/_/id/49266158/fifa-world-cup-2026-portugal-vs-spain-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups"
+      ]
+    },
+    {
+      "home": "Belgium",
+      "away": "United States",
+      "fecha": "2026-07-06",
+      "estado_alineacion": "probable",
+      "xi_local": "Courtois; Castagne, Ngoy, Mechele, Theate; Tielemans, Onana; Trossard, De Bruyne, Doku; De Ketelaere (4-3-3 — Lukaku esperado desde el banco (habitual en este torneo); Zeno Debast baja de todo el torneo (pierna); Trossard apto pese a molestia previa; Ngoy disponible tras cumplir su suspension en la fase de grupos vs Nueva Zelanda).",
+      "xi_visita": "Freese; Freeman, Richards, Ream, Robinson; McKennie, Adams; Tillman, Pulisic, Dest; Pepi (4-2-3-1 — Balogun suspendido por tarjeta roja vs Bosnia en minuto 64; cumple 1 partido de ban; Pepi es el reemplazante natural; McKenzie (pie) y Roldan (muscular) en duda y a evaluar antes del partido).",
+      "bajas_local": [
+        "Zeno Debast (lesion en pierna — baja de todo el torneo)"
+      ],
+      "bajas_visita": [
+        "Folarin Balogun (suspension por tarjeta roja ante Bosnia en min 64 — cumple 1 partido de ban)",
+        "Mark McKenzie (lesion de pie — en duda, a evaluar)",
+        "Cristian Roldan (lesion muscular — en duda, a evaluar)"
+      ],
+      "lectura": "El gran partido del co-anfitrion USA: Estados Unidos busca su primer cuarto de final desde el Mundial del 2002 en casa, sin su maximo goleador (Balogun suspendido, 3 goles en el torneo). Belgica vive su buen momento con una remontada epica vs Senegal (0-2 a 3-2 en tiempo extra, gol de Tielemans al minuto 124' — el gol ganador mas tardio en la historia de los Mundiales). De Bruyne y Doku son las principales amenazas belgicas; Pulisic y Tillman deberan cargar con el ataque estadounidense. Lumen Field, Seattle. 8 PM ET / 00:00 UTC 7-jul.",
+      "lean": "Mercado practicamente parejo: BEL 35% / D 29% / USA 36%. Belgica llega con mas calidad individual pero con el desgaste fisico del alargue vs Senegal. USA en casa y con multitud del Lumen Field tiene el factor ambiente; la ausencia de Balogun es una baja importante pero Pepi es un delantero competente (13 goles en 41 partidos con USA). Lukaku habitualmente sale del banco y puede ser el factor diferencia. Lean: partido muy abierto y parejo; Belgica tiene mas experiencia en eliminatorias pero USA el impulso de jugar en casa.",
+      "fuentes": [
+        "https://www.sportsmole.co.uk/football/belgium/world-cup-2026/preview/usa-vs-belgium-prediction-team-news-lineups_600664.html",
+        "https://www.espn.com/soccer/story/_/id/49269414/usa-vs-belgium-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups",
+        "https://lastwordonsports.com/football/2026/07/04/united-states-vs-belgium-team-news-and-predicted-lineups/",
+        "https://www.rotowire.com/soccer/article/usa-vs-belgium-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-16-121161"
       ]
     }
   ]
