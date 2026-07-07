@@ -3,7 +3,7 @@
   "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
   "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
   "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-  "actualizado": "2026-07-07T19:10:00Z",
+  "actualizado": "2026-07-07T20:15:00Z",
   "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
  },
  "partidos": [
@@ -11,22 +11,21 @@
    "home": "Switzerland",
    "away": "Colombia",
    "fecha": "2026-07-07",
-   "estado_alineacion": "probable",
-   "xi_local": "Kobel; Zakaria, Akanji, Elvedi, Rodriguez; Xhaka, Freuler; Ndoye, Manzambi, Vargas; Embolo. Formacion 4-2-3-1. Manzambi en el rol de 10 tras ganarse el puesto a lo largo del torneo (3G, el mas joven en 5 contribuciones en un Mundial desde 1966). Aebischer y Jaquez con dudas musculares.",
-   "xi_visita": "Vargas; Munoz, Sanchez, Lucumi, Mojica; Lerma, Rodriguez/Quintero (James en duda - illness), Puerta; Arias, Borre/Hernandez (Cordoba baja), Diaz. Formacion 4-3-3. James Rodriguez es la gran duda ofensiva; Quintero es el reemplazo mas probable si no llega.",
+   "estado_alineacion": "confirmada",
+   "xi_local": "Kobel; Zakaria, Elvedi, Akanji, Rodriguez; Xhaka, Freuler; Ndoye, Jashari, Rieder; Embolo. Formacion 4-2-3-1. BAJAS CLAVE: Manzambi (3G del torneo, lesionado) y Vargas (lesionado) son baja confirmada; Jashari y Rieder los reemplazan. Yakin pierde a sus dos atacantes creativos mas en forma.",
+   "xi_visita": "Camilo Vargas; Munoz, Sanchez, Lucumi, Mojica; Puerta, Lerma, Arias; James Rodriguez, Suarez, Diaz. Formacion 4-3-3. James Rodriguez JUEGA: supero la duda por enfermedad y es titular. Suarez entra como 9 en lugar de Cordoba (baja confirmada por lesion).",
    "bajas_local": [
-    "Michel Aebischer (lesion muscular - entrenando de forma individual, en duda para el partido)",
-    "Luca Jaquez (lesion muscular - entrenando separado del grupo, en duda para el partido)"
+    "Johan Manzambi (lesion - baja confirmada; maximo goleador suizo con 3G, se pierde el partido mas importante del torneo)",
+    "Ruben Vargas (lesion - baja confirmada; lateral creativo, reemplazado por Rieder)"
    ],
    "bajas_visita": [
-    "Jhon Cordoba (lesion - salio temprano vs Ghana en dieciseisavos, baja confirmada)",
-    "James Rodriguez (illness - enfermedad, en duda; Juan Quintero candidato a reemplazarlo)"
+    "Jhon Cordoba (lesion - baja confirmada; salio vs Ghana, Suarez lo reemplaza como 9)"
    ],
-   "lectura": "Switzerland llega en su mejor momento: 4 victorias en fila (incluyendo 4-1 a Bosnia, 2-1 a Canada y 2-0 a Algeria en dieciseisavos), con Manzambi como revelacion del torneo. Colombia llego invicta a esta instancia (5W, 1D) con un sistema colectivo muy solido, pero enfrenta dos bajas sensibles: Cordoba confirmado afuera y James Rodriguez en duda por enfermedad. Luis Diaz sigue siendo la principal amenaza y Jhon Arias aporto el gol eliminatorio vs Ghana. BC Place, Vancouver. Kickoff 4pm ET / 20:00 UTC.",
-   "lean": "Mercado favorece a Colombia (COL +125 / D +210 / SUI +250 segun bet365; aproximadamente COL 41% / D 29% / SUI 30%). Switzerland es muy dificil de batir con Xhaka/Freuler en el doble pivote y Kobel bajo los palos, pero su techo goleador es limitado. Colombia sin James pierde creatividad; con James seria favorita clara. Lean: partido cerrado, posible alargue o definicion ajustada; Colombia con leve ventaja si James juega, Switzerland con mas chances si no llega.",
+   "lectura": "Novedades importantes en las alineaciones confirmadas: Switzerland pierde a Manzambi (revelacion del torneo con 3G) por lesion, golpeando significativamente su capacidad creativa. En contraste, Colombia recupera a James Rodriguez, que supero la duda por enfermedad y es titular. Con James-Suarez-Diaz, la linea ofensiva colombiana es formidable. Switzerland dependera del colectivo Xhaka/Freuler en el doble pivote y del trabajo de Embolo como referencia arriba. BC Place, Vancouver. Partido comenzado a las 20:00 UTC.",
+   "lean": "Colombia pasa a ser favorita con mayor conviccion: James juega y Switzerland pierde a Manzambi. Sin Manzambi como nexo creativo, el techo ofensivo suizo se reduce notablemente. Luis Diaz por la banda izquierda y James como creador seran los ejes de Colombia. Lean: Colombia con ventaja clara en el escenario de alineaciones confirmadas; escenario de 0-1 o 1-2 como el mas probable.",
    "fuentes": [
-    "https://www.sportsmole.co.uk/football/switzerland/world-cup-2026/preview/switzerland-vs-colombia-prediction-team-news-lineups_600736.html",
-    "https://www.sportsmole.co.uk/football/switzerland/world-cup-2026/predicted-lineups/will-jaquez-aebischer-make-it-in-time-predicted-switzerland-xi-vs-colombia_600746.html",
+    "https://worldsoccertalk.com/world-cup/is-james-rodriguez-playing-switzerland-vs-colombia-confirmed-lineups-for-the-2026-world-cup-game/",
+    "https://www.si.com/soccer/switzerland-vs-colombia-world-cup-preview-predictions-lineups-7-7-26",
     "https://www.rotowire.com/soccer/article/switzerland-vs-colombia-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-16-121310",
     "https://www.espn.com/soccer/story/_/id/49278663/fifa-world-cup-2026-switzerland-vs-colombia-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups"
    ]
