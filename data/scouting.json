@@ -3,35 +3,10 @@
   "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
   "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
   "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-  "actualizado": "2026-07-07T02:15:00Z",
+  "actualizado": "2026-07-07T19:10:00Z",
   "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
  },
  "partidos": [
-  {
-   "home": "Argentina",
-   "away": "Egypt",
-   "fecha": "2026-07-07",
-   "estado_alineacion": "probable",
-   "xi_local": "Emi Martinez; Molina (duda), Romero, Lisandro Martinez, Medina/Tagliafico (Medina duda - calambre vs Cape Verde; Tagliafico cubre si no llega); De Paul, Mac Allister, Enzo Fernandez (duda); Almada, Lautaro Martinez, Messi. Formacion 4-3-3. Scaloni evalua triple duda en defensa y mediocampo; Nico Gonzalez en duda adicional por esguince de tobillo (podria reemplazar a Almada).",
-   "xi_visita": "Shobeir; Mohamed Hany, Rabia, Yasser Ibrahim, Karim Hafez (duda - salio al 80' vs Australia); Hamdy Fathy, Marwan Attia; Zico, Emam Ashour, Mohamed Salah; Omar Marmoush. Formacion 4-2-3-1.",
-   "bajas_local": [
-    "Facundo Medina (duda - calambre al salir en tiempo extra vs Cape Verde; Tagliafico disponible de reserva en LB)",
-    "Nahuel Molina (duda - no completo sesion de recuperacion completa)",
-    "Enzo Fernandez (duda - no completo sesion de recuperacion completa)",
-    "Nico Gonzalez (duda - esguince de tobillo reportado, baja probable)"
-   ],
-   "bajas_visita": [
-    "Karim Hafez (lateral izquierdo - salio al 80' vs Australia, condicion incierta entre fatiga y lesion menor)"
-   ],
-   "lectura": "Argentina llega como favorita indiscutida, pero con el susto fisico del alargue vs Cape Verde (3-2 en 120', gol decisivo en 115'). Messi lidera la Bota de Oro con 7 goles y busca su primer Mundial consecutivo como campeon. Egipto fue la gran sorpresa: elimino a Australia en penales (4-2) con la Panenka de Salah y el fallo de dos socceroos; Marmoush es la mayor amenaza ofensiva. El partido entre las dos estrellas mas grandes de sus generaciones: Messi vs Salah. Scaloni debe decidir si arriesga con las tres dudas defensivas o hace cambios. Mercedes-Benz Stadium, Atlanta. Kickoff 12pm ET / 16:00 UTC.",
-   "lean": "Argentina favorita clara (mercado: ARG 76% / D 17% / EGY 7%). Las dudas defensivas (Medina, Molina, Enzo) agregan incertidumbre pero Scaloni tiene cobertura con Tagliafico. Egipto puede intentar presionar alto y generar con Marmoush y Salah en transicion. Lean: Argentina pasa con relativa comodidad hacia cuartos; el riesgo real es si las bajas fisicas generan descuido defensivo en los primeros minutos. Messi candidato a ampliar cuenta de goles.",
-   "fuentes": [
-    "https://www.sportsmole.co.uk/football/argentina/world-cup-2026/preview/argentina-vs-egypt-prediction-team-news-lineups_600679.html",
-    "https://www.sportsmole.co.uk/football/argentina/world-cup-2026/predicted-lineups/triple-fitness-update-martinez-or-alvarez-predicted-argentina-xi-vs-egypt_600706.html",
-    "https://www.rotowire.com/soccer/article/argentina-vs-egypt-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-round-of-16-121312",
-    "https://www.espn.com/soccer/story/_/id/49277696/fifa-world-cup-2026-argentina-vs-egypt-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups-lionel-messi"
-   ]
-  },
   {
    "home": "Switzerland",
    "away": "Colombia",
