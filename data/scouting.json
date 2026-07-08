@@ -3,7 +3,7 @@
   "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
   "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
   "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-  "actualizado": "2026-07-08T05:15:00Z",
+  "actualizado": "2026-07-08T22:15:00Z",
   "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
  },
  "partidos": [
@@ -13,15 +13,15 @@
    "fecha": "2026-07-09",
    "estado_alineacion": "probable",
    "xi_local": "Maignan; Kounde, Upamecano, Saliba, Digne; Rabiot, Kone; Dembele, Olise, Doue; Mbappe",
-   "xi_visita": "Bounou; Hakimi, Diop, Riad, Mazraoui; El Aynaoui, Bouaddi; Brahim Diaz, Ounahi, El Khannouss; Rahimi",
-   "bajas_local": ["Aurelien Tchouameni (ausente del torneo; Kone lo viene supliendo en el mediocampo)"],
-   "bajas_visita": ["Ismael Saibari (hamstring — lesionado al minuto 22 vs Canada; probable baja)", "Chadi Riad (rodilla — en duda; podria no llegar)"],
-   "lectura": "Francia llega como clara favorita con 7 goles de Mbappe (lidera Bota de Oro junto a Messi). Marruecos viene de eliminar a Holanda en penales y de golear a Canada 3-0 en octavos gracias al doble de Ounahi y el aporte de Brahim Diaz (4 asistencias, record africano en un Mundial). La duda central es Saibari: su presencia habria dado mas verticalidad; sin el, Rahimi es la alternativa directa. Riad en duda complica la defensa tambien. Francia deberia controlar con Mbappe-Dembele, pero Marruecos tiene bloque solido y Bounou salvaguardando el arco.",
+   "xi_visita": "Bounou; Mazraoui, Riad, Diop, Hakimi; El Aynaoui, Bouaddi; Brahim Diaz, Ounahi, El Khannouss; Rahimi",
+   "bajas_local": ["Aurelien Tchouameni (ausente del torneo — desgarro muscular aductor; Kone lo suple en el mediocampo — ESPN)"],
+   "bajas_visita": ["Ismael Saibari (hamstring — baja CONFIRMADA: no ha entrenado con el grupo desde el minuto 22 vs Canada; Rahimi lo reemplaza de titular — Sports Mole / beIN SPORTS 7-jul)"],
+   "lectura": "Francia llega como clara favorita con 7 goles de Mbappe (lidera Bota de Oro junto a Haaland). Marruecos viene de eliminar a Holanda en penales y de golear a Canada 3-0 en octavos con doble de Ounahi. Novedad clave: Riad REGRESA al once (se recupero de la rodilla) reforzando la zaga central junto a Diop. La gran baja es Saibari (hamstring confirmado): Rahimi arranca de titular como 9 falso. Brahim Diaz y Ounahi seran los crea-jugadas. Francia deberia controlar con Mbappe-Dembele, pero Marruecos tiene bloque solido y Bounou en gran momento.",
    "lean": "France",
    "fuentes": [
-    "https://www.sportsmole.co.uk/football/france/world-cup-2026/preview/france-vs-morocco-prediction-team-news-lineups_600826.html",
+    "https://www.sportsmole.co.uk/football/morocco/world-cup-2026/predicted-lineups/saibari-sidelined-riad-returns-predicted-morocco-world-cup-lineup-vs-france_600834.html",
+    "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/morocco-hopeful-ismael-saibari-will-be-fit-for-france-showdown-2026-07-07",
     "https://www.thenationalnews.com/sport/world-cup-2026/2026/07/06/ismael-saibari-fitness-concern-for-morocco-ahead-of-france-world-cup-quarter-final-clash/",
-    "https://news.bet365.com/en-us/article/france-vs-morocco-quarterfinals-preview-lineup-predictions/2026070721252634143",
     "https://www.espn.com/soccer/story/_/id/49294048/fifa-world-cup-2026-france-vs-morocco-tv-channel-how-watch-kickoff-live-stream-referee-predicted-lineups"
    ]
   },
@@ -32,14 +32,14 @@
    "estado_alineacion": "probable",
    "xi_local": "Unai Simon; Porro, Cubarsi, Laporte, Cucurella; Rodri, Pedri; Yamal, Olmo, Baena; Oyarzabal",
    "xi_visita": "Casteels; Castagne, Debast, Vertonghen, Theate; Tielemans, Vanaken; Doku, De Bruyne, Trossard; Lukaku",
-   "bajas_local": [],
-   "bajas_visita": ["Amadou Onana (ACL — operado, fuera del torneo; baja de primer nivel en el mediocampo)"],
-   "lectura": "El partido mas expectante de los cuartos enfrenta a la mejor defensa del torneo (Espana, 0 goles encajados en 5 partidos) contra uno de los ataques mas potentes (Belgica: De Bruyne regresaria al once tras entrar desde el banco vs USA, De Ketelaere en racha). Luis de la Fuente mantendra el 4-2-3-1 con Rodri-Pedri en el doble pivote. La perdida de Onana le quita verticalidad y recuperacion al mediocampo belga, lo que beneficia a Espana. Oyarzabal lleva 4 goles; Lukaku en racha tambien. Partido de bajo margen para un error.",
+   "bajas_local": ["Nico Williams (aductor derecho — lesionado vs Uruguay en grupos; no jugo vs Austria ni vs Portugal; recuperacion mejor de lo esperado pero sigue en duda para cuartos — ESPN / Yahoo Sports)"],
+   "bajas_visita": ["Amadou Onana (ACL rodilla derecha — operado, fuera del torneo; baja de primer nivel en el mediocampo — ESPN)"],
+   "lectura": "El partido mas expectante de los cuartos enfrenta a la mejor defensa del torneo (Espana, 0 goles encajados en 5 partidos) contra uno de los ataques mas potentes (Belgica: De Bruyne regresaria al once tras entrar desde el banco vs USA, De Ketelaere en racha). Luis de la Fuente mantendra el 4-2-3-1 con Rodri-Pedri en el doble pivote. Novedad: Nico Williams sigue sin reaparecer en el once (baja desde grupos por aductor), aunque Baena suple bien su diagonal. La perdida de Onana le quita verticalidad y recuperacion al mediocampo belga. Oyarzabal lleva 4 goles; Lukaku en racha tambien. Partido de bajo margen de error.",
    "lean": "Spain",
    "fuentes": [
     "https://tips.gg/article/spain-vs-belgium-predicted-lineups-wc2026/",
     "https://www.squawka.com/en/news/world-cup/spain-vs-belgium-team-news-predicted-lineups/",
-    "https://blog.ke.sportpesa.com/2026/07/07/spain-vs-belgium-prediction-world-cup-2026-quarterfinal-preview-team-news-key-stats-h2h/",
+    "https://www.espn.com/soccer/story/_/id/49200729/spain-nico-williams-injury-yeremy-pino-2026-world-cup",
     "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-v-belgium-live-stream-team-news-tickets-and-more"
    ]
   },
@@ -50,15 +50,16 @@
    "estado_alineacion": "probable",
    "xi_local": "Nyland; Ryerson, Hanche-Olsen, Ostigard, Pedersen; Odegaard, Berg, Berge; Nusa, Haaland, Sorloth",
    "xi_visita": "Pickford; Reece James, Guehi, Konsa, Shaw; Rice, Mainoo; Saka, Bellingham, Gordon; Kane",
-   "bajas_local": [],
-   "bajas_visita": ["Jarell Quansah (suspendido — tarjeta roja confirmada por VAR vs Mexico)", "Jordan Henderson (fractura de muneca en los festejos vs Mexico; no habia jugado ningun minuto en el torneo)"],
-   "lectura": "El duelo de arietes top del torneo: Kane (6 goles) vs Haaland (7 goles). Noruega llego a cuartos por primera vez en su historia, eliminando a Costa de Marfil y a Brasil con brace de Haaland en ambos casos. England tendra a Reece James de vuelta en el lateral tras la suspension de Quansah. Pickford ha concedido goles a Haaland repetidamente en la Premier League (7 de 10 remates al arco). Partido muy abierto: Noruega ataca en oleadas desde los pies de Odegaard con Nusa y Sorloth de apoyo; England tiene mas talento individual (Saka, Bellingham). El duelo aereo puede definir (Kane cabecea bien; Haaland tambien).",
-   "lean": "England (leve ventaja por plantilla y experiencia en knockout)",
+   "bajas_local": ["Strand Larsen y otros jugadores noruegos (molestia gastrointestinal en el plantel — Solbakken: 'algunos no se han sentido bien, pero estan mejorando'; prevision disponible — ESPN QF injury tracker)"],
+   "bajas_visita": ["Reece James (isquiotibiales — lesionado vs Ghana (23-jun); lleva 3 partidos sin jugar; ausente del entrenamiento grupal del miercoles 8-jul; Tuchel: 'en pugna por llegar'; EN DUDA ACTIVA — Sky Sports / ESPN)", "Jarell Quansah (suspendido — tarjeta roja confirmada por VAR vs Mexico)", "Jordan Henderson (fractura de muneca en los festejos vs Mexico; no habia jugado ningun minuto en el torneo)", "Declan Rice (sobrecarga neural en isquiotibiales y espalda — ausente del entrenamiento grupal del miercoles 8-jul; jugo 90' vs Mexico; en monitoreo, se espera disponible — ESPN)", "Marc Guehi (precaucion — ausente del entrenamiento del miercoles 8-jul; jugo 90' vs Mexico; prevision disponible — ESPN)"],
+   "lectura": "El duelo de arietes top del torneo: Kane (6 goles) vs Haaland (7 goles). Noruega llego a cuartos por primera vez en su historia eliminando a Brasil con brace de Haaland. Gran duda del partido: Reece James EN DUDA ACTIVA (lleva 3 semanas sin entrenar con el grupo por isquiotibiales); tambien Rice y Guehi se perdieron el entrenamiento del miercoles, aunque se espera que lleguen. Noruega tiene su propio problema: varios jugadores con molestia gastrointestinal (Strand Larsen entre ellos). Si James no llega, England enfrenta una crisis real en el lateral derecho. Noruega ataca en oleadas desde los pies de Odegaard; England tiene mas talento individual (Saka, Bellingham, Kane).",
+   "lean": "England (leve ventaja por plantilla y experiencia en knockout, aunque las dudas fisicas generan incertidumbre)",
    "fuentes": [
+    "https://www.espn.com/soccer/story/_/id/49307345/reece-james-marc-guehi-declan-rice-injury-england-training-world-cup-quarterfinal-norway",
+    "https://www.skysports.com/football/news/11095/13561150/england-world-cup-latest-reece-james-in-race-to-be-fit-for-quarter-final-clash-with-norway-to-ease-right-back-crisis",
+    "https://sicscore.com/news/fifa-world-cup-injury-tracker-for-the-quarterfinals",
     "https://www.yardbarker.com/soccer/articles/england_v_norway_predicted_lineups_for_world_cup_quarterfinal_as_haaland_faces_kane/s1_17738_44035974",
-    "https://www.englandfootball.com/articles/2026/Jul/06/england-fixture-details-knockout-stage-20260706",
-    "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-england-preview-live-stream-team-news-tickets",
-    "https://www.bundesliga.com/en/bundesliga/news/harry-kane-erling-haaland-england-norway-bayern-munich-fifa-world-cup-2026-38127"
+    "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-england-preview-live-stream-team-news-tickets"
    ]
   },
   {
@@ -69,9 +70,9 @@
    "xi_local": "E. Martinez; Molina, Romero, L. Martinez, Tagliafico; De Paul, Paredes, Mac Allister, E. Fernandez; Messi, J. Alvarez",
    "xi_visita": "Kobel; Widmer, Ake, Elvedi, Rodriguez; Xhaka, Freuler; Ndoye, Aebischer, Vargas; Embolo",
    "bajas_local": [],
-   "bajas_visita": ["Johan Manzambi (golpe — en duda para el partido; fue titular clave en fase de grupos con 3 goles)"],
-   "lectura": "Messi llega con 8 goles, lider en solitario de la Bota de Oro, tras el golazo al cruzar al minuto 83 que hizo callar al estadio de Atlanta. Argentina sobrevivio 0-2 en contra vs Egipto con una remontada epica (Romero 79', Messi 83', Enzo 90+2'). Suiza clasifico en penales tras 120 minutos de 0-0 vs Colombia — Kobel fue clave tapando el tiro de Juan Hernandez. Sin Manzambi (en duda), Suiza pierde a su goleador mas amenazante. Xhaka lidera el mediocampo pero el nivel ofensivo suizo es inferior al argentino. Doble pivote Romero-L. Martinez puede tener momentos inciertos como ya mostro vs Cape Verde. Partido de alta tension emocional.",
-   "lean": "Argentina (Messi en racha historica y mayor calidad de plantilla)",
+   "bajas_visita": ["Johan Manzambi (rodilla — MRI confirma lesion; tecnico Yakin descarto su disponibilidad: 'no creo que llegue' al cuarto de final; BAJA MUY PROBABLE — Yahoo Sports / Bolavip)"],
+   "lectura": "Messi llega con 8 goles, lider en solitario de la Bota de Oro, tras la remontada epica desde 0-2 vs Egipto (Romero 79', Messi 83', Enzo 90+2'). Suiza clasifico en penales tras 120 minutos de 0-0 vs Colombia — Kobel fue clave. La gran baja suiza: Manzambi (BAJA MUY PROBABLE — MRI confirmo lesion de rodilla, Yakin lo descarto), que era su maxima amenaza ofensiva con 3 goles en grupos. Sin el, la carga ofensiva recae en Embolo y los extremos Ndoye y Vargas. Xhaka lidera el mediocampo pero el nivel ofensivo suizo es inferior al argentino. Partido de alta tension emocional.",
+   "lean": "Argentina (Messi en racha historica, mayor calidad de plantilla y baja confirmada de Manzambi)",
    "fuentes": [
     "https://www.aljazeera.com/sports/2026/7/7/switzerland-face-argentina-in-world-cup-quarterfinal-after-beating-colombia",
     "https://worldsoccertalk.com/world-cup/argentina-vs-switzerland-date-kickoff-time-and-venue-for-2026-world-cup-quarterfinal/",
