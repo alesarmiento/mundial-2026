@@ -3,7 +3,7 @@
   "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
   "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
   "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-  "actualizado": "2026-07-09T06:20:00Z",
+  "actualizado": "2026-07-09T19:09:00Z",
   "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
  },
  "partidos": [
@@ -11,16 +11,17 @@
    "home": "France",
    "away": "Morocco",
    "fecha": "2026-07-09",
-   "estado_alineacion": "probable",
-   "xi_local": "Maignan; Kounde, Upamecano, Saliba, Digne; Kone, Rabiot; Dembele, Olise, Barcola; Mbappe",
-   "xi_visita": "Bounou; Mazraoui, Riad, Diop, Hakimi; El Aynaoui, Bouaddi; Brahim Diaz, Ounahi, El Khannouss; Rahimi",
+   "estado_alineacion": "confirmada",
+   "xi_local": "Maignan; Kounde, Upamecano, Saliba, Digne; Kone, Rabiot; Dembele, Olise, Doue; Mbappe",
+   "xi_visita": "Bounou; Hakimi, Diop, Salah-Eddine, Mazraoui; El Aynaoui, Bouaddi; Talbi, El Khannouss, Ounahi; Brahim Diaz",
    "bajas_local": ["Aurelien Tchouameni (ausente del torneo — desgarro muscular aductor; Kone lo suple en el mediocampo — ESPN)"],
-   "bajas_visita": ["Ismael Saibari (hamstring — baja CONFIRMADA: no ha entrenado con el grupo desde el minuto 22 vs Canada; Rahimi lo reemplaza de titular — Sports Mole / beIN SPORTS 7-jul)"],
-   "lectura": "Francia llega como clara favorita con 7 goles de Mbappe (2do en la Bota de Oro). Novedad de alineacion del dia: Barcola ARRANCA DE TITULAR en la izquierda (Sports Mole / bet365 News, 9-jul), desplazando a Doue que pasa al banco. Marruecos viene de eliminar a Holanda en penales y de golear a Canada 3-0 en octavos con doble de Ounahi. Novedad defensiva clave: Riad REGRESA al once (recuperado de la rodilla) reforzando la zaga junto a Diop. La gran baja es Saibari (hamstring confirmado, fuera del torneo): Rahimi arranca de titular como 9 falso. Brahim Diaz y Ounahi seran los crea-jugadas. Francia deberia controlar con Mbappe-Dembele-Barcola, pero Marruecos tiene bloque solido y Bounou en gran momento.",
+   "bajas_visita": ["Ismael Saibari (hamstring — baja CONFIRMADA: no ha entrenado con el grupo desde el minuto 22 vs Canada; fuera del torneo — Sports Mole / beIN SPORTS)", "Chadi Riad (rodilla — NO disponible; no regresa al once para cuartos de final; Salah-Eddine lo reemplaza en la zaga — 101greatgoals / Yahoo Sports / sportsmole)", "Redouane Halhal (no titular — Talbi lo desplaza en el XI confirmado)"],
+   "lectura": "XI CONFIRMADOS (19:00 UTC, 1h antes del partido). Francia confirma a Doue de titular en la izquierda en lugar de Barcola (que va al banco). El resto de la linea delantera se mantiene: Dembele por la derecha, Olise en el 10, Mbappe como 9. La baja de Tchouameni sigue cubierta por Kone. Marruecos tiene dos cambios defensivos respecto a lo esperado: Riad NO se recupero a tiempo (baja — sigue con la rodilla) y Salah-Eddine (PSV) ocupa su lugar; ademas Talbi (Sunderland) entra por Halhal en la banda. La mayor sorpresa ofensiva: Brahim Diaz juega como 9/CF central, con Ounahi y El Khannouss detras, y Talbi por la derecha. Rahimi queda en el banco. Saibari sigue fuera del torneo. Francia deberia controlar el partido con Mbappe (7 goles) + Dembele (4 goles), pero Marruecos tiene a Bounou en estado sublime y el partido tiene el ingrediente emocional de la revancha de Qatar 2022 (semifinal).",
    "lean": "France",
    "fuentes": [
-    "https://www.sportsmole.co.uk/football/france/world-cup-2026/team-news/france-vs-morocco-injury-suspension-list-predicted-xis--world-cup-2026_600842.html",
-    "https://news.bet365.com/en-us/article/france-vs-morocco-quarterfinals-preview-lineup-predictions/2026070721252634143",
+    "https://www.101greatgoals.com/news/france-v-morocco-line-ups-confirmed-for-opening-world-cup-quarter-final/",
+    "https://sports.yahoo.com/articles/france-starting-xi-vs-morocco-162000896.html",
+    "https://www.prizepicks.com/playbook-article/france-vs-morocco-lineups-confirmed-starting-xis-world-cup-quarterfinals",
     "https://www.espn.com/soccer/story/_/id/49310007/morocco-ismael-saibari-injury-france-world-cup-2026-quarterfinal",
     "https://www.sportsmole.co.uk/football/morocco/world-cup-2026/predicted-lineups/saibari-sidelined-riad-returns-predicted-morocco-world-cup-lineup-vs-france_600834.html"
    ]
