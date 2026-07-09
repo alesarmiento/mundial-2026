@@ -2,7 +2,7 @@
   "_meta": {
     "descripcion": "Ledger de resultados REALES. Cada partido entra con su fuente. NUNCA se inventa un marcador. Si no se puede verificar, no se agrega.",
     "fase_valores": "grupos | dieciseisavos | octavos | cuartos | semis | tercer_puesto | final",
-    "ultima_fecha_cargada": "2026-07-07"
+    "ultima_fecha_cargada": "2026-07-09"
   },
   "partidos": [
     {
@@ -944,6 +944,15 @@
       "gv": 0,
       "ganador": "Switzerland",
       "fuente": "https://www.espn.com/soccer/match/_/gameId/760508/colombia-switzerland + https://www.fifa.com/en/match-centre/match/17/285023/289288/400021535 (Switzerland 0-0 Colombia AET; partido con pocas chances — Lucumi pega en el palo por COL, Xhaka la mejor ocasion SUI; en penales: Sanchez (COL) pega en el travesano, Akanji (SUI) falla pero Colombia aprovecha su propia; Kobel salva el penal de Juan Hernandez (COL); Ruben Vargas convierte el 4to penal de SUI para el 4-3; Switzerland avanza a cuartos por primera vez desde 1954 y enfrentara a Argentina el 11-jul en Kansas City; BC Place, Vancouver; confirmado ESPN / FIFA / CBS Sports / Al Jazeera)"
+    },
+    {
+      "fecha": "2026-07-09",
+      "fase": "cuartos",
+      "local": "France",
+      "visita": "Morocco",
+      "gl": 2,
+      "gv": 0,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289289/400021536 + https://www.cnn.com/2026/07/09/sport/live-news/france-morocco-world-cup-score + https://www.espn.com/soccer/story/_/id/49316467/france-morocco-live-world-cup-2026-latest-updates-commentary-score-result (France 2-0 Morocco FT; Mbappe 60' (gol 8 del torneo, empata con Messi en la Bota de Oro); Dembele 66' (asistencia Mbappe, gol 5 del torneo); France invicta — 6 victorias en 6 partidos, unico equipo sin necesitar prorroga; avanza a semis vs vencedor Spain-Belgium; Gillette Stadium, Boston; confirmado FIFA / CNN / ESPN / FOX Sports)"
     }
   ]
 }

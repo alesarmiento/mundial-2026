@@ -3,29 +3,10 @@
   "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
   "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
   "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-  "actualizado": "2026-07-09T19:09:00Z",
+  "actualizado": "2026-07-09T22:10:00Z",
   "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
  },
  "partidos": [
-  {
-   "home": "France",
-   "away": "Morocco",
-   "fecha": "2026-07-09",
-   "estado_alineacion": "confirmada",
-   "xi_local": "Maignan; Kounde, Upamecano, Saliba, Digne; Kone, Rabiot; Dembele, Olise, Doue; Mbappe",
-   "xi_visita": "Bounou; Hakimi, Diop, Salah-Eddine, Mazraoui; El Aynaoui, Bouaddi; Talbi, El Khannouss, Ounahi; Brahim Diaz",
-   "bajas_local": ["Aurelien Tchouameni (ausente del torneo — desgarro muscular aductor; Kone lo suple en el mediocampo — ESPN)"],
-   "bajas_visita": ["Ismael Saibari (hamstring — baja CONFIRMADA: no ha entrenado con el grupo desde el minuto 22 vs Canada; fuera del torneo — Sports Mole / beIN SPORTS)", "Chadi Riad (rodilla — NO disponible; no regresa al once para cuartos de final; Salah-Eddine lo reemplaza en la zaga — 101greatgoals / Yahoo Sports / sportsmole)", "Redouane Halhal (no titular — Talbi lo desplaza en el XI confirmado)"],
-   "lectura": "XI CONFIRMADOS (19:00 UTC, 1h antes del partido). Francia confirma a Doue de titular en la izquierda en lugar de Barcola (que va al banco). El resto de la linea delantera se mantiene: Dembele por la derecha, Olise en el 10, Mbappe como 9. La baja de Tchouameni sigue cubierta por Kone. Marruecos tiene dos cambios defensivos respecto a lo esperado: Riad NO se recupero a tiempo (baja — sigue con la rodilla) y Salah-Eddine (PSV) ocupa su lugar; ademas Talbi (Sunderland) entra por Halhal en la banda. La mayor sorpresa ofensiva: Brahim Diaz juega como 9/CF central, con Ounahi y El Khannouss detras, y Talbi por la derecha. Rahimi queda en el banco. Saibari sigue fuera del torneo. Francia deberia controlar el partido con Mbappe (7 goles) + Dembele (4 goles), pero Marruecos tiene a Bounou en estado sublime y el partido tiene el ingrediente emocional de la revancha de Qatar 2022 (semifinal).",
-   "lean": "France",
-   "fuentes": [
-    "https://www.101greatgoals.com/news/france-v-morocco-line-ups-confirmed-for-opening-world-cup-quarter-final/",
-    "https://sports.yahoo.com/articles/france-starting-xi-vs-morocco-162000896.html",
-    "https://www.prizepicks.com/playbook-article/france-vs-morocco-lineups-confirmed-starting-xis-world-cup-quarterfinals",
-    "https://www.espn.com/soccer/story/_/id/49310007/morocco-ismael-saibari-injury-france-world-cup-2026-quarterfinal",
-    "https://www.sportsmole.co.uk/football/morocco/world-cup-2026/predicted-lineups/saibari-sidelined-riad-returns-predicted-morocco-world-cup-lineup-vs-france_600834.html"
-   ]
-  },
   {
    "home": "Spain",
    "away": "Belgium",
