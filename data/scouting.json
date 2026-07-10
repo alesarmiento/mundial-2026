@@ -3,7 +3,7 @@
   "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
   "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
   "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-  "actualizado": "2026-07-10T21:10:00Z",
+  "actualizado": "2026-07-10T22:15:00Z",
   "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
  },
  "partidos": [
@@ -18,20 +18,20 @@
     "Strand Larsen y otros jugadores noruegos (molestia gastrointestinal en el plantel — Solbakken: 'algunos no se han sentido bien, pero estan mejorando'; prevision disponible — ESPN QF injury tracker)"
    ],
    "bajas_visita": [
-    "Reece James (isquiotibiales — lesionado vs Ghana (23-jun); lleva 3 partidos sin jugar; ausente del entrenamiento grupal del miercoles 8-jul; Tuchel: 'en pugna por llegar'; EN DUDA ACTIVA — Sky Sports / ESPN)",
+    "Reece James (isquiotibiales — RETORNO AL ENTRENAMIENTO GRUPAL jul-10 en Miami, primer entrenamiento con el equipo en ~3 semanas; probable como suplente, con opciones de iniciar segun Tuchel — Sky Sports / Yahoo Sports / GB News)",
     "Jarell Quansah (suspendido — tarjeta roja confirmada por VAR vs Mexico)",
-    "Jordan Henderson (fractura de muneca en los festejos vs Mexico; no habia jugado ningun minuto en el torneo)",
-    "Declan Rice (sobrecarga neural en isquiotibiales y espalda — ausente del entrenamiento grupal del miercoles 8-jul; jugo 90' vs Mexico; en monitoreo, se espera disponible — ESPN)",
-    "Marc Guehi (precaucion — ausente del entrenamiento del miercoles 8-jul; jugo 90' vs Mexico; prevision disponible — ESPN)"
+    "Jordan Henderson (fractura de brazo confirmada en los festejos vs Mexico — BAJA CONFIRMADA PARA EL RESTO DEL MUNDIAL, no habia jugado ningun minuto en el torneo — Caught Offside / The Sun)",
+    "Declan Rice (sobrecarga neural — RETORNO AL ENTRENAMIENTO GRUPAL jul-10 en Miami; se espera disponible — Sky Sports)",
+    "Marc Guehi (precaucion — RETORNO AL ENTRENAMIENTO GRUPAL jul-10 en Miami; se espera disponible — Sky Sports)"
    ],
-   "lectura": "El duelo de arietes top del torneo: Kane (6 goles) vs Haaland (7 goles). Noruega llego a cuartos por primera vez en su historia eliminando a Brasil con brace de Haaland. Gran duda del partido: Reece James EN DUDA ACTIVA (lleva 3 semanas sin entrenar con el grupo por isquiotibiales); tambien Rice y Guehi se perdieron el entrenamiento del miercoles, aunque se espera que lleguen. Noruega tiene su propio problema: varios jugadores con molestia gastrointestinal (Strand Larsen entre ellos). Si James no llega, England enfrenta una crisis real en el lateral derecho. Noruega ataca en oleadas desde los pies de Odegaard; England tiene mas talento individual (Saka, Bellingham, Kane).",
-   "lean": "England (leve ventaja por plantilla y experiencia en knockout, aunque las dudas fisicas generan incertidumbre)",
+   "lectura": "El duelo de arietes top del torneo: Kane (6 goles) vs Haaland (7 goles). Noruega llego a cuartos por primera vez eliminando a Brasil con brace de Haaland. ACTUALIZACION DE HOY (jul-10): Reece James, Declan Rice y Marc Guehi volvieron todos al entrenamiento grupal en Miami el viernes — triple boost para England. James lleva ~3 semanas fuera y es poco probable que arranque de inicio, pero podria ingresar desde el banco. Jordan Henderson confirmado baja para el resto del Mundial (fractura de brazo). Noruega tiene su propio inconveniente: varios jugadores con molestia gastrointestinal (Strand Larsen entre ellos). England tiene mas talento individual (Saka, Bellingham, Kane); Noruega depende casi exclusivamente de Haaland en ataque pero tiene a Odegaard gestionando el juego.",
+   "lean": "England (plantilla superior y triple boost fisico de hoy; ventaja leve en knockout)",
    "fuentes": [
-    "https://www.espn.com/soccer/story/_/id/49307345/reece-james-marc-guehi-declan-rice-injury-england-training-world-cup-quarterfinal-norway",
+    "https://www.skysports.com/football/news/11095/13562422/world-cup-2026-englands-declan-rice-marc-guehi-and-reece-james-train-ahead-of-quarter-final-with-norway",
+    "https://www.si.com/soccer/england-huge-injury-boost-world-cup-quarterfinal-norway",
     "https://www.skysports.com/football/news/11095/13561150/england-world-cup-latest-reece-james-in-race-to-be-fit-for-quarter-final-clash-with-norway-to-ease-right-back-crisis",
-    "https://sicscore.com/news/fifa-world-cup-injury-tracker-for-the-quarterfinals",
-    "https://www.yardbarker.com/soccer/articles/england_v_norway_predicted_lineups_for_world_cup_quarterfinal_as_haaland_faces_kane/s1_17738_44035974",
-    "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/norway-england-preview-live-stream-team-news-tickets"
+    "https://www.caughtoffside.com/2026/07/06/england-norway-reece-james/",
+    "https://www.yardbarker.com/soccer/articles/england_v_norway_predicted_lineups_for_world_cup_quarterfinal_as_haaland_faces_kane/s1_17738_44035974"
    ]
   },
   {
@@ -43,15 +43,16 @@
    "xi_visita": "Kobel; Widmer, Ake, Elvedi, Rodriguez; Xhaka, Freuler; Ndoye, Aebischer, Vargas; Embolo",
    "bajas_local": [],
    "bajas_visita": [
-    "Johan Manzambi (rodilla — MRI confirma lesion; tecnico Yakin descarto su disponibilidad: 'no creo que llegue' al cuarto de final; BAJA MUY PROBABLE — Yahoo Sports / Bolavip)"
+    "Johan Manzambi (rodilla — BAJA OFICIAL CONFIRMADA: coach Yakin anuncio formalmente que no jugara vs Argentina; se lesiono en el entrenamiento antes del partido vs Colombia; Sports Mole / ESPN / Yahoo Sports)"
    ],
-   "lectura": "Messi llega con 8 goles, lider en solitario de la Bota de Oro, tras la remontada epica desde 0-2 vs Egipto (Romero 79', Messi 83', Enzo 90+2'). Suiza clasifico en penales tras 120 minutos de 0-0 vs Colombia — Kobel fue clave. La gran baja suiza: Manzambi (BAJA MUY PROBABLE — MRI confirmo lesion de rodilla, Yakin lo descarto), que era su maxima amenaza ofensiva con 3 goles en grupos. Sin el, la carga ofensiva recae en Embolo y los extremos Ndoye y Vargas. Xhaka lidera el mediocampo pero el nivel ofensivo suizo es inferior al argentino. Partido de alta tension emocional.",
-   "lean": "Argentina (Messi en racha historica, mayor calidad de plantilla y baja confirmada de Manzambi)",
+   "lectura": "Messi llega con 8 goles, lider en solitario de la Bota de Oro, tras la remontada epica desde 0-2 vs Egipto (Romero 79', Messi 83', Enzo 90+2'). Suiza clasifico en penales tras 120 minutos de 0-0 vs Colombia — Kobel fue clave. ACTUALIZACION DE HOY (jul-10): Yakin confirmo OFICIALMENTE que Manzambi no jugara. Fabian Rieder entraria en su lugar. Sin Manzambi (3 goles en grupos, mejor punta del torneo para Suiza), la carga ofensiva recae en Embolo (que no marcó en eliminatorias aun) y los extremos Ndoye y Vargas. Kobel fue el gran protagonista vs Colombia y sera el muro que debera cruzar Argentina. Xhaka lidero el mediocampo pero el nivel ofensivo suizo sin Manzambi es notoriamente inferior al argentino.",
+   "lean": "Argentina (Messi en racha historica, mayor calidad de plantilla y baja OFICIAL de Manzambi)",
    "fuentes": [
-    "https://www.aljazeera.com/sports/2026/7/7/switzerland-face-argentina-in-world-cup-quarterfinal-after-beating-colombia",
-    "https://worldsoccertalk.com/world-cup/argentina-vs-switzerland-date-kickoff-time-and-venue-for-2026-world-cup-quarterfinal/",
-    "https://bulinews.com/fixture/742665/predicted-lineups/argentina-switzerland",
-    "https://www.cbssports.com/watch/soccer/video/argentina-vs-switzerland-quarterfinal-match-preview-world-cup-2026-scoreline"
+    "https://www.espn.com/soccer/story/_/id/49326340/switzerland-johan-manzambi-miss-argentina-world-cup-quarterfinal-clash-murat-yakin",
+    "https://www.sportsmole.co.uk/football/argentina/world-cup-2026/predicted-lineups/manzambi-fitness-doubt-for-yakin-predicted-switzerland-lineup-vs-argentina_600954.html",
+    "https://bulinews.com/fresh-injury-update-emerges-manzambi-ahead-switzerland-quarter-final-clash-argentina",
+    "https://www.espn.com/soccer/story/_/id/49313407/argentina-vs-switzerland-fifa-world-cup-2026-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups",
+    "https://www.rotowire.com/soccer/article/argentina-vs-switzerland-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-quarterfinal-121924"
    ]
   }
  ]
