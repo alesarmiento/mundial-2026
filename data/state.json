@@ -1,6 +1,6 @@
 {
-  "generado": "2026-07-09",
-  "ultima_fecha_cargada": "2026-07-09",
+  "generado": "2026-07-10",
+  "ultima_fecha_cargada": "2026-07-10",
   "sims": 12000,
   "grupos_jugados": 72,
   "grupos_total": 72,
@@ -79,7 +79,7 @@
     ]
   },
   "elo_actual": {
-    "Spain": 2177,
+    "Spain": 2190,
     "France": 2162,
     "Argentina": 2156,
     "England": 2070,
@@ -88,8 +88,8 @@
     "Brazil": 1985,
     "Norway": 1975,
     "Netherlands": 1973,
-    "Belgium": 1956,
     "Mexico": 1947,
+    "Belgium": 1943,
     "Switzerland": 1926,
     "Morocco": 1909,
     "Germany": 1909,
@@ -951,11 +951,11 @@
       "r32": 100.0,
       "octavos": 100.0,
       "cuartos": 100.0,
-      "semis": 20.5,
-      "final": 5.2,
-      "campeon": 1.3,
-      "sub": 3.9,
-      "tercero": 4.8
+      "semis": 21.0,
+      "final": 4.0,
+      "campeon": 1.0,
+      "sub": 3.0,
+      "tercero": 5.2
     },
     "Brazil": {
       "grupo1": 100.0,
@@ -1172,11 +1172,11 @@
       "r32": 100.0,
       "octavos": 100.0,
       "cuartos": 100.0,
-      "semis": 21.6,
-      "final": 6.4,
-      "campeon": 1.8,
-      "sub": 4.6,
-      "tercero": 5.2
+      "semis": 0.0,
+      "final": 0.0,
+      "campeon": 0.0,
+      "sub": 0.0,
+      "tercero": 0.0
     },
     "Egypt": {
       "grupo1": 0.0,
@@ -1224,11 +1224,11 @@
       "r32": 100.0,
       "octavos": 100.0,
       "cuartos": 100.0,
-      "semis": 78.5,
-      "final": 45.3,
-      "campeon": 26.2,
-      "sub": 19.0,
-      "tercero": 21.3
+      "semis": 100.0,
+      "final": 60.2,
+      "campeon": 35.1,
+      "sub": 25.1,
+      "tercero": 25.9
     },
     "Cape Verde": {
       "grupo1": 0.0,
@@ -1277,10 +1277,10 @@
       "octavos": 100.0,
       "cuartos": 100.0,
       "semis": 100.0,
-      "final": 67.4,
-      "campeon": 35.4,
-      "sub": 32.0,
-      "tercero": 18.7
+      "final": 67.3,
+      "campeon": 33.9,
+      "sub": 33.4,
+      "tercero": 17.8
     },
     "Senegal": {
       "grupo1": 0.0,
@@ -1315,11 +1315,11 @@
       "r32": 100.0,
       "octavos": 100.0,
       "cuartos": 100.0,
-      "semis": 37.1,
-      "final": 9.3,
-      "campeon": 2.5,
-      "sub": 6.8,
-      "tercero": 9.1
+      "semis": 36.0,
+      "final": 8.7,
+      "campeon": 2.2,
+      "sub": 6.5,
+      "tercero": 8.1
     },
     "Argentina": {
       "grupo1": 100.0,
@@ -1328,11 +1328,11 @@
       "r32": 100.0,
       "octavos": 100.0,
       "cuartos": 100.0,
-      "semis": 79.5,
-      "final": 43.2,
-      "campeon": 23.7,
-      "sub": 19.5,
-      "tercero": 22.6
+      "semis": 79.0,
+      "final": 35.8,
+      "campeon": 18.8,
+      "sub": 17.0,
+      "tercero": 26.3
     },
     "Algeria": {
       "grupo1": 0.0,
@@ -1432,11 +1432,11 @@
       "r32": 100.0,
       "octavos": 100.0,
       "cuartos": 100.0,
-      "semis": 62.9,
-      "final": 23.3,
-      "campeon": 9.1,
-      "sub": 14.2,
-      "tercero": 18.4
+      "semis": 64.0,
+      "final": 24.0,
+      "campeon": 9.0,
+      "sub": 15.0,
+      "tercero": 16.6
     },
     "Croatia": {
       "grupo1": 0.0,
@@ -1480,6 +1480,20 @@
   },
   "ranking_campeon": [
     {
+      "equipo": "Spain",
+      "grupo1": 100.0,
+      "g2": 0.0,
+      "top2": 100.0,
+      "r32": 100.0,
+      "octavos": 100.0,
+      "cuartos": 100.0,
+      "semis": 100.0,
+      "final": 60.2,
+      "campeon": 35.1,
+      "sub": 25.1,
+      "tercero": 25.9
+    },
+    {
       "equipo": "France",
       "grupo1": 100.0,
       "g2": 0.0,
@@ -1488,24 +1502,10 @@
       "octavos": 100.0,
       "cuartos": 100.0,
       "semis": 100.0,
-      "final": 67.4,
-      "campeon": 35.4,
-      "sub": 32.0,
-      "tercero": 18.7
-    },
-    {
-      "equipo": "Spain",
-      "grupo1": 100.0,
-      "g2": 0.0,
-      "top2": 100.0,
-      "r32": 100.0,
-      "octavos": 100.0,
-      "cuartos": 100.0,
-      "semis": 78.5,
-      "final": 45.3,
-      "campeon": 26.2,
-      "sub": 19.0,
-      "tercero": 21.3
+      "final": 67.3,
+      "campeon": 33.9,
+      "sub": 33.4,
+      "tercero": 17.8
     },
     {
       "equipo": "Argentina",
@@ -1515,11 +1515,11 @@
       "r32": 100.0,
       "octavos": 100.0,
       "cuartos": 100.0,
-      "semis": 79.5,
-      "final": 43.2,
-      "campeon": 23.7,
-      "sub": 19.5,
-      "tercero": 22.6
+      "semis": 79.0,
+      "final": 35.8,
+      "campeon": 18.8,
+      "sub": 17.0,
+      "tercero": 26.3
     },
     {
       "equipo": "England",
@@ -1529,11 +1529,11 @@
       "r32": 100.0,
       "octavos": 100.0,
       "cuartos": 100.0,
-      "semis": 62.9,
-      "final": 23.3,
-      "campeon": 9.1,
-      "sub": 14.2,
-      "tercero": 18.4
+      "semis": 64.0,
+      "final": 24.0,
+      "campeon": 9.0,
+      "sub": 15.0,
+      "tercero": 16.6
     },
     {
       "equipo": "Norway",
@@ -1543,25 +1543,11 @@
       "r32": 100.0,
       "octavos": 100.0,
       "cuartos": 100.0,
-      "semis": 37.1,
-      "final": 9.3,
-      "campeon": 2.5,
-      "sub": 6.8,
-      "tercero": 9.1
-    },
-    {
-      "equipo": "Belgium",
-      "grupo1": 100.0,
-      "g2": 0.0,
-      "top2": 100.0,
-      "r32": 100.0,
-      "octavos": 100.0,
-      "cuartos": 100.0,
-      "semis": 21.6,
-      "final": 6.4,
-      "campeon": 1.8,
-      "sub": 4.6,
-      "tercero": 5.2
+      "semis": 36.0,
+      "final": 8.7,
+      "campeon": 2.2,
+      "sub": 6.5,
+      "tercero": 8.1
     },
     {
       "equipo": "Switzerland",
@@ -1571,11 +1557,11 @@
       "r32": 100.0,
       "octavos": 100.0,
       "cuartos": 100.0,
-      "semis": 20.5,
-      "final": 5.2,
-      "campeon": 1.3,
-      "sub": 3.9,
-      "tercero": 4.8
+      "semis": 21.0,
+      "final": 4.0,
+      "campeon": 1.0,
+      "sub": 3.0,
+      "tercero": 5.2
     },
     {
       "equipo": "Mexico",
@@ -1893,6 +1879,20 @@
       "r32": 0.0,
       "octavos": 0.0,
       "cuartos": 0.0,
+      "semis": 0.0,
+      "final": 0.0,
+      "campeon": 0.0,
+      "sub": 0.0,
+      "tercero": 0.0
+    },
+    {
+      "equipo": "Belgium",
+      "grupo1": 100.0,
+      "g2": 0.0,
+      "top2": 100.0,
+      "r32": 100.0,
+      "octavos": 100.0,
+      "cuartos": 100.0,
       "semis": 0.0,
       "final": 0.0,
       "campeon": 0.0,
@@ -2515,6 +2515,19 @@
         "Belgium": 1.8,
         "Switzerland": 1.3,
         "Mexico": 0.0
+      }
+    },
+    {
+      "fecha": "2026-07-10",
+      "campeon": {
+        "Spain": 35.1,
+        "France": 33.9,
+        "Argentina": 18.8,
+        "England": 9.0,
+        "Norway": 2.2,
+        "Switzerland": 1.0,
+        "Mexico": 0.0,
+        "South Africa": 0.0
       }
     }
   ],
@@ -3918,7 +3931,7 @@
     },
     {
       "fecha": "2026-07-11",
-      "jugados": 0,
+      "jugados": 1,
       "total": 2,
       "partidos": [
         {
@@ -3931,22 +3944,10 @@
           "match": 99,
           "ko": true,
           "utc": "2026-07-11T21:00:00Z",
-          "jugado": false,
-          "pred": {
-            "pH": 5.8,
-            "pD": 13.0,
-            "pA": 81.2,
-            "score": [
-              0,
-              2
-            ],
-            "score_med": [
-              1,
-              3
-            ],
-            "xgH": 0.56,
-            "xgA": 2.61
-          }
+          "jugado": true,
+          "gl": 1,
+          "gv": 2,
+          "fuente": "https://www.nbcsports.com/soccer/live/spain-vs-belgium-live-updates-score-goals-highlights-stats-from-2026-fifa-world-cup + https://www.business-standard.com/sports/fifa-world-cup/spain-vs-belgium-live-score-updates-fifa-world-cup-2026-qf-esp-vs-bel-key-moments-highlights-126071001437_1.html + https://www.cnn.com/2026/07/10/sport/live-news/spain-belgium-world-cup-score (Spain 2-1 Belgium FT; Fabian Ruiz 30' (ESP), Charles De Ketelaere 41' header (BEL — empate); Mikel Merino 89' sub (ESP — Lammels no retiene remate de Cubarsi, Merino empuja al fondo); Tielemans no jugo (lesion en calentamiento); Courtois salio lesionado en 2T reemplazado por Senne Lammels; Spain avanza a semis vs France; SoFi Stadium, Los Angeles; confirmado NBC Sports / Business Standard / CNN / ESPN / Fox Sports)"
         },
         {
           "home": "Argentina",
@@ -4003,9 +4004,9 @@
       "total": 1,
       "partidos": [
         {
-          "home": "Ganador 99",
+          "home": "Spain",
           "away": "Ganador 100",
-          "home_real": false,
+          "home_real": true,
           "away_real": false,
           "fase": "semis",
           "sede": "Atlanta",
@@ -4096,53 +4097,46 @@
   "ko_secured": [],
   "podio": [
     {
-      "equipo": "France",
-      "p1": 35.4,
-      "p2": 32.0,
-      "p3": 18.7,
+      "equipo": "Spain",
+      "p1": 35.1,
+      "p2": 25.1,
+      "p3": 25.9,
       "top3": 86.1
     },
     {
-      "equipo": "Spain",
-      "p1": 26.2,
-      "p2": 19.0,
-      "p3": 21.3,
-      "top3": 66.5
+      "equipo": "France",
+      "p1": 33.9,
+      "p2": 33.4,
+      "p3": 17.8,
+      "top3": 85.1
     },
     {
       "equipo": "Argentina",
-      "p1": 23.7,
-      "p2": 19.5,
-      "p3": 22.6,
-      "top3": 65.8
+      "p1": 18.8,
+      "p2": 17.0,
+      "p3": 26.3,
+      "top3": 62.1
     },
     {
       "equipo": "England",
-      "p1": 9.1,
-      "p2": 14.2,
-      "p3": 18.4,
-      "top3": 41.7
+      "p1": 9.0,
+      "p2": 15.0,
+      "p3": 16.6,
+      "top3": 40.6
     },
     {
       "equipo": "Norway",
-      "p1": 2.5,
-      "p2": 6.8,
-      "p3": 9.1,
-      "top3": 18.4
-    },
-    {
-      "equipo": "Belgium",
-      "p1": 1.8,
-      "p2": 4.6,
-      "p3": 5.2,
-      "top3": 11.6
+      "p1": 2.2,
+      "p2": 6.5,
+      "p3": 8.1,
+      "top3": 16.8
     },
     {
       "equipo": "Switzerland",
-      "p1": 1.3,
-      "p2": 3.9,
-      "p3": 4.8,
-      "top3": 10.0
+      "p1": 1.0,
+      "p2": 3.0,
+      "p3": 5.2,
+      "top3": 9.2
     },
     {
       "equipo": "Mexico",
@@ -4164,6 +4158,13 @@
       "p2": 0.0,
       "p3": 0.0,
       "top3": 0.0
+    },
+    {
+      "equipo": "Czechia",
+      "p1": 0.0,
+      "p2": 0.0,
+      "p3": 0.0,
+      "top3": 0.0
     }
   ],
   "premios": {
@@ -4173,49 +4174,49 @@
         "equipo": "Argentina",
         "odds": "16/1",
         "goles": 8,
-        "prob": 9.5
+        "prob": 9.3
       },
       {
         "jugador": "Kylian Mbappe",
         "equipo": "France",
         "odds": "6/1",
         "goles": 8,
-        "prob": 9.4
+        "prob": 9.2
       },
       {
         "jugador": "Erling Haaland",
         "equipo": "Norway",
         "odds": "14/1",
         "goles": 7,
-        "prob": 8.1
+        "prob": 7.9
       },
       {
         "jugador": "Harry Kane",
         "equipo": "England",
         "odds": "7/1",
         "goles": 6,
-        "prob": 7.6
+        "prob": 7.4
       },
       {
         "jugador": "Ousmane Dembele",
         "equipo": "France",
         "odds": "25/1",
         "goles": 5,
-        "prob": 6.1
+        "prob": 6.0
       },
       {
         "jugador": "Mikel Oyarzabal",
         "equipo": "Spain",
         "odds": "14/1",
         "goles": 4,
-        "prob": 5.5
+        "prob": 5.1
       },
       {
         "jugador": "Vinicius Junior",
         "equipo": "Brazil",
         "odds": "30/1",
         "goles": 4,
-        "prob": 4.3
+        "prob": 4.2
       },
       {
         "jugador": "Ismaila Sarr",
@@ -4229,28 +4230,21 @@
         "equipo": "England",
         "odds": "",
         "goles": 3,
-        "prob": 4.1
+        "prob": 4.0
       },
       {
         "jugador": "Johan Manzambi",
         "equipo": "Switzerland",
         "odds": "",
         "goles": 3,
-        "prob": 3.7
-      },
-      {
-        "jugador": "Romelu Lukaku",
-        "equipo": "Belgium",
-        "odds": "",
-        "goles": 3,
-        "prob": 3.7
+        "prob": 3.6
       },
       {
         "jugador": "Cristiano Ronaldo",
         "equipo": "Portugal",
         "odds": "20/1",
         "goles": 3,
-        "prob": 3.3
+        "prob": 3.2
       },
       {
         "jugador": "Cody Gakpo",
@@ -4309,11 +4303,18 @@
         "prob": 3.2
       },
       {
-        "jugador": "Lamine Yamal",
-        "equipo": "Spain",
-        "odds": "22/1",
-        "goles": 0,
-        "prob": 1.4
+        "jugador": "Romelu Lukaku",
+        "equipo": "Belgium",
+        "odds": "",
+        "goles": 3,
+        "prob": 3.2
+      },
+      {
+        "jugador": "Charles De Ketelaere",
+        "equipo": "Belgium",
+        "odds": "",
+        "goles": 3,
+        "prob": 3.2
       },
       {
         "jugador": "Julian Alvarez",
@@ -4327,7 +4328,14 @@
         "equipo": "Argentina",
         "odds": "35/1",
         "goles": 0,
-        "prob": 1.3
+        "prob": 1.2
+      },
+      {
+        "jugador": "Lamine Yamal",
+        "equipo": "Spain",
+        "odds": "22/1",
+        "goles": 0,
+        "prob": 1.1
       },
       {
         "jugador": "Raphinha",
@@ -4349,37 +4357,37 @@
         "jugador": "Unai Simon",
         "equipo": "Spain",
         "odds": "9/2",
-        "prob": 33.6
+        "prob": 30.7
       },
       {
         "jugador": "David Raya",
         "equipo": "Spain",
         "odds": "7/1",
-        "prob": 27.5
+        "prob": 25.1
       },
       {
         "jugador": "Mike Maignan",
         "equipo": "France",
         "odds": "6/1",
-        "prob": 18.2
+        "prob": 20.7
       },
       {
         "jugador": "Emiliano Martinez",
         "equipo": "Argentina",
         "odds": "4/1",
-        "prob": 11.7
+        "prob": 13.3
       },
       {
         "jugador": "Jordan Pickford",
         "equipo": "England",
         "odds": "7/1",
-        "prob": 7.9
+        "prob": 9.0
       },
       {
         "jugador": "Alisson Becker",
         "equipo": "Brazil",
         "odds": "5/1",
-        "prob": 0.4
+        "prob": 0.5
       },
       {
         "jugador": "Ederson",
@@ -4399,55 +4407,55 @@
         "jugador": "Lamine Yamal",
         "equipo": "Spain",
         "odds": "3/2",
-        "prob": 17.2
+        "prob": 17.9
       },
       {
         "jugador": "Desire Doue",
         "equipo": "France",
         "odds": "9/4",
-        "prob": 16.0
+        "prob": 15.7
       },
       {
         "jugador": "Warren Zaire-Emery",
         "equipo": "France",
         "odds": "5/1",
-        "prob": 14.1
-      },
-      {
-        "jugador": "Nico O'Reilly",
-        "equipo": "England",
-        "odds": "12/1",
-        "prob": 11.6
+        "prob": 13.9
       },
       {
         "jugador": "Pau Cubarsi",
         "equipo": "Spain",
         "odds": "",
-        "prob": 11.6
+        "prob": 12.0
+      },
+      {
+        "jugador": "Nico O'Reilly",
+        "equipo": "England",
+        "odds": "12/1",
+        "prob": 11.4
       },
       {
         "jugador": "Endrick",
         "equipo": "Brazil",
         "odds": "18/1",
-        "prob": 7.6
+        "prob": 7.5
       },
       {
         "jugador": "Rayan",
         "equipo": "Brazil",
         "odds": "",
-        "prob": 6.8
+        "prob": 6.7
       },
       {
         "jugador": "Yan Diomande",
         "equipo": "Ivory Coast",
         "odds": "25/1",
-        "prob": 5.6
+        "prob": 5.5
       },
       {
         "jugador": "Arda Guler",
         "equipo": "Turkiye",
         "odds": "16/1",
-        "prob": 5.1
+        "prob": 5.0
       },
       {
         "jugador": "Kenan Yildiz",
@@ -4825,8 +4833,8 @@
           {
             "home": "Norway",
             "away": "England",
-            "pHome": 37.1,
-            "pAway": 62.9,
+            "pHome": 36.0,
+            "pAway": 64.0,
             "posHome": "2I",
             "posAway": "1L",
             "homeReal": true,
@@ -4836,19 +4844,22 @@
           {
             "home": "Belgium",
             "away": "Spain",
-            "pHome": 21.6,
-            "pAway": 78.5,
+            "pHome": 0.0,
+            "pAway": 100.0,
             "posHome": "1G",
             "posAway": "1H",
             "homeReal": true,
             "awayReal": true,
+            "jugado": true,
+            "gl": 1,
+            "gv": 2,
             "winner": "Spain"
           },
           {
             "home": "Argentina",
             "away": "Switzerland",
-            "pHome": 79.5,
-            "pAway": 20.5,
+            "pHome": 79.0,
+            "pAway": 21.0,
             "posHome": "1J",
             "posAway": "1B",
             "homeReal": true,
@@ -4863,8 +4874,8 @@
           {
             "home": "France",
             "away": "England",
-            "pHome": 67.4,
-            "pAway": 23.3,
+            "pHome": 67.3,
+            "pAway": 24.0,
             "posHome": "1I",
             "posAway": "1L",
             "homeReal": true,
@@ -4874,11 +4885,11 @@
           {
             "home": "Spain",
             "away": "Argentina",
-            "pHome": 45.3,
-            "pAway": 43.2,
+            "pHome": 60.2,
+            "pAway": 35.8,
             "posHome": "1H",
             "posAway": "1J",
-            "homeReal": false,
+            "homeReal": true,
             "awayReal": false,
             "winner": "Spain"
           }
@@ -4890,18 +4901,18 @@
           {
             "home": "France",
             "away": "Spain",
-            "pHome": 35.4,
-            "pAway": 26.2,
+            "pHome": 33.9,
+            "pAway": 35.1,
             "posHome": "1I",
             "posAway": "1H",
             "homeReal": false,
             "awayReal": false,
-            "winner": "France"
+            "winner": "Spain"
           }
         ]
       }
     ],
-    "campeon_proyectado": "France"
+    "campeon_proyectado": "Spain"
   },
   "puntaje": {
     "corte": "2026-06-15",
@@ -6789,9 +6800,29 @@
           "gol_local": 2
         },
         "modelo": "NEW"
+      },
+      {
+        "fecha": "2026-07-10",
+        "grupo": null,
+        "home": "Spain",
+        "away": "Belgium",
+        "pred": [
+          3,
+          1
+        ],
+        "real": [
+          2,
+          1
+        ],
+        "pts": 5,
+        "parts": {
+          "ganador": 3,
+          "gol_visita": 2
+        },
+        "modelo": "NEW"
       }
     ],
-    "total_partidos": 405,
+    "total_partidos": 410,
     "torneo": [
       {
         "label": "Campeon",
@@ -6850,24 +6881,24 @@
       "ganado": 189,
       "potencial": 224
     },
-    "ganado": 594,
+    "ganado": 599,
     "en_juego": 70,
-    "n_partidos": 97,
+    "n_partidos": 98,
     "modelo_nota": "El juego de puntos usa el modelo mejorado (Elo + ataque/defensa) en TODOS los partidos, hacia atras y en adelante.",
     "scoring_desde": "2026-06-11"
   },
   "evaluacion": {
-    "n": 97,
-    "hit": 64,
-    "hit_pct": 66.0,
+    "n": 98,
+    "hit": 65,
+    "hit_pct": 66.3,
     "exact": 15,
-    "exact_pct": 15.5,
-    "brier": 0.492,
-    "brier_base": 0.641,
+    "exact_pct": 15.3,
+    "brier": 0.488,
+    "brier_base": 0.64,
     "mejor_que_baseline": true,
-    "logloss": 0.85,
+    "logloss": 0.843,
     "draws_real": 24,
-    "draws_real_pct": 25,
+    "draws_real_pct": 24,
     "draws_pick": 0,
     "calib": [
       {
@@ -6896,9 +6927,9 @@
       },
       {
         "rango": "80-100%",
-        "n": 40,
-        "conf": 89.6,
-        "obs": 77.5
+        "n": 41,
+        "conf": 89.4,
+        "obs": 78.0
       }
     ],
     "rows": [
@@ -9131,6 +9162,29 @@
         "brier": 0.191,
         "brier_base": 0.5418000000000001,
         "ll": 0.43232256227804705,
+        "exact": false
+      },
+      {
+        "fecha": "2026-07-10",
+        "home": "Spain",
+        "away": "Belgium",
+        "real": [
+          2,
+          1
+        ],
+        "pred_score": [
+          3,
+          1
+        ],
+        "out": "H",
+        "pick": "H",
+        "hit": true,
+        "pH": 0.812,
+        "pD": 0.13,
+        "pA": 0.058,
+        "brier": 0.056,
+        "brier_base": 0.5418000000000001,
+        "ll": 0.20825493882045903,
         "exact": false
       }
     ],
@@ -11661,43 +11715,44 @@
           "hit": true
         },
         "diff": false
+      },
+      {
+        "fecha": "2026-07-10",
+        "home": "Spain",
+        "away": "Belgium",
+        "real": [
+          2,
+          1
+        ],
+        "old": {
+          "score": [
+            2,
+            1
+          ],
+          "signo": "L",
+          "hit": true
+        },
+        "new": {
+          "score": [
+            3,
+            1
+          ],
+          "signo": "L",
+          "hit": true
+        },
+        "diff": true
       }
     ],
     "porjugar": [],
     "agg": {
-      "n": 97,
-      "old_hit": 63,
-      "new_hit": 65,
-      "old_brier": 0.491,
-      "new_brier": 0.488
+      "n": 98,
+      "old_hit": 64,
+      "new_hit": 66,
+      "old_brier": 0.487,
+      "new_brier": 0.483
     }
   },
   "mercado": [
-    {
-      "fecha": "2026-07-10",
-      "home": "Belgium",
-      "away": "Spain",
-      "sys": {
-        "pH": 5.8,
-        "pD": 13.0,
-        "pA": 81.2,
-        "score": "1-3",
-        "over25": 61
-      },
-      "mkt": {
-        "pH": 18,
-        "pD": 24,
-        "pA": 58,
-        "score": null,
-        "over25": null,
-        "fuente": "DraftKings (ESP -160 / Draw +290 / BEL +450; normalizado; 6-7-jul-2026) / dknetwork.draftkings.com + foxsports.com (Espana no ha concedido goles en el torneo; Belgium 4-1 USA en octavos)"
-      },
-      "divergencia": {
-        "nivel": "media",
-        "maxdiff": 23,
-        "msg": "Coinciden en el favorito (Spain) pero difieren 23 pts en la probabilidad."
-      }
-    },
     {
       "fecha": "2026-07-11",
       "home": "Norway",
@@ -11750,30 +11805,6 @@
     }
   ],
   "scouting": [
-    {
-      "home": "Spain",
-      "away": "Belgium",
-      "fecha": "2026-07-10",
-      "estado_alineacion": "confirmada",
-      "xi_local": "Unai Simon; Porro, Cubarsi, Laporte, Cucurella; Rodri, Fabian Ruiz; Yamal, Olmo, Baena; Oyarzabal",
-      "xi_visita": "Courtois; Castagne, Ngoy, Mechele, De Cuyper; Raskin, Tielemans; Doku, De Bruyne, Trossard; De Ketelaere",
-      "bajas_local": [
-        "Nico Williams (aductor derecho — lesionado vs Uruguay en grupos; no jugo vs Austria ni vs Portugal; fuera del XI — ESPN / Yahoo Sports)",
-        "Pedri (descansado/no titular hoy — Fabian Ruiz ingresa al doble pivote junto a Rodri — whoscored/Yahoo Sports)"
-      ],
-      "bajas_visita": [
-        "Amadou Onana (ACL rodilla derecha — operado, fuera del torneo; baja de primer nivel en el mediocampo — ESPN)",
-        "Hans Vanaken (fuera del XI confirmado — Nicolas Raskin titular en el mediocampo junto a Tielemans — whoscored/Yahoo Sports)"
-      ],
-      "lectura": "El partido mas expectante de los cuartos enfrenta a la mejor defensa del torneo (Espana, 0 goles encajados en 6 partidos) contra uno de los ataques mas potentes (Belgica: De Ketelaere con brace vs USA en octavos). Con el XI confirmado: Luis de la Fuente opta por Fabian Ruiz en lugar de Pedri junto a Rodri; Baena suple a Nico Williams por la banda. En Belgica, Courtois de titular; Raskin en lugar de Vanaken en el doble pivote junto a Tielemans; Doku por Lukebakio como extremo; De Bruyne libre por detras de De Ketelaere. Sin Onana (ACL), la dureza defensiva de Belgica depende de Raskin-Tielemans. SoFi Stadium, Los Angeles, 19:00 UTC.",
-      "lean": "Spain",
-      "fuentes": [
-        "https://lastwordonsports.com/football/2026/07/10/spain-vs-belgium-confirmed-lineup/",
-        "https://sports.yahoo.com/articles/world-cup-2026-quarter-final-174000733.html",
-        "https://www.whoscored.com/news/Q9pbXEm4P0SNShcHvZtxjQ/show/20260710-spain-vs-belgium-confirmed-lineup-1783705532",
-        "https://www.espn.com/soccer/match/_/gameId/760511/belgium-spain"
-      ]
-    },
     {
       "home": "Norway",
       "away": "England",
@@ -12257,473 +12288,97 @@
     }
   ],
   "equipo_detalle": {
-    "Croatia": {
-      "elo": 1881,
-      "atk": 1.08,
-      "dfn": 1.02,
-      "n": 34,
-      "gf_prom": 1.74,
-      "gc_prom": 1.21,
+    "Japan": {
+      "elo": 1889,
+      "atk": 1.28,
+      "dfn": 0.73,
+      "n": 35,
+      "gf_prom": 2.54,
+      "gc_prom": 0.69,
       "ult": [
-        {
-          "fecha": "2026-07-02",
-          "rival": "Portugal",
-          "gf": 1,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-27",
-          "rival": "Ghana",
-          "gf": 2,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-23",
-          "rival": "Panama",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-17",
-          "rival": "England",
-          "gf": 2,
-          "gc": 4,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-07",
-          "rival": "Slovenia",
-          "gf": 2,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-02",
-          "rival": "Belgium",
-          "gf": 0,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-03-31",
-          "rival": "Brazil",
-          "gf": 1,
-          "gc": 3,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-03-26",
-          "rival": "Colombia",
-          "gf": 2,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-11-17",
-          "rival": "Montenegro",
-          "gf": 3,
-          "gc": 2,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-11-14",
-          "rival": "Faroe Islands",
-          "gf": 3,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-10-12",
-          "rival": "Gibraltar",
-          "gf": 3,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-10-09",
-          "rival": "Czechia",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        }
-      ]
-    },
-    "Egypt": {
-      "elo": 1744,
-      "atk": 0.92,
-      "dfn": 0.87,
-      "n": 39,
-      "gf_prom": 1.49,
-      "gc_prom": 0.9,
-      "ult": [
-        {
-          "fecha": "2026-07-07",
-          "rival": "Argentina",
-          "gf": 2,
-          "gc": 3,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-07-03",
-          "rival": "Australia",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-26",
-          "rival": "Iran",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-21",
-          "rival": "New Zealand",
-          "gf": 3,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-15",
-          "rival": "Belgium",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-06",
-          "rival": "Brazil",
-          "gf": 1,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-05-28",
-          "rival": "Russia",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-31",
-          "rival": "Spain",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-03-27",
-          "rival": "Saudi Arabia",
-          "gf": 4,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-01-17",
-          "rival": "Nigeria",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-01-14",
-          "rival": "Senegal",
-          "gf": 0,
-          "gc": 1,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-01-10",
-          "rival": "Ivory Coast",
-          "gf": 3,
-          "gc": 2,
-          "res": "G"
-        }
-      ]
-    },
-    "Morocco": {
-      "elo": 1909,
-      "atk": 1.01,
-      "dfn": 0.57,
-      "n": 39,
-      "gf_prom": 1.87,
-      "gc_prom": 0.46,
-      "ult": [
-        {
-          "fecha": "2026-07-09",
-          "rival": "France",
-          "gf": 0,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-07-04",
-          "rival": "Canada",
-          "gf": 3,
-          "gc": 0,
-          "res": "G"
-        },
         {
           "fecha": "2026-06-29",
-          "rival": "Netherlands",
+          "rival": "Brazil",
+          "gf": 1,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-25",
+          "rival": "Sweden",
           "gf": 1,
           "gc": 1,
           "res": "E"
         },
         {
-          "fecha": "2026-06-24",
-          "rival": "Haiti",
+          "fecha": "2026-06-20",
+          "rival": "Tunisia",
           "gf": 4,
-          "gc": 2,
+          "gc": 0,
           "res": "G"
         },
         {
-          "fecha": "2026-06-19",
+          "fecha": "2026-06-14",
+          "rival": "Netherlands",
+          "gf": 2,
+          "gc": 2,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-05-31",
+          "rival": "Iceland",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-31",
+          "rival": "England",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-28",
           "rival": "Scotland",
           "gf": 1,
           "gc": 0,
           "res": "G"
         },
         {
-          "fecha": "2026-06-13",
-          "rival": "Brazil",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-07",
-          "rival": "Norway",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-02",
-          "rival": "Madagascar",
-          "gf": 4,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-05-26",
-          "rival": "Burundi",
-          "gf": 5,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-31",
-          "rival": "Paraguay",
-          "gf": 2,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-27",
-          "rival": "Ecuador",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-01-18",
-          "rival": "Senegal",
-          "gf": 0,
-          "gc": 1,
-          "res": "P"
-        }
-      ]
-    },
-    "Scotland": {
-      "elo": 1753,
-      "atk": 0.84,
-      "dfn": 1.16,
-      "n": 31,
-      "gf_prom": 1.45,
-      "gc_prom": 1.39,
-      "ult": [
-        {
-          "fecha": "2026-06-24",
-          "rival": "Brazil",
-          "gf": 0,
-          "gc": 3,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-19",
-          "rival": "Morocco",
-          "gf": 0,
-          "gc": 1,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-13",
-          "rival": "Haiti",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-06",
-          "rival": "Bolivia",
-          "gf": 4,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-05-30",
-          "rival": "Curaçao",
-          "gf": 4,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-05-30",
-          "rival": "Curacao",
-          "gf": 4,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-31",
-          "rival": "Ivory Coast",
-          "gf": 0,
-          "gc": 1,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-03-28",
-          "rival": "Japan",
-          "gf": 0,
-          "gc": 1,
-          "res": "P"
-        },
-        {
           "fecha": "2025-11-18",
-          "rival": "Denmark",
-          "gf": 4,
-          "gc": 2,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-11-15",
-          "rival": "Greece",
-          "gf": 2,
-          "gc": 3,
-          "res": "P"
-        },
-        {
-          "fecha": "2025-10-12",
-          "rival": "Belarus",
-          "gf": 2,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-10-09",
-          "rival": "Greece",
+          "rival": "Bolivia",
           "gf": 3,
-          "gc": 1,
-          "res": "G"
-        }
-      ]
-    },
-    "Portugal": {
-      "elo": 1994,
-      "atk": 1.26,
-      "dfn": 0.8,
-      "n": 34,
-      "gf_prom": 2.12,
-      "gc_prom": 0.91,
-      "ult": [
-        {
-          "fecha": "2026-07-06",
-          "rival": "Spain",
-          "gf": 0,
-          "gc": 1,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-07-02",
-          "rival": "Croatia",
-          "gf": 2,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-27",
-          "rival": "Colombia",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-23",
-          "rival": "Uzbekistan",
-          "gf": 5,
           "gc": 0,
           "res": "G"
         },
         {
-          "fecha": "2026-06-17",
-          "rival": "DR Congo",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-10",
-          "rival": "Nigeria",
-          "gf": 2,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-06",
-          "rival": "Chile",
-          "gf": 2,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-31",
-          "rival": "United States",
+          "fecha": "2025-11-14",
+          "rival": "Ghana",
           "gf": 2,
           "gc": 0,
           "res": "G"
-        },
-        {
-          "fecha": "2026-03-28",
-          "rival": "Mexico",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2025-11-16",
-          "rival": "Armenia",
-          "gf": 9,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-11-13",
-          "rival": "Republic of Ireland",
-          "gf": 0,
-          "gc": 2,
-          "res": "P"
         },
         {
           "fecha": "2025-10-14",
-          "rival": "Hungary",
+          "rival": "Brazil",
+          "gf": 3,
+          "gc": 2,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-10-10",
+          "rival": "Paraguay",
           "gf": 2,
           "gc": 2,
           "res": "E"
+        },
+        {
+          "fecha": "2025-09-09",
+          "rival": "United States",
+          "gf": 0,
+          "gc": 2,
+          "res": "P"
         }
       ]
     },
@@ -12915,95 +12570,2445 @@
         }
       ]
     },
-    "Germany": {
-      "elo": 1909,
-      "atk": 1.5,
-      "dfn": 0.85,
-      "n": 33,
-      "gf_prom": 2.42,
-      "gc_prom": 0.94,
+    "Uruguay": {
+      "elo": 1841,
+      "atk": 0.86,
+      "dfn": 0.75,
+      "n": 30,
+      "gf_prom": 1.2,
+      "gc_prom": 0.83,
       "ult": [
         {
+          "fecha": "2026-06-26",
+          "rival": "Spain",
+          "gf": 0,
+          "gc": 1,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-21",
+          "rival": "Cape Verde",
+          "gf": 2,
+          "gc": 2,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-06-15",
+          "rival": "Saudi Arabia",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-03-31",
+          "rival": "Algeria",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-03-27",
+          "rival": "England",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2025-11-18",
+          "rival": "United States",
+          "gf": 1,
+          "gc": 5,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-11-15",
+          "rival": "Mexico",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2025-10-13",
+          "rival": "Uzbekistan",
+          "gf": 2,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-10-10",
+          "rival": "Dominican Republic",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-09-09",
+          "rival": "Chile",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2025-09-04",
+          "rival": "Peru",
+          "gf": 3,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-06-11",
+          "rival": "Venezuela",
+          "gf": 0,
+          "gc": 2,
+          "res": "P"
+        }
+      ]
+    },
+    "Iraq": {
+      "elo": 1561,
+      "atk": 0.68,
+      "dfn": 1.16,
+      "n": 31,
+      "gf_prom": 1.29,
+      "gc_prom": 1.23,
+      "ult": [
+        {
+          "fecha": "2026-06-26",
+          "rival": "Senegal",
+          "gf": 0,
+          "gc": 5,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-22",
+          "rival": "France",
+          "gf": 0,
+          "gc": 3,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-16",
+          "rival": "Norway",
+          "gf": 1,
+          "gc": 4,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-09",
+          "rival": "Venezuela",
+          "gf": 0,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-04",
+          "rival": "Spain",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-03-31",
+          "rival": "Bolivia",
+          "gf": 2,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-12-12",
+          "rival": "Jordan",
+          "gf": 0,
+          "gc": 1,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-12-09",
+          "rival": "Algeria",
+          "gf": 0,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-11-18",
+          "rival": "United Arab Emirates",
+          "gf": 2,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-11-18",
+          "rival": "UAE",
+          "gf": 2,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-11-13",
+          "rival": "United Arab Emirates",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2025-11-13",
+          "rival": "UAE",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        }
+      ]
+    },
+    "Paraguay": {
+      "elo": 1775,
+      "atk": 0.74,
+      "dfn": 0.95,
+      "n": 31,
+      "gf_prom": 1.0,
+      "gc_prom": 1.13,
+      "ult": [
+        {
+          "fecha": "2026-07-04",
+          "rival": "France",
+          "gf": 0,
+          "gc": 1,
+          "res": "P"
+        },
+        {
           "fecha": "2026-06-29",
-          "rival": "Paraguay",
+          "rival": "Germany",
           "gf": 1,
           "gc": 1,
           "res": "E"
         },
         {
           "fecha": "2026-06-25",
-          "rival": "Ecuador",
+          "rival": "Australia",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-06-19",
+          "rival": "Turkiye",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-12",
+          "rival": "United States",
+          "gf": 1,
+          "gc": 4,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-05",
+          "rival": "Nicaragua",
+          "gf": 4,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-31",
+          "rival": "Morocco",
           "gf": 1,
           "gc": 2,
           "res": "P"
         },
         {
-          "fecha": "2026-06-20",
-          "rival": "Ivory Coast",
+          "fecha": "2026-03-27",
+          "rival": "Greece",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-11-18",
+          "rival": "Mexico",
           "gf": 2,
           "gc": 1,
           "res": "G"
         },
         {
-          "fecha": "2026-06-14",
-          "rival": "Curacao",
-          "gf": 7,
+          "fecha": "2025-11-15",
+          "rival": "United States",
+          "gf": 1,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-10-14",
+          "rival": "South Korea",
+          "gf": 0,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-10-10",
+          "rival": "Japan",
+          "gf": 2,
+          "gc": 2,
+          "res": "E"
+        }
+      ]
+    },
+    "Saudi Arabia": {
+      "elo": 1595,
+      "atk": 0.55,
+      "dfn": 0.95,
+      "n": 37,
+      "gf_prom": 0.92,
+      "gc_prom": 0.97,
+      "ult": [
+        {
+          "fecha": "2026-06-26",
+          "rival": "Cape Verde",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-06-21",
+          "rival": "Spain",
+          "gf": 0,
+          "gc": 4,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-15",
+          "rival": "Uruguay",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-06-09",
+          "rival": "Senegal",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-06-05",
+          "rival": "Puerto Rico",
+          "gf": 3,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-05-30",
+          "rival": "Ecuador",
+          "gf": 2,
           "gc": 1,
           "res": "G"
         },
         {
-          "fecha": "2026-06-06",
+          "fecha": "2026-03-31",
+          "rival": "Serbia",
+          "gf": 1,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-03-27",
+          "rival": "Egypt",
+          "gf": 0,
+          "gc": 4,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-12-15",
+          "rival": "Morocco",
+          "gf": 0,
+          "gc": 1,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-12-15",
+          "rival": "Jordan",
+          "gf": 0,
+          "gc": 1,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-12-08",
+          "rival": "Morocco",
+          "gf": 0,
+          "gc": 1,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-11-18",
+          "rival": "Algeria",
+          "gf": 0,
+          "gc": 2,
+          "res": "P"
+        }
+      ]
+    },
+    "Algeria": {
+      "elo": 1753,
+      "atk": 1.13,
+      "dfn": 0.97,
+      "n": 42,
+      "gf_prom": 2.1,
+      "gc_prom": 0.86,
+      "ult": [
+        {
+          "fecha": "2026-07-03",
+          "rival": "Switzerland",
+          "gf": 0,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-27",
+          "rival": "Austria",
+          "gf": 3,
+          "gc": 3,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-06-22",
+          "rival": "Jordan",
+          "gf": 2,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-16",
+          "rival": "Argentina",
+          "gf": 0,
+          "gc": 3,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-10",
+          "rival": "Bolivia",
+          "gf": 4,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-03",
+          "rival": "Netherlands",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-31",
+          "rival": "Uruguay",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-01-10",
+          "rival": "Nigeria",
+          "gf": 0,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-01-06",
+          "rival": "DR Congo",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-12-31",
+          "rival": "Equatorial Guinea",
+          "gf": 3,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-12-28",
+          "rival": "Burkina Faso",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-12-24",
+          "rival": "Sudan",
+          "gf": 3,
+          "gc": 0,
+          "res": "G"
+        }
+      ]
+    },
+    "Ivory Coast": {
+      "elo": 1762,
+      "atk": 0.84,
+      "dfn": 0.68,
+      "n": 34,
+      "gf_prom": 1.56,
+      "gc_prom": 0.62,
+      "ult": [
+        {
+          "fecha": "2026-06-30",
+          "rival": "Norway",
+          "gf": 1,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-25",
+          "rival": "Curacao",
+          "gf": 2,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-20",
+          "rival": "Germany",
+          "gf": 1,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-14",
+          "rival": "Ecuador",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-04",
+          "rival": "France",
+          "gf": 2,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-31",
+          "rival": "Scotland",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-28",
+          "rival": "South Korea",
+          "gf": 4,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-01-10",
+          "rival": "Egypt",
+          "gf": 2,
+          "gc": 3,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-01-06",
+          "rival": "Burkina Faso",
+          "gf": 3,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-12-31",
+          "rival": "Gabon",
+          "gf": 3,
+          "gc": 2,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-12-28",
+          "rival": "Cameroon",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2025-12-24",
+          "rival": "Mozambique",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        }
+      ]
+    },
+    "Belgium": {
+      "elo": 1943,
+      "atk": 1.26,
+      "dfn": 0.96,
+      "n": 34,
+      "gf_prom": 2.26,
+      "gc_prom": 1.03,
+      "ult": [
+        {
+          "fecha": "2026-07-10",
+          "rival": "Spain",
+          "gf": 1,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-07-06",
           "rival": "United States",
+          "gf": 4,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-07-01",
+          "rival": "Senegal",
+          "gf": 3,
+          "gc": 2,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-26",
+          "rival": "New Zealand",
+          "gf": 5,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-21",
+          "rival": "Iran",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-06-15",
+          "rival": "Egypt",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-06-06",
+          "rival": "Tunisia",
+          "gf": 5,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-02",
+          "rival": "Croatia",
+          "gf": 2,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-31",
+          "rival": "Mexico",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-03-28",
+          "rival": "United States",
+          "gf": 5,
+          "gc": 2,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-28",
+          "rival": "USA",
+          "gf": 5,
+          "gc": 2,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-11-18",
+          "rival": "Liechtenstein",
+          "gf": 7,
+          "gc": 0,
+          "res": "G"
+        }
+      ]
+    },
+    "Iran": {
+      "elo": 1764,
+      "atk": 0.98,
+      "dfn": 0.92,
+      "n": 35,
+      "gf_prom": 1.97,
+      "gc_prom": 0.8,
+      "ult": [
+        {
+          "fecha": "2026-06-26",
+          "rival": "Egypt",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-06-21",
+          "rival": "Belgium",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-06-15",
+          "rival": "New Zealand",
+          "gf": 2,
+          "gc": 2,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-06-04",
+          "rival": "Mali",
+          "gf": 2,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-05-29",
+          "rival": "Gambia",
+          "gf": 3,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-31",
+          "rival": "Costa Rica",
+          "gf": 5,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-11-18",
+          "rival": "Uzbekistan",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2025-11-13",
+          "rival": "Cape Verde",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2025-10-14",
+          "rival": "Tanzania",
+          "gf": 2,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-10-10",
+          "rival": "Russia",
+          "gf": 1,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-09-08",
+          "rival": "Uzbekistan",
+          "gf": 0,
+          "gc": 1,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-09-04",
+          "rival": "Tajikistan",
+          "gf": 2,
+          "gc": 2,
+          "res": "E"
+        }
+      ]
+    },
+    "Senegal": {
+      "elo": 1815,
+      "atk": 1.32,
+      "dfn": 0.92,
+      "n": 33,
+      "gf_prom": 2.21,
+      "gc_prom": 0.85,
+      "ult": [
+        {
+          "fecha": "2026-07-01",
+          "rival": "Belgium",
+          "gf": 2,
+          "gc": 3,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-26",
+          "rival": "Iraq",
+          "gf": 5,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-22",
+          "rival": "Norway",
+          "gf": 2,
+          "gc": 3,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-16",
+          "rival": "France",
+          "gf": 1,
+          "gc": 3,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-09",
+          "rival": "Saudi Arabia",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-05-31",
+          "rival": "United States",
+          "gf": 2,
+          "gc": 3,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-03-31",
+          "rival": "Gambia",
+          "gf": 3,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-28",
+          "rival": "Peru",
+          "gf": 2,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-01-18",
+          "rival": "Morocco",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-01-14",
+          "rival": "Egypt",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-01-09",
+          "rival": "Mali",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-01-03",
+          "rival": "Sudan",
+          "gf": 3,
+          "gc": 1,
+          "res": "G"
+        }
+      ]
+    },
+    "Colombia": {
+      "elo": 2001,
+      "atk": 1.33,
+      "dfn": 0.74,
+      "n": 35,
+      "gf_prom": 1.97,
+      "gc_prom": 0.83,
+      "ult": [
+        {
+          "fecha": "2026-07-07",
+          "rival": "Switzerland",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-07-03",
+          "rival": "Ghana",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-27",
+          "rival": "Portugal",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-06-23",
+          "rival": "DR Congo",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-17",
+          "rival": "Uzbekistan",
+          "gf": 3,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-07",
+          "rival": "Jordan",
+          "gf": 2,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-05-29",
+          "rival": "Costa Rica",
+          "gf": 3,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-29",
+          "rival": "France",
+          "gf": 1,
+          "gc": 3,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-03-26",
+          "rival": "Croatia",
+          "gf": 1,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-11-18",
+          "rival": "Australia",
+          "gf": 3,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-11-15",
+          "rival": "New Zealand",
+          "gf": 2,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-10-14",
+          "rival": "Canada",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        }
+      ]
+    },
+    "Czechia": {
+      "elo": 1652,
+      "atk": 0.91,
+      "dfn": 1.27,
+      "n": 30,
+      "gf_prom": 1.83,
+      "gc_prom": 1.23,
+      "ult": [
+        {
+          "fecha": "2026-06-24",
+          "rival": "Mexico",
+          "gf": 0,
+          "gc": 3,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-18",
+          "rival": "South Africa",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-06-11",
+          "rival": "South Korea",
+          "gf": 0,
+          "gc": 1,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-04",
+          "rival": "Guatemala",
+          "gf": 3,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-05-31",
+          "rival": "Kosovo",
+          "gf": 2,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-31",
+          "rival": "Denmark",
+          "gf": 2,
+          "gc": 2,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-03-26",
+          "rival": "Republic of Ireland",
+          "gf": 2,
+          "gc": 2,
+          "res": "E"
+        },
+        {
+          "fecha": "2025-11-17",
+          "rival": "Gibraltar",
+          "gf": 6,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-11-13",
+          "rival": "San Marino",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-10-12",
+          "rival": "Faroe Islands",
+          "gf": 1,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-10-09",
+          "rival": "Croatia",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2025-09-08",
+          "rival": "Saudi Arabia",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        }
+      ]
+    },
+    "South Africa": {
+      "elo": 1551,
+      "atk": 0.71,
+      "dfn": 0.98,
+      "n": 34,
+      "gf_prom": 1.24,
+      "gc_prom": 0.91,
+      "ult": [
+        {
+          "fecha": "2026-06-28",
+          "rival": "Canada",
+          "gf": 0,
+          "gc": 1,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-24",
+          "rival": "South Korea",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-18",
+          "rival": "Czechia",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-06-11",
+          "rival": "Mexico",
+          "gf": 0,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-06",
+          "rival": "Jamaica",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-05-29",
+          "rival": "Nicaragua",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-03-31",
+          "rival": "Panama",
+          "gf": 1,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-03-27",
+          "rival": "Panama",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-01-05",
+          "rival": "Cameroon",
+          "gf": 1,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-01-04",
+          "rival": "Cameroon",
+          "gf": 1,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-12-29",
+          "rival": "Zimbabwe",
+          "gf": 3,
+          "gc": 2,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-12-26",
+          "rival": "Egypt",
+          "gf": 0,
+          "gc": 1,
+          "res": "P"
+        }
+      ]
+    },
+    "South Korea": {
+      "elo": 1737,
+      "atk": 0.93,
+      "dfn": 1.04,
+      "n": 35,
+      "gf_prom": 1.71,
+      "gc_prom": 1.0,
+      "ult": [
+        {
+          "fecha": "2026-06-24",
+          "rival": "South Africa",
+          "gf": 0,
+          "gc": 1,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-18",
+          "rival": "Mexico",
+          "gf": 0,
+          "gc": 1,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-11",
+          "rival": "Czechia",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-03",
+          "rival": "El Salvador",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-05-30",
+          "rival": "Trinidad and Tobago",
+          "gf": 5,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-31",
+          "rival": "Austria",
+          "gf": 0,
+          "gc": 1,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-03-28",
+          "rival": "Ivory Coast",
+          "gf": 0,
+          "gc": 4,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-11-18",
+          "rival": "Ghana",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-11-14",
+          "rival": "Bolivia",
+          "gf": 2,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-10-14",
+          "rival": "Paraguay",
+          "gf": 2,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-10-10",
+          "rival": "Brazil",
+          "gf": 0,
+          "gc": 5,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-09-09",
+          "rival": "Mexico",
+          "gf": 2,
+          "gc": 2,
+          "res": "E"
+        }
+      ]
+    },
+    "Brazil": {
+      "elo": 1985,
+      "atk": 1.27,
+      "dfn": 0.83,
+      "n": 31,
+      "gf_prom": 1.81,
+      "gc_prom": 1.0,
+      "ult": [
+        {
+          "fecha": "2026-07-05",
+          "rival": "Norway",
+          "gf": 1,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-29",
+          "rival": "Japan",
+          "gf": 2,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-24",
+          "rival": "Scotland",
+          "gf": 3,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-19",
+          "rival": "Haiti",
+          "gf": 3,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-13",
+          "rival": "Morocco",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-06-06",
+          "rival": "Egypt",
           "gf": 2,
           "gc": 1,
           "res": "G"
         },
         {
           "fecha": "2026-05-31",
-          "rival": "Finland",
-          "gf": 4,
+          "rival": "Panama",
+          "gf": 6,
+          "gc": 2,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-31",
+          "rival": "Croatia",
+          "gf": 3,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-26",
+          "rival": "France",
+          "gf": 1,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-11-18",
+          "rival": "Tunisia",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2025-11-15",
+          "rival": "Senegal",
+          "gf": 2,
           "gc": 0,
           "res": "G"
         },
         {
-          "fecha": "2026-03-30",
+          "fecha": "2025-10-14",
+          "rival": "Japan",
+          "gf": 2,
+          "gc": 3,
+          "res": "P"
+        }
+      ]
+    },
+    "Austria": {
+      "elo": 1821,
+      "atk": 1.26,
+      "dfn": 0.93,
+      "n": 33,
+      "gf_prom": 2.33,
+      "gc_prom": 0.97,
+      "ult": [
+        {
+          "fecha": "2026-07-02",
+          "rival": "Spain",
+          "gf": 0,
+          "gc": 3,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-27",
+          "rival": "Algeria",
+          "gf": 3,
+          "gc": 3,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-06-22",
+          "rival": "Argentina",
+          "gf": 0,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-16",
+          "rival": "Jordan",
+          "gf": 3,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-01",
+          "rival": "Tunisia",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-31",
+          "rival": "South Korea",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-27",
+          "rival": "Ghana",
+          "gf": 5,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-11-18",
+          "rival": "Bosnia and Herzegovina",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2025-11-15",
+          "rival": "Cyprus",
+          "gf": 2,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-10-12",
+          "rival": "Romania",
+          "gf": 0,
+          "gc": 1,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-10-09",
+          "rival": "San Marino",
+          "gf": 10,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-09-09",
+          "rival": "Bosnia and Herzegovina",
+          "gf": 2,
+          "gc": 1,
+          "res": "G"
+        }
+      ]
+    },
+    "Croatia": {
+      "elo": 1881,
+      "atk": 1.08,
+      "dfn": 1.02,
+      "n": 34,
+      "gf_prom": 1.74,
+      "gc_prom": 1.21,
+      "ult": [
+        {
+          "fecha": "2026-07-02",
+          "rival": "Portugal",
+          "gf": 1,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-27",
           "rival": "Ghana",
           "gf": 2,
           "gc": 1,
           "res": "G"
         },
         {
-          "fecha": "2026-03-27",
-          "rival": "Switzerland",
-          "gf": 4,
+          "fecha": "2026-06-23",
+          "rival": "Panama",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-17",
+          "rival": "England",
+          "gf": 2,
+          "gc": 4,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-07",
+          "rival": "Slovenia",
+          "gf": 2,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-02",
+          "rival": "Belgium",
+          "gf": 0,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-03-31",
+          "rival": "Brazil",
+          "gf": 1,
           "gc": 3,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-03-26",
+          "rival": "Colombia",
+          "gf": 2,
+          "gc": 1,
           "res": "G"
         },
         {
           "fecha": "2025-11-17",
-          "rival": "Slovakia",
-          "gf": 6,
+          "rival": "Montenegro",
+          "gf": 3,
+          "gc": 2,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-11-14",
+          "rival": "Faroe Islands",
+          "gf": 3,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-10-12",
+          "rival": "Gibraltar",
+          "gf": 3,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-10-09",
+          "rival": "Czechia",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        }
+      ]
+    },
+    "Norway": {
+      "elo": 1975,
+      "atk": 1.42,
+      "dfn": 1.06,
+      "n": 30,
+      "gf_prom": 2.6,
+      "gc_prom": 1.13,
+      "ult": [
+        {
+          "fecha": "2026-07-05",
+          "rival": "Brazil",
+          "gf": 2,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-30",
+          "rival": "Ivory Coast",
+          "gf": 2,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-26",
+          "rival": "France",
+          "gf": 1,
+          "gc": 4,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-22",
+          "rival": "Senegal",
+          "gf": 3,
+          "gc": 2,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-16",
+          "rival": "Iraq",
+          "gf": 4,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-07",
+          "rival": "Morocco",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-06-01",
+          "rival": "Sweden",
+          "gf": 3,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-31",
+          "rival": "Switzerland",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-03-27",
+          "rival": "Netherlands",
+          "gf": 1,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-11-16",
+          "rival": "Italy",
+          "gf": 4,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-11-13",
+          "rival": "Estonia",
+          "gf": 4,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-10-14",
+          "rival": "New Zealand",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        }
+      ]
+    },
+    "Tunisia": {
+      "elo": 1535,
+      "atk": 0.72,
+      "dfn": 1.07,
+      "n": 33,
+      "gf_prom": 1.27,
+      "gc_prom": 1.09,
+      "ult": [
+        {
+          "fecha": "2026-06-25",
+          "rival": "Netherlands",
+          "gf": 1,
+          "gc": 3,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-20",
+          "rival": "Japan",
+          "gf": 0,
+          "gc": 4,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-14",
+          "rival": "Sweden",
+          "gf": 1,
+          "gc": 5,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-06",
+          "rival": "Belgium",
+          "gf": 0,
+          "gc": 5,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-01",
+          "rival": "Austria",
+          "gf": 0,
+          "gc": 1,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-03-31",
+          "rival": "Canada",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-03-28",
+          "rival": "Haiti",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-01-03",
+          "rival": "Mali",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2025-12-30",
+          "rival": "Tanzania",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2025-12-27",
+          "rival": "Nigeria",
+          "gf": 2,
+          "gc": 3,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-12-23",
+          "rival": "Uganda",
+          "gf": 3,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-12-18",
+          "rival": "Botswana",
+          "gf": 2,
+          "gc": 1,
+          "res": "G"
+        }
+      ]
+    },
+    "Qatar": {
+      "elo": 1425,
+      "atk": 0.71,
+      "dfn": 1.87,
+      "n": 33,
+      "gf_prom": 1.27,
+      "gc_prom": 1.85,
+      "ult": [
+        {
+          "fecha": "2026-06-24",
+          "rival": "Bosnia and Herzegovina",
+          "gf": 1,
+          "gc": 3,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-18",
+          "rival": "Canada",
+          "gf": 0,
+          "gc": 6,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-13",
+          "rival": "Switzerland",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-06-06",
+          "rival": "El Salvador",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-05-28",
+          "rival": "Republic of Ireland",
+          "gf": 0,
+          "gc": 1,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-12-07",
+          "rival": "Tunisia",
+          "gf": 0,
+          "gc": 3,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-12-04",
+          "rival": "Syria",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2025-12-01",
+          "rival": "Palestine",
+          "gf": 0,
+          "gc": 1,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-11-17",
+          "rival": "Zimbabwe",
+          "gf": 1,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-10-14",
+          "rival": "United Arab Emirates",
+          "gf": 2,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-10-08",
+          "rival": "Oman",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2025-09-07",
+          "rival": "Russia",
+          "gf": 1,
+          "gc": 4,
+          "res": "P"
+        }
+      ]
+    },
+    "United States": {
+      "elo": 1819,
+      "atk": 1.14,
+      "dfn": 1.26,
+      "n": 37,
+      "gf_prom": 1.76,
+      "gc_prom": 1.49,
+      "ult": [
+        {
+          "fecha": "2026-07-06",
+          "rival": "Belgium",
+          "gf": 1,
+          "gc": 4,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-07-01",
+          "rival": "Bosnia and Herzegovina",
+          "gf": 2,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-25",
+          "rival": "Turkiye",
+          "gf": 2,
+          "gc": 3,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-19",
+          "rival": "Australia",
+          "gf": 2,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-12",
+          "rival": "Paraguay",
+          "gf": 4,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-06",
+          "rival": "Germany",
+          "gf": 1,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-05-31",
+          "rival": "Senegal",
+          "gf": 3,
+          "gc": 2,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-31",
+          "rival": "Portugal",
+          "gf": 0,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-03-28",
+          "rival": "Belgium",
+          "gf": 2,
+          "gc": 5,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-11-18",
+          "rival": "Uruguay",
+          "gf": 5,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-11-15",
+          "rival": "Paraguay",
+          "gf": 2,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-10-14",
+          "rival": "Australia",
+          "gf": 2,
+          "gc": 1,
+          "res": "G"
+        }
+      ]
+    },
+    "Netherlands": {
+      "elo": 1973,
+      "atk": 1.36,
+      "dfn": 0.81,
+      "n": 33,
+      "gf_prom": 2.48,
+      "gc_prom": 0.91,
+      "ult": [
+        {
+          "fecha": "2026-06-29",
+          "rival": "Morocco",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-06-25",
+          "rival": "Tunisia",
+          "gf": 3,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-20",
+          "rival": "Sweden",
+          "gf": 5,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-14",
+          "rival": "Japan",
+          "gf": 2,
+          "gc": 2,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-06-08",
+          "rival": "Uzbekistan",
+          "gf": 2,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-03",
+          "rival": "Algeria",
+          "gf": 0,
+          "gc": 1,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-03-31",
+          "rival": "Ecuador",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-03-27",
+          "rival": "Norway",
+          "gf": 2,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-11-17",
+          "rival": "Lithuania",
+          "gf": 4,
           "gc": 0,
           "res": "G"
         },
         {
           "fecha": "2025-11-14",
-          "rival": "Luxembourg",
+          "rival": "Poland",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2025-10-12",
+          "rival": "Finland",
+          "gf": 4,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-10-09",
+          "rival": "Malta",
+          "gf": 4,
+          "gc": 0,
+          "res": "G"
+        }
+      ]
+    },
+    "New Zealand": {
+      "elo": 1534,
+      "atk": 1.05,
+      "dfn": 1.21,
+      "n": 29,
+      "gf_prom": 2.1,
+      "gc_prom": 1.28,
+      "ult": [
+        {
+          "fecha": "2026-06-26",
+          "rival": "Belgium",
+          "gf": 1,
+          "gc": 5,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-21",
+          "rival": "Egypt",
+          "gf": 1,
+          "gc": 3,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-15",
+          "rival": "Iran",
+          "gf": 2,
+          "gc": 2,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-06-06",
+          "rival": "England",
+          "gf": 0,
+          "gc": 1,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-02",
+          "rival": "Haiti",
+          "gf": 0,
+          "gc": 4,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-03-30",
+          "rival": "Chile",
+          "gf": 4,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-27",
+          "rival": "Finland",
+          "gf": 0,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-11-18",
+          "rival": "Ecuador",
+          "gf": 0,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-11-15",
+          "rival": "Colombia",
+          "gf": 1,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-10-14",
+          "rival": "Norway",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2025-10-09",
+          "rival": "Poland",
+          "gf": 0,
+          "gc": 1,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-09-09",
+          "rival": "Australia",
+          "gf": 1,
+          "gc": 3,
+          "res": "P"
+        }
+      ]
+    },
+    "Turkiye": {
+      "elo": 1806,
+      "atk": 0.95,
+      "dfn": 1.28,
+      "n": 27,
+      "gf_prom": 1.7,
+      "gc_prom": 1.44,
+      "ult": [
+        {
+          "fecha": "2026-06-25",
+          "rival": "United States",
+          "gf": 3,
+          "gc": 2,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-19",
+          "rival": "Paraguay",
+          "gf": 0,
+          "gc": 1,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-13",
+          "rival": "Australia",
+          "gf": 0,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-06",
+          "rival": "Venezuela",
+          "gf": 2,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-01",
+          "rival": "North Macedonia",
+          "gf": 4,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-31",
+          "rival": "Kosovo",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-26",
+          "rival": "Romania",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-11-18",
+          "rival": "Spain",
+          "gf": 2,
+          "gc": 2,
+          "res": "E"
+        },
+        {
+          "fecha": "2025-11-15",
+          "rival": "Bulgaria",
+          "gf": 2,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-10-14",
+          "rival": "Georgia",
+          "gf": 4,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-10-11",
+          "rival": "Bulgaria",
+          "gf": 6,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-09-07",
+          "rival": "Spain",
+          "gf": 0,
+          "gc": 6,
+          "res": "P"
+        }
+      ]
+    },
+    "Spain": {
+      "elo": 2190,
+      "atk": 1.56,
+      "dfn": 0.65,
+      "n": 36,
+      "gf_prom": 2.5,
+      "gc_prom": 0.72,
+      "ult": [
+        {
+          "fecha": "2026-07-10",
+          "rival": "Belgium",
+          "gf": 2,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-07-06",
+          "rival": "Portugal",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-07-02",
+          "rival": "Austria",
+          "gf": 3,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-26",
+          "rival": "Uruguay",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-21",
+          "rival": "Saudi Arabia",
+          "gf": 4,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-15",
+          "rival": "Cape Verde",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-06-08",
+          "rival": "Peru",
+          "gf": 3,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-04",
+          "rival": "Iraq",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-03-31",
+          "rival": "Egypt",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-03-27",
+          "rival": "Serbia",
+          "gf": 3,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-11-18",
+          "rival": "Turkiye",
+          "gf": 2,
+          "gc": 2,
+          "res": "E"
+        },
+        {
+          "fecha": "2025-11-15",
+          "rival": "Georgia",
+          "gf": 4,
+          "gc": 0,
+          "res": "G"
+        }
+      ]
+    },
+    "Uzbekistan": {
+      "elo": 1631,
+      "atk": 0.7,
+      "dfn": 0.96,
+      "n": 32,
+      "gf_prom": 1.25,
+      "gc_prom": 0.94,
+      "ult": [
+        {
+          "fecha": "2026-06-27",
+          "rival": "DR Congo",
+          "gf": 1,
+          "gc": 3,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-23",
+          "rival": "Portugal",
+          "gf": 0,
+          "gc": 5,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-17",
+          "rival": "Colombia",
+          "gf": 1,
+          "gc": 3,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-08",
+          "rival": "Netherlands",
+          "gf": 1,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-01",
+          "rival": "Canada",
+          "gf": 0,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-03-30",
+          "rival": "Venezuela",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-03-27",
+          "rival": "Gabon",
+          "gf": 3,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-11-18",
+          "rival": "Iran",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2025-11-14",
+          "rival": "Egypt",
           "gf": 2,
           "gc": 0,
           "res": "G"
         },
         {
           "fecha": "2025-10-13",
-          "rival": "Northern Ireland",
+          "rival": "Uruguay",
           "gf": 1,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-10-09",
+          "rival": "Kuwait",
+          "gf": 2,
           "gc": 0,
           "res": "G"
         },
         {
-          "fecha": "2025-10-10",
-          "rival": "Luxembourg",
-          "gf": 4,
+          "fecha": "2025-09-08",
+          "rival": "Iran",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        }
+      ]
+    },
+    "Cape Verde": {
+      "elo": 1620,
+      "atk": 0.78,
+      "dfn": 1.07,
+      "n": 33,
+      "gf_prom": 1.3,
+      "gc_prom": 1.03,
+      "ult": [
+        {
+          "fecha": "2026-07-03",
+          "rival": "Argentina",
+          "gf": 2,
+          "gc": 3,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-26",
+          "rival": "Saudi Arabia",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-06-21",
+          "rival": "Uruguay",
+          "gf": 2,
+          "gc": 2,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-06-15",
+          "rival": "Spain",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-05-31",
+          "rival": "Serbia",
+          "gf": 3,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-29",
+          "rival": "Finland",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-03-26",
+          "rival": "Chile",
+          "gf": 2,
+          "gc": 4,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-11-17",
+          "rival": "Egypt",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2025-11-13",
+          "rival": "Iran",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2025-10-13",
+          "rival": "Eswatini",
+          "gf": 3,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-10-08",
+          "rival": "Libya",
+          "gf": 3,
+          "gc": 3,
+          "res": "E"
+        },
+        {
+          "fecha": "2025-09-09",
+          "rival": "Cameroon",
+          "gf": 1,
           "gc": 0,
           "res": "G"
         }
@@ -13197,941 +15202,471 @@
         }
       ]
     },
-    "Iraq": {
-      "elo": 1561,
-      "atk": 0.68,
-      "dfn": 1.16,
-      "n": 31,
-      "gf_prom": 1.29,
-      "gc_prom": 1.23,
+    "Argentina": {
+      "elo": 2156,
+      "atk": 1.25,
+      "dfn": 0.77,
+      "n": 34,
+      "gf_prom": 2.06,
+      "gc_prom": 0.74,
       "ult": [
         {
-          "fecha": "2026-06-26",
-          "rival": "Senegal",
-          "gf": 0,
-          "gc": 5,
-          "res": "P"
+          "fecha": "2026-07-07",
+          "rival": "Egypt",
+          "gf": 3,
+          "gc": 2,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-07-03",
+          "rival": "Cape Verde",
+          "gf": 3,
+          "gc": 2,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-27",
+          "rival": "Jordan",
+          "gf": 3,
+          "gc": 1,
+          "res": "G"
         },
         {
           "fecha": "2026-06-22",
-          "rival": "France",
-          "gf": 0,
-          "gc": 3,
-          "res": "P"
+          "rival": "Austria",
+          "gf": 2,
+          "gc": 0,
+          "res": "G"
         },
         {
           "fecha": "2026-06-16",
-          "rival": "Norway",
-          "gf": 1,
-          "gc": 4,
-          "res": "P"
+          "rival": "Algeria",
+          "gf": 3,
+          "gc": 0,
+          "res": "G"
         },
         {
           "fecha": "2026-06-09",
-          "rival": "Venezuela",
-          "gf": 0,
-          "gc": 2,
-          "res": "P"
+          "rival": "Iceland",
+          "gf": 3,
+          "gc": 0,
+          "res": "G"
         },
         {
-          "fecha": "2026-06-04",
-          "rival": "Spain",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
+          "fecha": "2026-06-06",
+          "rival": "Honduras",
+          "gf": 2,
+          "gc": 0,
+          "res": "G"
         },
         {
           "fecha": "2026-03-31",
-          "rival": "Bolivia",
+          "rival": "Zambia",
+          "gf": 5,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-27",
+          "rival": "Mauritania",
           "gf": 2,
           "gc": 1,
           "res": "G"
         },
         {
-          "fecha": "2025-12-12",
-          "rival": "Jordan",
+          "fecha": "2025-11-14",
+          "rival": "Angola",
+          "gf": 2,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-10-14",
+          "rival": "Puerto Rico",
+          "gf": 6,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-10-10",
+          "rival": "Venezuela",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        }
+      ]
+    },
+    "Portugal": {
+      "elo": 1994,
+      "atk": 1.26,
+      "dfn": 0.8,
+      "n": 34,
+      "gf_prom": 2.12,
+      "gc_prom": 0.91,
+      "ult": [
+        {
+          "fecha": "2026-07-06",
+          "rival": "Spain",
           "gf": 0,
           "gc": 1,
           "res": "P"
         },
         {
-          "fecha": "2025-12-09",
-          "rival": "Algeria",
+          "fecha": "2026-07-02",
+          "rival": "Croatia",
+          "gf": 2,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-27",
+          "rival": "Colombia",
           "gf": 0,
-          "gc": 2,
-          "res": "P"
+          "gc": 0,
+          "res": "E"
         },
         {
-          "fecha": "2025-11-18",
-          "rival": "United Arab Emirates",
-          "gf": 2,
-          "gc": 1,
+          "fecha": "2026-06-23",
+          "rival": "Uzbekistan",
+          "gf": 5,
+          "gc": 0,
           "res": "G"
         },
         {
-          "fecha": "2025-11-18",
-          "rival": "UAE",
-          "gf": 2,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-11-13",
-          "rival": "United Arab Emirates",
+          "fecha": "2026-06-17",
+          "rival": "DR Congo",
           "gf": 1,
           "gc": 1,
           "res": "E"
         },
         {
-          "fecha": "2025-11-13",
-          "rival": "UAE",
-          "gf": 1,
+          "fecha": "2026-06-10",
+          "rival": "Nigeria",
+          "gf": 2,
           "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-06",
+          "rival": "Chile",
+          "gf": 2,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-31",
+          "rival": "United States",
+          "gf": 2,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-28",
+          "rival": "Mexico",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2025-11-16",
+          "rival": "Armenia",
+          "gf": 9,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-11-13",
+          "rival": "Republic of Ireland",
+          "gf": 0,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2025-10-14",
+          "rival": "Hungary",
+          "gf": 2,
+          "gc": 2,
           "res": "E"
         }
       ]
     },
-    "Brazil": {
-      "elo": 1985,
-      "atk": 1.27,
-      "dfn": 0.83,
-      "n": 31,
-      "gf_prom": 1.81,
-      "gc_prom": 1.0,
+    "Panama": {
+      "elo": 1659,
+      "atk": 0.86,
+      "dfn": 1.4,
+      "n": 37,
+      "gf_prom": 1.49,
+      "gc_prom": 1.43,
       "ult": [
         {
-          "fecha": "2026-07-05",
-          "rival": "Norway",
-          "gf": 1,
+          "fecha": "2026-06-27",
+          "rival": "England",
+          "gf": 0,
           "gc": 2,
           "res": "P"
         },
         {
-          "fecha": "2026-06-29",
-          "rival": "Japan",
-          "gf": 2,
+          "fecha": "2026-06-23",
+          "rival": "Croatia",
+          "gf": 0,
           "gc": 1,
-          "res": "G"
+          "res": "P"
         },
         {
-          "fecha": "2026-06-24",
-          "rival": "Scotland",
-          "gf": 3,
-          "gc": 0,
-          "res": "G"
+          "fecha": "2026-06-17",
+          "rival": "Ghana",
+          "gf": 0,
+          "gc": 1,
+          "res": "P"
         },
         {
-          "fecha": "2026-06-19",
-          "rival": "Haiti",
-          "gf": 3,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-13",
-          "rival": "Morocco",
+          "fecha": "2026-06-06",
+          "rival": "Bosnia-Herzegovina",
           "gf": 1,
           "gc": 1,
           "res": "E"
         },
         {
           "fecha": "2026-06-06",
-          "rival": "Egypt",
-          "gf": 2,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-05-31",
-          "rival": "Panama",
-          "gf": 6,
-          "gc": 2,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-31",
-          "rival": "Croatia",
-          "gf": 3,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-26",
-          "rival": "France",
-          "gf": 1,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2025-11-18",
-          "rival": "Tunisia",
+          "rival": "Bosnia and Herzegovina",
           "gf": 1,
           "gc": 1,
           "res": "E"
         },
         {
-          "fecha": "2025-11-15",
-          "rival": "Senegal",
-          "gf": 2,
-          "gc": 0,
+          "fecha": "2026-06-03",
+          "rival": "Dominican Republic",
+          "gf": 4,
+          "gc": 2,
           "res": "G"
         },
         {
-          "fecha": "2025-10-14",
-          "rival": "Japan",
+          "fecha": "2026-05-31",
+          "rival": "Brazil",
           "gf": 2,
-          "gc": 3,
+          "gc": 6,
           "res": "P"
-        }
-      ]
-    },
-    "Paraguay": {
-      "elo": 1775,
-      "atk": 0.74,
-      "dfn": 0.95,
-      "n": 31,
-      "gf_prom": 1.0,
-      "gc_prom": 1.13,
-      "ult": [
+        },
         {
-          "fecha": "2026-07-04",
-          "rival": "France",
+          "fecha": "2026-03-31",
+          "rival": "South Africa",
+          "gf": 2,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-27",
+          "rival": "South Africa",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-01-22",
+          "rival": "Mexico",
           "gf": 0,
           "gc": 1,
           "res": "P"
         },
         {
+          "fecha": "2026-01-18",
+          "rival": "Bolivia",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2025-11-18",
+          "rival": "El Salvador",
+          "gf": 3,
+          "gc": 0,
+          "res": "G"
+        }
+      ]
+    },
+    "Germany": {
+      "elo": 1909,
+      "atk": 1.5,
+      "dfn": 0.85,
+      "n": 33,
+      "gf_prom": 2.42,
+      "gc_prom": 0.94,
+      "ult": [
+        {
           "fecha": "2026-06-29",
-          "rival": "Germany",
+          "rival": "Paraguay",
           "gf": 1,
           "gc": 1,
           "res": "E"
         },
         {
           "fecha": "2026-06-25",
-          "rival": "Australia",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-19",
-          "rival": "Turkiye",
+          "rival": "Ecuador",
           "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-12",
-          "rival": "United States",
-          "gf": 1,
-          "gc": 4,
+          "gc": 2,
           "res": "P"
         },
         {
-          "fecha": "2026-06-05",
-          "rival": "Nicaragua",
+          "fecha": "2026-06-20",
+          "rival": "Ivory Coast",
+          "gf": 2,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-14",
+          "rival": "Curacao",
+          "gf": 7,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-06",
+          "rival": "United States",
+          "gf": 2,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-05-31",
+          "rival": "Finland",
           "gf": 4,
           "gc": 0,
           "res": "G"
         },
         {
-          "fecha": "2026-03-31",
-          "rival": "Morocco",
-          "gf": 1,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-03-27",
-          "rival": "Greece",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-11-18",
-          "rival": "Mexico",
-          "gf": 2,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-11-15",
-          "rival": "United States",
-          "gf": 1,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2025-10-14",
-          "rival": "South Korea",
-          "gf": 0,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2025-10-10",
-          "rival": "Japan",
-          "gf": 2,
-          "gc": 2,
-          "res": "E"
-        }
-      ]
-    },
-    "Colombia": {
-      "elo": 2001,
-      "atk": 1.33,
-      "dfn": 0.74,
-      "n": 35,
-      "gf_prom": 1.97,
-      "gc_prom": 0.83,
-      "ult": [
-        {
-          "fecha": "2026-07-07",
-          "rival": "Switzerland",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-07-03",
-          "rival": "Ghana",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-27",
-          "rival": "Portugal",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-23",
-          "rival": "DR Congo",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-17",
-          "rival": "Uzbekistan",
-          "gf": 3,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-07",
-          "rival": "Jordan",
-          "gf": 2,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-05-29",
-          "rival": "Costa Rica",
-          "gf": 3,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-29",
-          "rival": "France",
-          "gf": 1,
-          "gc": 3,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-03-26",
-          "rival": "Croatia",
-          "gf": 1,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2025-11-18",
-          "rival": "Australia",
-          "gf": 3,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-11-15",
-          "rival": "New Zealand",
-          "gf": 2,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-10-14",
-          "rival": "Canada",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        }
-      ]
-    },
-    "Austria": {
-      "elo": 1821,
-      "atk": 1.26,
-      "dfn": 0.93,
-      "n": 33,
-      "gf_prom": 2.33,
-      "gc_prom": 0.97,
-      "ult": [
-        {
-          "fecha": "2026-07-02",
-          "rival": "Spain",
-          "gf": 0,
-          "gc": 3,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-27",
-          "rival": "Algeria",
-          "gf": 3,
-          "gc": 3,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-22",
-          "rival": "Argentina",
-          "gf": 0,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-16",
-          "rival": "Jordan",
-          "gf": 3,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-01",
-          "rival": "Tunisia",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-31",
-          "rival": "South Korea",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-27",
-          "rival": "Ghana",
-          "gf": 5,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-11-18",
-          "rival": "Bosnia and Herzegovina",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2025-11-15",
-          "rival": "Cyprus",
-          "gf": 2,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-10-12",
-          "rival": "Romania",
-          "gf": 0,
-          "gc": 1,
-          "res": "P"
-        },
-        {
-          "fecha": "2025-10-09",
-          "rival": "San Marino",
-          "gf": 10,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-09-09",
-          "rival": "Bosnia and Herzegovina",
-          "gf": 2,
-          "gc": 1,
-          "res": "G"
-        }
-      ]
-    },
-    "Uzbekistan": {
-      "elo": 1631,
-      "atk": 0.7,
-      "dfn": 0.96,
-      "n": 32,
-      "gf_prom": 1.25,
-      "gc_prom": 0.94,
-      "ult": [
-        {
-          "fecha": "2026-06-27",
-          "rival": "DR Congo",
-          "gf": 1,
-          "gc": 3,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-23",
-          "rival": "Portugal",
-          "gf": 0,
-          "gc": 5,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-17",
-          "rival": "Colombia",
-          "gf": 1,
-          "gc": 3,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-08",
-          "rival": "Netherlands",
-          "gf": 1,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-01",
-          "rival": "Canada",
-          "gf": 0,
-          "gc": 2,
-          "res": "P"
-        },
-        {
           "fecha": "2026-03-30",
-          "rival": "Venezuela",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-03-27",
-          "rival": "Gabon",
-          "gf": 3,
+          "rival": "Ghana",
+          "gf": 2,
           "gc": 1,
           "res": "G"
         },
         {
-          "fecha": "2025-11-18",
-          "rival": "Iran",
-          "gf": 0,
+          "fecha": "2026-03-27",
+          "rival": "Switzerland",
+          "gf": 4,
+          "gc": 3,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-11-17",
+          "rival": "Slovakia",
+          "gf": 6,
           "gc": 0,
-          "res": "E"
+          "res": "G"
         },
         {
           "fecha": "2025-11-14",
-          "rival": "Egypt",
+          "rival": "Luxembourg",
           "gf": 2,
           "gc": 0,
           "res": "G"
         },
         {
           "fecha": "2025-10-13",
-          "rival": "Uruguay",
+          "rival": "Northern Ireland",
           "gf": 1,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2025-10-09",
-          "rival": "Kuwait",
-          "gf": 2,
           "gc": 0,
           "res": "G"
         },
         {
-          "fecha": "2025-09-08",
-          "rival": "Iran",
-          "gf": 1,
+          "fecha": "2025-10-10",
+          "rival": "Luxembourg",
+          "gf": 4,
           "gc": 0,
           "res": "G"
         }
       ]
     },
-    "Turkiye": {
-      "elo": 1806,
-      "atk": 0.95,
-      "dfn": 1.28,
-      "n": 27,
-      "gf_prom": 1.7,
-      "gc_prom": 1.44,
+    "France": {
+      "elo": 2162,
+      "atk": 1.19,
+      "dfn": 0.68,
+      "n": 34,
+      "gf_prom": 1.91,
+      "gc_prom": 0.85,
       "ult": [
         {
-          "fecha": "2026-06-25",
-          "rival": "United States",
-          "gf": 3,
-          "gc": 2,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-19",
-          "rival": "Paraguay",
-          "gf": 0,
-          "gc": 1,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-13",
-          "rival": "Australia",
-          "gf": 0,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-06",
-          "rival": "Venezuela",
-          "gf": 2,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-01",
-          "rival": "North Macedonia",
-          "gf": 4,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-31",
-          "rival": "Kosovo",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-26",
-          "rival": "Romania",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-11-18",
-          "rival": "Spain",
-          "gf": 2,
-          "gc": 2,
-          "res": "E"
-        },
-        {
-          "fecha": "2025-11-15",
-          "rival": "Bulgaria",
-          "gf": 2,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-10-14",
-          "rival": "Georgia",
-          "gf": 4,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-10-11",
-          "rival": "Bulgaria",
-          "gf": 6,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-09-07",
-          "rival": "Spain",
-          "gf": 0,
-          "gc": 6,
-          "res": "P"
-        }
-      ]
-    },
-    "Jordan": {
-      "elo": 1628,
-      "atk": 0.94,
-      "dfn": 1.4,
-      "n": 39,
-      "gf_prom": 1.64,
-      "gc_prom": 1.46,
-      "ult": [
-        {
-          "fecha": "2026-06-27",
-          "rival": "Argentina",
-          "gf": 1,
-          "gc": 3,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-22",
-          "rival": "Algeria",
-          "gf": 1,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-16",
-          "rival": "Austria",
-          "gf": 1,
-          "gc": 3,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-07",
-          "rival": "Colombia",
-          "gf": 0,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-05-31",
-          "rival": "Switzerland",
-          "gf": 1,
-          "gc": 4,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-03-31",
-          "rival": "Nigeria",
-          "gf": 2,
-          "gc": 2,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-03-27",
-          "rival": "Costa Rica",
-          "gf": 2,
-          "gc": 2,
-          "res": "E"
-        },
-        {
-          "fecha": "2025-12-18",
+          "fecha": "2026-07-09",
           "rival": "Morocco",
           "gf": 2,
-          "gc": 3,
-          "res": "P"
-        },
-        {
-          "fecha": "2025-12-15",
-          "rival": "Saudi Arabia",
-          "gf": 1,
           "gc": 0,
           "res": "G"
         },
         {
-          "fecha": "2025-12-12",
-          "rival": "Iraq",
+          "fecha": "2026-07-04",
+          "rival": "Paraguay",
           "gf": 1,
           "gc": 0,
           "res": "G"
-        },
-        {
-          "fecha": "2025-12-09",
-          "rival": "Egypt",
-          "gf": 3,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-12-06",
-          "rival": "Kuwait",
-          "gf": 3,
-          "gc": 1,
-          "res": "G"
-        }
-      ]
-    },
-    "Qatar": {
-      "elo": 1425,
-      "atk": 0.71,
-      "dfn": 1.87,
-      "n": 33,
-      "gf_prom": 1.27,
-      "gc_prom": 1.85,
-      "ult": [
-        {
-          "fecha": "2026-06-24",
-          "rival": "Bosnia and Herzegovina",
-          "gf": 1,
-          "gc": 3,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-18",
-          "rival": "Canada",
-          "gf": 0,
-          "gc": 6,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-13",
-          "rival": "Switzerland",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-06",
-          "rival": "El Salvador",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-05-28",
-          "rival": "Republic of Ireland",
-          "gf": 0,
-          "gc": 1,
-          "res": "P"
-        },
-        {
-          "fecha": "2025-12-07",
-          "rival": "Tunisia",
-          "gf": 0,
-          "gc": 3,
-          "res": "P"
-        },
-        {
-          "fecha": "2025-12-04",
-          "rival": "Syria",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2025-12-01",
-          "rival": "Palestine",
-          "gf": 0,
-          "gc": 1,
-          "res": "P"
-        },
-        {
-          "fecha": "2025-11-17",
-          "rival": "Zimbabwe",
-          "gf": 1,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2025-10-14",
-          "rival": "United Arab Emirates",
-          "gf": 2,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-10-08",
-          "rival": "Oman",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2025-09-07",
-          "rival": "Russia",
-          "gf": 1,
-          "gc": 4,
-          "res": "P"
-        }
-      ]
-    },
-    "Mexico": {
-      "elo": 1947,
-      "atk": 0.97,
-      "dfn": 0.73,
-      "n": 42,
-      "gf_prom": 1.52,
-      "gc_prom": 0.76,
-      "ult": [
-        {
-          "fecha": "2026-07-05",
-          "rival": "England",
-          "gf": 2,
-          "gc": 3,
-          "res": "P"
         },
         {
           "fecha": "2026-06-30",
-          "rival": "Ecuador",
-          "gf": 2,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-24",
-          "rival": "Czechia",
+          "rival": "Sweden",
           "gf": 3,
           "gc": 0,
           "res": "G"
         },
         {
-          "fecha": "2026-06-18",
-          "rival": "South Korea",
-          "gf": 1,
+          "fecha": "2026-06-26",
+          "rival": "Norway",
+          "gf": 4,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-22",
+          "rival": "Iraq",
+          "gf": 3,
           "gc": 0,
           "res": "G"
         },
         {
-          "fecha": "2026-06-11",
-          "rival": "South Africa",
-          "gf": 2,
-          "gc": 0,
+          "fecha": "2026-06-16",
+          "rival": "Senegal",
+          "gf": 3,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-08",
+          "rival": "Northern Ireland",
+          "gf": 3,
+          "gc": 1,
           "res": "G"
         },
         {
           "fecha": "2026-06-04",
-          "rival": "Serbia",
-          "gf": 5,
+          "rival": "Ivory Coast",
+          "gf": 1,
+          "gc": 2,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-03-29",
+          "rival": "Colombia",
+          "gf": 3,
           "gc": 1,
           "res": "G"
         },
         {
-          "fecha": "2026-05-30",
-          "rival": "Australia",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-05-22",
-          "rival": "Ghana",
+          "fecha": "2026-03-26",
+          "rival": "Brazil",
           "gf": 2,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-31",
-          "rival": "Belgium",
-          "gf": 1,
           "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-03-28",
-          "rival": "Portugal",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-02-25",
-          "rival": "Iceland",
-          "gf": 4,
-          "gc": 0,
           "res": "G"
         },
         {
-          "fecha": "2026-01-25",
-          "rival": "Bolivia",
-          "gf": 1,
+          "fecha": "2025-11-16",
+          "rival": "Azerbaijan",
+          "gf": 3,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-11-13",
+          "rival": "Ukraine",
+          "gf": 4,
           "gc": 0,
           "res": "G"
         }
@@ -14231,567 +15766,285 @@
         }
       ]
     },
-    "Spain": {
-      "elo": 2177,
-      "atk": 1.56,
-      "dfn": 0.66,
-      "n": 35,
-      "gf_prom": 2.51,
-      "gc_prom": 0.71,
+    "Morocco": {
+      "elo": 1909,
+      "atk": 1.01,
+      "dfn": 0.57,
+      "n": 39,
+      "gf_prom": 1.87,
+      "gc_prom": 0.46,
       "ult": [
         {
-          "fecha": "2026-07-06",
-          "rival": "Portugal",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-07-02",
-          "rival": "Austria",
-          "gf": 3,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-26",
-          "rival": "Uruguay",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-21",
-          "rival": "Saudi Arabia",
-          "gf": 4,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-15",
-          "rival": "Cape Verde",
+          "fecha": "2026-07-09",
+          "rival": "France",
           "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-08",
-          "rival": "Peru",
-          "gf": 3,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-04",
-          "rival": "Iraq",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-03-31",
-          "rival": "Egypt",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-03-27",
-          "rival": "Serbia",
-          "gf": 3,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-11-18",
-          "rival": "Turkiye",
-          "gf": 2,
           "gc": 2,
-          "res": "E"
-        },
-        {
-          "fecha": "2025-11-15",
-          "rival": "Georgia",
-          "gf": 4,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-10-14",
-          "rival": "Bulgaria",
-          "gf": 4,
-          "gc": 0,
-          "res": "G"
-        }
-      ]
-    },
-    "Canada": {
-      "elo": 1734,
-      "atk": 0.87,
-      "dfn": 0.8,
-      "n": 37,
-      "gf_prom": 1.35,
-      "gc_prom": 0.81,
-      "ult": [
-        {
-          "fecha": "2026-07-04",
-          "rival": "Morocco",
-          "gf": 0,
-          "gc": 3,
           "res": "P"
         },
         {
-          "fecha": "2026-06-28",
-          "rival": "South Africa",
-          "gf": 1,
+          "fecha": "2026-07-04",
+          "rival": "Canada",
+          "gf": 3,
           "gc": 0,
           "res": "G"
+        },
+        {
+          "fecha": "2026-06-29",
+          "rival": "Netherlands",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
         },
         {
           "fecha": "2026-06-24",
-          "rival": "Switzerland",
-          "gf": 1,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-18",
-          "rival": "Qatar",
-          "gf": 6,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-12",
-          "rival": "Bosnia and Herzegovina",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-05",
-          "rival": "Republic of Ireland",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-01",
-          "rival": "Uzbekistan",
-          "gf": 2,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-31",
-          "rival": "Tunisia",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-03-28",
-          "rival": "Iceland",
-          "gf": 2,
-          "gc": 2,
-          "res": "E"
-        },
-        {
-          "fecha": "2025-11-18",
-          "rival": "Venezuela",
-          "gf": 2,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-11-13",
-          "rival": "Ecuador",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2025-10-14",
-          "rival": "Colombia",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        }
-      ]
-    },
-    "New Zealand": {
-      "elo": 1534,
-      "atk": 1.05,
-      "dfn": 1.21,
-      "n": 29,
-      "gf_prom": 2.1,
-      "gc_prom": 1.28,
-      "ult": [
-        {
-          "fecha": "2026-06-26",
-          "rival": "Belgium",
-          "gf": 1,
-          "gc": 5,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-21",
-          "rival": "Egypt",
-          "gf": 1,
-          "gc": 3,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-15",
-          "rival": "Iran",
-          "gf": 2,
-          "gc": 2,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-06",
-          "rival": "England",
-          "gf": 0,
-          "gc": 1,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-02",
           "rival": "Haiti",
-          "gf": 0,
-          "gc": 4,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-03-30",
-          "rival": "Chile",
           "gf": 4,
-          "gc": 1,
+          "gc": 2,
           "res": "G"
         },
         {
-          "fecha": "2026-03-27",
-          "rival": "Finland",
-          "gf": 0,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2025-11-18",
-          "rival": "Ecuador",
-          "gf": 0,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2025-11-15",
-          "rival": "Colombia",
+          "fecha": "2026-06-19",
+          "rival": "Scotland",
           "gf": 1,
-          "gc": 2,
-          "res": "P"
+          "gc": 0,
+          "res": "G"
         },
         {
-          "fecha": "2025-10-14",
+          "fecha": "2026-06-13",
+          "rival": "Brazil",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-06-07",
           "rival": "Norway",
           "gf": 1,
           "gc": 1,
           "res": "E"
         },
         {
-          "fecha": "2025-10-09",
-          "rival": "Poland",
-          "gf": 0,
-          "gc": 1,
-          "res": "P"
+          "fecha": "2026-06-02",
+          "rival": "Madagascar",
+          "gf": 4,
+          "gc": 0,
+          "res": "G"
         },
         {
-          "fecha": "2025-09-09",
-          "rival": "Australia",
-          "gf": 1,
-          "gc": 3,
-          "res": "P"
-        }
-      ]
-    },
-    "Senegal": {
-      "elo": 1815,
-      "atk": 1.32,
-      "dfn": 0.92,
-      "n": 33,
-      "gf_prom": 2.21,
-      "gc_prom": 0.85,
-      "ult": [
-        {
-          "fecha": "2026-07-01",
-          "rival": "Belgium",
-          "gf": 2,
-          "gc": 3,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-26",
-          "rival": "Iraq",
+          "fecha": "2026-05-26",
+          "rival": "Burundi",
           "gf": 5,
           "gc": 0,
           "res": "G"
         },
         {
-          "fecha": "2026-06-22",
-          "rival": "Norway",
+          "fecha": "2026-03-31",
+          "rival": "Paraguay",
           "gf": 2,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-27",
+          "rival": "Ecuador",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-01-18",
+          "rival": "Senegal",
+          "gf": 0,
+          "gc": 1,
+          "res": "P"
+        }
+      ]
+    },
+    "Jordan": {
+      "elo": 1628,
+      "atk": 0.94,
+      "dfn": 1.4,
+      "n": 39,
+      "gf_prom": 1.64,
+      "gc_prom": 1.46,
+      "ult": [
+        {
+          "fecha": "2026-06-27",
+          "rival": "Argentina",
+          "gf": 1,
           "gc": 3,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-22",
+          "rival": "Algeria",
+          "gf": 1,
+          "gc": 2,
           "res": "P"
         },
         {
           "fecha": "2026-06-16",
-          "rival": "France",
+          "rival": "Austria",
           "gf": 1,
           "gc": 3,
           "res": "P"
         },
         {
-          "fecha": "2026-06-09",
-          "rival": "Saudi Arabia",
+          "fecha": "2026-06-07",
+          "rival": "Colombia",
           "gf": 0,
-          "gc": 0,
-          "res": "E"
+          "gc": 2,
+          "res": "P"
         },
         {
           "fecha": "2026-05-31",
-          "rival": "United States",
-          "gf": 2,
-          "gc": 3,
+          "rival": "Switzerland",
+          "gf": 1,
+          "gc": 4,
           "res": "P"
         },
         {
           "fecha": "2026-03-31",
-          "rival": "Gambia",
-          "gf": 3,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-28",
-          "rival": "Peru",
-          "gf": 2,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-01-18",
-          "rival": "Morocco",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-01-14",
-          "rival": "Egypt",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-01-09",
-          "rival": "Mali",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-01-03",
-          "rival": "Sudan",
-          "gf": 3,
-          "gc": 1,
-          "res": "G"
-        }
-      ]
-    },
-    "Netherlands": {
-      "elo": 1973,
-      "atk": 1.36,
-      "dfn": 0.81,
-      "n": 33,
-      "gf_prom": 2.48,
-      "gc_prom": 0.91,
-      "ult": [
-        {
-          "fecha": "2026-06-29",
-          "rival": "Morocco",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-25",
-          "rival": "Tunisia",
-          "gf": 3,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-20",
-          "rival": "Sweden",
-          "gf": 5,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-14",
-          "rival": "Japan",
+          "rival": "Nigeria",
           "gf": 2,
           "gc": 2,
           "res": "E"
         },
         {
-          "fecha": "2026-06-08",
-          "rival": "Uzbekistan",
+          "fecha": "2026-03-27",
+          "rival": "Costa Rica",
           "gf": 2,
-          "gc": 1,
-          "res": "G"
+          "gc": 2,
+          "res": "E"
         },
         {
-          "fecha": "2026-06-03",
-          "rival": "Algeria",
-          "gf": 0,
-          "gc": 1,
+          "fecha": "2025-12-18",
+          "rival": "Morocco",
+          "gf": 2,
+          "gc": 3,
           "res": "P"
         },
         {
-          "fecha": "2026-03-31",
-          "rival": "Ecuador",
+          "fecha": "2025-12-15",
+          "rival": "Saudi Arabia",
           "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-03-27",
-          "rival": "Norway",
-          "gf": 2,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-11-17",
-          "rival": "Lithuania",
-          "gf": 4,
           "gc": 0,
           "res": "G"
         },
         {
-          "fecha": "2025-11-14",
-          "rival": "Poland",
+          "fecha": "2025-12-12",
+          "rival": "Iraq",
           "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2025-10-12",
-          "rival": "Finland",
-          "gf": 4,
           "gc": 0,
           "res": "G"
         },
         {
-          "fecha": "2025-10-09",
-          "rival": "Malta",
-          "gf": 4,
+          "fecha": "2025-12-09",
+          "rival": "Egypt",
+          "gf": 3,
           "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-12-06",
+          "rival": "Kuwait",
+          "gf": 3,
+          "gc": 1,
           "res": "G"
         }
       ]
     },
-    "South Korea": {
-      "elo": 1737,
-      "atk": 0.93,
-      "dfn": 1.04,
-      "n": 35,
-      "gf_prom": 1.71,
-      "gc_prom": 1.0,
+    "Scotland": {
+      "elo": 1753,
+      "atk": 0.84,
+      "dfn": 1.16,
+      "n": 31,
+      "gf_prom": 1.45,
+      "gc_prom": 1.39,
       "ult": [
         {
           "fecha": "2026-06-24",
-          "rival": "South Africa",
+          "rival": "Brazil",
+          "gf": 0,
+          "gc": 3,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-19",
+          "rival": "Morocco",
           "gf": 0,
           "gc": 1,
           "res": "P"
         },
         {
-          "fecha": "2026-06-18",
-          "rival": "Mexico",
-          "gf": 0,
-          "gc": 1,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-11",
-          "rival": "Czechia",
+          "fecha": "2026-06-13",
+          "rival": "Haiti",
           "gf": 1,
           "gc": 0,
           "res": "G"
         },
         {
-          "fecha": "2026-06-03",
-          "rival": "El Salvador",
-          "gf": 1,
+          "fecha": "2026-06-06",
+          "rival": "Bolivia",
+          "gf": 4,
           "gc": 0,
           "res": "G"
         },
         {
           "fecha": "2026-05-30",
-          "rival": "Trinidad and Tobago",
-          "gf": 5,
-          "gc": 0,
+          "rival": "Curaçao",
+          "gf": 4,
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-05-30",
+          "rival": "Curacao",
+          "gf": 4,
+          "gc": 1,
           "res": "G"
         },
         {
           "fecha": "2026-03-31",
-          "rival": "Austria",
+          "rival": "Ivory Coast",
           "gf": 0,
           "gc": 1,
           "res": "P"
         },
         {
           "fecha": "2026-03-28",
-          "rival": "Ivory Coast",
+          "rival": "Japan",
           "gf": 0,
-          "gc": 4,
+          "gc": 1,
           "res": "P"
         },
         {
           "fecha": "2025-11-18",
-          "rival": "Ghana",
-          "gf": 1,
-          "gc": 0,
+          "rival": "Denmark",
+          "gf": 4,
+          "gc": 2,
           "res": "G"
         },
         {
-          "fecha": "2025-11-14",
-          "rival": "Bolivia",
+          "fecha": "2025-11-15",
+          "rival": "Greece",
           "gf": 2,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-10-14",
-          "rival": "Paraguay",
-          "gf": 2,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-10-10",
-          "rival": "Brazil",
-          "gf": 0,
-          "gc": 5,
+          "gc": 3,
           "res": "P"
         },
         {
-          "fecha": "2025-09-09",
-          "rival": "Mexico",
+          "fecha": "2025-10-12",
+          "rival": "Belarus",
           "gf": 2,
-          "gc": 2,
-          "res": "E"
+          "gc": 1,
+          "res": "G"
+        },
+        {
+          "fecha": "2025-10-09",
+          "rival": "Greece",
+          "gf": 3,
+          "gc": 1,
+          "res": "G"
         }
       ]
     },
@@ -14889,97 +16142,97 @@
         }
       ]
     },
-    "Czechia": {
-      "elo": 1652,
-      "atk": 0.91,
-      "dfn": 1.27,
-      "n": 30,
-      "gf_prom": 1.83,
-      "gc_prom": 1.23,
+    "Egypt": {
+      "elo": 1744,
+      "atk": 0.92,
+      "dfn": 0.87,
+      "n": 39,
+      "gf_prom": 1.49,
+      "gc_prom": 0.9,
       "ult": [
         {
-          "fecha": "2026-06-24",
-          "rival": "Mexico",
-          "gf": 0,
+          "fecha": "2026-07-07",
+          "rival": "Argentina",
+          "gf": 2,
           "gc": 3,
           "res": "P"
         },
         {
-          "fecha": "2026-06-18",
-          "rival": "South Africa",
+          "fecha": "2026-07-03",
+          "rival": "Australia",
           "gf": 1,
           "gc": 1,
           "res": "E"
         },
         {
-          "fecha": "2026-06-11",
-          "rival": "South Korea",
-          "gf": 0,
+          "fecha": "2026-06-26",
+          "rival": "Iran",
+          "gf": 1,
           "gc": 1,
-          "res": "P"
+          "res": "E"
         },
         {
-          "fecha": "2026-06-04",
-          "rival": "Guatemala",
+          "fecha": "2026-06-21",
+          "rival": "New Zealand",
           "gf": 3,
           "gc": 1,
           "res": "G"
         },
         {
-          "fecha": "2026-05-31",
-          "rival": "Kosovo",
-          "gf": 2,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-31",
-          "rival": "Denmark",
-          "gf": 2,
-          "gc": 2,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-03-26",
-          "rival": "Republic of Ireland",
-          "gf": 2,
-          "gc": 2,
-          "res": "E"
-        },
-        {
-          "fecha": "2025-11-17",
-          "rival": "Gibraltar",
-          "gf": 6,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-11-13",
-          "rival": "San Marino",
+          "fecha": "2026-06-15",
+          "rival": "Belgium",
           "gf": 1,
-          "gc": 0,
-          "res": "G"
+          "gc": 1,
+          "res": "E"
         },
         {
-          "fecha": "2025-10-12",
-          "rival": "Faroe Islands",
+          "fecha": "2026-06-06",
+          "rival": "Brazil",
           "gf": 1,
           "gc": 2,
           "res": "P"
         },
         {
-          "fecha": "2025-10-09",
-          "rival": "Croatia",
+          "fecha": "2026-05-28",
+          "rival": "Russia",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-31",
+          "rival": "Spain",
           "gf": 0,
           "gc": 0,
           "res": "E"
         },
         {
-          "fecha": "2025-09-08",
+          "fecha": "2026-03-27",
           "rival": "Saudi Arabia",
-          "gf": 1,
-          "gc": 1,
+          "gf": 4,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-01-17",
+          "rival": "Nigeria",
+          "gf": 0,
+          "gc": 0,
           "res": "E"
+        },
+        {
+          "fecha": "2026-01-14",
+          "rival": "Senegal",
+          "gf": 0,
+          "gc": 1,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-01-10",
+          "rival": "Ivory Coast",
+          "gf": 3,
+          "gc": 2,
+          "res": "G"
         }
       ]
     },
@@ -15077,848 +16330,96 @@
         }
       ]
     },
-    "Panama": {
-      "elo": 1659,
-      "atk": 0.86,
-      "dfn": 1.4,
-      "n": 37,
-      "gf_prom": 1.49,
-      "gc_prom": 1.43,
+    "Haiti": {
+      "elo": 1507,
+      "atk": 0.99,
+      "dfn": 1.44,
+      "n": 27,
+      "gf_prom": 2.37,
+      "gc_prom": 1.3,
       "ult": [
         {
-          "fecha": "2026-06-27",
-          "rival": "England",
-          "gf": 0,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-23",
-          "rival": "Croatia",
-          "gf": 0,
-          "gc": 1,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-17",
-          "rival": "Ghana",
-          "gf": 0,
-          "gc": 1,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-06",
-          "rival": "Bosnia-Herzegovina",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-06",
-          "rival": "Bosnia and Herzegovina",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-03",
-          "rival": "Dominican Republic",
-          "gf": 4,
-          "gc": 2,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-05-31",
-          "rival": "Brazil",
-          "gf": 2,
-          "gc": 6,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-03-31",
-          "rival": "South Africa",
-          "gf": 2,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-27",
-          "rival": "South Africa",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-01-22",
-          "rival": "Mexico",
-          "gf": 0,
-          "gc": 1,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-01-18",
-          "rival": "Bolivia",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2025-11-18",
-          "rival": "El Salvador",
-          "gf": 3,
-          "gc": 0,
-          "res": "G"
-        }
-      ]
-    },
-    "Saudi Arabia": {
-      "elo": 1595,
-      "atk": 0.55,
-      "dfn": 0.95,
-      "n": 37,
-      "gf_prom": 0.92,
-      "gc_prom": 0.97,
-      "ult": [
-        {
-          "fecha": "2026-06-26",
-          "rival": "Cape Verde",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-21",
-          "rival": "Spain",
-          "gf": 0,
-          "gc": 4,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-15",
-          "rival": "Uruguay",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-09",
-          "rival": "Senegal",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-05",
-          "rival": "Puerto Rico",
-          "gf": 3,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-05-30",
-          "rival": "Ecuador",
-          "gf": 2,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-31",
-          "rival": "Serbia",
-          "gf": 1,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-03-27",
-          "rival": "Egypt",
-          "gf": 0,
-          "gc": 4,
-          "res": "P"
-        },
-        {
-          "fecha": "2025-12-15",
+          "fecha": "2026-06-24",
           "rival": "Morocco",
-          "gf": 0,
-          "gc": 1,
-          "res": "P"
-        },
-        {
-          "fecha": "2025-12-15",
-          "rival": "Jordan",
-          "gf": 0,
-          "gc": 1,
-          "res": "P"
-        },
-        {
-          "fecha": "2025-12-08",
-          "rival": "Morocco",
-          "gf": 0,
-          "gc": 1,
-          "res": "P"
-        },
-        {
-          "fecha": "2025-11-18",
-          "rival": "Algeria",
-          "gf": 0,
-          "gc": 2,
-          "res": "P"
-        }
-      ]
-    },
-    "Norway": {
-      "elo": 1975,
-      "atk": 1.42,
-      "dfn": 1.06,
-      "n": 30,
-      "gf_prom": 2.6,
-      "gc_prom": 1.13,
-      "ult": [
-        {
-          "fecha": "2026-07-05",
-          "rival": "Brazil",
           "gf": 2,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-30",
-          "rival": "Ivory Coast",
-          "gf": 2,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-26",
-          "rival": "France",
-          "gf": 1,
           "gc": 4,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-22",
-          "rival": "Senegal",
-          "gf": 3,
-          "gc": 2,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-16",
-          "rival": "Iraq",
-          "gf": 4,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-07",
-          "rival": "Morocco",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-01",
-          "rival": "Sweden",
-          "gf": 3,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-31",
-          "rival": "Switzerland",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-03-27",
-          "rival": "Netherlands",
-          "gf": 1,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2025-11-16",
-          "rival": "Italy",
-          "gf": 4,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-11-13",
-          "rival": "Estonia",
-          "gf": 4,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-10-14",
-          "rival": "New Zealand",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        }
-      ]
-    },
-    "Japan": {
-      "elo": 1889,
-      "atk": 1.28,
-      "dfn": 0.73,
-      "n": 35,
-      "gf_prom": 2.54,
-      "gc_prom": 0.69,
-      "ult": [
-        {
-          "fecha": "2026-06-29",
-          "rival": "Brazil",
-          "gf": 1,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-25",
-          "rival": "Sweden",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-20",
-          "rival": "Tunisia",
-          "gf": 4,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-14",
-          "rival": "Netherlands",
-          "gf": 2,
-          "gc": 2,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-05-31",
-          "rival": "Iceland",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-31",
-          "rival": "England",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-28",
-          "rival": "Scotland",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-11-18",
-          "rival": "Bolivia",
-          "gf": 3,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-11-14",
-          "rival": "Ghana",
-          "gf": 2,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-10-14",
-          "rival": "Brazil",
-          "gf": 3,
-          "gc": 2,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-10-10",
-          "rival": "Paraguay",
-          "gf": 2,
-          "gc": 2,
-          "res": "E"
-        },
-        {
-          "fecha": "2025-09-09",
-          "rival": "United States",
-          "gf": 0,
-          "gc": 2,
-          "res": "P"
-        }
-      ]
-    },
-    "United States": {
-      "elo": 1819,
-      "atk": 1.14,
-      "dfn": 1.26,
-      "n": 37,
-      "gf_prom": 1.76,
-      "gc_prom": 1.49,
-      "ult": [
-        {
-          "fecha": "2026-07-06",
-          "rival": "Belgium",
-          "gf": 1,
-          "gc": 4,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-07-01",
-          "rival": "Bosnia and Herzegovina",
-          "gf": 2,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-25",
-          "rival": "Turkiye",
-          "gf": 2,
-          "gc": 3,
           "res": "P"
         },
         {
           "fecha": "2026-06-19",
-          "rival": "Australia",
-          "gf": 2,
-          "gc": 0,
-          "res": "G"
+          "rival": "Brazil",
+          "gf": 0,
+          "gc": 3,
+          "res": "P"
         },
         {
-          "fecha": "2026-06-12",
-          "rival": "Paraguay",
-          "gf": 4,
+          "fecha": "2026-06-13",
+          "rival": "Scotland",
+          "gf": 0,
           "gc": 1,
-          "res": "G"
+          "res": "P"
         },
         {
-          "fecha": "2026-06-06",
-          "rival": "Germany",
+          "fecha": "2026-06-05",
+          "rival": "Peru",
           "gf": 1,
           "gc": 2,
           "res": "P"
         },
         {
-          "fecha": "2026-05-31",
-          "rival": "Senegal",
-          "gf": 3,
-          "gc": 2,
+          "fecha": "2026-06-02",
+          "rival": "New Zealand",
+          "gf": 4,
+          "gc": 0,
           "res": "G"
         },
         {
           "fecha": "2026-03-31",
-          "rival": "Portugal",
-          "gf": 0,
-          "gc": 2,
-          "res": "P"
+          "rival": "Iceland",
+          "gf": 1,
+          "gc": 1,
+          "res": "E"
         },
         {
           "fecha": "2026-03-28",
-          "rival": "Belgium",
-          "gf": 2,
-          "gc": 5,
+          "rival": "Tunisia",
+          "gf": 0,
+          "gc": 1,
           "res": "P"
         },
         {
           "fecha": "2025-11-18",
-          "rival": "Uruguay",
-          "gf": 5,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-11-15",
-          "rival": "Paraguay",
+          "rival": "Nicaragua",
           "gf": 2,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-10-14",
-          "rival": "Australia",
-          "gf": 2,
-          "gc": 1,
-          "res": "G"
-        }
-      ]
-    },
-    "Uruguay": {
-      "elo": 1841,
-      "atk": 0.86,
-      "dfn": 0.75,
-      "n": 30,
-      "gf_prom": 1.2,
-      "gc_prom": 0.83,
-      "ult": [
-        {
-          "fecha": "2026-06-26",
-          "rival": "Spain",
-          "gf": 0,
-          "gc": 1,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-21",
-          "rival": "Cape Verde",
-          "gf": 2,
-          "gc": 2,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-15",
-          "rival": "Saudi Arabia",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-03-31",
-          "rival": "Algeria",
-          "gf": 0,
           "gc": 0,
-          "res": "E"
+          "res": "G"
         },
         {
-          "fecha": "2026-03-27",
-          "rival": "England",
+          "fecha": "2025-11-13",
+          "rival": "Costa Rica",
           "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2025-11-18",
-          "rival": "United States",
-          "gf": 1,
-          "gc": 5,
-          "res": "P"
-        },
-        {
-          "fecha": "2025-11-15",
-          "rival": "Mexico",
-          "gf": 0,
           "gc": 0,
-          "res": "E"
+          "res": "G"
         },
         {
           "fecha": "2025-10-13",
-          "rival": "Uzbekistan",
-          "gf": 2,
-          "gc": 1,
-          "res": "G"
+          "rival": "Honduras",
+          "gf": 0,
+          "gc": 3,
+          "res": "P"
         },
         {
-          "fecha": "2025-10-10",
-          "rival": "Dominican Republic",
-          "gf": 1,
+          "fecha": "2025-10-09",
+          "rival": "Nicaragua",
+          "gf": 3,
           "gc": 0,
           "res": "G"
         },
         {
           "fecha": "2025-09-09",
-          "rival": "Chile",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2025-09-04",
-          "rival": "Peru",
-          "gf": 3,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-06-11",
-          "rival": "Venezuela",
-          "gf": 0,
-          "gc": 2,
-          "res": "P"
-        }
-      ]
-    },
-    "Belgium": {
-      "elo": 1956,
-      "atk": 1.27,
-      "dfn": 0.96,
-      "n": 33,
-      "gf_prom": 2.3,
-      "gc_prom": 1.0,
-      "ult": [
-        {
-          "fecha": "2026-07-06",
-          "rival": "United States",
-          "gf": 4,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-07-01",
-          "rival": "Senegal",
-          "gf": 3,
-          "gc": 2,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-26",
-          "rival": "New Zealand",
-          "gf": 5,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-21",
-          "rival": "Iran",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-15",
-          "rival": "Egypt",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-06",
-          "rival": "Tunisia",
-          "gf": 5,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-02",
-          "rival": "Croatia",
-          "gf": 2,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-31",
-          "rival": "Mexico",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-03-28",
-          "rival": "United States",
-          "gf": 5,
-          "gc": 2,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-28",
-          "rival": "USA",
-          "gf": 5,
-          "gc": 2,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-11-18",
-          "rival": "Liechtenstein",
-          "gf": 7,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-11-15",
-          "rival": "Kazakhstan",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        }
-      ]
-    },
-    "South Africa": {
-      "elo": 1551,
-      "atk": 0.71,
-      "dfn": 0.98,
-      "n": 34,
-      "gf_prom": 1.24,
-      "gc_prom": 0.91,
-      "ult": [
-        {
-          "fecha": "2026-06-28",
-          "rival": "Canada",
-          "gf": 0,
-          "gc": 1,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-24",
-          "rival": "South Korea",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-18",
-          "rival": "Czechia",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-11",
-          "rival": "Mexico",
-          "gf": 0,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-06",
-          "rival": "Jamaica",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-05-29",
-          "rival": "Nicaragua",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-03-31",
-          "rival": "Panama",
-          "gf": 1,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-03-27",
-          "rival": "Panama",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-01-05",
-          "rival": "Cameroon",
-          "gf": 1,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-01-04",
-          "rival": "Cameroon",
-          "gf": 1,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2025-12-29",
-          "rival": "Zimbabwe",
-          "gf": 3,
-          "gc": 2,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-12-26",
-          "rival": "Egypt",
-          "gf": 0,
-          "gc": 1,
-          "res": "P"
-        }
-      ]
-    },
-    "Iran": {
-      "elo": 1764,
-      "atk": 0.98,
-      "dfn": 0.92,
-      "n": 35,
-      "gf_prom": 1.97,
-      "gc_prom": 0.8,
-      "ult": [
-        {
-          "fecha": "2026-06-26",
-          "rival": "Egypt",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-21",
-          "rival": "Belgium",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-15",
-          "rival": "New Zealand",
-          "gf": 2,
-          "gc": 2,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-04",
-          "rival": "Mali",
-          "gf": 2,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-05-29",
-          "rival": "Gambia",
-          "gf": 3,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-31",
           "rival": "Costa Rica",
-          "gf": 5,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-11-18",
-          "rival": "Uzbekistan",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2025-11-13",
-          "rival": "Cape Verde",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2025-10-14",
-          "rival": "Tanzania",
-          "gf": 2,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-10-10",
-          "rival": "Russia",
-          "gf": 1,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2025-09-08",
-          "rival": "Uzbekistan",
-          "gf": 0,
-          "gc": 1,
-          "res": "P"
-        },
-        {
-          "fecha": "2025-09-04",
-          "rival": "Tajikistan",
-          "gf": 2,
-          "gc": 2,
+          "gf": 3,
+          "gc": 3,
           "res": "E"
         }
       ]
@@ -16017,378 +16518,190 @@
         }
       ]
     },
-    "Algeria": {
-      "elo": 1753,
-      "atk": 1.13,
-      "dfn": 0.97,
-      "n": 42,
-      "gf_prom": 2.1,
-      "gc_prom": 0.86,
+    "Canada": {
+      "elo": 1734,
+      "atk": 0.87,
+      "dfn": 0.8,
+      "n": 37,
+      "gf_prom": 1.35,
+      "gc_prom": 0.81,
       "ult": [
         {
-          "fecha": "2026-07-03",
+          "fecha": "2026-07-04",
+          "rival": "Morocco",
+          "gf": 0,
+          "gc": 3,
+          "res": "P"
+        },
+        {
+          "fecha": "2026-06-28",
+          "rival": "South Africa",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-24",
           "rival": "Switzerland",
-          "gf": 0,
+          "gf": 1,
           "gc": 2,
           "res": "P"
         },
         {
-          "fecha": "2026-06-27",
-          "rival": "Austria",
-          "gf": 3,
-          "gc": 3,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-22",
-          "rival": "Jordan",
-          "gf": 2,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-16",
-          "rival": "Argentina",
-          "gf": 0,
-          "gc": 3,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-10",
-          "rival": "Bolivia",
-          "gf": 4,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-03",
-          "rival": "Netherlands",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-31",
-          "rival": "Uruguay",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-01-10",
-          "rival": "Nigeria",
-          "gf": 0,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-01-06",
-          "rival": "DR Congo",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-12-31",
-          "rival": "Equatorial Guinea",
-          "gf": 3,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-12-28",
-          "rival": "Burkina Faso",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-12-24",
-          "rival": "Sudan",
-          "gf": 3,
-          "gc": 0,
-          "res": "G"
-        }
-      ]
-    },
-    "Argentina": {
-      "elo": 2156,
-      "atk": 1.25,
-      "dfn": 0.77,
-      "n": 34,
-      "gf_prom": 2.06,
-      "gc_prom": 0.74,
-      "ult": [
-        {
-          "fecha": "2026-07-07",
-          "rival": "Egypt",
-          "gf": 3,
-          "gc": 2,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-07-03",
-          "rival": "Cape Verde",
-          "gf": 3,
-          "gc": 2,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-27",
-          "rival": "Jordan",
-          "gf": 3,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-22",
-          "rival": "Austria",
-          "gf": 2,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-16",
-          "rival": "Algeria",
-          "gf": 3,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-09",
-          "rival": "Iceland",
-          "gf": 3,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-06",
-          "rival": "Honduras",
-          "gf": 2,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-31",
-          "rival": "Zambia",
-          "gf": 5,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-27",
-          "rival": "Mauritania",
-          "gf": 2,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-11-14",
-          "rival": "Angola",
-          "gf": 2,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-10-14",
-          "rival": "Puerto Rico",
+          "fecha": "2026-06-18",
+          "rival": "Qatar",
           "gf": 6,
           "gc": 0,
           "res": "G"
         },
         {
-          "fecha": "2025-10-10",
-          "rival": "Venezuela",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        }
-      ]
-    },
-    "Cape Verde": {
-      "elo": 1620,
-      "atk": 0.78,
-      "dfn": 1.07,
-      "n": 33,
-      "gf_prom": 1.3,
-      "gc_prom": 1.03,
-      "ult": [
-        {
-          "fecha": "2026-07-03",
-          "rival": "Argentina",
-          "gf": 2,
-          "gc": 3,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-26",
-          "rival": "Saudi Arabia",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-21",
-          "rival": "Uruguay",
-          "gf": 2,
-          "gc": 2,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-06-15",
-          "rival": "Spain",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-05-31",
-          "rival": "Serbia",
-          "gf": 3,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-29",
-          "rival": "Finland",
+          "fecha": "2026-06-12",
+          "rival": "Bosnia and Herzegovina",
           "gf": 1,
           "gc": 1,
           "res": "E"
         },
         {
-          "fecha": "2026-03-26",
-          "rival": "Chile",
-          "gf": 2,
-          "gc": 4,
-          "res": "P"
-        },
-        {
-          "fecha": "2025-11-17",
-          "rival": "Egypt",
+          "fecha": "2026-06-05",
+          "rival": "Republic of Ireland",
           "gf": 1,
           "gc": 1,
           "res": "E"
-        },
-        {
-          "fecha": "2025-11-13",
-          "rival": "Iran",
-          "gf": 0,
-          "gc": 0,
-          "res": "E"
-        },
-        {
-          "fecha": "2025-10-13",
-          "rival": "Eswatini",
-          "gf": 3,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-10-08",
-          "rival": "Libya",
-          "gf": 3,
-          "gc": 3,
-          "res": "E"
-        },
-        {
-          "fecha": "2025-09-09",
-          "rival": "Cameroon",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        }
-      ]
-    },
-    "Tunisia": {
-      "elo": 1535,
-      "atk": 0.72,
-      "dfn": 1.07,
-      "n": 33,
-      "gf_prom": 1.27,
-      "gc_prom": 1.09,
-      "ult": [
-        {
-          "fecha": "2026-06-25",
-          "rival": "Netherlands",
-          "gf": 1,
-          "gc": 3,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-20",
-          "rival": "Japan",
-          "gf": 0,
-          "gc": 4,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-14",
-          "rival": "Sweden",
-          "gf": 1,
-          "gc": 5,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-06",
-          "rival": "Belgium",
-          "gf": 0,
-          "gc": 5,
-          "res": "P"
         },
         {
           "fecha": "2026-06-01",
-          "rival": "Austria",
-          "gf": 0,
-          "gc": 1,
-          "res": "P"
+          "rival": "Uzbekistan",
+          "gf": 2,
+          "gc": 0,
+          "res": "G"
         },
         {
           "fecha": "2026-03-31",
-          "rival": "Canada",
+          "rival": "Tunisia",
           "gf": 0,
           "gc": 0,
           "res": "E"
         },
         {
           "fecha": "2026-03-28",
-          "rival": "Haiti",
-          "gf": 1,
+          "rival": "Iceland",
+          "gf": 2,
+          "gc": 2,
+          "res": "E"
+        },
+        {
+          "fecha": "2025-11-18",
+          "rival": "Venezuela",
+          "gf": 2,
           "gc": 0,
           "res": "G"
         },
         {
-          "fecha": "2026-01-03",
-          "rival": "Mali",
-          "gf": 1,
-          "gc": 1,
+          "fecha": "2025-11-13",
+          "rival": "Ecuador",
+          "gf": 0,
+          "gc": 0,
           "res": "E"
         },
         {
-          "fecha": "2025-12-30",
-          "rival": "Tanzania",
-          "gf": 1,
-          "gc": 1,
+          "fecha": "2025-10-14",
+          "rival": "Colombia",
+          "gf": 0,
+          "gc": 0,
           "res": "E"
-        },
+        }
+      ]
+    },
+    "Mexico": {
+      "elo": 1947,
+      "atk": 0.97,
+      "dfn": 0.73,
+      "n": 42,
+      "gf_prom": 1.52,
+      "gc_prom": 0.76,
+      "ult": [
         {
-          "fecha": "2025-12-27",
-          "rival": "Nigeria",
+          "fecha": "2026-07-05",
+          "rival": "England",
           "gf": 2,
           "gc": 3,
           "res": "P"
         },
         {
-          "fecha": "2025-12-23",
-          "rival": "Uganda",
+          "fecha": "2026-06-30",
+          "rival": "Ecuador",
+          "gf": 2,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-24",
+          "rival": "Czechia",
           "gf": 3,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-18",
+          "rival": "South Korea",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-11",
+          "rival": "South Africa",
+          "gf": 2,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-06-04",
+          "rival": "Serbia",
+          "gf": 5,
           "gc": 1,
           "res": "G"
         },
         {
-          "fecha": "2025-12-18",
-          "rival": "Botswana",
+          "fecha": "2026-05-30",
+          "rival": "Australia",
+          "gf": 1,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-05-22",
+          "rival": "Ghana",
           "gf": 2,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-03-31",
+          "rival": "Belgium",
+          "gf": 1,
           "gc": 1,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-03-28",
+          "rival": "Portugal",
+          "gf": 0,
+          "gc": 0,
+          "res": "E"
+        },
+        {
+          "fecha": "2026-02-25",
+          "rival": "Iceland",
+          "gf": 4,
+          "gc": 0,
+          "res": "G"
+        },
+        {
+          "fecha": "2026-01-25",
+          "rival": "Bolivia",
+          "gf": 1,
+          "gc": 0,
           "res": "G"
         }
       ]
@@ -16486,677 +16799,395 @@
           "res": "E"
         }
       ]
-    },
-    "Haiti": {
-      "elo": 1507,
-      "atk": 0.99,
-      "dfn": 1.44,
-      "n": 27,
-      "gf_prom": 2.37,
-      "gc_prom": 1.3,
-      "ult": [
-        {
-          "fecha": "2026-06-24",
-          "rival": "Morocco",
-          "gf": 2,
-          "gc": 4,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-19",
-          "rival": "Brazil",
-          "gf": 0,
-          "gc": 3,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-13",
-          "rival": "Scotland",
-          "gf": 0,
-          "gc": 1,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-05",
-          "rival": "Peru",
-          "gf": 1,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-02",
-          "rival": "New Zealand",
-          "gf": 4,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-31",
-          "rival": "Iceland",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2026-03-28",
-          "rival": "Tunisia",
-          "gf": 0,
-          "gc": 1,
-          "res": "P"
-        },
-        {
-          "fecha": "2025-11-18",
-          "rival": "Nicaragua",
-          "gf": 2,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-11-13",
-          "rival": "Costa Rica",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-10-13",
-          "rival": "Honduras",
-          "gf": 0,
-          "gc": 3,
-          "res": "P"
-        },
-        {
-          "fecha": "2025-10-09",
-          "rival": "Nicaragua",
-          "gf": 3,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-09-09",
-          "rival": "Costa Rica",
-          "gf": 3,
-          "gc": 3,
-          "res": "E"
-        }
-      ]
-    },
-    "France": {
-      "elo": 2162,
-      "atk": 1.19,
-      "dfn": 0.68,
-      "n": 34,
-      "gf_prom": 1.91,
-      "gc_prom": 0.85,
-      "ult": [
-        {
-          "fecha": "2026-07-09",
-          "rival": "Morocco",
-          "gf": 2,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-07-04",
-          "rival": "Paraguay",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-30",
-          "rival": "Sweden",
-          "gf": 3,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-26",
-          "rival": "Norway",
-          "gf": 4,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-22",
-          "rival": "Iraq",
-          "gf": 3,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-16",
-          "rival": "Senegal",
-          "gf": 3,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-08",
-          "rival": "Northern Ireland",
-          "gf": 3,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-04",
-          "rival": "Ivory Coast",
-          "gf": 1,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-03-29",
-          "rival": "Colombia",
-          "gf": 3,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-26",
-          "rival": "Brazil",
-          "gf": 2,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-11-16",
-          "rival": "Azerbaijan",
-          "gf": 3,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-11-13",
-          "rival": "Ukraine",
-          "gf": 4,
-          "gc": 0,
-          "res": "G"
-        }
-      ]
-    },
-    "Ivory Coast": {
-      "elo": 1762,
-      "atk": 0.84,
-      "dfn": 0.68,
-      "n": 34,
-      "gf_prom": 1.56,
-      "gc_prom": 0.62,
-      "ult": [
-        {
-          "fecha": "2026-06-30",
-          "rival": "Norway",
-          "gf": 1,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-25",
-          "rival": "Curacao",
-          "gf": 2,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-20",
-          "rival": "Germany",
-          "gf": 1,
-          "gc": 2,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-06-14",
-          "rival": "Ecuador",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-06-04",
-          "rival": "France",
-          "gf": 2,
-          "gc": 1,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-31",
-          "rival": "Scotland",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-03-28",
-          "rival": "South Korea",
-          "gf": 4,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2026-01-10",
-          "rival": "Egypt",
-          "gf": 2,
-          "gc": 3,
-          "res": "P"
-        },
-        {
-          "fecha": "2026-01-06",
-          "rival": "Burkina Faso",
-          "gf": 3,
-          "gc": 0,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-12-31",
-          "rival": "Gabon",
-          "gf": 3,
-          "gc": 2,
-          "res": "G"
-        },
-        {
-          "fecha": "2025-12-28",
-          "rival": "Cameroon",
-          "gf": 1,
-          "gc": 1,
-          "res": "E"
-        },
-        {
-          "fecha": "2025-12-24",
-          "rival": "Mozambique",
-          "gf": 1,
-          "gc": 0,
-          "res": "G"
-        }
-      ]
     }
   },
-  "mu_liga": 1.393,
+  "mu_liga": 1.394,
   "ad_ratings": {
     "atk": {
-      "Gambia": 0.609,
-      "Croatia": 1.0789,
-      "Egypt": 0.9151,
-      "Denmark": 0.8695,
-      "Morocco": 1.0084,
-      "Portugal": 1.2628,
-      "China": 0.4488,
-      "Germany": 1.5004,
-      "Curacao": 0.8723,
-      "Peru": 0.5327,
-      "Kazakhstan": 0.4878,
-      "Bermuda": 0.595,
-      "Brazil": 1.2725,
-      "Sao Tome and Principe": 0.6047,
-      "Bahrain": 0.6594,
-      "Paraguay": 0.7393,
-      "Uzbekistan": 0.7038,
-      "Turkiye": 0.9483,
-      "Jordan": 0.9441,
-      "Syria": 0.5049,
-      "Indonesia": 0.5489,
-      "Trinidad and Tobago": 0.4524,
-      "Ivory Coast": 0.845,
-      "El Salvador": 0.2951,
-      "Venezuela": 0.8098,
-      "Netherlands": 1.3594,
-      "Djibouti": 0.6219,
-      "South Korea": 0.9322,
-      "Liechtenstein": 0.4743,
-      "Gabon": 0.7168,
-      "Equatorial Guinea": 0.6218,
-      "Suriname": 0.4537,
-      "Seychelles": 0.6387,
-      "Turkey": 0.7559,
-      "Mauritius": 0.4725,
-      "Samoa": 0.5935,
-      "Mali": 0.5455,
-      "Belgium": 1.2661,
-      "Montenegro": 0.6061,
-      "Republic of Ireland": 0.6177,
-      "Cyprus": 0.6019,
-      "Poland": 0.89,
-      "Chad": 0.5598,
-      "Wales": 0.6463,
-      "Hungary": 0.6307,
-      "Solomon Islands": 0.5935,
-      "Belize": 0.5791,
-      "India": 0.4972,
-      "Northern Ireland": 0.7056,
-      "Kuwait": 0.5599,
-      "Jamaica": 0.5448,
-      "Oman": 0.3991,
-      "Fiji": 0.5935,
-      "Estonia": 0.4467,
-      "Myanmar": 0.6344,
-      "Azerbaijan": 0.5463,
-      "Haiti": 0.9932,
-      "New Caledonia": 0.5935,
-      "Saint Martin": 0.4825,
-      "Pakistan": 0.615,
-      "Sudan": 0.3695,
-      "Slovakia": 0.6985,
-      "Congo DR": 0.8214,
-      "North Korea": 0.5596,
-      "Eswatini": 0.605,
-      "Slovenia": 0.5848,
-      "Sweden": 1.1097,
-      "England": 1.1305,
-      "Serbia": 0.6534,
-      "Malaysia": 0.6053,
-      "Kenya": 0.5187,
-      "Latvia": 0.6383,
-      "Costa Rica": 0.6299,
-      "Mauritania": 0.5262,
-      "Colombia": 1.3274,
-      "Congo": 0.5569,
-      "Grenada": 0.4825,
-      "Vietnam": 0.8732,
-      "Burundi": 0.4838,
-      "Moldova": 0.6172,
-      "Israel": 0.6964,
-      "Cameroon": 0.8411,
-      "Andorra": 0.5345,
-      "Canada": 0.8683,
-      "Singapore": 0.6078,
-      "Hong Kong": 0.7524,
-      "Guinea-Bissau": 0.5953,
-      "Guyana": 0.605,
-      "Italy": 0.7421,
-      "USA": 0.8189,
-      "Guatemala": 0.6271,
-      "Czechia": 0.91,
-      "Ghana": 0.7679,
-      "Iceland": 0.7984,
-      "Somalia": 0.6137,
-      "Sint Maarten": 0.4846,
-      "North Macedonia": 0.5231,
-      "Kosovo": 0.5473,
-      "Mozambique": 0.7062,
-      "United States": 1.1408,
-      "Bolivia": 0.7524,
-      "South Africa": 0.712,
-      "Uganda": 0.676,
-      "Niger": 0.729,
-      "Ecuador": 0.539,
-      "Tanzania": 0.5069,
-      "Faroe Islands": 0.6816,
-      "Cape Verde": 0.781,
-      "Tunisia": 0.7249,
-      "Switzerland": 1.1616,
-      "Tajikistan": 0.5376,
-      "Czech Republic": 0.7102,
-      "Lesotho": 0.809,
-      "Liberia": 0.5,
-      "Armenia": 0.6477,
-      "Madagascar": 0.5932,
-      "Dominican Republic": 0.7004,
-      "Russia": 0.8927,
-      "Scotland": 0.8363,
-      "Nicaragua": 0.3552,
-      "Romania": 0.5189,
-      "Bosnia and Herzegovina": 0.7506,
-      "Gibraltar": 0.4036,
-      "Curaçao": 0.6666,
-      "Iraq": 0.675,
-      "Namibia": 0.4943,
-      "Ukraine": 0.7391,
-      "Georgia": 0.8314,
-      "Turkmenistan": 0.5702,
-      "Angola": 0.6918,
+      "Japan": 1.2838,
       "Vanuatu": 0.5225,
       "Comoros": 0.6207,
-      "Luxembourg": 0.5566,
-      "Central African Republic": 0.7774,
-      "Qatar": 0.7124,
-      "Greece": 0.886,
-      "Australia": 0.8109,
-      "San Marino": 0.3598,
-      "Bosnia-Herzegovina": 0.6756,
-      "Libya": 0.7916,
-      "Zimbabwe": 0.6908,
-      "New Zealand": 1.0509,
-      "Thailand": 0.5766,
-      "Ethiopia": 0.6226,
-      "Burkina Faso": 0.7147,
-      "Palestine": 0.5728,
-      "UAE": 0.5007,
-      "Panama": 0.8611,
-      "Norway": 1.416,
-      "Saint Lucia": 0.6106,
-      "Iran": 0.9779,
+      "Lesotho": 0.8091,
       "Puerto Rico": 0.4756,
-      "Guadeloupe": 0.7721,
-      "Guinea": 0.6509,
-      "France": 1.1879,
-      "Sierra Leone": 0.6954,
-      "Finland": 0.583,
-      "Zambia": 0.5336,
-      "Lithuania": 0.75,
-      "Malawi": 0.6047,
-      "Kyrgyzstan": 0.6584,
-      "Bulgaria": 0.5099,
-      "Tahiti": 0.5105,
-      "Austria": 1.2604,
-      "Honduras": 0.5616,
-      "Mexico": 0.9671,
-      "Spain": 1.5613,
-      "Nigeria": 0.8879,
-      "Lebanon": 0.5166,
-      "Togo": 0.4468,
-      "Senegal": 1.3244,
-      "United Arab Emirates": 0.7999,
-      "DR Congo": 0.722,
-      "South Sudan": 0.6529,
-      "Malta": 0.5566,
-      "China PR": 0.7655,
-      "Afghanistan": 0.7203,
-      "Saudi Arabia": 0.5544,
-      "Japan": 1.2838,
-      "Belarus": 0.6024,
-      "Algeria": 1.1261,
-      "Argentina": 1.2489,
-      "Chile": 0.7232,
-      "Barbados": 0.6447,
+      "Sint Maarten": 0.4847,
+      "Suriname": 0.4537,
+      "India": 0.4973,
+      "Indonesia": 0.549,
       "Botswana": 0.598,
+      "Kenya": 0.5188,
+      "Moldova": 0.6173,
+      "Tahiti": 0.5105,
+      "Czechia": 0.91,
+      "South Africa": 0.7121,
+      "Oman": 0.3991,
+      "Azerbaijan": 0.5464,
+      "Austria": 1.2605,
+      "Aruba": 0.6127,
+      "North Macedonia": 0.5232,
+      "Croatia": 1.079,
+      "Bolivia": 0.7524,
+      "Thailand": 0.5766,
+      "Pakistan": 0.6151,
+      "Cameroon": 0.8412,
+      "Madagascar": 0.5933,
+      "San Marino": 0.3599,
+      "United States": 1.1408,
+      "New Caledonia": 0.5935,
+      "Turkiye": 0.9483,
+      "North Korea": 0.5596,
+      "Wales": 0.6463,
+      "Congo DR": 0.8215,
+      "Jordan": 0.9441,
+      "Romania": 0.5189,
+      "DR Congo": 0.7221,
+      "Curaçao": 0.6667,
+      "Ghana": 0.7679,
+      "Samoa": 0.5935,
+      "Peru": 0.5328,
+      "Angola": 0.6918,
+      "Bermuda": 0.5951,
+      "Faroe Islands": 0.6816,
+      "Guatemala": 0.6272,
+      "Cyprus": 0.602,
+      "Estonia": 0.4467,
+      "Seychelles": 0.6388,
+      "Iraq": 0.6751,
+      "Togo": 0.4469,
+      "Niger": 0.7291,
+      "Finland": 0.583,
+      "Saudi Arabia": 0.5545,
+      "Algeria": 1.1261,
+      "Belgium": 1.2639,
+      "UAE": 0.5007,
+      "Iran": 0.9779,
+      "Senegal": 1.3245,
+      "Colombia": 1.3275,
+      "Honduras": 0.5617,
+      "Kyrgyzstan": 0.6584,
+      "Israel": 0.6965,
+      "Dominican Republic": 0.7005,
+      "Mauritius": 0.4726,
+      "Brazil": 1.2726,
+      "Somalia": 0.6137,
       "Philippines": 0.517,
-      "Benin": 0.529,
-      "Aruba": 0.6126,
+      "Norway": 1.416,
+      "Namibia": 0.4943,
       "Rwanda": 0.4832,
-      "Albania": 0.6255,
-      "Uruguay": 0.858
+      "El Salvador": 0.2952,
+      "Netherlands": 1.3594,
+      "New Zealand": 1.0509,
+      "Chad": 0.5599,
+      "Gambia": 0.609,
+      "Hungary": 0.6307,
+      "Andorra": 0.5347,
+      "Panama": 0.8611,
+      "South Sudan": 0.653,
+      "Guadeloupe": 0.7722,
+      "Germany": 1.5005,
+      "France": 1.188,
+      "Australia": 0.811,
+      "Tajikistan": 0.5376,
+      "China": 0.4488,
+      "Slovakia": 0.6986,
+      "Belize": 0.5791,
+      "Malaysia": 0.6053,
+      "Central African Republic": 0.7775,
+      "Greece": 0.886,
+      "Ethiopia": 0.6226,
+      "Haiti": 0.9932,
+      "Saint Lucia": 0.6107,
+      "Canada": 0.8683,
+      "Malta": 0.5566,
+      "Mexico": 0.9671,
+      "Singapore": 0.6079,
+      "Luxembourg": 0.5567,
+      "Congo": 0.5569,
+      "Bosnia and Herzegovina": 0.7506,
+      "Sweden": 1.1098,
+      "Uruguay": 0.8581,
+      "Mali": 0.5456,
+      "Nigeria": 0.888,
+      "Mozambique": 0.7062,
+      "Sudan": 0.3695,
+      "Paraguay": 0.7393,
+      "Djibouti": 0.6219,
+      "Ivory Coast": 0.845,
+      "Burkina Faso": 0.7147,
+      "Malawi": 0.6048,
+      "Bahrain": 0.6594,
+      "Republic of Ireland": 0.6178,
+      "Turkey": 0.756,
+      "Trinidad and Tobago": 0.4524,
+      "Gibraltar": 0.4036,
+      "Tanzania": 0.5069,
+      "Czech Republic": 0.7103,
+      "Slovenia": 0.5849,
+      "Tunisia": 0.725,
+      "Venezuela": 0.8099,
+      "Albania": 0.6257,
+      "Libya": 0.7917,
+      "Solomon Islands": 0.5935,
+      "Saint Martin": 0.4826,
+      "Curacao": 0.8723,
+      "Gabon": 0.7169,
+      "China PR": 0.7656,
+      "Zimbabwe": 0.6908,
+      "Burundi": 0.4838,
+      "Serbia": 0.6537,
+      "Italy": 0.7423,
+      "Barbados": 0.6448,
+      "Egypt": 0.9152,
+      "Montenegro": 0.6062,
+      "Kazakhstan": 0.4879,
+      "Nicaragua": 0.3552,
+      "Liberia": 0.5,
+      "Poland": 0.8901,
+      "USA": 0.819,
+      "Argentina": 1.249,
+      "Switzerland": 1.1618,
+      "Lithuania": 0.75,
+      "Belarus": 0.6025,
+      "Grenada": 0.4826,
+      "Turkmenistan": 0.5703,
+      "Georgia": 0.8318,
+      "Lebanon": 0.5167,
+      "Fiji": 0.5935,
+      "South Korea": 0.9322,
+      "Myanmar": 0.6345,
+      "Denmark": 0.8698,
+      "Guyana": 0.6051,
+      "Uganda": 0.676,
+      "Ukraine": 0.7391,
+      "Guinea-Bissau": 0.5954,
+      "Sierra Leone": 0.6955,
+      "Hong Kong": 0.7525,
+      "Jamaica": 0.5448,
+      "Qatar": 0.7124,
+      "Iceland": 0.7985,
+      "Bulgaria": 0.5102,
+      "Benin": 0.529,
+      "Sao Tome and Principe": 0.6048,
+      "Russia": 0.8928,
+      "Spain": 1.5607,
+      "Uzbekistan": 0.7038,
+      "Kuwait": 0.56,
+      "Cape Verde": 0.7811,
+      "England": 1.1306,
+      "Kosovo": 0.5474,
+      "Eswatini": 0.6051,
+      "Portugal": 1.2629,
+      "Costa Rica": 0.63,
+      "Equatorial Guinea": 0.6218,
+      "Northern Ireland": 0.7058,
+      "Syria": 0.5049,
+      "Bosnia-Herzegovina": 0.6757,
+      "Morocco": 1.0085,
+      "Guinea": 0.651,
+      "Afghanistan": 0.7204,
+      "Latvia": 0.6384,
+      "Scotland": 0.8363,
+      "Mauritania": 0.5263,
+      "Palestine": 0.5728,
+      "Chile": 0.7233,
+      "United Arab Emirates": 0.8,
+      "Liechtenstein": 0.4744,
+      "Vietnam": 0.8732,
+      "Ecuador": 0.539,
+      "Armenia": 0.6477,
+      "Zambia": 0.5336
     },
     "dfn": {
-      "Gambia": 1.5771,
-      "Croatia": 1.0167,
-      "Egypt": 0.8717,
-      "Denmark": 0.9705,
-      "Morocco": 0.5672,
-      "Portugal": 0.7962,
-      "China": 1.8422,
-      "Germany": 0.8508,
-      "Curacao": 1.4639,
-      "Peru": 0.8619,
-      "Kazakhstan": 1.5075,
-      "Bermuda": 2.4178,
-      "Brazil": 0.8295,
-      "Sao Tome and Principe": 2.3543,
-      "Bahrain": 1.6667,
-      "Paraguay": 0.9467,
-      "Uzbekistan": 0.9632,
-      "Turkiye": 1.279,
-      "Jordan": 1.4012,
-      "Syria": 1.1999,
-      "Indonesia": 2.2614,
-      "Trinidad and Tobago": 1.6776,
-      "Ivory Coast": 0.6839,
-      "El Salvador": 1.2617,
-      "Venezuela": 1.2302,
-      "Netherlands": 0.8099,
-      "Djibouti": 1.6812,
-      "South Korea": 1.0353,
-      "Liechtenstein": 2.6562,
-      "Gabon": 1.5322,
-      "Equatorial Guinea": 1.0924,
-      "Suriname": 1.2897,
-      "Seychelles": 2.472,
-      "Turkey": 1.5468,
-      "Mauritius": 1.2527,
-      "Samoa": 2.5286,
-      "Mali": 1.0122,
-      "Belgium": 0.9595,
-      "Montenegro": 1.5788,
-      "Republic of Ireland": 0.8296,
-      "Cyprus": 1.3629,
-      "Poland": 1.3532,
-      "Chad": 1.9103,
-      "Wales": 1.3491,
-      "Hungary": 1.1724,
-      "Solomon Islands": 1.6255,
-      "Belize": 1.5152,
-      "India": 1.8722,
-      "Northern Ireland": 1.3854,
-      "Kuwait": 1.6652,
-      "Jamaica": 1.3826,
-      "Oman": 1.4866,
-      "Fiji": 2.348,
-      "Estonia": 1.5558,
-      "Myanmar": 1.8806,
-      "Azerbaijan": 2.0366,
-      "Haiti": 1.4435,
-      "New Caledonia": 1.6255,
-      "Saint Martin": 2.3176,
-      "Pakistan": 1.8491,
-      "Sudan": 1.0933,
-      "Slovakia": 1.1675,
-      "Congo DR": 1.3006,
-      "North Korea": 1.7887,
-      "Eswatini": 1.7399,
-      "Slovenia": 1.0572,
-      "Sweden": 1.5935,
-      "England": 0.6874,
-      "Serbia": 1.2583,
-      "Malaysia": 2.194,
-      "Kenya": 2.0778,
-      "Latvia": 1.9493,
-      "Costa Rica": 1.4864,
-      "Mauritania": 1.1577,
-      "Colombia": 0.7443,
-      "Congo": 1.7082,
-      "Grenada": 1.0816,
-      "Vietnam": 2.0867,
-      "Burundi": 1.8333,
-      "Moldova": 2.772,
-      "Israel": 1.5122,
-      "Cameroon": 1.2423,
-      "Andorra": 1.5104,
-      "Canada": 0.8039,
-      "Singapore": 2.4183,
-      "Hong Kong": 2.0038,
-      "Guinea-Bissau": 1.2945,
-      "Guyana": 1.3533,
-      "Italy": 1.1176,
-      "USA": 1.888,
-      "Guatemala": 1.722,
-      "Czechia": 1.2676,
-      "Ghana": 1.1462,
-      "Iceland": 1.6456,
-      "Somalia": 1.5965,
-      "Sint Maarten": 2.9424,
-      "North Macedonia": 1.4711,
-      "Kosovo": 1.1603,
-      "Mozambique": 1.6112,
-      "United States": 1.2604,
-      "Bolivia": 1.359,
-      "South Africa": 0.9803,
-      "Uganda": 1.7915,
-      "Niger": 1.7222,
-      "Ecuador": 0.738,
-      "Tanzania": 1.1848,
-      "Faroe Islands": 1.3714,
-      "Cape Verde": 1.0701,
-      "Tunisia": 1.0725,
-      "Switzerland": 0.8842,
-      "Tajikistan": 1.528,
-      "Czech Republic": 1.343,
-      "Lesotho": 1.4903,
-      "Liberia": 1.9764,
-      "Armenia": 2.5147,
-      "Madagascar": 2.1373,
-      "Dominican Republic": 1.8872,
-      "Russia": 1.1795,
-      "Scotland": 1.161,
-      "Nicaragua": 1.8161,
-      "Romania": 1.3865,
-      "Bosnia and Herzegovina": 1.4607,
-      "Gibraltar": 2.2943,
-      "Curaçao": 2.2777,
-      "Iraq": 1.1567,
-      "Namibia": 1.623,
-      "Ukraine": 1.318,
-      "Georgia": 1.4981,
-      "Turkmenistan": 1.8174,
-      "Angola": 0.9612,
-      "Vanuatu": 2.5091,
-      "Comoros": 1.6985,
-      "Luxembourg": 1.4701,
-      "Central African Republic": 2.4233,
-      "Qatar": 1.8739,
-      "Greece": 1.2276,
-      "Australia": 0.7679,
-      "San Marino": 2.6011,
-      "Bosnia-Herzegovina": 1.3258,
-      "Libya": 1.6064,
-      "Zimbabwe": 1.7143,
-      "New Zealand": 1.2114,
-      "Thailand": 1.4413,
-      "Ethiopia": 1.5238,
-      "Burkina Faso": 1.2786,
-      "Palestine": 1.5388,
-      "UAE": 1.2726,
-      "Panama": 1.3955,
-      "Norway": 1.0585,
-      "Saint Lucia": 1.8917,
-      "Iran": 0.9233,
-      "Puerto Rico": 2.3847,
-      "Guadeloupe": 2.0834,
-      "Guinea": 1.0964,
-      "France": 0.6792,
-      "Sierra Leone": 1.4416,
-      "Finland": 1.3072,
-      "Zambia": 1.8326,
-      "Lithuania": 1.6703,
-      "Malawi": 1.5695,
-      "Kyrgyzstan": 1.9567,
-      "Bulgaria": 1.93,
-      "Tahiti": 2.0135,
-      "Austria": 0.9256,
-      "Honduras": 1.4475,
-      "Mexico": 0.7274,
-      "Spain": 0.6565,
-      "Nigeria": 0.934,
-      "Lebanon": 1.4902,
-      "Togo": 1.5322,
-      "Senegal": 0.9181,
-      "United Arab Emirates": 1.1948,
-      "DR Congo": 0.7444,
-      "South Sudan": 2.1811,
-      "Malta": 2.8941,
-      "China PR": 1.1329,
-      "Afghanistan": 1.6551,
-      "Saudi Arabia": 0.9504,
-      "Japan": 0.7304,
-      "Belarus": 1.5689,
-      "Algeria": 0.9668,
-      "Argentina": 0.7711,
-      "Chile": 1.3608,
-      "Barbados": 1.9594,
+      "Japan": 0.7305,
+      "Vanuatu": 2.5093,
+      "Comoros": 1.6986,
+      "Lesotho": 1.4904,
+      "Puerto Rico": 2.3848,
+      "Sint Maarten": 2.9425,
+      "Suriname": 1.2898,
+      "India": 1.8723,
+      "Indonesia": 2.2615,
       "Botswana": 1.6173,
-      "Philippines": 2.0206,
+      "Kenya": 2.0778,
+      "Moldova": 2.7723,
+      "Tahiti": 2.0136,
+      "Czechia": 1.2676,
+      "South Africa": 0.9804,
+      "Oman": 1.4867,
+      "Azerbaijan": 2.0368,
+      "Austria": 0.9257,
+      "Aruba": 2.2553,
+      "North Macedonia": 1.4719,
+      "Croatia": 1.0169,
+      "Bolivia": 1.3591,
+      "Thailand": 1.4413,
+      "Pakistan": 1.8492,
+      "Cameroon": 1.2423,
+      "Madagascar": 2.1373,
+      "San Marino": 2.6013,
+      "United States": 1.2607,
+      "New Caledonia": 1.6256,
+      "Turkiye": 1.2791,
+      "North Korea": 1.7888,
+      "Wales": 1.3497,
+      "Congo DR": 1.3006,
+      "Jordan": 1.4012,
+      "Romania": 1.3869,
+      "DR Congo": 0.7444,
+      "Curaçao": 2.2778,
+      "Ghana": 1.1462,
+      "Samoa": 2.5287,
+      "Peru": 0.862,
+      "Angola": 0.9613,
+      "Bermuda": 2.4179,
+      "Faroe Islands": 1.3715,
+      "Guatemala": 1.7221,
+      "Cyprus": 1.363,
+      "Estonia": 1.556,
+      "Seychelles": 2.472,
+      "Iraq": 1.1568,
+      "Togo": 1.5322,
+      "Niger": 1.7223,
+      "Finland": 1.3072,
+      "Saudi Arabia": 0.9504,
+      "Algeria": 0.9669,
+      "Belgium": 0.9592,
+      "UAE": 1.2726,
+      "Iran": 0.9234,
+      "Senegal": 0.9182,
+      "Colombia": 0.7444,
+      "Honduras": 1.4476,
+      "Kyrgyzstan": 1.9568,
+      "Israel": 1.513,
+      "Dominican Republic": 1.8872,
+      "Mauritius": 1.2528,
+      "Brazil": 0.8296,
+      "Somalia": 1.5966,
+      "Philippines": 2.0207,
+      "Norway": 1.0586,
+      "Namibia": 1.6231,
+      "Rwanda": 1.6024,
+      "El Salvador": 1.2618,
+      "Netherlands": 0.81,
+      "New Zealand": 1.2116,
+      "Chad": 1.9104,
+      "Gambia": 1.5772,
+      "Hungary": 1.1725,
+      "Andorra": 1.5107,
+      "Panama": 1.3956,
+      "South Sudan": 2.1812,
+      "Guadeloupe": 2.0834,
+      "Germany": 0.8508,
+      "France": 0.6794,
+      "Australia": 0.7679,
+      "Tajikistan": 1.5281,
+      "China": 1.8423,
+      "Slovakia": 1.1678,
+      "Belize": 1.5152,
+      "Malaysia": 2.1941,
+      "Central African Republic": 2.4234,
+      "Greece": 1.2277,
+      "Ethiopia": 1.5238,
+      "Haiti": 1.4435,
+      "Saint Lucia": 1.8918,
+      "Canada": 0.8039,
+      "Malta": 2.8943,
+      "Mexico": 0.7275,
+      "Singapore": 2.4183,
+      "Luxembourg": 1.4702,
+      "Congo": 1.7083,
+      "Bosnia and Herzegovina": 1.4608,
+      "Sweden": 1.5935,
+      "Uruguay": 0.7542,
+      "Mali": 1.0123,
+      "Nigeria": 0.934,
+      "Mozambique": 1.6112,
+      "Sudan": 1.0934,
+      "Paraguay": 0.9468,
+      "Djibouti": 1.6813,
+      "Ivory Coast": 0.684,
+      "Burkina Faso": 1.2787,
+      "Malawi": 1.5696,
+      "Bahrain": 1.6668,
+      "Republic of Ireland": 0.8298,
+      "Turkey": 1.5469,
+      "Trinidad and Tobago": 1.6777,
+      "Gibraltar": 2.2945,
+      "Tanzania": 1.1849,
+      "Czech Republic": 1.3431,
+      "Slovenia": 1.0572,
+      "Tunisia": 1.0727,
+      "Venezuela": 1.2303,
+      "Albania": 1.1098,
+      "Libya": 1.6065,
+      "Solomon Islands": 1.6256,
+      "Saint Martin": 2.3177,
+      "Curacao": 1.4639,
+      "Gabon": 1.5323,
+      "China PR": 1.1329,
+      "Zimbabwe": 1.7143,
+      "Burundi": 1.8334,
+      "Serbia": 1.2584,
+      "Italy": 1.118,
+      "Barbados": 1.9595,
+      "Egypt": 0.8718,
+      "Montenegro": 1.5789,
+      "Kazakhstan": 1.5083,
+      "Nicaragua": 1.8162,
+      "Liberia": 1.9765,
+      "Poland": 1.3533,
+      "USA": 1.8891,
+      "Argentina": 0.7712,
+      "Switzerland": 0.8842,
+      "Lithuania": 1.6704,
+      "Belarus": 1.569,
+      "Grenada": 1.0816,
+      "Turkmenistan": 1.8175,
+      "Georgia": 1.4984,
+      "Lebanon": 1.4902,
+      "Fiji": 2.3481,
+      "South Korea": 1.0354,
+      "Myanmar": 1.8807,
+      "Denmark": 0.9706,
+      "Guyana": 1.3533,
+      "Uganda": 1.7916,
+      "Ukraine": 1.3186,
+      "Guinea-Bissau": 1.2946,
+      "Sierra Leone": 1.4416,
+      "Hong Kong": 2.0038,
+      "Jamaica": 1.3827,
+      "Qatar": 1.8739,
+      "Iceland": 1.6457,
+      "Bulgaria": 1.9304,
       "Benin": 1.6539,
-      "Aruba": 2.2552,
-      "Rwanda": 1.6023,
-      "Albania": 1.1097,
-      "Uruguay": 0.7541
+      "Sao Tome and Principe": 2.3544,
+      "Russia": 1.1795,
+      "Spain": 0.6541,
+      "Uzbekistan": 0.9633,
+      "Kuwait": 1.6653,
+      "Cape Verde": 1.0702,
+      "England": 0.6875,
+      "Kosovo": 1.1604,
+      "Eswatini": 1.74,
+      "Portugal": 0.7963,
+      "Costa Rica": 1.4865,
+      "Equatorial Guinea": 1.0925,
+      "Northern Ireland": 1.3856,
+      "Syria": 1.1999,
+      "Bosnia-Herzegovina": 1.3258,
+      "Morocco": 0.5672,
+      "Guinea": 1.0965,
+      "Afghanistan": 1.6551,
+      "Latvia": 1.9493,
+      "Scotland": 1.161,
+      "Mauritania": 1.1577,
+      "Palestine": 1.5389,
+      "Chile": 1.3608,
+      "United Arab Emirates": 1.1949,
+      "Liechtenstein": 2.6583,
+      "Vietnam": 2.0868,
+      "Ecuador": 0.738,
+      "Armenia": 2.5148,
+      "Zambia": 1.8327
     },
     "n": {
       "Panama": 37,
@@ -17249,7 +17280,7 @@
       "North Korea": 7,
       "Kyrgyzstan": 8,
       "Scotland": 31,
-      "Spain": 35,
+      "Spain": 36,
       "Serbia": 15,
       "Kosovo": 7,
       "Sweden": 26,
@@ -17303,7 +17334,7 @@
       "Liberia": 4,
       "Malawi": 1,
       "Sao Tome and Principe": 1,
-      "Belgium": 33,
+      "Belgium": 34,
       "Mozambique": 7,
       "Hong Kong": 3,
       "UAE": 7,
@@ -17351,7 +17382,7 @@
       "Guadeloupe": 1,
       "Latvia": 1
     },
-    "mu": 1.393
+    "mu": 1.394
   },
   "model_cfg": {
     "w": 0.5,
@@ -17413,7 +17444,7 @@
     "sims": 12000,
     "equipos": 48,
     "grupos": 12,
-    "n_resultados": 97,
+    "n_resultados": 98,
     "fuentes": [
       {
         "que": "Grupos y equipos (sorteo oficial)",
@@ -18394,6 +18425,15 @@
       "gl": 2,
       "gv": 0,
       "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289289/400021536 + https://www.cnn.com/2026/07/09/sport/live-news/france-morocco-world-cup-score + https://www.espn.com/soccer/story/_/id/49316467/france-morocco-live-world-cup-2026-latest-updates-commentary-score-result (France 2-0 Morocco FT; Mbappe 60' (gol 8 del torneo, empata con Messi en la Bota de Oro); Dembele 66' (asistencia Mbappe, gol 5 del torneo); France invicta — 6 victorias en 6 partidos, unico equipo sin necesitar prorroga; avanza a semis vs vencedor Spain-Belgium; Gillette Stadium, Boston; confirmado FIFA / CNN / ESPN / FOX Sports)"
+    },
+    {
+      "fecha": "2026-07-10",
+      "fase": "cuartos",
+      "local": "Spain",
+      "visita": "Belgium",
+      "gl": 2,
+      "gv": 1,
+      "fuente": "https://www.nbcsports.com/soccer/live/spain-vs-belgium-live-updates-score-goals-highlights-stats-from-2026-fifa-world-cup + https://www.business-standard.com/sports/fifa-world-cup/spain-vs-belgium-live-score-updates-fifa-world-cup-2026-qf-esp-vs-bel-key-moments-highlights-126071001437_1.html + https://www.cnn.com/2026/07/10/sport/live-news/spain-belgium-world-cup-score (Spain 2-1 Belgium FT; Fabian Ruiz 30' (ESP), Charles De Ketelaere 41' header (BEL — empate); Mikel Merino 89' sub (ESP — Lammels no retiene remate de Cubarsi, Merino empuja al fondo); Tielemans no jugo (lesion en calentamiento); Courtois salio lesionado en 2T reemplazado por Senne Lammels; Spain avanza a semis vs France; SoFi Stadium, Los Angeles; confirmado NBC Sports / Business Standard / CNN / ESPN / Fox Sports)"
     }
   ],
   "nota_bracket": "Esqueleto R32 en ORDEN DE ARBOL OFICIAL (Wikipedia '2026 FIFA World Cup knockout stage'): emparejando secuencialmente (1-2, 3-4, ...) se reproducen los cruces reales de octavos, cuartos, semis y final. Posiciones 1-8 = mitad de la final M101; 9-16 = mitad M102, por eso 1° y 2° del mismo grupo solo pueden reencontrarse en la FINAL. La asignacion fina de cada tercero a su slot la resuelve el motor por matching respetando los grupos permitidos de cada slot (la tabla FIFA es deterministica recien al cerrar la fase de grupos)."

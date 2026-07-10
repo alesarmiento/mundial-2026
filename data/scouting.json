@@ -3,34 +3,10 @@
   "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
   "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
   "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-  "actualizado": "2026-07-10T18:10:00Z",
+  "actualizado": "2026-07-10T21:10:00Z",
   "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
  },
  "partidos": [
-  {
-   "home": "Spain",
-   "away": "Belgium",
-   "fecha": "2026-07-10",
-   "estado_alineacion": "confirmada",
-   "xi_local": "Unai Simon; Porro, Cubarsi, Laporte, Cucurella; Rodri, Fabian Ruiz; Yamal, Olmo, Baena; Oyarzabal",
-   "xi_visita": "Courtois; Castagne, Ngoy, Mechele, De Cuyper; Raskin, Tielemans; Doku, De Bruyne, Trossard; De Ketelaere",
-   "bajas_local": [
-    "Nico Williams (aductor derecho — lesionado vs Uruguay en grupos; no jugo vs Austria ni vs Portugal; fuera del XI — ESPN / Yahoo Sports)",
-    "Pedri (descansado/no titular hoy — Fabian Ruiz ingresa al doble pivote junto a Rodri — whoscored/Yahoo Sports)"
-   ],
-   "bajas_visita": [
-    "Amadou Onana (ACL rodilla derecha — operado, fuera del torneo; baja de primer nivel en el mediocampo — ESPN)",
-    "Hans Vanaken (fuera del XI confirmado — Nicolas Raskin titular en el mediocampo junto a Tielemans — whoscored/Yahoo Sports)"
-   ],
-   "lectura": "El partido mas expectante de los cuartos enfrenta a la mejor defensa del torneo (Espana, 0 goles encajados en 6 partidos) contra uno de los ataques mas potentes (Belgica: De Ketelaere con brace vs USA en octavos). Con el XI confirmado: Luis de la Fuente opta por Fabian Ruiz en lugar de Pedri junto a Rodri; Baena suple a Nico Williams por la banda. En Belgica, Courtois de titular; Raskin en lugar de Vanaken en el doble pivote junto a Tielemans; Doku por Lukebakio como extremo; De Bruyne libre por detras de De Ketelaere. Sin Onana (ACL), la dureza defensiva de Belgica depende de Raskin-Tielemans. SoFi Stadium, Los Angeles, 19:00 UTC.",
-   "lean": "Spain",
-   "fuentes": [
-    "https://lastwordonsports.com/football/2026/07/10/spain-vs-belgium-confirmed-lineup/",
-    "https://sports.yahoo.com/articles/world-cup-2026-quarter-final-174000733.html",
-    "https://www.whoscored.com/news/Q9pbXEm4P0SNShcHvZtxjQ/show/20260710-spain-vs-belgium-confirmed-lineup-1783705532",
-    "https://www.espn.com/soccer/match/_/gameId/760511/belgium-spain"
-   ]
-  },
   {
    "home": "Norway",
    "away": "England",

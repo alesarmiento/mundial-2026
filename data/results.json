@@ -2,7 +2,7 @@
   "_meta": {
     "descripcion": "Ledger de resultados REALES. Cada partido entra con su fuente. NUNCA se inventa un marcador. Si no se puede verificar, no se agrega.",
     "fase_valores": "grupos | dieciseisavos | octavos | cuartos | semis | tercer_puesto | final",
-    "ultima_fecha_cargada": "2026-07-09"
+    "ultima_fecha_cargada": "2026-07-10"
   },
   "partidos": [
     {
@@ -953,6 +953,15 @@
       "gl": 2,
       "gv": 0,
       "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289289/400021536 + https://www.cnn.com/2026/07/09/sport/live-news/france-morocco-world-cup-score + https://www.espn.com/soccer/story/_/id/49316467/france-morocco-live-world-cup-2026-latest-updates-commentary-score-result (France 2-0 Morocco FT; Mbappe 60' (gol 8 del torneo, empata con Messi en la Bota de Oro); Dembele 66' (asistencia Mbappe, gol 5 del torneo); France invicta — 6 victorias en 6 partidos, unico equipo sin necesitar prorroga; avanza a semis vs vencedor Spain-Belgium; Gillette Stadium, Boston; confirmado FIFA / CNN / ESPN / FOX Sports)"
+    },
+    {
+      "fecha": "2026-07-10",
+      "fase": "cuartos",
+      "local": "Spain",
+      "visita": "Belgium",
+      "gl": 2,
+      "gv": 1,
+      "fuente": "https://www.nbcsports.com/soccer/live/spain-vs-belgium-live-updates-score-goals-highlights-stats-from-2026-fifa-world-cup + https://www.business-standard.com/sports/fifa-world-cup/spain-vs-belgium-live-score-updates-fifa-world-cup-2026-qf-esp-vs-bel-key-moments-highlights-126071001437_1.html + https://www.cnn.com/2026/07/10/sport/live-news/spain-belgium-world-cup-score (Spain 2-1 Belgium FT; Fabian Ruiz 30' (ESP), Charles De Ketelaere 41' header (BEL — empate); Mikel Merino 89' sub (ESP — Lammels no retiene remate de Cubarsi, Merino empuja al fondo); Tielemans no jugo (lesion en calentamiento); Courtois salio lesionado en 2T reemplazado por Senne Lammels; Spain avanza a semis vs France; SoFi Stadium, Los Angeles; confirmado NBC Sports / Business Standard / CNN / ESPN / Fox Sports)"
     }
   ]
 }
