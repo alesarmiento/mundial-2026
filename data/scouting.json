@@ -3,7 +3,7 @@
   "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
   "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
   "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-  "actualizado": "2026-07-09T22:10:00Z",
+  "actualizado": "2026-07-10T03:10:00Z",
   "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
  },
  "partidos": [
@@ -13,16 +13,17 @@
    "fecha": "2026-07-10",
    "estado_alineacion": "probable",
    "xi_local": "Unai Simon; Porro, Cubarsi, Laporte, Cucurella; Rodri, Pedri; Yamal, Olmo, Baena; Oyarzabal",
-   "xi_visita": "Casteels; Castagne, Debast, Vertonghen, Theate; Tielemans, Vanaken; Doku, De Bruyne, Trossard; Lukaku",
-   "bajas_local": ["Nico Williams (aductor derecho — lesionado vs Uruguay en grupos; no jugo vs Austria ni vs Portugal; recuperacion mejor de lo esperado pero sigue en duda para cuartos — ESPN / Yahoo Sports)"],
+   "xi_visita": "Courtois; Castagne, Ngoy, Mechele, De Cuyper; Vanaken, Tielemans; Lukebakio, De Bruyne, Trossard; De Ketelaere",
+   "bajas_local": ["Nico Williams (aductor derecho — lesionado vs Uruguay en grupos; no jugo vs Austria ni vs Portugal; sigue en duda para cuartos — ESPN / Yahoo Sports)"],
    "bajas_visita": ["Amadou Onana (ACL rodilla derecha — operado, fuera del torneo; baja de primer nivel en el mediocampo — ESPN)"],
-   "lectura": "El partido mas expectante de los cuartos enfrenta a la mejor defensa del torneo (Espana, 0 goles encajados en 5 partidos) contra uno de los ataques mas potentes (Belgica: De Bruyne regresaria al once tras entrar desde el banco vs USA, De Ketelaere en racha). Luis de la Fuente mantendra el 4-2-3-1 con Rodri-Pedri en el doble pivote. Novedad: Nico Williams sigue sin reaparecer en el once (baja desde grupos por aductor), aunque Baena suple bien su diagonal. La perdida de Onana le quita verticalidad y recuperacion al mediocampo belga. Oyarzabal lleva 4 goles; Lukaku en racha tambien. Partido de bajo margen de error.",
+   "lectura": "El partido mas expectante de los cuartos enfrenta a la mejor defensa del torneo (Espana, 0 goles encajados en 6 partidos) contra uno de los ataques mas potentes (Belgica: De Ketelaere con brace vs USA en octavos, De Bruyne de titular desde el inicio). Luis de la Fuente mantiene el 4-2-3-1 con Rodri-Pedri en el doble pivote; Nico Williams sigue en duda por aductor y Baena suple su diagonal. En Belgica, Courtois (Real Madrid) es el guardameta; la perdida de Onana (ACL, fuera del torneo) reconvierte el doble pivote a Vanaken-Tielemans. De Ketelaere lleva 2 goles en el torneo y viene de un brillante partido vs USA. SoFi Stadium, Los Angeles, 19:00 UTC.",
    "lean": "Spain",
    "fuentes": [
-    "https://tips.gg/article/spain-vs-belgium-predicted-lineups-wc2026/",
-    "https://www.squawka.com/en/news/world-cup/spain-vs-belgium-team-news-predicted-lineups/",
-    "https://www.espn.com/soccer/story/_/id/49200729/spain-nico-williams-injury-yeremy-pino-2026-world-cup",
-    "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-v-belgium-live-stream-team-news-tickets-and-more"
+    "https://www.squawka.com/ca/news/world-cup/match-preview-spain-vs-belgium-world-cup-2026-quarterfinals/",
+    "https://www.si.com/soccer/belgium-predicted-lineup-vs-spain-world-cup-quarterfinal-7-10-26",
+    "https://www.realmadrid.com/en-US/news/football/first-team/latest-news/espana-begica-cuartos-de-final-mundial-10-07-2026",
+    "https://totalfootballanalysis.com/competitions/fifa-world-cup-2026/world-cup-quarter-final-spain-belgium-predictions",
+    "https://www.espn.com/soccer/match/_/gameId/760511/belgium-spain"
    ]
   },
   {
