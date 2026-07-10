@@ -3,7 +3,7 @@
   "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
   "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
   "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-  "actualizado": "2026-07-10T03:10:00Z",
+  "actualizado": "2026-07-10T18:10:00Z",
   "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
  },
  "partidos": [
@@ -11,22 +11,23 @@
    "home": "Spain",
    "away": "Belgium",
    "fecha": "2026-07-10",
-   "estado_alineacion": "probable",
-   "xi_local": "Unai Simon; Porro, Cubarsi, Laporte, Cucurella; Rodri, Pedri; Yamal, Olmo, Baena; Oyarzabal",
-   "xi_visita": "Courtois; Castagne, Ngoy, Mechele, De Cuyper; Vanaken, Tielemans; Lukebakio, De Bruyne, Trossard; De Ketelaere",
+   "estado_alineacion": "confirmada",
+   "xi_local": "Unai Simon; Porro, Cubarsi, Laporte, Cucurella; Rodri, Fabian Ruiz; Yamal, Olmo, Baena; Oyarzabal",
+   "xi_visita": "Courtois; Castagne, Ngoy, Mechele, De Cuyper; Raskin, Tielemans; Doku, De Bruyne, Trossard; De Ketelaere",
    "bajas_local": [
-    "Nico Williams (aductor derecho — lesionado vs Uruguay en grupos; no jugo vs Austria ni vs Portugal; sigue en duda para cuartos — ESPN / Yahoo Sports)"
+    "Nico Williams (aductor derecho — lesionado vs Uruguay en grupos; no jugo vs Austria ni vs Portugal; fuera del XI — ESPN / Yahoo Sports)",
+    "Pedri (descansado/no titular hoy — Fabian Ruiz ingresa al doble pivote junto a Rodri — whoscored/Yahoo Sports)"
    ],
    "bajas_visita": [
-    "Amadou Onana (ACL rodilla derecha — operado, fuera del torneo; baja de primer nivel en el mediocampo — ESPN)"
+    "Amadou Onana (ACL rodilla derecha — operado, fuera del torneo; baja de primer nivel en el mediocampo — ESPN)",
+    "Hans Vanaken (fuera del XI confirmado — Nicolas Raskin titular en el mediocampo junto a Tielemans — whoscored/Yahoo Sports)"
    ],
-   "lectura": "El partido mas expectante de los cuartos enfrenta a la mejor defensa del torneo (Espana, 0 goles encajados en 6 partidos) contra uno de los ataques mas potentes (Belgica: De Ketelaere con brace vs USA en octavos, De Bruyne de titular desde el inicio). Luis de la Fuente mantiene el 4-2-3-1 con Rodri-Pedri en el doble pivote; Nico Williams sigue en duda por aductor y Baena suple su diagonal. En Belgica, Courtois (Real Madrid) es el guardameta; la perdida de Onana (ACL, fuera del torneo) reconvierte el doble pivote a Vanaken-Tielemans. De Ketelaere lleva 2 goles en el torneo y viene de un brillante partido vs USA. SoFi Stadium, Los Angeles, 19:00 UTC.",
+   "lectura": "El partido mas expectante de los cuartos enfrenta a la mejor defensa del torneo (Espana, 0 goles encajados en 6 partidos) contra uno de los ataques mas potentes (Belgica: De Ketelaere con brace vs USA en octavos). Con el XI confirmado: Luis de la Fuente opta por Fabian Ruiz en lugar de Pedri junto a Rodri; Baena suple a Nico Williams por la banda. En Belgica, Courtois de titular; Raskin en lugar de Vanaken en el doble pivote junto a Tielemans; Doku por Lukebakio como extremo; De Bruyne libre por detras de De Ketelaere. Sin Onana (ACL), la dureza defensiva de Belgica depende de Raskin-Tielemans. SoFi Stadium, Los Angeles, 19:00 UTC.",
    "lean": "Spain",
    "fuentes": [
-    "https://www.squawka.com/ca/news/world-cup/match-preview-spain-vs-belgium-world-cup-2026-quarterfinals/",
-    "https://www.si.com/soccer/belgium-predicted-lineup-vs-spain-world-cup-quarterfinal-7-10-26",
-    "https://www.realmadrid.com/en-US/news/football/first-team/latest-news/espana-begica-cuartos-de-final-mundial-10-07-2026",
-    "https://totalfootballanalysis.com/competitions/fifa-world-cup-2026/world-cup-quarter-final-spain-belgium-predictions",
+    "https://lastwordonsports.com/football/2026/07/10/spain-vs-belgium-confirmed-lineup/",
+    "https://sports.yahoo.com/articles/world-cup-2026-quarter-final-174000733.html",
+    "https://www.whoscored.com/news/Q9pbXEm4P0SNShcHvZtxjQ/show/20260710-spain-vs-belgium-confirmed-lineup-1783705532",
     "https://www.espn.com/soccer/match/_/gameId/760511/belgium-spain"
    ]
   },
@@ -75,23 +76,6 @@
     "https://worldsoccertalk.com/world-cup/argentina-vs-switzerland-date-kickoff-time-and-venue-for-2026-world-cup-quarterfinal/",
     "https://bulinews.com/fixture/742665/predicted-lineups/argentina-switzerland",
     "https://www.cbssports.com/watch/soccer/video/argentina-vs-switzerland-quarterfinal-match-preview-world-cup-2026-scoreline"
-   ]
-  },
-  {
-   "home": "Belgium",
-   "away": "Spain",
-   "fecha": "2026-07-11",
-   "estado_alineacion": "probable",
-   "xi_local": "(XI confirmado pendiente) Referencias: Courtois; Doku, De Bruyne (vuelve tras descanso), Trossard, De Ketelaere; Lukaku de 9",
-   "xi_visita": "(XI confirmado pendiente) Base: Unai Simon; Cubarsi, Laporte; Rodri, Pedri; Yamal, Oyarzabal",
-   "bajas_local": "BAJA CONFIRMADA: Amadou Onana OUT (lesion seria de rodilla, escaner) — pierde el ancla del mediocampo. De Bruyne vuelve tras descanso programado.",
-   "bajas_visita": "Sin ausencias reportadas.",
-   "lectura": "Cuotas anotador (FanDuel/Ladbrokes): Oyarzabal +120, Yamal +155, Ferran +175; belgas: Lukaku +280 (~26%), De Ketelaere 10/3 (~23%). Lukaku es el unico belga en la tabla de goleadores del torneo (3). La baja de Onana debilita el escudo defensivo belga ante Rodri-Pedri.",
-   "lean": "Espana clara favorita; el gol belga pasa por Lukaku o un chispazo de Doku/Trossard; sin Onana, el partido puede abrirse en contra de Belgica.",
-   "fuentes": [
-    "https://www.sportscasting.com/news/spain-vs-belgium-anytime-scorer-predictions-betting-odds-and-picks/",
-    "https://www.oddschecker.com/tips/football/world-cup-2026/20260710-spain-vs-belgium-betting-tips-odds-22-1-bet-builder-pick",
-    "https://www.fanduel.com/research/spain-vs-belgium-prediction-picks-lineups-and-best-bets-today-world-cup-quarterfinal"
    ]
   }
  ]
