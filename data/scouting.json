@@ -3,38 +3,10 @@
   "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
   "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
   "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-  "actualizado": "2026-07-11T04:15:00Z",
+  "actualizado": "2026-07-12T00:10:00Z",
   "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
  },
  "partidos": [
-  {
-   "home": "Norway",
-   "away": "England",
-   "fecha": "2026-07-11",
-   "estado_alineacion": "probable",
-   "xi_local": "Nyland; Ryerson, Ajer, Heggem, Wolfe; Odegaard, Berg, Berge; Nusa, Haaland, Sorloth",
-   "xi_visita": "Pickford; Konsa, Stones, Guehi, O'Reilly; Rice, Anderson; Saka, Bellingham, Gordon; Kane",
-   "bajas_local": [
-    "Strand Larsen y otros jugadores noruegos (molestia gastrointestinal en el plantel — Solbakken: 'algunos no se han sentido bien, pero estan mejorando'; prevision disponible — ESPN QF injury tracker)"
-   ],
-   "bajas_visita": [
-    "Reece James (isquiotibiales — entrenamiento grupal jul-10 en Miami pero AUN NO FIT para titular; se espera SOLO EN BANCA; Konsa titulariza en lateral derecho — Sky Sports / ESPN / SI.com)",
-    "Jarell Quansah (suspendido — tarjeta roja confirmada por VAR vs Mexico; Stones entra como CB titular)",
-    "Jordan Henderson (fractura de brazo confirmada en los festejos vs Mexico — BAJA CONFIRMADA PARA EL RESTO DEL MUNDIAL — Caught Offside / The Sun)",
-    "Declan Rice (sobrecarga neural — retorno entrenamiento grupal jul-10; se espera disponible como titular — Sky Sports)",
-    "Marc Guehi (precaucion — retorno entrenamiento grupal jul-10; se espera disponible como titular — Sky Sports)"
-   ],
-   "lectura": "El duelo de arietes top del torneo: Kane (6 goles) vs Haaland (7 goles). Noruega llego a cuartos por primera vez eliminando a Brasil con brace de Haaland. ACTUALIZACION DE HOY (jul-11, madrugada): Reece James NO va a ser titular — volvio al entrenamiento grupal pero no esta al 100% para el calor de Miami (22:00 UTC); se espera solo en banca segun Sky Sports / SI.com / ESPN. Konsa va de lateral derecho con Stones entrando de CB (cubria a Quansah que cumple suspension). Nico O'Reilly titular en el lateral izquierdo. Anderson reemplaza a Mainoo en mediocampo. Rice y Guehi esperados disponibles. Norway cambia tambien: Ajer y Heggem de centrales (no Hanche-Olsen y Ostigard); Wolfe de lateral izquierdo. Partido a las 22:00 UTC / 17:00 ET en Hard Rock Stadium, Miami. England tiene mayor calidad de plantel (Saka, Bellingham, Kane); Noruega apuesta todo al gen de Haaland y al cerebro de Odegaard.",
-   "lean": "England (mayor calidad de plantel; Rice + Guehi disponibles; ventaja leve — Haaland siempre es peligro real)",
-   "fuentes": [
-    "https://www.skysports.com/football/news/11095/13562422/world-cup-2026-englands-declan-rice-marc-guehi-and-reece-james-train-ahead-of-quarter-final-with-norway",
-    "https://www.skysports.com/football/news/11095/13561537/englands-right-back-crisis-reece-james-djed-spence-ezri-konsa-who-starts-in-world-cup-quarter-final-against-norway",
-    "https://www.si.com/soccer/england-predicted-lineup-vs-norway-world-cup-quarterfinal-7-11-26",
-    "https://www.si.com/soccer/norway-predicted-lineup-vs-england-world-cup-quarterfinal-7-11-26",
-    "https://www.espn.com/soccer/story/_/id/49314271/norway-vs-england-fifa-world-cup-2026-tv-channel-how-watch-kickoff-live-stream-injury-predicted-lineups",
-    "https://www.rotowire.com/soccer/article/norway-vs-england-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-quarterfinal-121923"
-   ]
-  },
   {
    "home": "Argentina",
    "away": "Switzerland",

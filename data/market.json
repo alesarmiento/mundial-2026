@@ -3,8 +3,8 @@
     "descripcion": "Consenso del mercado/mundo online por partido del dia (1X2 implicado, marcador mas probable, over 2.5). Para comparar contra el sistema y medir calibracion. La rutina lo actualiza con las cuotas del dia para TODOS los partidos.",
     "regla_de_oro": "Solo con fuente real (ESPN odds, oddschecker, Dimers, bet365, Kalshi, Forebet). Las cuotas se convierten a probabilidad quitando el margen y se normalizan a 100. Nunca inventar.",
     "campos": "pH/pD/pA = % implicado de gana local / empate / gana visita (orientado al home del fixture). score = marcador mas probable del mercado. over25 = % de over 2.5 goles.",
-    "actualizado": "2026-07-08",
-    "ultima_actualizacion": "2026-07-08T00:10:00Z"
+    "actualizado": "2026-07-12",
+    "ultima_actualizacion": "2026-07-12T00:10:00Z"
   },
   "partidos": [
     {
@@ -817,6 +817,15 @@
       "pA": 18,
       "over25": 44,
       "fuente": "DraftKings (ARG -140 / draw +250 / SUI +425; normalizado; 7-jul-2026) + over2.5 +116/under -142 via sportsbettingdime.com / dknetwork.draftkings.com"
+    },
+    {
+      "home": "France",
+      "away": "Spain",
+      "fecha": "2026-07-14",
+      "pH": 40,
+      "pD": 30,
+      "pA": 30,
+      "fuente": "FanDuel (FRA +135 / draw +210 / ESP +220; normalizado a 100%; 11-jul-2026) / si.com/betting + sportsbettingdime.com + sportsline.com (FRA avance -144 / ESP avance +118)"
     }
   ]
 }
