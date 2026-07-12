@@ -4,7 +4,7 @@
     "regla_de_oro": "Solo con fuente real (ESPN odds, oddschecker, Dimers, bet365, Kalshi, Forebet). Las cuotas se convierten a probabilidad quitando el margen y se normalizan a 100. Nunca inventar.",
     "campos": "pH/pD/pA = % implicado de gana local / empate / gana visita (orientado al home del fixture). score = marcador mas probable del mercado. over25 = % de over 2.5 goles.",
     "actualizado": "2026-07-12",
-    "ultima_actualizacion": "2026-07-12T00:10:00Z"
+    "ultima_actualizacion": "2026-07-12T04:30:00Z"
   },
   "partidos": [
     {
@@ -826,6 +826,16 @@
       "pD": 30,
       "pA": 30,
       "fuente": "FanDuel (FRA +135 / draw +210 / ESP +220; normalizado a 100%; 11-jul-2026) / si.com/betting + sportsbettingdime.com + sportsline.com (FRA avance -144 / ESP avance +118)"
+    },
+    {
+      "home": "England",
+      "away": "Argentina",
+      "fecha": "2026-07-15",
+      "pH": 34,
+      "pD": 31,
+      "pA": 35,
+      "score": "1-1",
+      "fuente": "DraftKings (ENG +180 / draw +205 / ARG +175; normalizado: pH=34 pD=31 pA=35; 12-jul-2026) + bet365 (ENG 4/5 / ARG evens to advance) / dknetwork.draftkings.com + news.bet365.com + sportsbettingdime.com (Mercedes-Benz Stadium, Atlanta; 3pm ET)"
     }
   ]
 }

@@ -2,8 +2,8 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://www.skysports.com/football/norway-vs-england/549864 + https://www.cnn.com/2026/07/11/sport/live-news/world-cup-scores + https://www.npr.org/2026/07/11/nx-s1-5890169/2026-world-cup-fifa-england-norway-quarterfinal (Post Norway 1-2 England AET (cuartos, 11-jul): Schjelderup 36' (NOR, 1G torneo), Bellingham 45+2' y 93' (ENG, +2G — sube a 6G total, empata a Kane); Messi 8 y Mbappe 8 siguen lideres del torneo (ARG juega esta noche 01:00 UTC); confirmado Sky Sports / CNN / NPR)",
-    "actualizado": "2026-07-11"
+    "fuente": "https://www.espn.com/soccer/match/_/gameId/760513/switzerland-argentina + https://www.foxsports.com/stories/soccer/2026-fifa-world-cup-golden-boot-tracker (Post todos los QFs: ARG 3-1 SUI AET (Mac Allister 10', Ndoye 67', J.Alvarez 112', L.Martinez 120+1') — Messi NO anoto, se mantiene en 8G; Mbappe 8G (gol vs MAR en QF confirma empate con Messi); Haaland 7G eliminado (NOR); Bellingham y Kane 6G cada uno; tabla de liderato congelada hasta las semis; confirmado ESPN / Fox Sports / CBS Sports / Yahoo Sports)",
+    "actualizado": "2026-07-12"
   },
   "jugadores": [
     {"jugador": "Lionel Messi", "equipo": "Argentina", "goles": 8},
