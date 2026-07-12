@@ -17,6 +17,10 @@ Se ejecuta en la nube (auto-ritmo: despertar cuando deberían haber terminado pa
 3. **Agregar** cada partido confirmado a `data/results.json` → array `partidos`, formato:
    `{"fecha":"YYYY-MM-DD","fase":"grupos","grupo":"X","local":"A","visita":"B","gl":n,"gv":m,"fuente":"URL"}`
    - Eliminatorias: `fase` ∈ dieciseisavos|octavos|cuartos|semis|tercer_puesto|final, sin `grupo`.
+   - **Eliminatorias — orientación y fecha OBLIGATORIAS del fixture:** `local`/`visita` deben coincidir
+     con el `home`/`away` oficial del cruce en `data/ko_fixtures.json` (NUNCA "ganador primero": si el
+     que ganó era visita, va como visita igual) y `fecha` = el `date` de ese fixture (fecha local de la
+     sede, NO la fecha UTC). Antes de guardar, ubicá el match en `ko_fixtures.json` y copiá orientación y fecha.
    - Nombres EXACTOS como en `data/teams.json`. Actualizá `_meta.ultima_fecha_cargada`.
 
 4. **Si NO hubo ningún resultado nuevo confirmado → terminar sin commitear** (no hacer deploys vacíos).

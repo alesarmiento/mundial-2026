@@ -1425,7 +1425,10 @@ function horaCL(utc){if(!utc)return '';try{
   return new Date(utc).toLocaleTimeString('es-CL',{timeZone:'America/Santiago',hour:'2-digit',minute:'2-digit',hour12:false});
 }catch(e){return ''}}
 var _scoreMap=null;
-function scoreFor(h,a){if(!_scoreMap){_scoreMap={};((S.puntaje&&S.puntaje.por_partido)||[]).forEach(x=>{_scoreMap[x.home+'|'+x.away]=x})}return _scoreMap[h+'|'+a]}
+function scoreFor(h,a){if(!_scoreMap){_scoreMap={};((S.puntaje&&S.puntaje.por_partido)||[]).forEach(x=>{_scoreMap[x.home+'|'+x.away]=x})}
+  const d=_scoreMap[h+'|'+a];if(d)return d;
+  const inv=_scoreMap[a+'|'+h];  // ledger con local/visita invertidos respecto al cuadro: espejar pred/real
+  return inv?{...inv,pred:[inv.pred[1],inv.pred[0]],real:[inv.real[1],inv.real[0]]}:undefined}
 function matchRow(m){
   const FASELBL={dieciseisavos:'16avos',octavos:'Octavos',cuartos:'Cuartos',semis:'Semis',tercer_puesto:'3º puesto',final:'Final'};
   const clickable = !m.ko || m.jugado || (m.home_real && m.away_real);  // KO: detalle solo si ambos equipos ya estan definidos
