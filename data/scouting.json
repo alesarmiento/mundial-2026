@@ -3,7 +3,7 @@
   "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
   "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
   "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-  "actualizado": "2026-07-12T00:10:00Z",
+  "actualizado": "2026-07-12T01:30:00Z",
   "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
  },
  "partidos": [
@@ -11,25 +11,45 @@
    "home": "Argentina",
    "away": "Switzerland",
    "fecha": "2026-07-11",
-   "estado_alineacion": "probable",
-   "xi_local": "E. Martinez; Molina, Romero, L. Martinez, Tagliafico; De Paul, Paredes, Mac Allister, E. Fernandez; Messi, J. Alvarez",
-   "xi_visita": "Kobel; Zakaria, Elvedi, Akanji, Muheim; Xhaka, Sow, Freuler; Ndoye, Embolo, Vargas",
+   "estado_alineacion": "confirmada",
+   "xi_local": "E. Martínez; Molina, C. Romero, L. Martínez, Tagliafico; Paredes; De Paul, Mac Allister, E. Fernández; Messi, J. Álvarez",
+   "xi_visita": "Kobel; Zakaria, Akanji, Elvedi, Rodriguez; Freuler, Xhaka; Rieder, Sow, Ndoye; Embolo",
    "bajas_local": [],
    "bajas_visita": [
-    "Johan Manzambi (rodilla — BAJA OFICIAL CONFIRMADA: coach Yakin anuncio formalmente que no jugara; 3 goles y 2 asistencias en la fase de grupos perdidos — ESPN / Yahoo Sports / HITC)",
-    "Luca Jaquez (musculo — ENTRENAMIENTO INDIVIDUAL separado del grupo; no se espera disponible — ESPN / Sports Mole)",
-    "Michel Aebischer (musculo — ENTRENAMIENTO INDIVIDUAL separado del grupo; no se espera disponible — ESPN / Sports Mole)",
-    "Ricardo Rodriguez (tobillo/pantorrilla — se recupera pero Muheim titular en lateral izquierdo — SI.com / Sports Mole)"
+    "Johan Manzambi (rodilla — BAJA OFICIAL: no juega; fue el mayor generador ofensivo de Suiza con 3G 2A — ESPN / Yahoo Sports / HITC)",
+    "Michel Aebischer (músculo — entrenamiento individual separado, no disponible — Sports Mole / ESPN)",
+    "Luca Jaquez (músculo — entrenamiento individual separado, no disponible — Sports Mole / ESPN)"
    ],
-   "lectura": "Messi llega con 8 goles, lider en solitario de la Bota de Oro, tras la remontada epica desde 0-2 vs Egipto (Romero 79', Messi 83', Enzo 90+2'). Suiza clasifico en penales tras 120 minutos de 0-0 vs Colombia — Kobel fue clave. ACTUALIZACION DE HOY (jul-11, madrugada): Manzambi BAJA OFICIAL — no jugara (3G 2A en grupos, el mayor generador ofensivo de Suiza). Tres bajas mas: Jaquez, Aebischer y Rodriguez (no titular). Yakin reordena la defensa completamente: Zakaria de lateral derecho, Akanji y Elvedi de centrales, Muheim de lateral izquierdo. Sow entra en mediocampo junto a Xhaka y Freuler (triple pivote). Sin Manzambi, la carga ofensiva recae en Embolo y los extremos Ndoye y Vargas. Kobel sera el muro — fue el gran protagonista en penales vs Colombia. Argentina entra con el plantel 100% sano. Partido a las 01:00 UTC del 12-jul (9 PM ET del 11-jul) en Arrowhead Stadium / Children's Mercy Park, Kansas City.",
-   "lean": "Argentina (Messi en racha historica, mayor calidad de plantilla y 4 bajas clave de Suiza: Manzambi + Aebischer + Jaquez + Rodriguez titular)",
+   "lectura": "Messi llega con 8 goles, colíder de la Bota de Oro junto a Mbappé, tras la remontada épica desde 0-2 vs Egipto (Romero 79', Messi 83', Enzo 90+2'). Suiza clasificó en penales tras 120 minutos de 0-0 vs Colombia. Alineaciones CONFIRMADAS: Argentina sin cambios respecto a los últimos partidos; Suiza: Manzambi (baja oficial) y Aebischer/Jaquez (bajas) reducen opciones. Sorpresa: Rodriguez (tobillo) inicia como lateral izquierdo en lugar de Muheim. Rieder entra en el mediocampo avanzado. Kobel será el muro — fue clave en penales vs Colombia. Partido a las 01:00 UTC del 12-jul en Arrowhead Stadium, Kansas City.",
+   "lean": "Argentina (Messi en racha histórica, plantilla superior, y 3 bajas clave de Suiza: Manzambi + Aebischer + Jaquez)",
    "fuentes": [
+    "https://worldsoccertalk.com/world-cup/is-lionel-messi-playing-argentina-vs-switzerland-projected-lineups-for-the-2026-world-cup-game/",
+    "https://bolavip.com/en/world-cup/argentina-vs-switzerland-predicted-lineups-with-lionel-messi-for-2026-world-cup-qf",
+    "https://www.whoscored.com/news/KsA-Wl9VA02rB-1PlWOYAw/show/20260712-argentina-vs-switzerland-confirmed-lineup-1783813222",
     "https://www.espn.com/soccer/story/_/id/49326340/switzerland-johan-manzambi-miss-argentina-world-cup-quarterfinal-clash-murat-yakin",
-    "https://sports.yahoo.com/articles/swiss-miss-manzambi-kc-switzerland-185855100.html",
-    "https://www.si.com/soccer/switzerland-predicted-lineup-vs-argentina-world-cup-quarterfinal-7-11-26",
-    "https://www.si.com/soccer/argentina-predicted-lineup-vs-switzerland-world-cup-quarterfinal-7-11-26",
-    "https://www.sportsmole.co.uk/football/argentina/world-cup-2026/predicted-lineups/manzambi-fitness-doubt-for-yakin-predicted-switzerland-lineup-vs-argentina_600954.html",
     "https://www.rotowire.com/soccer/article/argentina-vs-switzerland-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-quarterfinal-121924"
+   ]
+  },
+  {
+   "home": "France",
+   "away": "Spain",
+   "fecha": "2026-07-14",
+   "estado_alineacion": "probable",
+   "xi_local": "Maignan; Koundé, Saliba, Upamecano, T. Hernández; Camavinga, Tchouaméni (en duda) o Koné; Dembélé, Mbappé, Barcola; Thuram",
+   "xi_visita": "Unai Simón; Porro, Cubarsí, Laporte, Cucurella; Rodri, Pedri; Yamal, Fabián Ruiz, N. Williams; Dani Olmo",
+   "bajas_local": [
+    "Aurélien Tchouaméni (músculo — baja desde 3-jul, no jugó vs Paraguay ni Marruecos; posible retorno el 14-jul, EN DUDA — Sports Mole / ESPN)",
+    "Mbappé (tobillo — golpe vs Marruecos en QF; dice estar completamente bien, se espera titular — Sports Mole)",
+    "Manu Koné (rodilla/fatiga — salida precautoria vs Marruecos; se espera disponible — Sports Mole)"
+   ],
+   "bajas_visita": [],
+   "lectura": "El partido más esperado del torneo: los dos co-favoritos se miden en Dallas. Francia llega con el record perfecto: 7 victorias en 7 partidos, único equipo sin necesitar prórroga. Mbappé (8G) y Dembélé (5G, 2A) son la dupla ofensiva más letal del torneo. España tuvo la mejor defensa del torneo (no encajó en 7 partidos seguidos, récord del Mundial) hasta el QF vs Bélgica. Rodri y Pedri son los mejores mediocampistas del torneo. Factor clave: si Tchouaméni no llega, Camavinga asume el doble pivote y la gestión defensiva del medio recae en él junto a Koné. Merino (2 goles decisivos de sub en R16 y QF) es la carta de España desde el banco. España no tiene ningún habitual de la base en Real Madrid (squad sin jugadores del club). El control del mediocampo (Rodri/Pedri vs Camavinga/Tchouaméni) definirá el partido.",
+   "lean": "Francia (record perfecto, Mbappé en racha histórica; aunque España es la mayor sorpresa defensiva del torneo)",
+   "fuentes": [
+    "https://www.sportsmole.co.uk/football/france/injury-news/injuries-and-suspensions/mbappe-tchouameni-kone-latest-france-injury-suspension-list-vs-spain_601068.html",
+    "https://www.foxsports.com/stories/soccer/france-vs-spain-confirmed-semifinals-heres-what-know",
+    "https://www.espn.com/soccer/story/_/id/49269592/france-aurelien-tchouameni-groin-injury-vs-paraguay",
+    "https://www.foxsports.com/stories/soccer/could-spains-lamine-yamal-benched-vs-france-semis"
    ]
   }
  ]
