@@ -3,7 +3,7 @@
   "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
   "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
   "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-  "actualizado": "2026-07-12T20:09:00Z",
+  "actualizado": "2026-07-14T01:20:00Z",
   "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
  },
  "partidos": [
@@ -12,23 +12,24 @@
    "away": "Spain",
    "fecha": "2026-07-14",
    "estado_alineacion": "probable",
-   "xi_local": "Maignan; Koundé, Saliba, Upamecano, Digne; Koné, Rabiot; Dembélé, Olise, Barcola; Mbappé",
-   "xi_visita": "Unai Simón; Porro, Cubarsí, Laporte, Cucurella; Rodri, Pedri, Fabián Ruiz; Yamal, Olmo, Nico Williams",
+   "xi_local": "Maignan; Koundé, Saliba, Upamecano, Digne; Tchouaméni, Rabiot; Olise, Dembélé, Doué; Mbappé",
+   "xi_visita": "Unai Simón; Porro, Cubarsí, Laporte, Cucurella; Rodri, Pedri, Olmo; Yamal, Oyarzabal, Nico Williams",
    "bajas_local": [
-    "Aurélien Tchouaméni (músculo/baja — no jugó vs Paraguay ni Marruecos en QF; Koné-Rabiot como dupla en su lugar para la semi — Sports Mole / ESPN 12-jul-2026)",
-    "Kylian Mbappé (tobillo — golpe vs Marruecos en QF; dice 'estoy completamente bien' y se espera titular; no hay preocupaciones reales — CBS Sports / Yahoo Sports 10-jul-2026)"
+    "Kylian Mbappé (tobillo — golpe vs Marruecos en QF; descartada preocupación, confirmado apto para titular — CBS Sports / Yahoo Sports 10-jul-2026)",
+    "Dayot Upamecano (dolor de pie) y William Saliba (molestia de espalda) — entrenaron aparte el sábado; ambos esperados titulares pero a monitorear — Sports Mole / Football365 13-jul-2026"
    ],
    "bajas_visita": [],
-   "lectura": "Semifinal más esperada del torneo: reedición de la Euro 2024 SF que ganó España 2-1. Francia llega con record perfecto (7V-0D-0L), única sin necesitar prorroga ni penales. La novedad en el XI francés es Digne en el lateral izquierdo en lugar de Hernández, y la dupla Koné-Rabiot reemplaza a Tchouaméni (aún en duda, no jugó vs Marruecos). Mbappé (8G) y Dembélé (5G) siguen como la dupla ofensiva más letal del torneo. España responde con la vuelta de Nico Williams al XI titular (ausente desde el grupo por distensión de ingle vs Uruguay) y la recuperación de Yéremy Pino (esguince acromioclavicular, disponible como suplente). Merino — sub que marcó los goles decisivos vs Portugal y Belgium — vuelve a acechar desde el banco. España encajó solo 1 gol en 6 partidos (record del torneo). El duelo Yamal vs Digne y el choque Mbappé vs Cubarsí-Laporte son los ejes tácticos clave. AT&T Stadium, Arlington, 3pm ET (19:00 UTC).",
-   "lean": "Muy parejo (mercado: France 40% / empate 30% / Spain 30%). Francia tiene la ventaja ofensiva por la dupla Mbappé-Dembélé y el record perfecto. España tiene el argumento defensivo más sólido del torneo (1 gol concedido en 6 partidos), a Nico Williams fresco de vuelta y la ventaja táctica del matchup Yamal vs el lateral Digne. Leve inclinación España por solidez defensiva y frescura ofensiva recuperada.",
+   "lectura": "Semifinal más esperada del torneo: reedición de la Euro 2024 SF que ganó España 2-1. NOVEDAD DEL DÍA (13-14 jul): Tchouaméni regresa al XI titular — L'Équipe (Damien Degorre) confirma que su recuperación muscular es satisfactoria y estará de inicio, desplazando a Koné al banco. Doué reemplaza a Barcola en el ataque (ajuste táctico de Deschamps). Francia llega con record perfecto (7V-0D-0L) y es el único equipo sin necesitar prorroga ni penales. España responde con Nico Williams de regreso al XI (recuperado de distensión de ingle vs Uruguay) y Fabián Ruiz relegado al banco; Olmo ocupa el mediocampo junto a Rodri y Pedri; Oyarzabal como único '9'. Merino — sub decisivo vs Portugal y Belgium — vuelve a acechar desde el banco. España encajó solo 1 gol en 7 partidos (mejor defensa del torneo). El duelo Yamal vs Digne y Mbappé vs Cubarsí-Laporte son los ejes tácticos clave. AT&T Stadium, Arlington, 3pm ET (19:00 UTC).",
+   "lean": "Muy parejo (mercado FanDuel: France 40% / empate 30% / Spain 30%). La vuelta de Tchouaméni restaura el ancla defensiva de Francia en el mediocampo y equilibra más el matchup vs el Rodri-Pedri de España. Mbappé (8G) y Dembélé (5G) son el mayor activo ofensivo. España responde con la mejor defensa del torneo (1G concedido), Nico Williams de vuelta y la ventaja táctica Yamal vs Digne. Mbappé no anotó vs Paraguay ni Marruecos (goles de otros); España puede jugar bajito y al contragolpe. Leve inclinación España por solidez y frescura ofensiva.",
    "fuentes": [
-    "https://www.sportsmole.co.uk/football/france/world-cup-2026/preview/france-vs-spain-prediction-team-news-lineups_601083.html",
-    "https://www.sportsmole.co.uk/football/spain/world-cup-2026/predicted-lineups/has-mikel-merino-made-his-point-predicted-spain-semi-final-lineup-vs-france_601085.html",
-    "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/nico-williams-returns-for-spain-and-opens-up-about-injury-2026-07-11",
-    "https://www.cbssports.com/soccer/news/kylian-mbappe-downplays-ankle-injury-france-advance-to-world-cup-semifinals/",
-    "https://www.sportsmole.co.uk/football/spain/injury-news/injuries-and-suspensions/pino-williams-munoz-latest-spain-injury-suspension-list-vs-france_601071.html",
-    "https://www.aljazeera.com/sports/2026/7/12/france-spain-fifa-world-cup-semifinals-mbappe-yamal-prediction-stats-venue",
-    "https://www.foxsports.com/stories/soccer/france-vs-spain-confirmed-semifinals-heres-what-know"
+    "https://bolavip.com/en/world-cup/france-receive-good-news-ahead-of-2026-world-cup-semifinals-with-tchouameni-reportedly-back-vs-spain",
+    "https://worldsoccertalk.com/world-cup/report-aurelien-tchouameni-set-to-start-for-france-vs-spain-leaving-manu-kone-on-bench/",
+    "https://www.sportsmole.co.uk/football/france/world-cup-2026/predicted-lineups/kone-at-risk-tchouameni-to-return-predicted-france-semi-final-lineup-vs-spain_601093.html",
+    "https://www.sportsmole.co.uk/football/france/injury-news/injuries-and-suspensions/mbappe-tchouameni-kone-latest-france-injury-suspension-list-vs-spain_601068.html",
+    "https://www.sportsmole.co.uk/football/spain/world-cup-2026/predicted-lineups/has-mikel-merino-made-his-point-predicted-spain-semi-final-lineup-vs-spain_601085.html",
+    "https://www.aljazeera.com/sports/2026/7/13/france-spain-world-cup-semifinal-mbappe-yamal-predictions-kickoff",
+    "https://sports.yahoo.com/articles/spain-xi-vs-france-confirmed-155620902.html",
+    "https://www.football365.com/match-preview/france-v-spain-prediction-preview"
    ]
   },
   {
