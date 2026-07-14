@@ -3,7 +3,7 @@
   "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
   "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
   "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-  "actualizado": "2026-07-14T01:20:00Z",
+  "actualizado": "2026-07-14T17:15:00Z",
   "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
  },
  "partidos": [
@@ -12,23 +12,27 @@
    "away": "Spain",
    "fecha": "2026-07-14",
    "estado_alineacion": "probable",
-   "xi_local": "Maignan; Koundé, Saliba, Upamecano, Digne; Tchouaméni, Rabiot; Olise, Dembélé, Doué; Mbappé",
-   "xi_visita": "Unai Simón; Porro, Cubarsí, Laporte, Cucurella; Rodri, Pedri, Olmo; Yamal, Oyarzabal, Nico Williams",
+   "xi_local": "Maignan; Koundé, Upamecano, Saliba, Digne; Koné, Rabiot; Olise, Dembélé, Doué; Mbappé",
+   "xi_visita": "Unai Simón; Porro, Cubarsí, Laporte, Cucurella; Rodri, Pedri; Yamal, Olmo, Baena; Oyarzabal",
    "bajas_local": [
     "Kylian Mbappé (tobillo — golpe vs Marruecos en QF; descartada preocupación, confirmado apto para titular — CBS Sports / Yahoo Sports 10-jul-2026)",
-    "Dayot Upamecano (dolor de pie) y William Saliba (molestia de espalda) — entrenaron aparte el sábado; ambos esperados titulares pero a monitorear — Sports Mole / Football365 13-jul-2026"
+    "Dayot Upamecano (dolor de pie) y William Saliba (molestia de espalda) — esperados titulares pero a monitorear — Sports Mole / Football365 13-jul-2026",
+    "Aurélien Tchouaméni (ACTUALIZACIÓN 14-jul, previo al XI oficial): disponible pero NO al 100% — Deschamps confirmó que 'no está completamente recuperado' de su lesión muscular; Manu Koné se perfila como probable titular en el doble pivote — CBS Sports / ESPN / Deccan Chronicle 14-jul-2026"
    ],
    "bajas_visita": [],
-   "lectura": "Semifinal más esperada del torneo: reedición de la Euro 2024 SF que ganó España 2-1. NOVEDAD DEL DÍA (13-14 jul): Tchouaméni regresa al XI titular — L'Équipe (Damien Degorre) confirma que su recuperación muscular es satisfactoria y estará de inicio, desplazando a Koné al banco. Doué reemplaza a Barcola en el ataque (ajuste táctico de Deschamps). Francia llega con record perfecto (7V-0D-0L) y es el único equipo sin necesitar prorroga ni penales. España responde con Nico Williams de regreso al XI (recuperado de distensión de ingle vs Uruguay) y Fabián Ruiz relegado al banco; Olmo ocupa el mediocampo junto a Rodri y Pedri; Oyarzabal como único '9'. Merino — sub decisivo vs Portugal y Belgium — vuelve a acechar desde el banco. España encajó solo 1 gol en 7 partidos (mejor defensa del torneo). El duelo Yamal vs Digne y Mbappé vs Cubarsí-Laporte son los ejes tácticos clave. AT&T Stadium, Arlington, 3pm ET (19:00 UTC).",
-   "lean": "Muy parejo (mercado FanDuel: France 40% / empate 30% / Spain 30%). La vuelta de Tchouaméni restaura el ancla defensiva de Francia en el mediocampo y equilibra más el matchup vs el Rodri-Pedri de España. Mbappé (8G) y Dembélé (5G) son el mayor activo ofensivo. España responde con la mejor defensa del torneo (1G concedido), Nico Williams de vuelta y la ventaja táctica Yamal vs Digne. Mbappé no anotó vs Paraguay ni Marruecos (goles de otros); España puede jugar bajito y al contragolpe. Leve inclinación España por solidez y frescura ofensiva.",
+   "lectura": "Semifinal más esperada del torneo: reedición de la Euro 2024 SF que ganó España 2-1. ACTUALIZACIONES PREVIAS AL XI OFICIAL (14-jul, ~17:15 UTC, 1h45m antes del KO): Para Francia, Koné se perfila como probable titular sobre Tchouaméni en el doble pivote — Deschamps admitió que Tchouaméni 'no está al 100%' tras su lesión muscular; esto CAMBIA el balance: Koné es más dinámico pero menos ancla defensiva que Tchouaméni. Doué titula sobre Barcola en el ataque izquierdo. Para España, múltiples fuentes ubican a Álex Baena como titular sobre Nico Williams en el carril zurdo — cambio táctico relevante: Baena (Atlético) es más defensivo que Nico Williams. Francia llega con record perfecto (7V-0D-0L) — único equipo sin prorroga ni penales — con Mbappé (8G) y Dembélé (5G). España como mejor defensa del torneo (1G concedido en 7 partidos), Rodri y Pedri dominando el mediocampo, Yamal desde el carril derecho, Oyarzabal como '9'. El árbitro es Slavko Vinčić (Eslovenia). AT&T Stadium, Arlington, 3pm ET (19:00 UTC). NOTA: XI oficial no publicado al momento de esta actualización.",
+   "lean": "Muy parejo (mercado FanDuel: France 40% / empate 30% / Spain 30%). Si Koné titula en lugar de Tchouaméni, España puede tener ventaja en el pivote frente al Rodri-Pedri. Con Baena (más defensivo) sobre Nico Williams, España pierde algo de verticalidad pero gana solidez. Mbappé (8G) y Dembélé (5G) siguen siendo el principal activo ofensivo de Francia. España responde con la mejor defensa del torneo. Leve inclinación España por solidez defensiva y control en el mediocampo.",
    "fuentes": [
-    "https://bolavip.com/en/world-cup/france-receive-good-news-ahead-of-2026-world-cup-semifinals-with-tchouameni-reportedly-back-vs-spain",
-    "https://worldsoccertalk.com/world-cup/report-aurelien-tchouameni-set-to-start-for-france-vs-spain-leaving-manu-kone-on-bench/",
-    "https://www.sportsmole.co.uk/football/france/world-cup-2026/predicted-lineups/kone-at-risk-tchouameni-to-return-predicted-france-semi-final-lineup-vs-spain_601093.html",
-    "https://www.sportsmole.co.uk/football/france/injury-news/injuries-and-suspensions/mbappe-tchouameni-kone-latest-france-injury-suspension-list-vs-spain_601068.html",
-    "https://www.sportsmole.co.uk/football/spain/world-cup-2026/predicted-lineups/has-mikel-merino-made-his-point-predicted-spain-semi-final-lineup-vs-spain_601085.html",
-    "https://www.aljazeera.com/sports/2026/7/13/france-spain-world-cup-semifinal-mbappe-yamal-predictions-kickoff",
+    "https://www.fifa.com/en/match-centre/match/17/285023/289290/400021541",
     "https://sports.yahoo.com/articles/spain-xi-vs-france-confirmed-155620902.html",
+    "https://sports.yahoo.com/articles/france-projected-lineup-world-cup-095822611.html",
+    "https://www.cbssports.com/soccer/news/france-spain-live-stream-fifa-world-cup-semifinals-predictions-and-lineups/",
+    "https://www.espn.com/soccer/story/_/id/49341955/france-vs-spain-fifa-world-cup-2026-tv-channel-how-watch-kickoff-live-stream-injury-predicted-lineups",
+    "https://www.deccanchronicle.com/sports/fifa-world-cup-2026-deschamps-eases-mbappe-injury-concerns-ahead-of-spain-semi-final-1970738",
+    "https://www.aljazeera.com/sports/2026/7/14/fifa-world-cup-brackets-semifinal-schedule-france-vs-spain-prediction",
+    "https://www.italiansoccerseriea.com/general-soccer-news/france-vs-spain-official-lineups-tuesday-14-july-2026-world-cup-semifinal/",
+    "https://www.olympics.com/en/news/fifa-world-cup-2026-spain-vs-france-semi-final-score-lineups-live-updates",
+    "https://www.sportsmole.co.uk/football/france/world-cup-2026/predicted-lineups/kone-at-risk-tchouameni-to-return-predicted-france-semi-final-lineup-vs-spain_601093.html",
     "https://www.football365.com/match-preview/france-v-spain-prediction-preview"
    ]
   },
@@ -37,24 +41,26 @@
    "away": "Argentina",
    "fecha": "2026-07-15",
    "estado_alineacion": "probable",
-   "xi_local": "Pickford; Alexander-Arnold, Konsa, Guehi, Trippier; Rice (EN DUDA) o Mainoo, Gallagher; Saka, Bellingham, Foden; Kane",
+   "xi_local": "Pickford; James, Konsa, Guehi, O'Reilly; Anderson, Rice; Saka, Bellingham, Gordon; Kane",
    "xi_visita": "E. Martínez; Molina, C. Romero, L. Martínez, Tagliafico; Paredes; De Paul, Mac Allister, E. Fernández; Messi, J. Álvarez",
    "bajas_local": [
     "Jarell Quansah (tarjeta roja vs Mexico R16 — sanción 2 partidos: BAJA CONFIRMADA para la semi vs Argentina — ESPN + Al Jazeera)",
-    "Jordan Henderson (cirugía de muñeca izquierda tras lesión festejando vs Mexico; BAJA CONFIRMADA para el resto del torneo; era suplente sin minutos en el Mundial — Yahoo Sports / Washington Post 7-8-jul-2026)",
-    "Declan Rice (EN DUDA — gastroenteritis + molestia isquiotibial; salió en el descanso vs Noruega en el QF; se espera que juegue pero su estado físico está bajo evaluación — Athlon Sports / CryptoBriefing 12-jul-2026)"
+    "Jordan Henderson (cirugía de muñeca izquierda tras lesión festejando vs Mexico; BAJA CONFIRMADA para el resto del torneo — Yahoo Sports / Washington Post 7-8-jul-2026)"
    ],
    "bajas_visita": [],
-   "lectura": "Primera semifinal de un Mundial entre Argentina e Inglaterra en la historia. Argentina (3-1 SUI AET) llega con Messi en 8 goles, colíder de la Bota de Oro junto a Mbappé. Bellingham marcó dos goles vs Noruega en el QF (6G en el torneo, empata a Kane). La baja relevante de England es Henderson (cirugía de muñeca, fuera del torneo), aunque era suplente sin minutos. La gran incógnita es Declan Rice: salió al descanso vs Noruega por gastroenteritis combinada con molestia isquiotibial; si no juega, Mainoo o Gallagher asume el rol de ancla defensiva, lo que cambia el equilibrio del equipo. Sin Quansah (2da partido de suspensión) y con Rice en duda, England podría entrar en su semifinal con la defensa y el mediocampo más frágiles del torneo. Argentina llega con la misma columna vertebral intacta — Messi, Mac Allister, De Paul, J. Álvarez — sin bajas confirmadas. Mercedes-Benz Stadium, Atlanta, 3pm ET (19:00 UTC).",
-   "lean": "Argentina levemente favorita (mercado: Argentina 35% / empate 31% / England 34%, DraftKings). La duda de Rice es el factor más relevante: si no juega, England pierde su ancla defensiva y Argentina con Messi-Álvarez tendría más espacio. Si Rice está al 100%, el partido es extremadamente parejo. Ambos equipos invictos en el torneo.",
+   "lectura": "Primera semifinal de un Mundial entre Argentina e Inglaterra en la historia. ACTUALIZACIÓN CLAVE (14-jul): Declan Rice confirmado FIT y esperado como titular — Sky Sports News y The Guardian confirman su recuperación de la gastroenteritis que lo sacó al descanso vs Noruega en los QF; Rice sigue con monitoreo por un problema neural crónico de espalda baja/isquiotibial. XI PREVISTO ACTUALIZADO (4-2-3-1): Reece James en el carril derecho (regresó de lesión como suplente vs Noruega), Nico O'Reilly como lateral zurdo, Elliot Anderson en el doble pivote junto a Rice, Anthony Gordon en el carril izquierdo sobre Foden. Esta es una configuración diferente y más compacta que en rondas anteriores. Argentina llega con Messi (8G, colíder Bota de Oro con Mbappé), Mac Allister, De Paul, Julián Álvarez, sin bajas confirmadas. El árbitro designado es el estadounidense Ismail Elfath — históricamente con buena tasa de partido cuando Messi juega. Bellingham (6G) y Kane (6G) siguen siendo las principales amenazas de England. Mercedes-Benz Stadium, Atlanta, 3pm ET (19:00 UTC).",
+   "lean": "Argentina levemente favorita (mercado: Argentina 35% / empate 31% / England 34%, DraftKings). Con Rice confirmado fit, el partido se nivela respecto a lo que se esperaba si no jugaba. La nueva defensa England (James-Konsa-Guehi-O'Reilly, con O'Reilly sin experiencia mundialista previa) es el mayor interrogante vs Messi-Álvarez. Si Bellingham y Kane reproducen su nivel de QF, England tiene margen real. Ambos equipos invictos en el torneo.",
    "fuentes": [
+    "https://sports.yahoo.com/articles/england-xi-vs-argentina-confirmed-064857130.html",
+    "https://www.rotowire.com/soccer/article/england-vs-argentina-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-semifinal-122508",
+    "https://www.sportsmole.co.uk/football/england/injury-news/injuries-and-suspensions/rice-konsa-henderson-latest-england-injury-suspension-list-vs-argentina_601109.html",
+    "https://athlonsports.com/soccer/will-declan-rice-play-argentina-england-injury-update-before-world-cup-semifinal",
+    "https://bolavip.com/en/world-cup/declan-rice-illness-forces-england-into-late-decision-ahead-of-argentina-semifinal",
+    "https://www.tntsports.co.uk/football/world-cup/2026/england-health-bill-declan-rice-reece-james-thomas-tuchel-jarell-quansah-bukayo-saka-argentina-semi-final-suspended_sto23318937/story.shtml",
     "https://www.espn.com/soccer/story/_/id/49315827/england-jarell-quansah-suspended-two-world-cup-matches-mexico-red",
     "https://sports.yahoo.com/soccer/article/jordan-henderson-to-reportedly-undergo-wrist-surgery-miss-rest-of-world-cup-after-injuring-himself-while-celebrating-englands-win-over-mexico-041544262.html",
-    "https://www.washingtonpost.com/sports/soccer/2026/07/08/world-cup-england-henderson-surgery/49dc4a88-7ae4-11f1-b194-f872dd4ec5aa_story.html",
-    "https://athlonsports.com/soccer/why-declan-rice-no-longer-playing-england-vs-norway-world-cup-quarterfinal-match",
-    "https://cryptobriefing.com/declan-rice-illness-raises-concerns-for-englands-world-cup-semifinal-prospects/",
     "https://www.foxsports.com/stories/soccer/england-vs-argentina-confirmed-semifinals-heres-what-know",
-    "https://www.aljazeera.com/sports/2026/7/9/englands-quansah-banned-for-two-matches-after-world-cup-last-16-red-card"
+    "https://www.goal.com/en-in/lists/lionel-messi-lucky-charm-ismail-elfath-referee-england-vs-argentina-world-cup-semi-final/blt5634e2e054e109f5"
    ]
   }
  ]
