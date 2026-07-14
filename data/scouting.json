@@ -3,39 +3,10 @@
   "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
   "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
   "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-  "actualizado": "2026-07-14T17:15:00Z",
+  "actualizado": "2026-07-14T21:10:00Z",
   "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
  },
  "partidos": [
-  {
-   "home": "France",
-   "away": "Spain",
-   "fecha": "2026-07-14",
-   "estado_alineacion": "probable",
-   "xi_local": "Maignan; Koundé, Upamecano, Saliba, Digne; Koné, Rabiot; Olise, Dembélé, Doué; Mbappé",
-   "xi_visita": "Unai Simón; Porro, Cubarsí, Laporte, Cucurella; Rodri, Pedri; Yamal, Olmo, Baena; Oyarzabal",
-   "bajas_local": [
-    "Kylian Mbappé (tobillo — golpe vs Marruecos en QF; descartada preocupación, confirmado apto para titular — CBS Sports / Yahoo Sports 10-jul-2026)",
-    "Dayot Upamecano (dolor de pie) y William Saliba (molestia de espalda) — esperados titulares pero a monitorear — Sports Mole / Football365 13-jul-2026",
-    "Aurélien Tchouaméni (ACTUALIZACIÓN 14-jul, previo al XI oficial): disponible pero NO al 100% — Deschamps confirmó que 'no está completamente recuperado' de su lesión muscular; Manu Koné se perfila como probable titular en el doble pivote — CBS Sports / ESPN / Deccan Chronicle 14-jul-2026"
-   ],
-   "bajas_visita": [],
-   "lectura": "Semifinal más esperada del torneo: reedición de la Euro 2024 SF que ganó España 2-1. ACTUALIZACIONES PREVIAS AL XI OFICIAL (14-jul, ~17:15 UTC, 1h45m antes del KO): Para Francia, Koné se perfila como probable titular sobre Tchouaméni en el doble pivote — Deschamps admitió que Tchouaméni 'no está al 100%' tras su lesión muscular; esto CAMBIA el balance: Koné es más dinámico pero menos ancla defensiva que Tchouaméni. Doué titula sobre Barcola en el ataque izquierdo. Para España, múltiples fuentes ubican a Álex Baena como titular sobre Nico Williams en el carril zurdo — cambio táctico relevante: Baena (Atlético) es más defensivo que Nico Williams. Francia llega con record perfecto (7V-0D-0L) — único equipo sin prorroga ni penales — con Mbappé (8G) y Dembélé (5G). España como mejor defensa del torneo (1G concedido en 7 partidos), Rodri y Pedri dominando el mediocampo, Yamal desde el carril derecho, Oyarzabal como '9'. El árbitro es Slavko Vinčić (Eslovenia). AT&T Stadium, Arlington, 3pm ET (19:00 UTC). NOTA: XI oficial no publicado al momento de esta actualización.",
-   "lean": "Muy parejo (mercado FanDuel: France 40% / empate 30% / Spain 30%). Si Koné titula en lugar de Tchouaméni, España puede tener ventaja en el pivote frente al Rodri-Pedri. Con Baena (más defensivo) sobre Nico Williams, España pierde algo de verticalidad pero gana solidez. Mbappé (8G) y Dembélé (5G) siguen siendo el principal activo ofensivo de Francia. España responde con la mejor defensa del torneo. Leve inclinación España por solidez defensiva y control en el mediocampo.",
-   "fuentes": [
-    "https://www.fifa.com/en/match-centre/match/17/285023/289290/400021541",
-    "https://sports.yahoo.com/articles/spain-xi-vs-france-confirmed-155620902.html",
-    "https://sports.yahoo.com/articles/france-projected-lineup-world-cup-095822611.html",
-    "https://www.cbssports.com/soccer/news/france-spain-live-stream-fifa-world-cup-semifinals-predictions-and-lineups/",
-    "https://www.espn.com/soccer/story/_/id/49341955/france-vs-spain-fifa-world-cup-2026-tv-channel-how-watch-kickoff-live-stream-injury-predicted-lineups",
-    "https://www.deccanchronicle.com/sports/fifa-world-cup-2026-deschamps-eases-mbappe-injury-concerns-ahead-of-spain-semi-final-1970738",
-    "https://www.aljazeera.com/sports/2026/7/14/fifa-world-cup-brackets-semifinal-schedule-france-vs-spain-prediction",
-    "https://www.italiansoccerseriea.com/general-soccer-news/france-vs-spain-official-lineups-tuesday-14-july-2026-world-cup-semifinal/",
-    "https://www.olympics.com/en/news/fifa-world-cup-2026-spain-vs-france-semi-final-score-lineups-live-updates",
-    "https://www.sportsmole.co.uk/football/france/world-cup-2026/predicted-lineups/kone-at-risk-tchouameni-to-return-predicted-france-semi-final-lineup-vs-spain_601093.html",
-    "https://www.football365.com/match-preview/france-v-spain-prediction-preview"
-   ]
-  },
   {
    "home": "England",
    "away": "Argentina",
