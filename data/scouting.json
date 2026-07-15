@@ -3,36 +3,8 @@
   "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
   "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
   "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-  "actualizado": "2026-07-14T21:10:00Z",
+  "actualizado": "2026-07-15T21:20:00Z",
   "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
  },
- "partidos": [
-  {
-   "home": "England",
-   "away": "Argentina",
-   "fecha": "2026-07-15",
-   "estado_alineacion": "probable",
-   "xi_local": "Pickford; James, Konsa, Guehi, O'Reilly; Anderson, Rice; Saka, Bellingham, Gordon; Kane",
-   "xi_visita": "E. Martínez; Molina, C. Romero, L. Martínez, Tagliafico; Paredes; De Paul, Mac Allister, E. Fernández; Messi, J. Álvarez",
-   "bajas_local": [
-    "Jarell Quansah (tarjeta roja vs Mexico R16 — sanción 2 partidos: BAJA CONFIRMADA para la semi vs Argentina — ESPN + Al Jazeera)",
-    "Jordan Henderson (cirugía de muñeca izquierda tras lesión festejando vs Mexico; BAJA CONFIRMADA para el resto del torneo — Yahoo Sports / Washington Post 7-8-jul-2026)"
-   ],
-   "bajas_visita": [],
-   "lectura": "Primera semifinal de un Mundial entre Argentina e Inglaterra en la historia. ACTUALIZACIÓN CLAVE (14-jul): Declan Rice confirmado FIT y esperado como titular — Sky Sports News y The Guardian confirman su recuperación de la gastroenteritis que lo sacó al descanso vs Noruega en los QF; Rice sigue con monitoreo por un problema neural crónico de espalda baja/isquiotibial. XI PREVISTO ACTUALIZADO (4-2-3-1): Reece James en el carril derecho (regresó de lesión como suplente vs Noruega), Nico O'Reilly como lateral zurdo, Elliot Anderson en el doble pivote junto a Rice, Anthony Gordon en el carril izquierdo sobre Foden. Esta es una configuración diferente y más compacta que en rondas anteriores. Argentina llega con Messi (8G, colíder Bota de Oro con Mbappé), Mac Allister, De Paul, Julián Álvarez, sin bajas confirmadas. El árbitro designado es el estadounidense Ismail Elfath — históricamente con buena tasa de partido cuando Messi juega. Bellingham (6G) y Kane (6G) siguen siendo las principales amenazas de England. Mercedes-Benz Stadium, Atlanta, 3pm ET (19:00 UTC).",
-   "lean": "Argentina levemente favorita (mercado: Argentina 35% / empate 31% / England 34%, DraftKings). Con Rice confirmado fit, el partido se nivela respecto a lo que se esperaba si no jugaba. La nueva defensa England (James-Konsa-Guehi-O'Reilly, con O'Reilly sin experiencia mundialista previa) es el mayor interrogante vs Messi-Álvarez. Si Bellingham y Kane reproducen su nivel de QF, England tiene margen real. Ambos equipos invictos en el torneo.",
-   "fuentes": [
-    "https://sports.yahoo.com/articles/england-xi-vs-argentina-confirmed-064857130.html",
-    "https://www.rotowire.com/soccer/article/england-vs-argentina-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-semifinal-122508",
-    "https://www.sportsmole.co.uk/football/england/injury-news/injuries-and-suspensions/rice-konsa-henderson-latest-england-injury-suspension-list-vs-argentina_601109.html",
-    "https://athlonsports.com/soccer/will-declan-rice-play-argentina-england-injury-update-before-world-cup-semifinal",
-    "https://bolavip.com/en/world-cup/declan-rice-illness-forces-england-into-late-decision-ahead-of-argentina-semifinal",
-    "https://www.tntsports.co.uk/football/world-cup/2026/england-health-bill-declan-rice-reece-james-thomas-tuchel-jarell-quansah-bukayo-saka-argentina-semi-final-suspended_sto23318937/story.shtml",
-    "https://www.espn.com/soccer/story/_/id/49315827/england-jarell-quansah-suspended-two-world-cup-matches-mexico-red",
-    "https://sports.yahoo.com/soccer/article/jordan-henderson-to-reportedly-undergo-wrist-surgery-miss-rest-of-world-cup-after-injuring-himself-while-celebrating-englands-win-over-mexico-041544262.html",
-    "https://www.foxsports.com/stories/soccer/england-vs-argentina-confirmed-semifinals-heres-what-know",
-    "https://www.goal.com/en-in/lists/lionel-messi-lucky-charm-ismail-elfath-referee-england-vs-argentina-world-cup-semi-final/blt5634e2e054e109f5"
-   ]
-  }
- ]
+ "partidos": []
 }
