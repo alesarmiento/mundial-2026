@@ -3,7 +3,7 @@
   "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
   "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
   "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-  "actualizado": "2026-07-17T18:15:00Z",
+  "actualizado": "2026-07-17T22:10:00Z",
   "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
  },
  "partidos": [
@@ -13,13 +13,14 @@
    "fecha": "2026-07-18",
    "estado_alineacion": "probable",
    "xi_local": "Maignan; Kounde, Upamecano, Lacroix, T. Hernandez; Rabiot, Koné; Dembele, Cherki, Doue; Mbappe",
-   "xi_visita": "Pickford; James, Guehi, Stones, Spence; Rice, Anderson; Rogers, Bellingham, Gordon; Kane",
+   "xi_visita": "Pickford; Spence, Guehi, Stones, Chilwell; Rice (duda — hamstring), Anderson; Rogers, Bellingham, Gordon; Kane",
    "bajas_local": ["William Saliba (BAJA CONFIRMADA — espalda; salió al min 29 vs España, dijo 'se me fue la espalda'; Mundial terminado; cirugía probable; Lacroix lo reemplaza en el XI)"],
-   "bajas_visita": ["Jarell Quansah (suspendido — expulsado vs México en QF; cumple fecha)", "Declan Rice (EN DUDA — hamstring + tensión lumbar; salió al descanso del QF vs Noruega el 10-jul; completó la semi vs Argentina el 15-jul; monitoreo activo)"],
-   "lectura": "ACTUALIZACIÓN 17-JUL — Tuchel NO rota: Kane y Bellingham ARRANCAN desde el inicio en búsqueda de la Bota de Oro (6G cada uno). XI inglés significativamente más fuerte de lo previsto: Pickford; James, Guehi, Stones, Spence; Rice (duda leve — hamstring), Anderson; Rogers, Bellingham, Gordon; Kane. Francia (4-2-3-1): Lacroix por Saliba (baja definitiva del Mundial); Cherki de entrada en el #10; Doue por izquierda. Mbappe (8G) lidera la Bota de Oro — necesita mantener su ventaja de 2G sobre Kane y Bellingham. Hard Rock Stadium, Miami Gardens (5:00 PM ET / 18:00 Chile).",
-   "lean": "Francia levemente favorita (mercado pH=47% vs pA=27%), pero la brecha se achica: ambos equipos con XI de máximo peso. La Bota de Oro es el aliciente central — Mbappe (8G) vs Kane y Bellingham (6G c/u). Si alguno de los dos ingleses anota dos, iguala a Mbappe; si anota tres, lo supera. Partido de bronce con narrativa individual única.",
+   "bajas_visita": ["Jarell Quansah (suspendido — expulsado vs México en QF; cumple fecha)", "Reece James (EN DUDA — lesión muscular; salió en el segundo tiempo de la semi vs Argentina el 15-jul; Spence cubre de lateral derecho si no llega)", "Declan Rice (EN DUDA — hamstring + tensión lumbar; salió al descanso del QF vs Noruega el 10-jul; completó la semi vs Argentina el 15-jul; monitoreo activo)"],
+   "lectura": "ACTUALIZACIÓN 17-JUL 22:10 UTC — NUEVA BAJA INGLESA: Reece James salió lesionado (músculo) en la segunda mitad de la semi vs Argentina (15-jul) y está EN DUDA para el bronce; si no llega, Spence arranca de titular en el lateral derecho. Tuchel NO rota el resto: Kane y Bellingham arrancan desde el inicio en búsqueda de la Bota de Oro (6G cada uno). XI probable: Pickford; Spence, Guehi, Stones, Chilwell; Rice (duda — hamstring), Anderson; Rogers, Bellingham, Gordon; Kane. Francia: Lacroix por Saliba (baja definitiva); Cherki en el #10; Doue por izquierda; Mbappe (8G) lidera la Bota de Oro con ventaja de 2G sobre Kane y Bellingham. Hard Rock Stadium, Miami Gardens (5:00 PM ET / 18:00 Chile).",
+   "lean": "Francia levemente favorita (mercado pH=47% vs pA=27%). La baja de James debilita el lateral derecho inglés. La Bota de Oro es el aliciente central: Mbappe (8G) vs Kane y Bellingham (6G c/u). Si alguno de los dos ingleses anota dos, iguala a Mbappe; si anota tres, lo supera. Partido de bronce con narrativa individual única.",
    "fuentes": [
     "https://www.espn.com/soccer/story/_/id/49381872/world-cup-2026-today-live-updates-news-england-france-spain-argentina-july-17",
+    "https://www.espn.com/soccer/story/_/id/49373987/france-vs-england-fifa-world-cup-2026-tv-channel-how-watch-kickoff-live-stream-injury-predicted-lineups",
     "https://sports.yahoo.com/articles/england-xi-vs-france-confirmed-135631926.html",
     "https://www.si.com/soccer/england-predicted-lineup-vs-france-world-cup-third-place-playoff-7-18-26",
     "https://www.rotowire.com/soccer/article/france-vs-england-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-third-place-playoff-123027",
