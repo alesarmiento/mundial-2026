@@ -3,7 +3,7 @@
   "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
   "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
   "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-  "actualizado": "2026-07-15T23:10:00Z",
+  "actualizado": "2026-07-17T01:15:00Z",
   "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
  },
  "partidos": [
@@ -12,17 +12,18 @@
    "away": "England",
    "fecha": "2026-07-18",
    "estado_alineacion": "probable",
-   "xi_local": "Maignan; Clauss, Kounde, Upamecano, T. Hernandez; Tchouameni, Camavinga; Olise, Mbappe, Dembele; (Saliba baja probable — reemplazante en duda)",
-   "xi_visita": "Pickford; Alexander-Arnold, Guehi, Maguire, Trippier; Rice, Bellingham; Saka, Foden, Gordon; Kane",
-   "bajas_local": ["William Saliba (espalda — salió llorando en el min 29 de la semi vs España, dijo 'se me fue la espalda'; baja probable para el bronce)"],
+   "xi_local": "Maignan; Kounde, Upamecano, Lacroix, T. Hernandez; Rabiot, Koné; Dembele, Cherki, Doue; Mbappe",
+   "xi_visita": "Pickford; Spence, Guehi, Konsa, O'Reilly; Mainoo, Anderson; Rogers, Eze, Rashford; Watkins",
+   "bajas_local": ["William Saliba (baja CONFIRMADA — espalda; salió llorando min 29 vs España, dijo 'se me fue la espalda'; Mundial terminado para él; cirugía probable según múltiples fuentes; Lacroix lo reemplaza en el XI)"],
    "bajas_visita": ["Jarell Quansah (suspendido — expulsado vs México en QF; cumple fecha)"],
-   "lectura": "Francia, que ganó sus 6 partidos anteriores, cae 0-2 ante España en la semi; Deschamps admite problemas de fluidez en el mediocampo. Inglaterra lideraba 1-0 ante Argentina hasta el 85' pero perdió 1-2 en el descuento; Tuchel lamentó la falta de efectividad en el contragolpe. Mbappe (8G, 3 asistencias) llega al bronce empatado con Messi en la Bota de Oro: un gol más le daría el trofeo individual. Kane (6G) y Bellingham (6G) también buscan cerrar el torneo con medalla. La baja de Saliba es el gran interrogante defensivo francés. Hard Rock Stadium, Miami Gardens (5:00 PM ET / 18:00 Chile).",
-   "lean": "Francia leve favorita (mercado +100 vs +260 de Inglaterra); partido europeo de alta intensidad por el bronce; ambos querrán ganar pese al duelo no deseado.",
+   "lectura": "Francia (4-2-3-1): Lacroix confirmado como titular por Saliba (baja definitiva del Mundial); Cherki probable de entrada por Olise en el #10; Doue en la banda izquierda. Mbappe (8G) llega empatado con Messi en la Bota de Oro: un gol más le daría el trofeo individual, motivación enorme. Inglaterra prevé rotación amplia para el bronce (Tuchel descansa a Kane, Bellingham, Saka, Foden y Gordon): Watkins como 9, Eze y Rashford en bandas, Mainoo en la medular. Hard Rock Stadium, Miami Gardens (5:00 PM ET / 18:00 Chile).",
+   "lean": "Francia favorita (mercado pH=47% vs pA=27% de Inglaterra): XI de gala vs probable XI rotado inglés; Mbappe motivado por la Bota de Oro; partido de mentalidad mixta — nadie quiere jugar el bronce pero ambos querrán terminar con medalla.",
    "fuentes": [
-    "https://www.foxsports.com/stories/soccer/2026-world-cup-third-place-odds-france-england",
-    "https://sports.yahoo.com/articles/world-cup-injury-tracker-neymar-093810239.html",
-    "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/france-suffers-an-unexpected-blow-that-brings-back-a-painful-scene-from-the-last-world-cup-2026-07-14",
-    "https://worldsoccertalk.com/world-cup/france-vs-england-date-kick-off-time-and-venue-for-the-2026-fifa-world-cup-third-place-match/"
+    "https://www.sportsmole.co.uk/football/france/world-cup-2026/predicted-lineups/saliba-out-cherki-in-predicted-france-xi-vs-england_601255.html",
+    "https://sports.yahoo.com/articles/william-salibas-world-cup-ends-203842460.html",
+    "https://www.fanduel.com/research/france-vs-england-third-place-prediction-picks-lineups-odds-and-best-bets-world-cup-2026",
+    "https://news.bet365.com/en-us/article/france-vs-england-third-place-preview-lineup-predictions/2026071614455350828",
+    "https://www.sportsmole.co.uk/football/france/world-cup-2026/preview/france-vs-england-prediction-team-news-lineups_601289.html"
    ]
   },
   {
@@ -32,16 +33,15 @@
    "estado_alineacion": "probable",
    "xi_local": "Unai Simon; Pedro Porro, Pau Cubarsi, Aymeric Laporte, Marc Cucurella; Rodri, Pedri, Fabian Ruiz; Lamine Yamal, Mikel Oyarzabal, Nico Williams",
    "xi_visita": "E. Martinez; Montiel, C. Romero, L. Martinez, Tagliafico; Mac Allister, Enzo Fernandez, De Paul; Messi, Lautaro Martinez, J. Alvarez",
-   "bajas_local": ["Yeremy Pino (baja confirmada — lesión durante el torneo)", "Victor Munoz (baja confirmada — lesión durante el torneo)"],
-   "bajas_visita": ["Facundo Medina (en duda)", "Folarin Balogun (suspendido — expulsado vs Bosnia en R32; cumple fecha en la final)"],
-   "lectura": "España llega a la final con 7 victorias en 7 partidos, el único equipo sin necesitar prórroga ni penales en todo el torneo. Racha invicta de 37 partidos, a un paso del récord mundial de 38 que Argentina estableció entre 2019 y 2022. Yamal (17 años) fue la gran figura de la semi vs Francia. Oyarzabal lidera el marcador español con 5 goles. Argentina, en cambio, necesitó tiempo extra vs Cape Verde y Egypt, y remontó en el descuento vs Inglaterra. Messi (8G) disputa lo que casi con certeza es su último partido mundialista a los 39 años; su motivación es única. Lautaro Martinez marcó el gol ganador vs Inglaterra en el 90+2'. MetLife Stadium, East Rutherford, NJ (3:00 PM ET / 16:00 Chile). El partido más esperado del torneo.",
-   "lean": "España favorita (mercado pH=44%, pA=25%): dominio total y solidez defensiva; pero Messi+Argentina siempre es impredecible en un partido único.",
+   "bajas_local": ["Yeremy Pino (disponible — se confirmó que la lesión de clavícula vs Uruguay no fue fractura; en pleno entrenamiento; probable suplente)", "Victor Munoz (disponible en banca — se recuperó; no confirmado para el XI)"],
+   "bajas_visita": ["Facundo Medina (en duda)"],
+   "lectura": "España (7V en 7 partidos, único equipo sin prórrogas ni penales) llega a la final con racha invicta de 37 partidos, a un paso del récord mundial (38 de Argentina 2019-2022). Pino y Muñoz disponibles como opciones de banca (ya no son bajas). Cristian Romero (ARG) está 100% fit — fue remplazado vs Suiza solo por calambres. Messi (8G) disputa lo que casi con certeza es su último partido mundialista a los 39 años; motivación histórica única. Lautaro Martinez marcó el gol ganador vs Inglaterra en el 90+2'. MetLife Stadium, East Rutherford, NJ (3:00 PM ET / 16:00 Chile). El partido más esperado del torneo.",
+   "lean": "España favorita (mercado pH=44%, pA=25%): dominio absoluto, solidez defensiva (1 gol encajado en 7 partidos), generación dorada en su pico. Argentina con el factor Messi + campeón defensor: impredecible en partido único.",
    "fuentes": [
-    "https://www.fanduel.com/research/spain-vs-argentina-world-cup-final-prediction-odds-preview-lineups-and-best-bets",
-    "https://sports.yahoo.com/articles/world-cup-final-instant-prediction-210742909.html",
-    "https://www.foxsports.com/stories/soccer/spain-vs-england-argentina-confirmed-world-cup-final-heres-what-knowcmpidorgoneagowned-othermcreferralsrcfscmp10010131002add625e",
-    "https://www.aljazeera.com/sports/liveblog/2026/7/14/france-vs-spain-live-fifa-world-cup-2026-semifinal",
-    "https://www.si.com/soccer/france-rocked-major-injury-world-cup-semifinal-vs-spain"
+    "https://www.forbes.com/sites/samleveridge/2026/07/16/spain-world-cup-final-preview-journey-team-news-predicted-lineup/",
+    "https://www.sportsmole.co.uk/football/argentina/world-cup-2026/injuries-and-suspensions/romero-paredes-latest-argentina-injury-suspension-list-for-world-cup-final_601316.html",
+    "https://worldsoccertalk.com/world-cup/nico-williams-and-yeremy-pino-could-return-for-spain-in-the-2026-world-cup-knockout-stage-despite-injuries/",
+    "https://sports.yahoo.com/articles/world-cup-injury-tracker-neymar-093810239.html"
    ]
   }
  ]
