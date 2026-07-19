@@ -3,7 +3,7 @@
   "descripcion": "Capa de inteligencia cualitativa por partido del dia: alineacion probable/confirmada, bajas/lesiones/suspensiones, contexto y una lectura del analista con un lean direccional. Se MUESTRA en el modal; NO modifica el motor determinista ni el puntaje.",
   "regla_de_oro": "Solo con fuente real (ESPN, NBC, sitios oficiales, Sports Mole, Rotowire, beIN, etc.). Nada sin confirmar: si no se puede confirmar, se marca 'en duda' u omitido. Alineaciones 'probable' hasta ~60 min antes; al confirmarse 'confirmada'. NUNCA inventar nombres ni bajas.",
   "campos": "estado_alineacion = probable|confirmada. xi_local/xi_visita. bajas_local/bajas_visita. lectura. lean. fuentes.",
-  "actualizado": "2026-07-18T02:20:00Z",
+  "actualizado": "2026-07-19T01:30:00Z",
   "cobertura": "partidos pendientes de hoy en adelante (los ya jugados se eliminan)"
  },
  "partidos": [
@@ -12,18 +12,21 @@
    "away": "Argentina",
    "fecha": "2026-07-19",
    "estado_alineacion": "probable",
-   "xi_local": "Unai Simon; Pedro Porro, Pau Cubarsi, Aymeric Laporte, Marc Cucurella; Rodri, Pedri, Fabian Ruiz; Lamine Yamal, Mikel Oyarzabal, Nico Williams",
-   "xi_visita": "E. Martinez; Montiel, C. Romero, L. Martinez, Tagliafico; Mac Allister, Enzo Fernandez, De Paul; Messi, Lautaro Martinez, J. Alvarez",
-   "bajas_local": ["Lamine Yamal (EN DUDA — molestia en tobillo derecho + tension cuadriceps izquierdo; no entreno en el grupo del 16-jul (vendaje visible); De La Fuente minimizo: 'es precautorio'; previsto para volver a entrenar el 17-jul; esperado disponible para la final, pero bajo monitoreo activo — ESPN / beIN Sports / Sports Mole 17-jul)", "Pedro Porro (EN DUDA — tension de isquiotibiales; se perdio la sesion grupal del 16-jul; previsto para recuperar en tiempo para la final — Sports Mole 17-jul)", "Yeremy Pino (BAJA CONFIRMADA — lesion de hombro seria sufrida en grupos vs Uruguay; descartado para el resto del torneo)"],
-   "bajas_visita": ["Leandro Paredes (monitoreo — salio sustituido al 64' vs Inglaterra en la semi con molestias; sin confirmacion de baja; previsto disponible)", "Facundo Medina (en duda)"],
-   "lectura": "ACTUALIZACION 17-JUL: España tiene dudas fisicas para la final — Yamal (tobillo/cuadriceps, vendaje visible en el entreno del 16-jul) y Porro (isquiotibiales, tambien ausente el 16-jul) entrenaron separados del grupo pero ambos se esperan disponibles bajo monitoreo. España (7V en 7, unico equipo sin prórrogas ni penales) llega con racha invicta de 37 partidos, a un solo partido del record mundial de 38 (Argentina 2019-2022). Oyarzabal lidera el marcador español con 5G. Por Argentina: Romero 100% fit; Paredes en monitoreo tras ser sustituido vs Inglaterra. Messi (8G) disputa lo que casi con certeza es su ultimo partido mundialista a los 39 años; Lautaro Martinez marco el gol ganador vs Inglaterra en el 90+2'. MetLife Stadium, East Rutherford, NJ (3:00 PM ET / 16:00 Chile / 19:00 UTC). NOTA POST-3P: Mbappe termino el torneo con 11G (record historico Mundiales); Bellingham 7G; Saka hat-trick. Messi puede alcanzar Bota de Oro si anota 4 goles en la final.",
-   "lean": "España favorita (mercado pH=44%, pA=25%) incluso con las dudas de Yamal y Porro: solidez defensiva (1 gol en 7 partidos), dominio de posesion, generacion dorada en su pico. Si Yamal o Porro no llegan, la calidad baja de forma significativa. Argentina con el factor Messi + campeon defensor: impredecible en partido unico.",
+   "xi_local": "Unai Simon; Pedro Porro, Pau Cubarsi, Aymeric Laporte, Marc Cucurella; Fabian Ruiz, Rodri, Dani Olmo; Lamine Yamal, Mikel Oyarzabal, Alex Baena",
+   "xi_visita": "E. Martinez; Nahuel Molina, C. Romero, L. Martinez, Tagliafico; Leandro Paredes, Enzo Fernandez, Mac Allister; Giuliano Simeone, Messi, J. Alvarez",
+   "bajas_local": ["Lamine Yamal (APTO — De La Fuente confirmo el 17-jul: 'estara en perfecta condicion fisica'; habia entrenado separado el 16-jul con vendaje en muslo izquierdo; declarado disponible — ESPN / beIN Sports / Sports Mole)", "Pedro Porro (EN DUDA menor — tension de isquiotibiales; se perdio sesion grupal del 16-jul; se espera disponible para la final; sin alternative confirmado — Sports Mole / CBS Sports)", "Nico Williams (BAJA DE FACTO — solo 63 min en el torneo por molestias; no se espera en el XI; Alex Baena ocupara su lugar — CBS Sports / Sports Mole)", "Yeremy Pino (BAJA CONFIRMADA — lesion de hombro sufrida en grupos vs Uruguay; descartado para el resto del torneo)"],
+   "bajas_visita": ["Facundo Medina (EN DUDA — sin jugar desde cuartos; enfrenta carrera contra el tiempo para la final — Sports Mole)", "Leandro Paredes (MONITOREO — salio sustituido al 64' en la semi vs Inglaterra con molestias; se espera disponible y en el XI)", "Rodrigo De Paul (alternativa — podria entrar al XI por Giuliano Simeone o Paredes segun lectura de Scaloni de la semifinal — Sports Mole / CBS Sports)"],
+   "lectura": "ACTUALIZACION 19-JUL (dia de la final): Yamal CONFIRMADO disponible — De La Fuente lo garantizo el 17-jul ('perfecta condicion fisica'). Porro se espera que juegue aunque con monitoreo. XI de España corregido: Dani Olmo en el mediocampo (no Pedri, que no esta en el torneo), Alex Baena como extremo izquierdo (no Nico Williams, con solo 63 min en el torneo por molestias). Por Argentina: Molina como lateral derecho titular (Montiel alternativa), Giuliano Simeone en el ataque (Simeone fue titular vs Inglaterra en la semi; De Paul podria reemplazar a Paredes). España (7V en 7, unico equipo sin prorroga ni penales) llega invicta con racha de 37 partidos y solo 1 gol encajado en todo el torneo. Oyarzabal 5G. Argentina llega con el campeon defensor de 2022, y Messi (8G) en lo que casi con certeza es su ultimo partido mundialista a los 39 años. Lautaro Martinez marco en el 90+2' vs Inglaterra. MetLife Stadium, East Rutherford, NJ — 3:00 PM ET / 16:00 Chile / 19:00 UTC.",
+   "lean": "España sigue favorita (mercado pH=44%, pA=25%, pD=31%). La confirmacion de Yamal para la final refuerza su rol: solidez defensiva (1 gol en 7 partidos, 37 partidos invictos), dominio de posesion con Rodri-Fabian-Olmo en el centro. Argentina tiene el factor Messi en su partido de despedida + campeon defensor: los bicampeonatos mundiales son historicamente raros pero Argentina 2022 fue un equipo capaz de remontar cualquier situacion. Partido de altisimo nivel tactico.",
    "fuentes": [
     "https://www.espn.com/soccer/story/_/id/49378610/spain-lamine-yamal-pedro-porro-train-apart-fit-argentina-world-cup-final",
-    "https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/will-they-be-ready-for-the-final-spain-monitoring-lamine-yamal-and-pedro-porro-ahead-of-argentina-clash-2026-07-17",
-    "https://www.sportsmole.co.uk/football/spain/world-cup-2026/injuries-and-suspensions/yamal-porro-latest-spain-injury-suspension-list-vs-argentina_601315.html",
-    "https://www.sportsmole.co.uk/football/argentina/world-cup-2026/injuries-and-suspensions/romero-paredes-latest-argentina-injury-suspension-list-for-world-cup-final_601316.html",
-    "https://english.news.cn/20260717/f1d9d1096f4f4db995ef1a1b523b1c14/c.html"
+    "https://www.espn.com/soccer/story/_/id/49382572/spain-vs-argentina-fifa-world-cup-2026-final-tv-channel-how-watch-kick-live-stream-injury-predicted-line-ups",
+    "https://www.cbssports.com/soccer/news/spain-vs-argentina-predicted-lineups-world-cup-starting-xi-projection/",
+    "https://www.sportsmole.co.uk/football/spain/world-cup-2026/preview/spain-vs-argentina-prediction-team-news-lineups_601336.html",
+    "https://www.sportsmole.co.uk/football/argentina/world-cup-2026/predicted-lineups/alvarez-or-martinez-de-paul-or-simeone-predicted-argentina-xi-vs-spain_601305.html",
+    "https://www.rotowire.com/soccer/article/spain-vs-argentina-preview-predicted-lineups-team-news-tactical-analysis-2026-world-cup-final-123191",
+    "https://www.nbcsports.com/soccer/news/world-cup-final-predicted-lineups-how-will-argentina-spain-line-up",
+    "https://www.si.com/soccer/lamine-yamal-injury-spain-update-2026-world-cup-final"
    ]
   }
  ]
