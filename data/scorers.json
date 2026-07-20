@@ -2,31 +2,119 @@
   "_meta": {
     "descripcion": "Tabla de goleadores ACTUAL del Mundial (jugador -> goles acumulados), para la Bota de Oro. Es el dato vivo: NO requiere el detalle gol-por-partido, solo el acumulado de cada jugador. Se refresca con cada corrida de la rutina.",
     "regla_de_oro": "Cada actualizacion con fuente real (FIFA Golden Boot / NBC / ESPN). Nunca inventar goles. Los goles de un jugador no pueden superar lo que su seleccion lleva marcado en el ledger.",
-    "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289292/400021543 + https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-final-2026-argentina-spain-messi-yamal-live-updates-rcna587754 + https://sports.yahoo.com/soccer/live/spain-argentina-world-cup-2026-score-result-schedule-live-updates-130000682.html (Post FINAL Spain 1-0 Argentina AET: Ferran Torres 1G (1G torneo total — no entra al top); Messi sin goles en la final — queda en 8G; Mbappe consolida Bota de Oro con 11G; sin cambios en el ranking; tabla FINAL del Mundial confirmada FIFA / NBC News / Yahoo Sports)",
-    "actualizado": "2026-07-19"
+    "fuente": "https://www.espn.com/soccer/story/_/id/49397919/kylian-mbappe-wins-golden-boot-2026-world-cup-lionel-messi-goalless-final + https://www.skysports.com/football/news/11095/13564837/world-cup-2026-golden-boot-race-kylian-mbappe-beats-lionel-messi-to-become-top-goalscorer (Bota de Oro OFICIAL: Mbappe 10 goles — marco x2 en el 3er puesto, no x3 como decia una cronica; Messi 8, sin gol en la final; Mbappe ademas record historico absoluto: 22 goles en mundiales)",
+    "actualizado": "2026-07-20"
   },
   "jugadores": [
-    {"jugador": "Kylian Mbappe", "equipo": "France", "goles": 11},
-    {"jugador": "Lionel Messi", "equipo": "Argentina", "goles": 8},
-    {"jugador": "Erling Haaland", "equipo": "Norway", "goles": 7},
-    {"jugador": "Jude Bellingham", "equipo": "England", "goles": 7},
-    {"jugador": "Harry Kane", "equipo": "England", "goles": 6},
-    {"jugador": "Ousmane Dembele", "equipo": "France", "goles": 5},
-    {"jugador": "Mikel Oyarzabal", "equipo": "Spain", "goles": 5},
-    {"jugador": "Vinicius Junior", "equipo": "Brazil", "goles": 4},
-    {"jugador": "Ismaila Sarr", "equipo": "Senegal", "goles": 4},
-    {"jugador": "Bukayo Saka", "equipo": "England", "goles": 3},
-    {"jugador": "Folarin Balogun", "equipo": "United States", "goles": 3},
-    {"jugador": "Jonathan David", "equipo": "Canada", "goles": 3},
-    {"jugador": "Deniz Undav", "equipo": "Germany", "goles": 3},
-    {"jugador": "Brian Brobbey", "equipo": "Netherlands", "goles": 3},
-    {"jugador": "Matheus Cunha", "equipo": "Brazil", "goles": 3},
-    {"jugador": "Johan Manzambi", "equipo": "Switzerland", "goles": 3},
-    {"jugador": "Ismael Saibari", "equipo": "Morocco", "goles": 3},
-    {"jugador": "Yoane Wissa", "equipo": "DR Congo", "goles": 3},
-    {"jugador": "Cody Gakpo", "equipo": "Netherlands", "goles": 3},
-    {"jugador": "Cristiano Ronaldo", "equipo": "Portugal", "goles": 3},
-    {"jugador": "Romelu Lukaku", "equipo": "Belgium", "goles": 3},
-    {"jugador": "Charles De Ketelaere", "equipo": "Belgium", "goles": 3}
+    {
+      "jugador": "Kylian Mbappe",
+      "equipo": "France",
+      "goles": 10
+    },
+    {
+      "jugador": "Lionel Messi",
+      "equipo": "Argentina",
+      "goles": 8
+    },
+    {
+      "jugador": "Erling Haaland",
+      "equipo": "Norway",
+      "goles": 7
+    },
+    {
+      "jugador": "Jude Bellingham",
+      "equipo": "England",
+      "goles": 7
+    },
+    {
+      "jugador": "Harry Kane",
+      "equipo": "England",
+      "goles": 6
+    },
+    {
+      "jugador": "Ousmane Dembele",
+      "equipo": "France",
+      "goles": 5
+    },
+    {
+      "jugador": "Mikel Oyarzabal",
+      "equipo": "Spain",
+      "goles": 5
+    },
+    {
+      "jugador": "Vinicius Junior",
+      "equipo": "Brazil",
+      "goles": 4
+    },
+    {
+      "jugador": "Ismaila Sarr",
+      "equipo": "Senegal",
+      "goles": 4
+    },
+    {
+      "jugador": "Bukayo Saka",
+      "equipo": "England",
+      "goles": 3
+    },
+    {
+      "jugador": "Folarin Balogun",
+      "equipo": "United States",
+      "goles": 3
+    },
+    {
+      "jugador": "Jonathan David",
+      "equipo": "Canada",
+      "goles": 3
+    },
+    {
+      "jugador": "Deniz Undav",
+      "equipo": "Germany",
+      "goles": 3
+    },
+    {
+      "jugador": "Brian Brobbey",
+      "equipo": "Netherlands",
+      "goles": 3
+    },
+    {
+      "jugador": "Matheus Cunha",
+      "equipo": "Brazil",
+      "goles": 3
+    },
+    {
+      "jugador": "Johan Manzambi",
+      "equipo": "Switzerland",
+      "goles": 3
+    },
+    {
+      "jugador": "Ismael Saibari",
+      "equipo": "Morocco",
+      "goles": 3
+    },
+    {
+      "jugador": "Yoane Wissa",
+      "equipo": "DR Congo",
+      "goles": 3
+    },
+    {
+      "jugador": "Cody Gakpo",
+      "equipo": "Netherlands",
+      "goles": 3
+    },
+    {
+      "jugador": "Cristiano Ronaldo",
+      "equipo": "Portugal",
+      "goles": 3
+    },
+    {
+      "jugador": "Romelu Lukaku",
+      "equipo": "Belgium",
+      "goles": 3
+    },
+    {
+      "jugador": "Charles De Ketelaere",
+      "equipo": "Belgium",
+      "goles": 3
+    }
   ]
 }

@@ -1,1021 +1,1021 @@
 {
- "_meta": {
-  "descripcion": "Ledger de resultados REALES. Cada partido entra con su fuente. NUNCA se inventa un marcador. Si no se puede verificar, no se agrega.",
-  "fase_valores": "grupos | dieciseisavos | octavos | cuartos | semis | tercer_puesto | final",
-  "ultima_fecha_cargada": "2026-07-19"
- },
- "partidos": [
-  {
-   "fecha": "2026-06-11",
-   "fase": "grupos",
-   "grupo": "A",
-   "local": "Mexico",
-   "visita": "South Africa",
-   "gl": 2,
-   "gv": 0,
-   "fuente": "https://www.nbcsports.com/soccer/news/2026-world-cup-group-stage-table-full-standings-for-all-12-groups"
-  },
-  {
-   "fecha": "2026-06-11",
-   "fase": "grupos",
-   "grupo": "A",
-   "local": "South Korea",
-   "visita": "Czechia",
-   "gl": 1,
-   "gv": 0,
-   "fuente": "https://www.nbcsports.com/soccer/news/2026-world-cup-group-stage-table-full-standings-for-all-12-groups"
-  },
-  {
-   "fecha": "2026-06-12",
-   "fase": "grupos",
-   "grupo": "B",
-   "local": "Canada",
-   "visita": "Bosnia and Herzegovina",
-   "gl": 1,
-   "gv": 1,
-   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_B"
-  },
-  {
-   "fecha": "2026-06-12",
-   "fase": "grupos",
-   "grupo": "D",
-   "local": "United States",
-   "visita": "Paraguay",
-   "gl": 4,
-   "gv": 1,
-   "fuente": "https://www.espn.com/soccer/match/_/gameId/760417/paraguay-united-states (USA 4-1; goles Bobadilla 7 e/c, Balogun 31 y 45+5, Reyna 90+8; Mauricio 73)"
-  },
-  {
-   "fecha": "2026-06-13",
-   "fase": "grupos",
-   "grupo": "B",
-   "local": "Qatar",
-   "visita": "Switzerland",
-   "gl": 1,
-   "gv": 1,
-   "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_B"
-  },
-  {
-   "fecha": "2026-06-13",
-   "fase": "grupos",
-   "grupo": "C",
-   "local": "Brazil",
-   "visita": "Morocco",
-   "gl": 1,
-   "gv": 1,
-   "fuente": "https://www.espn.com/soccer/match/_/gameId/760419/morocco-brazil"
-  },
-  {
-   "fecha": "2026-06-13",
-   "fase": "grupos",
-   "grupo": "C",
-   "local": "Scotland",
-   "visita": "Haiti",
-   "gl": 1,
-   "gv": 0,
-   "fuente": "https://www.nbcsports.com/soccer/news/2026-world-cup-group-stage-table-full-standings-for-all-12-groups"
-  },
-  {
-   "fecha": "2026-06-13",
-   "fase": "grupos",
-   "grupo": "D",
-   "local": "Australia",
-   "visita": "Turkiye",
-   "gl": 2,
-   "gv": 0,
-   "fuente": "https://sports.yahoo.com/soccer/live/2026-world-cup-scores-results-usmnt-throttles-paraguay-canada-earns-draw-with-bosnia-and-herzegovina-145258177.html"
-  },
-  {
-   "fecha": "2026-06-14",
-   "fase": "grupos",
-   "grupo": "E",
-   "local": "Germany",
-   "visita": "Curacao",
-   "gl": 7,
-   "gv": 1,
-   "fuente": "https://www.olympics.com/en/news/fifa-world-cup-2026-every-match-result-sunday-14-june-live-scores"
-  },
-  {
-   "fecha": "2026-06-14",
-   "fase": "grupos",
-   "grupo": "F",
-   "local": "Netherlands",
-   "visita": "Japan",
-   "gl": 2,
-   "gv": 2,
-   "fuente": "https://www.olympics.com/en/news/fifa-world-cup-2026-every-match-result-sunday-14-june-live-scores"
-  },
-  {
-   "fecha": "2026-06-14",
-   "fase": "grupos",
-   "grupo": "E",
-   "local": "Ivory Coast",
-   "visita": "Ecuador",
-   "gl": 1,
-   "gv": 0,
-   "fuente": "https://www.olympics.com/en/news/fifa-world-cup-2026-every-match-result-sunday-14-june-live-scores"
-  },
-  {
-   "fecha": "2026-06-14",
-   "fase": "grupos",
-   "grupo": "F",
-   "local": "Sweden",
-   "visita": "Tunisia",
-   "gl": 5,
-   "gv": 1,
-   "fuente": "https://www.sbs.com.au/news/article/fifa-world-cup-2026-results-june-15/ocls1mcso"
-  },
-  {
-   "fecha": "2026-06-15",
-   "fase": "grupos",
-   "grupo": "H",
-   "local": "Spain",
-   "visita": "Cape Verde",
-   "gl": 0,
-   "gv": 0,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021482"
-  },
-  {
-   "fecha": "2026-06-15",
-   "fase": "grupos",
-   "grupo": "G",
-   "local": "Belgium",
-   "visita": "Egypt",
-   "gl": 1,
-   "gv": 1,
-   "fuente": "https://www.espn.com/soccer/match/_/gameId/760426"
-  },
-  {
-   "fecha": "2026-06-15",
-   "fase": "grupos",
-   "grupo": "H",
-   "local": "Saudi Arabia",
-   "visita": "Uruguay",
-   "gl": 1,
-   "gv": 1,
-   "fuente": "https://www.espn.com/soccer/match/_/gameId/760429/uruguay-saudi-arabia"
-  },
-  {
-   "fecha": "2026-06-15",
-   "fase": "grupos",
-   "grupo": "G",
-   "local": "Iran",
-   "visita": "New Zealand",
-   "gl": 2,
-   "gv": 2,
-   "fuente": "https://www.espn.com/soccer/match/_/gameId/760427/new-zealand-iran"
-  },
-  {
-   "fecha": "2026-06-16",
-   "fase": "grupos",
-   "grupo": "I",
-   "local": "France",
-   "visita": "Senegal",
-   "gl": 3,
-   "gv": 1,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021490"
-  },
-  {
-   "fecha": "2026-06-16",
-   "fase": "grupos",
-   "grupo": "I",
-   "local": "Iraq",
-   "visita": "Norway",
-   "gl": 1,
-   "gv": 4,
-   "fuente": "https://www.espn.com/soccer/match/_/gameId/760430/norway-iraq"
-  },
-  {
-   "fecha": "2026-06-16",
-   "fase": "grupos",
-   "grupo": "J",
-   "local": "Argentina",
-   "visita": "Algeria",
-   "gl": 3,
-   "gv": 0,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021496"
-  },
-  {
-   "fecha": "2026-06-16",
-   "fase": "grupos",
-   "grupo": "J",
-   "local": "Austria",
-   "visita": "Jordan",
-   "gl": 3,
-   "gv": 1,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021498"
-  },
-  {
-   "fecha": "2026-06-17",
-   "fase": "grupos",
-   "grupo": "K",
-   "local": "Portugal",
-   "visita": "DR Congo",
-   "gl": 1,
-   "gv": 1,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021502"
-  },
-  {
-   "fecha": "2026-06-17",
-   "fase": "grupos",
-   "grupo": "L",
-   "local": "England",
-   "visita": "Croatia",
-   "gl": 4,
-   "gv": 2,
-   "fuente": "https://www.espn.com/soccer/match/_/gameId/760437/croatia-england"
-  },
-  {
-   "fecha": "2026-06-17",
-   "fase": "grupos",
-   "grupo": "L",
-   "local": "Ghana",
-   "visita": "Panama",
-   "gl": 1,
-   "gv": 0,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021510"
-  },
-  {
-   "fecha": "2026-06-17",
-   "fase": "grupos",
-   "grupo": "K",
-   "local": "Uzbekistan",
-   "visita": "Colombia",
-   "gl": 1,
-   "gv": 3,
-   "fuente": "https://sports.yahoo.com/soccer/live/world-cup-2026-scores-results-schedule-live-updates-135432982.html"
-  },
-  {
-   "fecha": "2026-06-18",
-   "fase": "grupos",
-   "grupo": "A",
-   "local": "Czechia",
-   "visita": "South Africa",
-   "gl": 1,
-   "gv": 1,
-   "fuente": "https://sports.yahoo.com/soccer/article/world-cup-2026-teboho-mokoenas-goal-rescues-a-1-1-draw-for-south-africa-against-czechia-175953334.html"
-  },
-  {
-   "fecha": "2026-06-18",
-   "fase": "grupos",
-   "grupo": "B",
-   "local": "Switzerland",
-   "visita": "Bosnia and Herzegovina",
-   "gl": 4,
-   "gv": 1,
-   "fuente": "https://www.espn.com/soccer/match/_/gameId/760439"
-  },
-  {
-   "fecha": "2026-06-18",
-   "fase": "grupos",
-   "grupo": "B",
-   "local": "Canada",
-   "visita": "Qatar",
-   "gl": 6,
-   "gv": 0,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021450"
-  },
-  {
-   "fecha": "2026-06-18",
-   "fase": "grupos",
-   "grupo": "A",
-   "local": "Mexico",
-   "visita": "South Korea",
-   "gl": 1,
-   "gv": 0,
-   "fuente": "https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-games-2026-june-18-live-updates-rcna350678"
-  },
-  {
-   "fecha": "2026-06-19",
-   "fase": "grupos",
-   "grupo": "D",
-   "local": "United States",
-   "visita": "Australia",
-   "gl": 2,
-   "gv": 0,
-   "fuente": "https://worldsoccertalk.com/world-cup/usmnt-vs-australia-live-updates-minute-by-minute-coverage-of-the-2026-world-cup-group-d-game/"
-  },
-  {
-   "fecha": "2026-06-19",
-   "fase": "grupos",
-   "grupo": "C",
-   "local": "Scotland",
-   "visita": "Morocco",
-   "gl": 0,
-   "gv": 1,
-   "fuente": "https://www.espn.com/soccer/match/_/gameId/760445/morocco-scotland"
-  },
-  {
-   "fecha": "2026-06-19",
-   "fase": "grupos",
-   "grupo": "C",
-   "local": "Brazil",
-   "visita": "Haiti",
-   "gl": 3,
-   "gv": 0,
-   "fuente": "https://cryptobriefing.com/brazil-haiti-world-cup-cunha-brace/"
-  },
-  {
-   "fecha": "2026-06-19",
-   "fase": "grupos",
-   "grupo": "D",
-   "local": "Turkiye",
-   "visita": "Paraguay",
-   "gl": 0,
-   "gv": 1,
-   "fuente": "https://cryptobriefing.com/galarza-fastest-goal-2026-world-cup/"
-  },
-  {
-   "fecha": "2026-06-20",
-   "fase": "grupos",
-   "grupo": "F",
-   "local": "Netherlands",
-   "visita": "Sweden",
-   "gl": 5,
-   "gv": 1,
-   "fuente": "https://www.espn.com/soccer/match/_/gameId/760447/sweden-netherlands"
-  },
-  {
-   "fecha": "2026-06-20",
-   "fase": "grupos",
-   "grupo": "E",
-   "local": "Germany",
-   "visita": "Ivory Coast",
-   "gl": 2,
-   "gv": 1,
-   "fuente": "https://www.espn.com/soccer/match/_/gameId/760448/ivory-coast-germany"
-  },
-  {
-   "fecha": "2026-06-20",
-   "fase": "grupos",
-   "grupo": "E",
-   "local": "Ecuador",
-   "visita": "Curacao",
-   "gl": 0,
-   "gv": 0,
-   "fuente": "https://sports.yahoo.com/soccer/live/world-cup-2026-scores-results-schedule-live-updates-195336732.html (ECU 0-0 CUW FT; Eloy Room heroico, Bolavip/Yahoo confirman empate sin goles)"
-  },
-  {
-   "fecha": "2026-06-20",
-   "fase": "grupos",
-   "grupo": "F",
-   "local": "Tunisia",
-   "visita": "Japan",
-   "gl": 0,
-   "gv": 4,
-   "fuente": "https://www.foxsports.com/live-blog/soccer/tunisia-vs-japan-live-updates-score-latest-world-cup-news-goals (Japan 4-0 FT; Kamada 4', Ueda 31', Ito ~67', Ueda 83'; confirmado Fox Sports / ESPN / Yahoo Sports)"
-  },
-  {
-   "fecha": "2026-06-21",
-   "fase": "grupos",
-   "grupo": "H",
-   "local": "Spain",
-   "visita": "Saudi Arabia",
-   "gl": 4,
-   "gv": 0,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021483 (Spain 4-0 FT; Yamal 10', Oyarzabal x2, Altambakti OG 49'; confirmado FIFA / ESPN / Fox Sports / World Soccer Talk)"
-  },
-  {
-   "fecha": "2026-06-21",
-   "fase": "grupos",
-   "grupo": "G",
-   "local": "Belgium",
-   "visita": "Iran",
-   "gl": 0,
-   "gv": 0,
-   "fuente": "https://www.espn.com/soccer/match/_/gameId/760451/iran-belgium (Belgium 0-0 Iran FT; Nathan Ngoy roja 66'; Beiranvand heroico; confirmado ESPN / CBS Sports / Outlook India / Sports Illustrated)"
-  },
-  {
-   "fecha": "2026-06-21",
-   "fase": "grupos",
-   "grupo": "H",
-   "local": "Uruguay",
-   "visita": "Cape Verde",
-   "gl": 2,
-   "gv": 2,
-   "fuente": "https://www.espn.com/soccer/story/_/id/49138051/uruguay-cape-verde-live-world-cup-2026-latest-updates-commentary-score-result (Uruguay 2-2 Cape Verde FT; Kevin Pina 21', Araujo 44', Canobbio 45+6', Helio Varela 61'; confirmado ESPN / Outlook India / FanSided / Fox Sports)"
-  },
-  {
-   "fecha": "2026-06-21",
-   "fase": "grupos",
-   "grupo": "G",
-   "local": "New Zealand",
-   "visita": "Egypt",
-   "gl": 1,
-   "gv": 3,
-   "fuente": "https://cryptobriefing.com/egypt-comeback-new-zealand-world-cup-2026/ (Egypt 3-1 NZ FT; Finn Surman 15', Mostafa Ziko 58', Mohamed Salah 67', Mahmoud Trezeguet 82'; confirmado Yahoo Sports / ESPN / Ahram Online / CryptoBriefing)"
-  },
-  {
-   "fecha": "2026-06-22",
-   "fase": "grupos",
-   "grupo": "J",
-   "local": "Argentina",
-   "visita": "Austria",
-   "gl": 2,
-   "gv": 0,
-   "fuente": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-austria-match-report-highlights (Argentina 2-0 FT; Messi 38' y 90+5' — record all-time de goles en Mundiales (18 goles); confirmado FIFA / ESPN / CBS Sports / Al Jazeera / NBC Sports / Goal.com)"
-  },
-  {
-   "fecha": "2026-06-22",
-   "fase": "grupos",
-   "grupo": "I",
-   "local": "France",
-   "visita": "Iraq",
-   "gl": 3,
-   "gv": 0,
-   "fuente": "https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-games-2026-june-22-live-updates-rcna351129 (France 3-0 Iraq FT; Mbappe 14' y 2G, Dembele 1G primer gol WC; partido suspendido 2h10' por tormenta en Philadelphia; confirmado NBC News / FOX Sports / ESPN / Al Jazeera)"
-  },
-  {
-   "fecha": "2026-06-22",
-   "fase": "grupos",
-   "grupo": "I",
-   "local": "Norway",
-   "visita": "Senegal",
-   "gl": 3,
-   "gv": 2,
-   "fuente": "https://sports.yahoo.com/soccer/live/world-cup-2026-scores-results-schedule-live-updates-195336732.html (Norway 3-2 Senegal FT; Pedersen 43', Haaland 48' y 58' (brace), Sarr 53' y ~90+3' (brace); Norway avanza a dieciseisavos; confirmado Yahoo Sports / ESPN / Outlook India)"
-  },
-  {
-   "fecha": "2026-06-22",
-   "fase": "grupos",
-   "grupo": "J",
-   "local": "Jordan",
-   "visita": "Algeria",
-   "gl": 1,
-   "gv": 2,
-   "fuente": "https://www.deccanchronicle.com/fifa-world-cup-2026/fifa-world-cup-2026-live-jordan-vs-algeria-at-san-francisco-1965581 (Algeria 2-1 Jordan FT; Al-Rashdan 36', Benbouali 69', Gouiri 82'; confirmado Deccan Chronicle / ESPN / Yahoo Sports)"
-  },
-  {
-   "fecha": "2026-06-23",
-   "fase": "grupos",
-   "grupo": "K",
-   "local": "Portugal",
-   "visita": "Uzbekistan",
-   "gl": 5,
-   "gv": 0,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021503 (Portugal 5-0 FT; Ronaldo 6' y 39' (brace, primeros goles del WC 2026), Nuno Mendes 17', Nematov OG 60', Leao 87'; primera vez en 6 Mundiales distintos para Ronaldo; confirmado FIFA / NBC News / World Soccer Talk / Fox Sports)"
-  },
-  {
-   "fecha": "2026-06-23",
-   "fase": "grupos",
-   "grupo": "L",
-   "local": "England",
-   "visita": "Ghana",
-   "gl": 0,
-   "gv": 0,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021506 (England 0-0 Ghana FT; Ghana en 5-4-1 frustra a England a pesar del 80% posesion; sin goles; confirmado FIFA / ESPN / NBC Sports / BBC / Fox Sports / CBS Sports)"
-  },
-  {
-   "fecha": "2026-06-23",
-   "fase": "grupos",
-   "grupo": "L",
-   "local": "Panama",
-   "visita": "Croatia",
-   "gl": 0,
-   "gv": 1,
-   "fuente": "https://sports.yahoo.com/soccer/live/world-cup-2026-scores-results-schedule-live-updates-195336732.html (Croatia 1-0 Panama FT; Ante Budimir 54' — entra al descanso y convierte el centro de Stanisic en el segundo palo; Panama eliminado del torneo; confirmado Yahoo Sports / ESPN / Fox Sports)"
-  },
-  {
-   "fecha": "2026-06-23",
-   "fase": "grupos",
-   "grupo": "K",
-   "local": "Colombia",
-   "visita": "DR Congo",
-   "gl": 1,
-   "gv": 0,
-   "fuente": "https://www.espn.com/soccer/story/_/id/49157815/colombia-congo-dr-live-world-cup-2026-latest-updates-commentary-score-result (Colombia 1-0 FT; Daniel Muñoz 77' (segundo del torneo); Colombia asegura clasificacion a dieciseisavos; confirmado ESPN / Fox Sports / Yahoo Sports / FIFA)"
-  },
-  {
-   "fecha": "2026-06-24",
-   "fase": "grupos",
-   "grupo": "B",
-   "local": "Switzerland",
-   "visita": "Canada",
-   "gl": 2,
-   "gv": 1,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021451 (Switzerland 2-1 Canada FT; Vargas 46', Manzambi 57' (SUI); Promise David 76' (CAN sub 75'); Switzerland lidera Grupo B con 7 pts; Canada 2do con 4 pts; confirmado FIFA / ESPN / FOX Sports / NBC News / Canada Soccer)"
-  },
-  {
-   "fecha": "2026-06-24",
-   "fase": "grupos",
-   "grupo": "B",
-   "local": "Bosnia and Herzegovina",
-   "visita": "Qatar",
-   "gl": 3,
-   "gv": 1,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021448 (Bosnia 3-1 Qatar FT; Alajbegovic 29', OG Albrake 34' (BIH beneficia); Al-Haydos 42' (QAT); Mahmic 75' (BIH); Bosnia 3ro en Grupo B con 4 pts; Qatar eliminado; confirmado FIFA / ESPN / FOX Sports / NBC News / Outlook India)"
-  },
-  {
-   "fecha": "2026-06-24",
-   "fase": "grupos",
-   "grupo": "C",
-   "local": "Scotland",
-   "visita": "Brazil",
-   "gl": 0,
-   "gv": 3,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021455 (Scotland 0-3 Brazil FT; Vinicius Jr 7' y 45+3' (brace), Matheus Cunha 60'; Brazil 1ro del Grupo C; Scotland eliminada; confirmado FIFA / ESPN / Fox Sports / Outlook India)"
-  },
-  {
-   "fecha": "2026-06-24",
-   "fase": "grupos",
-   "grupo": "C",
-   "local": "Morocco",
-   "visita": "Haiti",
-   "gl": 4,
-   "gv": 2,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021452 (Morocco 4-2 Haiti FT; Bounou OG 10' (para Haiti), Hakimi 39', Isidor 43' (HAI), Saibari 45+1', Rahimi 78', Yassine MAR ~88'; comeback desde 0-2 en contra; Morocco 2da del Grupo C; confirmado FIFA / ESPN / Fox Sports / Outlook India / France 24)"
-  },
-  {
-   "fecha": "2026-06-24",
-   "fase": "grupos",
-   "grupo": "A",
-   "local": "Czechia",
-   "visita": "Mexico",
-   "gl": 0,
-   "gv": 3,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021444 (Czechia 0-3 Mexico FT; Mateo Chavez 55', Julian Quinones 61', Alvaro Fidalgo 90+4'; Mexico cierra la fase de grupos invicto con 9 pts; Czechia eliminada; confirmado FIFA / Yahoo Sports / Deccan Chronicle / TNT Sports)"
-  },
-  {
-   "fecha": "2026-06-24",
-   "fase": "grupos",
-   "grupo": "A",
-   "local": "South Africa",
-   "visita": "South Korea",
-   "gl": 1,
-   "gv": 0,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021445 (South Africa 1-0 South Korea FT; Thapelo Maseko 63'; Sudafrica avanza 2da del Grupo A con 4 pts; South Korea eliminada; confirmado FIFA / Outlook India / NBC News)"
-  },
-  {
-   "fecha": "2026-06-25",
-   "fase": "grupos",
-   "grupo": "E",
-   "local": "Curacao",
-   "visita": "Ivory Coast",
-   "gl": 0,
-   "gv": 2,
-   "fuente": "https://www.espn.com/soccer/match/_/gameId/760473/ivory-coast-curacao (Curacao 0-2 Ivory Coast FT; Nicolas Pepe 2 goles (brace); Ivory Coast clasifica 2do del Grupo E; primera clasificacion historica de Costa de Marfil en dieciseisavos; confirmado ESPN / FOX Sports / Outlook India / FIFA)"
-  },
-  {
-   "fecha": "2026-06-25",
-   "fase": "grupos",
-   "grupo": "E",
-   "local": "Ecuador",
-   "visita": "Germany",
-   "gl": 2,
-   "gv": 1,
-   "fuente": "https://www.espn.com/soccer/match/_/gameId/760468/germany-ecuador (Ecuador 2-1 Germany FT; Leroy Sane 2', Nilson Angulo 9', Gonzalo Plata 77'; Ecuador elimina a Alemania en el ultimo partido del grupo y avanza como 3ro; confirmado ESPN / FOX Sports / FIFA)"
-  },
-  {
-   "fecha": "2026-06-25",
-   "fase": "grupos",
-   "grupo": "F",
-   "local": "Japan",
-   "visita": "Sweden",
-   "gl": 1,
-   "gv": 1,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021471 (Japan 1-1 Sweden FT; Daizen Maeda 56', Anthony Elanga 62'; Japan avanza 2do del Grupo F con 5 pts; Sweden 3ro con 4 pts con opciones de mejor tercero; confirmado FIFA / ESPN / FOX Sports / Yahoo Sports)"
-  },
-  {
-   "fecha": "2026-06-25",
-   "fase": "grupos",
-   "grupo": "F",
-   "local": "Tunisia",
-   "visita": "Netherlands",
-   "gl": 1,
-   "gv": 3,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021473 (Tunisia 1-3 Netherlands FT; Skhiri OG 3', Brobbey 7', Mastouri 54', van Hecke 62'; Netherlands lider Grupo F con 9 pts invicto; Tunisia eliminada; confirmado FIFA / ESPN / FOX Sports / VAVEL)"
-  },
-  {
-   "fecha": "2026-06-25",
-   "fase": "grupos",
-   "grupo": "D",
-   "local": "Turkiye",
-   "visita": "United States",
-   "gl": 3,
-   "gv": 2,
-   "fuente": "https://sports.yahoo.com/soccer/live/world-cup-schedule-scores-live-updates-results-group-d-group-e-group-f-160927428.html + https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_D (Turquia 3-2 FT, gol sobre la hora; USA ya era 1o de D antes del partido; confirmado Yahoo/Sky/Bolavip)"
-  },
-  {
-   "fecha": "2026-06-25",
-   "fase": "grupos",
-   "grupo": "D",
-   "local": "Paraguay",
-   "visita": "Australia",
-   "gl": 0,
-   "gv": 0,
-   "fuente": "https://sports.yahoo.com/soccer/live/world-cup-schedule-scores-live-updates-results-group-d-group-e-group-f-160927428.html (0-0 FT; Australia 2a por mejor DG, Paraguay 3o con 4 pts espera como mejor tercero; confirmado Yahoo/ESPN)"
-  },
-  {
-   "fecha": "2026-06-26",
-   "fase": "grupos",
-   "grupo": "I",
-   "local": "Norway",
-   "visita": "France",
-   "gl": 1,
-   "gv": 4,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021489 (Norway 1-4 France FT; Dembele hat-trick 3G (tres goles en los primeros 32 min, 2do hat-trick mas rapido de la historia del WC); Aasgaard 1G NOR; 4to gol FRA en duda — Mbappe descansado/no anoto; Francia 1ro del Grupo I con 9 pts invicta; confirmado FIFA / Fox Sports / NBC Sports / Yahoo Sports / VAVEL)"
-  },
-  {
-   "fecha": "2026-06-26",
-   "fase": "grupos",
-   "grupo": "I",
-   "local": "Senegal",
-   "visita": "Iraq",
-   "gl": 5,
-   "gv": 0,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021493 (Senegal 5-0 Iraq FT; H. Diarra 4', I. Sarr 56', P. Gueye 59' y 71', I. Ndiaye 82'; Senegal 2do del Grupo I con 6 pts; Iraq eliminado; confirmado FIFA / Fox Sports / Yahoo Sports / Outlook India)"
-  },
-  {
-   "fecha": "2026-06-26",
-   "fase": "grupos",
-   "grupo": "H",
-   "local": "Uruguay",
-   "visita": "Spain",
-   "gl": 0,
-   "gv": 1,
-   "fuente": "https://worldsoccertalk.com/world-cup/uruguay-vs-spain-live-updates-minute-by-minute-coverage-of-the-2026-world-cup-group-h-game/ (Spain 1-0 Uruguay FT; Alex Baena 42'; Spain 1ro del Grupo H con 7 pts; Uruguay eliminado del torneo; confirmado World Soccer Talk / Fox Sports / Outlook India / Yahoo Sports)"
-  },
-  {
-   "fecha": "2026-06-26",
-   "fase": "grupos",
-   "grupo": "H",
-   "local": "Cape Verde",
-   "visita": "Saudi Arabia",
-   "gl": 0,
-   "gv": 0,
-   "fuente": "https://sports.yahoo.com/soccer/live/world-cup-schedule-scores-live-updates-results-group-g-group-h-group-i-160927428.html (Cape Verde 0-0 Saudi Arabia FT; Cape Verde avanza como 2do del Grupo H con 3 pts; Arabia Saudita eliminada; confirmado Yahoo Sports / VAVEL / Business Standard)"
-  },
-  {
-   "fecha": "2026-06-26",
-   "fase": "grupos",
-   "grupo": "G",
-   "local": "Egypt",
-   "visita": "Iran",
-   "gl": 1,
-   "gv": 1,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021479 (Egypt 1-1 Iran FT; Mahmoud Saber 5' (EGY), Ramin Rezaeian 14' (IRI); gol tardio de Iran anulado por VAR; Egypt avanza 2do del Grupo G con 5 pts (GD+2); Belgium 1ro con 5 pts (GD+4); Iran eliminado con 3 pts; confirmado FIFA / ESPN / Yahoo Sports / Outlook India)"
-  },
-  {
-   "fecha": "2026-06-26",
-   "fase": "grupos",
-   "grupo": "G",
-   "local": "New Zealand",
-   "visita": "Belgium",
-   "gl": 1,
-   "gv": 5,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021481 (New Zealand 1-5 Belgium FT; Leandro Trossard 28' y 50' (brace), Kevin De Bruyne 66', Romelu Lukaku 86', Alexis Saelemaekers 90+4' (BEL); Elijah Just 84' (NZL); Belgium 1ro del Grupo G con 5 pts y GD+4; New Zealand eliminada; confirmado FIFA / ESPN / Outlook India / Yahoo Sports)"
-  },
-  {
-   "fecha": "2026-06-27",
-   "fase": "grupos",
-   "grupo": "L",
-   "local": "Panama",
-   "visita": "England",
-   "gl": 0,
-   "gv": 2,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021508 (Panama 0-2 England FT; Bellingham 62', Kane 67' (11o gol en Mundiales, record historico all-time de England superando a Lineker con 10); England 1ro del Grupo L con 9 pts; Panama eliminada; confirmado FIFA / Sky Sports / NBC Sports / ITV News / Outlook India / Yahoo Sports / ESPN)"
-  },
-  {
-   "fecha": "2026-06-27",
-   "fase": "grupos",
-   "grupo": "L",
-   "local": "Croatia",
-   "visita": "Ghana",
-   "gl": 2,
-   "gv": 1,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021509 (Croatia 2-1 Ghana FT; Sucic 31', Luckassen 73' (GHA), Vlasic 83'; Croatia 2do del Grupo L con 6 pts clasifica a dieciseisavos; Ghana 3ra con 4 pts como posible mejor tercero; confirmado FIFA / ESPN / Outlook India / 101greatgoals / Flashscore)"
-  },
-  {
-   "fecha": "2026-06-27",
-   "fase": "grupos",
-   "grupo": "K",
-   "local": "Colombia",
-   "visita": "Portugal",
-   "gl": 0,
-   "gv": 0,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021505 (Colombia 0-0 Portugal FT; Colombia 1ro del Grupo K con 7 pts; Portugal 2do con 4 pts; ambos avanzan a dieciseisavos; confirmado FIFA / ESPN / Fox Sports / VAVEL / Al Jazeera / Flashscore)"
-  },
-  {
-   "fecha": "2026-06-27",
-   "fase": "grupos",
-   "grupo": "K",
-   "local": "DR Congo",
-   "visita": "Uzbekistan",
-   "gl": 3,
-   "gv": 1,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021500 (DR Congo 3-1 Uzbekistan FT; Shomurodov 10' (UZB), Wissa 68' pen y 90+1' (COD), Mayele 78' (COD); remontada epica: 0-1 al min 10 hasta 3-1 FT; primer avance historico del Congo DR a dieciseisavos; Uzbekistan eliminada; confirmado FIFA / ESPN / Fox Sports / Outlook India / VAVEL / Yahoo Sports)"
-  },
-  {
-   "fecha": "2026-06-27",
-   "fase": "grupos",
-   "grupo": "J",
-   "local": "Algeria",
-   "visita": "Austria",
-   "gl": 3,
-   "gv": 3,
-   "fuente": "https://www.espn.com/soccer/match/_/gameId/760484 + https://www.fifa.com/en/match-centre/match/17/285023/289273/400021497 (Algeria 3-3 Austria FT; Arnautovic 28' (AUT), Belghali 45' (ALG), Sabitzer 55' (AUT), Mahrez 60' (ALG), Mahrez 90+3' (ALG — Algeria 3-2!), Kalajdzic 90+6' (AUT — empate dramatico!); Austria 2do del Grupo J por GD 0 vs -2 de Algeria; Algeria 3ra con 4pts candidata mejor tercero; confirmado ESPN / FIFA / Yahoo Sports / Fox Sports)"
-  },
-  {
-   "fecha": "2026-06-27",
-   "fase": "grupos",
-   "grupo": "J",
-   "local": "Jordan",
-   "visita": "Argentina",
-   "gl": 1,
-   "gv": 3,
-   "fuente": "https://www.espn.com/soccer/match/_/gameId/760483/argentina-jordan + https://www.fifa.com/en/match-centre/match/17/285023/289273/400021495 (Jordan 1-3 Argentina FT; Lo Celso 19' (ARG), Lautaro Martinez 31' pen (ARG), Al-Tamari 55' (JOR), Messi 80' (ARG — 6to gol en el torneo, gol en su 7o Mundial consecutivo); Argentina 1ro del Grupo J invicta con 9pts; Jordan eliminada con 0pts; confirmado ESPN / FIFA / Yahoo Sports / Outlook India)"
-  },
-  {
-   "fecha": "2026-06-28",
-   "fase": "dieciseisavos",
-   "local": "South Africa",
-   "visita": "Canada",
-   "gl": 0,
-   "gv": 1,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021518 + https://www.espn.com/soccer/match/_/gameId/760486/canada-south-africa + https://sports.yahoo.com/soccer/live/world-cup-live-updates-results-canada-vs-south-africa-kicks-off-round-of-32-173000083.html (South Africa 0-1 Canada FT; Stephen Eustaquio en tiempo de descuento; Canada avanza a octavos por primera vez en su historia; Alphonso Davies entro de cambio en el minuto 75; confirmado FIFA / ESPN / Yahoo Sports / CBC)"
-  },
-  {
-   "fecha": "2026-06-29",
-   "fase": "dieciseisavos",
-   "local": "Brazil",
-   "visita": "Japan",
-   "gl": 2,
-   "gv": 1,
-   "fuente": "https://www.espn.com/soccer/match/_/gameId/760487/japan-brazil (Brazil 2-1 Japan FT; Kaishu Sano 29' (JPN), Casemiro 56' header (BRA), Gabriel Martinelli 90+6' (BRA — asistencia Bruno Guimaraes, gol sobre la hora en el 6to minuto de descuento); Brasil avanza a octavos; confirmado ESPN / CBS Sports / NBC Sports / Yahoo Sports / Al Jazeera)"
-  },
-  {
-   "fecha": "2026-06-29",
-   "fase": "dieciseisavos",
-   "local": "Germany",
-   "visita": "Paraguay",
-   "gl": 1,
-   "gv": 1,
-   "ganador": "Paraguay",
-   "fuente": "https://www.espn.com/soccer/match/_/gameId/760489/paraguay-germany (Germany 1-1 Paraguay FT aet; Enciso 42' pen (PAR), Havertz 54' (GER); gol de Tah en el 105' anulado por VAR; Paraguay gana 4-3 en penales: Gill ataja a Havertz y Woltemade; Tah falla al cielo; Canale convierte el definitivo; UPSETAZO historico, Alemania eliminada; confirmado ESPN / FOX Sports / CBS Sports / France24 / Al Jazeera / Outlook India)"
-  },
-  {
-   "fecha": "2026-06-29",
-   "fase": "dieciseisavos",
-   "local": "Netherlands",
-   "visita": "Morocco",
-   "gl": 1,
-   "gv": 1,
-   "ganador": "Morocco",
-   "fuente": "https://www.outlookindia.com/sports/football/netherlands-vs-morocco-live-score-fifa-world-cup-2026-round-of-32-ned-v-mar-updates-estadio-monterrey-highlights (Netherlands 1-1 Morocco AET; Gakpo 72' (NED), Issa Diop 91' header (MAR); Morocco gana 3-2 en penales: Bounou salva a Summerville, Timber falla; Saibari anota el definitivo; Morocco avanza a octavos; confirmado Outlook India / Yahoo Sports / VAVEL / Al Jazeera / NBC Sports / Fox Sports)"
-  },
-  {
-   "fecha": "2026-06-30",
-   "fase": "dieciseisavos",
-   "local": "Ivory Coast",
-   "visita": "Norway",
-   "gl": 1,
-   "gv": 2,
-   "fuente": "https://www.skysports.com/football/ivory-coast-vs-norway/549843 + https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-games-2026-june-30-live-updates-rcna352364 (Ivory Coast 1-2 Norway FT; Antonio Nusa 39' (NOR, golazo al angulo), Amad Diallo 74' (CIV — desde el banco), Erling Haaland 86' (NOR — remate de cabeza sobre centro de Berge); primera victoria historica de Noruega en una eliminatoria mundialista; Norway avanza a octavos vs Brazil; confirmado Sky Sports / NBC News / Yahoo Sports / Al Jazeera)"
-  },
-  {
-   "fecha": "2026-06-30",
-   "fase": "dieciseisavos",
-   "local": "France",
-   "visita": "Sweden",
-   "gl": 3,
-   "gv": 0,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021523 (France 3-0 Sweden FT; Mbappe 45' (asistencia Dembele), Barcola 53' (asistencia Olise), Mbappe 74' (asistencia Olise); Mbappe alcanza a Messi en la Bota de Oro con 6 goles; France avanza a octavos vs Paraguay; confirmado FIFA / NBC Sports / Fox Sports / Yahoo Sports / Al Jazeera)"
-  },
-  {
-   "fecha": "2026-06-30",
-   "fase": "dieciseisavos",
-   "local": "Mexico",
-   "visita": "Ecuador",
-   "gl": 2,
-   "gv": 0,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021520 + https://www.espn.com/soccer/match/_/gameId/760491/ecuador-mexico (Mexico 2-0 Ecuador FT; Julian Quinones 22', Raul Jimenez 31'; partido demorado por tormenta electrica; Mexico avanza a octavos por primera vez desde 2006; confirmado FIFA / ESPN / Fox Sports / Yahoo Sports / NBC Sports / Al Jazeera)"
-  },
-  {
-   "fecha": "2026-07-01",
-   "fase": "dieciseisavos",
-   "local": "England",
-   "visita": "DR Congo",
-   "gl": 2,
-   "gv": 1,
-   "fuente": "https://www.aljazeera.com/sports/liveblog/2026/7/1/england-vs-dr-congo-live-fifa-world-cup-2026 + https://www.outlookindia.com/sports/football/england-vs-dr-congo-live-score-fifa-world-cup-2026-round-of-32-eng-v-cod-updates-atlanta-stadium-highlights (England 2-1 DR Congo FT; Brian Cipenga 7' (COD), Harry Kane 75' header y 86' remate al angulo, ambas asistencias Anthony Gordon; Kane brace — 13 goles en Mundiales en toda su carrera, record historico de England; England avanza a octavos vs Mexico; confirmado Al Jazeera / Outlook India / VAVEL / Fox Sports / ESPN / NBC Sports)"
-  },
-  {
-   "fecha": "2026-07-01",
-   "fase": "dieciseisavos",
-   "local": "Belgium",
-   "visita": "Senegal",
-   "gl": 3,
-   "gv": 2,
-   "fuente": "https://www.espn.com/soccer/match/_/gameId/760493/senegal-belgium + https://www.vavel.com/en-us/soccer/2026/07/01/1264833-belgium-vs-senegal-live-score-2026-world-cup.html (Belgium 3-2 Senegal AET; Habib Diarra (SEN, primera parte), Ismaila Sarr (SEN, segunda parte); Lukaku 86' (BEL, sub), Tielemans 89' header (BEL), Tielemans 124' pen (BEL — gol ganador mas tardio de la historia del Mundial: 124m44s); Belgium remonto desde 0-2 para ganar en tiempo extra; avanza a octavos; confirmado ESPN / FOX Sports / Outlook India / Yahoo Sports / NBC News / VAVEL)"
-  },
-  {
-   "fecha": "2026-07-01",
-   "fase": "dieciseisavos",
-   "local": "United States",
-   "visita": "Bosnia and Herzegovina",
-   "gl": 2,
-   "gv": 0,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021524 + https://www.espn.com/soccer/match/_/gameId/760494/bosnia-herzegovina-united-states (USA 2-0 FT; Balogun 45' (luego expulsado 64', suspension proximo partido), Tillman 82' free kick; USA avanza a octavos vs Belgium; primer victoria en eliminatorias desde 2002; confirmado FIFA / ESPN / NBC News / CBS Sports / CNN / Outlook India)"
-  },
-  {
-   "fecha": "2026-07-02",
-   "fase": "dieciseisavos",
-   "local": "Spain",
-   "visita": "Austria",
-   "gl": 3,
-   "gv": 0,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021519 + https://sports.yahoo.com/soccer/fifa-world-cup/austria-spain-13532373/ (Spain 3-0 Austria FT; Oyarzabal 36' (1-0, asistencia Cucurella), Porro 62' header (2-0, asistencia Baena), Oyarzabal 2o gol ~83' (3-0); primer knockout win de Espana en el Mundial desde 2010; Spain avanza a octavos; confirmado FIFA / CBS Sports / NBC News / NBC Sports / Yahoo Sports / Fox Sports)"
-  },
-  {
-   "fecha": "2026-07-02",
-   "fase": "dieciseisavos",
-   "local": "Portugal",
-   "visita": "Croatia",
-   "gl": 2,
-   "gv": 1,
-   "fuente": "https://www.espn.com/football/story/_/id/49251703/portugal-croatia-live-world-cup-2026-latest-updates-commentary-score-result + https://www.cbc.ca/sports/livestory/fifa-world-cup-2026-portugal-croatia-toronto-9.7256369 (Portugal 2-1 Croatia FT; Perisic 53' (CRO — volea cruzada desde centro de Stanisic), Ronaldo 68' pen (POR — primer gol en eliminatoria mundialista en su carrera despues de 9 partidos sin marcar en knockouts; 3er gol del torneo), Ramos 90+4' header (POR — centro de Leao al 2do palo, remontada dramatica en el descuento); Croatia tuvo gol anulado por VAR en los ultimos segundos; Portugal avanza a octavos vs Spain; BMO Field, Toronto; confirmado ESPN / CBC / NBC News / Al Jazeera / NBC Sports)"
-  },
-  {
-   "fecha": "2026-07-02",
-   "fase": "dieciseisavos",
-   "local": "Switzerland",
-   "visita": "Algeria",
-   "gl": 2,
-   "gv": 0,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021527 + https://www.outlookindia.com/sports/football/switzerland-vs-algeria-live-score-fifa-world-cup-2026-round-of-32-sui-v-alg-updates-bc-place-highlights + https://bleacherreport.com/liveblogs/25449374-switzerland-vs-algeria-live-world-cup-2026-updates-scores-and-highlights (Switzerland 2-0 Algeria FT; Embolo 11' (asistencia Manzambi, disparo simple tras gran jugada individual del atacante suizo), Ndoye 46' (tiro cruzado ajustado al palo corto tras fallo defensivo argelino); Switzerland solida defensivamente, Algeria con pocas chances claras; Switzerland avanza a octavos vs vencedor Colombia/Ghana; BC Place, Vancouver; confirmado FIFA / ESPN / Bleacher Report / Outlook India)"
-  },
-  {
-   "fecha": "2026-07-03",
-   "fase": "dieciseisavos",
-   "local": "Australia",
-   "visita": "Egypt",
-   "gl": 1,
-   "gv": 1,
-   "ganador": "Egypt",
-   "fuente": "https://www.outlookindia.com/sports/football/australia-vs-egypt-live-score-fifa-world-cup-2026-round-of-32-aus-vs-egy-updates-dallas-stadium-highlights + https://www.vavel.com/en-us/soccer/2026/07/03/1265006-australia-vs-egypt-live-score-2026-world-cup.html (Australia 1-1 Egypt AET; Emam Ashour 13' header (EGY), Mohamed Hany OG 55' (AUS); Egypt gana 4-2 en penales: Salah Panenka al centro, Herrington falla el travesano (AUS), Abdelmaguid convierte el definitivo; primer triunfo historico de Egipto en eliminatorias mundialistas; Egypt avanza a octavos vs Argentina; AT&T Stadium, Arlington; confirmado Outlook India / VAVEL / Fox Sports / Yahoo Sports)"
-  },
-  {
-   "fecha": "2026-07-03",
-   "fase": "dieciseisavos",
-   "local": "Argentina",
-   "visita": "Cape Verde",
-   "gl": 3,
-   "gv": 2,
-   "fuente": "https://www.espn.com/soccer/match/_/gameId/760500/cape-verde-argentina + https://sports.yahoo.com/soccer/live/world-cup-2026-bracket-scores-results-schedule-live-updates-round-of-32-173000083.html + https://www.aljazeera.com/sports/liveblog/2026/7/3/live-argentina-vs-cape-verde-fifa-world-cup-2026 + https://www.nbcsports.com/soccer/live/argentina-vs-cape-verde-live-updates-score-goals-highlights-stats-2026-fifa-world-cup-july-3 (Argentina 3-2 Cape Verde AET; Messi 29' (ARG — 7o gol del torneo, ahora lider en solitario de la Bota de Oro), Deroy Duarte 59' (CPV), Lisandro Martinez 92' (ARG, 2' de ET), Sidny Lopes Cabral 103' (CPV — 2-2 empata de nuevo), OG-CPV ~115' (ARG — inicialmente atribuido a Romero, luego rectificado a autogol del arquero Vozinha); Argentina gana 3-2 en tiempo extra sin llegar a penales; avanza a octavos vs Egypt; Miami Stadium; confirmado ESPN / Yahoo Sports / Al Jazeera / NBC Sports / VAVEL)"
-  },
-  {
-   "fecha": "2026-07-03",
-   "fase": "dieciseisavos",
-   "local": "Colombia",
-   "visita": "Ghana",
-   "gl": 1,
-   "gv": 0,
-   "fuente": "https://www.espn.com/soccer/match/_/gameId/760501/ghana-colombia + https://www.vavel.com/en-us/soccer/2026/07/04/1265004-colombia-vs-ghana-live-score-2026-fifa-world-cup.html (Colombia 1-0 Ghana FT; Jhon Arias 14' (COL — primer gol de la eliminatoria, back-post finish tras cross de Luis Suarez); gol de Luis Diaz anulado por VAR; Colombia domino con 67% posesion y 93% precision en pases; Ghana sin remates al arco en el primer tiempo; Colombia avanza a octavos vs Switzerland el 7 de julio en Vancouver; Children's Mercy Park, Kansas City; confirmado ESPN / VAVEL / Yahoo Sports bracket / CBS Sports / Bolavip)"
-  },
-  {
-   "fecha": "2026-07-04",
-   "fase": "octavos",
-   "local": "Canada",
-   "visita": "Morocco",
-   "gl": 0,
-   "gv": 3,
-   "fuente": "https://www.nbcsports.com/soccer/live/canada-vs-morocco-live-updates-score-goals-highlights-stats-from-2026-fifa-world-cup + https://sports.yahoo.com/soccer/fifa-world-cup/morocco-canada-13532378/ + https://www.aljazeera.com/sports/liveblog/2026/7/4/canada-vs-morocco-live-fifa-world-cup-2026-last-16 (Canada 0-3 Morocco FT; Ounahi 50' (asistencia Hakimi, libre indirecto), Ounahi 82' (asistencia Brahim Diaz), Rahimi 90+5' (asistencia Brahim Diaz — clavo tardio en el descuento); primer equipo africano en llegar a cuartos en Mundiales consecutivos (Qatar 2022 y USA 2026); Saibari lesionado en el primer tiempo — baja probable para cuartos; NRG Stadium, Houston; confirmado NBC Sports / Yahoo Sports / Al Jazeera / Fox Sports / Globe and Mail / CBC)"
-  },
-  {
-   "fecha": "2026-07-04",
-   "fase": "octavos",
-   "local": "Paraguay",
-   "visita": "France",
-   "gl": 0,
-   "gv": 1,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021533 + https://www.nbcsports.com/soccer/live/paraguay-vs-france-live-updates-score-goals-highlights-stats-2026-fifa-world-cup-july-4 + https://www.aljazeera.com/amp/sports/liveblog/2026/7/4/france-vs-paraguay-live-fifa-world-cup-2026 (Paraguay 0-1 France FT; Mbappe 70' pen (foul sobre Doue dentro del area); septimo gol del torneo para Mbappe, empata a Messi en la Bota de Oro (7G); France avanza a cuartos vs Morocco en Boston el 9-jul; Lincoln Financial Field, Philadelphia; confirmado FIFA / NBC Sports / Al Jazeera / CBS Sports / Yahoo Sports)"
-  },
-  {
-   "fecha": "2026-07-05",
-   "fase": "octavos",
-   "local": "Brazil",
-   "visita": "Norway",
-   "gl": 1,
-   "gv": 2,
-   "fuente": "https://www.espn.com/soccer/match/_/gameId/760504/norway-brazil + https://www.nbcsports.com/soccer/live/brazil-vs-norway-live-updates-score-goals-highlights-stats-2026-fifa-world-cup-july-5 + https://sports.yahoo.com/soccer/live/world-cup-2026-bracket-schedule-scores-results-live-updates-round-of-16-130000983.html (Norway 2-1 Brazil FT; Haaland brace (2 goles: cabezazo y remate cruzado lejano), Neymar pen consolacion para Brasil; primera clasificacion historica de Noruega a cuartos de un Mundial; Brasil eliminado por primera vez antes de cuartos en sus ultimos 9 Mundiales; MetLife Stadium, East Rutherford; confirmado ESPN / NBC Sports / CBS Sports / Yahoo Sports / FOX Sports)"
-  },
-  {
-   "fecha": "2026-07-05",
-   "fase": "octavos",
-   "local": "Mexico",
-   "visita": "England",
-   "gl": 2,
-   "gv": 3,
-   "fuente": "https://www.espn.com/soccer/story/_/id/49280180/mexico-england-world-cup-2026-result-score-recap-jude-bellingham-harry-kane-jarell-quansah + https://www.nbcsports.com/soccer/live/mexico-vs-england-live-updates-score-goals-highlights-stats-from-2026-fifa-world-cup + https://www.foxsports.com/stories/soccer/brilliant-bellingham-england-star-scores-2-goals-2-minutes-vs-mexico (Mexico 2-3 England FT; Bellingham 36' y 38' (brace en 98 segundos — el mas rapido de la historia de England en un Mundial; asistencias Saka y Kane respectivamente), Kane 60' pen (ENG); Quinones 42' (MEX), Jimenez 69' pen (MEX); Quansah roja 54'; England avanza a cuartos vs Norway; Mexico cae en el Azteca por primera vez en un Mundial; Estadio Azteca, Ciudad de Mexico; confirmado ESPN / Fox Sports / NBC Sports / CBS Sports / Yahoo Sports)"
-  },
-  {
-   "fecha": "2026-07-06",
-   "fase": "octavos",
-   "local": "Portugal",
-   "visita": "Spain",
-   "gl": 0,
-   "gv": 1,
-   "fuente": "https://www.espn.com/soccer/story/_/id/49287306/portugal-vs-spain-live-2026-world-cup-updates-score-commentary-result + https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-2026-july-6-usa-live-updates-rcna353164 (Spain 1-0 Portugal FT; Mikel Merino gol en tiempo de descuento — remate de cabeza tras centro de Ferran Torres; Rodri y Pedri dominaron el mediocampo; Spain tuvo 56% posesion y 1.77 xG vs solo 0.56 xG de Portugal; España avanza a cuartos vs Norway; Portugal y Ronaldo eliminados; AT&T Stadium, Arlington, Texas; confirmado ESPN / NBC News / CBS Sports / Yahoo Sports)"
-  },
-  {
-   "fecha": "2026-07-06",
-   "fase": "octavos",
-   "local": "United States",
-   "visita": "Belgium",
-   "gl": 1,
-   "gv": 4,
-   "fuente": "https://www.espn.com/soccer/match/_/gameId/760507/belgium-united-states + https://www.cnn.com/2026/07/06/sport/live-news/usa-belgium-world-cup-score + https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-2026-july-6-usa-live-updates-rcna353164 (Belgium 4-1 USA FT; De Ketelaere 9' header (Nicolas Raskin cross); Tillman 31' free kick defleccion en Vanaken (USA — empate); De Ketelaere 33' segundo gol brace; Vanaken 57' disparo largo tras error de Freese fuera del area; Lukaku 90+3' remate ajustado al palo (4to gol); Onana salio lesionado — reemplazado por Vanaken; Pulisic sustituido 59' con aparente lesion; Belgium avanza a cuartos vs Spain el 10-jul en Los Angeles; USA eliminada del Mundial en casa; Lumen Field, Seattle, 66.925 espectadores; confirmado ESPN / CNN / NBC News / Yahoo Sports / CBS Sports)"
-  },
-  {
-   "fecha": "2026-07-07",
-   "fase": "octavos",
-   "local": "Argentina",
-   "visita": "Egypt",
-   "gl": 3,
-   "gv": 2,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021528 + https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-games-2026-july-7-live-updates-rcna353305 + https://www.outlookindia.com/sports/football/argentina-vs-egypt-live-score-fifa-world-cup-2026-round-of-16-arg-v-egy-updates-atlanta-stadium-highlights (Argentina 3-2 Egypt FT; Yasser Ibrahim 15' header (EGY), Mostafa Zico 67' (EGY), Cristian Romero 79' header (ARG), Messi 83' primer toque al cruzar debajo del arco (ARG — 8o gol del torneo, nuevo lider en solitario de la Bota de Oro), Enzo Fernandez 90+2' cabezazo de cross de Lautaro (ARG — gol ganador en el descuento); Argentina remonta desde 0-2 para avanzar a cuartos vs vencedor Switzerland/Colombia el 11-jul en Kansas City; Mercedes-Benz Stadium, Atlanta; confirmado FIFA / NBC News / Outlook India / Fox Sports)"
-  },
-  {
-   "fecha": "2026-07-07",
-   "fase": "octavos",
-   "local": "Switzerland",
-   "visita": "Colombia",
-   "gl": 0,
-   "gv": 0,
-   "ganador": "Switzerland",
-   "fuente": "https://www.espn.com/soccer/match/_/gameId/760508/colombia-switzerland + https://www.fifa.com/en/match-centre/match/17/285023/289288/400021535 (Switzerland 0-0 Colombia AET; partido con pocas chances — Lucumi pega en el palo por COL, Xhaka la mejor ocasion SUI; en penales: Sanchez (COL) pega en el travesano, Akanji (SUI) falla pero Colombia aprovecha su propia; Kobel salva el penal de Juan Hernandez (COL); Ruben Vargas convierte el 4to penal de SUI para el 4-3; Switzerland avanza a cuartos por primera vez desde 1954 y enfrentara a Argentina el 11-jul en Kansas City; BC Place, Vancouver; confirmado ESPN / FIFA / CBS Sports / Al Jazeera)"
-  },
-  {
-   "fecha": "2026-07-09",
-   "fase": "cuartos",
-   "local": "France",
-   "visita": "Morocco",
-   "gl": 2,
-   "gv": 0,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289289/400021536 + https://www.cnn.com/2026/07/09/sport/live-news/france-morocco-world-cup-score + https://www.espn.com/soccer/story/_/id/49316467/france-morocco-live-world-cup-2026-latest-updates-commentary-score-result (France 2-0 Morocco FT; Mbappe 60' (gol 8 del torneo, empata con Messi en la Bota de Oro); Dembele 66' (asistencia Mbappe, gol 5 del torneo); France invicta — 6 victorias en 6 partidos, unico equipo sin necesitar prorroga; avanza a semis vs vencedor Spain-Belgium; Gillette Stadium, Boston; confirmado FIFA / CNN / ESPN / FOX Sports)"
-  },
-  {
-   "fecha": "2026-07-10",
-   "fase": "cuartos",
-   "local": "Norway",
-   "visita": "England",
-   "gl": 1,
-   "gv": 2,
-   "fuente": "https://www.skysports.com/football/norway-vs-england/549864 + https://www.cnn.com/2026/07/11/sport/live-news/world-cup-scores + https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-games-2026-july-11-live-updates-rcna385914 + https://www.npr.org/2026/07/11/nx-s1-5890169/2026-world-cup-fifa-england-norway-quarterfinal (Norway 1-2 England AET; Schjelderup 36' (NOR), Bellingham 45+2' (ENG — gol en tiempo de descuento del 1T, controversia por posible contacto con cable de camara; FIFA confirmo via sensor del balon que no hubo contacto), Bellingham 93' (ENG — primer minuto de tiempo extra, remate de cerca tras rebote en el arquero; 6o gol del torneo, empata a Kane en la tabla); England avanza a semis vs vencedor Argentina/Switzerland el 15-jul en Atlanta; primera vez de England en semis de un Mundial desde 1990; Hard Rock Stadium, Miami; confirmado Sky Sports / CNN / NBC News / NPR / Al Jazeera / FA England)"
-  },
-  {
-   "fecha": "2026-07-11",
-   "fase": "cuartos",
-   "local": "Belgium",
-   "visita": "Spain",
-   "gl": 1,
-   "gv": 2,
-   "fuente": "https://www.nbcsports.com/soccer/live/spain-vs-belgium-live-updates-score-goals-highlights-stats-from-2026-fifa-world-cup + https://www.business-standard.com/sports/fifa-world-cup/spain-vs-belgium-live-score-updates-fifa-world-cup-2026-qf-esp-vs-bel-key-moments-highlights-126071001437_1.html + https://www.cnn.com/2026/07/10/sport/live-news/spain-belgium-world-cup-score (Spain 2-1 Belgium FT; Fabian Ruiz 30' (ESP), Charles De Ketelaere 41' header (BEL — empate); Mikel Merino 89' sub (ESP — Lammels no retiene remate de Cubarsi, Merino empuja al fondo); Tielemans no jugo (lesion en calentamiento); Courtois salio lesionado en 2T reemplazado por Senne Lammels; Spain avanza a semis vs France; SoFi Stadium, Los Angeles; confirmado NBC Sports / Business Standard / CNN / ESPN / Fox Sports)"
-  },
-  {
-   "fecha": "2026-07-11",
-   "fase": "cuartos",
-   "local": "Argentina",
-   "visita": "Switzerland",
-   "gl": 3,
-   "gv": 1,
-   "fuente": "https://www.espn.com/soccer/match/_/gameId/760513/switzerland-argentina + https://www.vavel.com/en-us/soccer/2026/07/12/1265583-argentina-vs-switzerland-live-score-2026-world-cup.html + https://fox4kc.com/sports/2026-world-cup/argentina-switzerland-face-off-in-world-cup-quarterfinal-at-arrowhead-stadium/ + https://www.npr.org/2026/07/11/nx-s1-5888612/2026-world-cup-fifa-argentina-switzerland-quarterfinal (Argentina 3-1 Switzerland AET; Mac Allister 10' (ARG), Ndoye 67' (SUI), J. Alvarez 112' (ARG — remate curvo al angulo superior desde la izquierda), L. Martinez 120+1' (ARG — sello definitivo); Embolo expulsado en 2a amarilla por simulacion en el area ~72'; Argentina avanza a semis vs England el 15-jul en Atlanta; tercer QF seguido para Argentina en un Mundial; GEHA Field at Arrowhead Stadium, Kansas City; confirmado ESPN / VAVEL / Fox4 KC / CBS Sports / Yahoo Sports / NPR)"
-  },
-  {
-   "fecha": "2026-07-14",
-   "fase": "semis",
-   "local": "France",
-   "visita": "Spain",
-   "gl": 0,
-   "gv": 2,
-   "fuente": "https://www.nbcnews.com/sports/soccer/live-blog/spain-france-world-cup-2026-july-14-live-updates-rcna587324 (Spain 2-0 France FT; Oyarzabal 22' pen (asistencia Yamal quien fue derribado en el area), Porro 58' (give-and-go con Dani Olmo, bajo al angulo); Spain avanza a la final vs vencedor England/Argentina; 5o gol del torneo para Oyarzabal; Mbappe sin anotar, eliminado con 8G; AT&T Stadium, Arlington; confirmado NBC News / NBC Sports / Yahoo Sports / FIFA / CNN / Fox Sports)"
-  },
-  {
-   "fecha": "2026-07-15",
-   "fase": "semis",
-   "local": "England",
-   "visita": "Argentina",
-   "gl": 1,
-   "gv": 2,
-   "fuente": "https://www.espn.com/soccer/match/_/gameId/760515/argentina-england + https://www.aljazeera.com/sports/liveblog/2026/7/15/england-vs-argentina-live-fifa-world-cup-2026-semifinal + https://www.cnn.com/2026/07/15/sport/live-news/world-cup-argentina-england (England 1-2 Argentina FT; Gordon 55' volley (ENG — primer gol WC de Gordon, asistencia Morgan Rogers; England 1-0); Enzo Fernandez 85' tiro rasante desde fuera del area (ARG — empate, asistencia Messi); Lautaro Martinez 90+2' cabezazo (ARG — gol ganador en descuento, asistencia Messi); Messi 2 asistencias, no anoto (sigue en 8G); Argentina avanza a la final vs Spain el 19-jul en East Rutherford; England eliminada semi-finalista; Mercedes-Benz Stadium, Atlanta; confirmado ESPN / Al Jazeera / CNN / NBC News / Fox Sports)"
-  },
-  {
-   "fecha": "2026-07-18",
-   "fase": "tercer_puesto",
-   "local": "France",
-   "visita": "England",
-   "gl": 4,
-   "gv": 6,
-   "fuente": "https://wsvn.com/sports/2026-world-cup/sakas-hat-trick-lifts-england-past-mbappe-and-france-6-4-in-wild-world-cup-third-place-game/ + https://www.france24.com/en/live-news/20260718-england-edge-france-6-4-in-chaotic-world-cup-bronze-match + https://onefootball.com/es/noticias/france-4-6-england-three-lions-score-four-in-first-half-to-win-epic-world-cup-bronze-final-43156819 (France 4-6 England FT; England 4 goles en 1T (Rice, Konsa, Saka x2); 2T: Mbappe x3 para France (goles 9/10/11 del torneo, rompe record historico de goles en Mundiales); Saka completa hat-trick con penal; Bellingham sella 6-4; Saka hat-trick = 3G torneo; Francia descontó de 0-4 a 4-4 pero England respondió 6-4; Hard Rock Stadium, Miami Gardens; confirmado WSVN / France24 / OneFootball / ESPN / Starnews Korea)"
-  },
-  {
-   "fecha": "2026-07-19",
-   "fase": "final",
-   "local": "Spain",
-   "visita": "Argentina",
-   "gl": 1,
-   "gv": 0,
-   "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289292/400021543 + https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-final-2026-argentina-spain-messi-yamal-live-updates-rcna587754 + https://worldsoccertalk.com/world-cup/spain-vs-argentina-live-updates-minute-by-minute-coverage-of-the-2026-world-cup-final/ + https://sports.yahoo.com/soccer/live/spain-argentina-world-cup-2026-score-result-schedule-live-updates-130000682.html (Spain 1-0 Argentina AET; Ferran Torres 106' (asistencia Nico Williams — tiro al primer palo tras pase rasante de Williams); Enzo Fernandez roja en aprox. 90' por segunda amarilla; Martinez record de 10 atajadas en una final mundialista; Spain campeon del Mundo 2026, segundo titulo de su historia (primero: 2010); MetLife Stadium, East Rutherford; confirmado FIFA / NBC News / World Soccer Talk / Yahoo Sports / CBS Sports)"
-  }
- ]
+  "_meta": {
+    "descripcion": "Ledger de resultados REALES. Cada partido entra con su fuente. NUNCA se inventa un marcador. Si no se puede verificar, no se agrega.",
+    "fase_valores": "grupos | dieciseisavos | octavos | cuartos | semis | tercer_puesto | final",
+    "ultima_fecha_cargada": "2026-07-19"
+  },
+  "partidos": [
+    {
+      "fecha": "2026-06-11",
+      "fase": "grupos",
+      "grupo": "A",
+      "local": "Mexico",
+      "visita": "South Africa",
+      "gl": 2,
+      "gv": 0,
+      "fuente": "https://www.nbcsports.com/soccer/news/2026-world-cup-group-stage-table-full-standings-for-all-12-groups"
+    },
+    {
+      "fecha": "2026-06-11",
+      "fase": "grupos",
+      "grupo": "A",
+      "local": "South Korea",
+      "visita": "Czechia",
+      "gl": 1,
+      "gv": 0,
+      "fuente": "https://www.nbcsports.com/soccer/news/2026-world-cup-group-stage-table-full-standings-for-all-12-groups"
+    },
+    {
+      "fecha": "2026-06-12",
+      "fase": "grupos",
+      "grupo": "B",
+      "local": "Canada",
+      "visita": "Bosnia and Herzegovina",
+      "gl": 1,
+      "gv": 1,
+      "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_B"
+    },
+    {
+      "fecha": "2026-06-12",
+      "fase": "grupos",
+      "grupo": "D",
+      "local": "United States",
+      "visita": "Paraguay",
+      "gl": 4,
+      "gv": 1,
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760417/paraguay-united-states (USA 4-1; goles Bobadilla 7 e/c, Balogun 31 y 45+5, Reyna 90+8; Mauricio 73)"
+    },
+    {
+      "fecha": "2026-06-13",
+      "fase": "grupos",
+      "grupo": "B",
+      "local": "Qatar",
+      "visita": "Switzerland",
+      "gl": 1,
+      "gv": 1,
+      "fuente": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_B"
+    },
+    {
+      "fecha": "2026-06-13",
+      "fase": "grupos",
+      "grupo": "C",
+      "local": "Brazil",
+      "visita": "Morocco",
+      "gl": 1,
+      "gv": 1,
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760419/morocco-brazil"
+    },
+    {
+      "fecha": "2026-06-13",
+      "fase": "grupos",
+      "grupo": "C",
+      "local": "Scotland",
+      "visita": "Haiti",
+      "gl": 1,
+      "gv": 0,
+      "fuente": "https://www.nbcsports.com/soccer/news/2026-world-cup-group-stage-table-full-standings-for-all-12-groups"
+    },
+    {
+      "fecha": "2026-06-13",
+      "fase": "grupos",
+      "grupo": "D",
+      "local": "Australia",
+      "visita": "Turkiye",
+      "gl": 2,
+      "gv": 0,
+      "fuente": "https://sports.yahoo.com/soccer/live/2026-world-cup-scores-results-usmnt-throttles-paraguay-canada-earns-draw-with-bosnia-and-herzegovina-145258177.html"
+    },
+    {
+      "fecha": "2026-06-14",
+      "fase": "grupos",
+      "grupo": "E",
+      "local": "Germany",
+      "visita": "Curacao",
+      "gl": 7,
+      "gv": 1,
+      "fuente": "https://www.olympics.com/en/news/fifa-world-cup-2026-every-match-result-sunday-14-june-live-scores"
+    },
+    {
+      "fecha": "2026-06-14",
+      "fase": "grupos",
+      "grupo": "F",
+      "local": "Netherlands",
+      "visita": "Japan",
+      "gl": 2,
+      "gv": 2,
+      "fuente": "https://www.olympics.com/en/news/fifa-world-cup-2026-every-match-result-sunday-14-june-live-scores"
+    },
+    {
+      "fecha": "2026-06-14",
+      "fase": "grupos",
+      "grupo": "E",
+      "local": "Ivory Coast",
+      "visita": "Ecuador",
+      "gl": 1,
+      "gv": 0,
+      "fuente": "https://www.olympics.com/en/news/fifa-world-cup-2026-every-match-result-sunday-14-june-live-scores"
+    },
+    {
+      "fecha": "2026-06-14",
+      "fase": "grupos",
+      "grupo": "F",
+      "local": "Sweden",
+      "visita": "Tunisia",
+      "gl": 5,
+      "gv": 1,
+      "fuente": "https://www.sbs.com.au/news/article/fifa-world-cup-2026-results-june-15/ocls1mcso"
+    },
+    {
+      "fecha": "2026-06-15",
+      "fase": "grupos",
+      "grupo": "H",
+      "local": "Spain",
+      "visita": "Cape Verde",
+      "gl": 0,
+      "gv": 0,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021482"
+    },
+    {
+      "fecha": "2026-06-15",
+      "fase": "grupos",
+      "grupo": "G",
+      "local": "Belgium",
+      "visita": "Egypt",
+      "gl": 1,
+      "gv": 1,
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760426"
+    },
+    {
+      "fecha": "2026-06-15",
+      "fase": "grupos",
+      "grupo": "H",
+      "local": "Saudi Arabia",
+      "visita": "Uruguay",
+      "gl": 1,
+      "gv": 1,
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760429/uruguay-saudi-arabia"
+    },
+    {
+      "fecha": "2026-06-15",
+      "fase": "grupos",
+      "grupo": "G",
+      "local": "Iran",
+      "visita": "New Zealand",
+      "gl": 2,
+      "gv": 2,
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760427/new-zealand-iran"
+    },
+    {
+      "fecha": "2026-06-16",
+      "fase": "grupos",
+      "grupo": "I",
+      "local": "France",
+      "visita": "Senegal",
+      "gl": 3,
+      "gv": 1,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021490"
+    },
+    {
+      "fecha": "2026-06-16",
+      "fase": "grupos",
+      "grupo": "I",
+      "local": "Iraq",
+      "visita": "Norway",
+      "gl": 1,
+      "gv": 4,
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760430/norway-iraq"
+    },
+    {
+      "fecha": "2026-06-16",
+      "fase": "grupos",
+      "grupo": "J",
+      "local": "Argentina",
+      "visita": "Algeria",
+      "gl": 3,
+      "gv": 0,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021496"
+    },
+    {
+      "fecha": "2026-06-16",
+      "fase": "grupos",
+      "grupo": "J",
+      "local": "Austria",
+      "visita": "Jordan",
+      "gl": 3,
+      "gv": 1,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021498"
+    },
+    {
+      "fecha": "2026-06-17",
+      "fase": "grupos",
+      "grupo": "K",
+      "local": "Portugal",
+      "visita": "DR Congo",
+      "gl": 1,
+      "gv": 1,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021502"
+    },
+    {
+      "fecha": "2026-06-17",
+      "fase": "grupos",
+      "grupo": "L",
+      "local": "England",
+      "visita": "Croatia",
+      "gl": 4,
+      "gv": 2,
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760437/croatia-england"
+    },
+    {
+      "fecha": "2026-06-17",
+      "fase": "grupos",
+      "grupo": "L",
+      "local": "Ghana",
+      "visita": "Panama",
+      "gl": 1,
+      "gv": 0,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021510"
+    },
+    {
+      "fecha": "2026-06-17",
+      "fase": "grupos",
+      "grupo": "K",
+      "local": "Uzbekistan",
+      "visita": "Colombia",
+      "gl": 1,
+      "gv": 3,
+      "fuente": "https://sports.yahoo.com/soccer/live/world-cup-2026-scores-results-schedule-live-updates-135432982.html"
+    },
+    {
+      "fecha": "2026-06-18",
+      "fase": "grupos",
+      "grupo": "A",
+      "local": "Czechia",
+      "visita": "South Africa",
+      "gl": 1,
+      "gv": 1,
+      "fuente": "https://sports.yahoo.com/soccer/article/world-cup-2026-teboho-mokoenas-goal-rescues-a-1-1-draw-for-south-africa-against-czechia-175953334.html"
+    },
+    {
+      "fecha": "2026-06-18",
+      "fase": "grupos",
+      "grupo": "B",
+      "local": "Switzerland",
+      "visita": "Bosnia and Herzegovina",
+      "gl": 4,
+      "gv": 1,
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760439"
+    },
+    {
+      "fecha": "2026-06-18",
+      "fase": "grupos",
+      "grupo": "B",
+      "local": "Canada",
+      "visita": "Qatar",
+      "gl": 6,
+      "gv": 0,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021450"
+    },
+    {
+      "fecha": "2026-06-18",
+      "fase": "grupos",
+      "grupo": "A",
+      "local": "Mexico",
+      "visita": "South Korea",
+      "gl": 1,
+      "gv": 0,
+      "fuente": "https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-games-2026-june-18-live-updates-rcna350678"
+    },
+    {
+      "fecha": "2026-06-19",
+      "fase": "grupos",
+      "grupo": "D",
+      "local": "United States",
+      "visita": "Australia",
+      "gl": 2,
+      "gv": 0,
+      "fuente": "https://worldsoccertalk.com/world-cup/usmnt-vs-australia-live-updates-minute-by-minute-coverage-of-the-2026-world-cup-group-d-game/"
+    },
+    {
+      "fecha": "2026-06-19",
+      "fase": "grupos",
+      "grupo": "C",
+      "local": "Scotland",
+      "visita": "Morocco",
+      "gl": 0,
+      "gv": 1,
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760445/morocco-scotland"
+    },
+    {
+      "fecha": "2026-06-19",
+      "fase": "grupos",
+      "grupo": "C",
+      "local": "Brazil",
+      "visita": "Haiti",
+      "gl": 3,
+      "gv": 0,
+      "fuente": "https://cryptobriefing.com/brazil-haiti-world-cup-cunha-brace/"
+    },
+    {
+      "fecha": "2026-06-19",
+      "fase": "grupos",
+      "grupo": "D",
+      "local": "Turkiye",
+      "visita": "Paraguay",
+      "gl": 0,
+      "gv": 1,
+      "fuente": "https://cryptobriefing.com/galarza-fastest-goal-2026-world-cup/"
+    },
+    {
+      "fecha": "2026-06-20",
+      "fase": "grupos",
+      "grupo": "F",
+      "local": "Netherlands",
+      "visita": "Sweden",
+      "gl": 5,
+      "gv": 1,
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760447/sweden-netherlands"
+    },
+    {
+      "fecha": "2026-06-20",
+      "fase": "grupos",
+      "grupo": "E",
+      "local": "Germany",
+      "visita": "Ivory Coast",
+      "gl": 2,
+      "gv": 1,
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760448/ivory-coast-germany"
+    },
+    {
+      "fecha": "2026-06-20",
+      "fase": "grupos",
+      "grupo": "E",
+      "local": "Ecuador",
+      "visita": "Curacao",
+      "gl": 0,
+      "gv": 0,
+      "fuente": "https://sports.yahoo.com/soccer/live/world-cup-2026-scores-results-schedule-live-updates-195336732.html (ECU 0-0 CUW FT; Eloy Room heroico, Bolavip/Yahoo confirman empate sin goles)"
+    },
+    {
+      "fecha": "2026-06-20",
+      "fase": "grupos",
+      "grupo": "F",
+      "local": "Tunisia",
+      "visita": "Japan",
+      "gl": 0,
+      "gv": 4,
+      "fuente": "https://www.foxsports.com/live-blog/soccer/tunisia-vs-japan-live-updates-score-latest-world-cup-news-goals (Japan 4-0 FT; Kamada 4', Ueda 31', Ito ~67', Ueda 83'; confirmado Fox Sports / ESPN / Yahoo Sports)"
+    },
+    {
+      "fecha": "2026-06-21",
+      "fase": "grupos",
+      "grupo": "H",
+      "local": "Spain",
+      "visita": "Saudi Arabia",
+      "gl": 4,
+      "gv": 0,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021483 (Spain 4-0 FT; Yamal 10', Oyarzabal x2, Altambakti OG 49'; confirmado FIFA / ESPN / Fox Sports / World Soccer Talk)"
+    },
+    {
+      "fecha": "2026-06-21",
+      "fase": "grupos",
+      "grupo": "G",
+      "local": "Belgium",
+      "visita": "Iran",
+      "gl": 0,
+      "gv": 0,
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760451/iran-belgium (Belgium 0-0 Iran FT; Nathan Ngoy roja 66'; Beiranvand heroico; confirmado ESPN / CBS Sports / Outlook India / Sports Illustrated)"
+    },
+    {
+      "fecha": "2026-06-21",
+      "fase": "grupos",
+      "grupo": "H",
+      "local": "Uruguay",
+      "visita": "Cape Verde",
+      "gl": 2,
+      "gv": 2,
+      "fuente": "https://www.espn.com/soccer/story/_/id/49138051/uruguay-cape-verde-live-world-cup-2026-latest-updates-commentary-score-result (Uruguay 2-2 Cape Verde FT; Kevin Pina 21', Araujo 44', Canobbio 45+6', Helio Varela 61'; confirmado ESPN / Outlook India / FanSided / Fox Sports)"
+    },
+    {
+      "fecha": "2026-06-21",
+      "fase": "grupos",
+      "grupo": "G",
+      "local": "New Zealand",
+      "visita": "Egypt",
+      "gl": 1,
+      "gv": 3,
+      "fuente": "https://cryptobriefing.com/egypt-comeback-new-zealand-world-cup-2026/ (Egypt 3-1 NZ FT; Finn Surman 15', Mostafa Ziko 58', Mohamed Salah 67', Mahmoud Trezeguet 82'; confirmado Yahoo Sports / ESPN / Ahram Online / CryptoBriefing)"
+    },
+    {
+      "fecha": "2026-06-22",
+      "fase": "grupos",
+      "grupo": "J",
+      "local": "Argentina",
+      "visita": "Austria",
+      "gl": 2,
+      "gv": 0,
+      "fuente": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/argentina-austria-match-report-highlights (Argentina 2-0 FT; Messi 38' y 90+5' — record all-time de goles en Mundiales (18 goles); confirmado FIFA / ESPN / CBS Sports / Al Jazeera / NBC Sports / Goal.com)"
+    },
+    {
+      "fecha": "2026-06-22",
+      "fase": "grupos",
+      "grupo": "I",
+      "local": "France",
+      "visita": "Iraq",
+      "gl": 3,
+      "gv": 0,
+      "fuente": "https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-games-2026-june-22-live-updates-rcna351129 (France 3-0 Iraq FT; Mbappe 14' y 2G, Dembele 1G primer gol WC; partido suspendido 2h10' por tormenta en Philadelphia; confirmado NBC News / FOX Sports / ESPN / Al Jazeera)"
+    },
+    {
+      "fecha": "2026-06-22",
+      "fase": "grupos",
+      "grupo": "I",
+      "local": "Norway",
+      "visita": "Senegal",
+      "gl": 3,
+      "gv": 2,
+      "fuente": "https://sports.yahoo.com/soccer/live/world-cup-2026-scores-results-schedule-live-updates-195336732.html (Norway 3-2 Senegal FT; Pedersen 43', Haaland 48' y 58' (brace), Sarr 53' y ~90+3' (brace); Norway avanza a dieciseisavos; confirmado Yahoo Sports / ESPN / Outlook India)"
+    },
+    {
+      "fecha": "2026-06-22",
+      "fase": "grupos",
+      "grupo": "J",
+      "local": "Jordan",
+      "visita": "Algeria",
+      "gl": 1,
+      "gv": 2,
+      "fuente": "https://www.deccanchronicle.com/fifa-world-cup-2026/fifa-world-cup-2026-live-jordan-vs-algeria-at-san-francisco-1965581 (Algeria 2-1 Jordan FT; Al-Rashdan 36', Benbouali 69', Gouiri 82'; confirmado Deccan Chronicle / ESPN / Yahoo Sports)"
+    },
+    {
+      "fecha": "2026-06-23",
+      "fase": "grupos",
+      "grupo": "K",
+      "local": "Portugal",
+      "visita": "Uzbekistan",
+      "gl": 5,
+      "gv": 0,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021503 (Portugal 5-0 FT; Ronaldo 6' y 39' (brace, primeros goles del WC 2026), Nuno Mendes 17', Nematov OG 60', Leao 87'; primera vez en 6 Mundiales distintos para Ronaldo; confirmado FIFA / NBC News / World Soccer Talk / Fox Sports)"
+    },
+    {
+      "fecha": "2026-06-23",
+      "fase": "grupos",
+      "grupo": "L",
+      "local": "England",
+      "visita": "Ghana",
+      "gl": 0,
+      "gv": 0,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021506 (England 0-0 Ghana FT; Ghana en 5-4-1 frustra a England a pesar del 80% posesion; sin goles; confirmado FIFA / ESPN / NBC Sports / BBC / Fox Sports / CBS Sports)"
+    },
+    {
+      "fecha": "2026-06-23",
+      "fase": "grupos",
+      "grupo": "L",
+      "local": "Panama",
+      "visita": "Croatia",
+      "gl": 0,
+      "gv": 1,
+      "fuente": "https://sports.yahoo.com/soccer/live/world-cup-2026-scores-results-schedule-live-updates-195336732.html (Croatia 1-0 Panama FT; Ante Budimir 54' — entra al descanso y convierte el centro de Stanisic en el segundo palo; Panama eliminado del torneo; confirmado Yahoo Sports / ESPN / Fox Sports)"
+    },
+    {
+      "fecha": "2026-06-23",
+      "fase": "grupos",
+      "grupo": "K",
+      "local": "Colombia",
+      "visita": "DR Congo",
+      "gl": 1,
+      "gv": 0,
+      "fuente": "https://www.espn.com/soccer/story/_/id/49157815/colombia-congo-dr-live-world-cup-2026-latest-updates-commentary-score-result (Colombia 1-0 FT; Daniel Muñoz 77' (segundo del torneo); Colombia asegura clasificacion a dieciseisavos; confirmado ESPN / Fox Sports / Yahoo Sports / FIFA)"
+    },
+    {
+      "fecha": "2026-06-24",
+      "fase": "grupos",
+      "grupo": "B",
+      "local": "Switzerland",
+      "visita": "Canada",
+      "gl": 2,
+      "gv": 1,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021451 (Switzerland 2-1 Canada FT; Vargas 46', Manzambi 57' (SUI); Promise David 76' (CAN sub 75'); Switzerland lidera Grupo B con 7 pts; Canada 2do con 4 pts; confirmado FIFA / ESPN / FOX Sports / NBC News / Canada Soccer)"
+    },
+    {
+      "fecha": "2026-06-24",
+      "fase": "grupos",
+      "grupo": "B",
+      "local": "Bosnia and Herzegovina",
+      "visita": "Qatar",
+      "gl": 3,
+      "gv": 1,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021448 (Bosnia 3-1 Qatar FT; Alajbegovic 29', OG Albrake 34' (BIH beneficia); Al-Haydos 42' (QAT); Mahmic 75' (BIH); Bosnia 3ro en Grupo B con 4 pts; Qatar eliminado; confirmado FIFA / ESPN / FOX Sports / NBC News / Outlook India)"
+    },
+    {
+      "fecha": "2026-06-24",
+      "fase": "grupos",
+      "grupo": "C",
+      "local": "Scotland",
+      "visita": "Brazil",
+      "gl": 0,
+      "gv": 3,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021455 (Scotland 0-3 Brazil FT; Vinicius Jr 7' y 45+3' (brace), Matheus Cunha 60'; Brazil 1ro del Grupo C; Scotland eliminada; confirmado FIFA / ESPN / Fox Sports / Outlook India)"
+    },
+    {
+      "fecha": "2026-06-24",
+      "fase": "grupos",
+      "grupo": "C",
+      "local": "Morocco",
+      "visita": "Haiti",
+      "gl": 4,
+      "gv": 2,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021452 (Morocco 4-2 Haiti FT; Bounou OG 10' (para Haiti), Hakimi 39', Isidor 43' (HAI), Saibari 45+1', Rahimi 78', Yassine MAR ~88'; comeback desde 0-2 en contra; Morocco 2da del Grupo C; confirmado FIFA / ESPN / Fox Sports / Outlook India / France 24)"
+    },
+    {
+      "fecha": "2026-06-24",
+      "fase": "grupos",
+      "grupo": "A",
+      "local": "Czechia",
+      "visita": "Mexico",
+      "gl": 0,
+      "gv": 3,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021444 (Czechia 0-3 Mexico FT; Mateo Chavez 55', Julian Quinones 61', Alvaro Fidalgo 90+4'; Mexico cierra la fase de grupos invicto con 9 pts; Czechia eliminada; confirmado FIFA / Yahoo Sports / Deccan Chronicle / TNT Sports)"
+    },
+    {
+      "fecha": "2026-06-24",
+      "fase": "grupos",
+      "grupo": "A",
+      "local": "South Africa",
+      "visita": "South Korea",
+      "gl": 1,
+      "gv": 0,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021445 (South Africa 1-0 South Korea FT; Thapelo Maseko 63'; Sudafrica avanza 2da del Grupo A con 4 pts; South Korea eliminada; confirmado FIFA / Outlook India / NBC News)"
+    },
+    {
+      "fecha": "2026-06-25",
+      "fase": "grupos",
+      "grupo": "E",
+      "local": "Curacao",
+      "visita": "Ivory Coast",
+      "gl": 0,
+      "gv": 2,
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760473/ivory-coast-curacao (Curacao 0-2 Ivory Coast FT; Nicolas Pepe 2 goles (brace); Ivory Coast clasifica 2do del Grupo E; primera clasificacion historica de Costa de Marfil en dieciseisavos; confirmado ESPN / FOX Sports / Outlook India / FIFA)"
+    },
+    {
+      "fecha": "2026-06-25",
+      "fase": "grupos",
+      "grupo": "E",
+      "local": "Ecuador",
+      "visita": "Germany",
+      "gl": 2,
+      "gv": 1,
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760468/germany-ecuador (Ecuador 2-1 Germany FT; Leroy Sane 2', Nilson Angulo 9', Gonzalo Plata 77'; Ecuador elimina a Alemania en el ultimo partido del grupo y avanza como 3ro; confirmado ESPN / FOX Sports / FIFA)"
+    },
+    {
+      "fecha": "2026-06-25",
+      "fase": "grupos",
+      "grupo": "F",
+      "local": "Japan",
+      "visita": "Sweden",
+      "gl": 1,
+      "gv": 1,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021471 (Japan 1-1 Sweden FT; Daizen Maeda 56', Anthony Elanga 62'; Japan avanza 2do del Grupo F con 5 pts; Sweden 3ro con 4 pts con opciones de mejor tercero; confirmado FIFA / ESPN / FOX Sports / Yahoo Sports)"
+    },
+    {
+      "fecha": "2026-06-25",
+      "fase": "grupos",
+      "grupo": "F",
+      "local": "Tunisia",
+      "visita": "Netherlands",
+      "gl": 1,
+      "gv": 3,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021473 (Tunisia 1-3 Netherlands FT; Skhiri OG 3', Brobbey 7', Mastouri 54', van Hecke 62'; Netherlands lider Grupo F con 9 pts invicto; Tunisia eliminada; confirmado FIFA / ESPN / FOX Sports / VAVEL)"
+    },
+    {
+      "fecha": "2026-06-25",
+      "fase": "grupos",
+      "grupo": "D",
+      "local": "Turkiye",
+      "visita": "United States",
+      "gl": 3,
+      "gv": 2,
+      "fuente": "https://sports.yahoo.com/soccer/live/world-cup-schedule-scores-live-updates-results-group-d-group-e-group-f-160927428.html + https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_D (Turquia 3-2 FT, gol sobre la hora; USA ya era 1o de D antes del partido; confirmado Yahoo/Sky/Bolavip)"
+    },
+    {
+      "fecha": "2026-06-25",
+      "fase": "grupos",
+      "grupo": "D",
+      "local": "Paraguay",
+      "visita": "Australia",
+      "gl": 0,
+      "gv": 0,
+      "fuente": "https://sports.yahoo.com/soccer/live/world-cup-schedule-scores-live-updates-results-group-d-group-e-group-f-160927428.html (0-0 FT; Australia 2a por mejor DG, Paraguay 3o con 4 pts espera como mejor tercero; confirmado Yahoo/ESPN)"
+    },
+    {
+      "fecha": "2026-06-26",
+      "fase": "grupos",
+      "grupo": "I",
+      "local": "Norway",
+      "visita": "France",
+      "gl": 1,
+      "gv": 4,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021489 (Norway 1-4 France FT; Dembele hat-trick 3G (tres goles en los primeros 32 min, 2do hat-trick mas rapido de la historia del WC); Aasgaard 1G NOR; 4to gol FRA en duda — Mbappe descansado/no anoto; Francia 1ro del Grupo I con 9 pts invicta; confirmado FIFA / Fox Sports / NBC Sports / Yahoo Sports / VAVEL)"
+    },
+    {
+      "fecha": "2026-06-26",
+      "fase": "grupos",
+      "grupo": "I",
+      "local": "Senegal",
+      "visita": "Iraq",
+      "gl": 5,
+      "gv": 0,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021493 (Senegal 5-0 Iraq FT; H. Diarra 4', I. Sarr 56', P. Gueye 59' y 71', I. Ndiaye 82'; Senegal 2do del Grupo I con 6 pts; Iraq eliminado; confirmado FIFA / Fox Sports / Yahoo Sports / Outlook India)"
+    },
+    {
+      "fecha": "2026-06-26",
+      "fase": "grupos",
+      "grupo": "H",
+      "local": "Uruguay",
+      "visita": "Spain",
+      "gl": 0,
+      "gv": 1,
+      "fuente": "https://worldsoccertalk.com/world-cup/uruguay-vs-spain-live-updates-minute-by-minute-coverage-of-the-2026-world-cup-group-h-game/ (Spain 1-0 Uruguay FT; Alex Baena 42'; Spain 1ro del Grupo H con 7 pts; Uruguay eliminado del torneo; confirmado World Soccer Talk / Fox Sports / Outlook India / Yahoo Sports)"
+    },
+    {
+      "fecha": "2026-06-26",
+      "fase": "grupos",
+      "grupo": "H",
+      "local": "Cape Verde",
+      "visita": "Saudi Arabia",
+      "gl": 0,
+      "gv": 0,
+      "fuente": "https://sports.yahoo.com/soccer/live/world-cup-schedule-scores-live-updates-results-group-g-group-h-group-i-160927428.html (Cape Verde 0-0 Saudi Arabia FT; Cape Verde avanza como 2do del Grupo H con 3 pts; Arabia Saudita eliminada; confirmado Yahoo Sports / VAVEL / Business Standard)"
+    },
+    {
+      "fecha": "2026-06-26",
+      "fase": "grupos",
+      "grupo": "G",
+      "local": "Egypt",
+      "visita": "Iran",
+      "gl": 1,
+      "gv": 1,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021479 (Egypt 1-1 Iran FT; Mahmoud Saber 5' (EGY), Ramin Rezaeian 14' (IRI); gol tardio de Iran anulado por VAR; Egypt avanza 2do del Grupo G con 5 pts (GD+2); Belgium 1ro con 5 pts (GD+4); Iran eliminado con 3 pts; confirmado FIFA / ESPN / Yahoo Sports / Outlook India)"
+    },
+    {
+      "fecha": "2026-06-26",
+      "fase": "grupos",
+      "grupo": "G",
+      "local": "New Zealand",
+      "visita": "Belgium",
+      "gl": 1,
+      "gv": 5,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021481 (New Zealand 1-5 Belgium FT; Leandro Trossard 28' y 50' (brace), Kevin De Bruyne 66', Romelu Lukaku 86', Alexis Saelemaekers 90+4' (BEL); Elijah Just 84' (NZL); Belgium 1ro del Grupo G con 5 pts y GD+4; New Zealand eliminada; confirmado FIFA / ESPN / Outlook India / Yahoo Sports)"
+    },
+    {
+      "fecha": "2026-06-27",
+      "fase": "grupos",
+      "grupo": "L",
+      "local": "Panama",
+      "visita": "England",
+      "gl": 0,
+      "gv": 2,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021508 (Panama 0-2 England FT; Bellingham 62', Kane 67' (11o gol en Mundiales, record historico all-time de England superando a Lineker con 10); England 1ro del Grupo L con 9 pts; Panama eliminada; confirmado FIFA / Sky Sports / NBC Sports / ITV News / Outlook India / Yahoo Sports / ESPN)"
+    },
+    {
+      "fecha": "2026-06-27",
+      "fase": "grupos",
+      "grupo": "L",
+      "local": "Croatia",
+      "visita": "Ghana",
+      "gl": 2,
+      "gv": 1,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021509 (Croatia 2-1 Ghana FT; Sucic 31', Luckassen 73' (GHA), Vlasic 83'; Croatia 2do del Grupo L con 6 pts clasifica a dieciseisavos; Ghana 3ra con 4 pts como posible mejor tercero; confirmado FIFA / ESPN / Outlook India / 101greatgoals / Flashscore)"
+    },
+    {
+      "fecha": "2026-06-27",
+      "fase": "grupos",
+      "grupo": "K",
+      "local": "Colombia",
+      "visita": "Portugal",
+      "gl": 0,
+      "gv": 0,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021505 (Colombia 0-0 Portugal FT; Colombia 1ro del Grupo K con 7 pts; Portugal 2do con 4 pts; ambos avanzan a dieciseisavos; confirmado FIFA / ESPN / Fox Sports / VAVEL / Al Jazeera / Flashscore)"
+    },
+    {
+      "fecha": "2026-06-27",
+      "fase": "grupos",
+      "grupo": "K",
+      "local": "DR Congo",
+      "visita": "Uzbekistan",
+      "gl": 3,
+      "gv": 1,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021500 (DR Congo 3-1 Uzbekistan FT; Shomurodov 10' (UZB), Wissa 68' pen y 90+1' (COD), Mayele 78' (COD); remontada epica: 0-1 al min 10 hasta 3-1 FT; primer avance historico del Congo DR a dieciseisavos; Uzbekistan eliminada; confirmado FIFA / ESPN / Fox Sports / Outlook India / VAVEL / Yahoo Sports)"
+    },
+    {
+      "fecha": "2026-06-27",
+      "fase": "grupos",
+      "grupo": "J",
+      "local": "Algeria",
+      "visita": "Austria",
+      "gl": 3,
+      "gv": 3,
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760484 + https://www.fifa.com/en/match-centre/match/17/285023/289273/400021497 (Algeria 3-3 Austria FT; Arnautovic 28' (AUT), Belghali 45' (ALG), Sabitzer 55' (AUT), Mahrez 60' (ALG), Mahrez 90+3' (ALG — Algeria 3-2!), Kalajdzic 90+6' (AUT — empate dramatico!); Austria 2do del Grupo J por GD 0 vs -2 de Algeria; Algeria 3ra con 4pts candidata mejor tercero; confirmado ESPN / FIFA / Yahoo Sports / Fox Sports)"
+    },
+    {
+      "fecha": "2026-06-27",
+      "fase": "grupos",
+      "grupo": "J",
+      "local": "Jordan",
+      "visita": "Argentina",
+      "gl": 1,
+      "gv": 3,
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760483/argentina-jordan + https://www.fifa.com/en/match-centre/match/17/285023/289273/400021495 (Jordan 1-3 Argentina FT; Lo Celso 19' (ARG), Lautaro Martinez 31' pen (ARG), Al-Tamari 55' (JOR), Messi 80' (ARG — 6to gol en el torneo, gol en su 7o Mundial consecutivo); Argentina 1ro del Grupo J invicta con 9pts; Jordan eliminada con 0pts; confirmado ESPN / FIFA / Yahoo Sports / Outlook India)"
+    },
+    {
+      "fecha": "2026-06-28",
+      "fase": "dieciseisavos",
+      "local": "South Africa",
+      "visita": "Canada",
+      "gl": 0,
+      "gv": 1,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021518 + https://www.espn.com/soccer/match/_/gameId/760486/canada-south-africa + https://sports.yahoo.com/soccer/live/world-cup-live-updates-results-canada-vs-south-africa-kicks-off-round-of-32-173000083.html (South Africa 0-1 Canada FT; Stephen Eustaquio en tiempo de descuento; Canada avanza a octavos por primera vez en su historia; Alphonso Davies entro de cambio en el minuto 75; confirmado FIFA / ESPN / Yahoo Sports / CBC)"
+    },
+    {
+      "fecha": "2026-06-29",
+      "fase": "dieciseisavos",
+      "local": "Brazil",
+      "visita": "Japan",
+      "gl": 2,
+      "gv": 1,
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760487/japan-brazil (Brazil 2-1 Japan FT; Kaishu Sano 29' (JPN), Casemiro 56' header (BRA), Gabriel Martinelli 90+6' (BRA — asistencia Bruno Guimaraes, gol sobre la hora en el 6to minuto de descuento); Brasil avanza a octavos; confirmado ESPN / CBS Sports / NBC Sports / Yahoo Sports / Al Jazeera)"
+    },
+    {
+      "fecha": "2026-06-29",
+      "fase": "dieciseisavos",
+      "local": "Germany",
+      "visita": "Paraguay",
+      "gl": 1,
+      "gv": 1,
+      "ganador": "Paraguay",
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760489/paraguay-germany (Germany 1-1 Paraguay FT aet; Enciso 42' pen (PAR), Havertz 54' (GER); gol de Tah en el 105' anulado por VAR; Paraguay gana 4-3 en penales: Gill ataja a Havertz y Woltemade; Tah falla al cielo; Canale convierte el definitivo; UPSETAZO historico, Alemania eliminada; confirmado ESPN / FOX Sports / CBS Sports / France24 / Al Jazeera / Outlook India)"
+    },
+    {
+      "fecha": "2026-06-29",
+      "fase": "dieciseisavos",
+      "local": "Netherlands",
+      "visita": "Morocco",
+      "gl": 1,
+      "gv": 1,
+      "ganador": "Morocco",
+      "fuente": "https://www.outlookindia.com/sports/football/netherlands-vs-morocco-live-score-fifa-world-cup-2026-round-of-32-ned-v-mar-updates-estadio-monterrey-highlights (Netherlands 1-1 Morocco AET; Gakpo 72' (NED), Issa Diop 91' header (MAR); Morocco gana 3-2 en penales: Bounou salva a Summerville, Timber falla; Saibari anota el definitivo; Morocco avanza a octavos; confirmado Outlook India / Yahoo Sports / VAVEL / Al Jazeera / NBC Sports / Fox Sports)"
+    },
+    {
+      "fecha": "2026-06-30",
+      "fase": "dieciseisavos",
+      "local": "Ivory Coast",
+      "visita": "Norway",
+      "gl": 1,
+      "gv": 2,
+      "fuente": "https://www.skysports.com/football/ivory-coast-vs-norway/549843 + https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-games-2026-june-30-live-updates-rcna352364 (Ivory Coast 1-2 Norway FT; Antonio Nusa 39' (NOR, golazo al angulo), Amad Diallo 74' (CIV — desde el banco), Erling Haaland 86' (NOR — remate de cabeza sobre centro de Berge); primera victoria historica de Noruega en una eliminatoria mundialista; Norway avanza a octavos vs Brazil; confirmado Sky Sports / NBC News / Yahoo Sports / Al Jazeera)"
+    },
+    {
+      "fecha": "2026-06-30",
+      "fase": "dieciseisavos",
+      "local": "France",
+      "visita": "Sweden",
+      "gl": 3,
+      "gv": 0,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021523 (France 3-0 Sweden FT; Mbappe 45' (asistencia Dembele), Barcola 53' (asistencia Olise), Mbappe 74' (asistencia Olise); Mbappe alcanza a Messi en la Bota de Oro con 6 goles; France avanza a octavos vs Paraguay; confirmado FIFA / NBC Sports / Fox Sports / Yahoo Sports / Al Jazeera)"
+    },
+    {
+      "fecha": "2026-06-30",
+      "fase": "dieciseisavos",
+      "local": "Mexico",
+      "visita": "Ecuador",
+      "gl": 2,
+      "gv": 0,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021520 + https://www.espn.com/soccer/match/_/gameId/760491/ecuador-mexico (Mexico 2-0 Ecuador FT; Julian Quinones 22', Raul Jimenez 31'; partido demorado por tormenta electrica; Mexico avanza a octavos por primera vez desde 2006; confirmado FIFA / ESPN / Fox Sports / Yahoo Sports / NBC Sports / Al Jazeera)"
+    },
+    {
+      "fecha": "2026-07-01",
+      "fase": "dieciseisavos",
+      "local": "England",
+      "visita": "DR Congo",
+      "gl": 2,
+      "gv": 1,
+      "fuente": "https://www.aljazeera.com/sports/liveblog/2026/7/1/england-vs-dr-congo-live-fifa-world-cup-2026 + https://www.outlookindia.com/sports/football/england-vs-dr-congo-live-score-fifa-world-cup-2026-round-of-32-eng-v-cod-updates-atlanta-stadium-highlights (England 2-1 DR Congo FT; Brian Cipenga 7' (COD), Harry Kane 75' header y 86' remate al angulo, ambas asistencias Anthony Gordon; Kane brace — 13 goles en Mundiales en toda su carrera, record historico de England; England avanza a octavos vs Mexico; confirmado Al Jazeera / Outlook India / VAVEL / Fox Sports / ESPN / NBC Sports)"
+    },
+    {
+      "fecha": "2026-07-01",
+      "fase": "dieciseisavos",
+      "local": "Belgium",
+      "visita": "Senegal",
+      "gl": 3,
+      "gv": 2,
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760493/senegal-belgium + https://www.vavel.com/en-us/soccer/2026/07/01/1264833-belgium-vs-senegal-live-score-2026-world-cup.html (Belgium 3-2 Senegal AET; Habib Diarra (SEN, primera parte), Ismaila Sarr (SEN, segunda parte); Lukaku 86' (BEL, sub), Tielemans 89' header (BEL), Tielemans 124' pen (BEL — gol ganador mas tardio de la historia del Mundial: 124m44s); Belgium remonto desde 0-2 para ganar en tiempo extra; avanza a octavos; confirmado ESPN / FOX Sports / Outlook India / Yahoo Sports / NBC News / VAVEL)"
+    },
+    {
+      "fecha": "2026-07-01",
+      "fase": "dieciseisavos",
+      "local": "United States",
+      "visita": "Bosnia and Herzegovina",
+      "gl": 2,
+      "gv": 0,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021524 + https://www.espn.com/soccer/match/_/gameId/760494/bosnia-herzegovina-united-states (USA 2-0 FT; Balogun 45' (luego expulsado 64', suspension proximo partido), Tillman 82' free kick; USA avanza a octavos vs Belgium; primer victoria en eliminatorias desde 2002; confirmado FIFA / ESPN / NBC News / CBS Sports / CNN / Outlook India)"
+    },
+    {
+      "fecha": "2026-07-02",
+      "fase": "dieciseisavos",
+      "local": "Spain",
+      "visita": "Austria",
+      "gl": 3,
+      "gv": 0,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289273/400021519 + https://sports.yahoo.com/soccer/fifa-world-cup/austria-spain-13532373/ (Spain 3-0 Austria FT; Oyarzabal 36' (1-0, asistencia Cucurella), Porro 62' header (2-0, asistencia Baena), Oyarzabal 2o gol ~83' (3-0); primer knockout win de Espana en el Mundial desde 2010; Spain avanza a octavos; confirmado FIFA / CBS Sports / NBC News / NBC Sports / Yahoo Sports / Fox Sports)"
+    },
+    {
+      "fecha": "2026-07-02",
+      "fase": "dieciseisavos",
+      "local": "Portugal",
+      "visita": "Croatia",
+      "gl": 2,
+      "gv": 1,
+      "fuente": "https://www.espn.com/football/story/_/id/49251703/portugal-croatia-live-world-cup-2026-latest-updates-commentary-score-result + https://www.cbc.ca/sports/livestory/fifa-world-cup-2026-portugal-croatia-toronto-9.7256369 (Portugal 2-1 Croatia FT; Perisic 53' (CRO — volea cruzada desde centro de Stanisic), Ronaldo 68' pen (POR — primer gol en eliminatoria mundialista en su carrera despues de 9 partidos sin marcar en knockouts; 3er gol del torneo), Ramos 90+4' header (POR — centro de Leao al 2do palo, remontada dramatica en el descuento); Croatia tuvo gol anulado por VAR en los ultimos segundos; Portugal avanza a octavos vs Spain; BMO Field, Toronto; confirmado ESPN / CBC / NBC News / Al Jazeera / NBC Sports)"
+    },
+    {
+      "fecha": "2026-07-02",
+      "fase": "dieciseisavos",
+      "local": "Switzerland",
+      "visita": "Algeria",
+      "gl": 2,
+      "gv": 0,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289287/400021527 + https://www.outlookindia.com/sports/football/switzerland-vs-algeria-live-score-fifa-world-cup-2026-round-of-32-sui-v-alg-updates-bc-place-highlights + https://bleacherreport.com/liveblogs/25449374-switzerland-vs-algeria-live-world-cup-2026-updates-scores-and-highlights (Switzerland 2-0 Algeria FT; Embolo 11' (asistencia Manzambi, disparo simple tras gran jugada individual del atacante suizo), Ndoye 46' (tiro cruzado ajustado al palo corto tras fallo defensivo argelino); Switzerland solida defensivamente, Algeria con pocas chances claras; Switzerland avanza a octavos vs vencedor Colombia/Ghana; BC Place, Vancouver; confirmado FIFA / ESPN / Bleacher Report / Outlook India)"
+    },
+    {
+      "fecha": "2026-07-03",
+      "fase": "dieciseisavos",
+      "local": "Australia",
+      "visita": "Egypt",
+      "gl": 1,
+      "gv": 1,
+      "ganador": "Egypt",
+      "fuente": "https://www.outlookindia.com/sports/football/australia-vs-egypt-live-score-fifa-world-cup-2026-round-of-32-aus-vs-egy-updates-dallas-stadium-highlights + https://www.vavel.com/en-us/soccer/2026/07/03/1265006-australia-vs-egypt-live-score-2026-world-cup.html (Australia 1-1 Egypt AET; Emam Ashour 13' header (EGY), Mohamed Hany OG 55' (AUS); Egypt gana 4-2 en penales: Salah Panenka al centro, Herrington falla el travesano (AUS), Abdelmaguid convierte el definitivo; primer triunfo historico de Egipto en eliminatorias mundialistas; Egypt avanza a octavos vs Argentina; AT&T Stadium, Arlington; confirmado Outlook India / VAVEL / Fox Sports / Yahoo Sports)"
+    },
+    {
+      "fecha": "2026-07-03",
+      "fase": "dieciseisavos",
+      "local": "Argentina",
+      "visita": "Cape Verde",
+      "gl": 3,
+      "gv": 2,
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760500/cape-verde-argentina + https://sports.yahoo.com/soccer/live/world-cup-2026-bracket-scores-results-schedule-live-updates-round-of-32-173000083.html + https://www.aljazeera.com/sports/liveblog/2026/7/3/live-argentina-vs-cape-verde-fifa-world-cup-2026 + https://www.nbcsports.com/soccer/live/argentina-vs-cape-verde-live-updates-score-goals-highlights-stats-2026-fifa-world-cup-july-3 (Argentina 3-2 Cape Verde AET; Messi 29' (ARG — 7o gol del torneo, ahora lider en solitario de la Bota de Oro), Deroy Duarte 59' (CPV), Lisandro Martinez 92' (ARG, 2' de ET), Sidny Lopes Cabral 103' (CPV — 2-2 empata de nuevo), OG-CPV ~115' (ARG — inicialmente atribuido a Romero, luego rectificado a autogol del arquero Vozinha); Argentina gana 3-2 en tiempo extra sin llegar a penales; avanza a octavos vs Egypt; Miami Stadium; confirmado ESPN / Yahoo Sports / Al Jazeera / NBC Sports / VAVEL)"
+    },
+    {
+      "fecha": "2026-07-03",
+      "fase": "dieciseisavos",
+      "local": "Colombia",
+      "visita": "Ghana",
+      "gl": 1,
+      "gv": 0,
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760501/ghana-colombia + https://www.vavel.com/en-us/soccer/2026/07/04/1265004-colombia-vs-ghana-live-score-2026-fifa-world-cup.html (Colombia 1-0 Ghana FT; Jhon Arias 14' (COL — primer gol de la eliminatoria, back-post finish tras cross de Luis Suarez); gol de Luis Diaz anulado por VAR; Colombia domino con 67% posesion y 93% precision en pases; Ghana sin remates al arco en el primer tiempo; Colombia avanza a octavos vs Switzerland el 7 de julio en Vancouver; Children's Mercy Park, Kansas City; confirmado ESPN / VAVEL / Yahoo Sports bracket / CBS Sports / Bolavip)"
+    },
+    {
+      "fecha": "2026-07-04",
+      "fase": "octavos",
+      "local": "Canada",
+      "visita": "Morocco",
+      "gl": 0,
+      "gv": 3,
+      "fuente": "https://www.nbcsports.com/soccer/live/canada-vs-morocco-live-updates-score-goals-highlights-stats-from-2026-fifa-world-cup + https://sports.yahoo.com/soccer/fifa-world-cup/morocco-canada-13532378/ + https://www.aljazeera.com/sports/liveblog/2026/7/4/canada-vs-morocco-live-fifa-world-cup-2026-last-16 (Canada 0-3 Morocco FT; Ounahi 50' (asistencia Hakimi, libre indirecto), Ounahi 82' (asistencia Brahim Diaz), Rahimi 90+5' (asistencia Brahim Diaz — clavo tardio en el descuento); primer equipo africano en llegar a cuartos en Mundiales consecutivos (Qatar 2022 y USA 2026); Saibari lesionado en el primer tiempo — baja probable para cuartos; NRG Stadium, Houston; confirmado NBC Sports / Yahoo Sports / Al Jazeera / Fox Sports / Globe and Mail / CBC)"
+    },
+    {
+      "fecha": "2026-07-04",
+      "fase": "octavos",
+      "local": "Paraguay",
+      "visita": "France",
+      "gl": 0,
+      "gv": 1,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021533 + https://www.nbcsports.com/soccer/live/paraguay-vs-france-live-updates-score-goals-highlights-stats-2026-fifa-world-cup-july-4 + https://www.aljazeera.com/amp/sports/liveblog/2026/7/4/france-vs-paraguay-live-fifa-world-cup-2026 (Paraguay 0-1 France FT; Mbappe 70' pen (foul sobre Doue dentro del area); septimo gol del torneo para Mbappe, empata a Messi en la Bota de Oro (7G); France avanza a cuartos vs Morocco en Boston el 9-jul; Lincoln Financial Field, Philadelphia; confirmado FIFA / NBC Sports / Al Jazeera / CBS Sports / Yahoo Sports)"
+    },
+    {
+      "fecha": "2026-07-05",
+      "fase": "octavos",
+      "local": "Brazil",
+      "visita": "Norway",
+      "gl": 1,
+      "gv": 2,
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760504/norway-brazil + https://www.nbcsports.com/soccer/live/brazil-vs-norway-live-updates-score-goals-highlights-stats-2026-fifa-world-cup-july-5 + https://sports.yahoo.com/soccer/live/world-cup-2026-bracket-schedule-scores-results-live-updates-round-of-16-130000983.html (Norway 2-1 Brazil FT; Haaland brace (2 goles: cabezazo y remate cruzado lejano), Neymar pen consolacion para Brasil; primera clasificacion historica de Noruega a cuartos de un Mundial; Brasil eliminado por primera vez antes de cuartos en sus ultimos 9 Mundiales; MetLife Stadium, East Rutherford; confirmado ESPN / NBC Sports / CBS Sports / Yahoo Sports / FOX Sports)"
+    },
+    {
+      "fecha": "2026-07-05",
+      "fase": "octavos",
+      "local": "Mexico",
+      "visita": "England",
+      "gl": 2,
+      "gv": 3,
+      "fuente": "https://www.espn.com/soccer/story/_/id/49280180/mexico-england-world-cup-2026-result-score-recap-jude-bellingham-harry-kane-jarell-quansah + https://www.nbcsports.com/soccer/live/mexico-vs-england-live-updates-score-goals-highlights-stats-from-2026-fifa-world-cup + https://www.foxsports.com/stories/soccer/brilliant-bellingham-england-star-scores-2-goals-2-minutes-vs-mexico (Mexico 2-3 England FT; Bellingham 36' y 38' (brace en 98 segundos — el mas rapido de la historia de England en un Mundial; asistencias Saka y Kane respectivamente), Kane 60' pen (ENG); Quinones 42' (MEX), Jimenez 69' pen (MEX); Quansah roja 54'; England avanza a cuartos vs Norway; Mexico cae en el Azteca por primera vez en un Mundial; Estadio Azteca, Ciudad de Mexico; confirmado ESPN / Fox Sports / NBC Sports / CBS Sports / Yahoo Sports)"
+    },
+    {
+      "fecha": "2026-07-06",
+      "fase": "octavos",
+      "local": "Portugal",
+      "visita": "Spain",
+      "gl": 0,
+      "gv": 1,
+      "fuente": "https://www.espn.com/soccer/story/_/id/49287306/portugal-vs-spain-live-2026-world-cup-updates-score-commentary-result + https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-2026-july-6-usa-live-updates-rcna353164 (Spain 1-0 Portugal FT; Mikel Merino gol en tiempo de descuento — remate de cabeza tras centro de Ferran Torres; Rodri y Pedri dominaron el mediocampo; Spain tuvo 56% posesion y 1.77 xG vs solo 0.56 xG de Portugal; España avanza a cuartos vs Norway; Portugal y Ronaldo eliminados; AT&T Stadium, Arlington, Texas; confirmado ESPN / NBC News / CBS Sports / Yahoo Sports)"
+    },
+    {
+      "fecha": "2026-07-06",
+      "fase": "octavos",
+      "local": "United States",
+      "visita": "Belgium",
+      "gl": 1,
+      "gv": 4,
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760507/belgium-united-states + https://www.cnn.com/2026/07/06/sport/live-news/usa-belgium-world-cup-score + https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-2026-july-6-usa-live-updates-rcna353164 (Belgium 4-1 USA FT; De Ketelaere 9' header (Nicolas Raskin cross); Tillman 31' free kick defleccion en Vanaken (USA — empate); De Ketelaere 33' segundo gol brace; Vanaken 57' disparo largo tras error de Freese fuera del area; Lukaku 90+3' remate ajustado al palo (4to gol); Onana salio lesionado — reemplazado por Vanaken; Pulisic sustituido 59' con aparente lesion; Belgium avanza a cuartos vs Spain el 10-jul en Los Angeles; USA eliminada del Mundial en casa; Lumen Field, Seattle, 66.925 espectadores; confirmado ESPN / CNN / NBC News / Yahoo Sports / CBS Sports)"
+    },
+    {
+      "fecha": "2026-07-07",
+      "fase": "octavos",
+      "local": "Argentina",
+      "visita": "Egypt",
+      "gl": 3,
+      "gv": 2,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289288/400021528 + https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-games-2026-july-7-live-updates-rcna353305 + https://www.outlookindia.com/sports/football/argentina-vs-egypt-live-score-fifa-world-cup-2026-round-of-16-arg-v-egy-updates-atlanta-stadium-highlights (Argentina 3-2 Egypt FT; Yasser Ibrahim 15' header (EGY), Mostafa Zico 67' (EGY), Cristian Romero 79' header (ARG), Messi 83' primer toque al cruzar debajo del arco (ARG — 8o gol del torneo, nuevo lider en solitario de la Bota de Oro), Enzo Fernandez 90+2' cabezazo de cross de Lautaro (ARG — gol ganador en el descuento); Argentina remonta desde 0-2 para avanzar a cuartos vs vencedor Switzerland/Colombia el 11-jul en Kansas City; Mercedes-Benz Stadium, Atlanta; confirmado FIFA / NBC News / Outlook India / Fox Sports)"
+    },
+    {
+      "fecha": "2026-07-07",
+      "fase": "octavos",
+      "local": "Switzerland",
+      "visita": "Colombia",
+      "gl": 0,
+      "gv": 0,
+      "ganador": "Switzerland",
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760508/colombia-switzerland + https://www.fifa.com/en/match-centre/match/17/285023/289288/400021535 (Switzerland 0-0 Colombia AET; partido con pocas chances — Lucumi pega en el palo por COL, Xhaka la mejor ocasion SUI; en penales: Sanchez (COL) pega en el travesano, Akanji (SUI) falla pero Colombia aprovecha su propia; Kobel salva el penal de Juan Hernandez (COL); Ruben Vargas convierte el 4to penal de SUI para el 4-3; Switzerland avanza a cuartos por primera vez desde 1954 y enfrentara a Argentina el 11-jul en Kansas City; BC Place, Vancouver; confirmado ESPN / FIFA / CBS Sports / Al Jazeera)"
+    },
+    {
+      "fecha": "2026-07-09",
+      "fase": "cuartos",
+      "local": "France",
+      "visita": "Morocco",
+      "gl": 2,
+      "gv": 0,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289289/400021536 + https://www.cnn.com/2026/07/09/sport/live-news/france-morocco-world-cup-score + https://www.espn.com/soccer/story/_/id/49316467/france-morocco-live-world-cup-2026-latest-updates-commentary-score-result (France 2-0 Morocco FT; Mbappe 60' (gol 8 del torneo, empata con Messi en la Bota de Oro); Dembele 66' (asistencia Mbappe, gol 5 del torneo); France invicta — 6 victorias en 6 partidos, unico equipo sin necesitar prorroga; avanza a semis vs vencedor Spain-Belgium; Gillette Stadium, Boston; confirmado FIFA / CNN / ESPN / FOX Sports)"
+    },
+    {
+      "fecha": "2026-07-10",
+      "fase": "cuartos",
+      "local": "Norway",
+      "visita": "England",
+      "gl": 1,
+      "gv": 2,
+      "fuente": "https://www.skysports.com/football/norway-vs-england/549864 + https://www.cnn.com/2026/07/11/sport/live-news/world-cup-scores + https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-games-2026-july-11-live-updates-rcna385914 + https://www.npr.org/2026/07/11/nx-s1-5890169/2026-world-cup-fifa-england-norway-quarterfinal (Norway 1-2 England AET; Schjelderup 36' (NOR), Bellingham 45+2' (ENG — gol en tiempo de descuento del 1T, controversia por posible contacto con cable de camara; FIFA confirmo via sensor del balon que no hubo contacto), Bellingham 93' (ENG — primer minuto de tiempo extra, remate de cerca tras rebote en el arquero; 6o gol del torneo, empata a Kane en la tabla); England avanza a semis vs vencedor Argentina/Switzerland el 15-jul en Atlanta; primera vez de England en semis de un Mundial desde 1990; Hard Rock Stadium, Miami; confirmado Sky Sports / CNN / NBC News / NPR / Al Jazeera / FA England)"
+    },
+    {
+      "fecha": "2026-07-11",
+      "fase": "cuartos",
+      "local": "Belgium",
+      "visita": "Spain",
+      "gl": 1,
+      "gv": 2,
+      "fuente": "https://www.nbcsports.com/soccer/live/spain-vs-belgium-live-updates-score-goals-highlights-stats-from-2026-fifa-world-cup + https://www.business-standard.com/sports/fifa-world-cup/spain-vs-belgium-live-score-updates-fifa-world-cup-2026-qf-esp-vs-bel-key-moments-highlights-126071001437_1.html + https://www.cnn.com/2026/07/10/sport/live-news/spain-belgium-world-cup-score (Spain 2-1 Belgium FT; Fabian Ruiz 30' (ESP), Charles De Ketelaere 41' header (BEL — empate); Mikel Merino 89' sub (ESP — Lammels no retiene remate de Cubarsi, Merino empuja al fondo); Tielemans no jugo (lesion en calentamiento); Courtois salio lesionado en 2T reemplazado por Senne Lammels; Spain avanza a semis vs France; SoFi Stadium, Los Angeles; confirmado NBC Sports / Business Standard / CNN / ESPN / Fox Sports)"
+    },
+    {
+      "fecha": "2026-07-11",
+      "fase": "cuartos",
+      "local": "Argentina",
+      "visita": "Switzerland",
+      "gl": 3,
+      "gv": 1,
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760513/switzerland-argentina + https://www.vavel.com/en-us/soccer/2026/07/12/1265583-argentina-vs-switzerland-live-score-2026-world-cup.html + https://fox4kc.com/sports/2026-world-cup/argentina-switzerland-face-off-in-world-cup-quarterfinal-at-arrowhead-stadium/ + https://www.npr.org/2026/07/11/nx-s1-5888612/2026-world-cup-fifa-argentina-switzerland-quarterfinal (Argentina 3-1 Switzerland AET; Mac Allister 10' (ARG), Ndoye 67' (SUI), J. Alvarez 112' (ARG — remate curvo al angulo superior desde la izquierda), L. Martinez 120+1' (ARG — sello definitivo); Embolo expulsado en 2a amarilla por simulacion en el area ~72'; Argentina avanza a semis vs England el 15-jul en Atlanta; tercer QF seguido para Argentina en un Mundial; GEHA Field at Arrowhead Stadium, Kansas City; confirmado ESPN / VAVEL / Fox4 KC / CBS Sports / Yahoo Sports / NPR)"
+    },
+    {
+      "fecha": "2026-07-14",
+      "fase": "semis",
+      "local": "France",
+      "visita": "Spain",
+      "gl": 0,
+      "gv": 2,
+      "fuente": "https://www.nbcnews.com/sports/soccer/live-blog/spain-france-world-cup-2026-july-14-live-updates-rcna587324 (Spain 2-0 France FT; Oyarzabal 22' pen (asistencia Yamal quien fue derribado en el area), Porro 58' (give-and-go con Dani Olmo, bajo al angulo); Spain avanza a la final vs vencedor England/Argentina; 5o gol del torneo para Oyarzabal; Mbappe sin anotar, eliminado con 8G; AT&T Stadium, Arlington; confirmado NBC News / NBC Sports / Yahoo Sports / FIFA / CNN / Fox Sports)"
+    },
+    {
+      "fecha": "2026-07-15",
+      "fase": "semis",
+      "local": "England",
+      "visita": "Argentina",
+      "gl": 1,
+      "gv": 2,
+      "fuente": "https://www.espn.com/soccer/match/_/gameId/760515/argentina-england + https://www.aljazeera.com/sports/liveblog/2026/7/15/england-vs-argentina-live-fifa-world-cup-2026-semifinal + https://www.cnn.com/2026/07/15/sport/live-news/world-cup-argentina-england (England 1-2 Argentina FT; Gordon 55' volley (ENG — primer gol WC de Gordon, asistencia Morgan Rogers; England 1-0); Enzo Fernandez 85' tiro rasante desde fuera del area (ARG — empate, asistencia Messi); Lautaro Martinez 90+2' cabezazo (ARG — gol ganador en descuento, asistencia Messi); Messi 2 asistencias, no anoto (sigue en 8G); Argentina avanza a la final vs Spain el 19-jul en East Rutherford; England eliminada semi-finalista; Mercedes-Benz Stadium, Atlanta; confirmado ESPN / Al Jazeera / CNN / NBC News / Fox Sports)"
+    },
+    {
+      "fecha": "2026-07-18",
+      "fase": "tercer_puesto",
+      "local": "France",
+      "visita": "England",
+      "gl": 4,
+      "gv": 6,
+      "fuente": "https://wsvn.com/sports/2026-world-cup/sakas-hat-trick-lifts-england-past-mbappe-and-france-6-4-in-wild-world-cup-third-place-game/ + https://www.france24.com/en/live-news/20260718-england-edge-france-6-4-in-chaotic-world-cup-bronze-match + https://onefootball.com/es/noticias/france-4-6-england-three-lions-score-four-in-first-half-to-win-epic-world-cup-bronze-final-43156819 (France 4-6 England FT; England 4 goles en 1T (Rice, Konsa, Saka x2); 2T: Mbappe x2 para France (cierra el torneo con 10 goles — CORREGIDO 20-jul, una cronica decia x3/11; fuente ESPN espn.com/soccer/story/_/id/49397919 — y record historico absoluto de 22 goles en Mundiales); Saka completa hat-trick con penal; Bellingham sella 6-4; Saka hat-trick = 3G torneo; Francia descontó de 0-4 a 4-4 pero England respondió 6-4; Hard Rock Stadium, Miami Gardens; confirmado WSVN / France24 / OneFootball / ESPN / Starnews Korea)"
+    },
+    {
+      "fecha": "2026-07-19",
+      "fase": "final",
+      "local": "Spain",
+      "visita": "Argentina",
+      "gl": 1,
+      "gv": 0,
+      "fuente": "https://www.fifa.com/en/match-centre/match/17/285023/289292/400021543 + https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-final-2026-argentina-spain-messi-yamal-live-updates-rcna587754 + https://worldsoccertalk.com/world-cup/spain-vs-argentina-live-updates-minute-by-minute-coverage-of-the-2026-world-cup-final/ + https://sports.yahoo.com/soccer/live/spain-argentina-world-cup-2026-score-result-schedule-live-updates-130000682.html (Spain 1-0 Argentina AET; Ferran Torres 106' (asistencia Nico Williams — tiro al primer palo tras pase rasante de Williams); Enzo Fernandez roja en aprox. 90' por segunda amarilla; Martinez record de 10 atajadas en una final mundialista; Spain campeon del Mundo 2026, segundo titulo de su historia (primero: 2010); MetLife Stadium, East Rutherford; confirmado FIFA / NBC News / World Soccer Talk / Yahoo Sports / CBS Sports)"
+    }
+  ]
 }
